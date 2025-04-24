@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "a5b31a7c53cba85e",
+        "id": "86c470a7be5ce043",
         "type": "tabs",
         "children": [
           {
-            "id": "67ea920b2fe939d0",
+            "id": "9b5971faea98ea52",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -136,13 +136,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Untitled.canvas",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Untitled"
+              "title": "Outline"
             }
           },
           {
@@ -173,8 +172,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "dd5f9aba5a3ddfad",
+  "active": "74497622181b3abc",
   "lastOpenFiles": [
+    "2025-04-24.md",
     "Untitled.md",
     "Untitled.canvas",
     "00 Inbox",
