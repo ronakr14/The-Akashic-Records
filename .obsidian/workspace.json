@@ -159,7 +159,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -174,9 +174,12 @@
   },
   "active": "b39c491be6ad2fc0",
   "lastOpenFiles": [
+    "99 Templates/Daily Note Template.md",
+    "99 Templates/Project Template.md",
+    "99 Templates/Weekly Review Template.md",
+    "99 Templates/Resource Note Template.md",
     "99 Templates",
     "2025-04-24.md",
-    "Untitled.md",
     "Untitled.canvas",
     "00 Inbox",
     "04 Archives",
