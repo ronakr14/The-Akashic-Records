@@ -1,12 +1,12 @@
 ---
 id: 0xv0c2fwqp4tfbo79brtfuk
-title: Dendron
+title: dendron
 desc: ''
-updated: 1747466647391
+updated: 1747468920301
 created: 1747466187821
 ---
 
-#tag.dendron.quicknotes
+#tag.pkm.dendron.quicknotes
 
 Alright, you're diving into **Dendron**—the *VS Code-powered brain extension*—and you want the express lane. Perfect. Dendron isn’t your average note app; it’s a **hierarchical, markdown-first, dev-friendly PKM system** that behaves more like a knowledge graph crossed with a file system. Most people get lost in features. You're going to dominate the **20% of Dendron that gives 80% of its value**—fast.
 
