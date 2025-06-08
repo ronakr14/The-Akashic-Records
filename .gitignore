@@ -192,3 +192,16 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+# Dendron
+.dendron.*
+build
+seeds
+.next
+pods/service-connections
+node_modules
+
+# MKDocs
+site/
+.pyc
+.next
