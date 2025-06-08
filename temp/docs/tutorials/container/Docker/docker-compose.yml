@@ -1,0 +1,15 @@
+version: 'version'
+
+services:
+  postgres:
+    image: imageName
+    ports:
+      - 'localhost:8080'
+    environment:
+      - name=value
+  redis:
+    image: imageName
+    ports:
+      - 'localhost:8080'
+    environment:
+      - name=value

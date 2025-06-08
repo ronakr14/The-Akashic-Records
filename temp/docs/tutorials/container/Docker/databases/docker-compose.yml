@@ -1,0 +1,294 @@
+version: '0.0.1'
+
+name: databases
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: "sqlserver_db"
+    ports:
+      - "1433:1433"
+    environment:
+      SA_PASSWORD: "ronak897-"  # Change this to a secure password
+      MSSQL_PID: "Developer"
+      ACCEPT_EULA: "Y"
+    volumes:
+      - sqlserver_DB_data:/var/opt/mssql
+    networks:
+      - local
+
+  cassandra:
+    image: cassandra:latest
+    container_name: "cassandra_db"
+    networks:
+      - local
+    ports:
+      - "9042:9042"
+      - "7000:7000"
+      - "7001:7001"
+      - "7199:7199"
+      - "9160:9160"
+    volumes:
+      - cassandra_DB_data:/var/lib/cassandra
+
+  # mysql:
+  #   image: mysql:latest
+  #   container_name: "mysql_db"
+  #   environment:
+  #     MYSQL_ROOT_HOST: "%"
+  #     MYSQL_ROOT_PASSWORD: "ronak897-"
+  #     MYSQL_DATABASE: "local"
+  #     MYSQL_USER: "sa"
+  #     MYSQL_PASSWORD: "ronak897-"
+  #     MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+  #   healthcheck:
+  #     test: ["CMD", "mysqladmin", "ping", "-p${DB_ROOT_PASSWORD}"]
+  #     retries: 3
+  #     timeout: 5s
+  #   networks:
+  #     - local
+  #   platform: linux/x86_64
+  #   ports:
+  #     - "3306:3306"
+  #   volumes:
+  #     - mysql_DB_data:/var/lib/mysql
+    
+  # pgsql:
+  #   image: postgres:latest
+  #   container_name: "pgsql_db"
+  #   environment:
+  #     POSTGRES_DB: "local"
+  #     POSTGRES_USER: "sa"
+  #     POSTGRES_PASSWORD: "ronak897-"
+  #   healthcheck:
+  #     test: [
+  #       "CMD", "pg_isready", "-q",
+  #       "-d", "local",
+  #       "-U", "sa"
+  #     ]
+  #     retries: 3
+  #     timeout: 5s
+  #   networks:
+  #     - local
+  #   ports:
+  #     - "5432:5432"
+  #   volumes:
+  #     - pgsql_DB_data:/var/lib/postgresql/data
+
+  # mongodb:
+  #   image: mongo:latest
+  #   container_name: "mongo_db"
+  #   environment:
+  #     MONGO_INITDB_DATABASE: "local"
+  #     MONGO_INITDB_ROOT_USERNAME: "sa"
+  #     MONGO_INITDB_ROOT_PASSWORD: "ronak897-"
+  #   healthcheck:
+  #     test: echo 'db.runCommand("ping").ok' | mongo mongodb:27017/test --quiet
+  #     retries: 3
+  #     timeout: 5s
+  #   networks:
+  #     - local
+  #   ports:
+  #     - "27017:27017"
+  #   volumes:
+  #     - mongo_DB_config:/data/configdb
+  #     - mongo_DB_data:/data/db
+  
+  # redis:
+  #   image: redis:latest
+  #   container_name: "redis_db"
+  #   healthcheck:
+  #     test: ["CMD", "redis-cli", "ping"]
+  #     retries: 3
+  #     timeout: 5s
+  #   networks:
+  #     - local
+  #   ports:
+  #     - "6379:6379"
+  #   volumes:
+  #     - redis_DB_data:/data
+
+  # couchdb:
+  #   image: couchdb:latest
+  #   container_name: "couch_db"
+  #   environment:
+  #     COUCHDB_USER: "sa"
+  #     COUCHDB_PASSWORD: "ronak897-"
+  #   networks:
+  #     - local
+  #   ports:
+  #     - "5984:5984"
+  #   volumes:
+  #     - couch_DB_data:/opt/couchdb/data
+
+  # dynamodb:
+  #   image: amazon/dynamodb-local:latest
+  #   container_name: "dynamo_db"
+  #   networks:
+  #     - local
+  #   ports:
+  #     - 8000:8000
+  #   user: root
+  #   volumes:
+  #     - dynamo_DB_data:/home/dynamodblocal/data
+  #   working_dir: /home/dynamodblocal
+  #   command: ["-jar", "DynamoDBLocal.jar", "-sharedDb", "-dbPath", "./data"]
+
+  # edgedb:
+  #   image: edgedb/edgedb:latest
+  #   container_name: "edge_db"
+  #   environment:
+  #     EDGEDB_SERVER_ADMIN_UI: "enabled"
+  #     EDGEDB_SERVER_PASSWORD: "ronak897-"
+  #     EDGEDB_SERVER_PORT: "5656"
+  #     EDGEDB_SERVER_SECURITY: insecure_dev_mode
+  #   networks:
+  #     - local
+  #   ports:
+  #     - 5656:5656
+  #   volumes:
+  #     - edge_DB_schema:/dbschema
+  #     - edge_DB_data:/var/lib/edgedb/data
+
+  # mariadb:
+  #   image: mariadb:latest
+  #   container_name: "maria_db"
+  #   environment:
+  #     MARIADB_ROOT_HOST: "%"
+  #     MARIADB_ROOT_PASSWORD: "ronak897-"
+  #     MARIADB_DATABASE: "local"
+  #     MARIADB_USER: "sa"
+  #     MARIADB_PASSWORD: "ronak897-"
+  #     MARIADB_ALLOW_EMPTY_ROOT_PASSWORD: 'yes'
+  #   healthcheck:
+  #     test: ["CMD", "mysqladmin", "ping", "-p${DB_ROOT_PASSWORD}"]
+  #     retries: 3
+  #     timeout: 5s
+  #   networks:
+  #     - local
+  #   ports:
+  #     - 3307:3306
+  #   volumes:
+  #     - maria_DB_data:/var/lib/mysql
+  
+  # neo4j:
+  #   image: neo4j:latest
+  #   container_name: "neo4j_db"
+  #   networks:
+  #     - local
+  #   ports:
+  #     - 7474:7474
+  #     - 7687:7687
+  #   volumes:
+  #     - neo4j_DB_data:/data
+  #     - neo4j_DB_logs:/logs
+  
+  # urrealdb:
+  #   image: surrealdb/surrealdb:latest
+  #   container_name: "surreal_db"
+  #   networks:
+  #     - local
+  #   ports:
+  #     - 8001:8000
+  #   volumes:
+  #     - surreal_DB_data:/data/db
+  #   user: root
+  #   command: [
+  #     "start",
+  #     "--log", "full",
+  #     "--auth",
+  #     "--user", "sa",
+  #     "--pass", "ronak897-",
+  #     "file:/data/db"
+  #   ]
+
+  # yugabytedb:
+  #   image: yugabytedb/yugabyte:latest
+  #   container_name: "yugabyte_db"
+  #   networks:
+  #     - local
+  #   ports:
+  #     - 5433:5433
+  #     - 9043:9042
+  #   # Admin UI
+  #     - 7002:7000
+  #     - 9000:9000
+  #   volumes:
+  #     - yugabyted_DB_data:/home/yugabyte/yb_data
+  #   command: [
+  #     "bin/yugabyted", "start",
+  #     "--base_dir=/home/yugabyte/yb_data",
+  #     "--daemon=false"
+  #   ]
+  
+  # cockroachdb:
+  #   image: cockroachdb/cockroach:latest
+  #   container_name: "cockroach_db"
+  #   networks:
+  #     - local
+  #   ports:
+  #     - 26257:26257
+  #   # Admin UI
+  #     - 8080:8080
+  #   volumes:
+  #     - cockroach_DB_data:/cockroach/cockroach-data
+  #   command: ["start-single-node", "--insecure"]
+
+networks:
+  local:
+    driver: "bridge"
+    name: "local_db_network"
+
+volumes:
+  # cockroach_DB_data:
+  #   driver: "local"
+  #   name: "cockroach_DB_data"
+  # yugabyted_DB_data:
+  #   driver: "local"
+  #   name: "yugabyted_DB_data"
+  # surreal_DB_data:
+  #   driver: "local"
+  #   name: "surreal_DB_data"
+  # neo4j_DB_data:
+  #   driver: "local"
+  #   name: "neo4j_DB_data"
+  # neo4j_DB_logs:
+  #   driver: "local"
+  #   name: "neo4j_DB_logs"
+  # dynamo_DB_data:
+  #   driver: "local"
+  #   name: "dynamo_DB_data"
+  sqlserver_DB_data:
+    driver: "local"
+    name: "sqlserver_DB_data"
+  cassandra_DB_data:
+    driver: "local"
+    name: "cassandra_DB_data"
+  # mysql_DB_data:
+  #   driver: "local"
+  #   name: "mysql_DB_data"
+  # pgsql_DB_data:
+  #   driver: "local"
+  #   name: "pgsql_DB_data"
+  # mongo_DB_config:
+  #   driver: "local"
+  #   name: "mongo_DB_config"
+  # mongo_DB_data:
+  #   driver: "local"
+  #   name: "mongo_DB_data"
+  # redis_DB_data:
+  #   driver: "local"
+  #   name: "redis_DB_data"
+  # couch_DB_data:
+  #   driver: "local"
+  #   name: "couch_DB_data"
+  # edge_DB_data:
+  #   driver: "local"
+  #   name: "edge_DB_data"
+  # edge_DB_schema:
+  #   driver: "local"
+  #   name: "edge_DB_schema"
+  # maria_DB_data:
+  #   driver: "local"
+  #   name: "maria_DB_data"
+
