@@ -135,6 +135,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+venv-mkdocs/
 
 # Spyder project settings
 .spyderproject
@@ -205,3 +206,5 @@ node_modules
 site/
 .pyc
 .next
+docs/notes/meet/
+docs/notes/root.md
