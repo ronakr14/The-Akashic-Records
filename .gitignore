@@ -135,7 +135,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-venv-mkdocs/
+# venv-mkdocs/
 
 # Spyder project settings
 .spyderproject
