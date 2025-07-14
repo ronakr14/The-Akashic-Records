@@ -1,0 +1,15 @@
+---
+id: 4tec5656ukofipa4a2da7v9
+title: Interviews
+desc: ''
+updated: 1752506845190
+created: 1752506844559
+---
+
+## 🎙️ Interview Q\&A
+
+* **Q:** Why are CNNs effective for image tasks?
+* **Q:** What is the vanishing gradient problem?
+* **Q:** Why do Transformers outperform RNNs in NLP tasks?
+* **Q:** What’s the difference between fine-tuning and feature extraction?
+* **Q:** How do you optimize DL training for large datasets?
