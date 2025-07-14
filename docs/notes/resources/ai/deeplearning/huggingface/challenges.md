@@ -1,0 +1,10 @@
+# Challenges
+
+## 🎯 Progressive Challenges
+
+| Level           | Challenge                                                           |
+| --------------- | ------------------------------------------------------------------- |
+| 🥉 Easy         | Run a sentiment analysis pipeline on your text data.                |
+| 🥈 Intermediate | Fine-tune `BERT` for custom classification with 90%+ accuracy.      |
+| 🥇 Expert       | Build a FastAPI-based inference server for your fine-tuned model.   |
+| 🏆 Black Belt   | Fine-tune LLaMA 2 using LoRA + PEFT and serve via Hugging Face Hub. |
