@@ -1,8 +1,8 @@
 ---
 id: tt466uxte6r4cc76xp953vz
-title: Alchemy
+title: Alembic
 desc: ''
-updated: 1753336648295
+updated: 1753515876978
 created: 1753336640574
 ---
 tags: [master, alembic]
