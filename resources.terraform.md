@@ -2,7 +2,7 @@
 id: rkrr71htc8istglzh5gbz0j
 title: Terraform
 desc: ''
-updated: 1753517789949
+updated: 1755672407113
 created: 1753517785089
 ---
 tags: [master, terraform, infrastructure-as-code, devops, automation, provisioning]
@@ -143,4 +143,3 @@ terraform {
 * ✅ Think declarative: describe the end state
 * ✅ Control the lifecycle via plan → apply → destroy
 * ✅ Lock, version, and reuse infrastructure like code
-

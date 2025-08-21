@@ -2,7 +2,7 @@
 id: 6vuszh4kwghil1mkqwo7jlf
 title: Sqlite
 desc: ''
-updated: 1753449589284
+updated: 1755707812430
 created: 1753449571149
 ---
 tags: [master, sqlite, embeddeddb, lightweightdb, sql]

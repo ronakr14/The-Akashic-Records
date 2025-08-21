@@ -2,7 +2,7 @@
 id: 9k8n1134l5x3m2t8cyvy0n1
 title: Sqlserver
 desc: ''
-updated: 1753256399632
+updated: 1755754334160
 created: 1753256388359
 ---
 
@@ -21,13 +21,13 @@ created: 1753256388359
   * **High availability (Always On AGs, Clustering)**
   * **SSIS/SSAS/SSRS** (ETL, Analysis, Reporting)
 
-## 🚀 80/20 Roadmap
+## 🚀 80/20 Roadmap_
 
 | Stage | Concept                                | Reason                                     |
 | ----- | -------------------------------------- | ------------------------------------------ |
 | 1️⃣   | T-SQL Basics                           | Foundation for querying and modifying data |
 | 2️⃣   | Joins, Subqueries, CTEs                | Bread and butter for real-world queries    |
-| 3️⃣   | Indexing & Execution Plans             | Performance tuning essentials              |
+| 3️⃣   | _Indexing & Execution Plans             | Performance tuning essentials              |
 | 4️⃣   | Stored Procedures & Functions          | Logic encapsulation                        |
 | 5️⃣   | Views, Triggers                        | Data abstraction and automation            |
 | 6️⃣   | Transactions & Isolation Levels        | Data integrity and concurrency             |

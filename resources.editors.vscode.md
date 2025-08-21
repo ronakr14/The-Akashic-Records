@@ -2,7 +2,7 @@
 id: wxi55kw6xc2eefkf9o7wewy
 title: Vscode
 desc: ''
-updated: 1753256933408
+updated: 1755670839990
 created: 1753256926495
 ---
 
@@ -41,23 +41,6 @@ Because it lets you bring the power of a full IDE anywhere—without the bloat.
 
 ---
 
-## 🚀 Practical Tasks
-
-| Task                                                                                         | Description |
-| -------------------------------------------------------------------------------------------- | ----------- |
-| 🔥 Use multi-cursor editing to refactor repetitive code fast                                 |             |
-| 🔥 Stage, commit, and push changes using VSCode Git UI                                       |             |
-| 🔥 Set breakpoints and step through code in the debugger panel                               |             |
-| 🔥 Install and configure extensions for Python, Docker, or React development                 |             |
-| 🔥 Memorize and use essential keyboard shortcuts like `Ctrl+P`, `Ctrl+Shift+P`, and `Ctrl+D` |             |
-| 🔥 Create a workspace file to manage multi-root projects                                     |             |
-| 🔥 Run build or test commands using VSCode Tasks and integrated terminal                     |             |
-| 🔥 Connect remotely to a dev container or WSL environment for seamless dev                   |             |
-| 🔥 Share a live coding session with Live Share to debug with a teammate                      |             |
-| 🔥 Sync settings and extensions across multiple machines using Settings Sync                 |             |
-
----
-
 ## 🧾 Cheat Sheets
 
 ### 🔹 Essential Keyboard Shortcuts (Windows/Linux)
@@ -73,17 +56,6 @@ Because it lets you bring the power of a full IDE anywhere—without the bloat.
 | Debug Start/Continue      | F5                   |
 | Comment/Uncomment Line    | Ctrl + /             |
 | Format Document           | Shift + Alt + F      |
-
----
-
-## 🎯 Progressive Challenges
-
-| Level           | Challenge                                                                      |
-| --------------- | ------------------------------------------------------------------------------ |
-| 🥉 Easy         | Customize your editor theme and install essential extensions for your language |
-| 🥈 Intermediate | Use Git features inside VSCode and debug a multi-file application              |
-| 🥇 Advanced     | Configure remote development with containers or SSH and automate tasks         |
-| 🏆 Expert       | Create custom snippets, keybindings, and use Live Share for pair programming   |
 
 ---
 
