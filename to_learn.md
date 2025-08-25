@@ -2,11 +2,9 @@
 id: 3odhbhwqx7atc5z78fxygcx
 title: To_learn
 desc: ''
-updated: 1755765739473
+updated: 1756099443227
 created: 1755765598681
 ---
-* **Power BI** — Seamless reporting on top of SQL Server
-* **SSIS / Azure Data Factory** — ETL + orchestration
 * **Azure SQL / SQL Server on Linux / Containers** — For modern ops
 * **PolyBase** — Query external data sources from SQL Server
 * **Graph Extensions in SQL Server 2022+** — Model relationships natively
