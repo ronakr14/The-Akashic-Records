@@ -1,0 +1,241 @@
+{
+  "main": {
+    "id": "7c571d34f5048bbf",
+    "type": "split",
+    "children": [
+      {
+        "id": "56591765a76dd11a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "693a7a925c3882dc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00_Inbox/Initial Dump.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Initial Dump"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c2ffe2fe336bc3d8",
+    "type": "split",
+    "children": [
+      {
+        "id": "61592fba822ff272",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c1444ac3846c503c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "bf558183078bde10",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "f50d89a24c2d7565",
+    "type": "split",
+    "children": [
+      {
+        "id": "51de5371d8aa1be3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c5ecf8a71fc9d794",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Initial Dump.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Initial Dump"
+            }
+          },
+          {
+            "id": "6e3405f7280b865f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Initial Dump.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Initial Dump"
+            }
+          },
+          {
+            "id": "756deaa53275fb37",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "1fc776062d8ab037",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "8e2671deb9d1a66c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Initial Dump.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Initial Dump"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "audio-recorder:Start/stop recording": false,
+      "markdown-importer:Open format converter": false,
+      "random-note:Open random note": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "iconic:Open rulebook": false,
+      "sheet-plus:Create excel file": false,
+      "obsidian-tomorrows-daily-note:Open tomorrow's daily note": false
+    }
+  },
+  "active": "693a7a925c3882dc",
+  "lastOpenFiles": [
+    "Attachments/Pasted image 20260520115003.png",
+    "Attachments/Pasted image 20260520114949.png",
+    "Attachments/Pasted image 20260520114940.png",
+    "Attachments/Pasted image 20260520114931.png",
+    "Attachments/Pasted image 20260520114920.png",
+    "Attachments/Pasted image 20260520112833.png",
+    "Attachments/Pasted image 20260520112143.png",
+    "Attachments/Pasted image 20260520112134.png",
+    "Attachments/Pasted image 20260520112124.png",
+    "Attachments/Pasted image 20260520112115.png",
+    "Attachments/Pasted image 20260520112106.png",
+    "00_Inbox/git.bitbucket.selfhelp.md",
+    "00_Inbox/2026-05-15.md",
+    "2026-05-19.md",
+    "2026-05-20.md",
+    "00_Inbox/data.bigdata.selfhelp.md",
+    "CLAUDE.md",
+    "README.md",
+    "2026-05-18.md",
+    "ONBOARDING.md",
+    "Initial Dump.md",
+    "Untitled.md",
+    "handoff.md",
+    "compact_summary.md",
+    "04_Resources/N8N Ideas.md",
+    "00_Inbox/ai.agents.haystack-agents.selfhelp.md",
+    "02_Areas/DevOps",
+    "02_Areas/Data",
+    "02_Areas/Cloud",
+    "02_Areas/Blog",
+    "02_Areas/Blockchain",
+    "02_Areas/AI",
+    "00_Claude_Inbox",
+    "Untitled 1.md",
+    "00_Inbox",
+    "02_Areas/Work/ConcertAI/03 DA Process.md",
+    "2026-05-15.md",
+    "02 Areas - Ongoing/Work/ConcertAI/06 QA Process.md",
+    "02 Areas - Ongoing/Work/ConcertAI/05 PP Process.md",
+    "02 Areas - Ongoing/Work/ConcertAI/04 STAR Process.md",
+    "02 Areas - Ongoing/Work/ConcertAI/03 DA Process.md",
+    "02 Areas - Ongoing/Work/ConcertAI/02 DI Process.md",
+    "02 Areas - Ongoing/Work/ConcertAI/01 SPARQ Process.md",
+    "02 Areas - Ongoing/Work/ConcertAI/0 Complete Process.canvas",
+    "02 Areas - Ongoing/Work/ConcertAI",
+    "02 Areas - Ongoing/Work",
+    "02 Areas - Ongoing/Trackers/Storage Tracker.md"
+  ]
+}
