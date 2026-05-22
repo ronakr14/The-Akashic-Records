@@ -4,31 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "56591765a76dd11a",
+        "id": "cb78898f6661545e",
         "type": "tabs",
         "children": [
           {
-            "id": "693a7a925c3882dc",
+            "id": "217402500ba6eb53",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "00_Inbox/Initial Dump.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Initial Dump"
+              "title": "New tab"
             }
           }
         ]
@@ -78,8 +64,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "f50d89a24c2d7565",
@@ -188,19 +173,23 @@
       "obsidian-tomorrows-daily-note:Open tomorrow's daily note": false
     }
   },
-  "active": "693a7a925c3882dc",
+  "active": "c1444ac3846c503c",
   "lastOpenFiles": [
-    "Attachments/Pasted image 20260520115003.png",
+    "Attachments/Pasted image 20260514111712.png",
+    "00_Inbox/Initial Dump.md",
+    "Untitled.md",
+    "2026-05-22.md",
+    "00_Inbox/03 Knowledge - Curated/Code & Data Handling.md",
+    "00_Inbox/03 DA Process.md",
     "Attachments/Pasted image 20260520114949.png",
+    "Attachments/Pasted image 20260514111723.png",
+    "Attachments/Pasted image 20260520115003.png",
     "Attachments/Pasted image 20260520114940.png",
     "Attachments/Pasted image 20260520114931.png",
     "Attachments/Pasted image 20260520114920.png",
     "Attachments/Pasted image 20260520112833.png",
     "Attachments/Pasted image 20260520112143.png",
     "Attachments/Pasted image 20260520112134.png",
-    "Attachments/Pasted image 20260520112124.png",
-    "Attachments/Pasted image 20260520112115.png",
-    "Attachments/Pasted image 20260520112106.png",
     "00_Inbox/git.bitbucket.selfhelp.md",
     "00_Inbox/2026-05-15.md",
     "2026-05-19.md",
@@ -211,7 +200,6 @@
     "2026-05-18.md",
     "ONBOARDING.md",
     "Initial Dump.md",
-    "Untitled.md",
     "handoff.md",
     "compact_summary.md",
     "04_Resources/N8N Ideas.md",
@@ -230,12 +218,8 @@
     "02 Areas - Ongoing/Work/ConcertAI/06 QA Process.md",
     "02 Areas - Ongoing/Work/ConcertAI/05 PP Process.md",
     "02 Areas - Ongoing/Work/ConcertAI/04 STAR Process.md",
-    "02 Areas - Ongoing/Work/ConcertAI/03 DA Process.md",
-    "02 Areas - Ongoing/Work/ConcertAI/02 DI Process.md",
-    "02 Areas - Ongoing/Work/ConcertAI/01 SPARQ Process.md",
     "02 Areas - Ongoing/Work/ConcertAI/0 Complete Process.canvas",
     "02 Areas - Ongoing/Work/ConcertAI",
-    "02 Areas - Ongoing/Work",
-    "02 Areas - Ongoing/Trackers/Storage Tracker.md"
+    "02 Areas - Ongoing/Work"
   ]
 }
