@@ -9,11 +9,17 @@
         "children": [
           {
             "id": "1c98096fab99bd80",
+        "id": "03479cd565983c33",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a04b2b4edbd0bb37",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Untitled.md",
+                "file": "Untitled 4.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -29,9 +35,59 @@
               },
               "icon": "lucide-file",
               "title": "Untitled"
+              "title": "Untitled 4"
+            }
+          },
+          {
+            "id": "88443fb4989da5d5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2026-05-26.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2026-05-26"
+            }
+          },
+          {
+            "id": "a58a48202056a5ca",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Clippings/PySpark fundamentals.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "PySpark fundamentals"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -200,6 +256,36 @@
     "00_Inbox/Initial Dump.md",
     "00_Inbox/03 Knowledge - Curated/Code & Data Handling.md",
     "00_Inbox/03 DA Process.md",
+  "active": "a58a48202056a5ca",
+  "lastOpenFiles": [
+    "00_Inbox/interview_prep.jsx",
+    "Untitled 6.md",
+    "Clippings/PySpark fundamentals.md",
+    "2026-05-26.md",
+    "Untitled 5.md",
+    "Untitled 4.md",
+    "Untitled 1.md",
+    "Clippings/GitHub Starred Repo Notifications 1.md",
+    "Untitled 3.md",
+    "Clippings/GitHub Starred Repo Notifications.md",
+    "Clippings/Poetry custom package install.md",
+    "Clippings/Importing external folder in repo.md",
+    "Clippings/Run GitHub Python on n8n.md",
+    "Clippings/Why use Celery.md",
+    "Clippings/FastAPI CLI Decorator 7.md",
+    "Clippings/FastAPI CLI Decorator 6.md",
+    "Clippings/FastAPI CLI Decorator 5.md",
+    "Clippings/FastAPI CLI Decorator 4.md",
+    "Clippings/FastAPI CLI Decorator 3.md",
+    "Clippings/FastAPI CLI Decorator 2.md",
+    "Clippings/FastAPI CLI Decorator 1.md",
+    "Clippings/FastAPI CLI Decorator.md",
+    "Untitled 2.md",
+    "Clippings",
+    "Untitled.md",
+    "2026-05-22.md",
+    "Attachments/Pasted image 20260514111712.png",
+    "00_Inbox/Initial Dump.md",
     "Attachments/Pasted image 20260520114949.png",
     "Attachments/Pasted image 20260514111723.png",
     "Attachments/Pasted image 20260520115003.png",
@@ -228,14 +314,12 @@
     "02_Areas/Blockchain",
     "02_Areas/AI",
     "00_Claude_Inbox",
-    "Untitled 1.md",
     "00_Inbox",
     "02_Areas/Work/ConcertAI/03 DA Process.md",
     "2026-05-15.md",
     "02 Areas - Ongoing/Work/ConcertAI/06 QA Process.md",
     "02 Areas - Ongoing/Work/ConcertAI/05 PP Process.md",
     "02 Areas - Ongoing/Work/ConcertAI/0 Complete Process.canvas",
-    "02 Areas - Ongoing/Work/ConcertAI",
-    "02 Areas - Ongoing/Work"
+    "02 Areas - Ongoing/Work/ConcertAI"
   ]
 }
