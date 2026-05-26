@@ -1,24 +1,18 @@
 {
   "main": {
-    "id": "7c571d34f5048bbf",
+    "id": "ea7be1604b120919",
     "type": "split",
     "children": [
       {
-        "id": "9f93820faf3c6542",
+        "id": "9a1fd66cd514a635",
         "type": "tabs",
         "children": [
           {
-            "id": "1c98096fab99bd80",
-        "id": "03479cd565983c33",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "a04b2b4edbd0bb37",
+            "id": "4011c94ed11c5175",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Untitled.md",
                 "file": "Untitled 4.md",
                 "mode": "source",
                 "source": false,
@@ -34,74 +28,24 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Untitled"
               "title": "Untitled 4"
             }
-          },
-          {
-            "id": "88443fb4989da5d5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2026-05-26.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "2026-05-26"
-            }
-          },
-          {
-            "id": "a58a48202056a5ca",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Clippings/PySpark fundamentals.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "PySpark fundamentals"
-            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "c2ffe2fe336bc3d8",
+    "id": "4ae7f8b474138b0b",
     "type": "split",
     "children": [
       {
-        "id": "61592fba822ff272",
+        "id": "5061ff3aeae9466b",
         "type": "tabs",
         "children": [
           {
-            "id": "c1444ac3846c503c",
+            "id": "932cadc2bc5845db",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -114,7 +58,7 @@
             }
           },
           {
-            "id": "bf558183078bde10",
+            "id": "a9ceace3eac52dc1",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -134,24 +78,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
-    "id": "f50d89a24c2d7565",
+    "id": "7c51cdc979815380",
     "type": "split",
     "children": [
       {
-        "id": "51de5371d8aa1be3",
+        "id": "6708c91f78bb0879",
         "type": "tabs",
         "children": [
           {
-            "id": "c5ecf8a71fc9d794",
+            "id": "4492306454ff7181",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Initial Dump.md",
+                "file": "2026-05-26.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -161,25 +104,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Initial Dump"
+              "title": "Backlinks for 2026-05-26"
             }
           },
           {
-            "id": "6e3405f7280b865f",
+            "id": "cca36694376c9274",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Initial Dump.md",
+                "file": "2026-05-26.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Initial Dump"
+              "title": "Outgoing links from 2026-05-26"
             }
           },
           {
-            "id": "756deaa53275fb37",
+            "id": "0654d60dd919fafb",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -194,7 +137,7 @@
             }
           },
           {
-            "id": "1fc776062d8ab037",
+            "id": "973a21ef66c9c99c",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -208,18 +151,18 @@
             }
           },
           {
-            "id": "8e2671deb9d1a66c",
+            "id": "c1a7e3026a15ba80",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Initial Dump.md",
+                "file": "2026-05-26.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Initial Dump"
+              "title": "Outline of 2026-05-26"
             }
           }
         ]
@@ -235,91 +178,19 @@
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
-      "audio-recorder:Start/stop recording": false,
       "markdown-importer:Open format converter": false,
       "random-note:Open random note": false,
+      "audio-recorder:Start/stop recording": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "iconic:Open rulebook": false,
       "sheet-plus:Create excel file": false,
       "obsidian-tomorrows-daily-note:Open tomorrow's daily note": false
     }
   },
-  "active": "1c98096fab99bd80",
+  "active": "4011c94ed11c5175",
   "lastOpenFiles": [
-    "Untitled.md",
-    "00_Inbox/2026-05-22.md",
-    "CLAUDE.md",
-    "README.md",
-    "00_Inbox/Untitled.md",
-    "2026-05-25.md",
-    "Attachments/Pasted image 20260514111712.png",
-    "00_Inbox/Initial Dump.md",
-    "00_Inbox/03 Knowledge - Curated/Code & Data Handling.md",
-    "00_Inbox/03 DA Process.md",
-  "active": "a58a48202056a5ca",
-  "lastOpenFiles": [
-    "00_Inbox/interview_prep.jsx",
-    "Untitled 6.md",
-    "Clippings/PySpark fundamentals.md",
-    "2026-05-26.md",
     "Untitled 5.md",
-    "Untitled 4.md",
-    "Untitled 1.md",
-    "Clippings/GitHub Starred Repo Notifications 1.md",
-    "Untitled 3.md",
-    "Clippings/GitHub Starred Repo Notifications.md",
-    "Clippings/Poetry custom package install.md",
-    "Clippings/Importing external folder in repo.md",
-    "Clippings/Run GitHub Python on n8n.md",
-    "Clippings/Why use Celery.md",
-    "Clippings/FastAPI CLI Decorator 7.md",
-    "Clippings/FastAPI CLI Decorator 6.md",
-    "Clippings/FastAPI CLI Decorator 5.md",
-    "Clippings/FastAPI CLI Decorator 4.md",
-    "Clippings/FastAPI CLI Decorator 3.md",
-    "Clippings/FastAPI CLI Decorator 2.md",
-    "Clippings/FastAPI CLI Decorator 1.md",
-    "Clippings/FastAPI CLI Decorator.md",
-    "Untitled 2.md",
-    "Clippings",
-    "Untitled.md",
-    "2026-05-22.md",
-    "Attachments/Pasted image 20260514111712.png",
-    "00_Inbox/Initial Dump.md",
-    "Attachments/Pasted image 20260520114949.png",
-    "Attachments/Pasted image 20260514111723.png",
-    "Attachments/Pasted image 20260520115003.png",
-    "Attachments/Pasted image 20260520114940.png",
-    "Attachments/Pasted image 20260520114931.png",
-    "Attachments/Pasted image 20260520114920.png",
-    "Attachments/Pasted image 20260520112833.png",
-    "Attachments/Pasted image 20260520112143.png",
-    "Attachments/Pasted image 20260520112134.png",
-    "00_Inbox/git.bitbucket.selfhelp.md",
-    "00_Inbox/2026-05-15.md",
-    "2026-05-19.md",
-    "2026-05-20.md",
-    "00_Inbox/data.bigdata.selfhelp.md",
-    "2026-05-18.md",
-    "ONBOARDING.md",
-    "Initial Dump.md",
-    "handoff.md",
-    "compact_summary.md",
-    "04_Resources/N8N Ideas.md",
-    "00_Inbox/ai.agents.haystack-agents.selfhelp.md",
-    "02_Areas/DevOps",
-    "02_Areas/Data",
-    "02_Areas/Cloud",
-    "02_Areas/Blog",
-    "02_Areas/Blockchain",
-    "02_Areas/AI",
-    "00_Claude_Inbox",
-    "00_Inbox",
-    "02_Areas/Work/ConcertAI/03 DA Process.md",
-    "2026-05-15.md",
-    "02 Areas - Ongoing/Work/ConcertAI/06 QA Process.md",
-    "02 Areas - Ongoing/Work/ConcertAI/05 PP Process.md",
-    "02 Areas - Ongoing/Work/ConcertAI/0 Complete Process.canvas",
-    "02 Areas - Ongoing/Work/ConcertAI"
+    "Untitled 6.md",
+    "2026-05-26.md"
   ]
 }
