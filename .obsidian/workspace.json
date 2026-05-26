@@ -4,17 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "cb78898f6661545e",
+        "id": "9f93820faf3c6542",
         "type": "tabs",
         "children": [
           {
-            "id": "217402500ba6eb53",
+            "id": "1c98096fab99bd80",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Untitled.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Untitled"
             }
           }
         ]
@@ -64,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "f50d89a24c2d7565",
@@ -173,12 +188,16 @@
       "obsidian-tomorrows-daily-note:Open tomorrow's daily note": false
     }
   },
-  "active": "c1444ac3846c503c",
+  "active": "1c98096fab99bd80",
   "lastOpenFiles": [
+    "Untitled.md",
+    "00_Inbox/2026-05-22.md",
+    "CLAUDE.md",
+    "README.md",
+    "00_Inbox/Untitled.md",
+    "2026-05-25.md",
     "Attachments/Pasted image 20260514111712.png",
     "00_Inbox/Initial Dump.md",
-    "Untitled.md",
-    "2026-05-22.md",
     "00_Inbox/03 Knowledge - Curated/Code & Data Handling.md",
     "00_Inbox/03 DA Process.md",
     "Attachments/Pasted image 20260520114949.png",
@@ -195,8 +214,6 @@
     "2026-05-19.md",
     "2026-05-20.md",
     "00_Inbox/data.bigdata.selfhelp.md",
-    "CLAUDE.md",
-    "README.md",
     "2026-05-18.md",
     "ONBOARDING.md",
     "Initial Dump.md",
@@ -217,7 +234,6 @@
     "2026-05-15.md",
     "02 Areas - Ongoing/Work/ConcertAI/06 QA Process.md",
     "02 Areas - Ongoing/Work/ConcertAI/05 PP Process.md",
-    "02 Areas - Ongoing/Work/ConcertAI/04 STAR Process.md",
     "02 Areas - Ongoing/Work/ConcertAI/0 Complete Process.canvas",
     "02 Areas - Ongoing/Work/ConcertAI",
     "02 Areas - Ongoing/Work"
