@@ -11,10 +11,24 @@
             "id": "217402500ba6eb53",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "2026-05-26.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "2026-05-26"
             }
           }
         ]
@@ -173,8 +187,9 @@
       "obsidian-tomorrows-daily-note:Open tomorrow's daily note": false
     }
   },
-  "active": "c1444ac3846c503c",
+  "active": "217402500ba6eb53",
   "lastOpenFiles": [
+    "2026-05-26.md",
     "Attachments/Pasted image 20260514111712.png",
     "00_Inbox/Initial Dump.md",
     "Untitled.md",
