@@ -1,11 +1,3 @@
----
-id: dycmeqk6ramhcw8cir1u5g5
-title: Neuralnetwork 101
-desc: ''
-updated: 1756135138870
-created: 1756135125104
----
-
 # 🧠 Neural Networks 101
 
 A neural network is basically a **stack of function approximators**. At its core is the **artificial neuron**, inspired by the human brain.

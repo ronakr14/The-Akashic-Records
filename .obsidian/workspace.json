@@ -4,17 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "218f1d9dce2860d1",
+        "id": "427abb25a51455e5",
         "type": "tabs",
         "children": [
           {
-            "id": "0a959d3b8ba9d077",
+            "id": "a2ed614ee37c53c5",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "00_Inbox/ai.deeplearning.pytorch.selfhelp.md",
+                "mode": "source",
+                "source": true,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "ai.deeplearning.pytorch.selfhelp"
             }
           }
         ]
@@ -173,19 +187,33 @@
       "obsidian-tomorrows-daily-note:Open tomorrow's daily note": false
     }
   },
-  "active": "0a959d3b8ba9d077",
+  "active": "a2ed614ee37c53c5",
   "lastOpenFiles": [
-    "99 Trackers/Tracker.md",
-    "99 Trackers/Storage Tracker.md",
-    "2026-05-26.md",
-    "00_Inbox/Untitled 8.md",
-    "README.md",
-    "CLAUDE.md",
-    "00_Inbox/2026-05-26.md",
-    "00_Inbox/FastAPI CLI Decorator.md",
-    "00_Inbox/Untitled 7.md",
-    "00_Inbox/Untitled 4.md",
-    "00_Inbox/Untitled 5.md",
-    "00_Inbox/Untitled 6.md"
+    "00_Inbox/Neural Networks 101.md",
+    "00_Inbox/ai.deeplearning.history.md",
+    "00_Inbox/ai.deeplearning.guide.md",
+    "00_Inbox/ai.deeplearning.branches.md",
+    "00_Inbox/Reinforcement Learning + Deep RL.md",
+    "00_Inbox/Attention Mechanisms.md",
+    "00_Inbox/Graph Neural Networks (GNNs).md",
+    "00_Inbox/Deep Learning Architecture.md",
+    "00_Inbox/Generative Models.md",
+    "00_Inbox/Autoencoders.md",
+    "00_Inbox/Transformers.md",
+    "00_Inbox/RNNs (Recurrent Neural Networks).md",
+    "00_Inbox/CNNs (Convolutional Neural Networks).md",
+    "00_Inbox/Feedforward Neural Networks.md",
+    "00_Inbox/ai.deeplearning.books.md",
+    "00_Inbox/Diffusion Models.md",
+    "00_Inbox/ai.deeplearning.additional.md",
+    "00_Inbox/Transfer Learning & Pretrained Models.md",
+    "00_Inbox/Diffusion & Score-Based Models.md",
+    "00_Inbox/Variational Autoencoders (VAEs).md",
+    "00_Inbox/Conditional GANs.md",
+    "00_Inbox/Seq2Seq Architectures.md",
+    "00_Inbox/Explainability & Interpretability.md",
+    "00_Inbox/Scalable & Distributed Training.md",
+    "00_Inbox/Capsule Networks.md",
+    "00_Inbox/Vision Transformers (ViT).md"
   ]
 }
