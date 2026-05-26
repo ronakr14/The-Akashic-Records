@@ -4,31 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "427abb25a51455e5",
+        "id": "08628437979cd4de",
         "type": "tabs",
         "children": [
           {
-            "id": "a2ed614ee37c53c5",
+            "id": "1088717d30d567e0",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "00_Inbox/ai.deeplearning.pytorch.selfhelp.md",
-                "mode": "source",
-                "source": true,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "ai.deeplearning.pytorch.selfhelp"
+              "title": "New tab"
             }
           }
         ]
@@ -63,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "mlflow",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -78,7 +64,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "7c51cdc979815380",
@@ -187,33 +173,43 @@
       "obsidian-tomorrows-daily-note:Open tomorrow's daily note": false
     }
   },
-  "active": "a2ed614ee37c53c5",
+  "active": "1088717d30d567e0",
   "lastOpenFiles": [
-    "00_Inbox/Neural Networks 101.md",
-    "00_Inbox/ai.deeplearning.history.md",
-    "00_Inbox/ai.deeplearning.guide.md",
-    "00_Inbox/ai.deeplearning.branches.md",
-    "00_Inbox/Reinforcement Learning + Deep RL.md",
-    "00_Inbox/Attention Mechanisms.md",
-    "00_Inbox/Graph Neural Networks (GNNs).md",
-    "00_Inbox/Deep Learning Architecture.md",
-    "00_Inbox/Generative Models.md",
-    "00_Inbox/Autoencoders.md",
-    "00_Inbox/Transformers.md",
-    "00_Inbox/RNNs (Recurrent Neural Networks).md",
-    "00_Inbox/CNNs (Convolutional Neural Networks).md",
-    "00_Inbox/Feedforward Neural Networks.md",
-    "00_Inbox/ai.deeplearning.books.md",
-    "00_Inbox/Diffusion Models.md",
-    "00_Inbox/ai.deeplearning.additional.md",
-    "00_Inbox/Transfer Learning & Pretrained Models.md",
-    "00_Inbox/Diffusion & Score-Based Models.md",
-    "00_Inbox/Variational Autoencoders (VAEs).md",
-    "00_Inbox/Conditional GANs.md",
-    "00_Inbox/Seq2Seq Architectures.md",
-    "00_Inbox/Explainability & Interpretability.md",
-    "00_Inbox/Scalable & Distributed Training.md",
-    "00_Inbox/Capsule Networks.md",
-    "00_Inbox/Vision Transformers (ViT).md"
+    "03 Reference/05 Editors/Mermaid.md",
+    "03 Reference/00 AI/Neural Networks 101.md",
+    "03 Reference/00 AI/MLFlow.md",
+    "03 Reference/00 AI/Mistral.md",
+    "03 Reference/00 AI/Machine Learning Core.md",
+    "03 Reference/00 AI/Logistic Regression.md",
+    "03 Reference/06 Security/Logger.md",
+    "03 Reference/06 Security/LogGuru.md",
+    "03 Reference/02 Cloud Platforms/Kubernetes.md",
+    "00 Inbox/Koalas.md",
+    "03 Reference/04 Data Engineering/Koalas.md",
+    "03 Reference/Blockchain.md",
+    "03 Reference/Jira.md",
+    "00 Inbox/Jira.md",
+    "00 Inbox/Blockchain.md",
+    "03 Reference/04 Data Engineering/Kafka.md",
+    "03 Reference/01 Prompts/Job Application Prompts.md",
+    "03 Reference/03 Automation/Jenkins.md",
+    "03 Reference/07 Programming/JavaScript.md",
+    "04 Knowledge/interview_prep.jsx",
+    "04 Knowledge/Importing external folder in repo.md",
+    "Importing external folder in repo.md",
+    "03 Reference/01 Prompts/handoff.md",
+    "03 Reference/06 Security/Hacking Concepts.md",
+    "03 Reference/03 Automation/GitPython.md",
+    "03 Reference/03 Automation/Grafana.md",
+    "00 Inbox/DebugPy.md",
+    "03 Reference/08 Web Framework",
+    "03 Reference/New folder",
+    "03 Reference/07 Programming",
+    "New folder",
+    "03 Reference/03 Automation/open.url",
+    "05 Projects/Github Starred Repo",
+    "05 Projects/New folder",
+    "05 Projects/Github Profile Improvement",
+    "05 Projects/FastAPI CLI"
   ]
 }
