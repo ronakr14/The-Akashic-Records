@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Local Workspace System Design</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap');
+
+  :root {
+    --bg: #0e0e10;
+    --surface: #16161a;
+    --surface2: #1e1e24;
+    --border: #2a2a35;
+    --accent: #7c6af7;
+    --accent2: #3ecfb2;
+    --accent3: #f0a05a;
+    --danger: #e05c6a;
+    --text: #e2e2e8;
+    --text-dim: #8888a0;
+    --text-faint: #44445a;
+    --mono: 'IBM Plex Mono', monospace;
+    --sans: 'IBM Plex Sans', sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-weight: 300;
+    line-height: 1.7;
+    font-size: 15px;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0;
+    width: 240px;
+    height: 100vh;
+    background: var(--surface);
+    border-right: 1px solid var(--border);
+    padding: 32px 0;
+    overflow-y: auto;
+    z-index: 100;
+  }
+
+  nav .logo {
+    padding: 0 20px 24px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 16px;
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  nav .logo span { display: block; color: var(--text-dim); font-weight: 400; margin-top: 2px; font-size: 10px; }
+
+  nav a {
+    display: block;
+    padding: 7px 20px;
+    color: var(--text-dim);
+    text-decoration: none;
+    font-size: 12px;
+    font-family: var(--mono);
+    border-left: 2px solid transparent;
+    transition: all 0.15s;
+  }
+
+  nav a:hover, nav a.active {
+    color: var(--text);
+    border-left-color: var(--accent);
+    background: rgba(124,106,247,0.06);
+  }
+
+  nav .section-label {
+    padding: 16px 20px 6px;
+    font-size: 10px;
+    font-family: var(--mono);
+    color: var(--text-faint);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  /* MAIN */
+  main {
+    margin-left: 240px;
+    padding: 60px 64px 120px;
+    max-width: 900px;
+  }
+
+  /* SECTIONS */
+  .section {
+    margin-bottom: 80px;
+    padding-top: 20px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section-num {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--accent);
+    background: rgba(124,106,247,0.1);
+    border: 1px solid rgba(124,106,247,0.25);
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-weight: 600;
+  }
+
+  h1 {
+    font-size: 13px;
+    font-family: var(--mono);
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text);
+    font-family: var(--sans);
+    margin: 28px 0 10px;
+  }
+
+  h3 {
+    font-size: 13px;
+    font-family: var(--mono);
+    color: var(--accent2);
+    margin: 24px 0 8px;
+    font-weight: 500;
+  }
+
+  p { margin-bottom: 14px; color: var(--text); font-weight: 300; }
+
+  strong { color: var(--text); font-weight: 500; }
+
+  /* CODE BLOCKS */
+  pre {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 20px 22px;
+    font-family: var(--mono);
+    font-size: 13px;
+    line-height: 1.65;
+    overflow-x: auto;
+    margin: 16px 0;
+    position: relative;
+  }
+
+  pre .label {
+    position: absolute;
+    top: 10px; right: 14px;
+    font-size: 10px;
+    color: var(--text-faint);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .tree { color: #aaa; }
+  .tree .dir { color: var(--accent2); font-weight: 500; }
+  .tree .file { color: #c0c0d0; }
+  .tree .comment { color: var(--text-faint); font-style: italic; }
+  .tree .tag-exp { color: var(--accent3); }
+  .tree .tag-proj { color: var(--accent); }
+  .tree .tag-sys { color: var(--accent2); }
+
+  /* CALLOUTS */
+  .callout {
+    border-left: 3px solid var(--accent);
+    background: rgba(124,106,247,0.06);
+    padding: 14px 18px;
+    border-radius: 0 6px 6px 0;
+    margin: 16px 0;
+    font-size: 14px;
+  }
+
+  .callout.warn {
+    border-left-color: var(--accent3);
+    background: rgba(240,160,90,0.06);
+  }
+
+  .callout.danger {
+    border-left-color: var(--danger);
+    background: rgba(224,92,106,0.06);
+  }
+
+  .callout.tip {
+    border-left-color: var(--accent2);
+    background: rgba(62,207,178,0.06);
+  }
+
+  .callout .callout-title {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .callout .callout-title.accent { color: var(--accent); }
+  .callout .callout-title.warn { color: var(--accent3); }
+  .callout .callout-title.danger { color: var(--danger); }
+  .callout .callout-title.tip { color: var(--accent2); }
+
+  /* TABLES */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 13.5px;
+  }
+
+  th {
+    text-align: left;
+    padding: 10px 14px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  td {
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    vertical-align: top;
+    color: var(--text);
+    font-weight: 300;
+  }
+
+  tr:nth-child(even) td { background: rgba(255,255,255,0.015); }
+
+  /* TAG PILLS */
+  .pill {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-family: var(--mono);
+    font-weight: 500;
+  }
+
+  .pill-exp { background: rgba(240,160,90,0.15); color: var(--accent3); }
+  .pill-proj { background: rgba(124,106,247,0.15); color: var(--accent); }
+  .pill-sys { background: rgba(62,207,178,0.15); color: var(--accent2); }
+  .pill-arch { background: rgba(136,136,160,0.15); color: var(--text-dim); }
+
+  /* RULE LIST */
+  .rule-list {
+    list-style: none;
+    margin: 12px 0;
+  }
+
+  .rule-list li {
+    padding: 8px 0 8px 20px;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  .rule-list li:last-child { border-bottom: none; }
+
+  .rule-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-family: var(--mono);
+  }
+
+  .rule-list.danger li::before { color: var(--danger); content: '✗'; }
+  .rule-list.tip li::before { color: var(--accent2); content: '✓'; }
+
+  /* HERO */
+  .hero {
+    padding: 48px 0 60px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 60px;
+  }
+
+  .hero-eyebrow {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+    font-family: var(--sans);
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: -0.01em;
+    color: var(--text);
+    margin-bottom: 14px;
+    line-height: 1.3;
+  }
+
+  .hero p {
+    color: var(--text-dim);
+    font-size: 15px;
+    max-width: 580px;
+    line-height: 1.7;
+  }
+
+  .hero-meta {
+    display: flex;
+    gap: 24px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+  }
+
+  .hero-meta-item {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-faint);
+  }
+
+  .hero-meta-item span { color: var(--text-dim); }
+
+  /* FILE CARD */
+  .file-card {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    margin: 12px 0;
+    overflow: hidden;
+  }
+
+  .file-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 16px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .file-card-name {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--accent2);
+    font-weight: 500;
+  }
+
+  .file-card-badge {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--text-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .file-card-body {
+    padding: 14px 16px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--text-dim);
+  }
+
+  .file-card-body p { color: var(--text-dim); font-size: 13px; margin-bottom: 10px; }
+  .file-card-body strong { color: var(--text); }
+
+  /* GRID */
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 16px 0;
+  }
+
+  @media (max-width: 700px) {
+    .grid-2 { grid-template-columns: 1fr; }
+    main { margin-left: 0; padding: 20px; }
+    nav { display: none; }
+  }
+
+  /* LIFECYCLE DIAGRAM */
+  .lifecycle {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin: 20px 0;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  .lifecycle-stage {
+    flex-shrink: 0;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .lifecycle-stage .stage-name {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .lifecycle-stage .stage-loc {
+    font-size: 11px;
+    color: var(--text-dim);
+    font-family: var(--mono);
+  }
+
+  .lifecycle-stage.exp .stage-name { color: var(--accent3); }
+  .lifecycle-stage.proj .stage-name { color: var(--accent); }
+  .lifecycle-stage.sys .stage-name { color: var(--accent2); }
+  .lifecycle-stage.arch .stage-name { color: var(--text-dim); }
+
+  .lifecycle-arrow {
+    flex-shrink: 0;
+    padding: 0 10px;
+    color: var(--text-faint);
+    font-family: var(--mono);
+    font-size: 16px;
+  }
+
+  .lifecycle-arrow .condition {
+    font-size: 10px;
+    color: var(--text-faint);
+    display: block;
+    text-align: center;
+    margin-top: 2px;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">WORKSPACE SYSTEM<span>Design Reference v1.0</span></div>
+  <div class="section-label">Structure</div>
+  <a href="#folder-arch">01 · Folder Architecture</a>
+  <a href="#context-protocol">02 · Context Protocol</a>
+  <div class="section-label">Tooling</div>
+  <a href="#ai-interop">03 · AI Interoperability</a>
+  <a href="#lifecycle">04 · Lifecycle Rules</a>
+  <div class="section-label">Patterns</div>
+  <a href="#agent-layer">05 · Agent Layer</a>
+  <a href="#graph">06 · Graph Integration</a>
+  <a href="#antipatterns">07 · Anti-Patterns</a>
+</nav>
+
+<main>
+
+  <div class="hero">
+    <div class="hero-eyebrow">Local-First AI Workspace</div>
+    <h1>A practical system for high-velocity AI engineering</h1>
+    <p>Designed for 1-in-10 experiment graduation, Claude Code as primary driver, and portable context across Ollama, Continue, Codex, and Windsurf — without tool lock-in or cognitive overload.</p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">Primary Tool: <span>Claude Code</span></div>
+      <div class="hero-meta-item">Graduation Rate: <span>~10%</span></div>
+      <div class="hero-meta-item">Context Format: <span>Mixed (YAML + MD)</span></div>
+      <div class="hero-meta-item">Automation: <span>n8n (version-controlled)</span></div>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!-- 01 FOLDER ARCHITECTURE -->
+  <!-- ─────────────────────────────────────────── -->
+  <div class="section" id="folder-arch">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <h1>Folder Architecture</h1>
+    </div>
+
+    <p>The structure has six layers with deliberately different contracts. High-churn layers have minimal rules. Stable layers have enforced structure. The <strong>AI context layer cuts across all of them</strong> — it's not a folder, it's a protocol.</p>
+
+    <pre class="tree"><span class="label">DIRECTORY TREE</span>
+<span class="dir">~/workspace/</span>
+│
+<span class="tag-exp">├── lab/</span>                        <span class="comment"># experiments — zero friction zone</span>
+│   ├── <span class="dir">active/</span>
+│   │   ├── <span class="dir">2025-01-snowflake-cortex-bench/</span>
+│   │   ├── <span class="dir">2025-01-rag-chunking-test/</span>
+│   │   └── <span class="dir">scratch/</span>           <span class="comment"># truly throwaway, not dated</span>
+│   └── <span class="dir">stale/</span>                  <span class="comment"># auto-moved after 14 days no activity</span>
+│
+<span class="tag-proj">├── projects/</span>                   <span class="comment"># promoted work — structured, AI-ready</span>
+│   ├── <span class="dir">active/</span>
+│   │   └── <span class="dir">cortex-rag-pipeline/</span>
+│   │       ├── <span class="file">.ctx/</span>           <span class="comment"># AI context pack (see §02)</span>
+│   │       ├── <span class="dir">src/</span>
+│   │       ├── <span class="dir">tests/</span>
+│   │       ├── <span class="dir">docs/</span>
+│   │       └── <span class="file">README.md</span>
+│   └── <span class="dir">paused/</span>                 <span class="comment"># structured but not active</span>
+│
+<span class="tag-sys">├── systems/</span>                    <span class="comment"># long-lived, operational</span>
+│   ├── <span class="dir">n8n/</span>                    <span class="comment"># version-controlled workflows</span>
+│   │   ├── <span class="dir">workflows/</span>
+│   │   ├── <span class="dir">credentials.example/</span>
+│   │   └── <span class="file">SYSTEMS.md</span>         <span class="comment"># operational runbook</span>
+│   ├── <span class="dir">tools/</span>                  <span class="comment"># reusable scripts, CLIs, helpers</span>
+│   ├── <span class="dir">infra/</span>                  <span class="comment"># docker-compose, configs</span>
+│   └── <span class="dir">mcp-servers/</span>            <span class="comment"># custom MCP tools for Claude Code</span>
+│
+├── <span class="dir">knowledge/</span>                  <span class="comment"># curated only — not a dump</span>
+│   ├── <span class="dir">decisions/</span>              <span class="comment"># ADRs extracted from closed projects</span>
+│   ├── <span class="dir">patterns/</span>               <span class="comment"># reusable technical patterns</span>
+│   ├── <span class="dir">references/</span>             <span class="comment"># external docs, snapshots</span>
+│   └── <span class="dir">obsidian-bridge/</span>        <span class="comment"># symlinks to good Obsidian notes</span>
+│
+├── <span class="dir">archive/</span>
+│   ├── <span class="dir">completed/</span>              <span class="comment"># project + context snapshot preserved</span>
+│   └── <span class="dir">abandoned/</span>             <span class="comment"># lab experiments that died</span>
+│
+└── <span class="dir">.workspace/</span>                 <span class="comment"># system-level AI context (broad awareness)</span>
+    ├── <span class="file">index.md</span>               <span class="comment"># workspace map for AI</span>
+    ├── <span class="file">active-projects.md</span>     <span class="comment"># live status summary</span>
+    ├── <span class="file">tech-stack.md</span>          <span class="comment"># canonical stack reference</span>
+    └── <span class="file">conventions.md</span>         <span class="comment"># naming, patterns, rules</span>
+</pre>
+
+    <h2>Layer Reasoning</h2>
+
+    <div class="grid-2">
+      <div class="file-card">
+        <div class="file-card-header">
+          <span class="file-card-name">lab/</span>
+          <span class="file-card-badge pill pill-exp">experiments</span>
+        </div>
+        <div class="file-card-body">
+          <p>Date-prefixed dirs only. No required structure. No <code>.ctx/</code>. A <code>scratch/</code> subdir for things not worth naming. <code>stale/</code> is auto-populated — not manually curated. The <strong>naming discipline is the only rule</strong>: <code>YYYY-MM-topic</code>.</p>
+          <p>The date prefix does two things: gives you chronological context when scanning, and exposes age to scripts for auto-stale logic.</p>
+        </div>
+      </div>
+      <div class="file-card">
+        <div class="file-card-header">
+          <span class="file-card-name">projects/active/</span>
+          <span class="file-card-badge pill pill-proj">structured</span>
+        </div>
+        <div class="file-card-body">
+          <p>Every project here has a <code>.ctx/</code> directory. This is the gate. You cannot promote to projects/ without creating the context pack. That friction is intentional — it forces the 1-in-10 decision to be deliberate.</p>
+          <p><code>paused/</code> preserves structure without the overhead of active maintenance.</p>
+        </div>
+      </div>
+      <div class="file-card">
+        <div class="file-card-header">
+          <span class="file-card-name">systems/</span>
+          <span class="file-card-badge pill pill-sys">operational</span>
+        </div>
+        <div class="file-card-body">
+          <p>n8n lives here because it's already version-controlled — treat it the same as code. <code>mcp-servers/</code> matters: custom MCP tools you build for Claude Code belong here, not scattered in projects. Centralizing them means every project can use them.</p>
+        </div>
+      </div>
+      <div class="file-card">
+        <div class="file-card-header">
+          <span class="file-card-name">knowledge/</span>
+          <span class="file-card-badge pill pill-arch">curated</span>
+        </div>
+        <div class="file-card-body">
+          <p>This is <strong>not your Obsidian vault</strong>. It's a curated extraction layer. Only content that earns its place gets here — ADRs, patterns that recurred in 2+ projects, external references you actually cite. The <code>obsidian-bridge/</code> is symlinks, not copies.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout warn">
+      <div class="callout-title warn">⚠ On Obsidian Integration</div>
+      Since your vault is mostly fleeting notes, <strong>don't try to structure it</strong>. Instead, build a promotion path: when a note graduates (you've referenced it twice or it has real substance), symlink it into <code>knowledge/</code> and leave the original in Obsidian. Don't sync bidirectionally — that creates drift.
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!-- 02 CONTEXT PROTOCOL -->
+  <!-- ─────────────────────────────────────────── -->
+  <div class="section" id="context-protocol">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <h1>Context Protocol (Portable Context Pack)</h1>
+    </div>
+
+    <p>The <code>.ctx/</code> directory is a standardized AI context pack that lives inside every structured project. Its job: any AI tool can read these files and reconstruct enough understanding to be useful — without requiring conversational warm-up.</p>
+
+    <div class="callout tip">
+      <div class="callout-title tip">Design Principle</div>
+      Context files are written <strong>for AI consumption first, human convenience second</strong>. Dense, explicit, no assumed knowledge. Write as if the reader has never seen your codebase.
+    </div>
+
+    <pre><span class="label">CONTEXT PACK STRUCTURE</span>
+project/
+└── .ctx/
+    ├── overview.md         <span class="comment"># What + Why. Primary AI entry point.</span>
+    ├── state.md            <span class="comment"># Current status, blocking issues, next step.</span>
+    ├── decisions.md        <span class="comment"># Architecture decisions with reasoning.</span>
+    ├── tasks.md            <span class="comment"># Scoped task list. Not a backlog.</span>
+    ├── constraints.md      <span class="comment"># Hard limits: tech, perf, org, security.</span>
+    └── index.yaml          <span class="comment"># Machine-readable metadata + file manifest.</span>
+</pre>
+
+    <h3>overview.md — The AI Entry Point</h3>
+    <div class="file-card">
+      <div class="file-card-header">
+        <span class="file-card-name">.ctx/overview.md</span>
+        <span class="file-card-badge">Required · Stable</span>
+      </div>
+      <div class="file-card-body">
+<pre style="background:none;border:none;padding:0;margin:0;font-size:12px;">
+# cortex-rag-pipeline
+
+## Purpose
+Production RAG pipeline running natively in Snowflake using Cortex Search
+and Cortex Complete. Replaces a Python-based LangChain prototype that had
+unacceptable latency and vendor lock-in for embedding model swaps.
+
+## What it does
+- Ingests documents from an S3-staged Snowflake external stage
+- Chunks and embeds via EMBED_TEXT_1024 (Snowflake-managed)
+- Stores vectors in a dedicated VECTOR column in the DOCUMENTS table
+- Serves queries through Cortex Search with hybrid retrieval fallback
+- Returns augmented responses via COMPLETE('mistral-large', ...)
+
+## Stack
+- Snowflake Cortex (Search + Complete + Embed)
+- Snowpark Python for ingestion pipeline
+- Dynamic Tables for incremental refresh
+- dbt for transformation layer (staging → mart)
+
+## Non-goals
+- No external embedding APIs (Snowflake-managed only)
+- No streaming response (batch only for now)
+- Not handling multi-modal content
+</pre>
+      </div>
+    </div>
+
+    <h3>state.md — What's True Right Now</h3>
+    <div class="file-card">
+      <div class="file-card-header">
+        <span class="file-card-name">.ctx/state.md</span>
+        <span class="file-card-badge">Required · Evolving</span>
+      </div>
+      <div class="file-card-body">
+<pre style="background:none;border:none;padding:0;margin:0;font-size:12px;">
+## Status: ACTIVE — chunking strategy blocked
+
+## Last Updated: 2025-01-14
+
+## What works
+- Ingestion pipeline: end-to-end functional
+- Vector storage: schema finalized, indexing confirmed
+- Cortex Complete integration: tested with 3 models
+
+## What's broken / blocked
+- Chunking: 512-token fixed chunks produce poor recall on long PDFs.
+  Tried recursive character splitting — recall worse. Currently testing
+  semantic chunking via sentence-transformers locally before porting.
+- Hybrid retrieval fallback: BM25 scoring not exposed in Cortex Search API.
+  May need a separate keyword search table.
+
+## Immediate next action
+Run semantic chunking eval on 50-doc test set. Decision needed before
+the ingestion pipeline can be considered stable.
+
+## Known unknowns
+- Whether Cortex Search supports metadata filtering in GA (docs unclear)
+- Cost model for COMPLETE at scale — no internal benchmark yet
+</pre>
+      </div>
+    </div>
+
+    <h3>decisions.md — Architecture Decisions</h3>
+    <div class="file-card">
+      <div class="file-card-header">
+        <span class="file-card-name">.ctx/decisions.md</span>
+        <span class="file-card-badge">Required · Append-only</span>
+      </div>
+      <div class="file-card-body">
+<pre style="background:none;border:none;padding:0;margin:0;font-size:12px;">
+## ADR-001 — Use Snowflake-managed embeddings only
+**Date:** 2025-01-08
+**Status:** Accepted
+**Decision:** Use EMBED_TEXT_1024 exclusively. No external API calls.
+**Reasoning:** Security review requires all data to stay within Snowflake
+boundary. External embedding APIs would require egress approval.
+Tradeoff: we lose model choice flexibility. Accepted — model swap
+can be revisited when Cortex expands embedding model catalog.
+
+---
+
+## ADR-002 — Dynamic Tables over Streams+Tasks for incremental refresh
+**Date:** 2025-01-10
+**Status:** Accepted
+**Decision:** Use Dynamic Tables with 1-minute lag target for document sync.
+**Reasoning:** Streams+Tasks would require manual orchestration of
+multi-step DAG. Dynamic Tables handle dependency resolution automatically.
+Tradeoff: less control over execution order. Acceptable for current scale.
+**Revisit if:** document volume exceeds 1M rows or lag requirements tighten.
+</pre>
+      </div>
+    </div>
+
+    <h3>constraints.md — Hard Limits</h3>
+    <div class="file-card">
+      <div class="file-card-header">
+        <span class="file-card-name">.ctx/constraints.md</span>
+        <span class="file-card-badge">Required · Rarely changes</span>
+      </div>
+      <div class="file-card-body">
+<pre style="background:none;border:none;padding:0;margin:0;font-size:12px;">
+## Hard Constraints
+
+### Security
+- No data egress outside Snowflake boundary
+- All credentials via Snowflake secrets — no .env files in repo
+- PII columns (user_email, user_id) masked via Dynamic Data Masking
+  for all non-SYSADMIN roles
+
+### Performance
+- Ingestion pipeline: &lt;5 min for 1000 documents end-to-end
+- Query latency: p95 &lt; 3s for single-turn RAG response
+
+### Technology
+- Snowflake Enterprise (not Business Critical) — some features unavailable
+- Python 3.11 (Snowpark constraint) — no 3.12+ features
+- dbt Core only — no dbt Cloud
+
+### Org
+- No external vendor dependencies without security review
+- Breaking schema changes require 1-week notice to downstream teams
+</pre>
+      </div>
+    </div>
+
+    <h3>index.yaml — Machine-Readable Manifest</h3>
+    <div class="file-card">
+      <div class="file-card-header">
+        <span class="file-card-name">.ctx/index.yaml</span>
+        <span class="file-card-badge">Required · Structured</span>
+      </div>
+      <div class="file-card-body">
+<pre style="background:none;border:none;padding:0;margin:0;font-size:12px;">
+project: cortex-rag-pipeline
+status: active          # active | paused | completed | abandoned
+phase: development      # exploration | development | stabilizing | production
+owner: ronak
+promoted_from: lab/active/2025-01-snowflake-cortex-bench
+promoted_on: 2025-01-10
+
+stack:
+  - snowflake-cortex
+  - snowpark-python
+  - dbt-core
+  - dynamic-tables
+
+related_projects: []
+related_systems:
+  - systems/n8n           # ingestion trigger workflow
+
+context_files:
+  overview: .ctx/overview.md
+  state: .ctx/state.md
+  decisions: .ctx/decisions.md
+  tasks: .ctx/tasks.md
+  constraints: .ctx/constraints.md
+
+inject_priority:          # order for context window budget
+  - overview.md
+  - state.md
+  - constraints.md
+  - decisions.md
+  - tasks.md
+</pre>
+      </div>
+    </div>
+
+    <h3>What NOT to Include in .ctx/</h3>
+    <ul class="rule-list danger">
+      <li>Full file dumps or long code pastes — link to files, don't embed them</li>
+      <li>Meeting notes, chat logs, raw brainstorms — these belong in Obsidian</li>
+      <li>Every possible option considered — only decisions made, with rationale</li>
+      <li>Version history or changelogs — that's what git is for</li>
+      <li>Aspirational future state — only what's true now and what's next</li>
+      <li>Context from other projects — each .ctx/ is self-contained</li>
+    </ul>
+
+    <h3>How Context Evolves</h3>
+    <table>
+      <tr><th>File</th><th>Update Trigger</th><th>Who Updates</th></tr>
+      <tr><td><code>overview.md</code></td><td>Scope changes, non-goals discovered</td><td>You, rarely</td></tr>
+      <tr><td><code>state.md</code></td><td>Every work session start/end</td><td>You or ask AI to update it</td></tr>
+      <tr><td><code>decisions.md</code></td><td>Any architectural decision made</td><td>You, append-only</td></tr>
+      <tr><td><code>tasks.md</code></td><td>Task completed or scope shifts</td><td>You or ask AI to update it</td></tr>
+      <tr><td><code>constraints.md</code></td><td>New hard limit discovered</td><td>You</td></tr>
+      <tr><td><code>index.yaml</code></td><td>Status/phase changes, new relations</td><td>Promotion script</td></tr>
+    </table>
+
+    <div class="callout tip">
+      <div class="callout-title tip">Practical Habit</div>
+      End every significant work session with: <em>"Update state.md to reflect what changed today and what's blocked."</em> — directed at whatever AI you're using. Takes 30 seconds and keeps context fresh with zero overhead.
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!-- 03 AI INTEROPERABILITY -->
+  <!-- ─────────────────────────────────────────── -->
+  <div class="section" id="ai-interop">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <h1>AI Interoperability Strategy</h1>
+    </div>
+
+    <p>The core insight: <strong>you have one context format, not five tool-specific formats.</strong> Each tool reads <code>.ctx/</code> differently, but the files are identical. This is what portability actually means.</p>
+
+    <h2>Tool-by-Tool Injection Strategy</h2>
+
+    <h3>Claude Code — Primary Driver</h3>
+    <div class="file-card">
+      <div class="file-card-header">
+        <span class="file-card-name">CLAUDE.md</span>
+        <span class="file-card-badge">Project root · Auto-loaded</span>
+      </div>
+      <div class="file-card-body">
+        <p>Claude Code auto-reads <code>CLAUDE.md</code> from project root and any parent dirs. This is your primary injection mechanism. Keep it lean — it's a pointer, not a dump.</p>
+<pre style="background:none;border:none;padding:0;margin:0;font-size:12px;">
+# CLAUDE.md (project root)
+
+## Context Pack
+Read .ctx/overview.md, .ctx/state.md, .ctx/constraints.md before
+responding to any request. Load decisions.md if the task involves
+architecture or schema changes. Load tasks.md for task execution.
+
+## Working Rules
+- All data must stay within Snowflake boundary (see constraints.md)
+- Do not suggest external embedding APIs
+- When updating state.md, keep it under 40 lines
+- Prefer Dynamic Tables over Streams+Tasks unless explicitly asked
+
+## Quick Stack Reference
+Snowflake Cortex · Snowpark Python 3.11 · dbt Core · Dynamic Tables
+</pre>
+        <p>Also create a <strong>workspace-level</strong> <code>CLAUDE.md</code> in <code>~/workspace/</code> that points to <code>.workspace/index.md</code> for broad awareness.</p>
+      </div>
+    </div>
+
+    <h3>Continue (VS Code) — In-Editor Assistant</h3>
+    <div class="file-card">
+      <div class="file-card-header">
+        <span class="file-card-name">.continuerc.json</span>
+        <span class="file-card-badge">Project root · Custom docs</span>
+      </div>
+      <div class="file-card-body">
+        <p>Continue supports custom context providers and <code>@docs</code>. Wire it to read your <code>.ctx/</code> files as custom documentation:</p>
+<pre style="background:none;border:none;padding:0;margin:0;font-size:12px;">
+{
+  "contextProviders": [
+    {
+      "name": "file",
+      "params": {
+        "defaultFile": ".ctx/state.md"
+      }
+    }
+  ],
+  "docs": [
+    {
+      "title": "Project Overview",
+      "startUrl": ".ctx/overview.md"
+    }
+  ],
+  "systemMessage": "You are working in the cortex-rag-pipeline project.
+    Always read .ctx/state.md before answering questions about current
+    status. Hard constraints are in .ctx/constraints.md."
+}
+</pre>
+        <p>In practice: use <code>@file .ctx/state.md</code> in the Continue chat for quick state injection. <strong>Don't paste the whole context pack</strong> — Continue is for in-file edits, not architecture sessions.</p>
+      </div>
+    </div>
+
+    <h3>Ollama — Local Models</h3>
+    <div class="file-card">
+      <div class="file-card-header">
+        <span class="file-card-name">ctx-inject.sh</span>
+        <span class="file-card-badge">systems/tools/ · Context injector</span>
+      </div>
+      <div class="file-card-body">
+        <p>Ollama has no native project-awareness. Build a lightweight shell tool that assembles context into a prompt prefix:</p>
+<pre style="background:none;border:none;padding:0;margin:0;font-size:12px;">
+#!/bin/bash
+# systems/tools/ctx-inject.sh
+# Usage: ctx-inject.sh [project-path] | ollama run llama3.2
+
+PROJECT=${1:-$(pwd)}
+CTX="$PROJECT/.ctx"
+
+if [ ! -d "$CTX" ]; then
+  echo "No .ctx found at $PROJECT" >&2
+  exit 1
+fi
+
+echo "=== PROJECT CONTEXT ==="
+cat "$CTX/overview.md"
+echo ""
+echo "=== CURRENT STATE ==="
+cat "$CTX/state.md"
+echo ""
+echo "=== CONSTRAINTS ==="
+cat "$CTX/constraints.md"
+echo "=== END CONTEXT === Answer the following:"
+</pre>
+        <p>Pipe output into your Ollama call. Keep total context under 2000 tokens for smaller local models — use <code>inject_priority</code> from <code>index.yaml</code> to pick which files to include.</p>
+      </div>
+    </div>
+
+    <h3>Windsurf — Cascade Context</h3>
+    <div class="file-card">
+      <div class="file-card-header">
+        <span class="file-card-name">Windsurf Rules</span>
+        <span class="file-card-badge">.windsurfrules · Workspace level</span>
+      </div>
+      <div class="file-card-body">
+        <p>Windsurf's Cascade reads <code>.windsurfrules</code> in the project root. Wire it the same way as CLAUDE.md — point to <code>.ctx/</code>:</p>
+<pre style="background:none;border:none;padding:0;margin:0;font-size:12px;">
+# .windsurfrules
+Always read .ctx/overview.md and .ctx/constraints.md before
+suggesting code changes. Hard constraints take priority over
+any optimization. When making architectural suggestions,
+check .ctx/decisions.md first to avoid re-litigating closed decisions.
+</pre>
+      </div>
+    </div>
+
+    <h3>Codex</h3>
+    <p>Codex (OpenAI) benefits from the same <code>AGENTS.md</code> / system prompt pattern. If using via API, prepend the assembled context pack output. If using CLI, a <code>.codex-context</code> file in project root works as a system-level inject.</p>
+
+    <h2>Depth vs. Breadth Balancing</h2>
+
+    <table>
+      <tr><th>Scenario</th><th>What to Inject</th><th>Tool</th></tr>
+      <tr>
+        <td>Deep work on one project</td>
+        <td>Full <code>.ctx/</code> (all 5 files)</td>
+        <td>Claude Code</td>
+      </tr>
+      <tr>
+        <td>Quick edit / in-file fix</td>
+        <td><code>state.md</code> + constraints only</td>
+        <td>Continue / Windsurf</td>
+      </tr>
+      <tr>
+        <td>Cross-project question</td>
+        <td><code>.workspace/active-projects.md</code></td>
+        <td>Claude Code at workspace root</td>
+      </tr>
+      <tr>
+        <td>Local model exploration</td>
+        <td><code>overview.md</code> + <code>state.md</code> only</td>
+        <td>Ollama via ctx-inject.sh</td>
+      </tr>
+      <tr>
+        <td>New session, lost context</td>
+        <td><code>index.yaml</code> → pick files by inject_priority</td>
+        <td>Any tool</td>
+      </tr>
+    </table>
+
+    <div class="callout warn">
+      <div class="callout-title warn">⚠ Context Window Discipline</div>
+      The most common failure: injecting too much context and degrading response quality. The <code>inject_priority</code> field in <code>index.yaml</code> exists exactly for this. For smaller models (Ollama, 7B-13B), never exceed <code>overview.md + state.md</code>. For Claude, the full pack is fine but still not necessary for simple tasks.
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!-- 04 LIFECYCLE RULES -->
+  <!-- ─────────────────────────────────────────── -->
+  <div class="section" id="lifecycle">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <h1>Promotion &amp; Lifecycle Rules</h1>
+    </div>
+
+    <div class="lifecycle">
+      <div class="lifecycle-stage exp">
+        <div class="stage-name">EXPERIMENT</div>
+        <div class="stage-loc">lab/active/</div>
+      </div>
+      <div class="lifecycle-arrow">→<span class="condition">promote</span></div>
+      <div class="lifecycle-stage proj">
+        <div class="stage-name">PROJECT</div>
+        <div class="stage-loc">projects/active/</div>
+      </div>
+      <div class="lifecycle-arrow">→<span class="condition">pause</span></div>
+      <div class="lifecycle-stage proj">
+        <div class="stage-name">PAUSED</div>
+        <div class="stage-loc">projects/paused/</div>
+      </div>
+      <div class="lifecycle-arrow">→<span class="condition">complete</span></div>
+      <div class="lifecycle-stage arch">
+        <div class="stage-name">ARCHIVE</div>
+        <div class="stage-loc">archive/</div>
+      </div>
+    </div>
+
+    <h3>Experiment → Stale (Auto, 14 days)</h3>
+    <p>Any experiment with no file changes in 14 days moves to <code>lab/stale/</code>. No decision needed. Implement with a cron job or n8n workflow — this should be automatic, not a weekly chore.</p>
+
+    <pre><span class="label">BASH</span>
+find ~/workspace/lab/active -maxdepth 1 -mindepth 1 -type d \
+  -not -newer $(date -d "14 days ago" +%Y%m%d) \
+  -exec mv {} ~/workspace/lab/stale/ \;
+</pre>
+
+    <h3>Experiment → Project (Manual, Deliberate)</h3>
+    <p>Promotion is <strong>not automatic</strong>. These criteria must be met — all three:</p>
+    <ul class="rule-list tip">
+      <li><strong>Signal:</strong> The experiment has produced something you want to use again or build on, not just understand</li>
+      <li><strong>Boundary:</strong> You can articulate what it does AND what it explicitly doesn't do (non-goals exist)</li>
+      <li><strong>Investment:</strong> You're willing to spend 20 minutes creating the full <code>.ctx/</code> pack right now</li>
+    </ul>
+    <p>If any of those three fails — it's not ready. Leave it in <code>lab/active/</code> or let it go stale.</p>
+
+    <div class="callout">
+      <div class="callout-title accent">Promotion Script</div>
+      Create a <code>promote.sh</code> in <code>systems/tools/</code> that scaffolds the <code>.ctx/</code> directory with templated files and pre-fills <code>index.yaml</code> from the lab dir metadata. Reducing friction on the one moment that matters makes the 1-in-10 rate healthier.
+    </div>
+
+    <h3>Project → Paused</h3>
+    <ul class="rule-list">
+      <li>No active work for 30 days AND you have no near-term plan to resume</li>
+      <li>Before pausing: update <code>state.md</code> with a resume note — specifically what the next action is</li>
+      <li>Structure stays intact. <code>.ctx/</code> stays current. Move, don't modify.</li>
+    </ul>
+
+    <h3>→ Archive: Completed</h3>
+    <ul class="rule-list tip">
+      <li>Take a final snapshot: run a script that copies the <code>.ctx/</code> + <code>docs/</code> to <code>archive/completed/project-name/</code></li>
+      <li>Extract any reusable ADRs into <code>knowledge/decisions/</code> before archiving</li>
+      <li>Update <code>.workspace/active-projects.md</code> to remove it</li>
+    </ul>
+
+    <h3>→ Archive: Abandoned (Stale → Dead)</h3>
+    <ul class="rule-list">
+      <li>Stale for 60+ days with no promotion intent</li>
+      <li>Move to <code>archive/abandoned/</code> — compressed if large, otherwise as-is</li>
+      <li>No documentation required. Just move it.</li>
+    </ul>
+
+    <h2>Clutter Prevention Rules</h2>
+    <table>
+      <tr><th>Location</th><th>Max Count</th><th>Enforcement</th></tr>
+      <tr><td><code>lab/active/</code></td><td>~15 dirs</td><td>14-day auto-stale script</td></tr>
+      <tr><td><code>projects/active/</code></td><td>3–5 projects</td><td>Manual — if you hit 6, pause something</td></tr>
+      <tr><td><code>projects/paused/</code></td><td>Unlimited</td><td>Monthly review — archive if no resume date</td></tr>
+      <tr><td><code>lab/stale/</code></td><td>Anything goes</td><td>60-day → archive/abandoned script</td></tr>
+    </table>
+  </div>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!-- 05 AGENT LAYER -->
+  <!-- ─────────────────────────────────────────── -->
+  <div class="section" id="agent-layer">
+    <div class="section-header">
+      <span class="section-num">05</span>
+      <h1>Agent / Workflow Layer (Lightweight)</h1>
+    </div>
+
+    <p>No LangChain. No orchestration framework. The insight: <strong>roles are just system prompts + context file subsets</strong>. You already have structured context — the "agent" is just how you frame the request against it.</p>
+
+    <h2>Three Roles, Three Context Subsets</h2>
+
+    <div class="grid-2">
+      <div class="file-card">
+        <div class="file-card-header">
+          <span class="file-card-name">Planner Role</span>
+          <span class="file-card-badge">Claude Code · Session start</span>
+        </div>
+        <div class="file-card-body">
+          <p><strong>Context injected:</strong> <code>overview.md</code> + <code>state.md</code> + <code>tasks.md</code></p>
+          <p><strong>Prompt pattern:</strong></p>
+<pre style="background:none;border:none;padding:0;margin:0;font-size:12px;">
+"You are a planner. Read the provided context.
+Do not write code. Identify the single most
+important thing to work on next given current
+state and blockers. Explain your reasoning in
+under 100 words."
+</pre>
+          <p>Use at session start when you're not sure where to pick up.</p>
+        </div>
+      </div>
+      <div class="file-card">
+        <div class="file-card-header">
+          <span class="file-card-name">Executor Role</span>
+          <span class="file-card-badge">Claude Code / Continue · Task work</span>
+        </div>
+        <div class="file-card-body">
+          <p><strong>Context injected:</strong> <code>constraints.md</code> + relevant source files</p>
+          <p><strong>Prompt pattern:</strong></p>
+<pre style="background:none;border:none;padding:0;margin:0;font-size:12px;">
+"You are an executor. The task is: [specific task].
+Hard constraints are in constraints.md — these
+are non-negotiable. Generate the implementation.
+Flag anything that might violate a constraint
+before proceeding."
+</pre>
+          <p>Constraints-only injection keeps the context window tight for code generation.</p>
+        </div>
+      </div>
+      <div class="file-card">
+        <div class="file-card-header">
+          <span class="file-card-name">Reviewer Role</span>
+          <span class="file-card-badge">Claude Code · Before commit</span>
+        </div>
+        <div class="file-card-body">
+          <p><strong>Context injected:</strong> <code>decisions.md</code> + <code>constraints.md</code> + diff/changed files</p>
+          <p><strong>Prompt pattern:</strong></p>
+<pre style="background:none;border:none;padding:0;margin:0;font-size:12px;">
+"You are a reviewer. Check this implementation
+against: (1) hard constraints, (2) existing ADRs,
+(3) correctness. Do NOT suggest improvements
+outside scope. Flag violations only."
+</pre>
+          <p>The "no out-of-scope suggestions" instruction prevents reviewer bloat.</p>
+        </div>
+      </div>
+      <div class="file-card">
+        <div class="file-card-header">
+          <span class="file-card-name">Scribe Role</span>
+          <span class="file-card-badge">Session end · Context maintenance</span>
+        </div>
+        <div class="file-card-body">
+          <p><strong>Context injected:</strong> <code>state.md</code> (current) + conversation summary</p>
+          <p><strong>Prompt pattern:</strong></p>
+<pre style="background:none;border:none;padding:0;margin:0;font-size:12px;">
+"You are a scribe. Update state.md to reflect:
+what was accomplished, what's now blocked,
+and what the immediate next action is.
+Keep it under 40 lines. Preserve format."
+</pre>
+          <p>Run at session end. Keeps context fresh for the next session automatically.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>Implementation: Prompt Templates as Files</h2>
+    <p>Store these as markdown files in <code>systems/tools/prompts/</code>. Use them by reading + appending context, not by building a framework.</p>
+
+    <pre><span class="label">DIRECTORY</span>
+systems/tools/prompts/
+├── planner.md
+├── executor.md
+├── reviewer.md
+└── scribe.md
+</pre>
+
+    <p>For Claude Code: add a single line to <code>CLAUDE.md</code> that says where to find them. For Ollama: pipe them into <code>ctx-inject.sh</code>. No framework needed — just files.</p>
+
+    <h3>n8n as Lightweight Orchestrator</h3>
+    <p>For anything repetitive (daily state summaries, auto-stale moves, context freshness checks), use n8n. Not as an agent framework — as a cron job with HTTP calls. A simple workflow that reads <code>state.md</code> age and flags projects that haven't been updated in 7 days costs 30 minutes to build and runs forever.</p>
+  </div>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!-- 06 GRAPH INTEGRATION -->
+  <!-- ─────────────────────────────────────────── -->
+  <div class="section" id="graph">
+    <div class="section-header">
+      <span class="section-num">06</span>
+      <h1>Graph Integration</h1>
+    </div>
+
+    <p>Graph is high value for you specifically because you have a cross-cutting systems layer (n8n, tools) that multiple projects depend on, and a knowledge base that should be linked to decisions. The risk: you build a beautiful graph that's never consulted.</p>
+
+    <h2>What to Link (and What Not To)</h2>
+
+    <table>
+      <tr><th>Link Type</th><th>Value</th><th>Include?</th></tr>
+      <tr><td>project → system dependency</td><td>High — shows blast radius of system changes</td><td>Yes</td></tr>
+      <tr><td>project → ADR</td><td>High — traceability</td><td>Yes</td></tr>
+      <tr><td>experiment → knowledge note</td><td>Medium — shows what informed the experiment</td><td>Yes, sparingly</td></tr>
+      <tr><td>experiment → experiment</td><td>Low — usually noise</td><td>No</td></tr>
+      <tr><td>project → every tool used</td><td>Very low — becomes a dependency graph, not a knowledge graph</td><td>No</td></tr>
+    </table>
+
+    <h3>Encoding Links in index.yaml</h3>
+    <p>The <code>related_projects</code> and <code>related_systems</code> fields in <code>index.yaml</code> are your graph edges. They're machine-readable, which means Graphify (or any tool) can consume them directly without a separate graph database.</p>
+
+    <pre><span class="label">INDEX.YAML — RELATIONSHIP FIELDS</span>
+related_projects:
+  - projects/active/snowflake-governance-layer  # shares DDM patterns
+related_systems:
+  - systems/n8n                                 # triggers ingestion
+  - systems/tools/ctx-inject.sh                 # used for local model eval
+knowledge_refs:
+  - knowledge/decisions/ADR-001-embeddings.md
+  - knowledge/patterns/snowflake-dynamic-tables.md
+</pre>
+
+    <h3>How Graph Enhances AI Context</h3>
+    <p>Add a <strong>workspace graph summary</strong> to <code>.workspace/index.md</code> — a plain-text adjacency description. When asking Claude Code a cross-project question, inject this file. It gives broad awareness without requiring the AI to traverse actual graph files.</p>
+
+    <pre><span class="label">.WORKSPACE/INDEX.MD — GRAPH SUMMARY SECTION</span>
+## Project Relationships
+
+cortex-rag-pipeline
+  → depends on: systems/n8n (ingestion trigger)
+  → shares patterns with: snowflake-governance-layer (DDM)
+  → informed by: ADR-001 (embedding model constraint)
+
+snowflake-governance-layer
+  → depends on: systems/tools/ddm-validator.py
+  → no active project dependencies
+</pre>
+
+    <div class="callout warn">
+      <div class="callout-title warn">⚠ Graph Noise Anti-Pattern</div>
+      Don't link everything to Obsidian notes — your vault is mostly fleeting notes and most of them will be stale or irrelevant. Only link notes that have been curated into <code>knowledge/</code>. Graph noise (many low-value links) degrades AI context quality faster than missing links do.
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!-- 07 ANTI-PATTERNS -->
+  <!-- ─────────────────────────────────────────── -->
+  <div class="section" id="antipatterns">
+    <div class="section-header">
+      <span class="section-num">07</span>
+      <h1>Anti-Patterns</h1>
+    </div>
+
+    <p>These are specific failure modes for your working style — not generic productivity warnings.</p>
+
+    <h3>Where This System Will Break</h3>
+
+    <div class="file-card">
+      <div class="file-card-header">
+        <span class="file-card-name">Anti-Pattern 1: Context Staleness Spiral</span>
+        <span class="file-card-badge danger">High Risk for You</span>
+      </div>
+      <div class="file-card-body">
+        <p><strong>How it happens:</strong> You promote an experiment, create a great <code>.ctx/</code> pack, then do two weeks of work without updating <code>state.md</code>. Now the context pack describes a project from two weeks ago. AI suggestions start subtly degrading because they're based on an outdated problem statement.</p>
+        <p><strong>Fix:</strong> The Scribe role prompt at session end. Make it a muscle memory habit, not an optional step.</p>
+      </div>
+    </div>
+
+    <div class="file-card">
+      <div class="file-card-header">
+        <span class="file-card-name">Anti-Pattern 2: Lab as Purgatory</span>
+        <span class="file-card-badge danger">High Risk for You</span>
+      </div>
+      <div class="file-card-body">
+        <p><strong>How it happens:</strong> With a 1-in-10 graduation rate, you'll have a lot of good-but-not-promoted experiments. You'll resist archiving them because "I might come back to this." Over time, <code>lab/active/</code> fills with 40 dirs and becomes cognitively heavy even though 90% are dead.</p>
+        <p><strong>Fix:</strong> The 14-day auto-stale script is not optional. It's the only thing that keeps this honest. The archive is not deletion — it's just out of sight.</p>
+      </div>
+    </div>
+
+    <div class="file-card">
+      <div class="file-card-header">
+        <span class="file-card-name">Anti-Pattern 3: Obsidian Gravity</span>
+        <span class="file-card-badge danger">Medium Risk for You</span>
+      </div>
+      <div class="file-card-body">
+        <p><strong>How it happens:</strong> You start capturing project decisions in Obsidian because you're already there. Then ADRs exist in two places. Then the <code>.ctx/decisions.md</code> is always outdated relative to Obsidian. Then neither is trustworthy.</p>
+        <p><strong>Fix:</strong> Obsidian is for thinking. <code>.ctx/</code> is for AI context. They don't compete if you're strict about it. Never write an ADR in Obsidian — write it in <code>decisions.md</code>, then optionally link it from Obsidian.</p>
+      </div>
+    </div>
+
+    <div class="file-card">
+      <div class="file-card-header">
+        <span class="file-card-name">Anti-Pattern 4: Context Pack Perfectionism</span>
+        <span class="file-card-badge">Medium Risk</span>
+      </div>
+      <div class="file-card-body">
+        <p><strong>How it happens:</strong> You spend 90 minutes crafting a perfect <code>.ctx/</code> at promotion time instead of 20 minutes on a good-enough one. This raises the perceived cost of promotion, so you promote less. The 1-in-10 rate drops to 1-in-30 and good experiments die.</p>
+        <p><strong>Fix:</strong> Use the promotion script with templated files. A 60% complete <code>state.md</code> on day 1 is infinitely better than a perfect one you never write. The Scribe role fills the gaps over time.</p>
+      </div>
+    </div>
+
+    <div class="file-card">
+      <div class="file-card-header">
+        <span class="file-card-name">Anti-Pattern 5: Tool-Specific Context Drift</span>
+        <span class="file-card-badge">Medium Risk</span>
+      </div>
+      <div class="file-card-body">
+        <p><strong>How it happens:</strong> You build a nice <code>CLAUDE.md</code> and then start adding Windsurf-specific context to <code>.windsurfrules</code> that contradicts it. Now you have two sources of truth and they disagree about constraints.</p>
+        <p><strong>Fix:</strong> Tool config files (CLAUDE.md, .windsurfrules, .continuerc.json) are <strong>pointers only</strong> — they reference <code>.ctx/</code> files, they never contain substantive context themselves. If you want to update a constraint, update <code>constraints.md</code>, not the tool config.</p>
+      </div>
+    </div>
+
+    <div class="file-card">
+      <div class="file-card-header">
+        <span class="file-card-name">Anti-Pattern 6: n8n Sprawl Bleeding Into This System</span>
+        <span class="file-card-badge">Low-Medium Risk</span>
+      </div>
+      <div class="file-card-body">
+        <p><strong>How it happens:</strong> Because n8n is already in <code>systems/</code> and version-controlled, you start using it for workspace automation (auto-stale, context checks) AND for project-level pipelines. Now n8n has two different jobs and <code>systems/n8n/</code> is a mess of unrelated workflows.</p>
+        <p><strong>Fix:</strong> Separate n8n workflows by concern with subdirectories: <code>systems/n8n/workspace/</code> for automation of this system, <code>systems/n8n/pipelines/</code> for data work. The <code>SYSTEMS.md</code> runbook documents which is which.</p>
+      </div>
+    </div>
+
+    <h2>Assumptions I'm Challenging</h2>
+    <ul class="rule-list warn">
+      <li><strong>"Flexibility over rigid structure"</strong> — You need rigid interfaces (context pack format, promotion gate, stale rules) to support flexible internals. The flexibility you want is in what you build, not in how the system is organized.</li>
+      <li><strong>"Obsidian as knowledge base"</strong> — With mostly fleeting notes, Obsidian is a thinking tool, not a knowledge base. Treating it as the latter will make both functions worse. The <code>knowledge/</code> dir is your knowledge base.</li>
+      <li><strong>"More AI tools = more capability"</strong> — Five tools with inconsistent context is worse than two tools with excellent context. The interop strategy only works if you maintain the <code>.ctx/</code> files. Every tool you add increases that maintenance surface.</li>
+    </ul>
+
+    <div class="callout">
+      <div class="callout-title accent">Final Note on Tradeoffs</div>
+      This system has one real weakness: it requires consistent investment in context maintenance. If you do it, AI quality compounds over the life of a project. If you don't, it degrades faster than having no system at all — because you'll trust stale context that's wrong rather than having no context and asking first. The Scribe habit at session end is the load-bearing habit. Everything else is structure.
+    </div>
+  </div>
+
+</main>
+
+<script>
+  // Active nav highlighting
+  const sections = document.querySelectorAll('.section');
+  const navLinks = document.querySelectorAll('nav a');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(l => l.classList.remove('active'));
+        const id = entry.target.id;
+        const link = document.querySelector(`nav a[href="#${id}"]`);
+        if (link) link.classList.add('active');
+      }
+    });
+  }, { threshold: 0.3 });
+
+  sections.forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html>
