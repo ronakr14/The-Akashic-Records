@@ -1,4 +1,3 @@
+Model hierarchical spatial relationships and viewpoint invariance in vision tasks (e.g., object parts → whole) using Capsule Networks.
 
-* **Goal:** Improve spatial understanding in images compared to CNNs.
-* **Key Idea:** Capsules encode both **existence and pose** of objects.
-* **Why it matters:** Better at recognizing objects under rotation and viewpoint changes.
+Alternative: — [[Convolutional Neural Networks]] if you need simpler, faster, and more production-proven vision models

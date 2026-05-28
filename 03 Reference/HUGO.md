@@ -1,10 +1,4 @@
----
-id: n1tri7mx4409359su86295l
-title: Hugo
-desc: ''
-updated: 1753021011757
-created: 1753020993988
----
+
 # Static Pages using Hugo and Github (Github Pages)
 
 ## Prerequisite

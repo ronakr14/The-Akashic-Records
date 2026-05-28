@@ -1,7 +1,3 @@
+High-quality generative tasks (image synthesis, inpainting, text-to-image) via iterative denoising using Diffusion Models.
 
-* **Goal:** Generate high-quality images or data from noise.
-* **Intuition:**
-
-  * Forward process: gradually add noise to data
-  * Reverse process: learn to denoise → generate realistic samples
-* **Applications:** DALL-E, Stable Diffusion
+Alternative: — [[Generative Adversarial Networks]] if you need faster generation with less compute at inference time

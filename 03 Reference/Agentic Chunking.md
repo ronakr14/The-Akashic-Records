@@ -1,4 +1,5 @@
-Best use case:  
+#ai #ai-agent #chunk-strategy 
 Dynamic, LLM-driven chunking that adapts to context and intent—improves RAG accuracy by creating semantically meaningful segments on the fly.
 
-Alternative: — **Static chunking (fixed-size/overlap)** (better for predictable performance, speed, and simpler pipelines)
+Alternative: 
+1. **[[Static chunking]] (fixed-size/overlap)** (better for predictable performance, speed, and simpler pipelines)

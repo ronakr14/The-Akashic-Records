@@ -1,5 +1,3 @@
-# BitNet
-Best use case:  
-Ultra-efficient LLM inference/training using 1-bit weights for edge/on-device deployment with minimal compute
+Run **ultra-efficient 1-bit/low-bit LLMs** on edge or low-resource hardware—massively reduces memory and compute costs for inference.
 
-Alternative: — Quantization in machine learning (better when you need broader hardware support and flexible accuracy–efficiency trade-offs)
+Alternative: — [[GGUF quantization]] — better for **practical, widely-supported quantization across many models today**

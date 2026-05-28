@@ -4,17 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "998129737739435b",
+        "id": "0d59ced5bb063ba3",
         "type": "tabs",
         "children": [
           {
-            "id": "1538d2b009d56f10",
+            "id": "966ab07869728851",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "03 Reference/KV Cache.md",
+                "mode": "source",
+                "source": true,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "KV Cache"
             }
           }
         ]
@@ -49,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#local-ai",
+                "query": "tag:#agent",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -64,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 217.5
+    "width": 278.5
   },
   "right": {
     "id": "7c51cdc979815380",
@@ -173,34 +187,35 @@
       "obsidian-tomorrows-daily-note:Open tomorrow's daily note": false
     }
   },
-  "active": "1538d2b009d56f10",
+  "active": "966ab07869728851",
   "lastOpenFiles": [
-    "03 Reference/00 AI/Transformers.md",
-    "03 Reference/transformers_1.md",
-    "05 Projects/FastAPI CLI/FastAPI CLI Decorator 2.md",
-    "03 Reference/Transformers (2).md",
-    "03 Reference/00 Developer Tools/Yarl.md",
-    "03 Reference/Hacking Concepts.md",
-    "03 Reference/00 Software Engineering/httpcore.md",
-    "03 Reference/00 Developer Tools/Resend.md",
-    "03 Reference/00 Data Engineering/Luigi.md",
-    "03 Reference/00 AI/GLM-5.md",
-    "03 Reference/00 Data Engineering/SuperSet.md",
-    "03 Reference/00 Developer Tools/BASH.md",
-    "03 Reference/sql.datatypes-constraint.md",
-    "03 Reference/00 Data Engineering/NoSQL.md",
-    "03 Reference/00 Productivity Systems/Open Shell.md",
-    "03 Reference/00 Software Engineering/Valkey.md",
-    "03 Reference/00 AI/Feedforward Neural Networks.md",
-    "03 Reference/00 AI/Speechma.md",
-    "03 Reference/Feedforward_neural_networks.md",
-    "03 Reference/00 AI/Diffusion & Score-Based Models.md",
-    "03 Reference/00 Software Engineering/Cryptography.md",
-    "03 Reference/00 AI/Recommendations.md",
-    "03 Reference/00 AI/OpenLLM.md",
-    "03 Reference/00 AI/Neural Networks.md",
-    "03 Reference/00 AI/Neural Networks 1.md",
-    "03 Reference/Gradient Boosting.md",
+    "03 Reference/Kubernetes.md",
+    "03 Reference/Kubernetes (2).md",
+    "03 Reference/Kubeflow Pipelines.md",
+    "03 Reference/Koalas.md",
+    "03 Reference/KMeans.md",
+    "03 Reference/Kimi.md",
+    "03 Reference/KFServing.md",
+    "03 Reference/Keyboard.md",
+    "03 Reference/Keras Tuner.md",
+    "03 Reference/Keras.md",
+    "03 Reference/Kedro.md",
+    "03 Reference/Kafka.md",
+    "03 Reference/Joblib.md",
+    "02 Prompts/Job Application Prompts.md",
+    "03 Reference/Jira.md",
+    "03 Reference/Jira.md",
+    "03 Reference/Jenkins.md",
+    "03 Reference/Jenkins (2).md",
+    "03 Reference/Jellyfish.md",
+    "03 Reference/JAX.md",
+    "03 Reference/JavaScript.md",
+    "03 Reference/JavaScript (2).md",
+    "03 Reference/Itsdangerous.md",
+    "03 Reference/Invoke.md",
+    "03 Reference/InterpretML.md",
+    "03 Reference/Instructor.md",
+    "02 Prompts",
     "03 Reference/00 Prompts",
     "03 Reference/00 Software Engineering",
     "03 Reference/00 Productivity Systems",
@@ -209,7 +224,6 @@
     "03 Reference/00 Version Control",
     "03 Reference/00 Cloud Computing",
     "03 Reference/00 Web Apps Framework",
-    "03 Reference/00 Hosting",
-    "03 Reference/00 AI"
+    "03 Reference/00 Hosting"
   ]
 }

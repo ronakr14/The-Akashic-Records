@@ -1,12 +1,7 @@
----
-id: 7hvosorpbe0yb3d24mjkawf
-title: Gradient Boosting
-desc: ''
-updated: 1756134427855
-created: 1756134421783
----
+High-accuracy modeling on tabular data by sequentially correcting errors (ranking, fraud, churn) using Gradient Boosting.
 
-# 🚀 Gradient Boosting – Math Intuition
+Alternative: — [[Random Forest]] if you need faster training and less sensitivity to hyperparameters
+
 
 ### 🔹 The Big Idea
 
