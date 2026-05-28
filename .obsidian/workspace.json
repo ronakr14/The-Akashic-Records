@@ -4,31 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "72e56a7e78553333",
+        "id": "998129737739435b",
         "type": "tabs",
         "children": [
           {
-            "id": "293b0e46702ec56b",
+            "id": "1538d2b009d56f10",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "03 Reference/zapier.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "zapier"
+              "title": "New tab"
             }
           }
         ]
@@ -63,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "mlflow",
+                "query": "tag:#local-ai",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -78,8 +64,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 274.5,
-    "collapsed": true
+    "width": 217.5
   },
   "right": {
     "id": "7c51cdc979815380",
@@ -188,43 +173,43 @@
       "obsidian-tomorrows-daily-note:Open tomorrow's daily note": false
     }
   },
-  "active": "293b0e46702ec56b",
+  "active": "1538d2b009d56f10",
   "lastOpenFiles": [
-    "03 Reference/react.md",
-    "03 Reference/Tool Summaries.md",
-    "03 Reference/xlwings.md",
-    "03 Reference/pyfilesystem2.md",
-    "03 Reference/pyautogui.md",
-    "03 Reference/postman.md",
-    "03 Reference/poetry.md",
-    "03 Reference/plumbum.md",
-    "03 Reference/playwright.md",
-    "03 Reference/pdfplumber.md",
-    "03 Reference/orjson.md",
-    "03 Reference/openpyxl.md",
-    "03 Reference/openai codex cli.md",
-    "03 Reference/ngrok.md",
-    "03 Reference/markitdown.md",
-    "03 Reference/logguru.md",
-    "03 Reference/keyboard python lib.md",
-    "keyboard python lib.md",
-    "logguru.md",
-    "markitdown.md",
-    "ngrok.md",
-    "openai codex cli.md",
-    "openpyxl.md",
-    "xlwings.md",
-    "orjson.md",
-    "pdfplumber.md",
-    "03 Reference/workspace-system-design.html",
-    "03 Reference/09 Testing",
-    "03 Reference/New folder",
-    "04 Knowledge/interview_prep.jsx",
-    "03 Reference/08 Web Framework",
-    "03 Reference/07 Programming",
-    "New folder",
-    "03 Reference/03 Automation/open.url",
-    "05 Projects/Github Starred Repo",
-    "05 Projects/New folder"
+    "03 Reference/00 AI/Transformers.md",
+    "03 Reference/transformers_1.md",
+    "05 Projects/FastAPI CLI/FastAPI CLI Decorator 2.md",
+    "03 Reference/Transformers (2).md",
+    "03 Reference/00 Developer Tools/Yarl.md",
+    "03 Reference/Hacking Concepts.md",
+    "03 Reference/00 Software Engineering/httpcore.md",
+    "03 Reference/00 Developer Tools/Resend.md",
+    "03 Reference/00 Data Engineering/Luigi.md",
+    "03 Reference/00 AI/GLM-5.md",
+    "03 Reference/00 Data Engineering/SuperSet.md",
+    "03 Reference/00 Developer Tools/BASH.md",
+    "03 Reference/sql.datatypes-constraint.md",
+    "03 Reference/00 Data Engineering/NoSQL.md",
+    "03 Reference/00 Productivity Systems/Open Shell.md",
+    "03 Reference/00 Software Engineering/Valkey.md",
+    "03 Reference/00 AI/Feedforward Neural Networks.md",
+    "03 Reference/00 AI/Speechma.md",
+    "03 Reference/Feedforward_neural_networks.md",
+    "03 Reference/00 AI/Diffusion & Score-Based Models.md",
+    "03 Reference/00 Software Engineering/Cryptography.md",
+    "03 Reference/00 AI/Recommendations.md",
+    "03 Reference/00 AI/OpenLLM.md",
+    "03 Reference/00 AI/Neural Networks.md",
+    "03 Reference/00 AI/Neural Networks 1.md",
+    "03 Reference/Gradient Boosting.md",
+    "03 Reference/00 Prompts",
+    "03 Reference/00 Software Engineering",
+    "03 Reference/00 Productivity Systems",
+    "03 Reference/00 Developer Tools",
+    "03 Reference/00 Data Engineering",
+    "03 Reference/00 Version Control",
+    "03 Reference/00 Cloud Computing",
+    "03 Reference/00 Web Apps Framework",
+    "03 Reference/00 Hosting",
+    "03 Reference/00 AI"
   ]
 }
