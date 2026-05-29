@@ -1,4 +1,4 @@
-#ai #machine-learning #model-training
+#ai #machine-learning #model #training
 Identify rare or unexpected patterns in data (fraud, sensor faults, intrusion detection) using Anomaly Detection.
 
 Alternative:  

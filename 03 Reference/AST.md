@@ -1,4 +1,4 @@
-#python #code-analysis
+#python #code #analysis
 Programmatic code analysis/transformation (e.g., static analysis, auto-refactoring, linting, safe code rewriting)
 
 Alternative: 

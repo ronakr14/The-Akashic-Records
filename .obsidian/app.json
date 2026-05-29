@@ -7,5 +7,6 @@
   "attachmentFolderPath": "Attachments",
   "alwaysUpdateLinks": true,
   "showUnsupportedFiles": true,
-  "useMarkdownLinks": true
+  "useMarkdownLinks": true,
+  "promptDelete": false
 }

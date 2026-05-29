@@ -4,18 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "0d59ced5bb063ba3",
+        "id": "6c41b988cc214c5a",
         "type": "tabs",
         "children": [
           {
-            "id": "966ab07869728851",
+            "id": "6347e767ea9a0521",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03 Reference/KV Cache.md",
+                "file": "03 Reference/Docker.md",
                 "mode": "source",
-                "source": true,
+                "source": false,
                 "backlinks": true,
                 "backlinkOpts": {
                   "collapseAll": false,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "KV Cache"
+              "title": "Docker"
             }
           }
         ]
@@ -63,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#agent",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2026-05-26.md",
+                "file": "03 Reference/Docker.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 2026-05-26"
+              "title": "Backlinks for Docker"
             }
           },
           {
@@ -128,7 +128,7 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true,
+                "useHierarchy": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
@@ -165,7 +165,8 @@
               "title": "Outline of 2026-05-26"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -187,34 +188,34 @@
       "obsidian-tomorrows-daily-note:Open tomorrow's daily note": false
     }
   },
-  "active": "966ab07869728851",
+  "active": "932cadc2bc5845db",
   "lastOpenFiles": [
-    "03 Reference/Kubernetes.md",
-    "03 Reference/Kubernetes (2).md",
-    "03 Reference/Kubeflow Pipelines.md",
-    "03 Reference/Koalas.md",
-    "03 Reference/KMeans.md",
-    "03 Reference/Kimi.md",
-    "03 Reference/KFServing.md",
-    "03 Reference/Keyboard.md",
-    "03 Reference/Keras Tuner.md",
-    "03 Reference/Keras.md",
-    "03 Reference/Kedro.md",
-    "03 Reference/Kafka.md",
-    "03 Reference/Joblib.md",
-    "02 Prompts/Job Application Prompts.md",
-    "03 Reference/Jira.md",
-    "03 Reference/Jira.md",
-    "03 Reference/Jenkins.md",
-    "03 Reference/Jenkins (2).md",
-    "03 Reference/Jellyfish.md",
-    "03 Reference/JAX.md",
-    "03 Reference/JavaScript.md",
-    "03 Reference/JavaScript (2).md",
-    "03 Reference/Itsdangerous.md",
-    "03 Reference/Invoke.md",
-    "03 Reference/InterpretML.md",
-    "03 Reference/Instructor.md",
+    "03 Reference/Zencoder.md",
+    "03 Reference/Zappa.md",
+    "03 Reference/Zapier.md",
+    "03 Reference/Yaspin.md",
+    "03 Reference/Yarl.md",
+    "03 Reference/XLWings.md",
+    "03 Reference/XGBoost.md",
+    "03 Reference/XGBoost (2).md",
+    "03 Reference/Wrapt.md",
+    "03 Reference/Windsurf.md",
+    "00 Inbox/Why use Celery.md",
+    "03 Reference/Weight & Biases.md",
+    "03 Reference/Weaviate.md",
+    "03 Reference/WatchFiles.md",
+    "03 Reference/watchfiles_python_lib.md",
+    "03 Reference/WatchDog.md",
+    "04 Knowledge/VSCode Debug.md",
+    "03 Reference/VSCode.md",
+    "03 Reference/VLLM.md",
+    "03 Reference/vllm (2).md",
+    "03 Reference/Vision Transformers.md",
+    "03 Reference/vision_transformers.md",
+    "03 Reference/Vertex AI.md",
+    "03 Reference/Vercel.md",
+    "03 Reference/vercel_1.md",
+    "03 Reference/Vector Database.md",
     "02 Prompts",
     "03 Reference/00 Prompts",
     "03 Reference/00 Software Engineering",

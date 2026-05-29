@@ -1,5 +1,13 @@
 # Langchain Agents
 
+Best use case:  
+Orchestrating tool-using LLM agents for multi-step workflows (e.g., RAG + APIs + decision loops in one pipeline).
+
+Alternative: — **LangGraph** (better for deterministic control, stateful flows, and production-grade reliability)
+
+
+# Langchain Agents
+
 ## Core Purpose & Mental Model
 - Solves: orchestrate LLM with tools, memory, reasoning.
 - Mental model: Agent = LLM core + loop: think -> act -> observe -> repeat.

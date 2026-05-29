@@ -1,4 +1,4 @@
-#ai #ai-agent #chunk-strategy 
+#ai #agent #chunk #strategy
 Dynamic, LLM-driven chunking that adapts to context and intent—improves RAG accuracy by creating semantically meaningful segments on the fly.
 
 Alternative: 

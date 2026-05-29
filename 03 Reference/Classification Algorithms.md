@@ -1,3 +1,4 @@
+#ai #model #machine-learning #supervised
 Goal → predict **discrete labels**.
 Examples: spam vs. not spam, churn vs. retain, fraud vs. legit.
 

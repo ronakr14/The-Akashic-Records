@@ -1,4 +1,4 @@
-#ai #ai-agent  #rag 
+#ai #agent  #rag 
 Autonomous retrieval pipelines where agents plan, iterate, and use tools (search, DB, APIs) to solve multi-step queries with dynamic context.
 
 Alternative: 

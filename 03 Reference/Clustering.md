@@ -1,4 +1,4 @@
-
+#ai #model #training #machine-learning #supervised 
 Goal → group similar items without labels.
 
 * **[[k-Means Clustering]]**
