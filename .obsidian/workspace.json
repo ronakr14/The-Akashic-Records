@@ -4,17 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "b9355a1f301a185e",
+        "id": "d377866b69c6a8e2",
         "type": "tabs",
         "children": [
           {
-            "id": "f24ce616c8f83f30",
+            "id": "159965e78638956a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "04 Knowledge/Shipping Mindset.md",
+                "mode": "source",
+                "source": true,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Shipping Mindset"
             }
           }
         ]
@@ -174,34 +188,34 @@
       "graph:Open graph view": false
     }
   },
-  "active": "f24ce616c8f83f30",
+  "active": "159965e78638956a",
   "lastOpenFiles": [
-    "02 Prompts/Business Problem.md",
-    "02 Prompts/Prompts.md",
-    "02 Prompts/Git Command.md",
-    "02 Prompts/Linkedin Optimizer.md",
-    "02 Prompts/LLM Model Optimization.md",
-    "02 Prompts/Handoff.md",
-    "05 Projects/Untitled 8.md",
-    "00 Inbox/Untitled 1.md",
-    "05 Projects/Untitled 3.md",
-    "00 Inbox/Untitled 1 1.md",
-    "00 Inbox/Untitled 2.md",
-    "05 Projects/Untitled 4.md",
+    "04 Knowledge/Python External Libraries Playbook.md",
+    "04 Knowledge/Poetry custom package install.md",
+    "04 Knowledge/Python Environment Playbook.md",
+    "04 Knowledge/Powershell Profile File.md",
+    "04 Knowledge/setup.profile.windows.md",
+    "04 Knowledge/Python Environments.md",
+    "04 Knowledge/Powershell Prompt.md",
     "04 Knowledge/Git Multi Account Setup.md",
-    "00 Inbox/Untitled 5.md",
-    "00 Inbox/Untitled 6.md",
-    "03 Reference/Hydra.md",
-    "00 Inbox/Why use Celery.md",
-    "03 Reference/Nemotron.md",
-    "03 Reference/Docker.md",
-    "2026-05-29.md",
-    "03 Reference/Zencoder.md",
-    "03 Reference/Zappa.md",
-    "03 Reference/Zapier.md",
-    "03 Reference/Yaspin.md",
-    "03 Reference/Yarl.md",
-    "03 Reference/XLWings.md",
+    "04 Knowledge/Importing external folder in repo.md",
+    "04 Knowledge/Data Engineering Playbook.md",
+    "04 Knowledge/Compare File in Powershell.md",
+    "02 Prompts/Job Application Prompts.md",
+    "04 Knowledge/Code & Data Handling.md",
+    "02 Prompts/Linkedin Optimizer.md",
+    "02 Prompts/Tool Detail.md",
+    "02 Prompts/Self Study.md",
+    "02 Prompts/Tool Summary.md",
+    "02 Prompts/Unclassified.md",
+    "02 Prompts/study_prompt2.md",
+    "02 Prompts/prompts.studies.md",
+    "02 Prompts/Personal Branding Strategist.md",
+    "02 Prompts/LLM Model Optimization.md",
+    "02 Prompts/Chat Summaries.md",
+    "02 Prompts/handoff.md",
+    "02 Prompts/Git Command.md",
+    "02 Prompts/Business Problem.md",
     "02 Prompts",
     "03 Reference/00 Prompts",
     "03 Reference/00 Software Engineering",

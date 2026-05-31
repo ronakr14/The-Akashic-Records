@@ -19,7 +19,6 @@
 13. **Data Governance** Data must be available, accurate, consistent, secure, and compliant. It’s not optional—legal and trust depend on it.
 14. **Time Travel & Versioning** Query your data as of yesterday—or last week. Think Git for your tables. Essential for auditability and reproducibility.
 15. **Distributed Processing Fundamentals**
-
-- Partitioning & bucketing: split data sensibly.
-- Mitigate **data skew** with salting or broadcast joins.
-- Understand **shuffling**—it costs performance when data moves across nodes.
+	- Partitioning & bucketing: split data sensibly.
+	- Mitigate **data skew** with salting or broadcast joins.
+	- Understand **shuffling**—it costs performance when data moves across nodes.
