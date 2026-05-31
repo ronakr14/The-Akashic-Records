@@ -4,31 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "a2626cff8aa6b3d5",
+        "id": "b9355a1f301a185e",
         "type": "tabs",
         "children": [
           {
-            "id": "3305757e386b9a71",
+            "id": "f24ce616c8f83f30",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "00 Inbox/Untitled.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "New tab"
             }
           }
         ]
@@ -78,8 +64,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 278.5,
-    "collapsed": true
+    "width": 278.5
   },
   "right": {
     "id": "7c51cdc979815380",
@@ -189,10 +174,14 @@
       "graph:Open graph view": false
     }
   },
-  "active": "3305757e386b9a71",
+  "active": "f24ce616c8f83f30",
   "lastOpenFiles": [
+    "02 Prompts/Business Problem.md",
+    "02 Prompts/Prompts.md",
+    "02 Prompts/Git Command.md",
+    "02 Prompts/Linkedin Optimizer.md",
+    "02 Prompts/LLM Model Optimization.md",
     "02 Prompts/Handoff.md",
-    "00 Inbox/Untitled.md",
     "05 Projects/Untitled 8.md",
     "00 Inbox/Untitled 1.md",
     "05 Projects/Untitled 3.md",
@@ -213,10 +202,6 @@
     "03 Reference/Yaspin.md",
     "03 Reference/Yarl.md",
     "03 Reference/XLWings.md",
-    "03 Reference/XGBoost.md",
-    "03 Reference/XGBoost (2).md",
-    "03 Reference/Wrapt.md",
-    "03 Reference/Windsurf.md",
     "02 Prompts",
     "03 Reference/00 Prompts",
     "03 Reference/00 Software Engineering",
