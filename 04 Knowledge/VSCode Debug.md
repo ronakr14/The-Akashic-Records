@@ -1,12 +1,9 @@
----
-id: ug6dpz8e2at7pcnfhuh1nyn
-title: Debugger
-desc: ''
-updated: 1755668736310
-created: 1755668713021
----
-#debugging
-### 🔹 Example 1: Basic Breakpoint Debugging (Python)
+#debugging #vscode
+
+```table-of-contents
+```
+
+### 🔹 Example 1: Basic Breakpoint Debugging ([[Python]])
 
 1. Create a Python file `main.py`:
 
@@ -113,7 +110,3 @@ If you already have a Python script running:
    }
    ```
 3. Start debugging → VS Code will attach to the live process.
-
----
-
-👉 So you can go from **print() spammer → full VS Code debugging pro** by practicing these.
