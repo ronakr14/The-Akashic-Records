@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03 Reference/Reinforcement Learning.md",
+                "file": "05 Projects/FastAPI CLI/FastAPI CLI Decorator 6.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Reinforcement Learning"
+              "title": "FastAPI CLI Decorator 6"
             }
           }
         ]
@@ -190,32 +190,32 @@
   },
   "active": "159965e78638956a",
   "lastOpenFiles": [
-    "03 Reference/Reinforcement Learning + Deep RL.md",
+    "05 Projects/FastAPI CLI/FastAPI CLI Decorator 3.md",
+    "05 Projects/FastAPI CLI/FastAPI CLI Decorator 7.md",
+    "05 Projects/FastAPI CLI/FastAPI CLI Decorator 2.md",
+    "05 Projects/FastAPI CLI/FastAPI CLI Decorator 1.md",
+    "05 Projects/FastAPI CLI/FastAPI CLI Decorator.md",
+    "05 Projects/FastAPI CLI/FastAPI CLI Decorator 6.md",
+    "05 Projects/FastAPI CLI/FastAPI CLI Decorator 5.md",
+    "05 Projects/FastAPI CLI/FastAPI CLI Decorator 4.md",
+    "05 Projects/Test Automation - CAI.md",
+    "04 Knowledge/Compare File in Powershell.md",
+    "05 Projects/Github Star Repo Summary.md",
+    "05 Projects/Github Autosync.md",
     "03 Reference/Reinforcement Learning.md",
     "2026-06-01.md",
-    "05 Projects/Github Autosync.md",
-    "05 Projects/Github Star Repo Summary.md",
+    "03 Reference/Reinforcement Learning + Deep RL.md",
     "05 Projects/Github Starred Repo/GitHub Starred Repo Notifications 1.md",
     "05 Projects/Github Starred Repo/GitHub Starred Repo Notifications.md",
     "02 Prompts/Github Profile Improvement/github improvements.md",
     "02 Prompts/Github Profile Improvement/Github Improvement.md",
-    "05 Projects/Test Automation - CAI.md",
     "05 Projects/Untitled 8.md",
-    "04 Knowledge/Compare File in Powershell.md",
     "04 Knowledge/Python Environment Playbook.md",
     "04 Knowledge/Powershell Profile File.md",
     "04 Knowledge/Git Multi Account Setup.md",
     "04 Knowledge/Data Engineering Playbook.md",
     "Untitled.md",
     "04 Knowledge/Python External Libraries Playbook.md",
-    "04 Knowledge/Software Engineer Playbook.md",
-    "04 Knowledge/Shipping Mindset.md",
-    "04 Knowledge/UUIDv7 & ULID.md",
-    "04 Knowledge/VSCode Debug.md",
-    "04 Knowledge/Poetry custom package install.md",
-    "04 Knowledge/setup.profile.windows.md",
-    "04 Knowledge/Python Environments.md",
-    "04 Knowledge/Powershell Prompt.md",
     "02 Prompts",
     "03 Reference/00 Prompts",
     "03 Reference/00 Software Engineering",
