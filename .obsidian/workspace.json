@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "05 Projects/FastAPI CLI/FastAPI CLI Decorator 6.md",
+                "file": "Query DNA Analyser.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,103 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "FastAPI CLI Decorator 6"
+              "title": "Query DNA Analyser"
+            }
+          },
+          {
+            "id": "3415ca707e880cb9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Partition Advisor.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Partition Advisor"
+            }
+          },
+          {
+            "id": "dcd48599b61a0ab1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Join Intelligence Engine.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Join Intelligence Engine"
+            }
+          },
+          {
+            "id": "ac3a483187400d3d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cost Attribution Engine.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Cost Attribution Engine"
+            }
+          },
+          {
+            "id": "129fceb127ba798b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "What-If Simulator.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "What-If Simulator"
             }
           }
         ]
@@ -78,7 +174,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 278.5
+    "width": 278.5,
+    "collapsed": true
   },
   "right": {
     "id": "7c51cdc979815380",
@@ -181,21 +278,26 @@
       "markdown-importer:Open format converter": false,
       "random-note:Open random note": false,
       "audio-recorder:Start/stop recording": false,
+      "graph:Open graph view": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "iconic:Open rulebook": false,
       "sheet-plus:Create excel file": false,
-      "obsidian-tomorrows-daily-note:Open tomorrow's daily note": false,
-      "graph:Open graph view": false
+      "obsidian-tomorrows-daily-note:Open tomorrow's daily note": false
     }
   },
   "active": "159965e78638956a",
   "lastOpenFiles": [
+    "What-If Simulator.md",
+    "Cost Attribution Engine.md",
+    "Join Intelligence Engine.md",
+    "Partition Advisor.md",
+    "Query DNA Analyser.md",
+    "05 Projects/FastAPI CLI/FastAPI CLI Decorator 6.md",
     "05 Projects/FastAPI CLI/FastAPI CLI Decorator 3.md",
     "05 Projects/FastAPI CLI/FastAPI CLI Decorator 7.md",
     "05 Projects/FastAPI CLI/FastAPI CLI Decorator 2.md",
     "05 Projects/FastAPI CLI/FastAPI CLI Decorator 1.md",
     "05 Projects/FastAPI CLI/FastAPI CLI Decorator.md",
-    "05 Projects/FastAPI CLI/FastAPI CLI Decorator 6.md",
     "05 Projects/FastAPI CLI/FastAPI CLI Decorator 5.md",
     "05 Projects/FastAPI CLI/FastAPI CLI Decorator 4.md",
     "05 Projects/Test Automation - CAI.md",
@@ -211,11 +313,6 @@
     "02 Prompts/Github Profile Improvement/Github Improvement.md",
     "05 Projects/Untitled 8.md",
     "04 Knowledge/Python Environment Playbook.md",
-    "04 Knowledge/Powershell Profile File.md",
-    "04 Knowledge/Git Multi Account Setup.md",
-    "04 Knowledge/Data Engineering Playbook.md",
-    "Untitled.md",
-    "04 Knowledge/Python External Libraries Playbook.md",
     "02 Prompts",
     "03 Reference/00 Prompts",
     "03 Reference/00 Software Engineering",
