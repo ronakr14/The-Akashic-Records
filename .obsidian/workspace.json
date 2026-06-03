@@ -4,107 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "d377866b69c6a8e2",
+        "id": "960e892503b801f8",
         "type": "tabs",
         "children": [
           {
-            "id": "159965e78638956a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Query DNA Analyser.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Query DNA Analyser"
-            }
-          },
-          {
-            "id": "3415ca707e880cb9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Partition Advisor.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Partition Advisor"
-            }
-          },
-          {
-            "id": "dcd48599b61a0ab1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Join Intelligence Engine.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Join Intelligence Engine"
-            }
-          },
-          {
-            "id": "ac3a483187400d3d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cost Attribution Engine.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Cost Attribution Engine"
-            }
-          },
-          {
-            "id": "129fceb127ba798b",
+            "id": "141498f812c56296",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -174,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 278.5,
-    "collapsed": true
+    "width": 278.5
   },
   "right": {
     "id": "7c51cdc979815380",
@@ -285,13 +188,20 @@
       "obsidian-tomorrows-daily-note:Open tomorrow's daily note": false
     }
   },
-  "active": "159965e78638956a",
+  "active": "141498f812c56296",
   "lastOpenFiles": [
     "What-If Simulator.md",
+    "stream_processing_summary.md",
+    "Untitled.md",
+    "Stream Data Processing.md",
+    "Data Engineering/Stream Data/Untitled.md",
+    "Data Engineering/Stream Data",
+    "Data Engineering/ETL vs ELT",
+    "Data Engineering",
+    "Query DNA Analyser.md",
     "Cost Attribution Engine.md",
     "Join Intelligence Engine.md",
     "Partition Advisor.md",
-    "Query DNA Analyser.md",
     "05 Projects/FastAPI CLI/FastAPI CLI Decorator 6.md",
     "05 Projects/FastAPI CLI/FastAPI CLI Decorator 3.md",
     "05 Projects/FastAPI CLI/FastAPI CLI Decorator 7.md",
@@ -309,19 +219,12 @@
     "03 Reference/Reinforcement Learning + Deep RL.md",
     "05 Projects/Github Starred Repo/GitHub Starred Repo Notifications 1.md",
     "05 Projects/Github Starred Repo/GitHub Starred Repo Notifications.md",
-    "02 Prompts/Github Profile Improvement/github improvements.md",
-    "02 Prompts/Github Profile Improvement/Github Improvement.md",
-    "05 Projects/Untitled 8.md",
-    "04 Knowledge/Python Environment Playbook.md",
     "02 Prompts",
     "03 Reference/00 Prompts",
     "03 Reference/00 Software Engineering",
     "03 Reference/00 Productivity Systems",
     "03 Reference/00 Developer Tools",
     "03 Reference/00 Data Engineering",
-    "03 Reference/00 Version Control",
-    "03 Reference/00 Cloud Computing",
-    "03 Reference/00 Web Apps Framework",
-    "03 Reference/00 Hosting"
+    "03 Reference/00 Version Control"
   ]
 }
