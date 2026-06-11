@@ -3,7 +3,7 @@
 ```table-of-contents
 ```
 
-### 🔹 Example 1: Basic Breakpoint Debugging ([[Python]])
+### 🔹 Example 1: Basic Breakpoint Debugging ([[python]])
 
 1. Create a Python file `main.py`:
 

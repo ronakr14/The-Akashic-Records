@@ -1,5 +1,5 @@
 
-* **[[SHAP]] / [[LIME]]:** Estimate feature importance for predictions
+* **[[SHAP]] / [[lime]]:** Estimate feature importance for predictions
 * **[[Grad-CAM ]]/ [[Saliency Maps]]:** Visualize important pixels in CNN predictions
 * **[[Attention Visualization]]:** Inspect which tokens the Transformer focuses on
 

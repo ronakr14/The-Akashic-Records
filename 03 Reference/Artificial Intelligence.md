@@ -12,9 +12,9 @@ AI is an umbrella. Here are its main branches:
    * Systems learn patterns from data instead of rules.
    * Subtypes:
 
-     * **[[Supervised learning]]** (labeled data)
-     * **[[Unsupervised learning]]** (clusters, patterns)
-     * **[[Reinforcement learning]]** (trial & error with rewards)
+     * **[[Supervised Learning]]** (labeled data)
+     * **[[Unsupervised Learning]]** (clusters, patterns)
+     * **[[Reinforcement Learning]]** (trial & error with rewards)
 
 1. **[[Deep Learning]] (DL)**
 

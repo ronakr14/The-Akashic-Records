@@ -1,3 +1,3 @@
 Build interactive web apps and full-stack systems (browser + Node.js) with a single language
 
-Alternative: — [[TypeScript]] (better for large-scale apps with type safety and maintainability)
+Alternative: — [[typescript]] (better for large-scale apps with type safety and maintainability)

@@ -56,5 +56,5 @@ Once you're comfortable with the basics, the next layer is:
 6. Apache [[Spark]] batch processing
 7. [[Data lake]] architecture
 8. [[Batch pipeline design patterns]]
-9. [[03 Reference/Data Quality]] frameworks
+9. [[Data Quality]] frameworks
 10. [[Batch processing interview]] questions

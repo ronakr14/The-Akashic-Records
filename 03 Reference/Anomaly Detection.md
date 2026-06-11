@@ -31,7 +31,7 @@ Alternative:
    * Anything outside = anomaly.
    * Good for text, network intrusion detection.
 
-1. **[[Autoencoders]] (DL sneak peek)**
+1. **[[AutoEncoders]] (DL sneak peek)**
 
    * Train a neural net to reconstruct input.
    * If reconstruction error is high → anomaly.

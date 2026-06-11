@@ -12,7 +12,7 @@
 
     * **[[AdaBoost]]** → assigns weights to misclassified data points.
     * **[[Gradient Boosting Machines]] (GBM)** → optimizes with gradient descent.
-    * **[[XGBoost]] / [[LightGBM]] / [[CatBoost]]** → faster, more efficient, state-of-the-art for tabular data.
+    * **[[xgboost]] / [[lightgbm]] / [[catboost]]** → faster, more efficient, state-of-the-art for tabular data.
 
 * **Stacking**
 

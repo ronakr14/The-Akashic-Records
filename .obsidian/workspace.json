@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "fe8640503604638d",
+        "id": "13f01a4865531171",
         "type": "tabs",
         "children": [
           {
-            "id": "192887668427e729",
+            "id": "e2f5349d757b7a16",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data Engineering/Batch processing interview.md",
+                "file": "Untitled 46.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,10 +28,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Batch processing interview"
+              "title": "Untitled 46"
+            }
+          },
+          {
+            "id": "ff979fc53d9bf4c8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled 47.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Untitled 47"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -189,40 +214,40 @@
       "obsidian-tomorrows-daily-note:Open tomorrow's daily note": false
     }
   },
-  "active": "192887668427e729",
+  "active": "ff979fc53d9bf4c8",
   "lastOpenFiles": [
-    "2026-06-05.md",
-    "Data Engineering/Batch processing interview.md",
-    "Data Engineering/Batch Processing.md",
-    "Untitled 1.md",
-    "Data Engineering/Batch Processing-1.md",
-    "Untitled.md",
-    "Data Quality.md",
-    "Query Optimization.md",
-    "Metadata & Observability.md",
-    "Performance Optimization.md",
-    "Failure Recovery.md",
-    "Partitioning.md",
-    "Incremental Processing.md",
-    "03 Reference/ETL vs ELT.md",
-    "03 Reference/Big Data Tools.md",
-    "Data Engineering/Basics.md",
-    "Cloud Compute/Cloud Architectures.md",
+    "Untitled 46.md",
+    "Untitled 47.md",
+    "Untitled 45.md",
+    "Untitled 44.md",
+    "Untitled 43.md",
+    "Untitled 42.md",
+    "Untitled 41.md",
+    "Untitled 40.md",
+    "Untitled 39.md",
+    "Untitled 38.md",
+    "Untitled 37.md",
+    "Untitled 36.md",
+    "Untitled 35.md",
+    "Untitled 34.md",
+    "Untitled 33.md",
+    "Untitled 32.md",
+    "Untitled 31.md",
+    "Untitled 30.md",
+    "Untitled 29.md",
+    "Untitled 28.md",
+    "Untitled 27.md",
+    "Untitled 26.md",
+    "Untitled 25.md",
+    "Untitled 24.md",
+    "Untitled 23.md",
+    "Untitled 22.md",
     "Data Engineering/Batch Process",
     "Cloud Compute/Google Cloud Platform",
     "Cloud Compute/Microsoft Azure",
     "Cloud Compute/Amazon Web Services",
     "Data Engineering/AWS",
-    "Data Engineering/Data Warehouse/Architecture/Serverless.md",
     "Cloud Compute",
-    "Data Engineering/Data Warehouse/Architecture/Metadata-first.md",
-    "Data Engineering/Data Warehouse/Architecture/Data Hub.md",
-    "Data Engineering/Data Warehouse/Architecture/Data Fabric.md",
-    "Data Engineering/Data Warehouse/Architecture/Data Mesh.md",
-    "Data Engineering/Data Warehouse/Architecture/Data Mart.md",
-    "Data Engineering/Data Warehouse/Architecture/Data Lake.md",
-    "Data Engineering/Data Warehouse/Architecture/Data Warehouse.md",
-    "Data Engineering/NoSQL Databases/Key-Value.md",
     "Data Engineering/Data Warehouse/Architecture",
     "Data Engineering/Data Warehouse",
     "Data Engineering/NoSQL Databases",

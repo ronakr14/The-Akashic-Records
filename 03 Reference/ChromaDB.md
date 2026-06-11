@@ -1,4 +1,4 @@
 #vector #ai #database #embeddings
-Lightweight local [[vector database]] for embeddings—ideal for quick [[RAG]] prototypes and small-to-medium semantic search apps.
+Lightweight local [[Vector Database]] for embeddings—ideal for quick [[RAG]] prototypes and small-to-medium semantic search apps.
 
-Alternative: — **[[Qdrant]]** (better for production with higher scalability, filtering, and performance)
+Alternative: — **[[qdrant]]** (better for production with higher scalability, filtering, and performance)
