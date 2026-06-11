@@ -1,0 +1,3 @@
+Batch
+Hybrid
+Realtime

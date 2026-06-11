@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "960e892503b801f8",
+        "id": "fe8640503604638d",
         "type": "tabs",
         "children": [
           {
-            "id": "141498f812c56296",
+            "id": "192887668427e729",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "What-If Simulator.md",
+                "file": "Data Engineering/Batch processing interview.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "What-If Simulator"
+              "title": "Batch processing interview"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 278.5
+    "width": 268.5,
+    "collapsed": true
   },
   "right": {
     "id": "7c51cdc979815380",
@@ -188,43 +189,43 @@
       "obsidian-tomorrows-daily-note:Open tomorrow's daily note": false
     }
   },
-  "active": "141498f812c56296",
+  "active": "192887668427e729",
   "lastOpenFiles": [
-    "What-If Simulator.md",
-    "stream_processing_summary.md",
+    "2026-06-05.md",
+    "Data Engineering/Batch processing interview.md",
+    "Data Engineering/Batch Processing.md",
+    "Untitled 1.md",
+    "Data Engineering/Batch Processing-1.md",
     "Untitled.md",
-    "Stream Data Processing.md",
-    "Data Engineering/Stream Data/Untitled.md",
-    "Data Engineering/Stream Data",
-    "Data Engineering/ETL vs ELT",
-    "Data Engineering",
-    "Query DNA Analyser.md",
-    "Cost Attribution Engine.md",
-    "Join Intelligence Engine.md",
-    "Partition Advisor.md",
-    "05 Projects/FastAPI CLI/FastAPI CLI Decorator 6.md",
-    "05 Projects/FastAPI CLI/FastAPI CLI Decorator 3.md",
-    "05 Projects/FastAPI CLI/FastAPI CLI Decorator 7.md",
-    "05 Projects/FastAPI CLI/FastAPI CLI Decorator 2.md",
-    "05 Projects/FastAPI CLI/FastAPI CLI Decorator 1.md",
-    "05 Projects/FastAPI CLI/FastAPI CLI Decorator.md",
-    "05 Projects/FastAPI CLI/FastAPI CLI Decorator 5.md",
-    "05 Projects/FastAPI CLI/FastAPI CLI Decorator 4.md",
-    "05 Projects/Test Automation - CAI.md",
-    "04 Knowledge/Compare File in Powershell.md",
-    "05 Projects/Github Star Repo Summary.md",
-    "05 Projects/Github Autosync.md",
-    "03 Reference/Reinforcement Learning.md",
-    "2026-06-01.md",
-    "03 Reference/Reinforcement Learning + Deep RL.md",
-    "05 Projects/Github Starred Repo/GitHub Starred Repo Notifications 1.md",
-    "05 Projects/Github Starred Repo/GitHub Starred Repo Notifications.md",
-    "02 Prompts",
-    "03 Reference/00 Prompts",
-    "03 Reference/00 Software Engineering",
-    "03 Reference/00 Productivity Systems",
-    "03 Reference/00 Developer Tools",
-    "03 Reference/00 Data Engineering",
-    "03 Reference/00 Version Control"
+    "Data Quality.md",
+    "Query Optimization.md",
+    "Metadata & Observability.md",
+    "Performance Optimization.md",
+    "Failure Recovery.md",
+    "Partitioning.md",
+    "Incremental Processing.md",
+    "03 Reference/ETL vs ELT.md",
+    "03 Reference/Big Data Tools.md",
+    "Data Engineering/Basics.md",
+    "Cloud Compute/Cloud Architectures.md",
+    "Data Engineering/Batch Process",
+    "Cloud Compute/Google Cloud Platform",
+    "Cloud Compute/Microsoft Azure",
+    "Cloud Compute/Amazon Web Services",
+    "Data Engineering/AWS",
+    "Data Engineering/Data Warehouse/Architecture/Serverless.md",
+    "Cloud Compute",
+    "Data Engineering/Data Warehouse/Architecture/Metadata-first.md",
+    "Data Engineering/Data Warehouse/Architecture/Data Hub.md",
+    "Data Engineering/Data Warehouse/Architecture/Data Fabric.md",
+    "Data Engineering/Data Warehouse/Architecture/Data Mesh.md",
+    "Data Engineering/Data Warehouse/Architecture/Data Mart.md",
+    "Data Engineering/Data Warehouse/Architecture/Data Lake.md",
+    "Data Engineering/Data Warehouse/Architecture/Data Warehouse.md",
+    "Data Engineering/NoSQL Databases/Key-Value.md",
+    "Data Engineering/Data Warehouse/Architecture",
+    "Data Engineering/Data Warehouse",
+    "Data Engineering/NoSQL Databases",
+    "Data Engineering/Relational Databases"
   ]
 }
