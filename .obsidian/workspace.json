@@ -8,36 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e2f5349d757b7a16",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Untitled 46.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Untitled 46"
-            }
-          },
-          {
             "id": "ff979fc53d9bf4c8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Untitled 47.md",
+                "file": "BM25.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,11 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Untitled 47"
+              "title": "BM25"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -216,6 +191,8 @@
   },
   "active": "ff979fc53d9bf4c8",
   "lastOpenFiles": [
+    "03 Reference/embeddings.md",
+    "BM25.md",
     "Untitled 46.md",
     "Untitled 47.md",
     "Untitled 45.md",
@@ -240,8 +217,6 @@
     "Untitled 26.md",
     "Untitled 25.md",
     "Untitled 24.md",
-    "Untitled 23.md",
-    "Untitled 22.md",
     "Data Engineering/Batch Process",
     "Cloud Compute/Google Cloud Platform",
     "Cloud Compute/Microsoft Azure",
