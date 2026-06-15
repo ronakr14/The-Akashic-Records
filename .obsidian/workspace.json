@@ -4,17 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "a465d1f59101fb7c",
+        "id": "3c358c7048389c76",
         "type": "tabs",
         "children": [
           {
-            "id": "2815d03caac134a3",
+            "id": "a7dfd79be3154fdf",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "00 Projects/Untitled 46.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Untitled 46"
             }
           }
         ]
@@ -49,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "github",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -184,43 +198,43 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2815d03caac134a3",
+  "active": "a7dfd79be3154fdf",
   "lastOpenFiles": [
-    "README.md",
-    "00 Inbox/Storage Tracker.md",
-    "00 Inbox/Compare File in Powershell.md",
-    "00 Inbox/BM25.md",
-    "00 Inbox/Batch processing interview.md",
-    "00 Inbox/Accelerate.md",
-    "2026-06-15.md",
-    "00 Inbox/embeddings.md",
-    "Untitled 46.md",
-    "Untitled 47.md",
-    "Untitled 45.md",
-    "Untitled 44.md",
-    "Untitled 43.md",
-    "Untitled 42.md",
-    "Untitled 41.md",
-    "Untitled 40.md",
-    "Untitled 39.md",
-    "Untitled 38.md",
-    "Untitled 37.md",
-    "Untitled 36.md",
-    "Untitled 35.md",
-    "Untitled 34.md",
-    "Untitled 33.md",
-    "Untitled 32.md",
-    "Untitled 31.md",
-    "Untitled 30.md",
-    "Data Engineering/Batch Process",
-    "00 Inbox/Google Cloud Platform",
-    "00 Inbox/Microsoft Azure",
-    "00 Inbox/Amazon Web Services",
-    "Data Engineering/AWS",
-    "Cloud Compute",
-    "Data Engineering/Data Warehouse/Architecture",
-    "Data Engineering/Data Warehouse",
-    "Data Engineering/NoSQL Databases",
-    "Data Engineering/Relational Databases"
+    "00 Inbox/Untitled 30 (2).md",
+    "00 Interview Questions/Untitled 30 (2).md",
+    "00 Inbox/Untitled 30.md",
+    "00 Projects/Untitled 46.md",
+    "00 Inbox/Untitled 45.md",
+    "00 Interview Questions/Untitled 45.md",
+    "00 Interview Questions/Untitled 44.md",
+    "00 Interview Questions/Untitled 43.md",
+    "00 Interview Questions/Untitled 42.md",
+    "00 Interview Questions/Untitled 41.md",
+    "00 Interview Questions/Untitled 40.md",
+    "00 Interview Questions/Untitled 39.md",
+    "00 Interview Questions/Untitled 38.md",
+    "00 Interview Questions/Untitled 36.md",
+    "00 Interview Questions/Untitled 35.md",
+    "00 Interview Questions/Untitled 34.md",
+    "00 Interview Questions/Untitled 33.md",
+    "00 Interview Questions/Untitled 32.md",
+    "00 Interview Questions/Untitled 31.md",
+    "00 Interview Questions/Untitled 30.md",
+    "00 Interview Questions/Untitled 16 (2).md",
+    "00 Inbox/M-P/Password Storage.md",
+    "00 Inbox/M-P/Microservice.md",
+    "00 Inbox/A-D/Distributed System.md",
+    "00 Inbox/Untitled 47.md",
+    "00 Inbox/Untitled 44.md",
+    "00 Projects/Healthcare",
+    "00 Projects/Lakehouse Optimizer",
+    "00 Projects/GitHub Sync",
+    "00 Projects/FastAPI CLI Decorator",
+    "00 References",
+    "00 Interview Questions",
+    "00 Prompts",
+    "04 References",
+    "03 Interview Questions",
+    "02 Prompts"
   ]
 }
