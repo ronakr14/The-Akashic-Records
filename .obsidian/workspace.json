@@ -4,31 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "13f01a4865531171",
+        "id": "a465d1f59101fb7c",
         "type": "tabs",
         "children": [
           {
-            "id": "ff979fc53d9bf4c8",
+            "id": "2815d03caac134a3",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "BM25.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "BM25"
+              "title": "New tab"
             }
           }
         ]
@@ -198,11 +184,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ff979fc53d9bf4c8",
+  "active": "2815d03caac134a3",
   "lastOpenFiles": [
+    "README.md",
+    "00 Inbox/Storage Tracker.md",
+    "00 Inbox/Compare File in Powershell.md",
+    "00 Inbox/BM25.md",
+    "00 Inbox/Batch processing interview.md",
+    "00 Inbox/Accelerate.md",
     "2026-06-15.md",
-    "BM25.md",
-    "03 Reference/embeddings.md",
+    "00 Inbox/embeddings.md",
     "Untitled 46.md",
     "Untitled 47.md",
     "Untitled 45.md",
@@ -221,15 +212,10 @@
     "Untitled 32.md",
     "Untitled 31.md",
     "Untitled 30.md",
-    "Untitled 29.md",
-    "Untitled 28.md",
-    "Untitled 27.md",
-    "Untitled 26.md",
-    "Untitled 25.md",
     "Data Engineering/Batch Process",
-    "Cloud Compute/Google Cloud Platform",
-    "Cloud Compute/Microsoft Azure",
-    "Cloud Compute/Amazon Web Services",
+    "00 Inbox/Google Cloud Platform",
+    "00 Inbox/Microsoft Azure",
+    "00 Inbox/Amazon Web Services",
     "Data Engineering/AWS",
     "Cloud Compute",
     "Data Engineering/Data Warehouse/Architecture",

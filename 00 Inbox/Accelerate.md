@@ -8,4 +8,4 @@ Github: [huggingface/accelerate: 🚀 A simple way to launch, train, and use PyT
 
 
 Alternative: 
-1. **[[DeepSpeed]]** — better when you need **extreme-scale optimization (ZeRO, offloading) for very large models**.
+1. **[[deepspeed]]** — better when you need **extreme-scale optimization (ZeRO, offloading) for very large models**.
