@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 268.5,
-    "collapsed": true
+    "width": 268.5
   },
   "right": {
     "id": "7c51cdc979815380",
@@ -165,14 +164,23 @@
               "icon": "lucide-list",
               "title": "Outline of 2026-05-26"
             }
+          },
+          {
+            "id": "c4a0399f57f93a64",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -186,13 +194,15 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "iconic:Open rulebook": false,
       "sheet-plus:Create excel file": false,
-      "obsidian-tomorrows-daily-note:Open tomorrow's daily note": false
+      "obsidian-tomorrows-daily-note:Open tomorrow's daily note": false,
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "ff979fc53d9bf4c8",
   "lastOpenFiles": [
-    "03 Reference/embeddings.md",
+    "2026-06-15.md",
     "BM25.md",
+    "03 Reference/embeddings.md",
     "Untitled 46.md",
     "Untitled 47.md",
     "Untitled 45.md",
@@ -216,7 +226,6 @@
     "Untitled 27.md",
     "Untitled 26.md",
     "Untitled 25.md",
-    "Untitled 24.md",
     "Data Engineering/Batch Process",
     "Cloud Compute/Google Cloud Platform",
     "Cloud Compute/Microsoft Azure",
