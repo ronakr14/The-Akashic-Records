@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00 Inbox/Q-T/S/snowflake.md",
+                "file": "00 Interview Questions/Untitled 40.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "snowflake"
+              "title": "Untitled 40"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "7c51cdc979815380",
@@ -200,32 +201,32 @@
   },
   "active": "fca9767b9f6f67a3",
   "lastOpenFiles": [
+    "00 Inbox/A-D/D/dspy.md",
+    "Python Libs Collection.md",
+    "00 Inbox/I-L/L/langgraph.md",
+    "00 Interview Questions/Untitled 40.md",
+    "00 Inbox/I-L/K/KV Cache.md",
+    "00 Inbox/A-D/A/Attention Mechanisms.md",
+    "00 Inbox/Q-T/R/Recurrent Neural Networks.md",
+    "00 Inbox/Q-T/T/Transformers.md",
+    "00 Inbox/M-P/P/PyTorch Lightning.md",
+    "00 Inbox/M-P/M/Messaging Systems.md",
+    "00 Inbox/E-H/F/FastAPI.md",
+    "00 Inbox/A-D/A/Artificial Intelligence.md",
+    "00 Inbox/Q-T/R/Robot.md",
+    "00 Inbox/I-L/J/jenkins.md",
+    "00 Inbox/E-H/G/GitHub Actions.md",
+    "00 Inbox/A-D/C/Cron Job.md",
+    "00 Inbox/E-H/G/gitlab.md",
+    "00 Inbox/A-D/A/AirLLM.md",
+    "00 Inbox/E-H/H/hvac.md",
+    "00 Inbox/A-D/B/BM25.md",
+    "00 Inbox/Q-T/S/snowflake.md",
+    "2026-06-17.md",
     "00 Inbox/Q-T/S/sql.md",
     "00 Inbox/A-D/B/BigQuery.md",
     "00 Inbox/A-D/A/appwrite.md",
     "00 Inbox/E-H/F/firebase.md",
-    "Python Libs Collection.md",
-    "00 Inbox/Q-T/S/SupaBase.md",
-    "00 Inbox/A-D/A/Alembic.md",
-    "00 Inbox/A-D/A/Amazon Web Services.md",
-    "00 Inbox/E-H/G/Google Cloud Platform.md",
-    "00 Inbox/A-D/D/Digital Ocean.md",
-    "00 Inbox/A-D/C/cloudflare.md",
-    "00 Inbox/A-D/C/Curl Cffi.md",
-    "playwright.md",
-    "00 Inbox/E-H/H/helium.md",
-    "00 Inbox/A-D/C/crawl4ai.md",
-    "00 Inbox/Q-T/S/snowflake.md",
-    "00 Inbox/A-D/D/databricks.md",
-    "00 Inbox/I-L/L/lakekeeper.md",
-    "00 Inbox/I-L/I/Iceberg.md",
-    "00 Inbox/E-H/H/Hudi.md",
-    "00 Inbox/A-D/D/Delta Lake.md",
-    "00 Interview Questions/Untitled 35.md",
-    "00 Inbox/A-D/A/Amazon Code Whisperer.md",
-    "00 Inbox/A-D/C/Claude Code.md",
-    "00 Inbox/A-D/C/Codeium.md",
-    "00 Inbox/E-H/G/Gemini Code Assist.md",
     "Artificial Intelligence/Untitled",
     "00 Projects/Healthcare",
     "00 Projects/Lakehouse Optimizer",

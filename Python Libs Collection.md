@@ -25,6 +25,7 @@ Security & Hashing
 1. argon2-cffi - Memory-hard password hashing
 2. Passlib - Secure password hashing
 3. bcrypt - 
+4. hvac - programmatic secrets management 
 
 ML Model Serving
 1. Ray Serve - Scalable, low-latency model serving for Python ML workloads
@@ -43,6 +44,7 @@ Plumbum - Shell-like scripting in Python with clean subprocess handling
 Subprocess - zero dependencies and full control over process execution
 Delegator - Simple subprocess management with clean API
 
+Vector DB
 FAISS CPU - Local, high-performance vector similarity search on CPUs
 Milvus - High-scale vector database for AI workloads
 Weaviate - Vector database for semantic search and RAG
@@ -67,7 +69,15 @@ SageMaker - End-to-end ML platform on AWS
 
 LLM Optimization
 BitNet-Run **ultra-efficient 1-bit/low-bit LLMs** on edge or low-resource hardware
-GGUF Quantization - better for **practical, widely-supported quantizatio
+GGUF Quantization - better for **practical, widely-supported quantization**
+KVCache = Speed up LLM inference by caching past key/value states for efficient token-by-token generation
+Attention Mechanism - Focus model on relevant parts of input sequences to improve NLP, vision, and multimodal tasks using Attention Mechanisms.
+RNN - Sequential data modeling (time series, speech, NLP) where temporal dependencies 
+Transformers - State‑of‑the‑art **NLP and multimodal model library**
+Pytorch Lightning - Structure and scale PyTorch training with clean, modular cod
+DSPY - Programmatic optimization of LLM pipelines 
+
+
 
 Python Package Manager:
 Poetry - Dependency management + packaging with lockfile reproducibility
@@ -125,3 +135,19 @@ spark sql -  process massive datasets across clusters instead of single-node dat
 Database Migration
 alembic - Version-controlled database schema migrations for Python app
 Flyway - language-agnostic, [[sql]]-first migrations with simpler CI/CD integration
+
+Orchestration:
+Jenkins - Automate complex CI/CD pipelines with full control
+Github Actions - Repo-native CI/CD tightly integrated with GitHub for automating
+Cron Job -Simple **scheduled task automation** for running scripts,
+Gitlab - End-to-end DevOps platform
+
+Test Automation
+Robot Framework -Enterprise‑grade **keyword‑driven test automation** for web, API, and desktop apps
+
+API:
+High-performance Python APIs with automatic validation
+
+LLM Orchestration
+langgraph = Stateful, deterministic orchestration of LLM agents
+Microsoft Autogen -  faster prototyping of conversational
