@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "3c358c7048389c76",
+        "id": "96ab8897219e4064",
         "type": "tabs",
         "children": [
           {
-            "id": "a7dfd79be3154fdf",
+            "id": "fca9767b9f6f67a3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00 Projects/Untitled 46.md",
+                "file": "00 Inbox/Q-T/S/snowflake.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Untitled 46"
+              "title": "snowflake"
             }
           }
         ]
@@ -63,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "github",
+                "query": "python lib collection",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 268.5
+    "width": 200
   },
   "right": {
     "id": "7c51cdc979815380",
@@ -198,34 +198,35 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a7dfd79be3154fdf",
+  "active": "fca9767b9f6f67a3",
   "lastOpenFiles": [
-    "00 Inbox/Untitled 30 (2).md",
-    "00 Interview Questions/Untitled 30 (2).md",
-    "00 Inbox/Untitled 30.md",
-    "00 Projects/Untitled 46.md",
-    "00 Inbox/Untitled 45.md",
-    "00 Interview Questions/Untitled 45.md",
-    "00 Interview Questions/Untitled 44.md",
-    "00 Interview Questions/Untitled 43.md",
-    "00 Interview Questions/Untitled 42.md",
-    "00 Interview Questions/Untitled 41.md",
-    "00 Interview Questions/Untitled 40.md",
-    "00 Interview Questions/Untitled 39.md",
-    "00 Interview Questions/Untitled 38.md",
-    "00 Interview Questions/Untitled 36.md",
+    "00 Inbox/Q-T/S/sql.md",
+    "00 Inbox/A-D/B/BigQuery.md",
+    "00 Inbox/A-D/A/appwrite.md",
+    "00 Inbox/E-H/F/firebase.md",
+    "Python Libs Collection.md",
+    "00 Inbox/Q-T/S/SupaBase.md",
+    "00 Inbox/A-D/A/Alembic.md",
+    "00 Inbox/A-D/A/Amazon Web Services.md",
+    "00 Inbox/E-H/G/Google Cloud Platform.md",
+    "00 Inbox/A-D/D/Digital Ocean.md",
+    "00 Inbox/A-D/C/cloudflare.md",
+    "00 Inbox/A-D/C/Curl Cffi.md",
+    "playwright.md",
+    "00 Inbox/E-H/H/helium.md",
+    "00 Inbox/A-D/C/crawl4ai.md",
+    "00 Inbox/Q-T/S/snowflake.md",
+    "00 Inbox/A-D/D/databricks.md",
+    "00 Inbox/I-L/L/lakekeeper.md",
+    "00 Inbox/I-L/I/Iceberg.md",
+    "00 Inbox/E-H/H/Hudi.md",
+    "00 Inbox/A-D/D/Delta Lake.md",
     "00 Interview Questions/Untitled 35.md",
-    "00 Interview Questions/Untitled 34.md",
-    "00 Interview Questions/Untitled 33.md",
-    "00 Interview Questions/Untitled 32.md",
-    "00 Interview Questions/Untitled 31.md",
-    "00 Interview Questions/Untitled 30.md",
-    "00 Interview Questions/Untitled 16 (2).md",
-    "00 Inbox/M-P/Password Storage.md",
-    "00 Inbox/M-P/Microservice.md",
-    "00 Inbox/A-D/Distributed System.md",
-    "00 Inbox/Untitled 47.md",
-    "00 Inbox/Untitled 44.md",
+    "00 Inbox/A-D/A/Amazon Code Whisperer.md",
+    "00 Inbox/A-D/C/Claude Code.md",
+    "00 Inbox/A-D/C/Codeium.md",
+    "00 Inbox/E-H/G/Gemini Code Assist.md",
+    "Artificial Intelligence/Untitled",
     "00 Projects/Healthcare",
     "00 Projects/Lakehouse Optimizer",
     "00 Projects/GitHub Sync",
@@ -234,7 +235,6 @@
     "00 Interview Questions",
     "00 Prompts",
     "04 References",
-    "03 Interview Questions",
-    "02 Prompts"
+    "03 Interview Questions"
   ]
 }
