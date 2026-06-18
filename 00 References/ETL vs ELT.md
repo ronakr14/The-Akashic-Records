@@ -1,4 +1,4 @@
-Fundamentals Check: [[ETL 1]], [[ELT]]
+Fundamentals Check: [[ETL]], [[ELT]]
 This note is for comparison and which to use when.
 # Modern Data Engineering Stack
 Today most companies use:
@@ -64,6 +64,7 @@ Think of ETL fundamentals as 5 layers:
 5. Data Lifecycle
 ```
 Most people only study layers 1–3.
+
 ---
 
 ---

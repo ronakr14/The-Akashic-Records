@@ -1,77 +1,41 @@
-## 4. You have a 100 TB table.
-A full reload takes 15 hours.
-How would you implement incremental loading?
-Expected discussion:
-* Watermarks
-* High-water marks
-* CDC
-* Timestamp-based extraction
-* Idempotency
-This is a classic **Data Engineering fundamentals + large-scale ETL design** question.
-
-The interviewer is testing whether you understand how to avoid expensive full-table scans and build reliable incremental pipelines.
-
----
-
+```table-of-contents
+```
 # Problem
-
 ```text
 Source Table Size: 100 TB
 Full Reload Time: 15 Hours
 Business SLA: Daily (or more frequent)
 ```
-
 A full reload is no longer practical because:
-
 - Expensive
-    
 - Misses SLA
-    
 - Wastes compute
-    
 - Increases source system load
-    
-
 The solution is **incremental loading**.
-
 ---
-
 # High-Level Strategy
-
 Instead of:
-
 ```text
 Read 100 TB
 ```
-
 every day:
-
 ```text
 Read only records that changed
 since last successful load
 ```
-
 Example:
-
 ```text
 Total Table: 100 TB
-
 Daily Changes: 500 GB
-
 Process:
 500 GB instead of 100 TB
 ```
-
 That's a 200x reduction.
 
 ---
-
 # Approach 1: Timestamp-Based Extraction
-
 Most common solution.
-
 Assume source table:
-
 ```sql
 customer_orders
 (
@@ -82,13 +46,9 @@ customer_orders
     updated_at
 )
 ```
-
 ---
-
 ## Maintain a Watermark
-
 Metadata table:
-
 ```sql
 etl_watermark
 (
@@ -96,7 +56,6 @@ etl_watermark
     last_successful_timestamp
 )
 ```
-
 Example:
 
 |table_name|last_successful_timestamp|
@@ -104,80 +63,52 @@ Example:
 |customer_orders|2026-06-03 23:59:59|
 
 ---
-
 ## Extraction Query
-
 ```sql
 SELECT *
 FROM customer_orders
 WHERE updated_at >
       '2026-06-03 23:59:59';
 ```
-
 Only changed rows are extracted.
 
 ---
-
 ## Update Watermark
-
 After successful completion:
-
 ```text
 2026-06-04 23:59:59
 ```
-
 becomes the new watermark.
 
 ---
-
 # Watermark vs High-Water Mark
-
 Interviewers often use these interchangeably.
-
 Conceptually:
-
-### Watermark
-
+## Watermark
 Tracks progress of ingestion.
-
 Example:
-
 ```text
 Last Processed Timestamp
 ```
-
 ---
-
-### High-Water Mark
-
+## High-Water Mark
 Highest successfully processed value.
-
 Example:
-
 ```text
 updated_at = 2026-06-04 22:30:15
 ```
-
 or
-
 ```text
 order_id = 99999999
 ```
-
 Both serve the same purpose:
-
 ```text
 Don't reread old data
 ```
-
 ---
-
 # Approach 2: Incrementing Primary Key
-
 Useful when timestamps don't exist.
-
 Example:
-
 ```sql
 orders
 (
@@ -185,112 +116,71 @@ orders
     ...
 )
 ```
-
 Maintain:
-
 ```text
 Last Processed Order ID
 ```
-
 Query:
-
 ```sql
 SELECT *
 FROM orders
 WHERE order_id > 99999999;
 ```
-
 ---
-
 ## Limitation
-
 Misses:
-
 ```text
 Updates
 Deletes
 ```
-
 Works best for append-only tables.
 
 ---
-
 # Approach 3: Change Data Capture (CDC)
-
 Best enterprise solution.
-
 Instead of querying tables directly:
-
 Capture database transaction logs.
-
 Examples:
-
 - MySQL Binlog
-    
 - PostgreSQL WAL
-    
 - SQL Server CDC
-    
-
 Tools:
-
 - Debezium
-    
 - Apache Kafka
-    
-
 ---
-
 ## CDC Events
-
 Insert:
-
 ```json
 {
   "op":"INSERT",
   "id":1001
 }
 ```
-
 Update:
-
 ```json
 {
   "op":"UPDATE",
   "id":1001
 }
 ```
-
 Delete:
-
 ```json
 {
   "op":"DELETE",
   "id":1001
 }
 ```
-
 ---
-
-## Benefits
-
+### Benefits
 Captures:
-
 - Inserts
-    
 - Updates
-    
 - Deletes
-    
-
 Near real-time.
-
 No full table scans.
 
 ---
-
 # Incremental Pipeline Architecture
-
 ```text
 Source Database
         |
@@ -309,220 +199,64 @@ Merge Into Target
         v
 Analytics Table
 ```
-
 ---
-
 # Handling Updates
-
 Suppose:
-
 ```text
 order_id=100
 amount=500
 ```
-
 changes to:
-
 ```text
 amount=700
 ```
-
 Appending would create duplicates.
-
 Instead:
-
 ```sql
 MERGE INTO sales tgt
 USING sales_increment src
 ON tgt.order_id = src.order_id
-
 WHEN MATCHED THEN
 UPDATE SET amount = src.amount
-
 WHEN NOT MATCHED THEN
 INSERT (...);
 ```
-
 ---
-
 # Handling Deletes
-
 Without CDC:
-
 Deletes are difficult.
-
 Example:
-
 ```text
 Row removed from source
 ```
-
 Target never knows.
 
 ---
-
 ## CDC Solution
-
 CDC emits:
-
 ```text
 DELETE event
 ```
-
 Target executes:
-
 ```sql
 DELETE
 FROM sales
 WHERE order_id = 100;
 ```
-
 ---
-
-# Idempotency
-
+# [[Idempotency]]
 A very common follow-up.
-
 Interviewer asks:
-
 > What happens if the job fails halfway?
 
 ---
-
-## Bad Design
-
-```text
-Load Data
-Insert Records
-Fail
-Retry
-Insert Again
-```
-
-Result:
-
-```text
-Duplicates
-```
-
----
-
-## Good Design
-
-Make the pipeline idempotent.
-
-Running the same batch twice should produce the same result.
-
-Methods:
-
-### MERGE / UPSERT
-
-```sql
-MERGE
-```
-
-instead of append.
-
----
-
-### Batch IDs
-
-Store:
-
-```text
-batch_id
-```
-
-Example:
-
-```sql
-batch_20260604
-```
-
-Before processing:
-
-```sql
-SELECT *
-FROM load_history
-WHERE batch_id='batch_20260604';
-```
-
-Skip if already completed.
-
----
-
-### Checkpointing
-
-Store progress:
-
-```text
-Last Processed Watermark
-```
-
-Restart from checkpoint.
-
----
-
-# Late Arriving Data
-
-Suppose:
-
-```text
-Order Created:
-June 1
-
-Arrives:
-June 4
-```
-
-Simple watermark logic may miss it.
-
----
-
-## Solution: Sliding Window
-
-Instead of:
-
-```sql
-WHERE updated_at > watermark
-```
-
-Use:
-
-```sql
-WHERE updated_at >
-       watermark - INTERVAL '2 DAY'
-```
-
-Then deduplicate during merge.
-
-This captures late arrivals safely.
-
----
-
 # Production Design for a 100 TB Table
-
 1. Initial full load once.
-    
 2. Store watermarks in metadata tables.
-    
 3. Extract incrementally using `updated_at`.
-    
 4. Prefer CDC if available.
-    
 5. Use MERGE/UPSERT for updates.
-    
 6. Handle deletes through CDC events.
-    
 7. Implement idempotent batch processing.
-    
 8. Use checkpoints and retries.
-    
 9. Use a small lookback window for late-arriving records.
-    
-
----
-
-# Interview Summary Answer
-
-> For a 100 TB table, I would avoid full reloads and implement incremental loading. My preferred approach would be timestamp-based extraction using an `updated_at` column and a metadata table storing the last successful watermark or high-water mark. Each run would extract only records modified since the previous successful load. If the source system supports CDC, I would use transaction log-based capture to detect inserts, updates, and deletes efficiently. Data would be loaded into a staging area and merged into the target using UPSERT/MERGE operations. To ensure idempotency, I would track batch IDs, maintain checkpoints, and design the pipeline so that rerunning the same batch produces the same final state without duplicates. For late-arriving data, I would use a small lookback window and deduplication logic during the merge process. This reduces processing from 100 TB to only the changed data while maintaining correctness and recoverability.

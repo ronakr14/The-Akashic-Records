@@ -35,14 +35,13 @@ How would you organize:
 ---
 # Incremental Processing
 ## 4. You have a 100 TB table.
-A full reload takes 15 hours.
-How would you implement incremental loading?
-Expected discussion:
-* Watermarks
-* High-water marks
-* CDC
-* Timestamp-based extraction
-* Idempotency
+A full reload takes 15 hours. How would you implement incremental loading?
+Expected discussion: `Watermarks, High-water marks, CDC, Timestamp-based extraction, Idempotency`
+
+For a 100 TB table, I would avoid full reloads and implement incremental loading. My preferred approach would be timestamp-based extraction using an `updated_at` column and a metadata table storing the last successful watermark or high-water mark. Each run would extract only records modified since the previous successful load. If the source system supports CDC, I would use transaction log-based capture to detect inserts, updates, and deletes efficiently. Data would be loaded into a staging area and merged into the target using UPSERT/MERGE operations. To ensure idempotency, I would track batch IDs, maintain checkpoints, and design the pipeline so that rerunning the same batch produces the same final state without duplicates. For late-arriving data, I would use a small lookback window and deduplication logic during the merge process. This reduces processing from 100 TB to only the changed data while maintaining correctness and recoverability.
+
+Refer: [[Incremental Load Strategy]]
+
 ---
 ## 5. What can go wrong with timestamp-based incremental loads?
 Look for:
@@ -53,14 +52,17 @@ Look for:
 * Missing records
 ---
 ## 6. Explain how you would backfill one year of historical data without impacting production batch jobs.
+
 ---
 # Partitioning
 ## 7. A daily batch job scans 30 TB but only processes one day of data.
 How would you optimize it?
-Expected:
-* Partition pruning
-* Predicate pushdown
-* File layout optimization
+Expected: `Partition pruning, Predicate pushdown, File layout optimization`
+
+If a daily batch job scans 30 TB but only processes one day's data, I'd first check whether partition pruning is working. The table should be partitioned on the date column being filtered. Next, I'd ensure predicates are pushdown-friendly and avoid functions on partition columns. I'd optimize file layout by using Parquet, compacting small files, and clustering data on frequently filtered columns. I'd also avoid `SELECT *` and verify improvements using EXPLAIN plans and scan metrics. The goal is to reduce data scanned from tens of terabytes to only the partitions, files, and columns required for that day's processing.
+
+refer: [[Partition Strategy]]
+
 ---
 ## 8. How would you choose partition keys for:
 * Orders table
@@ -103,7 +105,10 @@ Expected:
 * Reprocess
 ---
 ## 16. How do you make batch jobs idempotent?
-One of the most common senior-level questions
+
+I make batch jobs idempotent by ensuring reruns produce the same final state. Common techniques include partition overwrite for full partition loads, MERGE/UPSERT operations for incremental loads, deduplication using business keys, atomic writes, and careful watermark management. I also use staging tables, audit tables, and batch run tracking so failed jobs can be safely retried without creating duplicates or data loss. The key principle is that a retry should leave the target dataset in exactly the same state as a successful first run.
+
+refer: [[Idempotency]]
 
 ---
 # Performance Optimization
