@@ -4,17 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "30e3b9d88aa006ed",
+        "id": "d62c4bae14b7f7b6",
         "type": "tabs",
         "children": [
           {
-            "id": "3087fbe31d73be70",
+            "id": "b42c1a730c570f69",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Data Engineering/Batch Processing.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Batch Processing"
             }
           }
         ]
@@ -49,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#clippings",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -184,43 +198,43 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3087fbe31d73be70",
+  "active": "932cadc2bc5845db",
   "lastOpenFiles": [
-    "00 Interview Questions/Batch Processing.md",
-    "00 References/ETL.md",
-    "00 References/ELT.md",
-    "00 References/ETL vs ELT.md",
-    "00 Prompts/Github Improvement.md",
-    "00 Interview Questions/Data Lineage.md",
     "Data Engineering/Partition Strategy.md",
-    "Python Libs Collection.md",
-    "claude_response.md",
-    "claude_response.md.tmp.6976.b001b93a6c5e",
-    "Data Engineering/Idempotency.md",
     "Data Engineering/Incremental Load Strategy.md",
-    "00 Interview Questions/Untitled 29.md",
-    "00 Interview Questions/Untitled 30 (2).md",
-    "00 Interview Questions/Untitled 31.md",
-    "00 Interview Questions/Untitled 32.md",
-    "00 Interview Questions/Untitled 33.md",
-    "00 Interview Questions/Untitled 34.md",
-    "00 Interview Questions/Untitled 35.md",
-    "00 Interview Questions/Untitled 36.md",
-    "00 Interview Questions/Untitled 38.md",
-    "00 Interview Questions/Untitled 39.md",
-    "00 Interview Questions/Untitled 40.md",
-    "00 Interview Questions/Untitled 41.md",
-    "00 Interview Questions/Untitled 42.md",
-    "00 Interview Questions/Untitled 43.md",
-    "00 Interview Questions/Untitled 44.md",
-    "00 Projects/Test Automation - CAI",
-    "Untitled",
-    "Artificial Intelligence/Untitled",
-    "00 Projects/Healthcare",
-    "00 Projects/Lakehouse Optimizer",
-    "00 Projects/GitHub Sync",
-    "00 Projects/FastAPI CLI Decorator",
-    "00 References",
-    "00 Interview Questions"
+    "Data Engineering/Idempotency.md",
+    "Data Engineering/Batch Processing.md",
+    "Catalog.md",
+    "Python Libs Collection.md",
+    "CLAUDE.md",
+    "00 References/Git Multi Account Setup.md",
+    "00 Interview Questions/Metadata & Observability.md",
+    "00 Interview Questions/Metadata Management.md",
+    "00 Interview Questions/Cost Optimization.md",
+    "00 Interview Questions/Batch Processing - Modern.md",
+    "00 Interview Questions/Fundamentals.md",
+    "00 Interview Questions/Batch Processing - Advance.md",
+    "00 Interview Questions/LakeHouse.md",
+    "00 Interview Questions/Lakehouse 1.md",
+    "00 Interview Questions/Query Optimization.md",
+    "00 Interview Questions/Data Observability.md",
+    "00 Interview Questions/Data Quality.md",
+    "00 Interview Questions/Performance Optimization.md",
+    "00 Interview Questions/Failure Recovery.md",
+    "00 Interview Questions/Partitioning.md",
+    "00 Interview Questions/System Design.md",
+    "00 Interview Questions/Incremental Processing.md",
+    "handoff.md",
+    "00 Interview Questions/Data Warehouse.md",
+    "handoff.md.tmp.6976.8da4630c7128",
+    "CLAUDE.md.tmp.6976.9a040f99c1a0",
+    "00 Interview Questions/Batch Processing.md.tmp.6976.0bbab8a23b5f",
+    "00 Interview Questions/Batch Processing.md.tmp.6976.cac70e9e0849",
+    "00 Interview Questions/Batch Processing.md.tmp.6976.4cc772b57f13",
+    "00 Interview Questions/Batch Processing.md.tmp.6976.a99f105a044c",
+    "00 Interview Questions/Batch Processing.md.tmp.6976.4de4dcfc4ae4",
+    "00 Interview Questions/Batch Processing.md.tmp.6976.d2a1d375db34",
+    "00 Interview Questions/Batch Processing.md.tmp.6976.08c4ee0fa20d",
+    "00 Interview Questions/Batch Processing.md.tmp.6976.b6e006b70354"
   ]
 }

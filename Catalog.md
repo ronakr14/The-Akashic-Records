@@ -1,7 +1,5 @@
-# Python Libs Collection — Reclassified by Purpose
-
-Source: `Python Libs Collection.md`. Reorganized into a clean domain taxonomy. Each entry keeps original name + one-line reason it belongs here.
-
+```table-of-contents
+```
 ---
 
 ## 1. Data Engineering & ETL (DataFrames, Batch, Pipelines)

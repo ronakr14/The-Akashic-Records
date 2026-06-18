@@ -57,4 +57,4 @@ Once you're comfortable with the basics, the next layer is:
 7. [[Data lake]] architecture
 8. [[Batch pipeline design patterns]]
 9. [[00 Inbox/A-D/D/Data Quality]] frameworks
-10. [[00 Interview Questions/Batch Processing]] questions
+10. [[Incremental Processing]] questions
