@@ -8,6 +8,7 @@ Web Application
 1. Chainlit - chat-based UIs for LLM apps
 2. Streamlit - data apps and dashboards
 3. Gradio - Dashboard with minimal code
+4. Taipy-Rapidly building data-driven Python web apps
 
 Data Visualization
 1. Dash (Plotly) - Dynamic Charts and Dashboard
@@ -26,6 +27,12 @@ Security & Hashing
 2. Passlib - Secure password hashing
 3. bcrypt - 
 4. hvac - programmatic secrets management 
+5. pyjwt-Lightweight JWT encode/decode for stateless authentication
+6. python-jose-broader JOSE support 
+7. itsdangerous-Signing and timestamping data
+8. pyopenssl-Low-level SSL/TLS handling and certificate management in Python
+9. cryptography-Secure data protection (encryption, hashing, key exchange) for APIs, 
+10. pycryptodome-Implement custom cryptographic operations 
 
 ML Model Serving
 1. Ray Serve - Scalable, low-latency model serving for Python ML workloads
@@ -66,6 +73,23 @@ H2O.ai AutoML - enterprise-ready tooling with strong model explainability and de
 Azure ML - Enterprise ML lifecycle on Microsoft stack
 Vertex AI - End-to-end ML platform on Google Cloud
 SageMaker - End-to-end ML platform on AWS
+AutoGrad-Automatic differentiation for computing gradients in custom models and optimization loops
+JAX-High-performance numerical computing and ML research with auto-diff 
+Pytorch-Flexible **deep learning framework** for building, training, and deploying custom neural networks
+Tensorflow-End-to-end ML platform for building, training, and deploying models at scale
+Keras-Rapid prototyping of deep learning models with simple
+Recommendations-Personalized content/product ranking
+Collaborative filtering-simpler baseline with minimal feature engineering
+Content based filtering- based on item features
+XGBOost-High-performance gradient boosting for structured/tabular data
+LightGBM-High-performance gradient boosting for large-scale tabular data
+CatBoost-High-accuracy tabular modeling with strong handling of categorical features
+Ensemble Methods-
+	Bagging
+	Boosting
+	Stacking-
+tensorboard-Real-time visualization of training metrics 
+Weights & Biases
 
 LLM Optimization
 BitNet-Run **ultra-efficient 1-bit/low-bit LLMs** on edge or low-resource hardware
@@ -76,8 +100,13 @@ RNN - Sequential data modeling (time series, speech, NLP) where temporal depende
 Transformers - State‑of‑the‑art **NLP and multimodal model library**
 Pytorch Lightning - Structure and scale PyTorch training with clean, modular cod
 DSPY - Programmatic optimization of LLM pipelines 
-
-
+Bits & Bytes-Memory-efficient **8-bit/4-bit quantization + optimizers** for training and running LLMs on limited GPUs
+Accelerate-Hugging Face]] Accelerate is a lightweight orchestration layer for distributed [[pytorch]] training and inference
+deepseed-Train and serve large-scale deep learning models efficiently
+Fully Sharded Data Parallel-Memory-efficient large model training by sharding parameters, gradients,
+Transformer Reinforcement Learning-Hugging Face **TRL (Transformer Reinforcement Learning)** library for fine-tuning LLMs with **RLHF, DPO, PPO**
+Agentic Chunking-Dynamic, LLM-driven chunking that adapts to context and intent
+Static Chunking-better for predictable performance, speed, and simpler pipelines
 
 Python Package Manager:
 Poetry - Dependency management + packaging with lockfile reproducibility
@@ -96,6 +125,9 @@ Gemini Code Assistant - AI coding assistant tightly integrated with Google Cloud
 Codeium - Free, fast AI code completion and chat across IDEs
 Claude Code - Agentic coding in your repo
 Amazon Code Whisperer - AI code assistant optimized for [Amazon Web Services](Amazon%20Web%20Services.md)
+VSCODE-Lightweight, extensible code editor
+JetBrains-deep language intelligence, refactoring, and enterprise-grade development
+
 
 
 Data Lake Catalog Layer
@@ -118,6 +150,7 @@ Backend as a service
 Appwrite - Self-hosted backend-as-a-service
 Supabase - Rapidly build full-stack apps with hosted Postgres, auth, storage, and realtime APIs
 Firebase - Rapidly build and ship **mobile/web apps with real-time backend**
+Big Data-Processing and analyzing massive, high-velocity datasets 
 
 
 
@@ -151,3 +184,53 @@ High-performance Python APIs with automatic validation
 LLM Orchestration
 langgraph = Stateful, deterministic orchestration of LLM agents
 Microsoft Autogen -  faster prototyping of conversational
+OpenDevin-Autonomous AI software engineer for end-to-end dev tasks
+AutoGPT-Autonomous goal-driven agents that plan and execute multi-step tasks with minimal supervision
+eigent-Local‑first multi‑agent AI workforce desktop platform
+AgentGPT-lighter autonomous agent setup when you want cloud/quick experiments
+CrewAI-Coordinate multi-agent LLM teams with role-based collaboration
+Haystack cloud-Production-ready RAG pipelines with managed orchestration
+
+Local LLM GUI:
+OobaBooga-Local GUI for running and experimenting with open-source LLMs
+LM Studio-User-friendly desktop app to run and test local LLMs 
+Ollama-Run and manage local LLMs with simple CLI/API
+Llama.cpp - Run LLMs locally on CPU/GPU with low memory using quantized GGUF
+AirLLM - Run **large LLMs on low-memory machines** by streaming weights from disk
+
+Messaging Platform
+Redpanda-Kafka-compatible streaming platform with lower latency and simpler op
+Kafka-Real-time event streaming backbone
+Pulsar-built-in multi-tenancy, geo-replication, and separation of storage/compute
+Flink-Stateful stream processing for low-latency, exactly-once pipelines
+Spark Structured Streaming-micro-batch simplicity and tighter integration with batch + ML workloads
+Dramatiq-High-performance background task processing in Python
+RabbitMQ
+Celery-Background job processing and distributed task queues in [[python]] 
+APScheduler-In-app job scheduling for Python services
+Redis queue-Lightweight background job queue using Redis for fast, simple async task processing 
+
+Video Encoding
+zencoder-Cloud-based video encoding/transcoding pipelines
+AWS elemental MediaConvert-
+
+Retry Mechanism
+Tenacity-Robust retry logic for unreliable operations
+Backoff-simpler, lightweight retry use cases
+
+
+LLM Models
+Mistral-High-performance open-weight LLMs for cost-efficient inference
+OpenAI-top-tier reasoning, reliability, and managed APIs
+Nemotron-NVIDIA’s enterprise-grade LLM family optimized for high-performance reasoning, coding, and agent workflows
+Claude-Long-context reasoning and document-heavy workflows
+Gemini-Multimodal reasoning across text, code, images, and video
+GLM-5-Open‑source frontier‑class **foundation LLM** optimized for **long‑horizon agentic tasks, deep reasoning, systems engineering, and production‑grade coding workflows
+ChatGPT-General-purpose AI assistant for reasoning, coding, writing, and problem-solving**
+Llama 3- open-source flexibility and easier deployment 
+
+Logging
+Logger-Basic application logging using built-in frameworks
+StructLog-Structured, context-rich logging in Python services
+Logguru-Simple, developer-friendly logging in Python with minimal setup
+Loki-Cost-efficient, label-based log aggregation tightly integrated with Prometheus

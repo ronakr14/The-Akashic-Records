@@ -4,31 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "96ab8897219e4064",
+        "id": "ded75984657d3f44",
         "type": "tabs",
         "children": [
           {
-            "id": "fca9767b9f6f67a3",
+            "id": "429382252d10af7d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "00 Interview Questions/Untitled 40.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Untitled 40"
+              "title": "New tab"
             }
           }
         ]
@@ -78,8 +64,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "7c51cdc979815380",
@@ -181,7 +166,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 763.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -199,34 +184,35 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fca9767b9f6f67a3",
+  "active": "429382252d10af7d",
   "lastOpenFiles": [
-    "00 Inbox/A-D/D/dspy.md",
     "Python Libs Collection.md",
-    "00 Inbox/I-L/L/langgraph.md",
-    "00 Interview Questions/Untitled 40.md",
-    "00 Inbox/I-L/K/KV Cache.md",
-    "00 Inbox/A-D/A/Attention Mechanisms.md",
-    "00 Inbox/Q-T/R/Recurrent Neural Networks.md",
-    "00 Inbox/Q-T/T/Transformers.md",
-    "00 Inbox/M-P/P/PyTorch Lightning.md",
-    "00 Inbox/M-P/M/Messaging Systems.md",
-    "00 Inbox/E-H/F/FastAPI.md",
-    "00 Inbox/A-D/A/Artificial Intelligence.md",
-    "00 Inbox/Q-T/R/Robot.md",
-    "00 Inbox/I-L/J/jenkins.md",
-    "00 Inbox/E-H/G/GitHub Actions.md",
-    "00 Inbox/A-D/C/Cron Job.md",
-    "00 Inbox/E-H/G/gitlab.md",
-    "00 Inbox/A-D/A/AirLLM.md",
-    "00 Inbox/E-H/H/hvac.md",
-    "00 Inbox/A-D/B/BM25.md",
-    "00 Inbox/Q-T/S/snowflake.md",
-    "2026-06-17.md",
-    "00 Inbox/Q-T/S/sql.md",
-    "00 Inbox/A-D/B/BigQuery.md",
-    "00 Inbox/A-D/A/appwrite.md",
-    "00 Inbox/E-H/F/firebase.md",
+    "00 Interview Questions/SPARK.md",
+    "00 Inbox/I-L/L/loki.md",
+    "00 Inbox/A-D/D/Dramatiq.md",
+    "00 Inbox/A-D/C/Celery.md",
+    "00 Inbox/A-D/A/apscheduler.md",
+    "00 Inbox/Q-T/R/Redis Queue.md",
+    "00 Prompts/Chat Summaries.md",
+    "00 References/OpenSpec.md",
+    "00 Inbox/Q-T/T/taipy.md",
+    "Untitled",
+    "00 Projects/Runtime Prediction for Batch Processing Systems.md",
+    "00 Inbox/I-L/L/Logger.md",
+    "00 Inbox/Q-T/S/Structlog.md",
+    "00 Inbox/I-L/L/Loguru.md",
+    "00 Inbox/U-X/V/VSCode.md",
+    "00 Inbox/Q-T/T/tensorboard.md",
+    "00 Inbox/U-X/X/xgboost.md",
+    "00 Inbox/I-L/L/lightgbm.md",
+    "00 Inbox/A-D/C/catboost.md",
+    "00 Inbox/E-H/E/Ensemble Methods.md",
+    "00 Inbox/Q-T/T/Types.md",
+    "00 Inbox/A-D/C/Cryptography.md",
+    "00 Inbox/M-P/P/pyopenssl.md",
+    "00 Inbox/M-P/P/PyCryptodome.md",
+    "00 Inbox/M-P/P/pyjwt.md",
+    "00 Inbox/I-L/I/itsdangerous.md",
     "Artificial Intelligence/Untitled",
     "00 Projects/Healthcare",
     "00 Projects/Lakehouse Optimizer",
@@ -235,7 +221,6 @@
     "00 References",
     "00 Interview Questions",
     "00 Prompts",
-    "04 References",
-    "03 Interview Questions"
+    "04 References"
   ]
 }
