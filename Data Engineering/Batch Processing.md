@@ -1,5 +1,3 @@
-#data-processing #data-engineering 
-
 ```table-of-contents
 ```
 # Summary

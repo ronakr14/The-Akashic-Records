@@ -2,9 +2,6 @@
 
 Compiled job application prompt templates sourced from social content. Covers resume optimization, ATS scoring, interview prep, and LinkedIn profile branding.
 
-## Tags
-#type/prompt #area/career #status/active
-
 ## Summary
 Structured prompts for: resume tailoring, ATS optimization, interview preparation, LinkedIn branding.
 

@@ -4,59 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "d62c4bae14b7f7b6",
+        "id": "25d8fc55a256fa4b",
         "type": "tabs",
         "children": [
           {
-            "id": "b42c1a730c570f69",
+            "id": "d902d619581a9411",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Data Engineering/Batch Processing.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Batch Processing"
-            }
-          },
-          {
-            "id": "4a6110bb1225df1f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "00 Inbox/Untitled 2.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Untitled 2"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -88,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#clippings",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -103,7 +64,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 269.5
+    "width": 265.5
   },
   "right": {
     "id": "7c51cdc979815380",
@@ -199,6 +160,16 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
+          },
+          {
+            "id": "b42d1a767be7483a",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {},
+              "icon": "lucide-info",
+              "title": "File properties"
+            }
           }
         ],
         "currentTab": 5
@@ -223,35 +194,36 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4a6110bb1225df1f",
+  "active": "c4a0399f57f93a64",
   "lastOpenFiles": [
-    "00 Inbox/Untitled 1.md",
-    "00 Inbox/Untitled 2.md",
-    "00 Inbox/Untitled.md",
-    "Data Engineering/Batch Processing.md",
-    "2026-06-18.md",
-    "00 Inbox",
-    "Data Engineering/Partition Strategy.md",
-    "Data Engineering/Incremental Load Strategy.md",
-    "Data Engineering/Idempotency.md",
-    "Catalog.md",
-    "Python Libs Collection.md",
-    "CLAUDE.md",
+    "00 References/Powershell Profile File.md",
     "00 References/Git Multi Account Setup.md",
-    "00 Interview Questions/Metadata & Observability.md",
-    "00 Interview Questions/Metadata Management.md",
-    "00 Interview Questions/Cost Optimization.md",
-    "00 Interview Questions/Batch Processing - Modern.md",
+    "00 References/Compare File in Powershell.md",
+    "00 Prompts/Job Application Prompts.md",
+    "00 References/Data Engineering Playbook.md",
+    "Data Engineering/Batch Processing.md",
+    "00 Interview Questions/Senior Python Data Engineer — Interview Prep.md",
+    "00 References/Python External Libraries Playbook.md",
+    "00 References/Python Environment Playbook.md",
+    "00 Projects/FastAPI CLI Decorator/FastAPI CLI Decorator.md",
+    "00 References/UUIDv7 & ULID.md",
+    "00 References/GIT.md",
+    "00 References/VSCode Debug.md",
+    "00 Inbox/Untitled.md",
+    "00 Interview Questions/Senior Python Data Engineer — Interview Prep.md.tmp.15540.a609dce3eef1",
+    "CLAUDE.md",
     "00 Interview Questions/Fundamentals.md",
-    "00 Interview Questions/Batch Processing - Advance.md",
     "00 Interview Questions/LakeHouse.md",
-    "00 Interview Questions/Lakehouse 1.md",
+    "00 Interview Questions/Untitled 45.md",
+    "00 Interview Questions/Metadata & Observability.md",
+    "00 Interview Questions/Untitled 44.md",
     "00 Interview Questions/Query Optimization.md",
-    "00 Interview Questions/Data Observability.md",
-    "00 Interview Questions/Data Quality.md",
-    "00 Interview Questions/Performance Optimization.md",
+    "00 Interview Questions/Untitled 43.md",
     "00 Interview Questions/Failure Recovery.md",
-    "00 Interview Questions/Partitioning.md",
+    "00 Interview Questions/Performance Optimization.md",
+    "00 Interview Questions/System Design.md",
+    "00 Interview Questions/Untitled 42.md",
+    "00 Inbox",
     "handoff.md.tmp.6976.8da4630c7128",
     "CLAUDE.md.tmp.6976.9a040f99c1a0",
     "00 Interview Questions/Batch Processing.md.tmp.6976.0bbab8a23b5f",
@@ -259,7 +231,6 @@
     "00 Interview Questions/Batch Processing.md.tmp.6976.4cc772b57f13",
     "00 Interview Questions/Batch Processing.md.tmp.6976.a99f105a044c",
     "00 Interview Questions/Batch Processing.md.tmp.6976.4de4dcfc4ae4",
-    "00 Interview Questions/Batch Processing.md.tmp.6976.d2a1d375db34",
-    "00 Interview Questions/Batch Processing.md.tmp.6976.08c4ee0fa20d"
+    "00 Interview Questions/Batch Processing.md.tmp.6976.d2a1d375db34"
   ]
 }

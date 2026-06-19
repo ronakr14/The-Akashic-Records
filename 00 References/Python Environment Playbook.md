@@ -1,4 +1,3 @@
-#python #environments #poetry 
 ```table-of-contents
 ```
 # Multiple Python Runtime (Raw)

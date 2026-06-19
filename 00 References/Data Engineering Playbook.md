@@ -1,4 +1,3 @@
-#data-engineering #fundamentals
 # The 15 Truths That Change the Game
 
 1. **Batch vs. Streaming Ingestion**

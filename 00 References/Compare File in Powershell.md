@@ -1,4 +1,3 @@
-#file-diff #powershell
 ```table-of-contents
 ```
 # 🧠 1. Quick & Dirty (Line-by-Line Diff)

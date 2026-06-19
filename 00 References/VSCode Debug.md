@@ -1,5 +1,3 @@
-#debugging #vscode
-
 ```table-of-contents
 ```
 

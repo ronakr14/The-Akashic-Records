@@ -4,7 +4,7 @@
 
 Pick for: cost signal, SLA signal, DQ signal, debuggability, anomaly detection. Order by leverage:
 
-1. `job_id`, `run_id`, `code_sha` — identity + traceability.
+1. `job_id`, `run_id`, `code_sha`, `job_status` — identity + traceability.
 2. `input_bytes`, `input_row_count`, `input_file_count` — volume signal; regression detector.
 3. `output_bytes`, `output_row_count` — output volume + write success.
 4. `partitions_scanned` (count, list) — pruning effectiveness.

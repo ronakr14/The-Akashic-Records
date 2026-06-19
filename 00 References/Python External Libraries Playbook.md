@@ -1,4 +1,3 @@
-#python #external-libraries
 ```table-of-contents
 ```
 # 1. Install from local path 

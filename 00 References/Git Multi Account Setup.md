@@ -1,4 +1,3 @@
-#git #multi-account #set-up
 ```table-of-contents
 ```
 # Defaults

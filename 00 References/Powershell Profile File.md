@@ -1,5 +1,3 @@
-#powershell-profile
-
 ```table-of-contents
 ```
 # Check where the profile should exist
