@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "25d8fc55a256fa4b",
+        "id": "73069a0eb411d3be",
         "type": "tabs",
         "children": [
           {
-            "id": "d902d619581a9411",
+            "id": "9ca92160da99247c",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -166,9 +166,11 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {},
+              "state": {
+                "file": "00 Projects/expose/FastAPI CLI Decorator.md"
+              },
               "icon": "lucide-info",
-              "title": "File properties"
+              "title": "File properties for FastAPI CLI Decorator"
             }
           }
         ],
@@ -194,43 +196,42 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c4a0399f57f93a64",
+  "active": "9ca92160da99247c",
   "lastOpenFiles": [
-    "00 References/Powershell Profile File.md",
-    "00 References/Git Multi Account Setup.md",
-    "00 References/Compare File in Powershell.md",
-    "00 Prompts/Job Application Prompts.md",
-    "00 References/Data Engineering Playbook.md",
-    "Data Engineering/Batch Processing.md",
-    "00 Interview Questions/Senior Python Data Engineer — Interview Prep.md",
-    "00 References/Python External Libraries Playbook.md",
-    "00 References/Python Environment Playbook.md",
+    "00 Projects/expose/FastAPI CLI Decorator.md",
+    "00 Projects/cli2api/plugins/__pycache__/__init__.cpython-314.pyc",
+    "00 Projects/cli2api/plugins/__pycache__/registry.cpython-314.pyc",
+    "00 Projects/cli2api/plugins/__pycache__/rate_limit.cpython-314.pyc",
+    "00 Projects/cli2api/plugins/__pycache__/logging.cpython-314.pyc",
+    "00 Projects/cli2api/plugins/__pycache__/idempotency.cpython-314.pyc",
+    "00 Projects/cli2api/plugins/__pycache__/base.cpython-314.pyc",
+    "00 Projects/cli2api/__pycache__/__init__.cpython-314.pyc",
+    "00 Projects/cli2api/__pycache__/test_smoke.cpython-314.pyc",
+    "00 Projects/cli2api/__pycache__/registry.cpython-314.pyc",
+    "00 Projects/cli2api/__pycache__/plugin_engine.cpython-314.pyc",
+    "00 Projects/cli2api/README.md",
+    "00 Projects/expose/README.md",
+    "2026-06-19.md",
     "00 Projects/FastAPI CLI Decorator/FastAPI CLI Decorator.md",
-    "00 References/UUIDv7 & ULID.md",
-    "00 References/GIT.md",
-    "00 References/VSCode Debug.md",
-    "00 Inbox/Untitled.md",
-    "00 Interview Questions/Senior Python Data Engineer — Interview Prep.md.tmp.15540.a609dce3eef1",
-    "CLAUDE.md",
-    "00 Interview Questions/Fundamentals.md",
-    "00 Interview Questions/LakeHouse.md",
-    "00 Interview Questions/Untitled 45.md",
-    "00 Interview Questions/Metadata & Observability.md",
-    "00 Interview Questions/Untitled 44.md",
-    "00 Interview Questions/Query Optimization.md",
-    "00 Interview Questions/Untitled 43.md",
-    "00 Interview Questions/Failure Recovery.md",
-    "00 Interview Questions/Performance Optimization.md",
-    "00 Interview Questions/System Design.md",
-    "00 Interview Questions/Untitled 42.md",
-    "00 Inbox",
-    "handoff.md.tmp.6976.8da4630c7128",
-    "CLAUDE.md.tmp.6976.9a040f99c1a0",
-    "00 Interview Questions/Batch Processing.md.tmp.6976.0bbab8a23b5f",
-    "00 Interview Questions/Batch Processing.md.tmp.6976.cac70e9e0849",
-    "00 Interview Questions/Batch Processing.md.tmp.6976.4cc772b57f13",
-    "00 Interview Questions/Batch Processing.md.tmp.6976.a99f105a044c",
-    "00 Interview Questions/Batch Processing.md.tmp.6976.4de4dcfc4ae4",
-    "00 Interview Questions/Batch Processing.md.tmp.6976.d2a1d375db34"
+    "00 Projects/Test Automation - CAI/2026-06-19_120000-datatest-automation.md",
+    "00 Projects/expose/FastAPI CLI Decorator 6.md",
+    "00 Projects/expose/FastAPI CLI Decorator 3.md",
+    "00 Projects/expose/cli2api/README.md",
+    "00 Projects/expose/FastAPI CLI Decorator 1.md",
+    "00 Projects/expose/FastAPI CLI Decorator 5.md",
+    "00 Projects/expose/FastAPI CLI Decorator 4.md",
+    "00 Projects/expose/FastAPI CLI Decorator 2.md",
+    "00 Projects/expose/expose/README.md",
+    "00 Projects/FastAPI CLI Decorator/expose/README.md",
+    "00 Projects/LakeMind/Untitled 46.md",
+    "00 Projects/LakeMind/Self-Tuning Batch Optimization Platform.md",
+    "00 Projects/LakeMind/Runtime Prediction for Batch Processing Systems.md",
+    "00 Projects/LakeMind/Query Plan Intelligence.md",
+    "00 Projects/LakeMind/IMPLEMENTATION_PLAN.md",
+    "00 Projects/LakeMind/AI-Driven Batch Optimization Platform.md",
+    "00 Projects/Lakehouse Optimizer/IMPLEMENTATION_PLAN.md",
+    "00 Projects/FastAPI CLI Decorator/cli2api/README.md",
+    "00 Projects/Design Batch Processing.md",
+    "00 Projects/FastAPI CLI Decorator/FastAPI CLI Decorator 6.md"
   ]
 }
