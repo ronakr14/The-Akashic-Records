@@ -52,7 +52,7 @@ Once you're comfortable with the basics, the next layer is:
 4. [[Change Data Capture (CDC)]]
 5. Apache [[Airflow]] fundamentals
 6. Apache [[SPARK]] batch processing
-7. [[Data lake]] architecture
+7. [[Data Lake]] architecture
 8. [[Batch pipeline design patterns]]
 9. [[00 Inbox/A-D/D/Data Quality]] frameworks
 10. [[Incremental Processing]] questions

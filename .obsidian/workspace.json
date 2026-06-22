@@ -4,17 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "73069a0eb411d3be",
+        "id": "0194ae7c39eeedb0",
         "type": "tabs",
         "children": [
           {
-            "id": "9ca92160da99247c",
+            "id": "5c384af9af013993",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "00 Projects/Healthcare/00 Proposal.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "00 Proposal"
             }
           }
         ]
@@ -196,9 +210,35 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "9ca92160da99247c",
+  "active": "5c384af9af013993",
   "lastOpenFiles": [
-    "00 Projects/expose/FastAPI CLI Decorator.md",
+    "00 Projects/Healthcare/00 Goal.md",
+    "00 Projects/Test Automation - CAI/2026-06-19_120000-datatest-automation.md",
+    "00 Projects/FastAPI CLI Decorator/FastAPI CLI Decorator 2.md",
+    "00 Projects/FastAPI CLI Decorator/FastAPI CLI Decorator 1.md",
+    "00 Projects/FastAPI CLI Decorator/FastAPI CLI Decorator.md",
+    "00 Projects/Healthcare/1.1 Trimmed Scope.md",
+    "00 Projects/Healthcare/Resource Lifecycle.md",
+    "00 Projects/Healthcare/1.1 Trimmed Scope.md.tmp.13612.17b7d470d467",
+    "00 Projects/Healthcare/Untitled 5.md",
+    "00 Projects/Healthcare/Untitled 4.md",
+    "00 Projects/Healthcare/Untitled 3.md",
+    "00 Projects/Healthcare/Untitled 2.md",
+    "00 Projects/Healthcare/Untitled 1.md",
+    "00 References/Untitled.md",
+    "00 Projects/Healthcare/Events.md",
+    "00 Projects/Healthcare/Patient Workflow.md",
+    "00 Projects/Healthcare/Business Doc.md",
+    "00 Projects/Healthcare/Untitled.md",
+    "00 Projects/Healthcare/Business Questions.md",
+    "00 Projects/Healthcare/1. Core Healthcare Platform.md",
+    "00 Projects/Healthcare/00 Proposal.md",
+    "CLAUDE.md",
+    "README.md",
+    "00 References/Untitled 2.md",
+    "2026-06-22.md",
+    "00 References/Untitled 1.md",
+    "00 Interview Questions/Query Optimization.md",
     "00 Projects/cli2api/plugins/__pycache__/__init__.cpython-314.pyc",
     "00 Projects/cli2api/plugins/__pycache__/registry.cpython-314.pyc",
     "00 Projects/cli2api/plugins/__pycache__/rate_limit.cpython-314.pyc",
@@ -207,31 +247,6 @@
     "00 Projects/cli2api/plugins/__pycache__/base.cpython-314.pyc",
     "00 Projects/cli2api/__pycache__/__init__.cpython-314.pyc",
     "00 Projects/cli2api/__pycache__/test_smoke.cpython-314.pyc",
-    "00 Projects/cli2api/__pycache__/registry.cpython-314.pyc",
-    "00 Projects/cli2api/__pycache__/plugin_engine.cpython-314.pyc",
-    "00 Projects/cli2api/README.md",
-    "00 Projects/expose/README.md",
-    "2026-06-19.md",
-    "00 Projects/FastAPI CLI Decorator/FastAPI CLI Decorator.md",
-    "00 Projects/Test Automation - CAI/2026-06-19_120000-datatest-automation.md",
-    "00 Projects/expose/FastAPI CLI Decorator 6.md",
-    "00 Projects/expose/FastAPI CLI Decorator 3.md",
-    "00 Projects/expose/cli2api/README.md",
-    "00 Projects/expose/FastAPI CLI Decorator 1.md",
-    "00 Projects/expose/FastAPI CLI Decorator 5.md",
-    "00 Projects/expose/FastAPI CLI Decorator 4.md",
-    "00 Projects/expose/FastAPI CLI Decorator 2.md",
-    "00 Projects/expose/expose/README.md",
-    "00 Projects/FastAPI CLI Decorator/expose/README.md",
-    "00 Projects/LakeMind/Untitled 46.md",
-    "00 Projects/LakeMind/Self-Tuning Batch Optimization Platform.md",
-    "00 Projects/LakeMind/Runtime Prediction for Batch Processing Systems.md",
-    "00 Projects/LakeMind/Query Plan Intelligence.md",
-    "00 Projects/LakeMind/IMPLEMENTATION_PLAN.md",
-    "00 Projects/LakeMind/AI-Driven Batch Optimization Platform.md",
-    "00 Projects/Lakehouse Optimizer/IMPLEMENTATION_PLAN.md",
-    "00 Projects/FastAPI CLI Decorator/cli2api/README.md",
-    "00 Projects/Design Batch Processing.md",
-    "00 Projects/FastAPI CLI Decorator/FastAPI CLI Decorator 6.md"
+    "00 Projects/cli2api/__pycache__/registry.cpython-314.pyc"
   ]
 }
