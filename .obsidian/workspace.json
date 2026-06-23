@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "0194ae7c39eeedb0",
+        "id": "f1c74a381fb5e86d",
         "type": "tabs",
         "children": [
           {
-            "id": "5c384af9af013993",
+            "id": "94011ef4a9fba9a1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00 Projects/Healthcare/00 Proposal.md",
+                "file": "00 References/Data Engineering Playbook.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -24,11 +24,11 @@
                   "showSearch": false,
                   "searchQuery": "",
                   "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
+                  "unlinkedCollapsed": false
                 }
               },
               "icon": "lucide-file",
-              "title": "00 Proposal"
+              "title": "Data Engineering Playbook"
             }
           }
         ]
@@ -63,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#clippings",
+                "query": "tag:#architecture",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -210,35 +210,35 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5c384af9af013993",
+  "active": "94011ef4a9fba9a1",
   "lastOpenFiles": [
-    "00 Projects/Healthcare/00 Goal.md",
+    "2026-06-23.md",
+    "00 References/Data Engineering Playbook.md",
+    "00 References/Compare File in Powershell.md",
+    "00 References/Bloom Filters.md",
+    "00 References/BitRouter.md",
+    "00 References/Batch Processing.md",
+    "00 References/Python Environment Playbook.md",
     "00 Projects/Test Automation - CAI/2026-06-19_120000-datatest-automation.md",
-    "00 Projects/FastAPI CLI Decorator/FastAPI CLI Decorator 2.md",
-    "00 Projects/FastAPI CLI Decorator/FastAPI CLI Decorator 1.md",
-    "00 Projects/FastAPI CLI Decorator/FastAPI CLI Decorator.md",
-    "00 Projects/Healthcare/1.1 Trimmed Scope.md",
-    "00 Projects/Healthcare/Resource Lifecycle.md",
-    "00 Projects/Healthcare/1.1 Trimmed Scope.md.tmp.13612.17b7d470d467",
-    "00 Projects/Healthcare/Untitled 5.md",
-    "00 Projects/Healthcare/Untitled 4.md",
-    "00 Projects/Healthcare/Untitled 3.md",
-    "00 Projects/Healthcare/Untitled 2.md",
-    "00 Projects/Healthcare/Untitled 1.md",
-    "00 References/Untitled.md",
     "00 Projects/Healthcare/Events.md",
     "00 Projects/Healthcare/Patient Workflow.md",
-    "00 Projects/Healthcare/Business Doc.md",
-    "00 Projects/Healthcare/Untitled.md",
+    "00 Projects/Healthcare/Resource Lifecycle.md",
     "00 Projects/Healthcare/Business Questions.md",
+    "00 Projects/Healthcare/Business Doc.md",
+    "00 Projects/Healthcare/1.1 Trimmed Scope.md",
     "00 Projects/Healthcare/1. Core Healthcare Platform.md",
     "00 Projects/Healthcare/00 Proposal.md",
-    "CLAUDE.md",
-    "README.md",
-    "00 References/Untitled 2.md",
-    "2026-06-22.md",
-    "00 References/Untitled 1.md",
-    "00 Interview Questions/Query Optimization.md",
+    "00 Projects/Healthcare/00 Goal.md",
+    "00 Projects/Xpose/01 Goal.md",
+    "00 Projects/Xpose/04 Enhancements Included.md",
+    "00 Projects/Xpose/03 Steps to Implement.md",
+    "00 Projects/Xpose/02 Architecture.md",
+    "00 Projects/Xpose/10 Examples of Use.md",
+    "00 Projects/Xpose/09 Integration with Rich.md",
+    "00 Projects/Xpose/08 Integration with Argparse.md",
+    "00 Projects/Xpose/07 Integration with Typer.md",
+    "00 Projects.md",
+    "00 Projects/Healthcare/1.1 Trimmed Scope.md.tmp.13612.17b7d470d467",
     "00 Projects/cli2api/plugins/__pycache__/__init__.cpython-314.pyc",
     "00 Projects/cli2api/plugins/__pycache__/registry.cpython-314.pyc",
     "00 Projects/cli2api/plugins/__pycache__/rate_limit.cpython-314.pyc",
