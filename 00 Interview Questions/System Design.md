@@ -1,3 +1,7 @@
+---
+type: question
+---
+
 ```table-of-contents
 ```
 ## Design a batch pipeline that processes 50 TB of sales data every night within a 4-hour SLA.
@@ -57,3 +61,10 @@ The note is an interview-prep answer for designing a batch system supporting rep
   OpenMetadata/DataHub/Apache Atlas captures column- and dataset-level lineage from CRM/ERP/Mobile → sales_fact → customer_360 → dashboards, with
   ingestion/transformation/DQ audit tables answering who loaded what, when, from which file, on which code version, and how many records passed or were
   rejected.
+
+## See Also
+- [[Distributed System]] — distributed systems foundations
+- [[Data Lake]] — data lake architecture
+- [[Delta Lake & Iceberg]] — lakehouse formats
+- [[Batch Processing]] — batch processing patterns
+- [[Stream Data Processing]] — stream processing

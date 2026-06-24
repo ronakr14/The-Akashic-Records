@@ -1,3 +1,7 @@
+---
+type: concept
+---
+
 # CLAUDE.md
 
 Guidance for Claude Code (claude.ai/code) when working in this repo.
@@ -10,16 +14,25 @@ Guidance for Claude Code (claude.ai/code) when working in this repo.
 
 | Folder | Purpose |
 |---|---|
-| `00 Interview Questions/` | Topic-organized interview prep (Data Eng, Cloud, Cost, etc.) |
-| `00 Projects/` | One subfolder per project: `FastAPI CLI Decorator/`, `Lakehouse Optimizer/`, `Test Automation - CAI/`, `GitHub Sync/`, `Healthcare/`. Some prior projects deleted in recent commits. |
+| `00 Interview Questions/` | Topic-organized interview prep (Data Eng, Cloud, Cost, etc.). Cross-links to `01 Curated/` and `02 Reference/`. |
+| `00 Projects/` | One subfolder per project: `Healthcare/`, `LakeMind/`, `PowerShell/`, `Test Automation - CAI/`, `Xpose/`. |
 | `00 Prompts/` | Reusable LLM prompt templates (summarizers, optimizers, job apps). |
-| `00 References/` | Long-form reference notes (Data Engineering Playbook, Distributed System, GIT, etc.). |
-| `Artificial Intelligence/`, `Cloud Computing/`, `Data Engineering/` | Domain notes. |
+| `01 Curated/` | Synthesis, decisions, trade-offs, project analyses — "what I think about X". Deep-dive concept notes, tool analyses, decision frameworks. |
+| `02 Reference/` | Evergreen factual reference — syntax, definitions, how-to lookups. No narrative, no opinions. |
+| `03 Career Vault/` | Career-long compounding knowledge: ADRs, open questions, lessons/trade-offs, incidents/postmortems. |
 | `Python Libs Collection.md` | Flat list of ~640 Python tools/frameworks/tags. |
 | `Storage Tracker.md` | Personal storage/inventory tracker. |
 | `claude_response.md` | Output of prior reclassification task on `Python Libs Collection.md` — 33-domain grouped taxonomy. |
 | `interview_prep.jsx`, `workspace-system-design.html` | Exported Obsidian workspace snapshots. |
 | `.obsidian/` | Obsidian config (workspace, plugins, themes). Do not edit by hand. |
+
+### Knowledge Philosophy
+
+- **Curated** = synthesis + decisions. Notes with a voice. "Here's what I think about X and why."
+- **Reference** = lookup. Factual, no narrative. "How do I do X syntax."
+- **Career Vault** = compounding expertise. ADRs, lessons, open questions, incident analyses.
+- **Interview Questions** = Q&A format prep. Each links back to Curated/Reference for deeper study.
+- Knowledge is organized around *problems and projects*, not technologies.
 
 ## Conventions & Working Patterns
 

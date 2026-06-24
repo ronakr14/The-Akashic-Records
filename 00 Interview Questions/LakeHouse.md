@@ -1,3 +1,7 @@
+---
+type: question
+---
+
 ```table-of-contents
 ```
 ## Why is file size important in batch processing?
@@ -77,4 +81,10 @@ Signals:
 Implementation:
 * Nightly scan of catalog stats.
 * Per-table thresholds (small fact table ≠ large fact table).
-* Auto-create compaction job for any partition that breaches; surface dashboard for human review on hot tables.
+* **Auto-create compaction job** for any partition that breaches; surface dashboard for human review on hot tables.
+
+## See Also
+- [[Data Lake]] — data lake fundamentals
+- [[Delta Lake & Iceberg]] — format comparison
+- [[Delta Lake's OPTIMIZE]] — compaction deep-dive
+- [[Data Vault & Lakehouse Modelling]] — modelling patterns

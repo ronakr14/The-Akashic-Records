@@ -1,3 +1,7 @@
+---
+type: project
+---
+
 # Objective
 Design a system capable of predicting batch job runtime before execution using historical telemetry, workload characteristics, and infrastructure metrics.
 The predicted runtime can be used for:

@@ -1,3 +1,7 @@
+---
+type: question
+---
+
 #microservices #interview #distributed-systems #architecture
 
 # Microservices — Interview Questions
@@ -297,3 +301,10 @@ Requirements: 100 million orders/day, 50 countries, multi-region, 99.99% availab
 Discuss: service boundaries, event design, consistency model, failure handling, scaling strategy, observability, disaster recovery, cost optimization.
 
 A strong answer touches almost every major microservices concept: domain design, messaging, distributed transactions, resiliency, scalability, and operations.
+
+## See Also
+- [[Microservice]] — microservice architecture principles
+- [[Monolithic System]] — when monoliths win
+- [[Distributed System]] — distributed systems foundations
+- [[Idempotency]] — idempotency in service communication
+- [[Partitioning]] — data partitioning in microservices

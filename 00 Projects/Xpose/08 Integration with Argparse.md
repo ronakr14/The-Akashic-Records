@@ -1,4 +1,5 @@
 ---
+type: project
 tags:
   - cli2api
   - project

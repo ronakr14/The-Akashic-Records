@@ -1,3 +1,7 @@
+---
+type: project
+---
+
 Multi Speciality Hospital
 
 Entities:

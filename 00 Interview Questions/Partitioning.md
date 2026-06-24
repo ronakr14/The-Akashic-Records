@@ -1,3 +1,7 @@
+---
+type: question
+---
+
 ```table-of-contents
 ```
 ## A daily batch job scans 30 TB but only processes one day of data.
@@ -38,3 +42,9 @@ The note is an interview-prep answer on what breaks when partitions grow too lar
   latency; maintenance jobs like OPTIMIZE/VACUUM/RECLUSTER/compaction stretch from minutes to hours; and large shuffles on multi-TB partitions cause
   executor OOM and disk spill — hence the standard targets of 1–100 GB per partition and 128 MB–1 GB per Parquet file, balancing metadata efficiency against
   query selectivity.
+
+## See Also
+- [[Partitioning]] — partitioning strategy deep-dive
+- [[Delta Lake's OPTIMIZE]] — file compaction in Delta Lake
+- [[Idempotency]] — making partition-scoped reruns safe
+- [[Parquet]] — Parquet format details

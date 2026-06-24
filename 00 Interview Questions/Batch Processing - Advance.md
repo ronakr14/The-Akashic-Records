@@ -1,3 +1,7 @@
+---
+type: question
+---
+
 ```table-of-contents
 ```
 ## A batch pipeline that normally processes 500 GB suddenly receives 20 TB.
@@ -137,3 +141,9 @@ Core components:
 * **Multi-tenancy** — namespace isolation, per-team quotas, RBAC.
 
 Build-vs-buy: most teams should *not* build this from scratch. Buy Airflow/Dagster/Prefect + Great Expectations/Soda + OpenLineage/Marquez + a FinOps tool. Build only the integration glue and your own DQ contracts library.
+
+## See Also
+- [[Batch Processing]] — batch processing overview
+- [[Failure Recovery]] — failure recovery strategies
+- [[Idempotency]] — idempotency patterns
+- [[Data Quality]] — data quality in pipelines

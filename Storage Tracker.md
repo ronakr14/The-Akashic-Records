@@ -1,4 +1,5 @@
 ---
+type: concept
 
 excel-pro-plugin: parsed
 

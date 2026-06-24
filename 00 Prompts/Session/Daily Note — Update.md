@@ -1,4 +1,5 @@
 ---
+type: concept
 description: One-shot prompt — save a session summary and append it to today's daily note.
 use_when: When wrapping a session but want a lighter touch than full handoff.
 inputs: [session context]

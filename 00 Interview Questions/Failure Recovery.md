@@ -1,3 +1,7 @@
+---
+type: question
+---
+
 ```table-of-contents
 ```
 ## A batch pipeline has 20 steps.
@@ -46,4 +50,7 @@ Hierarchy of cost: `retry < resume < restart < reprocess`. Choose the cheapest t
 
 I make batch jobs idempotent by ensuring reruns produce the same final state. Common techniques include partition overwrite for full partition loads, MERGE/UPSERT operations for incremental loads, deduplication using business keys, atomic writes, and careful watermark management. I also use staging tables, audit tables, and batch run tracking so failed jobs can be safely retried without creating duplicates or data loss. The key principle is that a retry should leave the target dataset in exactly the same state as a successful first run.
 
-Refer: [[Idempotency]]
+## See Also
+- [[Idempotency]] — idempotency deep-dive
+- [[Batch Processing]] — batch processing patterns
+- [[Incremental Load Strategy]] — incremental loading

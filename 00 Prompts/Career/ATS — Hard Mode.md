@@ -1,4 +1,5 @@
 ---
+type: concept
 description: Hard-mode ATS prompts — resume autopsy, achievement translator, keyword injector, pivot reframing, one-page cuts.
 use_when: When a CV is getting filtered before human review.
 inputs: [resume, JD (optional), pivot story (optional)]

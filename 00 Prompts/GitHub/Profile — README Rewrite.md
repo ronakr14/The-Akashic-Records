@@ -1,4 +1,5 @@
 ---
+type: concept
 description: Three-step Claude workflow to audit, rewrite, and visually upgrade a GitHub profile README.
 use_when: When refreshing your GitHub profile bio + README from scratch.
 inputs: [current bio, current README URL, role, target audience]

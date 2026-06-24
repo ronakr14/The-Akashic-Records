@@ -1,3 +1,7 @@
+---
+type: question
+---
+
 ```table-of-contents
 ```
 ## If you could collect only 10 metrics from every batch job, which would you choose and why?
@@ -109,3 +113,10 @@ Loop:
 Critical principle: **never auto-apply an irreversible or behavior-changing optimization**. Compaction is safe (atomic, reversible). Schema changes are not. Broadcasting different tables than the planner chose is not.
 
 Refer: [[Idempotency]]
+
+## See Also
+- [[Idempotency]] — idempotency deep-dive
+- [[Batch Processing]] — batch processing overview
+- [[ETL vs ELT]] — ETL vs ELT decision framework
+- [[Data Engineering Playbook]] — 15 core truths of data engineering
+- [[Incremental Load Strategy]] — incremental loading

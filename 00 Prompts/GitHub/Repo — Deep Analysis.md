@@ -1,4 +1,5 @@
 ---
+type: concept
 description: 15-section deep analysis of any GitHub repository — exec summary, architecture, enterprise evaluation, interview prep.
 use_when: When evaluating a repo for adoption, study, or interview prep.
 inputs: [repo URL]

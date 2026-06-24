@@ -1,3 +1,7 @@
+---
+type: project
+---
+
 Understand/ Refresh the following Concepts through the project
 
 Data Engineering Goals:

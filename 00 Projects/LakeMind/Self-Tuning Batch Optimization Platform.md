@@ -1,3 +1,7 @@
+---
+type: project
+---
+
 Design a self-tuning batch platform that automatically:
 * Detects slow jobs
 * Recommends optimizations

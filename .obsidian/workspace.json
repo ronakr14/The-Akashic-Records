@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "c182ea4239cbd8f6",
+        "id": "e7037081e43dc100",
         "type": "tabs",
         "children": [
           {
-            "id": "6d3626db183c813f",
+            "id": "6e89ebb3a4fb5c9e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00 References/Untitled 2.md",
+                "file": "01 Curated/Bloom Filters.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Untitled 2"
+              "title": "Bloom Filters"
             }
           }
         ]
@@ -188,12 +188,11 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 763.5,
-    "collapsed": true
+    "width": 763.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -211,43 +210,43 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "932cadc2bc5845db",
+  "active": "6e89ebb3a4fb5c9e",
   "lastOpenFiles": [
-    "00 References/python — OOP & Classes.md",
-    "00 References/python — Concurrency.md",
-    "00 References/Untitled 1.md",
-    "00 References/python — Modules & Packages.md",
-    "00 References/stream_processing_summary.md",
-    "00 References/Untitled.md",
-    "00 References/python — Files & Serialization.md",
-    "00 References/Stream Data Processing.md",
-    "00 References/Python External Libraries Playbook.md",
-    "00 References/Python Environment Playbook.md",
-    "00 References/python.md",
-    "00 References/Python Application Integrations.md",
-    "00 References/Powershell Profile File.md",
-    "00 References/Password Storage.md",
-    "00 References/Partitioning.md",
-    "00 References/Git Multi Account Setup.md",
-    "00 Interview Questions/Microservices.md",
-    "00 References/Partition Strategy.md",
-    "00 References/Parquet.md",
-    "00 References/OpenSpec.md",
-    "00 References/Monolithic System.md",
-    "00 References/Microservice.md",
-    "00 References/MkDocs.md",
-    "00 References/LLM Interaction Guide.md",
-    "00 References/Incremental Load Strategy.md",
-    "00 References/Idempotency.md",
-    "00 Projects/Healthcare/1.1 Trimmed Scope.md.tmp.13612.17b7d470d467",
-    "00 Projects/cli2api/plugins/__pycache__/__init__.cpython-314.pyc",
-    "00 Projects/cli2api/plugins/__pycache__/registry.cpython-314.pyc",
-    "00 Projects/cli2api/plugins/__pycache__/rate_limit.cpython-314.pyc",
-    "00 Projects/cli2api/plugins/__pycache__/logging.cpython-314.pyc",
-    "00 Projects/cli2api/plugins/__pycache__/idempotency.cpython-314.pyc",
-    "00 Projects/cli2api/plugins/__pycache__/base.cpython-314.pyc",
-    "00 Projects/cli2api/__pycache__/__init__.cpython-314.pyc",
-    "00 Projects/cli2api/__pycache__/test_smoke.cpython-314.pyc",
-    "00 Projects/cli2api/__pycache__/registry.cpython-314.pyc"
+    "00 Daily Review/2026-06-24.md",
+    "00 Interview Questions/Incremental Processing.md",
+    "00 Prompts/Career/Resume — Optimization.md",
+    "00 Projects/Note Refresher/PKM Knowledge Refresh System – Review & Enhancements.md",
+    "00 Projects/Note Refresher/refresher_state.json",
+    "00 Daily Review",
+    "00 Projects/Note Refresher/daily_refresher.py",
+    "00 Projects/Note Refresher/Daily Note Selection Strategy.md",
+    "00 Projects/Untitled.md",
+    "00 Projects/Note Refresher",
+    "01 Curated/Anthropic - Defending Code Reference Harness.md",
+    "00 Interview Questions/Batch Processing - Advance.md",
+    "03 Career Vault/Open Questions/README.md",
+    "03 Career Vault/Lessons & Trade-offs/README.md",
+    "03 Career Vault/Incidents & Postmortems/README.md",
+    "03 Career Vault/ADRs/README.md",
+    "Catalog.md",
+    "03 Career Vault/README.md",
+    "00 Projects/PowerShell/Compare File in Powershell.md",
+    "02 Reference/VSCode Debug.md",
+    "02 Reference/Git Multi Account Setup.md",
+    "02 Reference/Delta Lake & Iceberg.md",
+    "02 Reference/DuckDB.md",
+    "02 Reference/ELT.md",
+    "02 Reference/ETL.md",
+    "02 Reference/python — Files & Serialization.md",
+    "02 Reference/python — Modules & Packages.md",
+    "02 Reference/python — Concurrency.md",
+    "02 Reference/python — OOP & Classes.md",
+    "01 Curated/Parquet.md",
+    "03 Career Vault/Incidents & Postmortems",
+    "03 Career Vault/Lessons & Trade-offs",
+    "03 Career Vault/Open Questions",
+    "03 Career Vault/ADRs",
+    "03 Career Vault",
+    "02 Reference"
   ]
 }

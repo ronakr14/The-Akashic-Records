@@ -1,4 +1,5 @@
 ---
+type: concept
 description: End-of-session prompt — write a handoff.md capturing goal, state, active files, failures, next step.
 use_when: Before closing a long Claude session.
 inputs: [full session context]

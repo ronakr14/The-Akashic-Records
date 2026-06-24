@@ -1,4 +1,5 @@
 ---
+type: concept
 description: Tailor a CV to a JD — extract keywords, rewrite bullets, build role-fit matrix, boost ATS score.
 use_when: Before submitting an application to a specific role.
 inputs: [CV text, JD text, target role]

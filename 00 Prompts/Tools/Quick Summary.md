@@ -1,4 +1,5 @@
 ---
+type: concept
 description: 3–4 line decision-focused summary of a tool — best use case + one alternative. For fast triage.
 use_when: When you need a 30-second verdict on whether a tool fits.
 inputs: [tool name]

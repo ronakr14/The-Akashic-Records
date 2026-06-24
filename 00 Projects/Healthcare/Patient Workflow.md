@@ -1,3 +1,7 @@
+---
+type: project
+---
+
 1. OPD: Patient Registration -> Appointment -> Check-In-> Consultation -> Lab Order -> Lab Result -> Prescription -> Pharmacy -> Billing -> Insurance Claim -> Discharge
 2. Emergency: Emergency Admission -> Triage -> ICU -> Treatment -> Discharge
 3. Hospital Admission: Registration -> Consultation -> Admission Decision -> Ward Assignment -> Bed Assignment -> Treatment -> Medication -> Lab Monitoring -> Discharge

@@ -1,3 +1,7 @@
+---
+type: project
+---
+
 ## Patient Analytics
 
 ```text

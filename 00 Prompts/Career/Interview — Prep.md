@@ -1,4 +1,5 @@
 ---
+type: question
 description: Predict interview questions, build STAR responses, generate a full application pack in one shot.
 use_when: After applying, before an interview loop.
 inputs: [background, JD]

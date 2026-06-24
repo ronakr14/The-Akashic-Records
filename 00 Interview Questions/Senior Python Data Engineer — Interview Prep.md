@@ -1,3 +1,7 @@
+---
+type: question
+---
+
 ## Python depth (HIGH)
 
 JD's #1 requirement — "expert-level Python for data engineering." Resume shows Python usage but not Python engineering depth. Expect questions on memory management, concurrency, and design patterns beyond scripting.
@@ -491,10 +495,13 @@ Records arriving > 2 hours after window end = dropped. Watermark-vs-completeness
 ---
 
 ## See Also
-
 - [[System Design]]
 - [[Partitioning]]
 - [[Fundamentals]]
 - [[Data Modelling]]
 - [[Reliability Engineering]]
 - [[Orchestration]]
+- [[python]] — Python fundamentals
+- [[Distributed System]] — distributed systems foundations
+- [[Idempotency]] — idempotency patterns
+- [[Data Engineering Playbook]] — 15 core truths

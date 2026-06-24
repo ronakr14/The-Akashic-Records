@@ -1,4 +1,5 @@
 ---
+type: concept
 description: Deep, opinionated architectural breakdown of a tool, framework, or platform — tradeoffs, alternatives, build-from-scratch path.
 use_when: Before adopting a new tool, evaluating alternatives, or writing a tech-rationale doc.
 inputs: [tool name]

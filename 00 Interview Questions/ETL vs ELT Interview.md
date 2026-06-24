@@ -1,3 +1,7 @@
+---
+type: question
+---
+
 # Level 1: Fundamentals
 ### 1. What are the differences between ETL and ELT?
 **Looking for:**
@@ -315,3 +319,10 @@ Using technologies such as:
 * Databricks
 * dbt
 * Apache Airflow
+
+## See Also
+- [[ETL vs ELT]] — decision framework: when to choose ETL vs ELT
+- [[ETL]] — ETL pattern reference
+- [[ELT]] — ELT pattern reference
+- [[Incremental Load Strategy]] — incremental loading patterns
+- [[Batch Processing]] — batch processing overview

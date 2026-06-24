@@ -1,4 +1,5 @@
 ---
+type: concept
 description: Tailored cover letters with strong hooks and closers, plus resume-gap explainer trio.
 use_when: When drafting or rewriting a cover letter for a specific role.
 inputs: [background, JD, role, company]

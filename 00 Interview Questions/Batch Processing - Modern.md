@@ -1,3 +1,7 @@
+---
+type: question
+---
+
 ```table-of-contents
 ```
 ## What is a data contract and how does it apply to batch pipelines?
@@ -95,3 +99,10 @@ Choice depends on team maturity and whether you think in tasks or assets.
 * **Rollback playbook** — documented: detect → freeze downstream → swap to last-good version → notify → root-cause.
 * **Blue/green for big releases** — write new version in parallel; switch view only after validation.
 * **Why most teams fail** — they overwrite partitions in place; once bad data is in, rollback = rerun everything.
+
+## See Also
+- [[Batch Processing]] — batch processing overview
+- [[Stream Data Processing]] — when streaming beats batch
+- [[Idempotency]] — making pipelines retry-safe
+- [[Incremental Load Strategy]] — incremental loading patterns
+- [[Data Modelling]] — data modelling principles

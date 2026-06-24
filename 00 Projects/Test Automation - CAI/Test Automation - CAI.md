@@ -1,3 +1,7 @@
+---
+type: project
+---
+
 I need to create a test automation framework for my client.
 Goal : understand requriements -> create testdata/ testsql -> run script -> report in html format
 

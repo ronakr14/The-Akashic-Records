@@ -1,4 +1,5 @@
 ---
+type: concept
 description: End-of-session prompt — extract every correction, preference, and "do differently next time" into a reloadable feedback.md.
 use_when: Periodically, to crystallize session learnings into long-lived memory.
 inputs: [full conversation]

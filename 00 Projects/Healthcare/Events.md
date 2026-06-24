@@ -1,3 +1,7 @@
+---
+type: project
+---
+
 1. Patient Registration
 2. Appointment Booked
 3. AppointmentCancelled

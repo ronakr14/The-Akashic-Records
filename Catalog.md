@@ -1,3 +1,7 @@
+---
+type: concept
+---
+
 ```table-of-contents
 ```
 ---

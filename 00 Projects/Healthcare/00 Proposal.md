@@ -1,3 +1,7 @@
+---
+type: project
+---
+
 # Intelligent Healthcare Data & AI Platform
 Hospital Data Platform + Clinical Intelligence + AI Copilot
 

@@ -1,3 +1,7 @@
+---
+type: question
+---
+
 ```table-of-contents
 ```
 ## You have a 100 TB table.
@@ -40,3 +44,9 @@ Approach: isolate, slice, throttle.
 * **Validate before cutover** — row counts, reconciliation vs source, DQ gates, parity check on a sample of aggregates. Only swap the view when parity holds.
 * **Cleanup** — drop backfill table or move to cold storage; record lineage so future readers know the data was backfilled, not native.
 * **Coordinate with stakeholders** — announce window, define rollback plan, have a kill switch (terminate the backfill pool).
+
+## See Also
+- [[Incremental Load Strategy]] — incremental loading patterns
+- [[Idempotency]] — making incremental loads safe
+- [[Batch Processing]] — batch processing overview
+- [[ETL vs ELT]] — choosing the right approach

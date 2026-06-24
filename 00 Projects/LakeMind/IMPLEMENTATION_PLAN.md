@@ -1,3 +1,7 @@
+---
+type: project
+---
+
 # Lakehouse Optimizer — Fresh Implementation Plan
 
 > **Stack:** OpenRouter (LLM) + DuckDB (engine) + Ducklake (lake format) + LangGraph (agent) + Streamlit (UI) + XGBoost (prediction)
