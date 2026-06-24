@@ -1,3 +1,5 @@
+#openspec #sdd #aiengineering #aidevelopment #specdriven #governance #datengineering #claude #cursor
+
 # OpenSpec Repository Analysis Report
 
 **Repository:** [OpenSpec GitHub Repository](https://github.com/Fission-AI/OpenSpec?utm_source=chatgpt.com)  
@@ -777,13 +779,14 @@ Strong engineering process tool, not yet a full enterprise platform.
 
 # 11. Comparison with Alternatives
 
-|Feature|OpenSpec|Kiro|Spec-Kit|Traditional Docs|
-|---|---|---|---|---|
-|Open Source|Yes|No|Yes|N/A|
-|AI Tool Agnostic|Yes|Limited|Partial|N/A|
-|Repository Native|Yes|Partial|Yes|No|
-|Lightweight|High|Medium|Low|High|
-|Custom Workflows|High|Medium|Medium|N/A|
+| Feature | OpenSpec | Kiro | Spec-Kit | Traditional Docs | DESIGN.md |
+|---|---|---|---|---|---|
+| Open Source | Yes | No | Yes | N/A | Yes |
+| AI Tool Agnostic | Yes | Limited | Partial | N/A | No (Claude only) |
+| Repository Native | Yes | Partial | Yes | No | Yes |
+| Lightweight | High | Medium | Low | High | Medium |
+| Custom Workflows | High | Medium | Medium | N/A | Medium |
+| Data Engineering Fit | High | Medium | Medium | Low | Medium |
 
 ([GitHub](https://github.com/Fission-AI/OpenSpec/blob/main/README.md?utm_source=chatgpt.com "README.md - Fission-AI/OpenSpec"))
 
@@ -1120,3 +1123,43 @@ Product Team
 ### Final Assessment
 
 For organizations investing heavily in AI-assisted development, OpenSpec is one of the more practical and lightweight approaches to introducing engineering discipline without locking teams into a specific IDE, model, or vendor ecosystem. It is particularly valuable for platform engineering, AI engineering, and data engineering teams that need reproducible, auditable AI-generated changes.
+
+---
+
+# 16. Verdict for Data Engineers
+
+## ROI Assessment
+
+| Factor | Rating | Notes |
+|---|---|---|
+| Adoption effort | Low | `npm install`, add folder structure, done |
+| Learning curve | Low | Markdown-based, no new syntax |
+| Governance value | High | Specs in Git = audit trail for free |
+| AI compatibility | High | Works with Claude Code, Cursor, Copilot |
+| Enterprise readiness | Medium | Missing RBAC, centralized dashboards |
+
+## When to Use OpenSpec in Data Engineering
+
+- **Data contracts** — define schema SLAs as specs before building pipelines
+- **Schema evolution** — document breaking changes as proposals before implementation
+- **Pipeline changes** — treat ETL modifications as "changes" with review gates
+- **AI-generated ETL** — let AI write dbt models with spec guardrails
+
+## When NOT to Use
+
+- Tiny teams (< 3 people) — overhead exceeds value
+- Pure BI/reporting — specs are overkill for dashboard changes
+- Legacy systems without Git workflow — requires Git-native culture
+
+## Bottom Line
+
+For a data engineering team already using dbt + Airflow + Git, OpenSpec adds governance with near-zero friction. The spec layer pays for itself the first time AI generates a wrong column name in a production pipeline.
+
+---
+
+## Related Notes
+
+- [[Data Vault & Lakehouse Modelling]] — spec-driven schema changes pair well with Data Vault's audit layer
+- [[ETL vs ELT]] — OpenSpec fits the "T" in ELT (spec before transform)
+- [[BitRouter - Agent-Native LLM Router]] — another AI coding tool in the same ecosystem
+- [[Python Environment Playbook]] — tooling setup for AI-assisted development

@@ -1,16 +1,46 @@
-This is exactly the question that separates a junior engineer from a senior one.
+# Data Modelling Checklist
 
-Most engineers jump into:
+```table-of-contents
+```
 
-> "Let's create tables."
+> This is exactly the question that separates a junior engineer from a senior one.
+>
+> Most engineers jump into: *"Let's create tables."*
+>
+> Experienced data modelers start with: *"What problem are we solving, and what assumptions are we making?"*
+>
+> For any project, mentally walk through these six layers before drawing a single table.
 
-Experienced data modelers start with:
+---
 
-> "What problem are we solving, and what assumptions are we making?"
+## Layer 0: Read/Write Patterns
 
-For any project, I mentally walk through a checklist in five layers.
+This layer is often skipped — but it drives indexing, partitioning, and storage decisions more than volume alone.
 
-# Layer 1: Business Understanding
+- **What is the expected read/write ratio?**
+    - Read-heavy (100:1) → denormalize aggressively, cache, use read replicas
+    - Write-heavy (1:100) → normalize, batch writes, consider append-only
+    - Balanced → design for both, avoid extremes
+
+- **What is the query frequency?**
+    - Hundreds/sec → need indexing, possibly materialized views
+    - Thousands/sec → consider pre-aggregation or CQRS
+    - Millions/sec → stream processing, hot partitioning
+
+- **What are the concurrency expectations?**
+    - Single-user → simple locking sufficient
+    - Multi-tenant → row-level isolation, tenant-aware partitioning
+
+- **What is the SLA for freshness?**
+    - Seconds → streaming / CDC
+    - Minutes → microbatch
+    - Hours → batch ETL
+
+→ **Risk:** Skipping this leads to either over-engineered batch pipelines for real-time needs, or OLTP schemas that collapse under analytical queries.
+
+---
+
+## Layer 1: Business Understanding
 
 Before drawing a single table, answer:
 
@@ -18,85 +48,67 @@ Before drawing a single table, answer:
 
 Examples:
 
-- Patient management?
-    
-- Claims processing?
-    
-- Customer analytics?
-    
-- Fraud detection?
-    
+- Patient management
+- Claims processing
+- Customer analytics
+- Fraud detection
+- Order fulfillment
 
 If you can't explain the business purpose in one sentence, don't start modeling.
-
----
 
 ### What decisions will be made using this data?
 
 Examples:
 
 - Operational decisions
-    
 - Strategic decisions
-    
 - Regulatory reporting
-    
 - Machine learning
-    
 
 Different decisions require different models.
-
----
 
 ### Who are the users?
 
 Examples:
 
 - Doctors
-    
 - Patients
-    
 - Operations teams
-    
 - Finance
-    
 - Analysts
-    
 - Data Scientists
-    
 
 Different users have different needs.
-
----
 
 ### What are the key business processes?
 
 Example Healthcare:
 
 - Patient Registration
-    
 - Appointment Booking
-    
 - Consultation
-    
 - Billing
-    
 - Insurance Claim
-    
+
+Example E-commerce:
+
+- Product Catalog
+- Cart / Checkout
+- Payment
+- Shipping
+- Returns
 
 Usually processes become major entities.
 
 ---
 
-# Layer 2: Domain Discovery
+## Layer 2: Domain Discovery
 
 This is where modeling actually begins.
 
-Ask:
-
 ### What are the core business entities?
 
-Example:
+Example Healthcare:
 
 ```text
 Patient
@@ -107,7 +119,16 @@ Prescription
 Invoice
 ```
 
----
+Example E-commerce:
+
+```text
+Customer
+Product
+Order
+Payment
+Shipment
+Review
+```
 
 ### What uniquely identifies each entity?
 
@@ -122,8 +143,6 @@ ClaimID
 
 Never assume business names are unique.
 
----
-
 ### What attributes belong to each entity?
 
 Patient:
@@ -136,25 +155,18 @@ Gender
 Phone
 ```
 
----
-
 ### What are the relationships?
 
 Examples:
 
 ```text
 Patient → Appointment
-
 Doctor → Appointment
-
 Appointment → Prescription
-
 Patient → Insurance Policy
 ```
 
 Draw these before creating tables.
-
----
 
 ### What are the cardinalities?
 
@@ -170,17 +182,16 @@ Example:
 
 ```text
 Patient → Appointments
-
 1 : Many
 ```
 
+→ **Risk:** Undefined cardinalities produce fan-out joins, missing junction tables, and ambiguous foreign keys.
+
 ---
 
-# Layer 3: Data Engineering Questions
+## Layer 3: Data Engineering Questions
 
 This is where many business analysts stop and data engineers begin.
-
----
 
 ### What is the expected volume?
 
@@ -188,15 +199,11 @@ Examples:
 
 ```text
 100 rows/day
-
 10 million rows/day
-
 1 billion events/day
 ```
 
 Volume changes design decisions.
-
----
 
 ### How fast does data arrive?
 
@@ -206,8 +213,6 @@ Microbatch?
 Streaming?
 Real-time?
 ```
-
----
 
 ### How long must data be retained?
 
@@ -220,8 +225,6 @@ Forever
 ```
 
 Healthcare and finance often require long retention.
-
----
 
 ### What is the growth rate?
 
@@ -239,8 +242,6 @@ Future:
 
 Plan ahead.
 
----
-
 ### Which fields are frequently searched?
 
 Examples:
@@ -254,150 +255,99 @@ ClaimNumber
 
 Useful for indexing strategy.
 
+### What data quality expectations exist?
+
+- Are duplicates acceptable?
+- Is null handling defined per field?
+- Are there uniqueness constraints beyond primary keys?
+- What happens on late-arriving data?
+
+### Is any field PII or sensitive?
+
+Examples:
+
+```text
+SSN / Aadhaar
+Credit card numbers
+Medical records
+Email / Phone
+```
+
+→ Drives encryption, masking, column-level access control, and compliance classification.
+
+### What are the idempotency requirements?
+
+- Can the same event be processed twice safely?
+- Is upsert semantics defined?
+- Are there deduplication windows?
+
+→ **Risk:** Missing quality and PII analysis leads to regulatory violations, silent data corruption, and expensive retrofits.
+
 ---
 
-# Layer 4: Analytics Questions
+## Layer 4: Analytics Questions
 
-Critical for warehouses.
+Critical for warehouses. (Assumes dimensional modeling — Kimball-style. For Data Vault or OBT, adapt accordingly.)
 
----
-
-## What business questions must be answered?
+### What business questions must be answered?
 
 Examples:
 
 ```text
 Revenue by month
-
 Appointments by doctor
-
 Claim approval rates
-
 Patient retention
 ```
 
 Model should support these naturally.
 
----
-
-## What metrics matter?
+### What metrics matter?
 
 Examples:
 
 ```text
 Revenue
-
 Cost
-
 Profit
-
 Appointment Count
-
 Claim Amount
 ```
 
 These often become fact table measures.
 
----
-
-## What dimensions matter?
+### What dimensions matter?
 
 Examples:
 
 ```text
 Date
-
 Patient
-
 Doctor
-
 Location
-
 Department
 ```
 
 These become dimensions.
 
----
-
-## What is the grain?
+### What is the grain?
 
 The most important question.
 
-Ask:
-
-### What does one row represent?
+#### What does one row represent?
 
 Examples:
 
 ```text
 One appointment
-
 One order
-
 One claim
-
 One transaction
 ```
 
 Never skip this.
 
-Most warehouse disasters happen because grain wasn't defined.
-
----
-
-# Layer 5: Architecture Questions
-
-This is where architects spend most of their time.
-
----
-
-### Is this OLTP or OLAP?
-
-Operational system?
-
-Or
-
-Analytical system?
-
-Different answers produce different models.
-
----
-
-### Will data come from multiple systems?
-
-Example:
-
-```text
-CRM
-ERP
-Billing
-Hospital Management
-```
-
-Need master data strategy.
-
----
-
-### Are there regulatory requirements?
-
-Healthcare:
-
-```text
-HIPAA
-GDPR
-```
-
-Financial:
-
-```text
-SOX
-PCI-DSS
-```
-
-Can influence design heavily.
-
----
+→ **Risk:** Most warehouse disasters happen because grain wasn't defined — leading to double-counting, ambiguous joins, and unreproducible reports.
 
 ### Is historical tracking required?
 
@@ -417,9 +367,52 @@ or
 Full history?
 ```
 
-This determines Slowly Changing Dimensions.
+This determines Slowly Changing Dimensions (SCD Type 1/2/3/6).
 
 ---
+
+## Layer 5: Architecture Questions
+
+This is where architects spend most of their time.
+
+### Is this OLTP or OLAP?
+
+- Operational system → normalized, write-optimized
+- Analytical system → denormalized, read-optimized
+- Hybrid (HTAP) → separate stores or CQRS pattern
+
+Different answers produce different models.
+
+### Will data come from multiple systems?
+
+Example:
+
+```text
+CRM
+ERP
+Billing
+Hospital Management
+```
+
+Need master data strategy and entity resolution.
+
+### Are there regulatory requirements?
+
+Healthcare:
+
+```text
+HIPAA
+GDPR
+```
+
+Financial:
+
+```text
+SOX
+PCI-DSS
+```
+
+Can influence design heavily (encryption, audit trails, retention policies).
 
 ### Is auditability required?
 
@@ -431,74 +424,91 @@ When?
 Why?
 ```
 
-Many enterprises require this.
+Many enterprises require this → drives audit columns, append-only patterns, or temporal tables.
+
+### Is data shared across domains or teams?
+
+- Single team → schema ownership is simple
+- Cross-domain → need data contracts, schema registry, ownership boundaries
+
+→ **Risk:** Skipping architecture questions leads to tightly coupled systems, data silos, and painful migration when requirements change.
 
 ---
 
-# My Personal Senior Data Engineer Checklist
+## Architect-Level Addition
 
-When I start any modeling exercise, I answer these 15 questions:
-
-|Question|Must Know?|
-|---|---|
-|Business objective|Yes|
-|Main users|Yes|
-|Core business processes|Yes|
-|Core entities|Yes|
-|Entity relationships|Yes|
-|Business keys|Yes|
-|Data volume|Yes|
-|Data velocity|Yes|
-|Retention period|Yes|
-|Reporting requirements|Yes|
-|Metrics required|Yes|
-|Dimensions required|Yes|
-|Grain definition|Yes|
-|Historical tracking needs|Yes|
-|Compliance requirements|Yes|
-
-If any of these are unknown, I consider the model incomplete.
-
----
-
-# Architect-Level Addition
-
-As you move toward Data Architect (which aligns with your long-term goal), add another checklist:
+As you move toward Data Architect, add these cross-cutting concerns:
 
 ### Business Layer
 
 - Why are we collecting this data?
-    
+- What is the cost of being wrong?
+- What is the cost of being late?
 
 ### Information Layer
 
 - How should it be represented?
-    
+- Are there industry-standard models (HL7, ACORD, etc.)?
+- What is the canonical representation?
 
 ### Integration Layer
 
 - How does it connect with other systems?
-    
+- What are the interface contracts?
+- Is event-driven or request-driven the right pattern?
 
 ### Storage Layer
 
-- Where does it live?
-    
+- Where does it live? (warehouse, lake, lakehouse, operational store)
+- What partitioning strategy fits the access pattern?
+- What are the backup and disaster recovery requirements?
 
 ### Consumption Layer
 
-- How will users consume it?
-    
+- How will users consume it? (BI, API, ML, ad-hoc SQL)
+- What are the latency requirements per consumer?
+- Is self-service access possible or required?
 
 ### Governance Layer
 
 - Who owns it?
-    
 - Who can access it?
-    
-- How is quality enforced?
-    
+- How is quality enforced? (monitoring, alerts, SLAs)
+- How is lineage tracked?
+- What is the deprecation policy?
 
-This is why architects spend far more time asking questions than drawing ER diagrams.
+---
 
-For your Healthcare Intelligence Platform project, I'd actually start with a formal **Domain Discovery Questionnaire (50+ questions)** before creating a single table. That's the same approach used in large healthcare, banking, and insurance platforms because changing requirements after modeling is far more expensive than spending a few extra days asking the right questions upfront.
+## Quick Reference Card
+
+Use this when you need a fast checklist. Each item maps to its layer.
+
+- [ ] Business objective defined (Layer 1)
+- [ ] Main users identified (Layer 1)
+- [ ] Core business processes mapped (Layer 1)
+- [ ] Core entities listed (Layer 2)
+- [ ] Entity relationships drawn (Layer 2)
+- [ ] Business keys identified (Layer 2)
+- [ ] Cardinalities defined (Layer 2)
+- [ ] Read/write patterns understood (Layer 0)
+- [ ] Data volume estimated (Layer 3)
+- [ ] Data velocity classified (Layer 3)
+- [ ] Retention period defined (Layer 3)
+- [ ] PII/sensitive fields classified (Layer 3)
+- [ ] Data quality expectations agreed (Layer 3)
+- [ ] Reporting requirements documented (Layer 4)
+- [ ] Metrics required (Layer 4)
+- [ ] Dimensions required (Layer 4)
+- [ ] Grain definition agreed (Layer 4)
+- [ ] Historical tracking needs (Layer 4)
+- [ ] OLTP vs OLAP decided (Layer 5)
+- [ ] Multi-system integration planned (Layer 5)
+- [ ] Compliance requirements listed (Layer 5)
+- [ ] Auditability designed (Layer 5)
+- [ ] Governance ownership assigned (Architect)
+
+If any of these are unknown, the model is incomplete.
+
+---
+
+Changing requirements after modeling is far more expensive than spending a few extra days asking the right questions upfront. This approach is used in large healthcare, banking, and insurance platforms — and it scales to any domain.

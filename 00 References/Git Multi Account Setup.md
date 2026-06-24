@@ -1,5 +1,8 @@
+#git #multiaccount #ssh #devops #identity #config
+
 ```table-of-contents
 ```
+
 # Defaults
 ## 🚀 Set global username and global email
 
@@ -152,3 +155,72 @@ Clone like:
 git clone git@github-work:company/repo.git
 git clone git@github-personal:username/repo.git
 ```
+
+---
+
+# Windows Path Examples
+
+The `<location>` placeholders above need actual paths on Windows:
+
+```ini
+# Windows (use forward slashes or double backslashes)
+[includeIf "gitdir/i:C:/Users/ronak/projects/personal/"]
+    path = C:/Users/ronak/.gitconfig-personal
+
+[includeIf "gitdir/i:C:/Users/ronak/projects/work/"]
+    path = C:/Users/ronak/.gitconfig-work
+```
+
+Or via MSYS/Git Bash:
+```ini
+[includeIf "gitdir/i:/c/Users/ronak/projects/personal/"]
+    path = /c/Users/ronak/.gitconfig-personal
+```
+
+---
+
+# Troubleshooting
+
+### "I committed with the wrong identity"
+
+Fix the last commit's author without changing history content:
+```bash
+git commit --amend --reset-author
+```
+
+Or fix multiple commits (interactive rebase):
+```bash
+git rebase -i HEAD~3
+# mark commits as "edit", then:
+git commit --amend --reset-author --no-edit
+git rebase --continue
+```
+
+### "Which identity will this repo use?"
+
+Check before committing:
+```bash
+git config user.name
+git config user.email
+```
+
+Or check all effective config for current repo:
+```bash
+git config --list --show-origin | grep user
+```
+
+### "includeIf not working on Windows"
+
+Common causes:
+- Path uses backslashes → use forward slashes or double backslashes
+- Missing trailing slash → `gitdir/i:C:/work/` not `gitdir/i:C:/work`
+- Case mismatch → `gitdir/i:` (case-insensitive) fixes this
+- `.gitconfig` encoding → save as UTF-8 without BOM
+
+---
+
+## Related Notes
+
+- [[Compare File in Powershell.md]] — diff tools for verifying config changes
+- [[VSCode Debug.md]] — Git integration in VS Code
+- [[Python Environment Playbook]] — Python git hooks for commit validation

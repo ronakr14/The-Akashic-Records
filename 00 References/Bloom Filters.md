@@ -1,425 +1,139 @@
-Bloom Filters are one of those concepts that seem simple at first, but they're everywhere in modern data systems.
+#bloom-filter #data-structures #probabilistic #parquet #data-engineering #data-skipping
 
-Think of a Bloom Filter as:
-
-> A very small, memory-efficient structure that can quickly tell you if something is **definitely not present** or **possibly present**.
-
-Notice the wording:
-
-```text
-Definitely Not Present  ✅
-Possibly Present        ✅
-Definitely Present      ❌
+```table-of-contents
 ```
 
-That's the key tradeoff.
 
----
+A Bloom Filter is a memory-efficient probabilistic data structure that answers one question: **"Is this element possibly in the set, or definitely not?"**
 
-# Real-Life Analogy
+| Query result | Meaning |
+|---|---|
+| **Definitely not present** | Element was never added — guaranteed correct |
+| **Possibly present** | Element *may* have been added — could be a false positive |
+| **Definitely present** | Never returned — Bloom Filters don't confirm presence with certainty |
 
-Imagine a nightclub.
+This one-sided error guarantee makes them safe for filtering: they never miss real members, but may occasionally flag non-members.
 
-The bouncer has:
+## Why Not a [[Hash Set]]?
 
-- A complete guest list (large)
-    
-- A small cheat sheet (Bloom Filter)
-    
+A [[Hash Set]] gives exact answers but is expensive at scale:
 
-You ask:
+| | 10 Billion Customer IDs |
+|---|---|
+| **HashSet** | Hundreds of GB |
+| **Bloom Filter** | Few GB |
 
-```text
-Is Ronak on the list?
+When the only question is "skip or don't skip," that tradeoff is worth it.
+
+## Internal Working
+
+**Setup**: a bit array of size `m`, and `k` independent hash functions.
+
+### Insert
+
+For each element, compute `k` hash values and set those bit positions to `1`.
+
+Example — inserting "Alice" with `k=3` into a 10-bit array:
+
+```
+Hashes: 2, 5, 8
+
+Before: 0 0 0 0 0 0 0 0 0 0
+After:  0 0 1 0 0 1 0 0 1 0
 ```
 
-The cheat sheet says:
+Inserting "Bob" (hashes: 1, 5, 9):
 
-```text
-No
+```
+After:  0 1 1 0 0 1 0 0 1 1
 ```
 
-Then Ronak is definitely not on the guest list.
+### Query
 
-But if it says:
+Compute the same `k` hash values. If **any** bit is `0`, the element is **definitely not present**. If **all** bits are `1`, it is **possibly present**.
 
-```text
-Maybe
+Query "David" (hashes: 3, 5, 8):
+
+```
+bit 3 = 0 → David NOT present (no further checks needed)
 ```
 
-The bouncer still needs to check the actual guest list.
+Query another value (hashes: 1, 5, 8):
 
----
-
-# Why Not Just Use a HashSet?
-
-A HashSet gives:
-
-```python
-if value in set:
+```
+bit 1 = 1, bit 5 = 1, bit 8 = 1 → Maybe present (could be a false positive)
 ```
 
-Very accurate.
+## False Positive Rate
 
-But imagine:
+The probability of a false positive depends on three parameters:
 
-```text
-10 Billion Customer IDs
+- `m` — bit array size
+- `n` — number of elements inserted
+- `k` — number of hash functions
+
+**Optimal hash count**: `k = (m / n) * ln(2)`
+
+**False positive rate**: approximately `(1 - e^(-kn/m))^k`
+
+In practice: a 1% FP rate requires ~9.6 bits per element. A 0.1% FP rate requires ~14.4 bits per element.
+
+## Bloom Filters vs. Min/Max Statistics
+
+Both are data-skipping mechanisms used in [[Parquet]] row groups, but they complement each other:
+
+| Scenario | Min/Max Statistics | Bloom Filter |
+|---|---|---|
+| `WHERE id = 250`, range is `[100, 500]` | Must read (250 is in range) | Can skip if 250 not in filter |
+| `WHERE id = 999`, range is `[100, 500]` | Skip (999 > max) | Skip (not in filter) |
+| High-cardinality columns | Limited value | Effective |
+
+Bloom Filters handle point lookups on high-cardinality columns where min/max ranges are too wide to be useful.
+
+## Where Bloom Filters Are Used
+
+| Domain | Systems | Use Case |
+|---|---|---|
+| **Databases** | [[Apache Cassandra]], [[Apache HBase]], [[PostgreSQL]] | Avoid reading SSTables/disk pages for non-existent keys |
+| **Data Lakes** | [[Apache Iceberg]], [[Delta Lake]], [[Parquet]] | Row group pruning during queries |
+| **Query Engines** | [[Apache Spark]], [[Apache Trino]] | Join optimization, partition pruning |
+| **Caching** | CDNs, proxy caches | Avoid backend lookups for uncached keys |
+| **Distributed Systems** | Google Bigtable, Meta, LinkedIn | Cross-node existence checks without network calls |
+
+## In Parquet
+
+Row group metadata includes both statistics and Bloom Filters:
+
 ```
-
-HashSet memory:
-
-```text
-Hundreds of GB
-```
-
-Bloom Filter:
-
-```text
-Few GB
-```
-
-Huge savings.
-
----
-
-# Internal Working
-
-Suppose we want to store:
-
-```text
-Alice
-Bob
-Charlie
-```
-
-Create a bit array:
-
-```text
-0 0 0 0 0 0 0 0 0 0
-```
-
-Use 3 hash functions.
-
----
-
-## Insert "Alice"
-
-Hashes produce:
-
-```text
-2
-5
-8
-```
-
-Set bits:
-
-```text
-0 0 1 0 0 1 0 0 1 0
-```
-
----
-
-## Insert "Bob"
-
-Hashes produce:
-
-```text
-1
-5
-9
-```
-
-Set bits:
-
-```text
-0 1 1 0 0 1 0 0 1 1
-```
-
----
-
-## Query "David"
-
-Hashes produce:
-
-```text
-3
-5
-8
-```
-
-Check bits:
-
-```text
-bit 3 = 0
-```
-
-Immediately:
-
-```text
-David NOT present
-```
-
-No need to check further.
-
----
-
-## Query Another Value
-
-Hashes produce:
-
-```text
-1
-5
-8
-```
-
-All bits are set:
-
-```text
-1
-1
-1
-```
-
-Result:
-
-```text
-Maybe Present
-```
-
-Could be real.
-
-Could be coincidence.
-
-This is called a:
-
-```text
-False Positive
-```
-
----
-
-# False Positives
-
-Bloom Filters can say:
-
-```text
-Yes, maybe present
-```
-
-when actually:
-
-```text
-Not present
-```
-
-But they can NEVER say:
-
-```text
-Not present
-```
-
-for something that is actually stored.
-
-That's why they're safe for filtering.
-
----
-
-# Why Data Engineers Care
-
-Imagine a Parquet file with:
-
-```text
-1 Billion rows
-```
-
-Query:
-
-```sql
-SELECT *
-FROM orders
-WHERE customer_id = 12345
-```
-
-Without Bloom Filter:
-
-```text
-Read many row groups
-Check statistics
-Read data
-```
-
-With Bloom Filter:
-
-```text
-Row Group 1 -> definitely not
-Row Group 2 -> definitely not
-Row Group 3 -> maybe
-```
-
-Read only Row Group 3.
-
-Huge I/O reduction.
-
----
-
-# Bloom Filters vs Min/Max Statistics
-
-You learned earlier that Parquet stores:
-
-```text
-Min = 100
-Max = 500
-```
-
-Suppose query:
-
-```sql
-WHERE id = 250
-```
-
-Need to read because:
-
-```text
-250 is between 100 and 500
-```
-
-Statistics can't help.
-
----
-
-Bloom Filter can:
-
-```text
-250 definitely absent
-```
-
-Then skip entire row group.
-
-This is why Bloom Filters complement statistics.
-
----
-
-# In Parquet
-
-Row Group Metadata:
-
-```text
 Row Group
-    ├─ Min/Max
+    ├─ Min/Max per column
     ├─ Null Count
-    ├─ Bloom Filter
+    ├─ Bloom Filter per column
 ```
 
-Query Engine:
+Query engine pruning pipeline:
 
-```text
-Footer Read
-    ↓
-Statistics Check
-    ↓
-Bloom Filter Check
-    ↓
-Read Data
+```
+Footer Read → Statistics Check → Bloom Filter Check → Read Data
 ```
 
-More pruning.
+This stack — partition pruning → file pruning → statistics → Bloom Filters → scan — is what makes modern [[Data Lakehouse]] systems fast at petabyte scale.
 
-Less scanning.
+## When NOT to Use Bloom Filters
 
----
+- **Exact answers required** and memory is not constrained → use a [[Hash Set]] or hash table
+- **Deletions needed** → use a Counting Bloom Filter (or another structure)
+- **Counting occurrences** → use a Count-Min Sketch instead
+- **Small datasets** where the overhead of hash functions isn't worth the I/O savings
+- **Low-cardinality columns** where min/max statistics already prune effectively
 
-# Where Else Are Bloom Filters Used?
+## Related
 
-### Databases
-
-- Apache Cassandra
-    
-- Apache HBase
-    
-- PostgreSQL (certain execution plans)
-    
-- Apache Spark
-    
-
----
-
-### Data Lakes
-
-- Apache Iceberg
-    
-- Delta Lake
-    
-- Parquet
-    
-
----
-
-### Caching Systems
-
-Before querying backend:
-
-```text
-Is key present?
-```
-
-Bloom Filter avoids unnecessary lookups.
-
----
-
-### Web Companies
-
-- Google
-    
-- Meta
-    
-- LinkedIn
-    
-
-use Bloom Filters extensively for distributed storage systems.
-
----
-
-# Architect Perspective
-
-When data grows to:
-
-```text
-TBs
-PBs
-```
-
-CPU is usually not the bottleneck.
-
-The bottleneck becomes:
-
-```text
-Disk I/O
-Network I/O
-```
-
-Bloom Filters exist to answer:
-
-> "Can I avoid reading this data entirely?"
-
-A good architect treats Bloom Filters as a **data skipping mechanism**, not a search mechanism.
-
-Think of the optimization hierarchy:
-
-```text
-Partition Pruning
-        ↓
-File Pruning
-        ↓
-Min/Max Statistics
-        ↓
-Bloom Filters
-        ↓
-Actual Scan
-```
-
-This stack is what makes modern lakehouses fast even when datasets reach petabyte scale.
-
-The next interesting topic would be how **Parquet Row Groups + Bloom Filters + Delta Lake data skipping + Z-Ordering** work together. That's where the performance engineering side of lakehouse architecture gets really interesting.
+- [[Parquet]]
+- [[Data Lakehouse]]
+- [[Data Skipping]]
+- [[Hash Set]]
+- [[Probabilistic Data Structures]]
+- [[Apache Iceberg]]
+- [[Delta Lake]]
+- [[Apache Spark]]

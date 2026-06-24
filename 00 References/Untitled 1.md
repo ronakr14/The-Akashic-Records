@@ -1,3 +1,5 @@
+#security #aiengineering #devsecops #vulnerability #agents #anthropic #llm #autonomous #threatmodeling #patch
+
 # Deep Analysis Report: defending-code-reference-harness
 
 **Repository:** [defending-code-reference-harness GitHub Repository](https://github.com/anthropics/defending-code-reference-harness/blob/main/README.md?utm_source=chatgpt.com)  

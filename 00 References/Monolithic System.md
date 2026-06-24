@@ -1,3 +1,7 @@
+#data-engineering #monolith #architecture #reference
+
+```table-of-contents
+```
 Great place to start. Understanding monoliths first makes distributed systems, microservices, data platforms, and lakehouses much easier to understand later.
 
 # What is a Monolithic System?
@@ -103,13 +107,11 @@ Many startups still begin this way.
                 User
                   |
                   V
-
           +---------------+
           | Web Server    |
           +---------------+
                   |
                   V
-
      +-------------------------+
      |      Application         |
      |-------------------------|
@@ -121,7 +123,6 @@ Many startups still begin this way.
      +-------------------------+
                   |
                   V
-
            +-------------+
            | Database    |
            +-------------+
@@ -214,7 +215,6 @@ Order Service Code
        +--> Process Payment
        |
        +--> Create Order
-       |
        V
 Database
 ```
@@ -867,8 +867,6 @@ orders/
  └── tests/
 ```
 
-Let's break these down.
-
 ---
 
 ## API Layer
@@ -1474,862 +1472,99 @@ Where:
 
 If you achieve that, you can stay a monolith for years—or extract microservices later with far less pain.
 
-
-
-If you're interviewing for **Senior Data Engineer, Staff Engineer, Platform Engineer, Principal Architect, or Distributed Systems roles**, interviewers rarely ask "What is a modular monolith?" directly.
-
-Instead, they test whether you understand:
-
-- Architecture tradeoffs
-    
-- Domain boundaries
-    
-- Data ownership
-    
-- Team scaling
-    
-- Evolution to microservices
-    
-- Operational complexity
-    
-- Failure modes
-    
-
-Here are increasingly difficult questions.
-
-# Level 1: Fundamentals
-
-### 1. What problem does a modular monolith solve?
-
-Expected discussion:
-
-- Monolith simplicity
-    
-- Better separation of concerns
-    
-- Reduced coupling
-    
-- Easier migration path to services
-    
-
 ---
 
-### 2. How is a modular monolith different from a traditional layered monolith?
+# Interview Questions
+
+## Level 1: Fundamentals
+
+**1. What is a monolithic architecture?**
 
 Expected:
+- Single codebase, single deployment, single runtime
+- One database is common but not required
+- All business capabilities in one process
 
-Traditional:
-
-```text
-Controllers
-Services
-Repositories
-```
-
-Modular:
-
-```text
-Orders
-Payments
-Inventory
-```
-
-Organized by business capability.
-
----
-
-### 3. What are the characteristics of a well-designed module?
+**2. Why do most startups begin with a monolith?**
 
 Expected:
+- Simplicity, faster delivery, lower cost
+- Easier debugging, fewer operational concerns
+- Small team can move fast
 
-- High cohesion
-    
-- Low coupling
-    
-- Clear ownership
-    
-- Explicit interfaces
-    
-- Hidden implementation
-    
-
----
-
-### 4. Why is a modular monolith often preferred over microservices for startups?
+**3. What are the primary advantages of a monolith over microservices?**
 
 Expected:
+- Simpler deployment, easier testing, strong consistency
+- Better performance (in-memory calls vs network)
+- Simpler transactions (single DB, ACID)
 
-- Lower operational complexity
-    
-- Faster development
-    
-- Easier debugging
-    
-- Lower cloud cost
-    
-- Simpler deployment
-    
+**4. What are the primary disadvantages of a monolith?**
 
----
+Expected:
+- Tight coupling, deployment risk, scaling limitations
+- Technology lock-in, team coordination challenges
 
-# Level 2: Design Questions
+**5. Is a monolith inherently bad architecture?**
 
-### 5. Design a modular monolith for an e-commerce platform.
-
-Modules:
-
-```text
-Customers
-Products
-Inventory
-Orders
-Payments
-Shipping
-Notifications
-```
-
-Discussion:
-
-- Interfaces
-    
-- Dependencies
-    
-- Events
-    
-- Data ownership
-    
+Expected: No. Poor boundaries are bad architecture. A well-designed modular monolith can support hundreds of developers and millions of users.
 
 ---
 
-### 6. How would modules communicate?
+## Level 2: Design
+
+**6. How would you organize a large monolith?**
 
 Compare:
-
-```text
-Direct API Calls
-```
-
-vs
-
-```text
-Domain Events
-```
-
-Tradeoffs:
-
-- Simplicity
-    
-- Coupling
-    
-- Consistency
-    
-- Observability
-    
-
----
-
-### 7. Should modules share a database?
-
-Trick question.
-
-Good answer:
-
-```text
-Physical database: Yes
-Logical ownership: Mandatory
-```
-
-Each module owns its schema/tables.
-
----
-
-### 8. How would you prevent one module from directly querying another module's tables?
-
-Expected:
-
-- Repository isolation
-    
-- Internal APIs
-    
-- Architecture tests
-    
-- Code review policies
-    
-
----
-
-### 9. What rules would you enforce for module dependencies?
-
-Expected:
-
-- No circular dependencies
-    
-- Public interfaces only
-    
-- Dependency direction rules
-    
-- Explicit contracts
-    
-
----
-
-# Level 3: Real Engineering Challenges
-
-### 10. Orders needs customer information. How should it access it?
-
-Bad:
-
-```sql
-SELECT * FROM customers
-```
-
-Good:
-
-```text
-Customer API
-```
-
-or
-
-```text
-CustomerReadModel
-```
-
-Discussion around coupling.
-
----
-
-### 11. How would you detect architectural erosion in a modular monolith?
-
-Expected signals:
-
-- Growing shared libraries
-    
-- Cross-module database access
-    
-- Circular dependencies
-    
-- Large God modules
-    
-- Increasing change coupling
-    
-
----
-
-### 12. What metrics would you collect to measure module health?
-
-Potential answers:
-
-- Dependency count
-    
-- Change frequency
-    
-- Bug rate
-    
-- Test coverage
-    
-- Ownership clarity
-    
-- Build impact
-    
-
----
-
-### 13. How would you identify modules that should become microservices?
-
-Expected:
-
-- Independent scaling needs
-    
-- Different SLAs
-    
-- Separate deployment cadence
-    
-- Team ownership
-    
-- Resource isolation
-    
-
----
-
-### 14. What modules should never become microservices?
-
-Interesting discussion.
-
-Expected:
-
-- Tiny utility modules
-    
-- Highly coupled domains
-    
-- Low-change components
-    
-
----
-
-# Level 4: Evolution Questions
-
-### 15. You inherit a 3-million-line monolith. How do you convert it into a modular monolith?
-
-Look for:
-
-```text
-Domain identification
-Boundary discovery
-Dependency mapping
-Incremental extraction
-```
-
-Not:
-
-```text
-Rewrite everything
-```
-
----
-
-### 16. How would you discover module boundaries?
-
-Expected:
-
-- Domain-Driven Design
-    
-- Event storming
-    
-- Dependency analysis
-    
-- Team ownership analysis
-    
-- Data ownership analysis
-    
-
----
-
-### 17. What are signs your modules are incorrectly defined?
-
-Expected:
-
-- Constant cross-module changes
-    
-- Frequent circular dependencies
-    
-- Shared database joins everywhere
-    
-- Large shared utility package
-    
-
----
-
-### 18. When does a modular monolith stop being modular?
-
-Interesting answer:
-
-When:
-
-```text
-Every module depends on every other module
-```
-
-or
-
-```text
-Shared package becomes central dependency
-```
-
----
-
-# Level 5: Data Engineering Specific
-
-### 19. Design a modular monolith for a batch processing platform.
-
-Possible modules:
-
-```text
-Scheduler
-Execution Engine
-Metadata
-Lineage
-Data Quality
-Observability
-Optimization Engine
-Cost Management
-```
-
-Discussion:
-
-- Ownership
-    
-- Interfaces
-    
-- Event flows
-    
-
----
-
-### 20. How would metadata flow through modules?
-
-Expected:
-
-```text
-Execution
-     |
-     v
-Metadata
-     |
-     v
-Lineage
-     |
-     v
-Optimization
-```
-
-Without tight coupling.
-
----
-
-### 21. You are building an AI lakehouse optimization platform. Would you choose microservices or modular monolith first?
-
-Strong answer:
-
-Modular monolith first.
-
-Reasoning:
-
-- Fast iteration
-    
-- Shared metadata model
-    
-- Easier experimentation
-    
-- Lower operational burden
-    
-
-Split later if required.
-
----
-
-### 22. How would you isolate the optimization engine from execution engine?
-
-Expected:
-
-```text
-Execution publishes events
-
-JobCompleted
-QueryExecuted
-PlanCaptured
-```
-
-Optimization subscribes.
-
-Loose coupling.
-
----
-
-# Level 6: Staff / Principal Level
-
-### 23. A modular monolith has grown to 500 developers. What governance mechanisms do you introduce?
-
-Expected:
-
-- Architecture review board
-    
-- Module ownership
-    
-- Dependency rules
-    
-- Architecture tests
-    
-- Platform standards
-    
-
----
-
-### 24. How do Conway's Law influence modular monolith design?
-
-Expected:
-
-System structure mirrors team structure.
-
-```text
-Orders Team
-Payments Team
-Inventory Team
-```
-
-becomes:
-
-```text
-Orders Module
-Payments Module
-Inventory Module
-```
-
----
-
-### 25. How would you implement module boundaries that are enforceable rather than documented?
-
-Expected:
-
-- Separate packages
-    
-- Compile-time restrictions
-    
-- Static analysis
-    
-- Dependency validation
-    
-- Architecture tests
-    
-
----
-
-### 26. What is the biggest risk of a modular monolith?
-
-Many candidates answer:
-
-```text
-Scaling
-```
-
-Better answer:
-
-```text
-Boundary erosion
-```
-
-Once boundaries erode:
-
-```text
-Modular Monolith
-      ↓
-Big Ball of Mud
-```
-
----
-
-### 27. Can a modular monolith support thousands of requests per second?
-
-Answer:
-
-Absolutely.
-
-Examples include systems at companies like Shopify, GitHub, and many internal enterprise platforms that handled massive scale before introducing extensive service decomposition.
-
-The real question is:
-
-```text
-Can it scale organizationally?
-```
-
-not
-
-```text
-Can it scale technically?
-```
-
----
-
-# Principal Architect Challenge
-
-A favorite architecture interview question:
-
-> Your company has a modular monolith with:
-> 
-> - 50 modules
->     
-> - 200 engineers
->     
-> - 1 deployment
->     
-> - 1 database
->     
-> 
-> Deployment time is now 3 hours.
-> 
-> Teams want microservices.
-> 
-> How would you decide what to extract first?
-
-A strong answer covers:
-
-1. Dependency graph analysis
-    
-2. Change frequency analysis
-    
-3. Resource consumption analysis
-    
-4. Team ownership
-    
-5. SLA requirements
-    
-6. Operational cost
-    
-7. Business criticality
-    
-
-And concludes:
-
-> "I would not start by extracting the easiest module. I would start by extracting the module with the strongest business justification and the weakest dependencies."
-
-That's the kind of answer interviewers expect at Staff and Principal levels.
-
-
-When interviewing senior engineers, monolith questions are rarely about definitions. They're designed to test whether you understand:
-
-- Architecture tradeoffs
-    
-- Scalability limits
-    
-- Organizational scaling
-    
-- Operational complexity
-    
-- Evolutionary architecture
-    
-- Why companies leave or keep monoliths
-    
-
-The strongest candidates can argue both **for** and **against** monoliths.
-
----
-
-# Level 1: Fundamentals
-
-### 1. What is a monolithic architecture?
-
-Follow-up:
-
-- What makes something a monolith?
-    
-- Is one database enough to call something a monolith?
-    
-- Is one deployment enough?
-    
-
----
-
-### 2. Why do most startups begin with a monolith?
-
-Expected discussion:
-
-- Simplicity
-    
-- Faster delivery
-    
-- Lower cost
-    
-- Easier debugging
-    
-- Fewer operational concerns
-    
-
----
-
-### 3. What are the primary advantages of a monolith over microservices?
-
-Expected:
-
-- Simpler deployment
-    
-- Easier testing
-    
-- Strong consistency
-    
-- Better performance
-    
-- Simpler transactions
-    
-
----
-
-### 4. What are the primary disadvantages of a monolith?
-
-Expected:
-
-- Tight coupling
-    
-- Deployment risk
-    
-- Scaling limitations
-    
-- Team coordination challenges
-    
-
----
-
-### 5. Is a monolith inherently bad architecture?
-
-Trick question.
-
-Strong answer:
-
-> No. Poor boundaries are bad architecture. A monolith can be well designed.
-
----
-
-# Level 2: Architecture Design
-
-### 6. Design a monolithic e-commerce platform.
-
-Components:
-
-```text
-Users
-Products
-Orders
-Payments
-Inventory
-Shipping
-```
-
-Questions:
-
-- Structure?
-    
-- Layers?
-    
-- Database design?
-    
-- Deployment strategy?
-    
-
----
-
-### 7. How would you organize a large monolith?
-
-Compare:
-
 ```text
 controllers/
 services/
 repositories/
 ```
-
 vs
-
 ```text
 orders/
 payments/
 inventory/
 ```
 
-Discuss maintainability.
+Organized by business capability, not technical layer.
 
----
-
-### 8. How would you prevent a monolith from becoming a "Big Ball of Mud"?
+**7. How would you prevent a monolith from becoming a "Big Ball of Mud"?**
 
 Expected:
+- Clear boundaries, domain ownership, dependency rules
+- Architecture governance, code review policies
 
-- Clear boundaries
-    
-- Domain ownership
-    
-- Dependency rules
-    
-- Architecture governance
-    
-
----
-
-### 9. How would you structure code ownership for a 200-person engineering organization working on a monolith?
+**8. How would you structure code ownership for 200 engineers on a monolith?**
 
 Expected:
+- Module ownership, CODEOWNERS, review policies
+- Architecture standards per team
 
-- Module ownership
-    
-- Code ownership rules
-    
-- Review policies
-    
-- Architecture standards
-    
-
----
-
-### 10. What architectural patterns work well inside monoliths?
-
-Examples:
-
-- Layered Architecture
-    
-- Hexagonal Architecture
-    
-- Clean Architecture
-    
-- Domain Driven Design
-    
-
----
-
-# Level 3: Scaling Questions
-
-### 11. Can a monolith scale to millions of users?
-
-Many candidates incorrectly answer:
-
-```text
-No
-```
-
-Strong answer:
-
-```text
-Yes
-```
-
-Discussion:
-
-- Horizontal scaling
-    
-- Caching
-    
-- Database optimization
-    
-- Read replicas
-    
-
----
-
-### 12. How would you scale a monolith experiencing 10x traffic growth?
-
-Explore:
-
-- Load balancing
-    
-- Stateless services
-    
-- Caching
-    
-- CDN
-    
-- Database partitioning
-    
-
----
-
-### 13. A monolith consumes 95% CPU. What would you investigate?
+**9. What architectural patterns work well inside monoliths?**
 
 Expected:
-
-- Query bottlenecks
-    
-- Thread contention
-    
-- Locking
-    
-- Memory pressure
-    
-- Hot endpoints
-    
+- Layered Architecture, Hexagonal Architecture
+- Clean Architecture, Domain-Driven Design
 
 ---
 
-### 14. One feature causes 90% of system load. What architectural options exist?
+## Level 3: Scaling
+
+**10. Can a monolith scale to millions of users?**
+
+Expected: Yes. Horizontal scaling, caching, read replicas, database optimization.
+
+**11. How would you scale a monolith experiencing 10x traffic growth?**
 
 Expected:
+- Load balancing, stateless services, caching, CDN
+- Database partitioning, read replicas
 
+**12. One feature causes 90% of system load. What architectural options exist?**
+
+Expected:
 ```text
 Scale entire monolith
 Extract service
@@ -2337,75 +1572,35 @@ Caching
 Async processing
 ```
 
-Tradeoff discussion.
+**13. How do you scale only part of a monolith?**
+
+Interesting because you generally can't without architectural changes. Leads to extraction discussion.
 
 ---
 
-### 15. How do you scale only part of a monolith?
+## Level 4: Reliability & Operations
 
-Interesting discussion because:
-
-```text
-You generally can't
-```
-
-without architectural changes.
-
----
-
-# Level 4: Reliability & Operations
-
-### 16. A monolith deployment fails halfway through. What happens?
-
-Discuss:
-
-- Rollbacks
-    
-- Database migrations
-    
-- Downtime
-    
-- Recovery plans
-    
-
----
-
-### 17. How would you deploy a monolith with zero downtime?
+**14. A monolith deployment fails halfway through. What happens?**
 
 Expected:
+- Rollback strategy, database migration safety
+- Downtime assessment, recovery plans
 
-- Blue-green deployments
-    
-- Rolling deployments
-    
-- Feature flags
-    
-- Backward-compatible schema changes
-    
-
----
-
-### 18. How would you monitor a large monolith?
+**15. How would you deploy a monolith with zero downtime?**
 
 Expected:
+- Blue-green deployments, rolling deployments
+- Feature flags, backward-compatible schema changes
 
-- Application metrics
-    
-- Business metrics
-    
-- Logs
-    
-- Traces
-    
-- Database telemetry
-    
+**16. How would you monitor a large monolith?**
 
----
+Expected:
+- Application metrics, business metrics
+- Logs, traces, database telemetry
 
-### 19. How do you identify bottlenecks in a monolith?
+**17. How do you identify bottlenecks in a monolith?**
 
-Areas:
-
+Expected:
 ```text
 CPU
 Memory
@@ -2417,323 +1612,86 @@ Locks
 
 ---
 
-### 20. What happens when a monolith starts taking 3 hours to build?
+## Level 5: Migration
+
+**18. When should a company leave a monolith?**
+
+Expected: Not because microservices are trendy. Because of independent scaling needs, team autonomy, deployment bottlenecks.
+
+**19. What signs indicate a monolith should remain a monolith?**
+
+Expected: Small teams, stable requirements, low scale, tight coupling.
+
+**20. How would you migrate a monolith to microservices?**
 
 Expected:
-
-- Build decomposition
-    
-- Incremental builds
-    
-- Test optimization
-    
-- Modularization
-    
-
----
-
-# Level 5: Database & Data Engineering
-
-### 21. Why are transactions easier in a monolith?
-
-Expected:
-
-Single process
-
-Single database
-
-Simple ACID transactions.
-
----
-
-### 22. What happens when a monolith's database becomes the bottleneck?
-
-Discuss:
-
-- Indexing
-    
-- Partitioning
-    
-- Read replicas
-    
-- Sharding
-    
-- Caching
-    
-
----
-
-### 23. How would you migrate a 50 TB database supporting a monolith?
-
-Expected:
-
-- Dual writes
-    
-- CDC
-    
-- Incremental migration
-    
-- Validation strategies
-    
-
----
-
-### 24. Your monolith executes a query reading 10 TB to return 100 rows. How would you investigate?
-
-Expected:
-
-- Query plans
-    
-- Missing indexes
-    
-- Partition pruning
-    
-- Predicate pushdown
-    
-- Statistics
-    
-
----
-
-### 25. What telemetry would you collect from a monolith to predict future scaling problems?
-
-Examples:
-
-- Request latency
-    
-- Queue depth
-    
-- CPU
-    
-- Memory
-    
-- DB load
-    
-- Growth rates
-    
-
----
-
-# Level 6: Migration Questions
-
-### 26. When should a company leave a monolith?
-
-Strong answer:
-
-Not because:
-
-```text
-Microservices are trendy
-```
-
-But because of:
-
-- Independent scaling needs
-    
-- Team autonomy requirements
-    
-- Deployment bottlenecks
-    
-- Operational constraints
-    
-
----
-
-### 27. What signs indicate a monolith should remain a monolith?
-
-Expected:
-
-- Small teams
-    
-- Stable requirements
-    
-- Low scale
-    
-- Tight coupling
-    
-
----
-
-### 28. How would you migrate a monolith to microservices?
-
-Look for:
-
 ```text
 Incremental extraction
 ```
-
 Not:
-
 ```text
 Rewrite everything
 ```
 
----
+**21. Which component would you extract first?**
 
-### 29. Which component would you extract first?
+Expected: Look for low dependencies, high scaling pressure, clear ownership. Not the easiest module—the most justified one.
 
-Strong answers consider:
+**22. What is the Strangler Fig Pattern?**
 
-- Dependency graph
-    
-- Business value
-    
-- Scaling pressure
-    
-- Team ownership
-    
+Expected: Gradually replacing parts of the monolith while keeping the system operational.
 
 ---
 
-### 30. What is the Strangler Fig Pattern?
+## Level 6: Staff / Principal
+
+**23. A modular monolith has grown to 500 developers. What governance mechanisms do you introduce?**
 
 Expected:
+- Architecture review board, module ownership
+- Dependency rules, architecture tests, platform standards
 
-Gradually replacing parts of the monolith while keeping the system operational.
+**24. How does Conway's Law influence modular monolith design?**
 
----
+Expected: System structure mirrors team structure. Teams become modules.
 
-# Level 7: Staff / Principal Engineer
-
-### 31. Your monolith supports:
-
-```text
-500 developers
-20 million users
-500 deployments/day
-```
-
-Would you keep it?
+**25. How would you implement module boundaries that are enforceable rather than documented?**
 
 Expected:
+- Separate packages, compile-time restrictions
+- Static analysis, dependency validation, architecture tests
 
-Depends.
+**26. What is the biggest risk of a modular monolith?**
 
-Evaluate:
+Expected: Boundary erosion. Once boundaries erode, modular monolith becomes big ball of mud.
 
-- Organizational bottlenecks
-    
-- Deployment bottlenecks
-    
-- Coupling
-    
-- Cost
-    
+**27. Can a modular monolith support thousands of requests per second?**
+
+Expected: Absolutely. Shopify, GitHub, many enterprise platforms. The real question is: can it scale organizationally?
 
 ---
 
-### 32. A company wants microservices because competitors use them. How would you evaluate the proposal?
+## Scenario-Based
 
-Look for:
+**28. Your monolith contains 5 million LOC, 400 engineers, 12-hour regression suite. What is your 3-year modernization strategy?**
 
-- Business drivers
-    
-- Cost analysis
-    
-- Complexity analysis
-    
-- Organizational readiness
-    
+**29. A monolith handles 100K requests/sec. Latency suddenly doubles. Walk through your investigation.**
 
----
+**30. Every major feature requires touching 15 different teams. What architectural problems does this suggest?**
 
-### 33. What is the biggest scaling challenge of a monolith?
+**31. Deployment frequency has fallen from 100/day to 1/week. How would you identify root causes?**
 
-Many candidates say:
+**32. If you were CTO of a growing company today, under what circumstances would you intentionally choose a monolith over microservices?**
 
-```text
-Traffic
-```
-
-Stronger answer:
-
-```text
-Team scaling
-```
-
-Technology usually scales further than organizations.
+Expected: Start with a well-structured modular monolith. Only introduce microservices when measurable business, scaling, or organizational pressures justify the added complexity.
 
 ---
 
-### 34. What is the biggest misconception about monoliths?
+## Further Reading
 
-Good answers:
-
-- Monolith ≠ bad design
-    
-- Monolith ≠ unscalable
-    
-- Microservices ≠ automatically better
-    
-
----
-
-### 35. Explain Conway's Law in the context of monoliths.
-
-Expected:
-
-System structure reflects communication structure.
-
-If teams are poorly organized:
-
-```text
-Architecture becomes poorly organized
-```
-
----
-
-# Scenario-Based Questions (Most Difficult)
-
-### 36. Your monolith contains:
-
-```text
-5 million LOC
-400 engineers
-1 deployment
-1 database
-12-hour regression suite
-```
-
-What is your 3-year modernization strategy?
-
----
-
-### 37. A monolith handles:
-
-```text
-100K requests/sec
-```
-
-Latency suddenly doubles.
-
-Walk through your investigation process.
-
----
-
-### 38. You discover that every major feature requires touching 15 different teams.
-
-What architectural problems does this suggest?
-
----
-
-### 39. Your monolith's deployment frequency has fallen from:
-
-```text
-100/day
-```
-
-to
-
-```text
-1/week
-```
-
-How would you identify root causes?
-
----
-
-### 40. If you were CTO of a growing company today, under what circumstances would you intentionally choose a monolith over microservices?
-
-This is arguably the most important monolith interview question because it reveals whether the candidate understands architecture as a tradeoff rather than a trend.
-
-A strong answer recognizes that many modern systems should start as a **well-structured modular monolith**, and only introduce microservices when measurable business, scaling, or organizational pressures justify the added complexity.
+- [[Microservice]]
+- [[Distributed System]]
+- [[Data Lake]]
+- [[ETL vs ELT]]
+- [[Incremental Load Strategy]]
+- [[Batch pipeline design patterns]]

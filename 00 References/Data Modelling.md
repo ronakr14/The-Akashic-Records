@@ -1,6 +1,11 @@
+#datamodeling #dataengineering #warehouse #normalization #starschema
+
+```table-of-contents
+```
+
 Let's approach this the way I'd explain it to a new data engineer joining a project.
 
-# What is Data Modeling?
+## What is Data Modeling?
 
 Data modeling is the process of deciding:
 
@@ -11,30 +16,23 @@ Think of it like designing a city before building roads, houses, and offices.
 Without a blueprint:
 
 - Data gets duplicated
-    
 - Reports become inconsistent
-    
 - Applications become difficult to maintain
-    
 - Performance becomes poor
-    
 
 A data model is the blueprint of your data.
 
 ---
 
-# Simple Example
+## Simple Example
 
 Imagine you run a hospital.
 
 You need to store:
 
 - Patients
-    
 - Doctors
-    
 - Appointments
-    
 
 A fresher might think:
 
@@ -49,11 +47,8 @@ Looks fine initially.
 But problems appear:
 
 - What if Doctor Smith changes departments?
-    
 - What if John has 100 appointments?
-    
 - What if you want doctor details separately?
-    
 
 Now we model properly.
 
@@ -82,31 +77,24 @@ This is data modeling.
 
 ---
 
-# Why Data Modeling Matters
+## Why Data Modeling Matters
 
 As a Data Engineer, your job is not just moving data.
 
 Your job is ensuring:
 
 - Correctness
-    
 - Scalability
-    
 - Performance
-    
 - Maintainability
-    
 
 Bad data model = expensive project.
 
 I've seen projects where:
 
 - ETL was perfect
-    
 - Infrastructure was perfect
-    
 - Reports were wrong
-    
 
 Reason?
 
@@ -114,11 +102,11 @@ Bad data model.
 
 ---
 
-# Three Levels of Data Modeling
+## Three Levels of Data Modeling
 
 This is asked in interviews frequently.
 
-## 1. Conceptual Model
+### 1. Conceptual Model
 
 Business view.
 
@@ -148,7 +136,7 @@ Question answered:
 
 ---
 
-## 2. Logical Model
+### 2. Logical Model
 
 More detailed.
 
@@ -184,7 +172,7 @@ Question answered:
 
 ---
 
-## 3. Physical Model
+### 3. Physical Model
 
 Database implementation.
 
@@ -202,13 +190,9 @@ CREATE TABLE patient (
 Includes:
 
 - Datatypes
-    
 - Indexes
-    
 - Constraints
-    
 - Partitioning
-    
 
 Question answered:
 
@@ -216,20 +200,39 @@ Question answered:
 
 ---
 
-# Entities
+## Core Concepts
+
+### ER Diagrams
+
+ER (Entity-Relationship) diagrams visualize models before building them.
+
+```
++-------------+       +-------------+       +-------------+
+|  Patient    |       |  Doctor     |       | Appointment |
+|-------------|       |-------------|       |-------------|
+| PatientID PK|       | DoctorID PK |       | ApptID PK   |
+| FirstName   |       | Name        |       | PatientID FK|
+| LastName    |       | Specialization|     | DoctorID FK |
+| DOB         |       +-------------+       | Date        |
++-------------+                           +-------------+
+      |                                       |
+      +-------- 1:N --------+-------- N:1 -----+
+```
+
+Tools: dbdiagram.io, Lucidchart, draw.io, ERwin.
+
+---
+
+### Entities
 
 An entity is something we want to store data about.
 
 Examples:
 
 - Customer
-    
 - Product
-    
 - Employee
-    
 - Patient
-    
 
 Entity → Table
 
@@ -245,11 +248,9 @@ becomes
 customer
 ```
 
-table.
-
 ---
 
-# Attributes
+### Attributes
 
 Attributes describe an entity.
 
@@ -258,13 +259,9 @@ Example:
 Customer
 
 - CustomerID
-    
 - Name
-    
 - Email
-    
 - Phone
-    
 
 These become columns.
 
@@ -280,11 +277,11 @@ customer
 
 ---
 
-# Relationships
+### Relationships
 
 The most important concept.
 
-### One-to-One
+#### One-to-One
 
 ```
 Person
@@ -296,7 +293,7 @@ One person has one passport.
 
 ---
 
-### One-to-Many
+#### One-to-Many
 
 ```
 Customer
@@ -310,7 +307,7 @@ Most common relationship.
 
 ---
 
-### Many-to-Many
+#### Many-to-Many
 
 ```
 Students
@@ -330,11 +327,11 @@ student_course
 
 ---
 
-# Keys
+### Keys
 
 Very important.
 
-## Primary Key
+#### Primary Key
 
 Uniquely identifies a record.
 
@@ -354,7 +351,7 @@ No duplicates.
 
 ---
 
-## Foreign Key
+#### Foreign Key
 
 Connects tables.
 
@@ -372,7 +369,7 @@ This creates relationships.
 
 ---
 
-# Normalization
+### Normalization
 
 A huge topic.
 
@@ -405,24 +402,30 @@ City Table
 
 Less duplication.
 
+#### Normal Forms
+
+| Form | Rule |
+|------|------|
+| 1NF | No repeating groups; atomic values only |
+| 2NF | 1NF + no partial dependency on composite key |
+| 3NF | 2NF + no transitive dependency |
+| BCNF | Every determinant is a candidate key |
+
+Most OLTP systems target 3NF. Warehouses often denormalize intentionally.
+
 ---
 
-# OLTP vs OLAP Modeling
+## OLTP vs OLAP — Modeling Approaches
 
 As a Data Engineer you'll work with both.
 
----
-
-## OLTP (Application Databases)
+### OLTP (Application Databases)
 
 Examples:
 
 - Banking
-    
 - Healthcare
-    
 - Ecommerce
-    
 
 Goal:
 
@@ -440,22 +443,19 @@ Highly normalized
 
 Example:
 
-PostgreSQL  
-MySQL  
+PostgreSQL
+MySQL
 SQL Server
 
 ---
 
-## OLAP (Analytics)
+### OLAP (Analytics)
 
 Examples:
 
 - Power BI
-    
 - Tableau
-    
 - Data Warehouse
-    
 
 Goal:
 
@@ -472,20 +472,22 @@ Denormalized
 
 Example:
 
-Snowflake  
-Databricks  
-BigQuery  
+Snowflake
+Databricks
+BigQuery
 Redshift
 
 ---
 
-# Star Schema
+## Dimensional Modeling
+
+### Star Schema
 
 Most common warehouse model.
 
 Example Sales Warehouse
 
-### Fact Table
+#### Fact Table
 
 ```
 fact_sales
@@ -494,11 +496,8 @@ fact_sales
 Contains:
 
 - Quantity
-    
 - Revenue
-    
 - Cost
-    
 
 Example:
 
@@ -508,7 +507,7 @@ Example:
 
 ---
 
-### Dimension Tables
+#### Dimension Tables
 
 ```
 dim_product
@@ -549,7 +548,7 @@ Hence Star Schema.
 
 ---
 
-# Snowflake Schema
+### Snowflake Schema
 
 Normalized version of Star Schema.
 
@@ -571,7 +570,72 @@ Most modern warehouses prefer Star Schema.
 
 ---
 
-# Data Modeling in Real Projects
+### Slowly Changing Dimensions (SCD)
+
+Dimensions change over time — how do we handle it?
+
+| Type | Strategy | Use Case |
+|------|----------|----------|
+| SCD Type 1 | Overwrite old value | Typos, corrections |
+| SCD Type 2 | Add new row with version/date | Full history tracking |
+| SCD Type 3 | Add "previous value" column | Limited history |
+
+**SCD Type 2** is the most common in data warehouses:
+
+|CustomerID|Name|City|ValidFrom|ValidTo|IsCurrent|
+|---|---|---|---|---|---|
+|1|John|Rotterdam|2024-01-01|2025-06-30|0|
+|1|John|Amsterdam|2025-07-01|9999-12-31|1|
+
+---
+
+### Data Vault
+
+Alternative to Star Schema — designed for enterprise data warehouses with high change velocity.
+
+Three building blocks:
+
+| Component | Purpose |
+|-----------|---------|
+| **Hub** | Business key (e.g. CustomerID) |
+| **Link** | Relationship between hubs (e.g. Order-Customer) |
+| **Satellite** | Descriptive attributes + history (e.g. Customer details) |
+
+```
+       +------------------+
+       |  Sat_Customer    |
+       | (name, address)  |
+       +--------+---------+
+                |
++-------+   +---+----+   +-------+
+| Hub   +--+ Link   +--+ Hub   |
+| Cust  |  | OrdCust|  | Ord   |
++-------+  +--------+  +-------+
+```
+
+Pros: Highly auditable, scalable, handles change well.
+Cons: More joins, harder to query for business users.
+
+---
+
+### Lakehouse Modeling
+
+Modern approach combining data lake flexibility with warehouse structure.
+
+| Technology | Purpose |
+|------------|---------|
+| Delta Lake | ACID transactions on data lake (Databricks) |
+| Apache Iceberg | Open table format (Netflix, used by Snowflake/BigQuery) |
+| Apache Hudi | Stream-friendly incremental processing |
+
+Key features:
+- Schema enforcement + evolution
+- Time travel (query historical snapshots)
+- Partitioning + clustering
+
+---
+
+## Data Modeling in Real Projects
 
 When I start a project, I usually ask:
 
@@ -582,11 +646,8 @@ What are we solving?
 Examples:
 
 - Revenue reporting?
-    
 - Patient tracking?
-    
 - Fraud detection?
-    
 
 ---
 
@@ -607,6 +668,10 @@ One click
 
 Never start building facts without defining grain.
 
+**Bad:** Mixing daily and hourly grain in the same fact table → metrics double-count.
+
+**Good:** Explicit grain definition → `fact_sales_daily`, `fact_clicks_hourly`.
+
 ---
 
 ### Entities
@@ -614,15 +679,10 @@ Never start building facts without defining grain.
 Identify:
 
 - Customer
-    
 - Product
-    
 - Order
-    
 - Patient
-    
 - Doctor
-    
 
 ---
 
@@ -643,19 +703,15 @@ Patient → Claims
 Choose:
 
 - Normalized OLTP
-    
 - Star Schema
-    
 - Data Vault
-    
 - Lakehouse
-    
 
 based on use case.
 
 ---
 
-# Common Mistakes Freshers Make
+## Common Mistakes (Junior Engineers)
 
 ### Mistake 1
 
@@ -728,7 +784,7 @@ Design accordingly.
 
 ---
 
-# What a Senior Data Engineer Thinks About
+## What a Senior Data Engineer Thinks About
 
 A fresher thinks:
 
@@ -740,29 +796,36 @@ A senior thinks:
 
 That shift in thinking is what turns someone from a SQL developer into a data engineer.
 
-# Learning Roadmap
+---
 
-Learn these in order:
+## Learning Roadmap
+
+### Core (Week 1-2)
 
 1. Entities & Relationships
-    
 2. Primary & Foreign Keys
-    
 3. Normalization (1NF, 2NF, 3NF)
-    
 4. ER Diagrams
-    
+
+### Intermediate (Week 3-4)
+
 5. OLTP Modeling
-    
 6. Star Schema
-    
 7. Slowly Changing Dimensions (SCD)
-    
 8. Fact & Dimension Modeling
-    
+
+### Advanced (Week 5+)
+
 9. Data Vault
-    
 10. Lakehouse Modeling (Delta Lake, Iceberg)
-    
 
 Once you're comfortable with Star Schema and dimensional modeling, you'll understand about 70% of the data modeling work done in most Data Engineering projects. The remaining 30% is learning how to adapt those principles to specific business domains like healthcare, finance, telecom, or e-commerce.
+
+---
+
+## See Also
+
+- [[Data Engineering]]
+- [[Data Warehousing]]
+- [[Distributed Systems — Storage]]
+- [[SQL — Indexing & Query Optimization]]

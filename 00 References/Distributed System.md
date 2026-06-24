@@ -1,3 +1,8 @@
+#distributedsystems #dataengineering #captheorem #mapreduce #spark #kafka #flink #consensus #replication #interview
+
+```table-of-contents
+```
+
 Great topic. Most people jump straight into Spark, Kafka, Flink, Kubernetes, and end up memorizing technologies without understanding the underlying distributed systems principles.
 
 Let's start from first principles.
@@ -745,6 +750,26 @@ Almost every distributed data processing problem can be traced back to one of th
 
 If you understand those four constraints, concepts like Hadoop, Spark, Kafka, Flink, Iceberg, Delta Lake, distributed databases, and lakehouses become much easier to reason about because they're all different solutions to the same fundamental problems.
 
+---
+
+# Quick Decision Matrix — When to Use What
+
+| Scenario | Best Fit | Why |
+|---|---|---|
+| Batch ETL on large datasets | **Apache Spark** | In-memory, rich APIs, mature ecosystem |
+| Real-time event streaming | **Apache Kafka** | Durable log, high throughput, replayability |
+| Stateful stream processing | **Apache Flink** | Exactly-once, event time, stateful operators |
+| Interactive SQL on data lake | **Trino / Presto** | Federated queries, no data movement |
+| OLTP at scale | **CockroachDB / Spanner** | ACID + horizontal scale |
+| Distributed coordination | **ZooKeeper / etcd** | Leader election, config, service discovery |
+| CP system (banking, inventory) | **HBase, ZooKeeper** | Consistency over availability |
+| AP system (social, CDN) | **Cassandra, DynamoDB** | Availability over consistency |
+| Distributed file storage | **HDFS, S3 + Iceberg** | Fault tolerance, data locality |
+
+---
+
+# Interview Questions
+
 If you're preparing for Senior Data Engineer, Staff Data Engineer, Distributed Systems Engineer, Spark Platform Engineer, or Architecture interviews, you'll quickly discover that interviewers rarely ask:
 
 > "What is a distributed system?"
@@ -912,6 +937,17 @@ CP
 or
 AP
 ```
+
+### 9b. FLP Impossibility — the foundational result
+
+In 1985, Fischer, Lynch, and Paterson proved:
+
+> In a fully asynchronous distributed system, even **one** faulty process makes it **impossible** to guarantee consensus.
+
+Implications:
+- Consensus algorithms (Paxos, Raft) work in practice by assuming **partial synchrony** (timeouts)
+- "Guaranteed" consensus is a theoretical impossibility — real systems use liveness heuristics
+- This is why ZooKeeper/etcd use leader election with timeouts, not pure consensus
 
 ---
 
@@ -1283,10 +1319,30 @@ Expected:
 Use:
 
 - Event-driven architectures
-    
 - Sagas
-    
 - Compensation
+
+**Saga pattern details:**
+
+Two implementation styles:
+
+**Choreography** (event-based):
+```text
+Service A → event → Service B → event → Service C
+```
+Each service listens to events and acts. No central coordinator. Simpler, but hard to track overall state.
+
+**Orchestration** (coordinator-based):
+```text
+Orchestrator → cmd → Service A
+Orchestrator → cmd → Service B
+Orchestrator → cmd → Service C
+```
+Central saga orchestrator manages the flow. Easier to reason about, but orchestrator is a single point of failure.
+
+**Compensation:** If Service C fails, orchestrator runs compensating transactions in reverse order (undo B, undo A).
+
+### 43. Design a payment workflow without distributed transactions.
     
 
 ---

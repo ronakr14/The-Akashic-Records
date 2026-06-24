@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "f1c74a381fb5e86d",
+        "id": "c182ea4239cbd8f6",
         "type": "tabs",
         "children": [
           {
-            "id": "94011ef4a9fba9a1",
+            "id": "6d3626db183c813f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00 References/Data Engineering Playbook.md",
+                "file": "00 References/Untitled 2.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -24,11 +24,11 @@
                   "showSearch": false,
                   "searchQuery": "",
                   "backlinkCollapsed": false,
-                  "unlinkedCollapsed": false
+                  "unlinkedCollapsed": true
                 }
               },
               "icon": "lucide-file",
-              "title": "Data Engineering Playbook"
+              "title": "Untitled 2"
             }
           }
         ]
@@ -63,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#architecture",
+                "query": "tag:#interview",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -188,11 +188,12 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 763.5
+    "width": 763.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -210,34 +211,34 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "94011ef4a9fba9a1",
+  "active": "932cadc2bc5845db",
   "lastOpenFiles": [
-    "2026-06-23.md",
-    "00 References/Data Engineering Playbook.md",
-    "00 References/Compare File in Powershell.md",
-    "00 References/Bloom Filters.md",
-    "00 References/BitRouter.md",
-    "00 References/Batch Processing.md",
+    "00 References/python — OOP & Classes.md",
+    "00 References/python — Concurrency.md",
+    "00 References/Untitled 1.md",
+    "00 References/python — Modules & Packages.md",
+    "00 References/stream_processing_summary.md",
+    "00 References/Untitled.md",
+    "00 References/python — Files & Serialization.md",
+    "00 References/Stream Data Processing.md",
+    "00 References/Python External Libraries Playbook.md",
     "00 References/Python Environment Playbook.md",
-    "00 Projects/Test Automation - CAI/2026-06-19_120000-datatest-automation.md",
-    "00 Projects/Healthcare/Events.md",
-    "00 Projects/Healthcare/Patient Workflow.md",
-    "00 Projects/Healthcare/Resource Lifecycle.md",
-    "00 Projects/Healthcare/Business Questions.md",
-    "00 Projects/Healthcare/Business Doc.md",
-    "00 Projects/Healthcare/1.1 Trimmed Scope.md",
-    "00 Projects/Healthcare/1. Core Healthcare Platform.md",
-    "00 Projects/Healthcare/00 Proposal.md",
-    "00 Projects/Healthcare/00 Goal.md",
-    "00 Projects/Xpose/01 Goal.md",
-    "00 Projects/Xpose/04 Enhancements Included.md",
-    "00 Projects/Xpose/03 Steps to Implement.md",
-    "00 Projects/Xpose/02 Architecture.md",
-    "00 Projects/Xpose/10 Examples of Use.md",
-    "00 Projects/Xpose/09 Integration with Rich.md",
-    "00 Projects/Xpose/08 Integration with Argparse.md",
-    "00 Projects/Xpose/07 Integration with Typer.md",
-    "00 Projects.md",
+    "00 References/python.md",
+    "00 References/Python Application Integrations.md",
+    "00 References/Powershell Profile File.md",
+    "00 References/Password Storage.md",
+    "00 References/Partitioning.md",
+    "00 References/Git Multi Account Setup.md",
+    "00 Interview Questions/Microservices.md",
+    "00 References/Partition Strategy.md",
+    "00 References/Parquet.md",
+    "00 References/OpenSpec.md",
+    "00 References/Monolithic System.md",
+    "00 References/Microservice.md",
+    "00 References/MkDocs.md",
+    "00 References/LLM Interaction Guide.md",
+    "00 References/Incremental Load Strategy.md",
+    "00 References/Idempotency.md",
     "00 Projects/Healthcare/1.1 Trimmed Scope.md.tmp.13612.17b7d470d467",
     "00 Projects/cli2api/plugins/__pycache__/__init__.cpython-314.pyc",
     "00 Projects/cli2api/plugins/__pycache__/registry.cpython-314.pyc",
