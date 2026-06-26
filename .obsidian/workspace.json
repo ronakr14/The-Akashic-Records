@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01 Curated/Bloom Filters.md",
+                "file": "00 Interview Questions/Incremental Processing.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Bloom Filters"
+              "title": "Incremental Processing"
             }
           }
         ]
@@ -213,7 +213,20 @@
   "active": "6e89ebb3a4fb5c9e",
   "lastOpenFiles": [
     "00 Daily Review/2026-06-24.md",
+    "00 Interview Questions/Fundamentals.md",
+    "00 Daily Review/2026-06-25.md",
+    "00 Prompts/README.md",
     "00 Interview Questions/Incremental Processing.md",
+    "00 Daily Review/2026-06-26.md",
+    "01 Curated/Bloom Filters.md",
+    "03 Career Vault/ADRs/Bloom Filters — Row Group Pruning.md",
+    "2026-06-25.md",
+    "01 Curated/Python Environment Playbook.md",
+    "00 Prompts/Tools/Deep Dive.md",
+    "03 Career Vault/ADRs/README.md",
+    "02 Reference/Delta Lake & Iceberg.md",
+    "01 Curated/Anthropic - Defending Code Reference Harness.md",
+    "00 Prompts.md",
     "00 Prompts/Career/Resume — Optimization.md",
     "00 Projects/Note Refresher/PKM Knowledge Refresh System – Review & Enhancements.md",
     "00 Projects/Note Refresher/refresher_state.json",
@@ -222,26 +235,13 @@
     "00 Projects/Note Refresher/Daily Note Selection Strategy.md",
     "00 Projects/Untitled.md",
     "00 Projects/Note Refresher",
-    "01 Curated/Anthropic - Defending Code Reference Harness.md",
     "00 Interview Questions/Batch Processing - Advance.md",
     "03 Career Vault/Open Questions/README.md",
     "03 Career Vault/Lessons & Trade-offs/README.md",
     "03 Career Vault/Incidents & Postmortems/README.md",
-    "03 Career Vault/ADRs/README.md",
     "Catalog.md",
     "03 Career Vault/README.md",
     "00 Projects/PowerShell/Compare File in Powershell.md",
-    "02 Reference/VSCode Debug.md",
-    "02 Reference/Git Multi Account Setup.md",
-    "02 Reference/Delta Lake & Iceberg.md",
-    "02 Reference/DuckDB.md",
-    "02 Reference/ELT.md",
-    "02 Reference/ETL.md",
-    "02 Reference/python — Files & Serialization.md",
-    "02 Reference/python — Modules & Packages.md",
-    "02 Reference/python — Concurrency.md",
-    "02 Reference/python — OOP & Classes.md",
-    "01 Curated/Parquet.md",
     "03 Career Vault/Incidents & Postmortems",
     "03 Career Vault/Lessons & Trade-offs",
     "03 Career Vault/Open Questions",

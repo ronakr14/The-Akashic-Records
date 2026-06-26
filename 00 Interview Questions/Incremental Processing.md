@@ -4,11 +4,68 @@ type: question
 
 ```table-of-contents
 ```
-## You have a 100 TB table.
-A full reload takes 15 hours. How would you implement incremental loading?
+## You have a 100 TB table. A full reload takes 15 hours. How would you implement incremental loading?
 Expected discussion: `Watermarks, High-water marks, CDC, Timestamp-based extraction, Idempotency`
 
-For a 100 TB table, I would avoid full reloads and implement incremental loading. My preferred approach would be timestamp-based extraction using an `updated_at` column and a metadata table storing the last successful watermark or high-water mark. Each run would extract only records modified since the previous successful load. If the source system supports CDC, I would use transaction log-based capture to detect inserts, updates, and deletes efficiently. Data would be loaded into a staging area and merged into the target using UPSERT/MERGE operations. To ensure idempotency, I would track batch IDs, maintain checkpoints, and design the pipeline so that rerunning the same batch produces the same final state without duplicates. For late-arriving data, I would use a small lookback window and deduplication logic during the merge process. This reduces processing from 100 TB to only the changed data while maintaining correctness and recoverability.
+For a 100 TB table, a full reload every run is impractical — it wastes compute, misses SLAs, and overloads the source. The goal is to read only the changed data, reducing 100 TB to perhaps a few hundred GB.
+
+I would evaluate three approaches, chosen based on source capabilities:
+
+### Approach 1 — Timestamp-Based Extraction (most common)
+
+If the source table has an `updated_at` column, I maintain a **watermark** — a metadata table storing the last successful load timestamp. Each run extracts only rows where `updated_at > watermark`, then merges them into the target.
+
+A **high-water mark** is the highest value seen so far; a **watermark** is the progress tracker for ingestion. In practice they're often the same value, but conceptually: the high-water mark is "what's the max," the watermark is "what have I processed."
+
+**Limitation:** This misses deletes (row gone, no timestamp to find) and in-place updates that don't touch `updated_at`.
+
+### Approach 2 — Incrementing Primary Key
+
+For append-only tables with a sequential PK (e.g., `order_id`), track the last processed ID and extract `WHERE order_id > last_id`. Simpler but cannot handle updates or deletes.
+
+### Approach 3 — Change Data Capture (CDC) — best if available
+
+Instead of querying the table, capture the database transaction log (MySQL Binlog, PostgreSQL WAL, SQL Server CDC). This produces events for inserts, updates, and deletes — solving the delete problem that timestamp-based extraction has.
+
+Tools: Debezium + Kafka. Events flow through a landing zone into staging, then merge into the target.
+
+### Merge Strategy
+
+Data lands in a staging layer, then merges into the target using **MERGE/UPSERT on business key**:
+
+```sql
+MERGE INTO sales tgt
+USING sales_increment src
+ON tgt.order_id = src.order_id
+WHEN MATCHED THEN UPDATE SET amount = src.amount
+WHEN NOT MATCHED THEN INSERT (...);
+```
+
+This prevents duplicates when the same row appears in multiple runs.
+
+### Idempotency
+
+If the job fails halfway, re-running must produce the same final state. I ensure this by:
+
+- MERGE on business key (not raw INSERT) — safe to replay
+- Watermark advancement as an **atomic step** with the batch commit — if the batch fails, the watermark doesn't move
+- Tracking batch IDs in a metadata table for replay detection and audit
+- Designing every step to be re-runnable without side effects
+
+### Failure Modes at 100 TB Scale
+
+- **Late-arriving data** — a record committed before the watermark but with `updated_at` after (backfill, repair). Mitigation: lookback window of 1–2x normal lag, plus dedup on business key during merge.
+- **Deletes invisible to timestamp** — solved by CDC, or by adding a soft-delete flag to the source and filtering on it during merge.
+- **Clock drift** — source DB and pipeline host clocks diverge. Mitigation: use DB-side commit timestamps rather than host clock; alert on skew.
+- **Bulk backdated updates** — same-timestamp bulk changes slip through. Mitigation: periodic full partition scan (weekly) as a safety net.
+
+### Operational Considerations
+
+At 100 TB, incremental loading interacts with partitioning: partition by date or region so only relevant partitions are scanned. The incremental job touches only the current partition plus a lookback. Parallelism comes from partition-level concurrency — e.g., 4 partitions at a time.
+
+**Assumption:** An initial full load has already completed. After that, daily incremental takes over. If a full backfill is ever needed (e.g., new column, corruption), I'd run it on isolated infrastructure with throttling, then swap into production atomically.
+
+---
 
 Refer: [[Incremental Load Strategy]]
 

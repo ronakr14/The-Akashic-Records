@@ -38,4 +38,4 @@ What did we decide?
 
 ## Entries
 
-_No ADRs yet._
+- [[Bloom Filters — Row Group Pruning]] — 2026-06-25 — adopt Bloom Filters for high-cardinality equality pruning in Parquet row groups
