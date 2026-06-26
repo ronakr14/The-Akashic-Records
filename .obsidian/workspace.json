@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "e7037081e43dc100",
+        "id": "d0a789b343722c8b",
         "type": "tabs",
         "children": [
           {
-            "id": "6e89ebb3a4fb5c9e",
+            "id": "1ef93b6bff9fe960",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00 Projects/HolistiQ/Goal.md",
+                "file": "00 Projects/Healthcare/1.1 Trimmed Scope.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Goal"
+              "title": "1.1 Trimmed Scope"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 265.5,
-    "collapsed": true
+    "width": 265.5
   },
   "right": {
     "id": "7c51cdc979815380",
@@ -211,17 +210,33 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6e89ebb3a4fb5c9e",
+  "active": "1ef93b6bff9fe960",
   "lastOpenFiles": [
-    "00 Interview Questions/Incremental Processing.md",
-    "00 Projects/HolistiQ/Goal.md",
-    "00 Projects/HolistiQ",
-    "00 Daily Review/2026-06-24.md",
-    "00 Interview Questions/Fundamentals.md",
-    "00 Daily Review/2026-06-25.md",
-    "00 Prompts/README.md",
+    "00 Projects/Knowledge OS/vault_parser.py",
+    "00 Projects/Knowledge OS/schema/note_metadata.json",
+    "00 Projects/Knowledge OS/tests",
+    "00 Projects/Knowledge OS/data",
+    "00 Projects/Knowledge OS/schema",
+    "00 Projects/Knowledge OS/akashic_engine.py",
+    "00 Projects/Knowledge OS/agents/dispatcher.py",
+    "00 Projects/Knowledge OS/agents/project_reviewer.py",
+    "00 Projects/Knowledge OS/agents/data_mentor.py",
+    "00 Projects/Knowledge OS/agents/pkm_curator.py",
+    "00 Projects/Knowledge OS/agents/career_architect.py",
+    "00 Projects/Healthcare/1. Core Healthcare Platform.md",
+    "00 Projects/Healthcare/00 Proposal.md",
     "00 Daily Review/2026-06-26.md",
     "01 Curated/Bloom Filters.md",
+    "Bloom Filter.md",
+    "00 Daily Review/2026-06-25.md",
+    "Sample data.md",
+    "00 Daily Review/2026-06-24.md",
+    "00 Projects/Knowledge OS/00 Goal.md",
+    "01 Curated/Partitioning.md",
+    "00 Projects/HolistiQ/Goal.md",
+    "00 Interview Questions/Incremental Processing.md",
+    "00 Interview Questions/Fundamentals.md",
+    "00 Prompts/README.md",
     "03 Career Vault/ADRs/Bloom Filters — Row Group Pruning.md",
     "2026-06-25.md",
     "01 Curated/Python Environment Playbook.md",
@@ -232,22 +247,6 @@
     "00 Prompts.md",
     "00 Prompts/Career/Resume — Optimization.md",
     "00 Projects/Note Refresher/PKM Knowledge Refresh System – Review & Enhancements.md",
-    "00 Projects/Note Refresher/refresher_state.json",
-    "00 Daily Review",
-    "00 Projects/Note Refresher/daily_refresher.py",
-    "00 Projects/Note Refresher/Daily Note Selection Strategy.md",
-    "00 Projects/Untitled.md",
-    "00 Projects/Note Refresher",
-    "00 Interview Questions/Batch Processing - Advance.md",
-    "03 Career Vault/Open Questions/README.md",
-    "03 Career Vault/Lessons & Trade-offs/README.md",
-    "03 Career Vault/Incidents & Postmortems/README.md",
-    "Catalog.md",
-    "03 Career Vault/README.md",
-    "03 Career Vault/Incidents & Postmortems",
-    "03 Career Vault/Lessons & Trade-offs",
-    "03 Career Vault/Open Questions",
-    "03 Career Vault/ADRs",
-    "03 Career Vault"
+    "00 Projects/Note Refresher/Daily Note Selection Strategy.md"
   ]
 }
