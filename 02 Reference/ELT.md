@@ -1,6 +1,15 @@
 ---
-type: concept
+domain: Data Engineering
+domain_suggested: null
+category: Reference
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [elt, data-integration, pipeline]
 ---
+
+
+
 
 # ELT
 

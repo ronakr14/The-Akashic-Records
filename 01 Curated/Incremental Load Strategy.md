@@ -1,8 +1,17 @@
 ---
-type: concept
+domain: Data Engineering
+domain_suggested: null
+category: Curated
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [incremental-load, cdc, data-engineering, dataengineering, etl]
 ---
 
-#incremental-load #dataengineering #etl #cdc #watermark #idempotency
+
+
+
+
 
 ```table-of-contents
 ```

@@ -1,12 +1,15 @@
 ---
-type: concept
-description: One-shot prompt — save a session summary and append it to today's daily note.
-use_when: When wrapping a session but want a lighter touch than full handoff.
-inputs: [session context]
-outputs: daily-note entry + session summary
-related: [[End of Session — Handoff]]
-tags: [prompt, session, daily-note, journaling]
+domain: AI
+domain_suggested: null
+category: Curated
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [session, daily-note, prompt]
 ---
+
+
+
 ```table-of-contents
 ```
 

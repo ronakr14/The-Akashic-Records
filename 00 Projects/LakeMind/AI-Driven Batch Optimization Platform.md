@@ -1,6 +1,15 @@
 ---
-type: project
+domain: AI
+domain_suggested: null
+category: Snippet
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [ai, batch-optimization, lakemind]
 ---
+
+
+
 
 ```table-of-contents
 ```

@@ -1,12 +1,15 @@
 ---
-type: question
-description: Predict interview questions, build STAR responses, generate a full application pack in one shot.
-use_when: After applying, before an interview loop.
-inputs: [background, JD]
-outputs: 15 predicted questions, 8 STAR answers, full application pack (CV summary + cover letter + Qs + recruiter DM + follow-up)
-related: [[Resume — Optimization]]
-tags: [prompt, career, interview, star, prep]
+domain: AI
+domain_suggested: null
+category: Curated
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [interview, career, prompt]
 ---
+
+
+
 ```table-of-contents
 ```
 Predict likely questions, build STAR responses, generate full application packs.

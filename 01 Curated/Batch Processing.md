@@ -1,8 +1,17 @@
 ---
-type: concept
+domain: Data Engineering
+domain_suggested: null
+category: Curated
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [batch-processing, data-engineering, etl, reference]
 ---
 
-#data-engineering #batch-processing #reference
+
+
+
+
 
 ```table-of-contents
 ```

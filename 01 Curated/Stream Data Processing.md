@@ -1,8 +1,17 @@
 ---
-type: concept
+domain: Data Engineering
+domain_suggested: null
+category: Curated
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [streaming, real-time, data-engineering, stream-processing, reference]
 ---
 
-#data-engineering #stream-processing #reference
+
+
+
+
 
 ```table-of-contents
 ```

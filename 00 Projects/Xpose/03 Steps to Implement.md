@@ -1,18 +1,15 @@
 ---
-type: project
-tags:
-  - cli2api
-  - project
-  - implementation
-  - roadmap
-related:
-  - "[[01 Goal]]"
-  - "[[02 Architecture]]"
-  - "[[04 Enhancements Included]]"
-  - "[[05 Plugins That Can Be Added]]"
-  - "[[06 Constraints]]"
-  - "[[10 Examples of Use]]"
+domain: Programming
+domain_suggested: null
+category: Snippet
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [xpose, implementation, planning]
 ---
+
+
+
 
 # Steps to Implement
 

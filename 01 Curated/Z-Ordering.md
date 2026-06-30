@@ -1,6 +1,15 @@
 ---
-type: concept
+domain: Data Engineering
+domain_suggested: null
+category: Curated
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [z-ordering, clustering, storage]
 ---
+
+
+
 
 Now we're getting into the performance engineering side of lakehouses.
 

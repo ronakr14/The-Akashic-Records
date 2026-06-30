@@ -1,8 +1,17 @@
 ---
-type: concept
+domain: Data Engineering
+domain_suggested: null
+category: Curated
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [openapi, specification, api, openspec, sdd]
 ---
 
-#openspec #sdd #aiengineering #aidevelopment #specdriven #governance #datengineering #claude #cursor
+
+
+
+
 
 # OpenSpec Repository Analysis Report
 

@@ -1,19 +1,15 @@
 ---
-type: project
-tags:
-  - cli2api
-  - project
-  - integration
-  - cli
-  - rich
-  - output
-related:
-  - "[[01 Goal]]"
-  - "[[04 Enhancements Included#7. CLI + API Dual Mode]]"
-  - "[[07 Integration with Typer]]"
-  - "[[08 Integration with Argparse]]"
-  - "[[10 Examples of Use#Example 9: Rich CLI Output]]"
+domain: Programming
+domain_suggested: null
+category: Snippet
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [xpose, rich, integration]
 ---
+
+
+
 
 # Integration with Rich
 

@@ -1,6 +1,15 @@
 ---
-type: project
+domain: Programming
+domain_suggested: null
+category: Snippet
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [test-automation, cai, testing]
 ---
+
+
+
 
 I need to create a test automation framework for my client.
 Goal : understand requriements -> create testdata/ testsql -> run script -> report in html format

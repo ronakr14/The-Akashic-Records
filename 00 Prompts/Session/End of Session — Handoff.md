@@ -1,12 +1,15 @@
 ---
-type: concept
-description: End-of-session prompt — write a handoff.md capturing goal, state, active files, failures, next step.
-use_when: Before closing a long Claude session.
-inputs: [full session context]
-outputs: handoff.md
-related: [[Feedback — Extract]]
-tags: [prompt, session, handoff, memory]
+domain: AI
+domain_suggested: null
+category: Curated
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [session, handoff, prompt]
 ---
+
+
+
 ```table-of-contents
 ```
 Before we end this session, write a `handoff.md` file that captures:

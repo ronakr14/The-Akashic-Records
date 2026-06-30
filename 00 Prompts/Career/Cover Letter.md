@@ -1,12 +1,15 @@
 ---
-type: concept
-description: Tailored cover letters with strong hooks and closers, plus resume-gap explainer trio.
-use_when: When drafting or rewriting a cover letter for a specific role.
-inputs: [background, JD, role, company]
-outputs: cover letter draft, gap-explainer in 3 formats (resume / cover / interview)
-related: [[Resume — Optimization]]
-tags: [prompt, career, cover-letter, gap-explanation]
+domain: AI
+domain_suggested: null
+category: Curated
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [cover-letter, career, prompt]
 ---
+
+
+
 ```table-of-contents
 ```
 Tailored cover letters with strong hooks and closers.

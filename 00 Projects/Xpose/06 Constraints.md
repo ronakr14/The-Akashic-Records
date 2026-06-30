@@ -1,17 +1,15 @@
 ---
-type: project
-tags:
-  - cli2api
-  - project
-  - constraints
-  - design
-  - anti-patterns
-related:
-  - "[[01 Goal]]"
-  - "[[02 Architecture]]"
-  - "[[04 Enhancements Included]]"
-  - "[[05 Plugins That Can Be Added]]"
+domain: Programming
+domain_suggested: null
+category: Snippet
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [xpose, constraints, limitations]
 ---
+
+
+
 
 # Constraints
 

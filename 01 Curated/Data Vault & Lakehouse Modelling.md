@@ -1,8 +1,17 @@
 ---
-type: concept
+domain: Data Engineering
+domain_suggested: null
+category: Curated
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [data-vault, lakehouse, modelling, datavault, dataengineering]
 ---
 
-#datavault #lakehouse #dataengineering #medallion #databricks #snowflake #hashkeys #starschema #cdc
+
+
+
+
 
 ```table-of-contents
 ```

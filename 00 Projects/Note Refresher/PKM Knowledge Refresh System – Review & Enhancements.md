@@ -1,6 +1,15 @@
 ---
-type: project
+domain: Operations
+domain_suggested: null
+category: Snippet
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [pkm, knowledge-refresh, obsidian]
 ---
+
+
+
 
 ## Objective
 Create a lightweight, automated knowledge resurfacing system that improves retention, synthesis, and long-term expertise development. The system should prioritize rediscovering and connecting existing knowledge rather than generating notifications about newly created notes.

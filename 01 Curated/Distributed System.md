@@ -1,8 +1,17 @@
 ---
-type: concept
+domain: Data Engineering
+domain_suggested: null
+category: Curated
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [distributed-systems, architecture, scalability, distributedsystems, dataengineering]
 ---
 
-#distributedsystems #dataengineering #captheorem #mapreduce #spark #kafka #flink #consensus #replication #interview
+
+
+
+
 
 ```table-of-contents
 ```

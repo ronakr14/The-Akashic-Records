@@ -1,12 +1,15 @@
 ---
-type: concept
-description: End-of-session prompt — extract every correction, preference, and "do differently next time" into a reloadable feedback.md.
-use_when: Periodically, to crystallize session learnings into long-lived memory.
-inputs: [full conversation]
-outputs: feedback.md ready to load into a Claude project
-related: [[End of Session — Handoff]]
-tags: [prompt, session, feedback, memory]
+domain: AI
+domain_suggested: null
+category: Curated
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [session, feedback, prompt]
 ---
+
+
+
 ```table-of-contents
 ```
 

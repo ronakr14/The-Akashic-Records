@@ -1,8 +1,17 @@
 ---
-type: concept
+domain: Programming
+domain_suggested: null
+category: Reference
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [git, multi-account, workflow, multiaccount, ssh]
 ---
 
-#git #multiaccount #ssh #devops #identity #config
+
+
+
+
 
 ```table-of-contents
 ```

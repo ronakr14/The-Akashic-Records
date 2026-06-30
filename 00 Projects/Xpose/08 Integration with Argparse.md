@@ -1,17 +1,15 @@
 ---
-type: project
-tags:
-  - cli2api
-  - project
-  - integration
-  - cli
-  - argparse
-related:
-  - "[[01 Goal]]"
-  - "[[04 Enhancements Included#7. CLI + API Dual Mode]]"
-  - "[[07 Integration with Typer]]"
-  - "[[09 Integration with Rich]]"
+domain: Programming
+domain_suggested: null
+category: Snippet
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [xpose, argparse, integration]
 ---
+
+
+
 
 # Integration with Argparse
 

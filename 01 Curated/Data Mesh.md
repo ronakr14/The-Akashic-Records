@@ -1,8 +1,17 @@
 ---
-type: concept
+domain: Data Engineering
+domain_suggested: null
+category: Curated
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [data-mesh, architecture, distributed, data-architecture, data-governance]
 ---
 
-#data-mesh #data-architecture #data-governance #data-products #domain-driven #decentralized
+
+
+
+
 
 ```table-of-contents
 ```

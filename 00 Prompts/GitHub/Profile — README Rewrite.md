@@ -1,12 +1,15 @@
 ---
-type: concept
-description: Three-step Claude workflow to audit, rewrite, and visually upgrade a GitHub profile README.
-use_when: When refreshing your GitHub profile bio + README from scratch.
-inputs: [current bio, current README URL, role, target audience]
-outputs: critique, rewritten bio, rewritten README, visual upgrade list with copy-paste code
-related: [[Repo — Deep Analysis]]
-tags: [prompt, github, branding, profile]
+domain: AI
+domain_suggested: null
+category: Curated
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [github, readme, prompt]
 ---
+
+
+
 ```table-of-contents
 ```
 

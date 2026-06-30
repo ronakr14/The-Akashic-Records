@@ -1,6 +1,15 @@
 ---
-type: project
+domain: Operations
+domain_suggested: null
+category: Snippet
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [powershell, profile, configuration]
 ---
+
+
+
 
 # PowerShell Profile Customisation
 

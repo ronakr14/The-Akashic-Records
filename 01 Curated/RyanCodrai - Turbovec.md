@@ -1,8 +1,17 @@
 ---
-type: concept
+domain: Data Engineering
+domain_suggested: null
+category: Curated
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [turbovec, vector, search, vectors, rust]
 ---
 
-#vectors #rust #embedding #rag #ann #quantization #search #simd #faiss #turbovec
+
+
+
+
 
 # Deep Repository Analysis: RyanCodrai/turbovec
 

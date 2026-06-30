@@ -1,6 +1,15 @@
 ---
-type: project
+domain: AI
+domain_suggested: null
+category: Snippet
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [self-tuning, batch-optimization, lakemind]
 ---
+
+
+
 
 Design a self-tuning batch platform that automatically:
 * Detects slow jobs

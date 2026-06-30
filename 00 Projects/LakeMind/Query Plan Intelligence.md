@@ -1,6 +1,15 @@
 ---
-type: project
+domain: Data Engineering
+domain_suggested: null
+category: Snippet
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [query-plan, intelligence, optimization]
 ---
+
+
+
 
 ```table-of-contents
 ```

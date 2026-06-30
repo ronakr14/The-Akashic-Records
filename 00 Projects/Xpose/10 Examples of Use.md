@@ -1,18 +1,15 @@
 ---
-type: project
-tags:
-  - cli2api
-  - project
-  - examples
-  - usage
-related:
-  - "[[01 Goal]]"
-  - "[[03 Steps to Implement]]"
-  - "[[04 Enhancements Included]]"
-  - "[[05 Plugins That Can Be Added]]"
-  - "[[07 Integration with Typer]]"
-  - "[[09 Integration with Rich]]"
+domain: Programming
+domain_suggested: null
+category: Snippet
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [xpose, examples, usage]
 ---
+
+
+
 
 # Examples of Use
 

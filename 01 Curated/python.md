@@ -1,8 +1,17 @@
 ---
-type: concept
+domain: Programming
+domain_suggested: null
+category: Curated
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [python, language, fundamentals, syntax, dataengineering]
 ---
 
-#python #syntax #dataengineering #core
+
+
+
+
 
 ```table-of-contents
 ```

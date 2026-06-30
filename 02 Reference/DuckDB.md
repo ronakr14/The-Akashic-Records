@@ -1,8 +1,17 @@
 ---
-type: concept
+domain: Data Engineering
+domain_suggested: null
+category: Reference
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [duckdb, analytics, embedded, olap, dataengineering]
 ---
 
-#duckdb #olap #dataengineering #analytics #vectorized #columnar
+
+
+
+
 
 ```table-of-contents
 ```

@@ -1,6 +1,15 @@
 ---
-type: question
+domain: Data Engineering
+domain_suggested: null
+category: Learning
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [etl, elt, interview]
 ---
+
+
+
 
 # Level 1: Fundamentals
 ### 1. What are the differences between ETL and ELT?

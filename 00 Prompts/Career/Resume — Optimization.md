@@ -1,12 +1,15 @@
 ---
-type: concept
-description: Tailor a CV to a JD — extract keywords, rewrite bullets, build role-fit matrix, boost ATS score.
-use_when: Before submitting an application to a specific role.
-inputs: [CV text, JD text, target role]
-outputs: keyword table, tailored CV, bullet rewrites, role-fit matrix, ATS score
-related: [[Cover Letter]]
-tags: [prompt, career, resume, ats, cv]
+domain: AI
+domain_suggested: null
+category: Curated
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [resume, career, prompt]
 ---
+
+
+
 ```table-of-contents
 ```
 Tailored CV, ATS-friendly bullets, and role-fit scoring.

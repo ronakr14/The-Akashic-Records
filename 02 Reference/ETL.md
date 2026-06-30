@@ -1,8 +1,17 @@
 ---
-type: concept
+domain: Data Engineering
+domain_suggested: null
+category: Reference
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [etl, data-integration, pipeline, dataengineering, datawarehouse]
 ---
 
-#etl #dataengineering #datawarehouse #transformation #airflow #dbt #informatica
+
+
+
+
 
 ```table-of-contents
 ```

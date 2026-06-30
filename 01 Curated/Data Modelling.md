@@ -1,8 +1,17 @@
 ---
-type: concept
+domain: Data Engineering
+domain_suggested: null
+category: Curated
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [data-modelling, architecture, design, datamodeling, dataengineering]
 ---
 
-#datamodeling #dataengineering #warehouse #normalization #starschema
+
+
+
+
 
 ```table-of-contents
 ```

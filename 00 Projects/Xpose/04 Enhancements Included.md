@@ -1,17 +1,15 @@
 ---
-type: project
-tags:
-  - cli2api
-  - project
-  - features
-  - enhancements
-related:
-  - "[[01 Goal]]"
-  - "[[02 Architecture]]"
-  - "[[03 Steps to Implement]]"
-  - "[[05 Plugins That Can Be Added]]"
-  - "[[06 Constraints]]"
+domain: Programming
+domain_suggested: null
+category: Snippet
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [xpose, enhancements, features]
 ---
+
+
+
 
 # Enhancements Included
 

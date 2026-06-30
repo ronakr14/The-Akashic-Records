@@ -1,10 +1,19 @@
 ---
-type: concept
+domain: Programming
+domain_suggested: null
+category: Curated
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [python, environment, virtualenv, tags, venv]
 ---
+
+
+
 
 ```table-of-contents
 ```
-##tags #python #environment #venv #uv #poetry #windows #version-management
+
 
 Managing multiple Python versions and isolated environments. This note covers Windows + MSYS/bash workflows.
 

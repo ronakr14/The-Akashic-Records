@@ -1,8 +1,17 @@
 ---
-type: concept
+domain: Data Engineering
+domain_suggested: null
+category: Curated
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [etl, elt, data-integration, dataengineering, data-pipeline]
 ---
 
-#etl #elt #dataengineering #data-pipeline #interview-prep
+
+
+
+
 
 ```table-of-contents
 ```

@@ -1,6 +1,15 @@
 ---
-type: project
+domain: Programming
+domain_suggested: null
+category: Snippet
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [implementation, planning, lakemind]
 ---
+
+
+
 
 # Lakehouse Optimizer — Fresh Implementation Plan
 

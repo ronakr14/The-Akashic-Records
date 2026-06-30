@@ -1,16 +1,15 @@
 ---
-type: project
-tags:
-  - cli2api
-  - project
-  - plugins
-  - middleware
-  - extensibility
-related:
-  - "[[02 Architecture]]"
-  - "[[04 Enhancements Included]]"
-  - "[[06 Constraints]]"
+domain: Programming
+domain_suggested: null
+category: Snippet
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [xpose, plugins, extensibility]
 ---
+
+
+
 
 # Plugins That Can Be Added
 

@@ -1,6 +1,15 @@
 ---
-type: concept
+domain: AI
+domain_suggested: null
+category: Curated
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [llm, interaction, guide]
 ---
+
+
+
 
 Looking at this conversation and the broader pattern in your recent discussions, you're already using ChatGPT more like a technical architect than a casual user. The biggest gains won't come from asking "better questions"; they'll come from structuring the interaction differently.
 

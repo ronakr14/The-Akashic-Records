@@ -1,5 +1,14 @@
 ---
-type: concept
+category: referral
+category_suggested: null
+domain: Data Engineering
+domain_suggested: null
+source_type: obsidian
+status: review
+tags:
+- delta-lake
+- iceberg
+- table-format
 ---
 
 # Delta Lake & Iceberg

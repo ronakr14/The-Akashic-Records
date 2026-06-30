@@ -1,8 +1,17 @@
 ---
-type: concept
+domain: Data Engineering
+domain_suggested: null
+category: Curated
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [partitioning, data-engineering, performance, distributed-systems, database]
 ---
 
-#data-engineering #partitioning #distributed-systems #database #lakehouse #duckdb #postgresql #databricks
+
+
+
+
 
 ```table-of-contents
 ```

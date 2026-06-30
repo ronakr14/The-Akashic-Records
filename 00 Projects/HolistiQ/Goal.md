@@ -1,3 +1,16 @@
+---
+domain: Programming
+domain_suggested: null
+category: Snippet
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [holistiq, goal, project]
+---
+
+
+
+
 One tool to rule them all.
 Currently include.
 1. Test execution framework - custom made similar to pytest

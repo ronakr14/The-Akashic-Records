@@ -1,6 +1,15 @@
 ---
-type: concept
+domain: Data Engineering
+domain_suggested: null
+category: Curated
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [idempotency, data-processing, reliability]
 ---
+
+
+
 
 ```table-of-contents
 ```

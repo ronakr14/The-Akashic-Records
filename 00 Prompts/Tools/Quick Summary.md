@@ -1,12 +1,15 @@
 ---
-type: concept
-description: 3–4 line decision-focused summary of a tool — best use case + one alternative. For fast triage.
-use_when: When you need a 30-second verdict on whether a tool fits.
-inputs: [tool name]
-outputs: best-use-case + alternative (≤4 lines total)
-related: [[Deep Dive]]
-tags: [prompt, tools, decision, triage]
+domain: AI
+domain_suggested: null
+category: Curated
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [tool, summary, prompt]
 ---
+
+
+
 ```table-of-contents
 ```
 You are an expert AI assistant that provides highly concise, decision-focused insights.

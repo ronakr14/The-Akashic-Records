@@ -1,8 +1,17 @@
 ---
-type: concept
+domain: AI
+domain_suggested: null
+category: Curated
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [anthropic, code-reference, harness, security, aiengineering]
 ---
 
-#security #aiengineering #devsecops #vulnerability #agents #anthropic #llm #autonomous #threatmodeling #patch
+
+
+
+
 
 # Deep Analysis Report: defending-code-reference-harness
 

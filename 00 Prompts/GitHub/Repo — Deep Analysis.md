@@ -1,12 +1,15 @@
 ---
-type: concept
-description: 15-section deep analysis of any GitHub repository — exec summary, architecture, enterprise evaluation, interview prep.
-use_when: When evaluating a repo for adoption, study, or interview prep.
-inputs: [repo URL]
-outputs: 15-section report (exec summary, architecture, evaluation, comparison, takeaways, interview Qs)
-related: [[Profile — README Rewrite]]
-tags: [prompt, github, repo-analysis, evaluation, interview]
+domain: AI
+domain_suggested: null
+category: Curated
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [github, repository, analysis, prompt]
 ---
+
+
+
 ```table-of-contents
 ```
 You are a senior software architect, technical writer, and engineering manager.

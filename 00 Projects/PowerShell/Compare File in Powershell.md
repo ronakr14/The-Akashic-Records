@@ -1,8 +1,17 @@
 ---
-type: project
+domain: Operations
+domain_suggested: null
+category: Snippet
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [powershell, file-comparison, scripting, diff, compare]
 ---
 
-#powershell #diff #compare #filehash #git #cli
+
+
+
+
 
 ```table-of-contents
 ```

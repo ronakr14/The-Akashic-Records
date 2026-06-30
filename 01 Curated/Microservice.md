@@ -1,8 +1,17 @@
 ---
-type: concept
+domain: Data Engineering
+domain_suggested: null
+category: Curated
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [microservices, architecture, distributed, distributed-systems, api-gateway]
 ---
 
-#microservices #distributed-systems #architecture #api-gateway #fault-tolerance #observability #kubernetes
+
+
+
+
 
 ```table-of-contents
 ```

@@ -1,8 +1,17 @@
 ---
-type: concept
+domain: AI
+domain_suggested: null
+category: Curated
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [llm, router, agent, bitrouter, routing]
 ---
 
-#llm #routing #gateway #rust #agent-infrastructure #mcp #cost-optimization
+
+
+
+
 
 ```table-of-contents
 ```

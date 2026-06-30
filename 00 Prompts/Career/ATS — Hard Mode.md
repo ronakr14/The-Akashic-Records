@@ -1,12 +1,15 @@
 ---
-type: concept
-description: Hard-mode ATS prompts — resume autopsy, achievement translator, keyword injector, pivot reframing, one-page cuts.
-use_when: When a CV is getting filtered before human review.
-inputs: [resume, JD (optional), pivot story (optional)]
-outputs: ATS failure report, rewritten bullets with X-by-Y-by-Z formula, keyword-injected resume, pivot reframing, trimmed 1-page version
-related: [[Resume — Optimization]]
-tags: [prompt, career, ats, brutal, pivot, rewrite]
+domain: AI
+domain_suggested: null
+category: Curated
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [ats, career, resume, prompt]
 ---
+
+
+
 ```table-of-contents
 ```
 

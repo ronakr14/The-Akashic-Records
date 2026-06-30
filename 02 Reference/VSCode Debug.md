@@ -1,5 +1,14 @@
 ---
-type: concept
+category: referral
+category_suggested: null
+domain: Programming
+domain_suggested: null
+source_type: obsidian
+status: review
+tags:
+- vscode
+- debugging
+- python
 ---
 
 ```table-of-contents

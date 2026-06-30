@@ -1,3 +1,16 @@
+---
+domain: Programming
+domain_suggested: null
+category: Snippet
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [knowledge-os, goal, project]
+---
+
+
+
+
 - **Knowledge Graph**
     - Automatically discover relationships between concepts, ADRs, projects, people, and technologies.
     - Generate dependency graphs.

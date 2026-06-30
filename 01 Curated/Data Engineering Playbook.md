@@ -1,8 +1,17 @@
 ---
-type: concept
+domain: Data Engineering
+domain_suggested: null
+category: Curated
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [data-engineering, playbook, best-practices, interview, fundamentals]
 ---
 
-#data-engineering #interview #fundamentals #ingestion #storage #processing #governance
+
+
+
+
 
 # Data Engineering — 15 Core Truths
 

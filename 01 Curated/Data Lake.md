@@ -1,10 +1,19 @@
 ---
-type: concept
+domain: Data Engineering
+domain_suggested: null
+category: Curated
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [data-lake, architecture, storage, tags, data-engineering]
 ---
+
+
+
 
 ```table-of-contents
 ```
-##tags #data-engineering #storage #architecture #data-warehouse #lakehouse #governance #hadoop
+
 
 A **data lake** is a centralized storage repository that holds **large amounts of raw data** in its original format until it is needed.
 

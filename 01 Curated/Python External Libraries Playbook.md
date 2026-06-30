@@ -1,13 +1,20 @@
 ---
-type: concept
+domain: Programming
+domain_suggested: null
+category: Curated
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [python, libraries, packaging, pip, poetry]
 ---
 
-#python #packaging #pip #poetry #pyproject-toml
+
+
+
+
 
 ```table-of-contents
 ```
-
-# Python External Libraries Playbook
 
 ## Install from Local Path
 

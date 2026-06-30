@@ -70,5 +70,41 @@
   "Level 1: Fundamentals": {
     "surfaced_count": 1,
     "last_surfaced": "2026-06-26"
+  },
+  "DuckDB": {
+    "surfaced_count": 1,
+    "last_surfaced": "2026-06-29"
+  },
+  "Architecture": {
+    "surfaced_count": 1,
+    "last_surfaced": "2026-06-29"
+  },
+  "LakeHouse": {
+    "surfaced_count": 1,
+    "last_surfaced": "2026-06-29"
+  },
+  "Summary": {
+    "surfaced_count": 1,
+    "last_surfaced": "2026-06-30"
+  },
+  "Integration with Rich": {
+    "surfaced_count": 1,
+    "last_surfaced": "2026-06-30"
+  },
+  "Partitioning": {
+    "surfaced_count": 1,
+    "last_surfaced": "2026-06-30"
+  },
+  "Incremental Load Strategy": {
+    "surfaced_count": 1,
+    "last_surfaced": "2026-06-30"
+  },
+  "Integration with Argparse": {
+    "surfaced_count": 1,
+    "last_surfaced": "2026-06-30"
+  },
+  "System Design": {
+    "surfaced_count": 1,
+    "last_surfaced": "2026-06-30"
   }
 }

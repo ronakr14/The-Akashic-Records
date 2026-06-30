@@ -1,6 +1,15 @@
 ---
-type: project
+domain: AI
+domain_suggested: null
+category: Snippet
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [runtime-prediction, batch-processing, ml]
 ---
+
+
+
 
 # Objective
 Design a system capable of predicting batch job runtime before execution using historical telemetry, workload characteristics, and infrastructure metrics.

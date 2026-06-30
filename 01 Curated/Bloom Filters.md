@@ -1,8 +1,17 @@
 ---
-type: concept
+domain: Data Engineering
+domain_suggested: null
+category: Curated
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [bloom-filter, data-skipping, parquet, data-structures, probabilistic]
 ---
 
-#bloom-filter #data-structures #probabilistic #parquet #data-engineering #data-skipping
+
+
+
+
 
 ```table-of-contents
 ```

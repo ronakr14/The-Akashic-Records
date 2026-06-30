@@ -1,8 +1,17 @@
 ---
-type: concept
+domain: Data Engineering
+domain_suggested: null
+category: Curated
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [monolithic, architecture, systems, data-engineering, monolith]
 ---
 
-#data-engineering #monolith #architecture #reference
+
+
+
+
 
 ```table-of-contents
 ```

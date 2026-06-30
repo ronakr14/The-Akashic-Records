@@ -1,8 +1,17 @@
 ---
-type: question
+domain: Data Engineering
+domain_suggested: null
+category: Learning
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [microservices, interview, distributed-systems, architecture]
 ---
 
-#microservices #interview #distributed-systems #architecture
+
+
+
+
 
 # Microservices — Interview Questions
 

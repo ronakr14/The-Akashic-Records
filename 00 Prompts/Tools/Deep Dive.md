@@ -1,12 +1,15 @@
 ---
-type: concept
-description: Deep, opinionated architectural breakdown of a tool, framework, or platform — tradeoffs, alternatives, build-from-scratch path.
-use_when: Before adopting a new tool, evaluating alternatives, or writing a tech-rationale doc.
-inputs: [tool name]
-outputs: 9-section architectural analysis
-related: [[Quick Summary]]
-tags: [prompt, tools, architecture, evaluation]
+domain: AI
+domain_suggested: null
+category: Curated
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [tool, architecture, evaluation, prompt]
 ---
+
+
+
 ```table-of-contents
 ```
 

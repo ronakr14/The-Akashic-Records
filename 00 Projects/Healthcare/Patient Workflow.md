@@ -1,6 +1,15 @@
 ---
-type: project
+domain: Programming
+domain_suggested: null
+category: Snippet
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [healthcare, workflow, patient]
 ---
+
+
+
 
 1. OPD: Patient Registration -> Appointment -> Check-In-> Consultation -> Lab Order -> Lab Result -> Prescription -> Pharmacy -> Billing -> Insurance Claim -> Discharge
 2. Emergency: Emergency Admission -> Triage -> ICU -> Treatment -> Discharge

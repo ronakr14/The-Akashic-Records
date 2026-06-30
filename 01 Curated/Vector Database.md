@@ -1,8 +1,17 @@
 ---
-type: concept
+domain: Data Engineering
+domain_suggested: null
+category: Curated
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [vector-database, embeddings, similarity, rag, search]
 ---
 
-#vector-database #rag #embeddings #search #ai #dataengineering
+
+
+
+
 
 ```table-of-contents
 ```

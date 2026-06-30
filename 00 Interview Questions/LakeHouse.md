@@ -1,6 +1,15 @@
 ---
-type: question
+domain: Data Engineering
+domain_suggested: null
+category: Learning
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [lakehouse, interview, data-architecture]
 ---
+
+
+
 
 ```table-of-contents
 ```

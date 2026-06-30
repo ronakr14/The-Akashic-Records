@@ -1,12 +1,15 @@
 ---
-type: concept
-description: Five-section Claude checklist for auditing a LinkedIn profile — photo, banner, headline, featured, about.
-use_when: When auditing or rewriting a LinkedIn profile from scratch.
-inputs: [profile photo, banner, headline, featured links, about section]
-outputs: per-section audit checklist + rewritten headline / about suggestions
-related: [[Resume — Optimization]]
-tags: [prompt, career, linkedin, branding, profile-audit]
+domain: AI
+domain_suggested: null
+category: Curated
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [linkedin, career, prompt]
 ---
+
+
+
 ```table-of-contents
 ```
 Five-section Claude checklist for auditing a LinkedIn profile: photo, banner, headline, featured, about.

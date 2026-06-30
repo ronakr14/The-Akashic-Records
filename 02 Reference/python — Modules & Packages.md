@@ -1,8 +1,17 @@
 ---
-type: concept
+domain: Programming
+domain_suggested: null
+category: Reference
+category_suggested: null
+source_type: obsidian
+status: review
+tags: [python, modules, packages, imports, dataengineering]
 ---
 
-#python #modules #packages #imports #dataengineering
+
+
+
+
 
 ```table-of-contents
 ```

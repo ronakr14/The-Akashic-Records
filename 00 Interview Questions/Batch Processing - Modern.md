@@ -1,5 +1,14 @@
 ---
-type: question
+category: Learning
+category_suggested: null
+domain: Data Engineering
+domain_suggested: null
+source_type: obsidian
+status: review
+tags:
+- batch-processing
+- interview
+- data-engineering
 ---
 
 ```table-of-contents
@@ -62,7 +71,7 @@ Lineage = graph of where data came from, what transformed it, and where it went.
   * Compliance — "where did this PII flow?"
   * Cost attribution — "which downstream dashboards depend on this expensive pipeline?"
 * **Failure modes** — declared lineage that drifts from reality; missing column-level granularity; lineage for legacy jobs you can't instrument.
-Refer: [[Data Lineage]]
+Refer: 
 
 ## Compare modern orchestrators: Airflow vs Dagster vs Prefect vs Spark declarative.
 | Dimension | Airflow | Dagster | Prefect | Spark Declarative |
