@@ -316,4 +316,4 @@ A strong answer touches almost every major microservices concept: domain design,
 - [[Monolithic System]] — when monoliths win
 - [[Distributed System]] — distributed systems foundations
 - [[Idempotency]] — idempotency in service communication
-- [[Partitioning]] — data partitioning in microservices
+- [[00 Interview Questions/Partitioning]] — data partitioning in microservices

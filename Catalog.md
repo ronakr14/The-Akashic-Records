@@ -3,7 +3,7 @@ category: referral
 category_suggested: null
 domain: Data Engineering
 domain_suggested: null
-source_type: obsidian
+src_type: obsidian
 status: review
 tags:
 - catalog

@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "a1da9c5a82b2a23f",
+        "id": "aba5860684a93ad3",
         "type": "tabs",
         "children": [
           {
-            "id": "a8069a0204b4edef",
+            "id": "16e754cb61e34625",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00 Interview Questions/Batch Processing - Modern.md",
+                "file": "00 Prompts/Tools/Quick Summary.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,10 +28,21 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Batch Processing - Modern"
+              "title": "Quick Summary"
+            }
+          },
+          {
+            "id": "6e05c7674be2cbc0",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -74,13 +85,11 @@
               "title": "Search"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 265.5,
-    "collapsed": true
+    "width": 265.5
   },
   "right": {
     "id": "7c51cdc979815380",
@@ -194,7 +203,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 763.5
+    "width": 414.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -212,34 +221,34 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a8069a0204b4edef",
+  "active": "6e05c7674be2cbc0",
   "lastOpenFiles": [
-    "Data Lineage.md",
-    "DAGs.md",
-    "02 Reference/VSCode Debug.md",
-    "03 Career Vault/Open Questions/README.md",
-    "03 Career Vault/Incidents & Postmortems/README.md",
-    "00 Prompts/README.md",
-    "03 Career Vault/README.md",
-    "README.md",
-    "01 Curated/OpenSpec.md",
+    "02 Reference/ELT.md",
+    "Pandas.md",
+    "00 Prompts/Tools/Quick Summary.md",
+    "00 Prompts/Tools/Deep Dive.md",
     "Catalog.md",
-    "2026-06-30.md",
-    "03 Career Vault/ADRs/Bloom Filters — Row Group Pruning.md",
-    "Storage Tracker.md",
     "CLAUDE.md",
-    "00 Daily Review/2026-06-30.md",
-    "00 Interview Questions/Query Optimization.md",
-    "00 Interview Questions/Partitioning.md",
-    "00 Interview Questions/Incremental Processing.md",
+    "Storage Tracker.md",
+    "Apache Hudi.md",
     "00 Interview Questions/Fundamentals.md",
-    "00 Interview Questions/Batch Processing - Advance.md",
-    "00 Interview Questions/Batch Processing - Modern.md",
-    "00 Interview Questions/Data Quality.md",
-    "00 Projects/LakeMind/Untitled 46.md",
-    "02 Reference/Delta Lake & Iceberg.md",
-    "03 Career Vault/ADRs/README.md",
-    "01 Curated/Python External Libraries Playbook.md",
+    "02 Reference/ETL.md",
+    "02 Reference/Batch Processing.md",
+    "Batch pipeline design patterns.md",
+    "02 Reference/Anthropic - Defending Code Reference Harness.md",
+    "02 Reference/Agentic Resource Discovery.md",
+    "02 Reference/9Router.md",
+    "02 Reference/Tailscale.md",
+    "02 Reference/Dockpeek.md",
+    "00 Prompts/GitHub/Repo — Deep Analysis.md",
+    "02 Reference/Knowledge Catalog.md",
+    "02 Reference/Ornith.md",
+    "02 Reference/Himalaya.md",
+    "02 Reference/Portkey.md",
+    "02 Reference/Honcho.md",
+    "02 Reference/Task.md",
+    "02 Reference/Just.md",
+    "02 Reference/Just.md",
     "00 Projects/Knowledge OS/vault_parser.py",
     "00 Projects/Knowledge OS/schema/note_metadata.json",
     "00 Projects/Knowledge OS/tests",

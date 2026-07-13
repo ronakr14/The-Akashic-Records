@@ -53,7 +53,7 @@ The note is an interview-prep answer on what breaks when partitions grow too lar
   query selectivity.
 
 ## See Also
-- [[Partitioning]] — partitioning strategy deep-dive
+- [[00 Interview Questions/Partitioning]] — partitioning strategy deep-dive
 - [[Delta Lake's OPTIMIZE]] — file compaction in Delta Lake
 - [[Idempotency]] — making partition-scoped reruns safe
 - [[Parquet]] — Parquet format details

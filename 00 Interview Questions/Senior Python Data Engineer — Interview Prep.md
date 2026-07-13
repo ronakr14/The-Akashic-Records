@@ -505,7 +505,7 @@ Records arriving > 2 hours after window end = dropped. Watermark-vs-completeness
 
 ## See Also
 - [[System Design]]
-- [[Partitioning]]
+- [[00 Interview Questions/Partitioning]]
 - [[Fundamentals]]
 - [[Data Modelling]]
 - [[Reliability Engineering]]

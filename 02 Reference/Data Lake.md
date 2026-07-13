@@ -231,7 +231,7 @@ Data scientists use the silver/gold layers for ML models. Analysts query gold vi
 
 - [[Delta Lake & Iceberg]] — table format comparison
 - [[Data Mesh]] — decentralized data architecture alternative
-- [[Partitioning]] — file organization within a lake
+- [[02 Reference/Partitioning]] — file organization within a lake
 - [[Parquet]] — columnar format used in lake storage
 - [[Distributed System]] — horizontal scaling fundamentals
 - [[Data Modelling]] — dimensional and analytical modeling patterns
