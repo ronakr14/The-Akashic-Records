@@ -4,45 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "aba5860684a93ad3",
+        "id": "39a053cc5698fcfd",
         "type": "tabs",
         "children": [
           {
-            "id": "16e754cb61e34625",
+            "id": "f541c00e338eb972",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "00 Prompts/Tools/Quick Summary.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Quick Summary"
-            }
-          },
-          {
-            "id": "6e05c7674be2cbc0",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
+              "type": "empty",
               "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -221,7 +196,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6e05c7674be2cbc0",
+  "active": "c4a0399f57f93a64",
   "lastOpenFiles": [
     "02 Reference/ELT.md",
     "Pandas.md",
