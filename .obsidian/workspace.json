@@ -4,17 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "1e5391e7f24ece91",
+        "id": "ad4df81d625f0a1c",
         "type": "tabs",
         "children": [
           {
-            "id": "0d21aae0563962fd",
+            "id": "d4cb81adbbda072c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "00 Reference/00 Goal (2).md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "00 Goal (2)"
             }
           }
         ]
@@ -60,8 +74,7 @@
               "title": "Search"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -197,9 +210,12 @@
   },
   "active": "c4a0399f57f93a64",
   "lastOpenFiles": [
-    "01 Career Vault/README.md",
+    "2026-07-15.md",
     "00 Reference/00 Goal (2).md",
     "00 Reference/00 Goal.md",
+    "00 Reference/00 Proposal.md",
+    "00 Reference/1. Core Healthcare Platform.md",
+    "01 Career Vault/README.md",
     "00 Reference/9Router.md",
     "00 Reference/Catalog.md",
     "00 Reference/Bloom Filters — Row Group Pruning.md",
@@ -220,9 +236,6 @@
     "00 Reference/LakeHouse.md",
     "00 Reference/Incremental Processing.md",
     "00 Reference/Fundamentals.md",
-    "00 Reference/Data Quality.md",
-    "00 Reference/Batch Processing - Modern.md",
-    "00 Daily Review/2026-06-30.md",
     "00 Projects/Knowledge OS/vault_parser.py",
     "00 Projects/Knowledge OS/schema/note_metadata.json",
     "00 Projects/Knowledge OS/tests",
