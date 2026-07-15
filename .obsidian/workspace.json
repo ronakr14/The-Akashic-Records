@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "39a053cc5698fcfd",
+        "id": "1e5391e7f24ece91",
         "type": "tabs",
         "children": [
           {
-            "id": "f541c00e338eb972",
+            "id": "0d21aae0563962fd",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Data Lineage",
+                "query": "tag:#adr",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -60,7 +60,8 @@
               "title": "Search"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -166,11 +167,9 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {
-                "file": "00 Projects/expose/FastAPI CLI Decorator.md"
-              },
+              "state": {},
               "icon": "lucide-info",
-              "title": "File properties for FastAPI CLI Decorator"
+              "title": "File properties"
             }
           }
         ],
@@ -198,32 +197,32 @@
   },
   "active": "c4a0399f57f93a64",
   "lastOpenFiles": [
-    "02 Reference/ELT.md",
-    "Pandas.md",
-    "00 Prompts/Tools/Quick Summary.md",
-    "00 Prompts/Tools/Deep Dive.md",
-    "Catalog.md",
-    "CLAUDE.md",
-    "Storage Tracker.md",
-    "Apache Hudi.md",
-    "00 Interview Questions/Fundamentals.md",
-    "02 Reference/ETL.md",
-    "02 Reference/Batch Processing.md",
-    "Batch pipeline design patterns.md",
-    "02 Reference/Anthropic - Defending Code Reference Harness.md",
-    "02 Reference/Agentic Resource Discovery.md",
-    "02 Reference/9Router.md",
-    "02 Reference/Tailscale.md",
-    "02 Reference/Dockpeek.md",
-    "00 Prompts/GitHub/Repo — Deep Analysis.md",
-    "02 Reference/Knowledge Catalog.md",
-    "02 Reference/Ornith.md",
-    "02 Reference/Himalaya.md",
-    "02 Reference/Portkey.md",
-    "02 Reference/Honcho.md",
-    "02 Reference/Task.md",
-    "02 Reference/Just.md",
-    "02 Reference/Just.md",
+    "01 Career Vault/README.md",
+    "00 Reference/00 Goal (2).md",
+    "00 Reference/00 Goal.md",
+    "00 Reference/9Router.md",
+    "00 Reference/Catalog.md",
+    "00 Reference/Bloom Filters — Row Group Pruning.md",
+    "00 Reference/README.md",
+    "00 Reference/Deep Dive.md",
+    "00 Reference/Daily Note — Update.md",
+    "00 Reference/Profile — README Rewrite.md",
+    "00 Reference/ATS — Hard Mode.md",
+    "00 Reference/Repo — Deep Analysis.md",
+    "00 Reference/Batch Processing - Advance.md",
+    "00 Reference/01 Goal.md",
+    "00 Reference/2026-06-19_120000-datatest-automation.md",
+    "00 Reference/Compare File in Powershell.md",
+    "00 Reference/PKM Knowledge Refresh System – Review & Enhancements.md",
+    "00 Reference/Goal.md",
+    "00 Reference/BigSet.md",
+    "00 Reference/PAUL.md",
+    "00 Reference/LakeHouse.md",
+    "00 Reference/Incremental Processing.md",
+    "00 Reference/Fundamentals.md",
+    "00 Reference/Data Quality.md",
+    "00 Reference/Batch Processing - Modern.md",
+    "00 Daily Review/2026-06-30.md",
     "00 Projects/Knowledge OS/vault_parser.py",
     "00 Projects/Knowledge OS/schema/note_metadata.json",
     "00 Projects/Knowledge OS/tests",
