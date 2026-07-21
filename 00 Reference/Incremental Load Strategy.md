@@ -341,4 +341,4 @@ A very common follow-up interview question:
 - [[Debezium]]
 - [[Data Engineering]]
 - [[Apache Kafka]]
-- [[DuckDB]]
+- [[00 Reference/DuckDB]]

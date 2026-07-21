@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "ad4df81d625f0a1c",
+        "id": "0915a4d399aefb91",
         "type": "tabs",
         "children": [
           {
-            "id": "d4cb81adbbda072c",
+            "id": "c6aeb7a75fabbb8a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00 Reference/00 Goal (2).md",
+                "file": "CloakBrowser.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "00 Goal (2)"
+              "title": "CloakBrowser"
             }
           }
         ]
@@ -63,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#adr",
+                "query": "github repo",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -208,34 +208,34 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c4a0399f57f93a64",
+  "active": "c6aeb7a75fabbb8a",
   "lastOpenFiles": [
-    "2026-07-15.md",
-    "00 Reference/00 Goal (2).md",
-    "00 Reference/00 Goal.md",
-    "00 Reference/00 Proposal.md",
-    "00 Reference/1. Core Healthcare Platform.md",
-    "01 Career Vault/README.md",
-    "00 Reference/9Router.md",
-    "00 Reference/Catalog.md",
-    "00 Reference/Bloom Filters — Row Group Pruning.md",
-    "00 Reference/README.md",
-    "00 Reference/Deep Dive.md",
-    "00 Reference/Daily Note — Update.md",
-    "00 Reference/Profile — README Rewrite.md",
-    "00 Reference/ATS — Hard Mode.md",
     "00 Reference/Repo — Deep Analysis.md",
-    "00 Reference/Batch Processing - Advance.md",
-    "00 Reference/01 Goal.md",
-    "00 Reference/2026-06-19_120000-datatest-automation.md",
-    "00 Reference/Compare File in Powershell.md",
-    "00 Reference/PKM Knowledge Refresh System – Review & Enhancements.md",
-    "00 Reference/Goal.md",
-    "00 Reference/BigSet.md",
-    "00 Reference/PAUL.md",
-    "00 Reference/LakeHouse.md",
-    "00 Reference/Incremental Processing.md",
-    "00 Reference/Fundamentals.md",
+    "Milvus.md",
+    "2026-07-20.md",
+    "2026-07-21.md",
+    "FAISS.md",
+    "Hugging Face Accelerate.md",
+    "The Fuzz.md",
+    "Defending Code Reference Harness.md",
+    "Distributed Llama.md",
+    "CrowdLlama.md",
+    "SQLGlot.md",
+    "CloakBrowser.md",
+    "OpenHarness.md",
+    "Istio.md",
+    "Erlang.md",
+    "Mailfence.md",
+    "Go AgentX.md",
+    "Thunderbird.md",
+    "User Dialogs.md",
+    "MoonPdf.md",
+    "MailCore.md",
+    "Euria.md",
+    "MEGA.md",
+    "Tuta.md",
+    "Cryptee.md",
+    "Proton Drive.md",
     "00 Projects/Knowledge OS/vault_parser.py",
     "00 Projects/Knowledge OS/schema/note_metadata.json",
     "00 Projects/Knowledge OS/tests",

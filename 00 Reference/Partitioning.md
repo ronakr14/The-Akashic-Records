@@ -993,7 +993,7 @@ instead of creating hundreds of thousands of partitions.
 
 - [[Data Modelling]]
 - [[Delta Lake & Iceberg]]
-- [[DuckDB]]
+- [[00 Reference/DuckDB]]
 - [[Distributed Systems — Storage]]
 - [[Data Lake]]
 - [[Parquet]]

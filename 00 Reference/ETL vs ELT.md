@@ -129,6 +129,6 @@ If someone asks "Which is preferred today?"
 - [[Data Modelling]]
 - [[Data Engineering]]
 - [[Apache Spark]]
-- [[DuckDB]]
+- [[00 Reference/DuckDB]]
 - [[Medallion Architecture]]
 - [[Debezium]]

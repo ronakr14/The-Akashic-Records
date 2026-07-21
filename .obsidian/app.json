@@ -1,6 +1,6 @@
 {
   "focusNewTab": false,
-  "propertiesInDocument": "hidden",
+  "propertiesInDocument": "visible",
   "showLineNumber": true,
   "openBehavior": "daily",
   "newFileLocation": "root",
