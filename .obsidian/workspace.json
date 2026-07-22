@@ -13,9 +13,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MongoDB.md",
-                "mode": "source",
-                "source": true,
+                "file": "statusfile.md",
+                "mode": "preview",
+                "source": false,
                 "backlinks": true,
                 "backlinkOpts": {
                   "collapseAll": false,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "MongoDB"
+              "title": "statusfile"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 265.5,
-    "collapsed": true
+    "width": 265.5
   },
   "right": {
     "id": "7c51cdc979815380",
@@ -211,8 +210,11 @@
   },
   "active": "8da4bee9db18428a",
   "lastOpenFiles": [
-    "Database Skills.md",
+    "Untitled 2.md",
+    "statusfile.md",
+    "statusfile.md.tmp.19436.caa0b5554e7c",
     "MongoDB.md",
+    "Database Skills.md",
     "Neon.md",
     "Archon.md",
     "AutoHedge.md",
@@ -225,7 +227,6 @@
     "Atlas OS.md",
     "Onyx.md",
     "00 Reference/User Dialogs.md",
-    "Untitled 2.md",
     "00 Reference/The Fuzz.md",
     "00 Reference/SQLGlot.md",
     "Storage Tracker.md",
@@ -236,7 +237,6 @@
     "00 Reference/Milvus.md",
     "2026-07-20.md",
     "2026-07-21.md",
-    "00 Reference/FAISS.md",
     "00 Projects/Knowledge OS/vault_parser.py",
     "00 Projects/Knowledge OS/schema/note_metadata.json",
     "00 Projects/Knowledge OS/tests",
@@ -245,7 +245,6 @@
     "00 Projects/Knowledge OS/akashic_engine.py",
     "00 Projects/Knowledge OS/agents/dispatcher.py",
     "00 Projects/Knowledge OS/agents/project_reviewer.py",
-    "00 Projects/Knowledge OS/agents/data_mentor.py",
-    "00 Projects/Knowledge OS/agents/pkm_curator.py"
+    "00 Projects/Knowledge OS/agents/data_mentor.py"
   ]
 }
