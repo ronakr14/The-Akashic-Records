@@ -1,3 +1,6 @@
+# AI Summary
+None. Tailored cover letters with strong hooks and closers
+
 ```table-of-contents
 ```
 Tailored cover letters with strong hooks and closers.

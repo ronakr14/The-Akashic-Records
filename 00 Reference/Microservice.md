@@ -1,3 +1,6 @@
+# AI Summary
+Microservices. A microservice is a small, independent application responsible for one business capability. Microservices organize systems around **business domains** rather than technical layers
+
 ```table-of-contents
 ```
 

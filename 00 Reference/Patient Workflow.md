@@ -1,3 +1,6 @@
+# AI Summary
+None. 1. OPD: Patient Registration -> Appointment -> Check-In-> Consultation -> Lab Order -> Lab Result -> Prescription -> Pharmacy -> Billing -> Insurance Claim -> Discharge
+
 ```table-of-contents
 ```
 

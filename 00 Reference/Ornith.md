@@ -1,3 +1,6 @@
+# AI Summary
+None. Here’s a deep, architecture-style readout of the repo, based on the repository contents and README currently published on GitHub. The project is mostly a model release and serving guide rather than a traditional application codebase, so some “components” are repository sections and runtime ...
+
 ```table-of-contents
 ```
 

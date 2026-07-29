@@ -1,3 +1,6 @@
+# AI Summary
+Let's Use a Real Example. **ETL:** Clean the data first, then store it
+
 ```table-of-contents
 ```
 

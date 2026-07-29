@@ -1,9 +1,7 @@
-```table-of-contents
-```
 
 # Integration with Typer
 
-> See also: [[04 Enhancements Included#7. CLI + API Dual Mode]] | [[09 Integration with Rich]] | [[10 Examples of Use]]
+> See also: [[cli2api Feature Roadmap and Enhancements#7. CLI + API Dual Mode]] | [[09 Integration with Rich]] | [[10 Examples of Use]]
 
 ## Why Typer?
 
@@ -219,3 +217,232 @@ Typer handles:
 - Help: `cli2api add --help`
 
 All automatic from the function signature.
+
+
+```yaml
+title: cli2api Integration with Typer
+
+folder: Projects/cli2api/Integrations
+
+categorical:
+  domain:
+    value: software-engineering
+    reason: Describes integration of cli2api with an external developer framework (Typer).
+
+  subdomain: cli-framework
+
+  note_type:
+    value: technology
+    reason: Explains how cli2api integrates with Typer, including architecture, implementation, and usage patterns.
+
+  source_type:
+    value: self
+    reason: Self-authored integration guide.
+
+  status:
+    value: curated
+    reason: Stable reference documentation for one of the supported execution surfaces.
+
+  level:
+    value: advanced
+    reason: Covers registry-driven command generation, unified execution pipelines, CLI architecture, plugins, async execution, and packaging.
+
+ratings:
+  confidence:
+    score: 5
+    reason: Self-authored technical documentation.
+
+  completeness:
+    score: 5
+    reason: Covers motivation, implementation, execution flow, advanced usage, subcommands, shell completion, and error handling.
+
+  complexity:
+    score: 4
+    reason: Requires understanding of Typer, FastAPI, decorators, registries, and execution pipelines, but is focused on one integration.
+
+  importance:
+    score: 4
+    reason: CLI is a primary execution surface of cli2api, although the framework itself remains the central concern.
+
+  career_relevance:
+    score: 5
+    reason: Demonstrates experience with Python developer tooling, CLI frameworks, framework design, and reusable execution platforms.
+
+  freshness:
+    score: 5
+    reason: Uses modern Python tooling and registry-driven command generation patterns.
+
+  reusability:
+    score: 5
+    reason: The integration approach can be reused for other Python frameworks exposing both CLI and API interfaces.
+
+  review_priority:
+    score: 3
+    reason: Update when the CLI architecture or execution pipeline changes.
+
+  connectedness:
+    score: 5
+    reason: Connects Goal, Enhancements, Examples, execution pipeline, registry, plugins, and packaging into a single integration guide.
+
+  actionability:
+    score: 5
+    reason: Contains implementation steps, code examples, configuration guidance, and architectural patterns ready for development.
+
+  quality_score:
+    score: 98
+    reason: Complete integration guide that explains both implementation and design rationale while remaining consistent with the project's architecture.
+
+custom:
+  tags:
+    - cli2api
+    - typer
+    - cli
+    - integration
+    - python
+
+ai_summary: >
+  Describes how cli2api integrates with Typer to expose registered functions as command-line interfaces without duplicating business logic. The guide explains registry-based command generation, unified API and CLI execution, packaging, plugin behavior in CLI mode, asynchronous task execution, command grouping, shell completion, and the shared execution pipeline that ensures consistent behavior across CLI, REST API, and background workers. The integration preserves the principle that function signatures remain the single source of truth for validation and execution. :contentReference[oaicite:0]{index=0}
+```
+
+### Classification note
+
+I classified this as **`technology`** instead of **`architecture`** because this note is about integrating a **specific external technology (Typer)** into the cli2api framework.
+
+I would organize your project like this:
+
+```text
+Projects/
+└── cli2api/
+    ├── 00 README.md
+    ├── 01 Goal.md
+    ├── 02 Architecture.md
+    ├── 03 Steps to Implement.md
+    ├── 04 Enhancements.md
+    ├── 05 Plugin Architecture.md
+    ├── 06 Design Principles.md
+    ├── Integrations/
+    │   ├── Typer.md
+    │   ├── Argparse.md
+    │   ├── Rich.md
+    │   ├── FastAPI.md        (future)
+    │   ├── Celery.md         (future)
+    │   └── n8n.md            (future)
+    ├── Examples/
+    └── ADR/
+```
+
+Once you have multiple integrations (Typer, Rich, Argparse, Celery, n8n, etc.), keeping them under an **`Integrations/`** folder will scale much better than having them numbered at the project root.
+
+```yaml
+title: cli2api Integration with Typer
+
+folder: Projects/cli2api/Integrations
+
+categorical:
+  domain:
+    value: software-engineering
+    reason: Describes integration of cli2api with an external developer framework (Typer).
+
+  subdomain: cli-framework
+
+  note_type:
+    value: technology
+    reason: Explains how cli2api integrates with Typer, including architecture, implementation, and usage patterns.
+
+  source_type:
+    value: self
+    reason: Self-authored integration guide.
+
+  status:
+    value: curated
+    reason: Stable reference documentation for one of the supported execution surfaces.
+
+  level:
+    value: advanced
+    reason: Covers registry-driven command generation, unified execution pipelines, CLI architecture, plugins, async execution, and packaging.
+
+ratings:
+  confidence:
+    score: 5
+    reason: Self-authored technical documentation.
+
+  completeness:
+    score: 5
+    reason: Covers motivation, implementation, execution flow, advanced usage, subcommands, shell completion, and error handling.
+
+  complexity:
+    score: 4
+    reason: Requires understanding of Typer, FastAPI, decorators, registries, and execution pipelines, but is focused on one integration.
+
+  importance:
+    score: 4
+    reason: CLI is a primary execution surface of cli2api, although the framework itself remains the central concern.
+
+  career_relevance:
+    score: 5
+    reason: Demonstrates experience with Python developer tooling, CLI frameworks, framework design, and reusable execution platforms.
+
+  freshness:
+    score: 5
+    reason: Uses modern Python tooling and registry-driven command generation patterns.
+
+  reusability:
+    score: 5
+    reason: The integration approach can be reused for other Python frameworks exposing both CLI and API interfaces.
+
+  review_priority:
+    score: 3
+    reason: Update when the CLI architecture or execution pipeline changes.
+
+  connectedness:
+    score: 5
+    reason: Connects Goal, Enhancements, Examples, execution pipeline, registry, plugins, and packaging into a single integration guide.
+
+  actionability:
+    score: 5
+    reason: Contains implementation steps, code examples, configuration guidance, and architectural patterns ready for development.
+
+  quality_score:
+    score: 98
+    reason: Complete integration guide that explains both implementation and design rationale while remaining consistent with the project's architecture.
+
+custom:
+  tags:
+    - cli2api
+    - typer
+    - cli
+    - integration
+    - python
+
+ai_summary: >
+  Describes how cli2api integrates with Typer to expose registered functions as command-line interfaces without duplicating business logic. The guide explains registry-based command generation, unified API and CLI execution, packaging, plugin behavior in CLI mode, asynchronous task execution, command grouping, shell completion, and the shared execution pipeline that ensures consistent behavior across CLI, REST API, and background workers. The integration preserves the principle that function signatures remain the single source of truth for validation and execution. :contentReference[oaicite:0]{index=0}
+```
+
+### Classification note
+
+I classified this as **`technology`** instead of **`architecture`** because this note is about integrating a **specific external technology (Typer)** into the cli2api framework.
+
+I would organize your project like this:
+
+```text
+Projects/
+└── cli2api/
+    ├── 00 README.md
+    ├── 01 Goal.md
+    ├── 02 Architecture.md
+    ├── 03 Steps to Implement.md
+    ├── 04 Enhancements.md
+    ├── 05 Plugin Architecture.md
+    ├── 06 Design Principles.md
+    ├── Integrations/
+    │   ├── Typer.md
+    │   ├── Argparse.md
+    │   ├── Rich.md
+    │   ├── FastAPI.md        (future)
+    │   ├── Celery.md         (future)
+    │   └── n8n.md            (future)
+    ├── Examples/
+    └── ADR/
+```
+
+Once you have multiple integrations (Typer, Rich, Argparse, Celery, n8n, etc.), keeping them under an **`Integrations/`** folder will scale much better than having them numbered at the project root.

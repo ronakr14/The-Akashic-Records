@@ -1,5 +1,3 @@
-```table-of-contents
-```
 
 # DataTest Automation - Implementation Plan
 
@@ -535,3 +533,128 @@ Since this is a Databricks notebook-based framework, testing happens in two laye
 Build and validate each task locally (Tasks 1-7, 10-12 can run without Databricks). Then deploy to Databricks for integration testing (Tasks 8-9).
 
 Start with Task 1. Do not proceed to Task 8-9 until all LLM prompts and SQLite schema are locked.
+
+
+```yaml
+title: DataTest Forge Implementation Plan
+
+folder: Projects/DataTest Forge
+
+categorical:
+  domain:
+    value: data-engineering
+    reason: Describes the implementation of an LLM-powered data testing framework built for Databricks data pipelines.
+
+  subdomain: data-testing
+
+  note_type:
+    value: project
+    reason: This is a complete implementation roadmap with milestones, tasks, architecture, validation steps, and execution order.
+
+  source_type:
+    value: self
+    reason: Self-authored project implementation specification.
+
+  status:
+    value: active
+    reason: Documents the planned implementation and serves as the project's execution guide.
+
+  level:
+    value: advanced
+    reason: Covers architecture, Databricks integration, LLM prompting, SQLite control plane, execution engine, reporting, and deployment.
+
+ratings:
+  confidence:
+    score: 5
+    reason: Self-authored implementation plan.
+
+  completeness:
+    score: 5
+    reason: Defines architecture, implementation tasks, validation criteria, risks, build order, and documentation.
+
+  complexity:
+    score: 5
+    reason: Combines LLMs, Databricks, SQL generation, SQLite, execution orchestration, backup/restore, reporting, and HITL workflows.
+
+  importance:
+    score: 5
+    reason: Serves as the master implementation document for the entire project.
+
+  career_relevance:
+    score: 5
+    reason: Demonstrates advanced Data Engineering, AI-assisted automation, software architecture, testing frameworks, and platform engineering.
+
+  freshness:
+    score: 5
+    reason: Reflects the current intended architecture and implementation strategy.
+
+  reusability:
+    score: 4
+    reason: Many components (control plane, execution engine, prompt pipeline) can be reused in similar testing frameworks.
+
+  review_priority:
+    score: 5
+    reason: This is a living implementation roadmap that should be updated as development progresses.
+
+  connectedness:
+    score: 5
+    reason: Connects architecture, prompts, ingestion, execution, reporting, configuration, and documentation into a unified project.
+
+  actionability:
+    score: 5
+    reason: Every section contains concrete implementation tasks, verification steps, and deliverables.
+
+  quality_score:
+    score: 100
+    reason: Comprehensive implementation blueprint with clear objectives, dependencies, validation criteria, and execution order.
+
+custom:
+  tags:
+    - datatest-forge
+    - databricks
+    - data-testing
+    - llm
+    - automation
+    - sqlite
+    - claude
+    - qa
+    - project
+
+ai_summary: >
+  Master implementation roadmap for DataTest Forge, an LLM-powered data testing framework for Databricks. The project transforms Excel-based business requirements into structured specifications, automatically generates test cases, SQL assertions, and test data using Claude, executes tests safely through backup and restore mechanisms, and produces HTML reports. The document defines a three-phase architecture, SQLite control plane, Databricks execution engine, human-in-the-loop correction workflow, reporting system, validation strategy, implementation milestones, and recommended build order, serving as the primary execution guide for the project. :contentReference[oaicite:0]{index=0}
+```
+
+### I would make one small change
+
+Instead of:
+
+```yaml
+note_type: project
+```
+
+I'd introduce a dedicated type if you're going to have several documents like this:
+
+```yaml
+note_type: implementation-plan
+```
+
+or
+
+```yaml
+note_type: roadmap
+```
+
+Reason:
+
+- **Project** → "What is the project?"
+    
+- **Architecture** → "How is it designed?"
+    
+- **Implementation Plan** → "How will it be built?"
+    
+- **Examples** → "How is it used?"
+    
+- **ADR** → "Why were decisions made?"
+    
+
+For your PKM, `implementation-plan` is much more descriptive than `project` and makes it easier to distinguish execution plans from project overviews. If you expect to create similar implementation documents in future projects, I'd recommend adding `implementation-plan` as a first-class `note_type`.

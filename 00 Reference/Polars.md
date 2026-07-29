@@ -1,3 +1,6 @@
+# AI Summary
+Polars Deep Dive: An Architect's Perspective. Polars is not "a faster Pandas."
+
 ```table-of-contents
 ```
 

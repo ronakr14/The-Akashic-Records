@@ -1,3 +1,6 @@
+# AI Summary
+None. Below is a deep-dive report on **tobymao/sqlglot** based on the repository README, generated API docs, and project docs. The repo is very clearly a mature Python SQL transformation framework, not a toy parser. ([GitHub](https://github.com/tobymao/sqlglot "GitHub - tobymao/sqlglot: Python SQ...
+
 Below is a deep-dive report on **tobymao/sqlglot** based on the repository README, generated API docs, and project docs. The repo is very clearly a mature Python SQL transformation framework, not a toy parser. ([GitHub](https://github.com/tobymao/sqlglot "GitHub - tobymao/sqlglot: Python SQL Parser and Transpiler · GitHub"))
 
 ## 1. Executive Summary

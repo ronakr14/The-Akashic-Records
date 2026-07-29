@@ -1,3 +1,6 @@
+# AI Summary
+RAG Suggestions. Daily admissions
+
 ```table-of-contents
 ```
 

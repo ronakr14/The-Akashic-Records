@@ -1,3 +1,6 @@
+# AI Summary
+None. Here’s a deep, leadership-ready readout of **CloakHQ/CloakBrowser**
+
 Here’s a deep, leadership-ready readout of **CloakHQ/CloakBrowser**.
 
 ## 1. Executive Summary

@@ -1,3 +1,6 @@
+# AI Summary
+1. Executive Summary. Below is a deep, code-informed read of **repowise** based on the repository metadata, docs, package config, and generated glossary available in the repo. It looks like a real product, not a toy, but it is still labeled **alpha** in packaging terms, so I would treat it as **a...
+
 ```table-of-contents
 ```
 

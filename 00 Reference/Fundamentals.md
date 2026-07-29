@@ -1,3 +1,6 @@
+# AI Summary
+None. Pick for: cost signal, SLA signal, DQ signal, debuggability, anomaly detection. Order by leverage:
+
 ```table-of-contents
 ```
 ## If you could collect only 10 metrics from every batch job, which would you choose and why?

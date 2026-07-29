@@ -1,3 +1,6 @@
+# AI Summary
+None. How would you investigate?
+
 ```table-of-contents
 ```
 ## A Spark batch job slowed from 45 minutes to 3 hours.

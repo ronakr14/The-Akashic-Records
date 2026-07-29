@@ -1,3 +1,6 @@
+# AI Summary
+None. You are a senior software architect, technical writer, and engineering manager
+
 ```table-of-contents
 ```
 You are a senior software architect, technical writer, and engineering manager.

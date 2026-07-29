@@ -1,3 +1,6 @@
+# AI Summary
+None. Below is a deep, code-grounded analysis of **h4ckf0r0day/obscura**
+
 Below is a deep, code-grounded analysis of **h4ckf0r0day/obscura**.
 
 This is an aggressive, performance-oriented headless browser engine in Rust for AI agents and web scraping. The repo positions itself as a drop-in replacement for headless Chrome via CDP, Puppeteer, and Playwright compatibility, with a strong emphasis on speed, lower memory usage, and stealth/anti-detection features. The repository is large and active, with 308 commits and a multi-crate Rust workspace. ([GitHub](https://github.com/h4ckf0r0day/obscura?utm_source=chatgpt.com "h4ckf0r0day/obscura: The headless browser for AI agents ..."))

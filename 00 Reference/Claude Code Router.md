@@ -1,3 +1,6 @@
+# AI Summary
+None. I analyzed the repository at a high level using the public GitHub metadata and files I could inspect, but GitHub’s web UI only exposed part of the codebase text cleanly. So this is a strong architecture read, not a line-by-line static audit
+
 I analyzed the repository at a high level using the public GitHub metadata and files I could inspect, but GitHub’s web UI only exposed part of the codebase text cleanly. So this is a strong architecture read, not a line-by-line static audit.
 
 ## 1. Executive Summary

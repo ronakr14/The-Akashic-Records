@@ -1,3 +1,6 @@
+# AI Summary
+Repository Analysis: `ChristopherKahler/paul`. **What is this project?**
+
 ```table-of-contents
 ```
 

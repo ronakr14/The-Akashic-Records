@@ -1,3 +1,6 @@
+# AI Summary
+None. DuckDB is:
+
 ```table-of-contents
 ```
 

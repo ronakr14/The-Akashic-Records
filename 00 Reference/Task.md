@@ -1,3 +1,6 @@
+# AI Summary
+Repository Analysis: `go-task/task`. **What this project is**
+
 ```table-of-contents
 ```
 

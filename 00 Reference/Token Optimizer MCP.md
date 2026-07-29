@@ -1,3 +1,6 @@
+# AI Summary
+None. Below is a deep, architecture-focused analysis of **ooples/token-optimizer-mcp** based on the repository metadata, README-level documentation, changelog, MCP manifest, and installer script surfaced from GitHub. The repo presents itself as an MCP server for aggressively reducing context usag...
+
 Below is a deep, architecture-focused analysis of **ooples/token-optimizer-mcp** based on the repository metadata, README-level documentation, changelog, MCP manifest, and installer script surfaced from GitHub. The repo presents itself as an MCP server for aggressively reducing context usage in Claude Code / Claude Desktop workflows via caching, compression, and hook-driven tool interception. ([GitHub](https://github.com/ooples/token-optimizer-mcp "GitHub - ooples/token-optimizer-mcp: Intelligent token optimization for Claude Code - achieving 95%+ token reduction through caching, compression, and smart tool intelligence · GitHub"))
 
 ## 1. Executive Summary

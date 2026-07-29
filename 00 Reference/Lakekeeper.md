@@ -1,3 +1,6 @@
+# AI Summary
+None. Below is a deep, evidence-based readout of the `lakekeeper/lakekeeper` repository
+
 Below is a deep, evidence-based readout of the `lakekeeper/lakekeeper` repository.
 
 ## 1. Executive Summary

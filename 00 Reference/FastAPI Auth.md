@@ -1,3 +1,6 @@
+# AI Summary
+Authentication Options. Authentication in FastAPI depends on **who is calling your API**. There is no single "FastAPI auth." Instead, FastAPI provides building blocks, and you choose the appropriate authentication mechanism
+
 ```table-of-contents
 ```
 

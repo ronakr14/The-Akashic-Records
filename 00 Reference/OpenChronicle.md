@@ -1,3 +1,6 @@
+# AI Summary
+None. Below is a deep-dive report on **Einsia/OpenChronicle** based on the repository README, architecture docs, memory/session docs, troubleshooting guide, and package metadata. The repo is clearly positioned as a **local-first memory layer for tool-using AI agents** on macOS, with AX-tree captu...
+
 Below is a deep-dive report on **Einsia/OpenChronicle** based on the repository README, architecture docs, memory/session docs, troubleshooting guide, and package metadata. The repo is clearly positioned as a **local-first memory layer for tool-using AI agents** on macOS, with AX-tree capture, session-based compression, and Markdown + SQLite storage. ([GitHub](https://github.com/Einsia/OpenChronicle "GitHub - Einsia/OpenChronicle · GitHub"))
 
 ## 1. Executive Summary

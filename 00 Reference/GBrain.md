@@ -1,3 +1,6 @@
+# AI Summary
+None. I dug through the repo’s public docs and architecture notes, and this is a real system, not a toy README-with-vibes. It is a Git-backed “brain” for AI agents: a memory and knowledge layer that can run standalone or plug into agent platforms via MCP, with two storage engines (PGLite by defau...
+
 ```table-of-contents
 ```
 

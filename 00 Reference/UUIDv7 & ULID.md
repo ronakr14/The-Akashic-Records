@@ -1,3 +1,6 @@
+# AI Summary
+UUIDv7 & ULID. Traditional UUIDs (v4):
+
 # UUIDv7 & ULID
 
 ```table-of-contents

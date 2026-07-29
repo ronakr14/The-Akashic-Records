@@ -1,3 +1,6 @@
+# AI Summary
+None. I need to be straight with you: the repo URL you gave, `ONLYOFFICE/desktop-apps`, appears to be the frontend shell for ONLYOFFICE Desktop Editors, but GitHub search results and the repo page I could inspect are messy enough that I cannot safely claim a line-by-line source dive into the full...
+
 I need to be straight with you: the repo URL you gave, `ONLYOFFICE/desktop-apps`, appears to be the frontend shell for ONLYOFFICE Desktop Editors, but GitHub search results and the repo page I could inspect are messy enough that I cannot safely claim a line-by-line source dive into the full codebase without more file-level access. I can still give you a solid, architecture-level analysis grounded in the repo README and observable repo metadata. ([GitHub](https://github.com/ONLYOFFICE/desktop-apps "GitHub - ONLYOFFICE/desktop-apps: The frontend for ONLYOFFICE Desktop Editors which builds the program interface · GitHub"))
 
 ## 1. Executive Summary

@@ -1,3 +1,6 @@
+# AI Summary
+GoogleCloudPlatform/knowledge-catalog — Deep Repository Analysis. Below is a polished, leadership-friendly analysis of the repository
+
 ```table-of-contents
 ```
 

@@ -1,3 +1,6 @@
+# AI Summary
+Dask — A Practical, Architecture-Level Perspective. Dask occupies an interesting niche. It is **not a replacement for Spark**, **not just parallel Pandas**, and **not a distributed database**
+
 ```table-of-contents
 ```
 

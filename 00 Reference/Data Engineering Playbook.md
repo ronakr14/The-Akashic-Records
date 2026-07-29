@@ -1,3 +1,6 @@
+# AI Summary
+Data Engineering — 15 Core Truths. 1. **Batch vs Streaming**
+
 ```table-of-contents
 ```
 

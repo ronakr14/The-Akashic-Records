@@ -1,3 +1,6 @@
+# AI Summary
+None. Best use case: Semantic search and RAG pipelines — store embeddings to power similarity retrieval (docs, code, recommendations) at scale
+
 ```table-of-contents
 ```
 

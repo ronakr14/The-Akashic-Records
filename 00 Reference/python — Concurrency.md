@@ -1,3 +1,6 @@
+# AI Summary
+None. Three different approaches to **concurrency / parallelism** with different trade-offs:
+
 ```table-of-contents
 ```
 

@@ -1,3 +1,6 @@
+# AI Summary
+Quick & Dirty (Line-by-Line Diff). If you just want to know “what changed” between two text files:
+
 ```table-of-contents
 ```
 

@@ -1,3 +1,6 @@
+# AI Summary
+1. Executive Summary. I pulled the repo homepage and the key docs that describe the workflow. The project is a reference implementation for building a Claude-based vulnerability-finding pipeline, with a strong focus on threat modeling, sandboxing, discovery, verification, triage, and patching. It...
+
 I pulled the repo homepage and the key docs that describe the workflow. The project is a reference implementation for building a Claude-based vulnerability-finding pipeline, with a strong focus on threat modeling, sandboxing, discovery, verification, triage, and patching. It is explicitly positioned as an open-source reference that can be customized and used with Claude APIs across Anthropic, Bedrock, Vertex, or Azure. ([GitHub](https://github.com/anthropics/defending-code-reference-harness "GitHub - anthropics/defending-code-reference-harness: Skills for threat modeling, scanning, triage, patching, plus an autonomous scanning harness you can /customize · GitHub"))
 
 # 1. Executive Summary

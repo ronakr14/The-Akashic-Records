@@ -1,3 +1,6 @@
+# AI Summary
+None. Below is a deep architectural review of **HKUDS/OpenHarness**, based on the repository’s README, contribution guide, package metadata, directory layout, showcase docs, release notes, and recent repository activity. The repo is clearly active and evolving quickly, so this assessment reflects...
+
 Below is a deep architectural review of **HKUDS/OpenHarness**, based on the repository’s README, contribution guide, package metadata, directory layout, showcase docs, release notes, and recent repository activity. The repo is clearly active and evolving quickly, so this assessment reflects the current state exposed by GitHub as of today. ([GitHub](https://github.com/HKUDS/OpenHarness?utm_source=chatgpt.com "\"OpenHarness: Open Agent Harness with a Built- ..."))
 
 ---

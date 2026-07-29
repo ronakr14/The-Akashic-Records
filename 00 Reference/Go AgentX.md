@@ -1,3 +1,6 @@
+# AI Summary
+Deep Repository Analysis: `posteo/go-agentx`. `go-agentx` is a pure Go implementation of the AgentX protocol, which is the sub-agent protocol used to extend an SNMP daemon with application-specific instrumentation. The repository’s own README states that it is “not yet feature-complete,” but also...
+
 # Deep Repository Analysis: `posteo/go-agentx`
 
 ## 1. Executive Summary

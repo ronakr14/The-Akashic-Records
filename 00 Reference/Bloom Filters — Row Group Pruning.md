@@ -1,3 +1,6 @@
+# AI Summary
+Use Bloom Filters for Row Group Pruning in Parquet-Based Data Lakes. **Date:** 2026-06-25
+
 ```table-of-contents
 ```
 

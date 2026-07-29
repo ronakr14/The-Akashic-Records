@@ -1,3 +1,6 @@
+# AI Summary
+Microservices — Interview Questions. **1. You have a monolithic e-commerce application. How would you identify microservice boundaries?**
+
 ```table-of-contents
 ```
 

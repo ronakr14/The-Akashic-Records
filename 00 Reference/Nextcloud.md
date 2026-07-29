@@ -1,3 +1,6 @@
+# AI Summary
+None. Below is a deep architectural readout of **Nextcloud Cookbook** based on the repository README, repo metadata, build tooling, and project documentation visible in GitHub. The repo is clearly an active Nextcloud app with a browser-based UI, PHP backend, JavaScript/Vue frontend, automated pac...
+
 Below is a deep architectural readout of **Nextcloud Cookbook** based on the repository README, repo metadata, build tooling, and project documentation visible in GitHub. The repo is clearly an active Nextcloud app with a browser-based UI, PHP backend, JavaScript/Vue frontend, automated packaging, tests, and strict CI controls. ([GitHub](https://github.com/nextcloud/cookbook "GitHub - nextcloud/cookbook:  A library for all your recipes · GitHub"))
 
 ## 1. Executive Summary

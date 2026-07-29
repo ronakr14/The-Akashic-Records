@@ -1,3 +1,6 @@
+# AI Summary
+Factory method. class MyClass:
+
 ```table-of-contents
 ```
 

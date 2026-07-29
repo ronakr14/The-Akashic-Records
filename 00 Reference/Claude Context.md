@@ -1,3 +1,6 @@
+# AI Summary
+Claude Context (zilliztech/claude-context) — Deep Repository Analysis. Claude Context is an MCP-based code retrieval system for AI coding agents. Its job is simple but high leverage: make a whole codebase available as usable context without brute-forcing entire files into the prompt. It does that...
+
 # Claude Context (zilliztech/claude-context) — Deep Repository Analysis
 
 ## 1. Executive Summary

@@ -1,3 +1,6 @@
+# AI Summary
+None. Five-section Claude checklist for auditing a LinkedIn profile: photo, banner, headline, featured, about
+
 ```table-of-contents
 ```
 Five-section Claude checklist for auditing a LinkedIn profile: photo, banner, headline, featured, about.

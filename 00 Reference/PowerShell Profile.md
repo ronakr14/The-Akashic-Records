@@ -1,3 +1,6 @@
+# AI Summary
+PowerShell Profile Customisation. A PowerShell profile is a script that runs automatically when you open a new PowerShell session. It's useful for:
+
 # PowerShell Profile Customisation
 
 ```table-of-contents

@@ -1,3 +1,6 @@
+# AI Summary
+None. Multi Speciality Hospital
+
 ```table-of-contents
 ```
 

@@ -1,9 +1,7 @@
-```table-of-contents
-```
 
 # Architecture
 
-> See also: [[01 Goal]] | [[03 Steps to Implement]] | [[05 Plugins That Can Be Added]]
+> See also: [[cli2api Project Vision and Design Goals]] | [[cli2api Implementation Roadmap]] | [[05 Plugins That Can Be Added]]
 
 ## High-Level Data Flow
 
@@ -173,3 +171,118 @@ cli2api/
 3. **Plugins are constrained hooks** — not arbitrary middleware injection
 4. **Same execution pipeline for all surfaces** — CLI, API, and Celery all run plugins identically
 5. **Redis as shared infrastructure** — rate limiting, broker, caching, idempotency all use the same Redis instance
+
+
+```yaml
+id: j7m2kp
+
+title: cli2api System Architecture
+
+folder: Projects/cli2api/Architecture
+
+categorical:
+  domain:
+    value: architecture
+    reason: Defines the overall system architecture, component responsibilities, execution flow, and design decisions for the platform.
+
+  subdomain: execution-platform
+
+  note_type:
+    value: architecture
+    reason: Documents the technical architecture, layers, interactions, and project structure rather than implementation details.
+
+  source_type:
+    value: self
+    reason: Self-authored architectural specification.
+
+  status:
+    value: curated
+    reason: Stable design document that serves as a long-term architectural reference.
+
+  level:
+    value: advanced
+    reason: Covers framework architecture, plugin systems, execution pipelines, configuration management, and distributed infrastructure.
+
+ratings:
+  confidence:
+    score: 5
+    reason: Self-authored architecture with no external claims requiring verification.
+
+  completeness:
+    score: 5
+    reason: Explains the complete system including data flow, component responsibilities, execution model, plugin lifecycle, infrastructure, project layout, and design principles.
+
+  complexity:
+    score: 5
+    reason: Describes a framework-level architecture involving decorators, registries, configuration binding, execution engines, plugin orchestration, and shared infrastructure.
+
+  importance:
+    score: 5
+    reason: This is the primary technical blueprint for implementing cli2api.
+
+  career_relevance:
+    score: 5
+    reason: Demonstrates software architecture, framework design, internal developer platforms, extensibility, and clean architecture principles.
+
+  freshness:
+    score: 5
+    reason: Applies modern architectural patterns including declarative configuration, plugin-driven execution, shared infrastructure, and multi-surface application exposure.
+
+  reusability:
+    score: 5
+    reason: Architectural patterns can be reused across other internal platforms, SDKs, and framework projects.
+
+  review_priority:
+    score: 4
+    reason: Core architecture should be revisited whenever major implementation decisions or ADRs change.
+
+  connectedness:
+    score: 5
+    reason: Acts as the architectural hub linking decorators, registry, plugins, execution surfaces, Redis, configuration, ADRs, and implementation notes.
+
+  actionability:
+    score: 4
+    reason: Clearly defines component responsibilities and implementation boundaries, though detailed implementation lives in separate notes.
+
+  quality_score:
+    score: 99
+    reason: Comprehensive architecture document with clear layering, responsibilities, execution flow, extensibility model, and explicit design decisions.
+
+custom:
+  subdomain: execution-platform
+
+  tags:
+    - cli2api
+    - architecture
+    - plugin-system
+    - fastapi
+    - developer-platform
+
+ai_summary: >
+  Defines the complete architecture of cli2api, a framework that exposes a single Python function through multiple execution surfaces including CLI, REST APIs, and asynchronous workers. The architecture separates pure business logic from execution concerns using decorators, a central registry, declarative YAML configuration, a binding layer, a unified execution pipeline, and a constrained plugin system. Redis provides shared infrastructure for rate limiting, Celery, idempotency, and future caching. The document also specifies component responsibilities, execution lifecycle, project structure, and key architectural principles that guide the framework's implementation.
+```
+
+### Notes
+
+This is an almost ideal **architecture** note.
+
+The only thing I'd recommend adding later is links to individual implementation notes (or ADRs) for each major component, for example:
+
+```text
+Architecture/
+├── README.md                ← this note
+├── Decorator.md
+├── Registry.md
+├── Binder.md
+├── Plugin Engine.md
+├── Execution Pipeline.md
+├── Redis.md
+├── YAML Configuration.md
+└── ADR/
+    ├── ADR-001-Function-Signature-Is-Source-of-Truth.md
+    ├── ADR-002-YAML-as-Control-Plane.md
+    ├── ADR-003-Unified-Execution-Pipeline.md
+    └── ADR-004-Constrained-Plugin-System.md
+```
+
+This note is exactly what your knowledge graph should treat as a **hub node**—nearly every implementation component and ADR in the `cli2api` project will naturally link back to it.

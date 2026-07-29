@@ -1,3 +1,6 @@
+# AI Summary
+None. Below is a deep, architect-level read of **Milvus** as a repository and system, grounded in the repo and official docs. I’m using the current public project state on GitHub and Milvus docs as source of truth. ([GitHub](https://github.com/milvus-io/milvus "GitHub - milvus-io/milvus: Milvus i...
+
 Below is a deep, architect-level read of **Milvus** as a repository and system, grounded in the repo and official docs. I’m using the current public project state on GitHub and Milvus docs as source of truth. ([GitHub](https://github.com/milvus-io/milvus "GitHub - milvus-io/milvus: Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search · GitHub"))
 
 ## 1. Executive Summary

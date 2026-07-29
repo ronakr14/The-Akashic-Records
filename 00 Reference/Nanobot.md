@@ -1,3 +1,6 @@
+# AI Summary
+nanobot Repository Analysis. Sources used: repository README and architecture/config/docs files, plus current repo metadata and release notes. ([GitHub](https://github.com/HKUDS/nanobot?utm_source=chatgpt.com "HKUDS/nanobot: Lightweight, open-source AI agent for ..."))
+
 ```table-of-contents
 ```
 

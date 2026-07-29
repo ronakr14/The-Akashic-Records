@@ -1,3 +1,6 @@
+# AI Summary
+None. Here is a deep-dive report based on the repository README, file tree, release metadata, and documented workflows. I did not inspect every source file line-by-line, so the component-level analysis is inferred from the public structure and README descriptions rather than a full static code au...
+
 Here is a deep-dive report based on the repository README, file tree, release metadata, and documented workflows. I did not inspect every source file line-by-line, so the component-level analysis is inferred from the public structure and README descriptions rather than a full static code audit. ([GitHub](https://github.com/Higangssh/homebutler "GitHub - Higangssh/homebutler:  Manage your homelab from chat. Single binary, zero dependencies. · GitHub"))
 
 ## 1. Executive Summary

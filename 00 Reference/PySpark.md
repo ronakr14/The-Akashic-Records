@@ -1,3 +1,6 @@
+# AI Summary
+PySpark Deep Dive (Architect's Perspective). PySpark is **not a data processing library**. It is a **distributed computation interface** for Apache Spark that lets you express data transformations in Python while Spark executes them across many CPUs and machines
+
 ```table-of-contents
 ```
 

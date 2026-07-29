@@ -1,3 +1,6 @@
+# AI Summary
+None. Here’s a deep architectural read of **seatgeek/thefuzz**
+
 Here’s a deep architectural read of **seatgeek/thefuzz**.
 
 ## 1. Executive Summary

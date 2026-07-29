@@ -1,3 +1,6 @@
+# AI Summary
+1. What is Database Design?. Database design is one of those topics that looks deceptively simple until you build a system that has millions of rows, multiple developers, changing business rules, and performance requirements. A good database design makes applications easier to build, faster to qu...
+
 Database design is one of those topics that looks deceptively simple until you build a system that has millions of rows, multiple developers, changing business rules, and performance requirements. A good database design makes applications easier to build, faster to query, and cheaper to maintain.
 
 I'll explain it from first principles rather than jumping into SQL syntax.

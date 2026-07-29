@@ -1,3 +1,6 @@
+# AI Summary
+tests/conftest.py. JD's #1 requirement — "expert-level Python for data engineering." Resume shows Python usage but not Python engineering depth. Expect questions on memory management, concurrency, and design patterns beyond scripting
+
 ```table-of-contents
 ```
 

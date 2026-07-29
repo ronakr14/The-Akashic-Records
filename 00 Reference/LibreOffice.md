@@ -1,3 +1,6 @@
+# AI Summary
+None. Here is a deep architectural read on `LibreOffice/core`, based on the repository overview, module documentation, and core source files. LibreOffice is a very large, mature, production-grade office suite, and this repo is the heart of that codebase. ([GitHub](https://github.com/LibreOffice/c...
+
 Here is a deep architectural read on `LibreOffice/core`, based on the repository overview, module documentation, and core source files. LibreOffice is a very large, mature, production-grade office suite, and this repo is the heart of that codebase. ([GitHub](https://github.com/LibreOffice/core?utm_source=chatgpt.com "GitHub - LibreOffice/core: Read-only ..."))
 
 ## 1. Executive Summary

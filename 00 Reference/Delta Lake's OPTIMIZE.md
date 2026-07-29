@@ -1,3 +1,6 @@
+# AI Summary
+Delta Lake's OPTIMIZE. > This is one of the most misunderstood areas in Delta Lake
+
 # Delta Lake's OPTIMIZE
 
 ```table-of-contents

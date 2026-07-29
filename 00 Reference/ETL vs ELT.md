@@ -1,3 +1,6 @@
+# AI Summary
+None. | Aspect | ETL | ELT |
+
 ```table-of-contents
 ```
 

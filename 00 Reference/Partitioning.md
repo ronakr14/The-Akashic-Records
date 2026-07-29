@@ -1,3 +1,6 @@
+# AI Summary
+None. Partitioning is one of those concepts that sounds simple ("split data into pieces"), but has implications across storage, query execution, distributed systems, and data modeling
+
 ```table-of-contents
 ```
 

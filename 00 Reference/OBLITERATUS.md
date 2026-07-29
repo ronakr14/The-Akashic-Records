@@ -1,3 +1,6 @@
+# AI Summary
+None. I pulled what I could from the repository’s public GitHub presence, README-derived content, package metadata, and related docs. This repo is not a generic AI app; it is a mechanistic-interpretability research toolkit focused on identifying and removing refusal behaviors from LLMs, with a CL...
+
 I pulled what I could from the repository’s public GitHub presence, README-derived content, package metadata, and related docs. This repo is not a generic AI app; it is a mechanistic-interpretability research toolkit focused on identifying and removing refusal behaviors from LLMs, with a CLI, Python API, Gradio UI, Colab workflow, and telemetry-backed research pipeline. ([GitHub](https://github.com/elder-plinius/OBLITERATUS?utm_source=chatgpt.com "elder-plinius/OBLITERATUS: OBLITERATE THE CHAINS ..."))
 
 ## 1. Executive Summary

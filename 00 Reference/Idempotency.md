@@ -1,3 +1,6 @@
+# AI Summary
+Idempotency. A job is **idempotent** if running it multiple times produces the same final state
+
 ```table-of-contents
 ```
 

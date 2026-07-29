@@ -1,3 +1,6 @@
+# AI Summary
+None. 1. Patient Registration
+
 ```table-of-contents
 ```
 

@@ -1,3 +1,6 @@
+# AI Summary
+Data Mesh. Data Mesh is **not a technology** — it is an organizational and architectural approach to managing data at scale. It sits **above** technologies like [[Data Lake]], [[Data Warehouse]], and [[Data Lakehouse]], defining ownership, responsibility, and governance rather than storage or com...
+
 ```table-of-contents
 ```
 

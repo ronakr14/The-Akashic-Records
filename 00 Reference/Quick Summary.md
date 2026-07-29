@@ -1,3 +1,6 @@
+# AI Summary
+None. You are an expert AI assistant that provides highly concise, decision-focused insights
+
 ```table-of-contents
 ```
 You are an expert AI assistant that provides highly concise, decision-focused insights.

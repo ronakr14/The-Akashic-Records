@@ -1,3 +1,6 @@
+# AI Summary
+1. Executive Summary. Below is a deep, architecture-first read of **Onyx** based on the repository’s public docs and repo files I could inspect. I’m relying on the repo’s own guidance and docs for the core facts about the system, especially `AGENTS.md`, the main README, and Craft docs. ([GitHub](...
+
 Below is a deep, architecture-first read of **Onyx** based on the repository’s public docs and repo files I could inspect. I’m relying on the repo’s own guidance and docs for the core facts about the system, especially `AGENTS.md`, the main README, and Craft docs. ([GitHub](https://github.com/onyx-dot-app/onyx/blob/main/AGENTS.md "onyx/AGENTS.md at main · onyx-dot-app/onyx · GitHub"))
 
 # 1. Executive Summary

@@ -1,5 +1,3 @@
-```table-of-contents
-```
 
 # Integration with Rich
 
@@ -282,3 +280,204 @@ rich = ["rich>=13.0.0"]
 2. **Over-formatting** — Don't add colors/styles to every output. Use Rich for structure (tables, panels), not decoration.
 3. **Performance** — Rich rendering is slower than plain print. For high-frequency calls, skip formatting.
 4. **JSON consumers** — If output is piped to `jq` or another tool, disable Rich and output raw JSON.
+
+
+```yaml
+title: cli2api Integration with Rich
+
+folder: Projects/cli2api/Integrations
+
+categorical:
+  domain:
+    value: tool
+    reason: This note documents integration with Rich, an external developer tool/library, rather than describing the cli2api framework itself.
+
+  subdomain: terminal-ui
+
+  note_type:
+    value: technology
+    reason: Explains how to integrate Rich into cli2api, including implementation patterns, configuration, and best practices.
+
+  source_type:
+    value: self
+    reason: Self-authored integration guide.
+
+  status:
+    value: curated
+    reason: Stable reference documentation for an optional integration.
+
+  level:
+    value: intermediate
+    reason: Covers Rich APIs, CLI enhancements, and integration patterns without introducing core framework architecture.
+
+ratings:
+  confidence:
+    score: 5
+    reason: Self-authored technical documentation.
+
+  completeness:
+    score: 5
+    reason: Covers installation, output rendering, plugins, dashboards, configuration, dependencies, use cases, and pitfalls.
+
+  complexity:
+    score: 3
+    reason: Focused on presentation and CLI UX rather than distributed systems or framework internals.
+
+  importance:
+    score: 3
+    reason: Improves developer experience but is an optional enhancement rather than a core platform capability.
+
+  career_relevance:
+    score: 4
+    reason: Demonstrates knowledge of Python developer tooling and CLI user experience.
+
+  freshness:
+    score: 5
+    reason: Uses modern Python CLI tooling and optional dependency patterns.
+
+  reusability:
+    score: 5
+    reason: Rich integration patterns can be applied to many Python CLI applications.
+
+  review_priority:
+    score: 2
+    reason: Expected to change infrequently unless the CLI experience is redesigned.
+
+  connectedness:
+    score: 4
+    reason: Connects Typer integration, plugins, examples, CLI execution, and configuration.
+
+  actionability:
+    score: 5
+    reason: Provides concrete implementation examples, configuration snippets, and integration guidance.
+
+  quality_score:
+    score: 96
+    reason: Comprehensive guide covering both implementation and practical usage while remaining scoped to a single integration.
+
+custom:
+  tags:
+    - cli2api
+    - rich
+    - cli
+    - integration
+    - terminal
+
+ai_summary: >
+  Describes how Rich enhances the cli2api command-line experience by providing formatted output, tables, JSON rendering, progress indicators, live dashboards, improved logging, error presentation, and enhanced help text. The guide explains installation, optional package dependencies, YAML-based configuration, CLI flags, plugin integration, and practical recommendations for when Rich should and should not be used, allowing the CLI surface to remain user-friendly without affecting the API execution model.
+```
+
+### One recommendation
+
+For your integrations, I would slightly refine the domain selection:
+
+|Note|Domain|Reason|
+|---|---|---|
+|Typer|`tool`|External Python developer tool|
+|Argparse|`tool`|Standard library CLI tool|
+|Rich|`tool`|Terminal UI library|
+|FastAPI|`tool`|Web framework integration|
+|Celery|`tool`|Task queue integration|
+|Redis|`tool`|Infrastructure integration|
+
+Reserve **`software-engineering`** for notes about your own framework (architecture, implementation, design principles, execution pipeline), and use **`tool`** for notes centered on integrating third-party libraries. This creates a cleaner distinction in your PKM between **what you're building** and **what you're building it with**.
+
+```yaml
+title: cli2api Integration with Rich
+
+folder: Projects/cli2api/Integrations
+
+categorical:
+  domain:
+    value: tool
+    reason: This note documents integration with Rich, an external developer tool/library, rather than describing the cli2api framework itself.
+
+  subdomain: terminal-ui
+
+  note_type:
+    value: technology
+    reason: Explains how to integrate Rich into cli2api, including implementation patterns, configuration, and best practices.
+
+  source_type:
+    value: self
+    reason: Self-authored integration guide.
+
+  status:
+    value: curated
+    reason: Stable reference documentation for an optional integration.
+
+  level:
+    value: intermediate
+    reason: Covers Rich APIs, CLI enhancements, and integration patterns without introducing core framework architecture.
+
+ratings:
+  confidence:
+    score: 5
+    reason: Self-authored technical documentation.
+
+  completeness:
+    score: 5
+    reason: Covers installation, output rendering, plugins, dashboards, configuration, dependencies, use cases, and pitfalls.
+
+  complexity:
+    score: 3
+    reason: Focused on presentation and CLI UX rather than distributed systems or framework internals.
+
+  importance:
+    score: 3
+    reason: Improves developer experience but is an optional enhancement rather than a core platform capability.
+
+  career_relevance:
+    score: 4
+    reason: Demonstrates knowledge of Python developer tooling and CLI user experience.
+
+  freshness:
+    score: 5
+    reason: Uses modern Python CLI tooling and optional dependency patterns.
+
+  reusability:
+    score: 5
+    reason: Rich integration patterns can be applied to many Python CLI applications.
+
+  review_priority:
+    score: 2
+    reason: Expected to change infrequently unless the CLI experience is redesigned.
+
+  connectedness:
+    score: 4
+    reason: Connects Typer integration, plugins, examples, CLI execution, and configuration.
+
+  actionability:
+    score: 5
+    reason: Provides concrete implementation examples, configuration snippets, and integration guidance.
+
+  quality_score:
+    score: 96
+    reason: Comprehensive guide covering both implementation and practical usage while remaining scoped to a single integration.
+
+custom:
+  tags:
+    - cli2api
+    - rich
+    - cli
+    - integration
+    - terminal
+
+ai_summary: >
+  Describes how Rich enhances the cli2api command-line experience by providing formatted output, tables, JSON rendering, progress indicators, live dashboards, improved logging, error presentation, and enhanced help text. The guide explains installation, optional package dependencies, YAML-based configuration, CLI flags, plugin integration, and practical recommendations for when Rich should and should not be used, allowing the CLI surface to remain user-friendly without affecting the API execution model.
+```
+
+### One recommendation
+
+For your integrations, I would slightly refine the domain selection:
+
+|Note|Domain|Reason|
+|---|---|---|
+|Typer|`tool`|External Python developer tool|
+|Argparse|`tool`|Standard library CLI tool|
+|Rich|`tool`|Terminal UI library|
+|FastAPI|`tool`|Web framework integration|
+|Celery|`tool`|Task queue integration|
+|Redis|`tool`|Infrastructure integration|
+
+Reserve **`software-engineering`** for notes about your own framework (architecture, implementation, design principles, execution pipeline), and use **`tool`** for notes centered on integrating third-party libraries. This creates a cleaner distinction in your PKM between **what you're building** and **what you're building it with**.

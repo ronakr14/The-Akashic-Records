@@ -1,3 +1,6 @@
+# AI Summary
+1. Executive Summary. Here’s a deep, evidence-based assessment of `crowdllama/crowdllama`. I’m being careful not to overclaim where the repository does not yet expose enough implementation detail
+
 Here’s a deep, evidence-based assessment of `crowdllama/crowdllama`. I’m being careful not to overclaim where the repository does not yet expose enough implementation detail.
 
 # 1. Executive Summary

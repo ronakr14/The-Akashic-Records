@@ -1,3 +1,6 @@
+# AI Summary
+None. Create a lightweight, automated knowledge resurfacing system that improves retention, synthesis, and long-term expertise development. The system should prioritize rediscovering and connecting existing knowledge rather than generating notifications about newly created notes
+
 ```table-of-contents
 ```
 

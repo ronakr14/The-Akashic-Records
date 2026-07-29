@@ -1,9 +1,7 @@
-```table-of-contents
-```
 
 # Steps to Implement
 
-> See also: [[02 Architecture]] | [[04 Enhancements Included]] | [[10 Examples of Use]]
+> See also: [[cli2api System Architecture]] | [[cli2api Feature Roadmap and Enhancements]] | [[10 Examples of Use]]
 
 ## Phase 1: Core Foundation
 
@@ -350,3 +348,123 @@ Goal: Config changes without restart.
 - Re-apply binder without restarting server
 
 **Checkpoint**: Production-ready with Docker, observability, retry, and hot reload.
+
+
+```yaml
+title: cli2api Implementation Roadmap
+
+folder: Projects/cli2api/Implementation
+
+categorical:
+  domain:
+    value: software-engineering
+    reason: Describes the phased implementation plan for building a reusable developer platform.
+
+  subdomain: framework-implementation
+
+  note_type:
+    value: project
+    reason: Defines implementation phases, milestones, checkpoints, and deliverables for the project.
+
+  source_type:
+    value: self
+    reason: Self-authored engineering roadmap.
+
+  status:
+    value: curated
+    reason: Well-structured implementation plan with stable milestones and execution order.
+
+  level:
+    value: advanced
+    reason: Covers framework development, API generation, plugin architecture, asynchronous processing, packaging, and production readiness.
+
+ratings:
+  confidence:
+    score: 5
+    reason: Self-authored roadmap without external claims.
+
+  completeness:
+    score: 5
+    reason: Covers implementation from MVP through production hardening, including checkpoints, technologies, and file-level responsibilities.
+
+  complexity:
+    score: 5
+    reason: Involves framework architecture, code generation, plugin execution, asynchronous processing, packaging, and deployment concerns.
+
+  importance:
+    score: 5
+    reason: Serves as the execution blueprint for the entire cli2api project.
+
+  career_relevance:
+    score: 5
+    reason: Demonstrates framework engineering, software architecture, developer tooling, and platform design skills relevant to senior engineering roles.
+
+  freshness:
+    score: 5
+    reason: Incorporates modern Python ecosystem practices including FastAPI, Typer, Celery, Redis, YAML configuration, plugin systems, and observability.
+
+  reusability:
+    score: 5
+    reason: The phased implementation strategy can be reused when building similar frameworks or internal developer platforms.
+
+  review_priority:
+    score: 4
+    reason: Active implementation roadmap that should evolve as phases are completed and architectural decisions change.
+
+  connectedness:
+    score: 5
+    reason: Links to architecture, goals, plugins, examples, integrations, ADRs, and individual implementation notes across the project.
+
+  actionability:
+    score: 5
+    reason: Breaks the project into concrete, sequential implementation steps with measurable checkpoints after each phase.
+
+  quality_score:
+    score: 99
+    reason: Comprehensive engineering roadmap with clear sequencing, incremental milestones, implementation boundaries, and production evolution.
+
+custom:
+  tags:
+    - cli2api
+    - implementation
+    - framework
+    - roadmap
+    - developer-platform
+
+ai_summary: >
+  Defines the complete implementation roadmap for cli2api across seven incremental phases. The roadmap progresses from a minimal FastAPI-based function registry to a production-ready execution platform supporting CLI commands, REST APIs, asynchronous Celery workers, declarative YAML configuration, extensible plugins, Redis-backed infrastructure, and production features such as observability, Docker deployment, retries, and hot reload. Each phase includes implementation tasks, file responsibilities, and checkpoints, providing a structured path from MVP to a mature internal developer platform.
+```
+
+### Why this classification?
+
+This note is different from your other `cli2api` notes:
+
+- **`01 Goal`** → explains **why** the project exists.
+    
+- **`02 Architecture`** → explains **how the system is designed**.
+    
+- **This note (`03 Steps to Implement`)** → explains **how to build it**, step by step.
+    
+
+That's why I classified it as a **`project`** rather than an **`architecture`** note. It's an execution plan, not a description of the architecture itself.
+
+I also think your `cli2api` project is naturally converging on this structure:
+
+```text
+Projects/
+└── cli2api/
+    ├── 00 README.md                ← Project hub
+    ├── 01 Goal.md                  ← Vision
+    ├── 02 Architecture.md          ← System design
+    ├── 03 Implementation.md        ← This note
+    ├── 04 Enhancements.md
+    ├── 05 Plugins.md
+    ├── 06 Configuration.md
+    ├── 07 Typer Integration.md
+    ├── ADR/
+    ├── Architecture/
+    ├── Concepts/
+    └── Tasks/
+```
+
+This separation gives each note a single responsibility and makes the knowledge graph much cleaner.

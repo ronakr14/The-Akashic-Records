@@ -1,3 +1,6 @@
+# AI Summary
+OpenSpec Repository Analysis Report. **Repository:** [OpenSpec GitHub Repository](https://github.com/Fission-AI/OpenSpec?utm_source=chatgpt.com)
+
 ```table-of-contents
 ```
 

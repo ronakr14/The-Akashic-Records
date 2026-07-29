@@ -1,3 +1,6 @@
+# AI Summary
+None. How would you optimize it?
+
 ```table-of-contents
 ```
 ## A daily batch job scans 30 TB but only processes one day of data.

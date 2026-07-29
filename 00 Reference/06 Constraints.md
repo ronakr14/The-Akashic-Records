@@ -1,9 +1,7 @@
-```table-of-contents
-```
 
 # Constraints
 
-> See also: [[01 Goal]] | [[04 Enhancements Included]] | [[05 Plugins That Can Be Added]]
+> See also: [[cli2api Project Vision and Design Goals]] | [[cli2api Feature Roadmap and Enhancements]] | [[05 Plugins That Can Be Added]]
 
 ## Design Constraints (Must Follow)
 
@@ -252,7 +250,7 @@ def add(a: int, b: int) -> int:  # Now returns plain int
 
 ## Hard Truths
 
-> Also see: [[01 Goal#What This Is NOT]] | [[03 Steps to Implement#Phase 7: Production Hardening]]
+> Also see: [[cli2api Project Vision and Design Goals#What This Is NOT]] | [[cli2api Implementation Roadmap#Phase 7: Production Hardening]]
 
 1. **This pattern is great for internal tools**, not ideal for public APIs without versioning and error contracts.
 2. **In-memory rate limiting is fake safety** — use Redis in production.
@@ -262,3 +260,332 @@ def add(a: int, b: int) -> int:  # Now returns plain int
 6. **Plugins are where these setups go off the rails** — if plugins can do "anything anywhere," you lose control of execution flow.
 7. **Async jobs without idempotency are duplication machines** — retries will cause duplicate side effects.
 8. **YAML that contains logic becomes unmaintainable** — keep it declarative control only.
+
+```yaml
+title: cli2api Design Constraints and Architecture Principles
+
+folder: Projects/cli2api/Architecture
+
+categorical:
+  domain:
+    value: architecture
+    reason: Defines the architectural principles, constraints, and design rules governing the framework.
+
+  subdomain: architecture-principles
+
+  note_type:
+    value: architecture
+    reason: Documents the non-functional architecture, design constraints, anti-patterns, and engineering principles rather than implementation details.
+
+  source_type:
+    value: self
+    reason: Self-authored architectural guidance.
+
+  status:
+    value: curated
+    reason: Stable design guidance that should evolve only with major architectural changes.
+
+  level:
+    value: advanced
+    reason: Requires understanding of framework design, extensibility, distributed systems, API design, and software architecture trade-offs.
+
+ratings:
+  confidence:
+    score: 5
+    reason: Self-authored architectural principles without external factual claims.
+
+  completeness:
+    score: 5
+    reason: Covers design constraints, rationale, anti-patterns, production concerns, and long-term architectural guidance comprehensively.
+
+  complexity:
+    score: 5
+    reason: Addresses framework design decisions across configuration, plugins, API contracts, distributed execution, and operational concerns.
+
+  importance:
+    score: 5
+    reason: Defines the engineering rules that every future implementation and contribution should follow.
+
+  career_relevance:
+    score: 5
+    reason: Demonstrates architectural thinking, clean architecture, framework engineering, and maintainability principles expected of senior engineers and architects.
+
+  freshness:
+    score: 5
+    reason: Aligns with current best practices for platform engineering, configuration management, plugin systems, distributed infrastructure, and API evolution.
+
+  reusability:
+    score: 5
+    reason: The principles apply beyond cli2api and can guide the design of many extensible frameworks.
+
+  review_priority:
+    score: 2
+    reason: Fundamental design principles that should change infrequently and only after major architectural decisions.
+
+  connectedness:
+    score: 5
+    reason: Central reference linked to architecture, implementation, plugins, ADRs, and future design decisions.
+
+  actionability:
+    score: 4
+    reason: Provides concrete engineering rules and anti-patterns that directly influence implementation decisions.
+
+  quality_score:
+    score: 100
+    reason: Excellent architectural governance document with explicit constraints, rationale, anti-patterns, and design philosophy.
+
+custom:
+  tags:
+    - cli2api
+    - architecture
+    - design-principles
+    - constraints
+    - clean-architecture
+
+ai_summary: >
+  Defines the architectural constraints and engineering principles that govern cli2api. The document establishes rules such as keeping business logic framework-agnostic, treating YAML as a declarative control plane, enforcing plugins as constrained lifecycle hooks, deriving all execution surfaces from function signatures, validating configuration at startup, and preferring strong defaults over excessive configuration. It also documents common anti-patterns—including infrastructure leakage, god decorators, plugin overuse, tight framework coupling, and silent configuration errors—and concludes with practical guidance on production trade-offs and long-term framework evolution. :contentReference[oaicite:0]{index=0}
+```
+
+### One small recommendation
+
+I would rename **`Constraints.md`** to **`Design Principles.md`** (or **`Architecture Principles.md`**).
+
+"Constraints" sounds restrictive, but this note is actually much broader:
+
+- ✅ Core design principles
+    
+- ✅ Architectural constraints
+    
+- ✅ Engineering rationale
+    
+- ✅ Anti-patterns
+    
+- ✅ Production guidance
+    
+- ✅ Framework philosophy
+    
+
+Something like **`06 Design Principles.md`** better reflects its role as the document that answers:
+
+> _"What rules must every contributor follow when evolving this framework?"_
+
+It becomes the equivalent of a project's engineering handbook rather than just a list of limitations.
+
+```yaml
+title: cli2api Design Constraints and Architecture Principles
+
+folder: Projects/cli2api/Architecture
+
+categorical:
+  domain:
+    value: architecture
+    reason: Defines the architectural principles, constraints, and design rules governing the framework.
+
+  subdomain: architecture-principles
+
+  note_type:
+    value: architecture
+    reason: Documents the non-functional architecture, design constraints, anti-patterns, and engineering principles rather than implementation details.
+
+  source_type:
+    value: self
+    reason: Self-authored architectural guidance.
+
+  status:
+    value: curated
+    reason: Stable design guidance that should evolve only with major architectural changes.
+
+  level:
+    value: advanced
+    reason: Requires understanding of framework design, extensibility, distributed systems, API design, and software architecture trade-offs.
+
+ratings:
+  confidence:
+    score: 5
+    reason: Self-authored architectural principles without external factual claims.
+
+  completeness:
+    score: 5
+    reason: Covers design constraints, rationale, anti-patterns, production concerns, and long-term architectural guidance comprehensively.
+
+  complexity:
+    score: 5
+    reason: Addresses framework design decisions across configuration, plugins, API contracts, distributed execution, and operational concerns.
+
+  importance:
+    score: 5
+    reason: Defines the engineering rules that every future implementation and contribution should follow.
+
+  career_relevance:
+    score: 5
+    reason: Demonstrates architectural thinking, clean architecture, framework engineering, and maintainability principles expected of senior engineers and architects.
+
+  freshness:
+    score: 5
+    reason: Aligns with current best practices for platform engineering, configuration management, plugin systems, distributed infrastructure, and API evolution.
+
+  reusability:
+    score: 5
+    reason: The principles apply beyond cli2api and can guide the design of many extensible frameworks.
+
+  review_priority:
+    score: 2
+    reason: Fundamental design principles that should change infrequently and only after major architectural decisions.
+
+  connectedness:
+    score: 5
+    reason: Central reference linked to architecture, implementation, plugins, ADRs, and future design decisions.
+
+  actionability:
+    score: 4
+    reason: Provides concrete engineering rules and anti-patterns that directly influence implementation decisions.
+
+  quality_score:
+    score: 100
+    reason: Excellent architectural governance document with explicit constraints, rationale, anti-patterns, and design philosophy.
+
+custom:
+  tags:
+    - cli2api
+    - architecture
+    - design-principles
+    - constraints
+    - clean-architecture
+
+ai_summary: >
+  Defines the architectural constraints and engineering principles that govern cli2api. The document establishes rules such as keeping business logic framework-agnostic, treating YAML as a declarative control plane, enforcing plugins as constrained lifecycle hooks, deriving all execution surfaces from function signatures, validating configuration at startup, and preferring strong defaults over excessive configuration. It also documents common anti-patterns—including infrastructure leakage, god decorators, plugin overuse, tight framework coupling, and silent configuration errors—and concludes with practical guidance on production trade-offs and long-term framework evolution. :contentReference[oaicite:0]{index=0}
+```
+
+### One small recommendation
+
+I would rename **`Constraints.md`** to **`Design Principles.md`** (or **`Architecture Principles.md`**).
+
+"Constraints" sounds restrictive, but this note is actually much broader:
+
+- ✅ Core design principles
+    
+- ✅ Architectural constraints
+    
+- ✅ Engineering rationale
+    
+- ✅ Anti-patterns
+    
+- ✅ Production guidance
+    
+- ✅ Framework philosophy
+    
+
+Something like **`06 Design Principles.md`** better reflects its role as the document that answers:
+
+> _"What rules must every contributor follow when evolving this framework?"_
+
+It becomes the equivalent of a project's engineering handbook rather than just a list of limitations.
+```yaml
+title: cli2api Design Constraints and Architecture Principles
+
+folder: Projects/cli2api/Architecture
+
+categorical:
+  domain:
+    value: architecture
+    reason: Defines the architectural principles, constraints, and design rules governing the framework.
+
+  subdomain: architecture-principles
+
+  note_type:
+    value: architecture
+    reason: Documents the non-functional architecture, design constraints, anti-patterns, and engineering principles rather than implementation details.
+
+  source_type:
+    value: self
+    reason: Self-authored architectural guidance.
+
+  status:
+    value: curated
+    reason: Stable design guidance that should evolve only with major architectural changes.
+
+  level:
+    value: advanced
+    reason: Requires understanding of framework design, extensibility, distributed systems, API design, and software architecture trade-offs.
+
+ratings:
+  confidence:
+    score: 5
+    reason: Self-authored architectural principles without external factual claims.
+
+  completeness:
+    score: 5
+    reason: Covers design constraints, rationale, anti-patterns, production concerns, and long-term architectural guidance comprehensively.
+
+  complexity:
+    score: 5
+    reason: Addresses framework design decisions across configuration, plugins, API contracts, distributed execution, and operational concerns.
+
+  importance:
+    score: 5
+    reason: Defines the engineering rules that every future implementation and contribution should follow.
+
+  career_relevance:
+    score: 5
+    reason: Demonstrates architectural thinking, clean architecture, framework engineering, and maintainability principles expected of senior engineers and architects.
+
+  freshness:
+    score: 5
+    reason: Aligns with current best practices for platform engineering, configuration management, plugin systems, distributed infrastructure, and API evolution.
+
+  reusability:
+    score: 5
+    reason: The principles apply beyond cli2api and can guide the design of many extensible frameworks.
+
+  review_priority:
+    score: 2
+    reason: Fundamental design principles that should change infrequently and only after major architectural decisions.
+
+  connectedness:
+    score: 5
+    reason: Central reference linked to architecture, implementation, plugins, ADRs, and future design decisions.
+
+  actionability:
+    score: 4
+    reason: Provides concrete engineering rules and anti-patterns that directly influence implementation decisions.
+
+  quality_score:
+    score: 100
+    reason: Excellent architectural governance document with explicit constraints, rationale, anti-patterns, and design philosophy.
+
+custom:
+  tags:
+    - cli2api
+    - architecture
+    - design-principles
+    - constraints
+    - clean-architecture
+
+ai_summary: >
+  Defines the architectural constraints and engineering principles that govern cli2api. The document establishes rules such as keeping business logic framework-agnostic, treating YAML as a declarative control plane, enforcing plugins as constrained lifecycle hooks, deriving all execution surfaces from function signatures, validating configuration at startup, and preferring strong defaults over excessive configuration. It also documents common anti-patterns—including infrastructure leakage, god decorators, plugin overuse, tight framework coupling, and silent configuration errors—and concludes with practical guidance on production trade-offs and long-term framework evolution. :contentReference[oaicite:0]{index=0}
+```
+
+### One small recommendation
+
+I would rename **`Constraints.md`** to **`Design Principles.md`** (or **`Architecture Principles.md`**).
+
+"Constraints" sounds restrictive, but this note is actually much broader:
+
+- ✅ Core design principles
+    
+- ✅ Architectural constraints
+    
+- ✅ Engineering rationale
+    
+- ✅ Anti-patterns
+    
+- ✅ Production guidance
+    
+- ✅ Framework philosophy
+    
+
+Something like **`06 Design Principles.md`** better reflects its role as the document that answers:
+
+> _"What rules must every contributor follow when evolving this framework?"_
+
+It becomes the equivalent of a project's engineering handbook rather than just a list of limitations.

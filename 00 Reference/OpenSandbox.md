@@ -1,3 +1,6 @@
+# AI Summary
+None. Here’s the deep read, grounded in the repo’s own docs and top-level structure
+
 ```table-of-contents
 ```
 

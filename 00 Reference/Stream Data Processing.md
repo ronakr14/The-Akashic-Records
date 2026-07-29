@@ -1,3 +1,6 @@
+# AI Summary
+Foundations. The easiest way to understand it is:
+
 ```table-of-contents
 ```
 The easiest way to understand it is:

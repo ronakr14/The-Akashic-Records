@@ -1,3 +1,6 @@
+# AI Summary
+None. Here’s a deep read of the repository, based on the README, deployment docs, YAML spec, pyproject, security policy, and current repo metadata. The repo is explicitly marked **alpha**, so some of the evaluation below is necessarily “what the architecture is aiming to be” rather than “battle-h...
+
 ```table-of-contents
 ```
 

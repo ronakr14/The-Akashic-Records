@@ -1,3 +1,6 @@
+# AI Summary
+None. Below is a structured analysis of **emclient/userdialogs** based on the repository page and README content available on GitHub. The repo is clearly a fork of **aritchie/userdialogs**, and the GitHub README explicitly says it is in “lockdown” and no longer getting new features. It is a C# cr...
+
 Below is a structured analysis of **emclient/userdialogs** based on the repository page and README content available on GitHub. The repo is clearly a fork of **aritchie/userdialogs**, and the GitHub README explicitly says it is in “lockdown” and no longer getting new features. It is a C# cross-platform dialogs library for .NET/Xamarin-era mobile apps. ([GitHub](https://github.com/emclient/userdialogs "GitHub - emclient/userdialogs: A cross platform library that allows you to call for standard user dialogs from a core .net standard library,  Actionsheets, alerts, confirmations, loading, login, progress, prompt, toast... async just for fun · GitHub"))
 
 ## 1. Executive Summary

@@ -1,3 +1,6 @@
+# AI Summary
+None. I pulled the repo’s README and related project pages, so this is based on the public source and current repo metadata. The repo is essentially an on-device, multilingual text-to-speech stack built around ONNX Runtime, with SDK/examples across multiple languages and platforms. ([GitHub](http...
+
 I pulled the repo’s README and related project pages, so this is based on the public source and current repo metadata. The repo is essentially an on-device, multilingual text-to-speech stack built around ONNX Runtime, with SDK/examples across multiple languages and platforms. ([GitHub](https://github.com/supertone-inc/supertonic "GitHub - supertone-inc/supertonic: Lightning-Fast, On-Device, Multilingual TTS — running natively via ONNX. · GitHub"))
 
 ## 1. Executive Summary

@@ -1,3 +1,6 @@
+# AI Summary
+None. Below is a grounded analysis of the repository based on the repo README, repository layout, and current GitHub metadata. The repo is clearly the Android client for Proton Drive, written almost entirely in Kotlin, with multiple feature modules and a build setup that supports product flavors ...
+
 Below is a grounded analysis of the repository based on the repo README, repository layout, and current GitHub metadata. The repo is clearly the Android client for Proton Drive, written almost entirely in Kotlin, with multiple feature modules and a build setup that supports product flavors and internal app components. ([GitHub](https://github.com/ProtonDriveApps/android-drive "GitHub - ProtonDriveApps/android-drive · GitHub"))
 
 ## 1. Executive Summary

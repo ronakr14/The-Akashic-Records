@@ -1,3 +1,6 @@
+# AI Summary
+Project Roadmap. Based on our previous discussions about your PKM system and Personal Recommendation Engine, I'd avoid building the entire RAG pipeline at once
+
 ```table-of-contents
 ```
 

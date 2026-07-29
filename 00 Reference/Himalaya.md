@@ -1,3 +1,6 @@
+# AI Summary
+Himalaya (`pimalaya/himalaya`) — Deep Repository Analysis. Himalaya is a Rust-based command-line email client and email-management toolkit. Its job is to give users a unified way to work with mailboxes, envelopes, messages, flags, and attachments across multiple email backends. The repository des...
+
 ```table-of-contents
 ```
 

@@ -1,3 +1,6 @@
+# AI Summary
+What is a Monolithic System?. Great place to start. Understanding monoliths first makes distributed systems, microservices, data platforms, and lakehouses much easier to understand later
+
 ```table-of-contents
 ```
 Great place to start. Understanding monoliths first makes distributed systems, microservices, data platforms, and lakehouses much easier to understand later.

@@ -1,3 +1,6 @@
+# AI Summary
+None. Below is a deep-dive report on **Infomaniak/android-euria** based on the repository’s own documentation and GitHub metadata. The strongest signal is that this is not a fully native AI app; it is a **thin Android shell around a hosted web assistant**, with native code mainly handling login, ...
+
 Below is a deep-dive report on **Infomaniak/android-euria** based on the repository’s own documentation and GitHub metadata. The strongest signal is that this is not a fully native AI app; it is a **thin Android shell around a hosted web assistant**, with native code mainly handling login, file upload, WebView bridging, notifications, and app-specific integration. ([GitHub](https://github.com/Infomaniak/android-euria/blob/main/AGENTS.md?utm_source=chatgpt.com "AGENTS.md - Infomaniak/android-euria"))
 
 ## 1. Executive Summary

@@ -1,3 +1,6 @@
+# AI Summary
+Defaults. git config --global user.name "Your Name"
+
 ```table-of-contents
 ```
 

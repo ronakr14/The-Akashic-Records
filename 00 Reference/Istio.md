@@ -1,3 +1,6 @@
+# AI Summary
+None. Below is a deep architectural readout of **istio/istio**, based on the repository’s own metadata and the current Istio docs. I’m treating this as a serious platform project, because it is one. ([GitHub](https://github.com/istio/istio?utm_source=chatgpt.com "istio/istio: Connect, secure, con...
+
 Below is a deep architectural readout of **istio/istio**, based on the repository’s own metadata and the current Istio docs. I’m treating this as a serious platform project, because it is one. ([GitHub](https://github.com/istio/istio?utm_source=chatgpt.com "istio/istio: Connect, secure, control, and observe services."))
 
 ## 1. Executive Summary

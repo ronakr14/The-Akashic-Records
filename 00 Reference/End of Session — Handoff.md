@@ -1,3 +1,6 @@
+# AI Summary
+None. Before we end this session, write a `handoff.md` file that captures:
+
 ```table-of-contents
 ```
 Before we end this session, write a `handoff.md` file that captures:

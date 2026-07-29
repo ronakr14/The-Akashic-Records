@@ -1,3 +1,6 @@
+# AI Summary
+None. Thunderbird for Android is the official Android email client from the Thunderbird project, built on top of the long-running K-9 Mail codebase. It is a privacy-focused, open-source mail app designed to let users manage multiple accounts in one place, including a unified inbox, offline/interv...
+
 ## 1. Executive Summary
 
 Thunderbird for Android is the official Android email client from the Thunderbird project, built on top of the long-running K-9 Mail codebase. It is a privacy-focused, open-source mail app designed to let users manage multiple accounts in one place, including a unified inbox, offline/interval/on-demand sync, local and server-side search, and optional OpenPGP support via OpenKeychain. ([GitHub](https://github.com/thunderbird/thunderbird-android "GitHub - thunderbird/thunderbird-android: Thunderbird for Android – Open Source Email App for Android (fka K-9 Mail) · GitHub"))

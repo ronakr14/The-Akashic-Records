@@ -1,3 +1,6 @@
+# AI Summary
+None. Here’s the blunt read: **SkillSpector is a security scanner for “AI agent skills”** — the little bundles of instructions, scripts, configs, and metadata used by tools like Claude Code, Codex CLI, Gemini CLI, and similar agent runtimes. It is built to answer a simple but important question: ...
+
 Here’s the blunt read: **SkillSpector is a security scanner for “AI agent skills”** — the little bundles of instructions, scripts, configs, and metadata used by tools like Claude Code, Codex CLI, Gemini CLI, and similar agent runtimes. It is built to answer a simple but important question: **“Is this skill safe to install?”** ([GitHub](https://github.com/NVIDIA/SkillSpector?ref=genaisecretsauce.com "GitHub - NVIDIA/SkillSpector at genaisecretsauce.com · GitHub"))
 
 ## 1. Executive Summary

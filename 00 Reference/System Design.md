@@ -1,3 +1,6 @@
+# AI Summary
+None. Things interviewer expects:
+
 ```table-of-contents
 ```
 ## Design a batch pipeline that processes 50 TB of sales data every night within a 4-hour SLA.

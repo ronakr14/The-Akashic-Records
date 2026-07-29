@@ -1,3 +1,6 @@
+# AI Summary
+None. Here’s a deep read on `mongodb/mongo`, the MongoDB server codebase. I’m basing this on the repository’s own docs and architecture notes, especially the server README/wiki and subsystem READMEs for replication, sharding, storage, transport, query, and time-series internals. ([GitHub](https:/...
+
 Here’s a deep read on `mongodb/mongo`, the MongoDB server codebase. I’m basing this on the repository’s own docs and architecture notes, especially the server README/wiki and subsystem READMEs for replication, sharding, storage, transport, query, and time-series internals. ([GitHub](https://github.com/mongodb/mongo?utm_source=chatgpt.com "mongodb/mongo: The MongoDB Database"))
 
 ## 1. Executive Summary

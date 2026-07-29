@@ -1,3 +1,6 @@
+# AI Summary
+None. Here’s a deep read of `garrytan/gstack` based on the repository content, README, key skill docs, setup script, and package metadata. This is an opinionated AI-workflow distribution for Claude Code and related agents — not a generic library, and definitely not a “small helper repo.” It is cl...
+
 ```table-of-contents
 ```
 

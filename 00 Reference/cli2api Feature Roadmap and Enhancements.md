@@ -1,9 +1,118 @@
-```table-of-contents
+
+```yaml
+title: cli2api Feature Roadmap and Enhancements
+
+folder: Projects/cli2api/Architecture
+
+categorical:
+  domain:
+    value: software-engineering
+    reason: Describes framework capabilities and platform features rather than implementation details.
+
+  subdomain: framework-features
+
+  note_type:
+    value: architecture
+    reason: Documents the architectural capabilities and extensibility features of the framework.
+
+  source_type:
+    value: self
+    reason: Self-authored feature specification.
+
+  status:
+    value: curated
+    reason: Stable design document defining the intended capabilities of the platform.
+
+  level:
+    value: advanced
+    reason: Covers framework extensibility, distributed systems, asynchronous processing, observability, configuration management, and plugin architecture.
+
+ratings:
+  confidence:
+    score: 5
+    reason: Self-authored roadmap with no external factual claims.
+
+  completeness:
+    score: 5
+    reason: Covers functional features, operational capabilities, extensibility mechanisms, production concerns, and future enhancements.
+
+  complexity:
+    score: 5
+    reason: Encompasses multiple framework subsystems including execution surfaces, plugins, Redis, Celery, observability, packaging, and configuration.
+
+  importance:
+    score: 5
+    reason: Defines the capabilities that distinguish cli2api from a simple API generator.
+
+  career_relevance:
+    score: 5
+    reason: Demonstrates framework engineering, platform design, extensibility, and production software architecture skills.
+
+  freshness:
+    score: 5
+    reason: Incorporates modern platform engineering concepts including plugin discovery, OpenTelemetry, idempotency, YAML-driven configuration, and distributed tracing.
+
+  reusability:
+    score: 5
+    reason: Many of these patterns are reusable across SDKs, internal platforms, and backend frameworks.
+
+  review_priority:
+    score: 3
+    reason: Feature roadmap evolves less frequently than implementation notes but should be reviewed as capabilities are added.
+
+  connectedness:
+    score: 5
+    reason: Connects to architecture, implementation phases, plugin documentation, integrations, ADRs, and usage examples.
+
+  actionability:
+    score: 3
+    reason: Primarily describes capabilities rather than implementation tasks, though each enhancement can become its own work item.
+
+  quality_score:
+    score: 98
+    reason: Comprehensive feature specification with clear separation of current capabilities, production enhancements, and future extensibility.
+
+custom:
+  tags:
+    - cli2api
+    - framework
+    - plugins
+    - redis
+    - architecture
+
+ai_summary: >
+  Defines the planned feature set for cli2api beyond its core function-to-API capability. The document covers automatic route generation, Pydantic validation, authentication, Redis-backed rate limiting, Celery-based asynchronous execution, idempotency, dual CLI/API exposure, declarative YAML configuration, plugin architecture, observability, packaging, workflow automation, configuration validation, distributed tracing, retries, hot reload, and plugin discovery. Together these enhancements transform cli2api from a simple decorator into a production-ready internal execution platform.
 ```
 
-# Enhancements Included
+### One suggestion
 
-> See also: [[02 Architecture]] | [[03 Steps to Implement]] | [[05 Plugins That Can Be Added]]
+I would keep this under **`Architecture/`** instead of creating a separate "Features" folder.
+
+Your project documentation naturally separates into:
+
+```text
+cli2api/
+├── 00 README.md                # Project hub
+├── 01 Goal.md                  # Why
+├── 02 Architecture.md          # How it works
+├── 03 Implementation.md        # How to build it
+├── 04 Enhancements.md          # What capabilities it provides
+├── 05 Plugins.md               # Extension points
+├── 06 Constraints.md           # Design rules
+├── 07 Typer Integration.md
+├── 08 Argparse Integration.md
+├── 09 Rich Integration.md
+├── 10 Examples.md
+└── ADR/
+```
+
+This note complements the architecture by answering **"What can the platform do?"**, while the architecture note answers **"How is it designed?"** and the implementation note answers **"How do we build it?"**
+
+ 
+ 
+ Enhancements Included
+
+> See also: [[cli2api System Architecture]] | [[cli2api Implementation Roadmap]] | [[05 Plugins That Can Be Added]]
 
 Beyond the basic "decorator that exposes a function as an API endpoint," cli2api includes the following enhancements to make it a production-capable internal execution platform.
 
@@ -56,7 +165,7 @@ Per-IP + per-route rate limiting using Redis atomic counters:
 
 ## 5. Async Job Queue (Celery)
 
-> Also see: [[03 Steps to Implement#Phase 4: Async Jobs + Redis]] | [[10 Examples of Use#Example 4: Async Job with Celery]]
+> Also see: [[cli2api Implementation Roadmap#Phase 4: Async Jobs + Redis]] | [[10 Examples of Use#Example 4: Async Job with Celery]]
 
 Mark any function as async to execute it via Celery worker:
 
@@ -224,10 +333,11 @@ Exponential backoff configurable per task.
 
 ## 20. Hot Reload
 
-> Also see: [[03 Steps to Implement#Step 7.6 — Hot Reload]]
+> Also see: [[cli2api Implementation Roadmap#Step 7.6 — Hot Reload]]
 
 YAML config changes apply without server restart:
 
 - File watcher on config.yaml
 - Re-apply binder on change
 - Zero-downtime config updates
+

@@ -1,3 +1,6 @@
+# AI Summary
+Homebrew. > **Source**: [github.com/bitrouter/bitrouter](https://github.com/bitrouter/bitrouter)
+
 ```table-of-contents
 ```
 

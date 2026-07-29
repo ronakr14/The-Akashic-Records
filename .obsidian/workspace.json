@@ -4,31 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "b4b2572d1a862baa",
+        "id": "df58aef1c0db83c9",
         "type": "tabs",
         "children": [
           {
-            "id": "8da4bee9db18428a",
+            "id": "d21543ac533cd21e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "statusfile.md",
-                "mode": "preview",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "statusfile"
+              "title": "New tab"
             }
           }
         ]
@@ -78,7 +64,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 265.5
+    "width": 218.5
   },
   "right": {
     "id": "7c51cdc979815380",
@@ -208,43 +194,43 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8da4bee9db18428a",
+  "active": "d21543ac533cd21e",
   "lastOpenFiles": [
-    "Untitled 2.md",
+    "2026-07-29.md",
+    "Note Classification.md",
+    "00 Reference/05 Plugins That Can Be Added.md",
+    "00 Reference/06 Constraints.md",
+    "Untitled.md",
+    "00 Reference/2026-07-27.md",
     "statusfile.md",
-    "statusfile.md.tmp.19436.caa0b5554e7c",
-    "MongoDB.md",
-    "Database Skills.md",
-    "Neon.md",
-    "Archon.md",
-    "AutoHedge.md",
-    "Supertonic.md",
-    "00 Reference/Repo — Deep Analysis.md",
-    "HomeButler.md",
-    "OpenChronicle.md",
-    "OBLITERATUS.md",
-    "Obscura.md",
-    "Atlas OS.md",
-    "Onyx.md",
-    "00 Reference/User Dialogs.md",
-    "00 Reference/The Fuzz.md",
-    "00 Reference/SQLGlot.md",
+    "00 Reference/2026-06-19_120000-datatest-automation.md",
     "Storage Tracker.md",
+    "00 Reference/Untitled 1.md",
     "README.md",
-    "00 Reference/Railway CLI.md",
-    "00 Reference/CloakBrowser.md",
-    "2026-07-22.md",
-    "00 Reference/Milvus.md",
-    "2026-07-20.md",
-    "2026-07-21.md",
+    "2026-07-27.md",
+    "01 Career Vault/README.md",
+    "01 Career Vault/ADRs/README.md",
+    "00 Reference/End-to-End Learning Goals for AI Data Platform Project.md",
+    "2026-07-24.md",
+    "2026-07-26.md",
+    "00 Reference/cli2api Feature Roadmap and Enhancements.md",
+    "Projects/cli2api/Architecture",
+    "Projects/cli2api",
+    "Projects/cli2api.md",
+    "00 Reference/AutoHedge.md",
+    "00 Reference/ATS — Hard Mode.md",
+    "00 Reference/Atlas OS.md",
+    "00 Reference/ATLAS.md",
+    "00 Reference/Archon.md",
+    "00 Reference/Anthropic - Defending Code Reference Harness.md",
+    "00 Reference/AI-Powered PKM Vision and Core Capabilities.md",
+    "Projects/Learning-Roadmaps",
+    "Projects",
+    "ai_summary_apply.py",
+    "ai_summary_dryrun.py",
+    "statusfile.md.tmp.19436.caa0b5554e7c",
     "00 Projects/Knowledge OS/vault_parser.py",
     "00 Projects/Knowledge OS/schema/note_metadata.json",
-    "00 Projects/Knowledge OS/tests",
-    "00 Projects/Knowledge OS/data",
-    "00 Projects/Knowledge OS/schema",
-    "00 Projects/Knowledge OS/akashic_engine.py",
-    "00 Projects/Knowledge OS/agents/dispatcher.py",
-    "00 Projects/Knowledge OS/agents/project_reviewer.py",
-    "00 Projects/Knowledge OS/agents/data_mentor.py"
+    "00 Projects/Knowledge OS/tests"
   ]
 }

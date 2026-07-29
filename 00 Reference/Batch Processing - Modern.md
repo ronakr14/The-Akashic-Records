@@ -1,3 +1,6 @@
+# AI Summary
+None. A data contract is an agreement between producer and consumer on schema, semantics, SLAs, and ownership — written, versioned, enforced at the ingest boundary (not after the fact)
+
 ```table-of-contents
 ```
 ## What is a data contract and how does it apply to batch pipelines?

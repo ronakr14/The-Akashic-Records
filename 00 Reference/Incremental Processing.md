@@ -1,3 +1,6 @@
+# AI Summary
+None. Expected discussion: `Watermarks, High-water marks, CDC, Timestamp-based extraction, Idempotency`
+
 ```table-of-contents
 ```
 ## You have a 100 TB table. A full reload takes 15 hours. How would you implement incremental loading?

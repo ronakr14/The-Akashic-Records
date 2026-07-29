@@ -1,3 +1,6 @@
+# AI Summary
+None. Below is a deep-dive report on **tutao/tutanota**. I’m basing this on the repository’s README, build docs, repository metadata, and Tuta’s public product/security pages. ([GitHub](https://github.com/tutao/tutanota "GitHub - tutao/tutanota: Tuta is an email service with a strong focus on sec...
+
 Below is a deep-dive report on **tutao/tutanota**. I’m basing this on the repository’s README, build docs, repository metadata, and Tuta’s public product/security pages. ([GitHub](https://github.com/tutao/tutanota "GitHub - tutao/tutanota: Tuta is an email service with a strong focus on security and privacy that lets you encrypt emails, contacts and calendar entries on all your devices. · GitHub"))
 
 ## 1. Executive Summary

@@ -1,3 +1,6 @@
+# AI Summary
+None. Here’s the straight read: **MoonPdf is a WPF PDF viewer/control library**, not just a standalone app. The repo’s core value is `MoonPdfLib`, which exposes a WPF control (`MoonPdfPanel`) you can embed in your own application; the sample app exists mostly as a reference implementation. The pr...
+
 Here’s the straight read: **MoonPdf is a WPF PDF viewer/control library**, not just a standalone app. The repo’s core value is `MoonPdfLib`, which exposes a WPF control (`MoonPdfPanel`) you can embed in your own application; the sample app exists mostly as a reference implementation. The project uses a mix of **C#, WPF/XAML, native MuPDF/C/C++ code, and some Python/shell for build/support tasks**, which strongly suggests a hybrid managed + native rendering stack. ([GitHub](https://github.com/reliak/moonpdf "GitHub - reliak/moonpdf: Contains a WPF control for displaying PDF files and a sample PDF viewer, that uses this control · GitHub"))
 
 ## 1. Executive Summary

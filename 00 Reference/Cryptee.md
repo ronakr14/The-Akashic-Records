@@ -1,3 +1,6 @@
+# AI Summary
+None. Below is a deep-dive report on `cryptee/web-client`, based on the repository README and the public Cryptee product pages. I have to be explicit about one limitation: GitHub’s rendered repo page exposed the top-level structure and README, but not the full file tree contents in a machine-read...
+
 Below is a deep-dive report on `cryptee/web-client`, based on the repository README and the public Cryptee product pages. I have to be explicit about one limitation: GitHub’s rendered repo page exposed the top-level structure and README, but not the full file tree contents in a machine-readable way, so the component-level analysis is partly inferred from the documented structure and product behavior. ([GitHub](https://github.com/cryptee/web-client "GitHub - cryptee/web-client: Cryptee's web client source code for all platforms. · GitHub"))
 
 ## 1. Executive Summary

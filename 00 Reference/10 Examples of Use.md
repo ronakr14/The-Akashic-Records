@@ -1,9 +1,6 @@
-```table-of-contents
-```
+ Examples of Use
 
-# Examples of Use
-
-> See also: [[04 Enhancements Included]] | [[05 Plugins That Can Be Added]] | [[07 Integration with Typer]] | [[09 Integration with Rich]]
+> See also: [[cli2api Feature Roadmap and Enhancements]] | [[05 Plugins That Can Be Added]] | [[07 Integration with Typer]] | [[09 Integration with Rich]]
 
 ## Example 1: Basic — Hello World
 
@@ -488,3 +485,110 @@ Every example follows the same pattern:
 3. **Get for free**: API endpoint + CLI command + async job + plugins
 
 Write once. Run everywhere.
+
+
+```yaml
+title: cli2api Examples and Reference Implementations
+
+folder: Projects/cli2api/Examples
+
+categorical:
+  domain:
+    value: software-engineering
+    reason: Contains practical implementation examples demonstrating how the framework is used.
+
+  subdomain: reference-examples
+
+  note_type:
+    value: tutorial
+    reason: A collection of end-to-end examples that teach users how to use cli2api in different scenarios.
+
+  source_type:
+    value: self
+    reason: Self-authored documentation and usage examples.
+
+  status:
+    value: curated
+    reason: Stable reference documentation intended for users of the framework.
+
+  level:
+    value: intermediate
+    reason: Starts with basic examples and progresses to production deployments, plugins, async jobs, and integrations.
+
+ratings:
+  confidence:
+    score: 5
+    reason: Self-authored reference documentation.
+
+  completeness:
+    score: 5
+    reason: Covers beginner through production scenarios including API, CLI, plugins, configuration, async processing, deployment, and integrations.
+
+  complexity:
+    score: 4
+    reason: Individual examples are approachable, but collectively cover many framework capabilities.
+
+  importance:
+    score: 5
+    reason: This is the primary hands-on learning resource for understanding and adopting cli2api.
+
+  career_relevance:
+    score: 5
+    reason: Demonstrates practical framework design, API development, CLI tooling, plugin systems, asynchronous execution, and deployment patterns.
+
+  freshness:
+    score: 5
+    reason: Reflects the current architecture and recommended usage patterns of the framework.
+
+  reusability:
+    score: 5
+    reason: Every example can serve as a starting point or template for real applications.
+
+  review_priority:
+    score: 4
+    reason: Should be updated whenever new framework features or integrations are introduced.
+
+  connectedness:
+    score: 5
+    reason: Links architecture, plugins, integrations, configuration, deployment, and execution pipeline into practical examples.
+
+  actionability:
+    score: 5
+    reason: Every section contains runnable code or configuration that users can adapt immediately.
+
+  quality_score:
+    score: 100
+    reason: Comprehensive reference guide demonstrating the framework from basic usage to production deployment with progressively complex examples.
+
+custom:
+  tags:
+    - cli2api
+    - examples
+    - tutorial
+    - reference
+    - python
+    - api
+    - cli
+
+ai_summary: >
+  Comprehensive example-driven guide demonstrating how to build applications with cli2api. The note progresses from simple function exposure to production-ready deployments, covering API and CLI generation, YAML configuration, authentication, rate limiting, asynchronous execution with Celery, idempotency, plugin development, Rich terminal output, n8n integration, environment-specific configuration, Docker deployment, and extensibility. It serves as the primary hands-on reference for learning the framework and understanding how its core architectural concepts work together.
+```
+
+### One suggestion
+
+I would actually rename this file from **`Examples of Use.md`** to something that better matches what it contains.
+
+Some good alternatives:
+
+- **Getting Started by Example** ⭐ (my favorite)
+    
+- **Examples & Recipes**
+    
+- **Cookbook**
+    
+- **Reference Examples**
+    
+- **Usage Examples**
+    
+
+This note isn't just a collection of examples—it functions as the **cookbook** for your framework. Users can copy an example, modify it, and have a working application immediately. That makes it one of the most valuable documents in the project.

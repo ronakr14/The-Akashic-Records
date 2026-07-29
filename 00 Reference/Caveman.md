@@ -1,3 +1,6 @@
+# AI Summary
+None. Here’s the straight read: **`JuliusBrussee/caveman` is a token-compression and behavior-shaping toolkit for AI coding agents**. It makes agents speak tersely, keeps technical meaning intact, and ships that behavior across many environments: Claude Code, Codex, Gemini, Cursor, Windsurf, Clin...
+
 Here’s the straight read: **`JuliusBrussee/caveman` is a token-compression and behavior-shaping toolkit for AI coding agents**. It makes agents speak tersely, keeps technical meaning intact, and ships that behavior across many environments: Claude Code, Codex, Gemini, Cursor, Windsurf, Cline, Copilot, and more. The repo is not “just a prompt file”; it is a multi-surface distribution system with skills, hooks, installers, per-agent integration logic, tests, benchmarks, and docs. ([GitHub](https://github.com/JuliusBrussee/caveman/blob/main/README.md?utm_source=chatgpt.com "caveman/README.md at main · JuliusBrussee ..."))
 
 ## 1. Executive Summary

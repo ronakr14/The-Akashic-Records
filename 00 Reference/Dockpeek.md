@@ -1,3 +1,6 @@
+# AI Summary
+Dockpeek Repository Analysis. Dockpeek is a self-hosted Docker dashboard focused on giving operators fast, low-friction access to container web UIs, logs, port mappings, and image updates from a single interface. The repository describes it as a “lightweight, self-hosted Docker dashboard” that su...
+
 ```table-of-contents
 ```
 

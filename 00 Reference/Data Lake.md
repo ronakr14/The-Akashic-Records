@@ -1,3 +1,6 @@
+# AI Summary
+Analogy. A **data lake** is a centralized storage repository that holds **large amounts of raw data** in its original format until it is needed
+
 ```table-of-contents
 ```
 

@@ -1,3 +1,6 @@
+# AI Summary
+ELT. > **ELT:** Store the data first, then clean it
+
 # ELT
 
 ```table-of-contents

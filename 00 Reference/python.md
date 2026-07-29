@@ -1,3 +1,6 @@
+# AI Summary
+Mutable default args -> use None. Best use case: Rapid backend, data engineering, and AI/ML development — ideal for building pipelines, APIs, and automation with rich libraries
+
 ```table-of-contents
 ```
 

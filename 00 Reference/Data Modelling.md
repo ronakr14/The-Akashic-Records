@@ -1,3 +1,6 @@
+# AI Summary
+None. Let's approach this the way I'd explain it to a new data engineer joining a project
+
 ```table-of-contents
 ```
 

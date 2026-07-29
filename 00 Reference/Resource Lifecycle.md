@@ -1,3 +1,6 @@
+# AI Summary
+None. Bed: Available/Reserved/Occupied/Cleaning/Maintenance/Unavailable
+
 ```table-of-contents
 ```
 

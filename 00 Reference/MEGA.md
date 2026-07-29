@@ -1,3 +1,6 @@
+# AI Summary
+None. Here’s a deep architectural read of **MEGA Web Client** based on the repository README, package metadata, and the exposed file inventory. ([GitHub](https://github.com/meganz/webclient "GitHub - meganz/webclient: The mega.nz web client · GitHub"))
+
 Here’s a deep architectural read of **MEGA Web Client** based on the repository README, package metadata, and the exposed file inventory. ([GitHub](https://github.com/meganz/webclient "GitHub - meganz/webclient: The mega.nz web client · GitHub"))
 
 ## 1. Executive Summary

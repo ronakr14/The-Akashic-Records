@@ -1,3 +1,6 @@
+# AI Summary
+Koalas (Pandas API on Apache Spark) — Deep Practical Analysis. > **Short version:** Koalas was an excellent migration layer that let pandas users scale to Spark with minimal code changes. **Today, you generally should not start a new project with Koalas.** It was donated to Apache Spark and becam...
+
 ```table-of-contents
 ```
 

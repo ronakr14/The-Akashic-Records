@@ -1,3 +1,6 @@
+# AI Summary
+None. Below is a deep, evidence-based read on `Mailfence/mailfence-android`. I’m being blunt where the repo itself is thin on code visibility: this is a **public Android client for a private email/collaboration service**, but the GitHub repository is intentionally not open-source in the usual sen...
+
 Below is a deep, evidence-based read on `Mailfence/mailfence-android`. I’m being blunt where the repo itself is thin on code visibility: this is a **public Android client for a private email/collaboration service**, but the GitHub repository is intentionally not open-source in the usual sense, so the analysis leans heavily on the README, repository metadata, issues, and the product’s public positioning. ([GitHub](https://github.com/Mailfence/mailfence-android "GitHub - Mailfence/mailfence-android · GitHub"))
 
 ## 1. Executive Summary

@@ -1,3 +1,6 @@
+# AI Summary
+1. Executive Summary. Here’s a grounded repo analysis for **nickstenning/honcho**
+
 ```table-of-contents
 ```
 

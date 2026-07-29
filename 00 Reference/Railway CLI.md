@@ -1,3 +1,6 @@
+# AI Summary
+None. Here’s a deep read on **`railwayapp/cli`**, based on the repository metadata, README, Cargo manifest, build script, and key command files I inspected. The picture is pretty clear: this is a **production-grade Rust CLI for Railway**, with a serious bias toward developer experience, automatio...
+
 Here’s a deep read on **`railwayapp/cli`**, based on the repository metadata, README, Cargo manifest, build script, and key command files I inspected. The picture is pretty clear: this is a **production-grade Rust CLI for Railway**, with a serious bias toward developer experience, automation, and AI-tool integration. ([GitHub](https://github.com/railwayapp/cli "GitHub - railwayapp/cli: Railway CLI · GitHub"))
 
 ## 1. Executive Summary

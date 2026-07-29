@@ -1,9 +1,7 @@
-```table-of-contents
-```
 
 # Integration with Argparse
 
-> See also: [[07 Integration with Typer]] (recommended alternative) | [[04 Enhancements Included#7. CLI + API Dual Mode]]
+> See also: [[07 Integration with Typer]] (recommended alternative) | [[cli2api Feature Roadmap and Enhancements#7. CLI + API Dual Mode]]
 
 ## Status: Discouraged
 
@@ -145,3 +143,178 @@ The function signature becomes the CLI definition. No manual mapping needed.
 ## Verdict
 
 Use Typer. Argparse in a cli2api system is like installing manual crank windows in a car that already has power controls — technically possible, completely unnecessary.
+
+
+```yaml
+title: cli2api Integration with Argparse
+
+folder: Projects/cli2api/Integrations
+
+categorical:
+  domain:
+    value: software-engineering
+    reason: Documents integration with an external Python CLI framework.
+
+  subdomain: cli-framework
+
+  note_type:
+    value: technology
+    reason: Explains how argparse can be integrated into cli2api, its trade-offs, and why it is not the preferred choice.
+
+  source_type:
+    value: self
+    reason: Self-authored integration and comparison guide.
+
+  status:
+    value: curated
+    reason: Stable reference documenting an optional integration and migration path.
+
+  level:
+    value: intermediate
+    reason: Covers registry-based command generation and Python introspection without introducing major architectural concepts.
+
+ratings:
+  confidence:
+    score: 5
+    reason: Self-authored technical documentation.
+
+  completeness:
+    score: 5
+    reason: Includes rationale, implementation, limitations, migration guidance, and recommendation.
+
+  complexity:
+    score: 3
+    reason: Focuses on integrating a single CLI framework rather than core framework architecture.
+
+  importance:
+    score: 3
+    reason: Argparse is intentionally presented as a secondary, discouraged option rather than a primary execution surface.
+
+  career_relevance:
+    score: 4
+    reason: Demonstrates understanding of Python CLI tooling and architectural trade-offs.
+
+  freshness:
+    score: 4
+    reason: Still relevant for legacy and dependency-free environments, although Typer is the modern recommendation.
+
+  reusability:
+    score: 4
+    reason: Useful for projects that require stdlib-only CLI implementations or migration from existing argparse codebases.
+
+  review_priority:
+    score: 2
+    reason: Expected to change infrequently since it documents a fallback integration.
+
+  connectedness:
+    score: 4
+    reason: References Typer integration, CLI architecture, execution pipeline, and framework principles.
+
+  actionability:
+    score: 4
+    reason: Provides complete implementation examples and migration guidance.
+
+  quality_score:
+    score: 95
+    reason: Well-structured comparison and implementation guide that clearly explains why argparse is a fallback rather than the preferred integration.
+
+custom:
+  tags:
+    - cli2api
+    - argparse
+    - cli
+    - integration
+    - python
+
+ai_summary: >
+  Explains how argparse can be integrated into cli2api while highlighting why it is discouraged compared to Typer. The document compares both frameworks against cli2api's design goals, describes situations where argparse remains appropriate, provides a registry-driven implementation example, discusses its limitations, outlines migration to Typer, and reinforces the framework's principle that function signatures should remain the single source of truth for both CLI and API interfaces.
+```
+
+I agree with classifying this as **`technology`**. Unlike your Architecture or Design Principles notes, this one is focused on integrating a specific library and evaluating its trade-offs. It naturally belongs alongside `Typer.md`, `Rich.md`, `FastAPI.md`, etc., under an `Integrations/` folder.
+
+```yaml
+title: cli2api Integration with Argparse
+
+folder: Projects/cli2api/Integrations
+
+categorical:
+  domain:
+    value: software-engineering
+    reason: Documents integration with an external Python CLI framework.
+
+  subdomain: cli-framework
+
+  note_type:
+    value: technology
+    reason: Explains how argparse can be integrated into cli2api, its trade-offs, and why it is not the preferred choice.
+
+  source_type:
+    value: self
+    reason: Self-authored integration and comparison guide.
+
+  status:
+    value: curated
+    reason: Stable reference documenting an optional integration and migration path.
+
+  level:
+    value: intermediate
+    reason: Covers registry-based command generation and Python introspection without introducing major architectural concepts.
+
+ratings:
+  confidence:
+    score: 5
+    reason: Self-authored technical documentation.
+
+  completeness:
+    score: 5
+    reason: Includes rationale, implementation, limitations, migration guidance, and recommendation.
+
+  complexity:
+    score: 3
+    reason: Focuses on integrating a single CLI framework rather than core framework architecture.
+
+  importance:
+    score: 3
+    reason: Argparse is intentionally presented as a secondary, discouraged option rather than a primary execution surface.
+
+  career_relevance:
+    score: 4
+    reason: Demonstrates understanding of Python CLI tooling and architectural trade-offs.
+
+  freshness:
+    score: 4
+    reason: Still relevant for legacy and dependency-free environments, although Typer is the modern recommendation.
+
+  reusability:
+    score: 4
+    reason: Useful for projects that require stdlib-only CLI implementations or migration from existing argparse codebases.
+
+  review_priority:
+    score: 2
+    reason: Expected to change infrequently since it documents a fallback integration.
+
+  connectedness:
+    score: 4
+    reason: References Typer integration, CLI architecture, execution pipeline, and framework principles.
+
+  actionability:
+    score: 4
+    reason: Provides complete implementation examples and migration guidance.
+
+  quality_score:
+    score: 95
+    reason: Well-structured comparison and implementation guide that clearly explains why argparse is a fallback rather than the preferred integration.
+
+custom:
+  tags:
+    - cli2api
+    - argparse
+    - cli
+    - integration
+    - python
+
+ai_summary: >
+  Explains how argparse can be integrated into cli2api while highlighting why it is discouraged compared to Typer. The document compares both frameworks against cli2api's design goals, describes situations where argparse remains appropriate, provides a registry-driven implementation example, discusses its limitations, outlines migration to Typer, and reinforces the framework's principle that function signatures should remain the single source of truth for both CLI and API interfaces.
+```
+
+I agree with classifying this as **`technology`**. Unlike your Architecture or Design Principles notes, this one is focused on integrating a specific library and evaluating its trade-offs. It naturally belongs alongside `Typer.md`, `Rich.md`, `FastAPI.md`, etc., under an `Integrations/` folder.

@@ -1,3 +1,6 @@
+# AI Summary
+Delta Lake & Iceberg. > Yes. This is one of the most important topics in modern data engineering
+
 # Delta Lake & Iceberg
 
 ```table-of-contents

@@ -1,3 +1,6 @@
+# AI Summary
+Parquet. > Since you're already thinking like a Data Engineer and aiming toward Architect-level understanding, I'll explain Parquet from the storage-engine perspective rather than the usual "it's a columnar file format" definition
+
 # Parquet
 
 ```table-of-contents

@@ -1,3 +1,6 @@
+# AI Summary
+None. Below is a deep, engineering-oriented read on **neondatabase/neon** based on the repository README, workspace manifest, and Neon documentation/architecture pages. I’m treating this as the **open-source core of Neon’s serverless Postgres platform**, not the hosted commercial service. ([GitHu...
+
 Below is a deep, engineering-oriented read on **neondatabase/neon** based on the repository README, workspace manifest, and Neon documentation/architecture pages. I’m treating this as the **open-source core of Neon’s serverless Postgres platform**, not the hosted commercial service. ([GitHub](https://github.com/neondatabase/neon?utm_source=chatgpt.com "neondatabase/neon: Neon: Serverless Postgres. We ..."))
 
 ---

@@ -1,3 +1,6 @@
+# AI Summary
+Repository Analysis Report: `casey/just`. **Repository:** [https://github.com/casey/just](https://github.com/casey/just)
+
 ```table-of-contents
 ```
 

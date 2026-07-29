@@ -1,3 +1,6 @@
+# AI Summary
+None. Possible checks:
+
 ```table-of-contents
 ```
 ## How would you validate a batch load before publishing it?

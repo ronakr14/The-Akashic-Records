@@ -1,3 +1,6 @@
+# AI Summary
+Recommended Approach: `uv`. Managing multiple Python versions and isolated environments. This note covers Windows + MSYS/bash workflows
+
 ```table-of-contents
 ```
 

@@ -1,3 +1,6 @@
+# AI Summary
+Log in manually. If you're trying to get the `__Secure-session` cookie **for your own authenticated Ollama account**, there are several legitimate ways. If the cookie is marked `HttpOnly` (which session cookies usually are), it **cannot be read with JavaScript** (`document.cookie`) by design. ([M...
+
 ```table-of-contents
 ```
 

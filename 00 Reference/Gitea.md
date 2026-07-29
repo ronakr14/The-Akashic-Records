@@ -1,3 +1,6 @@
+# AI Summary
+Gitea Repository Analysis — `go-gitea/gitea`. Gitea is a self-hosted, all-in-one software development platform for hosting Git repositories and the surrounding collaboration workflow. It covers Git hosting, code review, issue tracking, project boards, wiki, packages, and CI/CD via Gitea Actions. ...
+
 # Gitea Repository Analysis — `go-gitea/gitea`
 
 ## 1. Executive Summary

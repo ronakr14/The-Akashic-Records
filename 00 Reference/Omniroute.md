@@ -1,3 +1,6 @@
+# AI Summary
+None. Below is a high-confidence architecture review based on the repository’s current docs, README, and codebase documentation. I did not inspect every source file line-by-line, so a few component-level details are inferred from the documented structure rather than directly proven from code. Sti...
+
 ```table-of-contents
 ```
 

@@ -1,3 +1,6 @@
+# AI Summary
+None. File size sits in a sweet spot — too small or too large both hurt
+
 ```table-of-contents
 ```
 ## Why is file size important in batch processing?

@@ -1,3 +1,6 @@
+# AI Summary
+None. Here’s the straight read: **DuckLake is DuckDB’s lakehouse format and extension for working with a SQL-managed data lake built on Parquet files plus a catalog database**. It gives DuckDB native `ATTACH`, table DDL/DML, time travel, schema evolution, and change data feed semantics over that ...
+
 Here’s the straight read: **DuckLake is DuckDB’s lakehouse format and extension for working with a SQL-managed data lake built on Parquet files plus a catalog database**. It gives DuckDB native `ATTACH`, table DDL/DML, time travel, schema evolution, and change data feed semantics over that storage model. The repo is a **C++ extension project** with tests, benchmarks, docs, and packaging glue, and it is explicitly presented as an open lakehouse format rather than just a file-format helper. ([GitHub](https://github.com/duckdb/ducklake?utm_source=chatgpt.com "DuckDB DuckLake Extension"))
 
 ## 1. Executive Summary

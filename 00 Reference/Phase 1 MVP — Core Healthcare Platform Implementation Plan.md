@@ -1,5 +1,3 @@
-```table-of-contents
-```
 
 # Phase 1 — Trimmed Scope
 
@@ -159,3 +157,103 @@ Mirror the same 5-endpoint pattern for: `doctors`, `departments`, `appointments`
 - **Phase 1.5** — Docker + RBAC + observability, 1 week
 - **Phase 2** — Batch ETL (Bronze → Silver → Gold) on Phase 1 data
 - **Phase 3+** — per `00 Proposal.md`
+
+
+```yaml
+id: 8n4k2p
+
+title: Phase 1 MVP — Core Healthcare Platform Implementation Plan
+
+folder: Projects/Healthcare-Data-AI-Platform/Phase-01-Core-Healthcare-Platform
+
+categorical:
+  domain:
+    value: software-engineering
+    reason: Focuses on implementing the backend application architecture, APIs, database, authentication, and testing.
+
+  subdomain: backend-mvp
+
+  note_type:
+    value: project
+    reason: Defines the execution plan, milestones, scope, deliverables, and acceptance criteria for a project phase.
+
+  source_type:
+    value: self
+    reason: Self-authored implementation roadmap.
+
+  status:
+    value: curated
+    reason: Mature planning document with clear scope, sequencing, and measurable completion criteria.
+
+  level:
+    value: advanced
+    reason: Requires understanding of backend architecture, relational database design, authentication, migrations, testing, and API development.
+
+ratings:
+  confidence:
+    score: 5
+    reason: Self-authored project plan with no external factual claims.
+
+  completeness:
+    score: 5
+    reason: Includes scope changes, architecture, implementation order, technology stack, API design, deliverables, deferred work, timeline, and done criteria.
+
+  complexity:
+    score: 4
+    reason: Covers several backend engineering disciplines while remaining focused on a single application layer.
+
+  importance:
+    score: 5
+    reason: Produces the operational system that powers every downstream Data Engineering, ML, and AI phase.
+
+  career_relevance:
+    score: 5
+    reason: Demonstrates production backend engineering, architecture, API design, database modeling, testing, and security skills.
+
+  freshness:
+    score: 5
+    reason: Uses current ecosystem technologies including FastAPI, SQLAlchemy 2.x, Pydantic v2, Alembic, PostgreSQL 15, and pytest.
+
+  reusability:
+    score: 5
+    reason: The implementation plan and architecture can be reused as a blueprint for future backend services.
+
+  review_priority:
+    score: 4
+    reason: Active implementation document that should be updated throughout development.
+
+  connectedness:
+    score: 5
+    reason: Central hub connecting domain models, ADRs, APIs, repositories, services, database schema, authentication, testing, and later ETL phases.
+
+  actionability:
+    score: 5
+    reason: Provides sequential implementation steps, estimated effort, API surface, acceptance criteria, and phased roadmap.
+
+  quality_score:
+    score: 98
+    reason: Exceptionally well-scoped implementation plan with realistic sequencing, explicit non-goals, measurable deliverables, and clear project boundaries.
+
+custom:
+  tags:
+    - healthcare
+    - backend
+    - fastapi
+    - postgresql
+    - mvp
+
+ai_summary: >
+  Defines the Minimum Viable Product implementation plan for Phase 1 of the Intelligent Healthcare Data & AI Platform. The document narrows the original scope to a two-week backend implementation covering ten core healthcare entities, PostgreSQL schema design, FastAPI REST APIs, repository and service layers, JWT authentication, Alembic migrations, Faker-based seed data, and automated testing. It specifies implementation order, project structure, API endpoints, deferred features, acceptance criteria, and the transition path to later phases including ETL, analytics, and AI.
+```
+
+### Classification rationale
+
+|Field|Choice|Why|
+|---|---|---|
+|**Domain**|`software-engineering`|This note is about implementing a production backend, not data pipelines.|
+|**Note Type**|`project`|It's an execution plan with milestones, timeline, deliverables, and acceptance criteria.|
+|**Status**|`curated`|This is a stable planning artifact that should evolve slowly during implementation.|
+|**Subdomain**|`backend-mvp`|Precisely captures the focus: building the minimum viable backend platform.|
+|**Folder**|`Projects/Healthcare-Data-AI-Platform/Phase-01-Core-Healthcare-Platform`|Fits naturally as the implementation guide for Phase 1 under the parent project.|
+
+This is exactly the kind of note I'd make the **primary implementation document** for Phase 1, while keeping the broader "Core Healthcare Platform" note as the high-level overview. The high-level note answers **what** and **why**; this trimmed MVP note answers **how**, **when**, and **what constitutes done**.

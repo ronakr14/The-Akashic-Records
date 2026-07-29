@@ -1,3 +1,6 @@
+# AI Summary
+None. Here’s the blunt read: **BigSet is an experimental, open-source “data product from plain English” system**. It turns a sentence like “YC companies hiring engineers” into a structured, refreshable dataset by combining schema inference, web search/fetch, verification, deduplication, and expor...
+
 ```table-of-contents
 ```
 

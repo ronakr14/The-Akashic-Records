@@ -1,3 +1,6 @@
+# AI Summary
+None. Act as a senior architect and practitioner with hands-on experience building and scaling systems
+
 ```table-of-contents
 ```
 

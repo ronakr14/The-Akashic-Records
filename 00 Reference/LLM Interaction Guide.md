@@ -1,3 +1,6 @@
+# AI Summary
+None. Looking at this conversation and the broader pattern in your recent discussions, you're already using ChatGPT more like a technical architect than a casual user. The biggest gains won't come from asking "better questions"; they'll come from structuring the interaction differently
+
 ```table-of-contents
 ```
 

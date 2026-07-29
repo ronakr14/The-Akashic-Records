@@ -1,3 +1,6 @@
+# AI Summary
+What is a Distributed System?. Great topic. Most people jump straight into Spark, Kafka, Flink, Kubernetes, and end up memorizing technologies without understanding the underlying distributed systems principles
+
 ```table-of-contents
 ```
 

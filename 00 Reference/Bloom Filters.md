@@ -1,3 +1,6 @@
+# AI Summary
+Sample data. A Bloom Filter is a memory-efficient probabilistic data structure that answers one question: **"Is this element possibly in the set, or definitely not?"**
+
 ```table-of-contents
 ```
 

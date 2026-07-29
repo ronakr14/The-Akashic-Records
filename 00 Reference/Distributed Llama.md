@@ -1,3 +1,6 @@
+# AI Summary
+1. Executive Summary. Below is a deep, architecture-focused analysis of **b4rtaz/distributed-llama** based on the repository’s README, file layout, release activity, and public issue/discussion signals. The project’s own documentation is the strongest source here, so I’ve anchored the conclusions...
+
 Below is a deep, architecture-focused analysis of **b4rtaz/distributed-llama** based on the repository’s README, file layout, release activity, and public issue/discussion signals. The project’s own documentation is the strongest source here, so I’ve anchored the conclusions to that. ([GitHub](https://github.com/b4rtaz/distributed-llama "GitHub - b4rtaz/distributed-llama: Distributed LLM inference. Connect home devices into a powerful cluster to accelerate LLM inference. More devices means faster inference. · GitHub"))
 
 ---

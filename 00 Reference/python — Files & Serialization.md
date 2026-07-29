@@ -1,3 +1,6 @@
+# AI Summary
+Read entire file. with open("data.txt", "r", encoding="utf-8") as f:
+
 ```table-of-contents
 ```
 
