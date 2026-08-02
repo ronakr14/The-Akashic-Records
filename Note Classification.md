@@ -1,12 +1,13 @@
 ---
 domain: ronak
-subdomain:
-note_type:
-source_type:
-status:
-level:
-tags:
+level: null
+note_type: null
+source_type: null
+status: null
+subdomain: null
+tags: null
 ---
+
 # AI Summary
 
 ronak

@@ -4,17 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "df58aef1c0db83c9",
+        "id": "467fda2412a7d124",
         "type": "tabs",
         "children": [
           {
-            "id": "d21543ac533cd21e",
+            "id": "3141f67ddd86244f",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Untitled 1.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Untitled 1"
             }
           }
         ]
@@ -37,7 +51,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -194,19 +210,23 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d21543ac533cd21e",
+  "active": "3141f67ddd86244f",
   "lastOpenFiles": [
-    "2026-07-29.md",
+    "2026-08-02.md",
+    "Untitled 1.md",
+    "Projects",
+    "Untitled.md",
+    "statusfile.md",
+    "Storage Tracker.md",
+    "README.md",
     "Note Classification.md",
+    "2026-07-29.md",
+    "2026-07-30.md",
     "00 Reference/05 Plugins That Can Be Added.md",
     "00 Reference/06 Constraints.md",
-    "Untitled.md",
     "00 Reference/2026-07-27.md",
-    "statusfile.md",
     "00 Reference/2026-06-19_120000-datatest-automation.md",
-    "Storage Tracker.md",
     "00 Reference/Untitled 1.md",
-    "README.md",
     "2026-07-27.md",
     "01 Career Vault/README.md",
     "01 Career Vault/ADRs/README.md",
@@ -221,16 +241,12 @@
     "00 Reference/ATS — Hard Mode.md",
     "00 Reference/Atlas OS.md",
     "00 Reference/ATLAS.md",
-    "00 Reference/Archon.md",
-    "00 Reference/Anthropic - Defending Code Reference Harness.md",
-    "00 Reference/AI-Powered PKM Vision and Core Capabilities.md",
     "Projects/Learning-Roadmaps",
     "Projects",
     "ai_summary_apply.py",
     "ai_summary_dryrun.py",
     "statusfile.md.tmp.19436.caa0b5554e7c",
     "00 Projects/Knowledge OS/vault_parser.py",
-    "00 Projects/Knowledge OS/schema/note_metadata.json",
-    "00 Projects/Knowledge OS/tests"
+    "00 Projects/Knowledge OS/schema/note_metadata.json"
   ]
 }
