@@ -100,7 +100,7 @@ Goal: Request/response logging.
 
 ### Step 3.1 — Typer Integration
 
-> Also see: [[07 Integration with Typer]]
+> Also see: [[Integration - Typer]]
 
 Goal: Same function exposed as CLI command.
 
@@ -287,7 +287,7 @@ File: `config.yaml` (update)
 
 ### Step 6.5 — Example Plugins
 
-> Also see: [[05 Plugins That Can Be Added]]
+> Also see: [[Plugin System]]
 
 Goal: Implement core plugins.
 

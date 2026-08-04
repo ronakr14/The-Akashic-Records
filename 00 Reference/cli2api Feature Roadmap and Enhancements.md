@@ -112,7 +112,7 @@ This note complements the architecture by answering **"What can the platform do?
  
  Enhancements Included
 
-> See also: [[cli2api System Architecture]] | [[cli2api Implementation Roadmap]] | [[05 Plugins That Can Be Added]]
+> See also: [[cli2api System Architecture]] | [[cli2api Implementation Roadmap]] | [[Plugin System]]
 
 Beyond the basic "decorator that exposes a function as an API endpoint," cli2api includes the following enhancements to make it a production-capable internal execution platform.
 
@@ -142,7 +142,7 @@ No manual validation code needed — invalid inputs return 422 with clear error 
 
 ## 3. API Key Security
 
-> Also see: [[05 Plugins That Can Be Added#4. Auth Plugin]] | [[10 Examples of Use#Example 7: Auth Protection]]
+> Also see: [[Plugin System#4. Auth Plugin]] | [[10 Examples of Use#Example 7: Auth Protection]]
 
 Per-route API key validation via `x-api-key` header:
 
@@ -182,7 +182,7 @@ def process_data(x: int, y: int):
 
 ## 6. Idempotency Keys
 
-> Also see: [[05 Plugins That Can Be Added#3. Idempotency Plugin]] | [[10 Examples of Use#Example 5: Idempotency]]
+> Also see: [[Plugin System#3. Idempotency Plugin]] | [[10 Examples of Use#Example 5: Idempotency]]
 
 Prevent duplicate execution for critical operations:
 
@@ -194,7 +194,7 @@ Prevent duplicate execution for critical operations:
 
 ## 7. CLI + API Dual Mode
 
-> Also see: [[07 Integration with Typer]] | [[08 Integration with Argparse]] | [[09 Integration with Rich]]
+> Also see: [[Integration - Typer]] | [[Integration - Argparse]] | [[Integration - Rich]]
 
 Same function exposed as both REST endpoint and CLI command:
 
@@ -222,7 +222,7 @@ Change behavior without touching Python code. Environment-specific configs: `con
 
 ## 9. Plugin System
 
-> Also see: [[05 Plugins That Can Be Added]] | [[06 Constraints#3. Plugins are Hooks, Not Injection]]
+> Also see: [[Plugin System]] | [[Design Principles#3. Plugins are Hooks, Not Injection]]
 
 Extensible middleware with strict contracts:
 

@@ -1,6 +1,6 @@
  Examples of Use
 
-> See also: [[cli2api Feature Roadmap and Enhancements]] | [[05 Plugins That Can Be Added]] | [[07 Integration with Typer]] | [[09 Integration with Rich]]
+> See also: [[cli2api Feature Roadmap and Enhancements]] | [[Plugin System]] | [[Integration - Typer]] | [[Integration - Rich]]
 
 ## Example 1: Basic — Hello World
 

@@ -1,7 +1,7 @@
 
 # Architecture
 
-> See also: [[cli2api Project Vision and Design Goals]] | [[cli2api Implementation Roadmap]] | [[05 Plugins That Can Be Added]]
+> See also: [[cli2api Project Vision and Design Goals]] | [[cli2api Implementation Roadmap]] | [[Plugin System]]
 
 ## High-Level Data Flow
 

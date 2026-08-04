@@ -4,16 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "467fda2412a7d124",
+        "id": "20bd29def36017a7",
         "type": "tabs",
         "children": [
           {
-            "id": "3141f67ddd86244f",
+            "id": "cb7b0eae3fbd2a23",
+            "type": "leaf",
+            "state": {
+              "type": "excel-pro-view",
+              "state": {
+                "file": "Scores.md"
+              },
+              "icon": "lucide-file",
+              "title": "Scores"
+            }
+          },
+          {
+            "id": "c901228299730a78",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Untitled 1.md",
+                "file": "03 Repository Analysis/AI & LLM/9Router.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,10 +40,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Untitled 1"
+              "title": "9Router"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -186,6 +199,16 @@
               "icon": "lucide-info",
               "title": "File properties"
             }
+          },
+          {
+            "id": "9923bdbf28ffb4d4",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {},
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
+            }
           }
         ],
         "currentTab": 5
@@ -210,43 +233,43 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3141f67ddd86244f",
+  "active": "c4a0399f57f93a64",
   "lastOpenFiles": [
-    "2026-08-02.md",
-    "Untitled 1.md",
-    "Projects",
-    "Untitled.md",
-    "statusfile.md",
+    "Scores.md",
+    "03 Repository Analysis/AI & LLM/9Router.md",
+    "03 Repository Analysis/AI & LLM",
+    "03 Repository Analysis/Storage Platforms/9Drive.md",
+    "03 Repository Analysis/Storage Platforms",
+    "02 Projects/cli2api/Integration - Rich.md",
+    "03 Repository Analysis",
+    "02 Projects/cli2api/Integration - Argparse.md",
+    "02 Projects/cli2api/Integration - Typer.md",
+    "02 Projects/cli2api/Design Principles.md",
+    "02 Projects/cli2api/Plugin System.md",
+    "02 Projects/Learning Roadmap/End-to-End Learning Goals for AI Data Platform Project.md",
+    "02 Projects/cli2api",
     "Storage Tracker.md",
-    "README.md",
+    "02 Projects/Learning Roadmap",
+    "02 Projects",
+    "Untitled 1.md",
     "Note Classification.md",
+    "statusfile.md",
+    "Untitled.md",
+    "2026-08-04.md",
+    "2026-08-03.md",
+    "2026-08-02.md",
+    "Projects",
+    "README.md",
     "2026-07-29.md",
     "2026-07-30.md",
-    "00 Reference/05 Plugins That Can Be Added.md",
-    "00 Reference/06 Constraints.md",
     "00 Reference/2026-07-27.md",
     "00 Reference/2026-06-19_120000-datatest-automation.md",
     "00 Reference/Untitled 1.md",
     "2026-07-27.md",
     "01 Career Vault/README.md",
     "01 Career Vault/ADRs/README.md",
-    "00 Reference/End-to-End Learning Goals for AI Data Platform Project.md",
-    "2026-07-24.md",
-    "2026-07-26.md",
-    "00 Reference/cli2api Feature Roadmap and Enhancements.md",
     "Projects/cli2api/Architecture",
     "Projects/cli2api",
-    "Projects/cli2api.md",
-    "00 Reference/AutoHedge.md",
-    "00 Reference/ATS — Hard Mode.md",
-    "00 Reference/Atlas OS.md",
-    "00 Reference/ATLAS.md",
-    "Projects/Learning-Roadmaps",
-    "Projects",
-    "ai_summary_apply.py",
-    "ai_summary_dryrun.py",
-    "statusfile.md.tmp.19436.caa0b5554e7c",
-    "00 Projects/Knowledge OS/vault_parser.py",
-    "00 Projects/Knowledge OS/schema/note_metadata.json"
+    "Projects/Learning-Roadmaps"
   ]
 }
