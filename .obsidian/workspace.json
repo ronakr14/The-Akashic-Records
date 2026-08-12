@@ -4,28 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "20bd29def36017a7",
+        "id": "83cee019e384f0d1",
         "type": "tabs",
         "children": [
           {
-            "id": "cb7b0eae3fbd2a23",
-            "type": "leaf",
-            "state": {
-              "type": "excel-pro-view",
-              "state": {
-                "file": "Scores.md"
-              },
-              "icon": "lucide-file",
-              "title": "Scores"
-            }
-          },
-          {
-            "id": "c901228299730a78",
+            "id": "e3e0a485b4533ab2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03 Repository Analysis/AI & LLM/9Router.md",
+                "file": "00 Inbox/Data Engineering/Senior Python Data Engineer - Advanced Interview Question Bank.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -40,11 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "9Router"
+              "title": "Senior Python Data Engineer - Advanced Interview Question Bank"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -78,7 +65,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "github repo",
+                "query": "cli2api Plugin Architecture and Plugin Catalog",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -93,7 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 218.5
+    "width": 253.5
   },
   "right": {
     "id": "7c51cdc979815380",
@@ -233,43 +220,43 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c4a0399f57f93a64",
+  "active": "932cadc2bc5845db",
   "lastOpenFiles": [
-    "Scores.md",
-    "03 Repository Analysis/AI & LLM/9Router.md",
-    "03 Repository Analysis/AI & LLM",
-    "03 Repository Analysis/Storage Platforms/9Drive.md",
-    "03 Repository Analysis/Storage Platforms",
-    "02 Projects/cli2api/Integration - Rich.md",
-    "03 Repository Analysis",
-    "02 Projects/cli2api/Integration - Argparse.md",
-    "02 Projects/cli2api/Integration - Typer.md",
-    "02 Projects/cli2api/Design Principles.md",
-    "02 Projects/cli2api/Plugin System.md",
-    "02 Projects/Learning Roadmap/End-to-End Learning Goals for AI Data Platform Project.md",
-    "02 Projects/cli2api",
-    "Storage Tracker.md",
-    "02 Projects/Learning Roadmap",
-    "02 Projects",
-    "Untitled 1.md",
-    "Note Classification.md",
-    "statusfile.md",
-    "Untitled.md",
-    "2026-08-04.md",
-    "2026-08-03.md",
-    "2026-08-02.md",
-    "Projects",
-    "README.md",
-    "2026-07-29.md",
-    "2026-07-30.md",
-    "00 Reference/2026-07-27.md",
-    "00 Reference/2026-06-19_120000-datatest-automation.md",
-    "00 Reference/Untitled 1.md",
-    "2026-07-27.md",
-    "01 Career Vault/README.md",
-    "01 Career Vault/ADRs/README.md",
-    "Projects/cli2api/Architecture",
-    "Projects/cli2api",
-    "Projects/Learning-Roadmaps"
+    "00 Inbox/Data Engineering/Senior python data engineer interview questions.md",
+    "Tech Landscape.md",
+    "00 Inbox/Data Engineering/Senior Python Data Engineer - Advanced Interview Question Bank.md",
+    "Career Growth Roadmap.md",
+    "00 Inbox/Data Engineering/Z-Ordering.md",
+    "00 Inbox/Python/VSCode Debug.md",
+    "00 Inbox/AI & LLM/Vector Database.md",
+    "00 Inbox/Data Engineering/UUIDv7 & ULID.md",
+    "00 Inbox/Software Engineering/UserDialogs.md",
+    "00 Inbox/Software Engineering/Tuta.md",
+    "00 Inbox/Data Engineering/Turso.md",
+    "00 Inbox/AI & LLM/Turbovec.md",
+    "00 Inbox/AI & LLM/Token Optimizer MCP.md",
+    "00 Inbox/Software Engineering/Thunderbird Android.md",
+    "00 Inbox/Software Engineering/Task.md",
+    "00 Inbox/Cloud/Tailscale.md",
+    "00 Inbox/AI & LLM/Supertonic.md",
+    "00 Inbox/Data Engineering/Stream Processing.md",
+    "00 Inbox/Data Engineering/SQLGlot.md",
+    "00 Inbox/AI & LLM/SkillSpector.md",
+    "00 Inbox/Python/Senior Python Data Engineer Interview Prep.md",
+    "00 Inbox/AI & LLM/Repowise.md",
+    "00 Inbox/Cloud/Railway CLI.md",
+    "00 Inbox/Data Engineering/Query Optimization.md",
+    "00 Inbox/Python/Python.md",
+    "00 Inbox/Data Engineering/PySpark.md",
+    "00 Inbox/Python",
+    "00 Inbox/Cloud",
+    "Untitled",
+    "00 Inbox/DevOps",
+    "00 Inbox/Software Engineering",
+    "00 Inbox/AI & LLM",
+    "00 Inbox/Data Engineering",
+    "00 Reference/Repository Analysis",
+    "00 Reference/Storage",
+    "00 Reference/Processing"
   ]
 }
