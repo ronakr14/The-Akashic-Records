@@ -1,570 +1,814 @@
 ---
-domain: ai
-subdomain: agent-framework
-note_type: technology
-source_type: github
-status: reference
-level: advanced
 tags:
-  - github
-  - ai
   - agents
-  - compiler
+  - agent-compiler
   - mcp
   - code-generation
   - llm
+  - rag
+  - architecture
+  - github/inbox/advance
 ---
+```table-of-contents
+title: 
+style: nestedList # TOC style (nestedList|nestedOrderedList|inlineFirstLevel)
+minLevel: 0 # Include headings from the specified level
+maxLevel: 0 # Include headings up to the specified level
+include: 
+exclude: 
+includeLinks: true # Make headings clickable
+hideWhenEmpty: false # Hide TOC if no headings are found
+debugInConsole: false # Print debug info in Obsidian console
+```
+
 # AI Summary
-Comprehensive architectural analysis of agenthatch, an AI agent compiler that transforms markdown-based SKILL.md specifications into standalone Python agents. The review examines its compiler-style pipeline, multi-pass LLM inference, structured intermediate specification, Jinja-based code generation, PlanLayer runtime, MCP integration, packaging strategy, and enterprise readiness. It highlights the project's strengths in treating agent skills as software artifacts rather than runtime prompts while discussing current limitations around governance, sandboxing, observability, and production hardening. The analysis also extracts reusable architecture patterns, engineering lessons, interview questions, and recommendations for adopting compiler-driven agent development in enterprise AI platforms.
+
+AgentHatch is an agent compiler that treats `SKILL.md` as source code rather than a runtime prompt. Its core architecture separates deterministic parsing, multi-pass LLM inference, a structured intermediate representation ([[AHSSPEC]]), validation, code generation, and runtime execution. The key architectural idea is the compiler boundary: probabilistic LLM inference transforms prose into a typed specification, after which conventional software-engineering mechanisms can validate, generate, test, package, and execute the resulting agent. Current releases also include post-generation repair, subprocess sandboxing, MCP integration, context compaction, and knowledge-base/RAG capabilities. It is a useful architectural reference, but not something to adopt wholesale.
+
+# AgentHatch
+
+## 1. What It Is
+
+[AgentHatch](https://github.com/agenthatch/agenthatch) is a compiler-like framework for turning a `SKILL.md` into a standalone, runnable Python agent.
+
+The central thesis is simple:
+
+> A skill should be treated more like source code than like a prompt.
+
+```text
+SKILL.md
+   ↓
+Deterministic Parse
+   ↓
+ContextPack
+   ↓
+6 specialized LLM harnesses
+   ↓
+AHSSPEC
+   ↓
+Validation / normalization
+   ↓
+Jinja2 code generation
+   ↓
+Standalone Python agent
+   ↓
+Runtime + tools + MCP + knowledge + state machine
+```
+
+The important shift is from **runtime prompt interpretation** to **compile-time agent construction**.
 
 ---
 
+## 2. Problem Being Solved
 
-Below is a deep, architecture-focused review of **agenthatch/agenthatch** based on the repository’s public README and GitHub metadata that are accessible right now. I was able to verify the repo structure, stated architecture, install/usage flow, roadmap, language split, and release signal from GitHub. I could not directly inspect every source file in the codebase from the available public pages, so the file-level analysis is inferred from the repository’s documented structure and naming. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-
-## 1. Executive Summary
-
-**What this project is**  
-agenthatch is a compiler-like framework for turning a `SKILL.md` into a standalone Python agent. The core thesis is: treat agent skills as source code, not as prompt text. The repo describes a deterministic pipeline that parses a skill, infers a specification through multiple LLM “harnesses,” and generates a runnable Python package with CLI entry points, typed tools, MCP integration, and runtime config. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-
-**What problem it solves**  
-It targets the mess that appears when people accumulate many markdown-based agent skills: context leakage, weak validation, token waste, inconsistent interpretation, and poor scaling beyond a few skills. The project’s bet is that compilation and structure beat “just feed more prose to the model.” ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-
-**Target audience**  
-This is aimed at people building or maintaining multiple AI skills or agent workflows: Claude Code users, Codex CLI users, OpenClaw users, and generally anyone who wants markdown-defined agent behavior to become a real software artifact instead of an endlessly reinterpreted prompt. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-
-**Maturity level**  
-This is **early-to-mid stage but real**, not a toy demo. Evidence: 139 commits, 9 releases, a stated latest release as of Jul 13, 2026, a CLI surface, a roadmap, security/support docs, and a separate `agenthatch-core` package area. That said, the project is still positioning itself as a solo project seeking first contributors, which is not the smell of enterprise hardening. So: **serious prototype / emerging production tool**, not enterprise-ready. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-
-## 2. Repository Overview
-
-**Main purpose**  
-The repo is the implementation of the `agenthatch` toolchain: ingest `SKILL.md`, transform it into an internal spec (`AHSSPEC`), then render a Python agent package. The README explicitly describes a three-phase pipeline: deterministic parse, six-harness LLM inference, and Jinja2 code generation. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-
-**Core features and capabilities**
-
-- `agenthatch init` for provider/runtime config.
-    
-- `agenthatch skills add/list/delete` for skillhouse management.
-    
-- `agenthatch hatch` to compile a skill into an agent.
-    
-- `agenthatch run` to launch the hatched agent in a TUI.
-    
-- `agenthatch doctor`, `search`, and `assemble` for operational workflow. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-    
-- Multi-provider support for OpenAI, DeepSeek, Anthropic, and OpenAI-compatible endpoints. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-    
-- MCP auto-detection and auto-configuration. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-    
-- Post-generation self-review of generated tool code. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-    
-- PlanLayer execution state machine in generated agents. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-    
-
-**Key technologies, frameworks, and programming languages**
-
-- Python is the dominant language, with a small amount of Jinja for templates. GitHub lists the repo as ~98.4% Python and ~1.6% Jinja. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-    
-- Jinja2 is used for code generation. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-    
-- TOML runtime configuration is part of the generated output and/or local config. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-    
-- MCP integration is first-class in the design. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-    
-
-**High-level architecture inferred from the codebase**  
-The architecture is best understood as a compiler pipeline, not a monolithic runtime:
-
-1. Parse the skill and its local directory contents.
-    
-2. Run multiple AI inference passes to derive structured intent, interfaces, runtime base classes, and MCP config.
-    
-3. Cross-validate into a normalized spec.
-    
-4. Generate a standalone Python package.
-    
-5. Run that generated agent with its own runtime and execution state machine. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-    
-
-## 3. How It Works
-
-**Workflow in simple terms**  
-You write a skill in markdown, register it with `agenthatch`, then run `hatch`. The tool inspects the markdown and surrounding files, asks several specialized model passes to infer what the skill is supposed to do, and emits a complete Python agent project. Then you run that generated agent like a normal app. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-
-**Major components/modules**  
-The repo layout visible on GitHub shows:
-
-- `.github` for CI and project automation.
-    
-- `agenthatch-core`, which likely contains the reusable runtime/compiler core.
-    
-- `src/agenthatch`, the main package entry area.
-    
-- `tests`, plus docs and governance files. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-    
-
-**Data flow and execution flow**  
-A practical read of the pipeline:
-
-- Input: `SKILL.md` and adjacent files.
-    
-- Phase 1: parse frontmatter/body/files into a `ContextPack`.
-    
-- Phase 2: six harnesses infer identity, intent, interface, base class, assembly, and MCP config.
-    
-- Phase 3: generate a package with `pyproject.toml`, `runtime.toml`, `agenthatch.yaml`, `agent.py`, `tools.py`, and `references.py`.
-    
-- Runtime: the generated agent uses PlanLayer, moving through STARTING → PLANNING → EXECUTING → VERIFYING → REPLANNING → DONE. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-    
-
-**Integrations and dependencies**
-
-- LLM providers: OpenAI, DeepSeek, Anthropic, and OpenAI-compatible APIs. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-    
-- MCP servers: auto-detected from the skill content and wired into the generated runtime. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-    
-- Python packaging tooling: generated packages are pip-installable. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-    
-
-## 4. Why This Project Exists
-
-**Business problem**  
-It exists because teams are trying to manage too many prompt-based skills with too little structure. Once you have a handful of skills, you get drift, collision, and “works in the demo, breaks in real life” syndrome. agenthatch tries to convert that into a software lifecycle with artifacts, validation, and repeatability. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
+AgentHatch targets weaknesses in raw `SKILL.md` systems:
 
-**Technical challenges it solves**
-
-- Separating skills from one another.
-    
-- Converting prose into typed interfaces.
-    
-- Reducing context-window overhead.
-    
-- Detecting tool/schema issues earlier.
-    
-- Making agent behavior reproducible and packageable. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-    
-
-**Advantages over traditional approaches**  
-Traditional prompt-based skill systems are interpreted live every time. agenthatch’s advantage is compilation: the skill becomes a versioned, debuggable Python package with a runtime and explicit interfaces. That is a much better operating model if you care about reliability. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-
-**Unique differentiators**
-
-- Multi-harness inference.
-    
-- Cross-validation before generation.
-    
-- Generated agent as a standalone package.
-    
-- Post-generation self-review.
-    
-- PlanLayer runtime state machine. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-    
-
-## 5. How It Can Be Used
-
-**1) Turn one-off markdown skills into reusable agents**  
-Description: compile a standalone skill into an importable/runnable package.  
-Example: a repo-maintenance skill becomes a dedicated agent with its own tools.  
-Benefits: isolation, repeatability, packaging.  
-Complexity: **Medium**. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-
-**2) Standardize internal agent workflows**  
-Description: use the same compilation process for many internal skill files.  
-Example: QA, release, triage, and docs skills each become separate agents.  
-Benefits: less prompt drift, more control.  
-Complexity: **Medium–High**. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-
-**3) Build agent toolchains around MCP**  
-Description: let the compiler infer and configure MCP connections.  
-Example: a skill that talks to repo, ticketing, and docs systems.  
-Benefits: less manual wiring, better portability.  
-Complexity: **Medium**. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-
-**4) Create a skill marketplace or “skillhouse”**  
-Description: register, search, hatch, and run multiple skills as a library.  
-Example: a team-maintained catalog of specialized agents.  
-Benefits: discoverability and reuse.  
-Complexity: **High**. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-
-**5) Use as a foundation for agent ops / agent governance**  
-Description: enforce reviews and validation before shipping agent behavior.  
-Example: CI checks generated tools before publishing.  
-Benefits: safer productionization.  
-Complexity: **High**. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-
-## 6. Where It Can Be Used
-
-**Data Engineering**  
-Relevant for automating repo/document-driven workflows, metadata extraction, schema-aware tool orchestration, and pipeline ops. It is not a data engine itself, but it can be the control plane for data tasks. Relevance: **moderate**. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-
-**Analytics**  
-Good for agents that query docs, summarize findings, triage issues, or generate operational narratives. Relevance: **moderate**. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-
-**AI/ML**  
-This is the strongest fit. It is explicitly an agent compiler and includes LLM provider support, MCP, and execution planning. Relevance: **high**. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-
-**DevOps**  
-Very relevant for repo automation, CI triage, release assistants, and operational agents. Relevance: **high**. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-
-**Platform Engineering**  
-Could underpin an internal agent platform for standardized tool access and repeatable execution. Relevance: **high**. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-
-**Cloud Engineering**  
-Useful if paired with cloud ops skills and MCP/tool integrations. Relevance: **moderate**. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-
-**Security**  
-Potentially useful for security triage workflows, but the current repo itself is not a security-hardened runtime. Relevance: **moderate**. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-
-**FinOps**  
-Could host finance/usage-analysis agents, but that is an application layer use, not a native strength. Relevance: **low–moderate**. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-
-**Product Engineering**  
-Useful for feature flags, issue triage, release notes, and product ops automation. Relevance: **moderate**. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-
-**Enterprise Applications**  
-Possible, but only after serious governance, sandboxing, and security work. Relevance: **moderate in theory, low in current maturity**. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-
-## 7. Key Components Analysis
-
-Because direct file-by-file source inspection was not available through the public pages I accessed, this section is inferred from the repo structure and README.
-
-**`.github/`**  
-Purpose: CI, automation, release flows.  
-Responsibilities: likely lint/test/release pipelines and repo hygiene.  
-Interactions: supports the package lifecycle. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-
-**`agenthatch-core/`**  
-Purpose: core runtime/compiler implementation.  
-Responsibilities: parse pipeline, harness orchestration, agent runtime, context management, generation helpers.  
-Interactions: consumed by CLI entrypoints under `src/agenthatch`. The README explicitly references `agenthatch-core` for PlanLayer, subprocess sandbox, and context auto-compaction. ([GitHub](https://github.com/agenthatch/agenthatch/blob/main/ROADMAP.md?utm_source=chatgpt.com "agenthatch/ROADMAP.md at main"))
-
-**`src/agenthatch/`**  
-Purpose: main Python package.  
-Responsibilities: CLI commands, user-facing commands, package entry points, orchestration.  
-Interactions: likely wraps core functionality and exposes the tool to users. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-
-**`tests/`**  
-Purpose: validation of compiler/runtime behavior.  
-Responsibilities: unit and integration tests for pipeline, generation, and runtime.  
-Interactions: guards correctness of the agent compiler. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-
-**`pyproject.toml`**  
-Purpose: build metadata and dependencies.  
-Responsibilities: packaging, tooling, project configuration.  
-Interactions: defines installability and development workflow. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-
-**Docs (`README.md`, `ROADMAP.md`, `CONTRIBUTING.md`, `SECURITY.md`, `SUPPORT.md`)**  
-Purpose: adoption, governance, roadmap, and trust.  
-Responsibilities: onboarding, policy, future direction.  
-Interactions: critical for a project that depends on developer understanding and LLM behavior. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-
-## 8. Setup and Adoption
-
-**Installation requirements**  
-The README says Python 3.11+ and `pip install agenthatch`. Development install is `pip install -e ".[dev]"`. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-
-**Deployment options**
-
-- CLI.
-    
-- Importable Python library.
-    
-- MCP server wrapper. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-    
-
-**Infrastructure requirements**
-
-- Access to an LLM provider.
-    
-- Optional MCP servers referenced by the skill.
-    
-- Local filesystem access for skillhouse and generated packages. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-    
-
-**Learning curve**  
-Moderate to high. Users need to understand:
-
-- How to write `SKILL.md`.
-    
-- What gets inferred vs explicitly specified.
-    
-- Provider config and runtime behavior.
-    
-- The difference between a skill spec and a generated agent package. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-    
-
-**Operational considerations**  
-This is not “set and forget.” You need to manage:
-
-- LLM behavior variance.
-    
-- Tool signature correctness.
-    
-- Generated code review.
-    
-- Skillhouse lifecycle.
-    
-- Provider credentials and runtime config. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-    
-
-## 9. Strengths and Weaknesses
-
-**Strengths**
-
-- **Scalability:** better conceptual scaling than raw prompt-based skills, because each skill becomes its own package/process. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-    
-- **Maintainability:** generated code, typed tools, and a spec make it easier to reason about than prose-only prompts. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-    
-- **Extensibility:** MCP support, multi-provider support, and a compilation pipeline suggest room to grow. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-    
-- **Performance:** likely better token efficiency at runtime because the full skill body is not in-context every turn. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-    
-- **Developer Experience:** CLI + package + runtime structure is sane and familiar. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-    
-
-**Weaknesses**
-
-- **Risk:** lots of dependence on LLM inference quality in the compile phase. Garbage in, garbage out, but more glamorous. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-    
-- **Limitations:** the product is only as good as skill authoring discipline and the quality of the inference harnesses. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-    
-- **Missing features:** from the public pages, I do not see strong evidence of enterprise controls like RBAC, audit logs, policy enforcement, or hardened sandbox isolation. The roadmap even calls Docker sandboxing a future item. ([GitHub](https://github.com/agenthatch/agenthatch/blob/main/ROADMAP.md?utm_source=chatgpt.com "agenthatch/ROADMAP.md at main"))
-    
-- **Technical debt indicators:** ambitious architecture, solo-project status, and broad roadmap are a classic combo that can grow debt quickly. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-    
-
-## 10. Enterprise Evaluation
-
-**Production readiness: 5/10**  
-Good architectural intent and packaging story, but the repo appears too young and too ambitious for blanket production use.
-
-**Security: 4/10**  
-There is a SECURITY.md, but the public docs point to sandboxing as a roadmap item, not a mature default. That matters. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-
-**Scalability: 7/10**  
-The compilation model and per-agent packaging are a good scaling story. The weak point is runtime governance and operational complexity. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-
-**Observability: 4/10**  
-The README mentions logging/tests and JSON/report outputs, but I do not see evidence of robust tracing/metrics/alerting. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-
-**Documentation quality: 8/10**  
-The README is unusually detailed and the repo has roadmap/contributing/security/support docs. That’s a strong signal. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-
-**Community support: 3/10**  
-The repo is explicitly described as a solo project seeking first contributors. Stars and forks are modest. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-
-**Maintainability: 6/10**  
-Conceptually strong, but the moving parts are numerous and highly coupled to model behavior. That is manageable, not trivial. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-
-## 11. Comparison with Alternatives
-
-**Likely alternatives**
-
-- Raw `SKILL.md` / prompt-based agent workflows.
-    
-- Claude Code / Codex CLI style skill execution.
-    
-- Agent frameworks like LangChain, AutoGen, CrewAI-style orchestration.
-    
-- Purpose-built internal agent platforms. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-    
-
-**Comparison**
-
-- **Features:** agenthatch is narrower but more opinionated; it focuses on compiling skills into agents, not general multi-agent orchestration.
-    
-- **Complexity:** lower at runtime than a large orchestration framework, higher in the build/compile stage.
-    
-- **Performance:** likely cheaper in runtime context use than raw prompt systems.
-    
-- **Cost:** more upfront engineering cost, but potentially lower token waste and less manual wiring later.
-    
-- **Ecosystem:** smaller than LangChain/AutoGen/CrewAI, but cleaner if your actual problem is “turn markdown skill specs into runnable agents.” ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-    
-
-## 12. Engineering Takeaways
-
-**Design patterns used**
-
-- Compiler pipeline pattern.
-    
-- Spec-first workflow.
-    
-- Multi-pass inference with cross-validation.
-    
-- Code generation from structured intermediate representation.
-    
-- Separate runtime package from source skill. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-    
-
-**Architectural lessons**
-
-- Treating agent behavior as compiled software is a sane move.
-    
-- Cross-validation before generation is smarter than trusting one model pass.
-    
-- Packaging generated behavior as a real project is the difference between demoware and something you can operate. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-    
-
-**Best practices worth adopting**
-
-- Explicit intermediate specs.
-    
-- Type-annotated tool signatures.
-    
-- Generated docs alongside generated code.
-    
-- Post-generation verification. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-    
-
-**Anti-patterns**
-
-- Overreliance on natural-language-only runtime control.
-    
-- Too much faith in self-validating LLM output without hard tests.
-    
-- Ambitious roadmap features before sandboxing/security are mature. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-    
-
-## 13. Interview Preparation
-
-### Beginner questions
-
-1. What problem does agenthatch solve?
-    
-2. What is a `SKILL.md` in this project?
-    
-3. What does “compile a skill into an agent” mean?
-    
-4. What are the main CLI commands?
-    
-5. Why is Python 3.11 required?
-    
-6. What is MCP?
-    
-7. What is the skillhouse?
-    
-8. Why does the project use Jinja2?
-    
-9. What is PlanLayer?
-    
-10. Why are generated agents separate packages?
-    
-
-### Intermediate questions
-
-1. Why is raw markdown skill execution fragile at scale?
-    
-2. What are the three phases of the agenthatch pipeline?
-    
-3. Why use multiple AI harnesses instead of one?
-    
-4. What role does cross-validation play?
-    
-5. How does the generated package improve maintainability?
-    
-6. What problems does MCP auto-detection solve?
-    
-7. How would you test a generated agent safely?
-    
-8. What are the tradeoffs of compile-time inference?
-    
-9. What makes the runtime configuration portable?
-    
-10. How would you version and promote skills in a team?
-    
-
-### Advanced architecture questions
-
-1. How would you make the compilation pipeline deterministic enough for enterprise use?
-    
-2. Where would you draw the line between inference and explicit schema in skill authoring?
-    
-3. How would you sandbox generated tools and external MCP integrations?
-    
-4. How would you add policy enforcement, audit logging, and approval gates?
-    
-5. What failure modes arise when model inference produces a wrong but valid spec?
-    
-6. How would you build CI around skill compilation?
-    
-7. How would you support dependency graphs and conflict resolution across many skills?
-    
-8. What metrics would you expose for generated agent execution?
-    
-9. How would you design rollback for a bad skill release?
-    
-10. How would you adapt this architecture for regulated environments?
-    
-
-## 14. Handoff Summary
-
-**One-page executive summary**  
-agenthatch is a compiler for agent skills. Instead of letting an LLM reinterpret `SKILL.md` at runtime forever, it converts the skill into a typed, standalone Python package with its own runtime, tools, and execution state machine. That is the core idea, and it is a good one. It addresses a real pain point: prompt-based skill systems degrade badly once you have more than a few skills. The repo is well documented and intentionally structured around compilation, cross-validation, and generated runtime isolation. On the other hand, it is still an early-stage project with a lot of ambition and not enough evidence yet of production-grade sandboxing, governance, or observability. In plain English: the concept is strong, the direction is right, but this is not something I would drop into an enterprise core path without additional hardening. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-
-**Key findings**
-
-- Strong architecture: compile skills into agents, don’t interpret them forever.
-    
-- Good docs and a clear CLI.
-    
-- Likely useful for AI engineering and platform automation.
-    
-- Not yet enterprise-hardened. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-    
-
-**Recommended adoption scenarios**
-
-- Individual developers exploring skill-to-agent workflows.
-    
-- AI/platform teams prototyping internal agent standards.
-    
-- DevOps automation experiments.
-    
-- MCP-heavy agent workflows where reusable packaging matters. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-    
-
-**Decision matrix**
-
-- **Use:** prototyping, internal tooling, agent R&D, skill compilation experiments.
-    
-- **Evaluate:** team-scale automation, internal platform use, MCP-based ops workflows.
-    
-- **Avoid:** regulated production workloads, high-security environments, anything needing mature sandboxing and governance today. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-    
-
-## 15. AI/Data Engineering Relevance
-
-**Can this repository be used in data platforms?**  
-Yes, as an orchestration/control-plane layer for data workflows, not as a data-processing engine itself. It is more about building the agent that drives the work than doing the work directly. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-
-**Can it be integrated into a lakehouse architecture?**  
-Yes, if the generated agents interact with lakehouse APIs, catalogs, or orchestration tools via MCP or custom tools. It would sit outside the lakehouse core as an automation layer. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-
-**Can it improve ETL/ELT pipelines?**  
-Potentially, especially for metadata management, failure triage, documentation, incident summarization, and operational automation. I would not put the actual transformation engine inside this framework. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-
-**Can it be used for LLM, RAG, agents, or AI workflows?**  
-Yes — this is its native territory. It is explicitly designed for agent compilation, tool schemas, MCP, and runtime execution planning. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-
-**Suggested enterprise architecture incorporating this project**  
-Use agenthatch as an **agent factory**:
-
-- Skills authored by domain teams in markdown.
-    
-- CI pipeline compiles them with agenthatch.
-    
-- Generated packages are reviewed, scanned, and versioned.
-    
-- Only approved packages are deployed.
-    
-- Runtime execution happens behind an internal gateway with policy checks, secret isolation, and observability.
-    
-- MCP servers provide controlled access to enterprise systems.
-    
-- A separate sandbox layer or container runtime protects tool execution.  
-    That architecture makes sense. Without the governance layers, it is too risky for serious enterprise use. ([GitHub](https://github.com/agenthatch/agenthatch "GitHub - agenthatch/agenthatch: Turn any skill into a standalone, runnable AI Agent · GitHub"))
-    
-
-If you want, I can turn this into a polished internal review memo or a slide-ready architecture brief.
+- skills can leak instructions into one another through shared context
+- long skills are treated as loose reference material rather than contracts
+- every active skill consumes context space
+- tool interfaces are expressed as prose rather than typed contracts
+- ambiguities and tool-definition errors are discovered late
+- scaling from a few skills to many becomes difficult without isolation and indexing
+
+The deeper problem is not Markdown. It is the lack of a **compilation and validation boundary**.
+
+```text
+Raw skill system
+Human prose → LLM interpretation → runtime behavior
+
+AgentHatch
+Human prose → structured specification → generated software → runtime behavior
+```
+
+---
+
+## 3. Architecture
+
+### 3.1 Phase 1 — Deterministic Parse
+
+Phase 1 performs no semantic AI interpretation. The implementation builds a `ContextPack` containing frontmatter, Markdown body, file manifest, file hashes, readable contents, entrypoint information and parse warnings.
+
+`FileEntry` records relative path, SHA-256 hash, size and content. This deliberately separates filesystem facts from semantic interpretation.
+
+```text
+Filesystem facts ──────────────► deterministic layer
+Meaning / intent / interfaces ─► LLM layer
+```
+
+This is one of the strongest design choices in the project.
+
+### 3.2 Phase 2 — Six-Harness LLM Pipeline
+
+The current implementation defines six specialized harnesses:
+
+| Harness | Responsibility |
+|---|---|
+| A — Identity | Extract identity, name, version and description |
+| B — Intent | Infer triggers and user intents |
+| C — Interface | Infer capabilities, parameters and return schemas |
+| D — Base | Detect runtime/base class and instruction structure |
+| E — Assembly | Cross-validate and assemble the unified specification |
+| F — MCP | Infer MCP server connections |
+
+Harnesses use bounded Analyze → Infer → Self-Validate → Correct loops and expose confidence, retries and token-usage information.
+
+The architectural lesson is more important than the exact six roles:
+
+> Large ambiguous LLM tasks can be decomposed into smaller inference contracts that are independently validated and then assembled.
+
+### 3.3 AHSSPEC — Intermediate Representation
+
+`AHSSPEC` is the most important architectural concept in AgentHatch.
+
+The current implementation defines an AHS v1.1 Pydantic specification containing concepts such as:
+
+- identity
+- intent
+- capabilities
+- input/output schemas
+- requirements
+- MCP servers
+- API templates
+- environment variables
+- workflow steps
+- safety rules
+- runtime/base configuration
+- dependencies
+- resources
+- composition/event listeners
+- confidence information
+
+Conceptually:
+
+```text
+SKILL.md → ContextPack → LLM inference → AHSSPEC → generated agent
+```
+
+AHSSPEC is effectively an **intermediate representation (IR)** between natural-language intent and executable software.
+
+Without an IR:
+
+```text
+LLM → code
+```
+
+With an IR:
+
+```text
+LLM → structured contract → validation → code
+```
+
+The second architecture creates a proper place for validation, auditing, versioning, diffing, policy enforcement and deterministic generation.
+
+### 3.4 Defensive Schema Handling
+
+The schema layer explicitly handles common LLM mistakes such as strings where lists are expected, invalid runtime values, numeric timeouts, malformed dependency/environment structures and invalid identity values.
+
+This reinforces an important principle:
+
+> **Structured LLM output is still probabilistic input and needs defensive validation.**
+
+Pydantic supplies the contract; coercion attempts to recover predictable model formatting mistakes before rejecting the result.
+
+---
+
+## 4. Code Generation
+
+Jinja2 templates convert AHSSPEC into a standalone Python package containing artifacts such as:
+
+```text
+hatched-agent/
+├── pyproject.toml
+├── runtime.toml
+├── README.md
+├── agenthatch.yaml
+└── src/<package_name>/
+    ├── __init__.py
+    ├── agent.py
+    ├── tools.py
+    └── references.py
+```
+
+The output can be inspected, tested, packaged, versioned and debugged using conventional software-engineering workflows.
+
+That makes the generated agent a **software supply-chain artifact**, which is both a strength and a new security concern.
+
+---
+
+## 5. Post-Generation Self-Review
+
+After generation, AgentHatch can inspect `tools.py`, execute tools with mock parameters and repair detected defects for a bounded number of rounds.
+
+```text
+Generate → Inspect → Test → Repair → Inspect
+```
+
+The review targets issues such as undefined variables, `None` attribute failures, semantic stubs, runtime failures and exception-swallowing patterns.
+
+This should not be confused with formal verification. It is better described as:
+
+> **LLM-generated code + automated checks + bounded LLM repair.**
+
+The approach improves practical reliability but does not prove correctness.
+
+---
+
+## 6. Runtime — PlanLayer
+
+Generated agents use a six-state planning model:
+
+```text
+STARTING
+   ↓
+PLANNING
+   ↓
+EXECUTING
+   ↓
+VERIFYING
+   ↓
+REPLANNING ──┐
+   └─────────┘
+   ↓
+DONE
+```
+
+The runtime can adapt to failures, merge completed steps and handle tool timeouts.
+
+The architectural significance is that the LLM is not the whole execution engine:
+
+```text
+LLM reasoning
+    ↓
+Plan / intent
+    ↓
+Runtime state machine
+    ↓
+Tool execution
+    ↓
+Verification
+    ↓
+Replanning when necessary
+```
+
+This creates explicit control points for retries, timeouts, observability and policy enforcement.
+
+---
+
+## 7. MCP as a Compiled Capability
+
+MCP is represented in AHSSPEC through structured server definitions. Harness F detects MCP servers and Harness E incorporates them into the assembled interface.
+
+```text
+SKILL.md
+   ↓
+MCP detection
+   ↓
+MCPServerEntry
+   ↓
+AHSSPEC
+   ↓
+Generated runtime configuration
+   ↓
+MCP tools
+```
+
+The benefit is less manual wiring. The risk is an expanded trust boundary.
+
+A mature implementation needs explicit answers to:
+
+- Which tools are allowed?
+- Who authorizes them?
+- Can a skill request excessive permissions?
+- How are MCP credentials isolated?
+- Can untrusted skills cause unsafe connections?
+- Are tool capabilities represented as policy objects?
+
+Automatic tool discovery is therefore a security-sensitive compilation output, not merely a convenience feature.
+
+---
+
+## 8. Sandbox and Security
+
+The project includes a subprocess sandbox with command-whitelist tiers in `agenthatch-core`. Its roadmap identifies Docker-backed isolation as a future improvement for stronger filesystem and network isolation.
+
+This matters because AgentHatch combines:
+
+```text
+LLM-derived specification
+        ↓
+Generated executable code
+        ↓
+Tool / MCP access
+        ↓
+External side effects
+```
+
+A subprocess whitelist is useful containment, but it is not equivalent to a hardened container or VM boundary.
+
+For production use, stronger isolation, capability-based permissions, secret isolation and network policy would be important.
+
+---
+
+## 9. Knowledge / RAG Layer
+
+AgentHatch has evolved beyond pure agent generation. The v1.0 line introduced knowledge-backed agents through `KnowledgeBaseBrick`.
+
+The current direction includes:
+
+- SQLite FTS5
+- BM25 keyword retrieval
+- generated `retrieve()` functionality
+- skill-derived retrieval configuration
+- optional semantic search
+- runtime knowledge-base integration
+
+```text
+Skill + knowledge files
+        ↓
+     Hatch time
+        ↓
+Knowledge-base artifact
+        ↓
+Generated retrieve()
+        ↓
+Runtime query
+        ↓
+BM25 / optional embeddings
+        ↓
+Relevant references
+        ↓
+Agent response
+```
+
+This is interesting because the compiler is no longer compiling only **behavior**. It is also compiling **knowledge-access behavior**.
+
+Current roadmap gaps include LLM reranking, shared cross-agent KB memory and automated stale-entry maintenance.
+
+---
+
+## 10. Current Capabilities
+
+The project currently documents these capabilities:
+
+- 6-harness LLM pipeline with self-validation
+- AHSSPEC structured specification
+- MCP auto-detection
+- PlanLayer state machine
+- context auto-compaction
+- subprocess sandbox with command whitelist
+- hatch reports in human-readable and JSON forms
+- post-generation inspect/test/repair loop
+- SQLite FTS5 + BM25 knowledge retrieval
+- optional semantic retrieval
+- confidence scoring and retry penalties
+- JSON Schema constraint mapping to Pydantic types
+- exception-swallow antipattern detection
+- skillhouse indexing and management
+
+The CLI includes operations such as `init`, `skills add/list/delete`, `hatch`, `run`, `search`, `doctor` and `assemble`.
+
+---
+
+## 11. The Real Architectural Differentiator
+
+The important idea is not "generate an agent from Markdown." The important idea is the **compiler boundary**.
+
+```text
+Human-authored intent
+        ↓
+Probabilistic interpretation
+        ↓
+Structured intermediate representation
+        ↓
+Validation / normalization
+        ↓
+Code generation
+        ↓
+Executable artifact
+        ↓
+Controlled runtime
+```
+
+This creates a useful separation of responsibility:
+
+| Concern | Preferred mechanism |
+|---|---|
+| Natural-language interpretation | LLM |
+| Schema validation | Conventional code |
+| Type checking | Conventional code |
+| Policy validation | Conventional code |
+| Code generation | Templates / compiler |
+| Runtime state | Deterministic state machine |
+| Tool execution | Runtime |
+| Semantic reasoning | LLM |
+| Artifact packaging | Conventional tooling |
+
+This is the main idea worth preserving from the project.
+
+---
+## 12. Architecture Tradeoffs
+
+AgentHatch makes several deliberate tradeoffs. The compiler model improves structure and governance opportunities, but it also introduces a build lifecycle that simpler agent frameworks do not need.
+
+| Decision | Benefit | Cost / Risk |
+|---|---|---|
+| Compile skills into agents | Better isolation, inspectable artifacts, conventional testing | Build step, generated-code lifecycle, artifact drift |
+| Use AHSSPEC as an IR | Validation, diffing, policy enforcement and multiple generation targets become possible | Another schema that must evolve and remain backward-compatible |
+| Multiple LLM harnesses | Smaller reasoning problems, targeted retries and better diagnostics | More inference calls, latency, token cost and orchestration complexity |
+| Generate Python | Easy integration with the Python ecosystem | Python becomes a runtime constraint and generated code becomes a supply-chain concern |
+| Explicit PlanLayer | Better control over retries, timeouts and verification | More runtime machinery and state-management complexity |
+| Infer MCP configuration | Less manual wiring | Tool discovery becomes part of the security boundary |
+| Post-generation LLM repair | Can recover from common generated-code defects | Repair can introduce new defects; still not verification |
+| Compile knowledge access | Makes retrieval a first-class capability | Knowledge freshness, indexing and rebuild lifecycle become compiler concerns |
+| Skill composition | Enables larger agent systems | Dependency, capability, authorization and conflict resolution become much harder |
+
+The core tradeoff is:
+
+> **AgentHatch exchanges runtime simplicity for build-time structure and control.**
+
+That is a reasonable trade for governed agent systems, but unnecessary overhead for a small one-off agent.
+
+---
+
+## 13. What AgentHatch Gets Right
+
+### Deterministic and probabilistic work are separated
+
+The parser does not ask an LLM to rediscover filesystem facts.
+
+### Specialized inference passes
+
+Large ambiguous tasks are decomposed into smaller contracts that can be independently validated and retried.
+
+### Intermediate representation
+
+AHSSPEC gives the system a stable boundary between inference and generation.
+
+### Generated artifacts are real software
+
+The output can use ordinary debugging, testing, packaging and CI practices.
+
+### Runtime state is explicit
+
+PlanLayer provides control points that are missing from unconstrained agent loops.
+
+### Failure handling is first-class
+
+Schema coercion, retry penalties, confidence, post-generation inspection and bounded repair acknowledge LLM unreliability.
+
+### Knowledge is becoming a compiled capability
+
+The KB layer extends the compiler from behavior into retrieval and knowledge access.
+
+---
+
+## 14. What Needs Improvement
+
+### Reproducibility is still conditional
+
+Low-temperature inference and schema validation improve repeatability, but LLM inference remains probabilistic.
+
+```text
+Same input → likely similar output
+```
+
+is not equivalent to:
+
+```text
+Same input → identical artifact
+```
+
+A stronger build manifest should record provider, model/version, temperature, prompt/schema versions, source hashes and dependency versions.
+
+### Security needs a stronger boundary
+
+LLM-generated executable code plus MCP connectivity is a serious trust boundary. Docker isolation, capability permissions, secret isolation and network policies should be considered baseline for untrusted workloads.
+
+### Observability is incomplete
+
+Useful production signals would include per-harness latency, token/cost accounting, repair diffs, artifact lineage, tool traces, state transitions, retrieval quality, retry/failure metrics and policy violations.
+
+### Self-review is not verification
+
+Generated code should still pass conventional tests, static analysis, dependency scanning and explicit policy checks for higher-risk workloads.
+
+### Artifact governance needs to mature
+
+A production system should answer:
+
+```text
+Which skill version produced this agent?
+Which model produced AHSSPEC?
+Which schema/prompt version was used?
+Which dependencies were installed?
+Which MCP servers were authorized?
+Can the artifact be rebuilt?
+Can two builds be meaningfully diffed?
+```
+
+### Composition is substantially harder than single-skill compilation
+
+Skill fusion and meta-agents introduce capability conflicts, dependency resolution, authorization conflicts, shared state and failure propagation. A stronger capability/dependency graph will be required for this to scale safely.
+
+---
+## 15. Enterprise Readiness Scorecard
+
+| Dimension | Assessment | Why |
+|---|---|---|
+| Architecture | **Strong** | Clear separation between parsing, inference, IR, generation and runtime |
+| LLM reliability | **Moderate** | Multi-pass validation helps, but the semantic layer remains probabilistic |
+| Security | **Weak–Moderate** | Generated code and MCP access create a significant trust boundary |
+| Sandbox | **Moderate** | Subprocess containment exists; stronger container isolation is still important |
+| Observability | **Moderate** | Reports and usage information exist, but deeper runtime telemetry is needed |
+| Testing | **Moderate** | Post-generation inspection/testing exists; it is not equivalent to comprehensive verification |
+| Reproducibility | **Moderate** | Structured compilation helps, but model/provider changes can affect output |
+| Governance | **Weak–Moderate** | Artifact lineage, authorization and policy lifecycle need more maturity |
+| Deployment | **Moderate–Strong** | Generated Python packages fit conventional deployment workflows |
+| Extensibility | **Strong** | The IR provides a useful extension boundary |
+| Composition | **Immature** | Skill fusion introduces dependency, capability and authorization conflicts |
+| Enterprise readiness | **Not yet** | The architecture is promising, but operational and security controls need more maturity |
+
+### Bottom line
+
+AgentHatch looks more like **promising agent-platform infrastructure** than a finished enterprise agent platform.
+
+Its strongest enterprise property is the compiler boundary. Its largest enterprise gap is the governance and security lifecycle around generated artifacts and external capabilities.
+
+---
+## 16. Comparison With Adjacent Agent Architectures
+
+AgentHatch should not be evaluated as simply another agent runtime. Its distinctive position is closer to an **agent compiler**.
+
+| Architecture | Primary abstraction | Where it is strongest | AgentHatch difference |
+|---|---|---|---|
+| Raw `SKILL.md` systems | Prompt/instruction bundle | Simple reusable behavior | Compiles the skill into a structured artifact instead of interpreting it only at runtime |
+| LangGraph-style orchestration | Graph/stateful execution | Explicit workflows, state and branching | Focuses earlier in the lifecycle: compiling a skill into an executable agent |
+| OpenAI Agents SDK-style runtimes | Agent + tools + handoffs | Building and running agent applications | Adds a compilation/IR layer between authoring and runtime |
+| CrewAI-style multi-agent frameworks | Roles/tasks/agent collaboration | Multi-agent orchestration | More concerned with constructing the individual agent artifact |
+| AutoGen-style agent systems | Conversational/multi-agent interaction | Agent-to-agent workflows | Emphasizes deterministic build structure and generated artifacts |
+| MCP-native agent architectures | Tool/resource interoperability | Standardized external capabilities | Treats MCP configuration as something that can be inferred and compiled into the agent |
+| Traditional compiler / DSL architecture | Source → IR → artifact | Reproducible transformation and tooling | Applies the same architectural pattern while retaining probabilistic LLM inference |
+
+### The architectural distinction
+
+Most agent frameworks primarily answer:
+
+> **How should an agent execute?**
+
+AgentHatch is trying to answer:
+
+> **How should an agent be compiled from a declarative specification?**
+
+That gives AgentHatch a different lifecycle:
+
+```text
+Traditional agent framework
+
+Author → Configure → Run → Observe
+
+AgentHatch
+
+Author skill
+    ↓
+Compile
+    ↓
+Validate
+    ↓
+Generate artifact
+    ↓
+Test / repair
+    ↓
+Package
+    ↓
+Run
+    ↓
+Observe
+```
+
+This makes build-time concerns first-class:
+
+- schema evolution
+- artifact versioning
+- provenance
+- reproducibility
+- generated-code review
+- policy enforcement
+- dependency resolution
+- incremental rebuilds
+
+The downside is equally important: a compiler lifecycle adds complexity that a lightweight runtime-only agent may not need.
+
+### Architectural positioning
+
+```text
+                    Runtime orchestration
+                           ↑
+          LangGraph / Agents SDK / CrewAI / AutoGen
+                           │
+                           │
+                     AgentHatch
+                           │
+                           ↓
+                Agent compilation layer
+                           │
+                           ↓
+                 Compiler / DSL model
+```
+
+AgentHatch therefore sits between **agent runtime frameworks** and **compiler/DSL systems**.
+
+That is the most useful way to position it in a technical landscape.
+
+---
+
+## 17. Lessons Worth Reusing
+
+### 1. Introduce an intermediate representation
+
+Do not go directly from natural language to executable behavior.
+
+```text
+Natural language
+      ↓
+Semantic IR
+      ↓
+Validation
+      ↓
+Artifact
+```
+
+### 2. Push deterministic work outside the LLM
+
+Parsing, validation, indexing, state management and policy enforcement should be conventional code wherever possible.
+
+### 3. Split inference by responsibility
+
+Specialized inference passes are easier to validate, retry and observe than one giant agent-building prompt.
+
+### 4. Treat generated agents as build artifacts
+
+Once generated code exists, ordinary software-engineering controls should apply.
+
+### 5. Make runtime state explicit
+
+State machines create useful control points for retries, timeouts, verification and policy.
+
+### 6. Assume LLM output is unreliable
+
+Structured output, coercion, validation, confidence and post-generation checks are fundamental infrastructure.
+
+### 7. Security follows the artifact
+
+Once an LLM can generate executable code or tool configuration, the generated artifact becomes part of the security boundary.
+
+---
+
+## 18. Relevance to Akashic Records
+
+AgentHatch maps surprisingly well onto the direction of the Akashic Intelligence Engine.
+
+```text
+Akashic note
+   ↓
+Deterministic parsing
+   ↓
+Structured note representation
+   ↓
+LLM semantic analysis
+   ↓
+Validated intermediate representation
+   ↓
+Derived intelligence / agents
+```
+
+Useful parallels:
+
+- **Note model ↔ AHSSPEC** — structured representation between raw content and intelligence.
+- **Knowledge grading ↔ confidence reporting** — AI-derived decisions become explicit and inspectable.
+- **Knowledge graph ↔ capability/dependency graph** — relationships become first-class data.
+- **Specialized agents ↔ specialized harnesses** — narrow responsibilities are easier to validate.
+- **Retrieval ↔ AgentHatch KB layer** — retrieval becomes an explicit capability.
+- **Agent workspace ↔ generated artifacts** — agents can have defined capabilities, inputs, outputs and provenance.
+
+The strongest idea to borrow is **not AgentHatch itself**. It is the principle of an explicit semantic IR between unstructured knowledge and executable intelligence.
+
+---
+
+## 19. What I Would Borrow vs Avoid
+
+### Borrow
+
+- compiler-style architecture
+- explicit intermediate representation
+- deterministic parsing before LLM inference
+- specialized inference passes
+- schema/Pydantic validation
+- confidence and provenance metadata
+- generated artifacts
+- explicit runtime state machine
+- post-generation validation
+- capability-oriented tool definitions
+- knowledge retrieval as a first-class capability
+
+### Avoid Copying Blindly
+
+- treating low-temperature inference as true determinism
+- assuming self-review equals correctness
+- executing generated code without strong isolation
+- automatically trusting inferred MCP configuration
+- composing skills without explicit capability and authorization models
+- making generated Python the only representation of agent behavior
+
+---
+
+## 20. Open Questions
+
+- Can AHSSPEC become a stable, independently versioned agent contract?
+- Can compilation become reproducible enough for meaningful artifact diffs?
+- How should model/provider versions be included in provenance?
+- Can generated agents be safely sandboxed at enterprise scale?
+- How should tool permissions be represented in the specification?
+- How should skills declare dependencies and conflicts?
+- How should composition resolve capability and authorization conflicts?
+- Can agents be incrementally rebuilt when only part of a skill changes?
+- Can the same IR generate multiple runtime targets rather than only Python?
+- Can knowledge, behavior and tools be versioned independently?
+- How should stale knowledge be detected and rebuilt?
+- Can the compiler support fully local/offline inference for sensitive skills?
+
+---
+
+## 21. Adoption Verdict
+
+**Interesting architecture:** Yes  
+**Worth experimenting with:** Yes  
+**Ready to become core enterprise infrastructure:** Not yet  
+**Worth borrowing architectural ideas from:** Definitely  
+**Worth adopting wholesale into Akashic:** No
+
+**Most valuable idea:** the compiler boundary and AHSSPEC-style intermediate representation.
+
+**Biggest architectural risk:** LLM-derived executable artifacts and tool configurations crossing security boundaries.
+
+**Biggest opportunity:** extending the compiler model from agent behavior into a governed system for compiling knowledge, capabilities, tools, policies and retrieval into agent artifacts.
+
+---
+
+## 22. Current Project Direction
+
+The roadmap shows a progression roughly like:
+
+```text
+6-Harness Compilation
+        ↓
+Structured AHSSPEC
+        ↓
+Code Generation
+        ↓
+Post-generation Repair
+        ↓
+Runtime Planning
+        ↓
+Knowledge-backed Agents
+        ↓
+Skill Fusion / Meta-agent
+        ↓
+Marketplace / Channels
+        ↓
+Stronger Docker Isolation
+        ↓
+One-sentence → runnable agent
+```
+
+The final milestone effectively turns AgentHatch into a higher-level programming language for agents.
+
+That direction makes the IR, provenance, testing, permissions and sandboxing layers increasingly important rather than less important.
+
+---
+
+## 23. Source and Evidence
+
+Primary source reviewed:
+
+- Repository: https://github.com/agenthatch/agenthatch
+- `README.md`: architecture, CLI, pipeline and runtime
+- `src/agenthatch/skill/spec.py`: AHSSPEC/AHS v1.1 models and harness contracts
+- `ROADMAP.md`: implemented capabilities and planned direction
+- `SECURITY.md`: security reporting and stated security process
+- `agenthatch-core`: runtime and sandbox components
+
+### Evidence model
+
+This note uses three evidence levels:
+
+- **Implementation evidence** — directly supported by inspected repository files.
+- **Project/documentation claim** — stated by AgentHatch but not independently verified through exhaustive source inspection.
+- **Architectural analysis** — interpretation or recommendation derived from the observed implementation.
+
+The note intentionally does not treat project documentation claims as equivalent to independently verified behavior.
+### Evidence boundary
+
+Implementation files were inspected selectively rather than exhaustively. Direct repository behavior is treated as implementation evidence. Conclusions about enterprise readiness, security maturity and long-term architecture are analysis rather than claims made by the project.
+
+**Last reviewed:** 2026-08-12
+**Analysis confidence:** High
