@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "689858ed6f939a04",
+        "id": "513a7adc61e87174",
         "type": "tabs",
         "children": [
           {
-            "id": "2921205bb8464e2a",
+            "id": "7663b1a54ec7132d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00 Inbox/AI & LLM/AgentHatch.md",
+                "file": "00 Inbox/Daily Brief/Aug 16.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "AgentHatch"
+              "title": "Aug 16"
             }
           }
         ]
@@ -80,8 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 253.5,
-    "collapsed": true
+    "width": 253.5
   },
   "right": {
     "id": "7c51cdc979815380",
@@ -221,14 +220,20 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2921205bb8464e2a",
+  "active": "7663b1a54ec7132d",
   "lastOpenFiles": [
-    "00 Inbox/AI & LLM/AgentHatch - Repo.md",
+    "00 Inbox/Daily Brief/Aug 13.md",
+    "00 Inbox/Daily Brief/Aug 16.md",
+    "00 Inbox/Daily Brief/Aug 15.md",
+    "00 Inbox/Daily Brief/Aug 14.md",
+    "00 Inbox/AI & LLM/AgentRQ.md",
+    "00 Inbox/Daily Brief",
+    "2026-08-16.md",
     "00 Inbox/AI & LLM/AgentHatch.md",
+    "00 Inbox/AI & LLM/AgentHatch - Repo.md",
     "AHSSPEC.md",
     "Six-Harness LLM Pipeline.md",
     "00 Open Notes",
-    "Untitled.md",
     "2026-08-12.md",
     "00 Inbox/Data Engineering/Senior Python Data Engineer - Advanced Interview Question Bank.md",
     "00 Inbox/Data Engineering/Senior python data engineer interview questions.md",
@@ -245,11 +250,6 @@
     "00 Inbox/AI & LLM/Token Optimizer MCP.md",
     "00 Inbox/Software Engineering/Thunderbird Android.md",
     "00 Inbox/Software Engineering/Task.md",
-    "00 Inbox/Cloud/Tailscale.md",
-    "00 Inbox/AI & LLM/Supertonic.md",
-    "00 Inbox/Data Engineering/Stream Processing.md",
-    "00 Inbox/Data Engineering/SQLGlot.md",
-    "00 Inbox/AI & LLM/SkillSpector.md",
     "00 Inbox/Python",
     "00 Inbox/Cloud",
     "00 Inbox/DevOps",
@@ -257,7 +257,6 @@
     "00 Inbox/AI & LLM",
     "00 Inbox/Data Engineering",
     "00 Reference/Repository Analysis",
-    "00 Reference/Storage",
-    "00 Reference/Processing"
+    "00 Reference/Storage"
   ]
 }
