@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "513a7adc61e87174",
+        "id": "99f42df9add9e841",
         "type": "tabs",
         "children": [
           {
-            "id": "7663b1a54ec7132d",
+            "id": "b2ce1a956b6d9159",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00 Inbox/Daily Brief/Aug 16.md",
+                "file": "99 Personal/Career Growth Roadmap.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Aug 16"
+              "title": "Career Growth Roadmap"
             }
           }
         ]
@@ -220,10 +220,20 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7663b1a54ec7132d",
+  "active": "b2ce1a956b6d9159",
   "lastOpenFiles": [
-    "00 Inbox/Daily Brief/Aug 13.md",
+    "2026-08-19.md",
+    "99 Personal/Career Growth Roadmap.md",
+    "Tech Landscape.md",
+    "99 Personal/Storage Tracker.md",
+    "99 Personal",
+    "2026-08-18.md",
+    "00 Inbox/Daily Brief/Aug 18.md",
+    "00 Inbox/Daily Brief/Aug 17.md",
+    "00 Open Notes/AHSSPEC.md",
+    "Scores.md",
     "00 Inbox/Daily Brief/Aug 16.md",
+    "00 Inbox/Daily Brief/Aug 13.md",
     "00 Inbox/Daily Brief/Aug 15.md",
     "00 Inbox/Daily Brief/Aug 14.md",
     "00 Inbox/AI & LLM/AgentRQ.md",
@@ -231,32 +241,22 @@
     "2026-08-16.md",
     "00 Inbox/AI & LLM/AgentHatch.md",
     "00 Inbox/AI & LLM/AgentHatch - Repo.md",
-    "AHSSPEC.md",
     "Six-Harness LLM Pipeline.md",
     "00 Open Notes",
     "2026-08-12.md",
     "00 Inbox/Data Engineering/Senior Python Data Engineer - Advanced Interview Question Bank.md",
     "00 Inbox/Data Engineering/Senior python data engineer interview questions.md",
-    "Tech Landscape.md",
-    "Career Growth Roadmap.md",
     "00 Inbox/Data Engineering/Z-Ordering.md",
     "00 Inbox/Python/VSCode Debug.md",
     "00 Inbox/AI & LLM/Vector Database.md",
     "00 Inbox/Data Engineering/UUIDv7 & ULID.md",
     "00 Inbox/Software Engineering/UserDialogs.md",
-    "00 Inbox/Software Engineering/Tuta.md",
-    "00 Inbox/Data Engineering/Turso.md",
-    "00 Inbox/AI & LLM/Turbovec.md",
-    "00 Inbox/AI & LLM/Token Optimizer MCP.md",
-    "00 Inbox/Software Engineering/Thunderbird Android.md",
-    "00 Inbox/Software Engineering/Task.md",
     "00 Inbox/Python",
     "00 Inbox/Cloud",
     "00 Inbox/DevOps",
     "00 Inbox/Software Engineering",
     "00 Inbox/AI & LLM",
     "00 Inbox/Data Engineering",
-    "00 Reference/Repository Analysis",
-    "00 Reference/Storage"
+    "00 Reference/Repository Analysis"
   ]
 }
