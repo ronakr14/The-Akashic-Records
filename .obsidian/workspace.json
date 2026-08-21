@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "99f42df9add9e841",
+        "id": "cfbf486611320b62",
         "type": "tabs",
         "children": [
           {
-            "id": "b2ce1a956b6d9159",
+            "id": "8a98f1bdda5aa7ad",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99 Personal/Career Growth Roadmap.md",
+                "file": "L2 Interview Checklist.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Career Growth Roadmap"
+              "title": "L2 Interview Checklist"
             }
           }
         ]
@@ -217,46 +217,47 @@
       "iconic:Open rulebook": false,
       "sheet-plus:Create excel file": false,
       "obsidian-tomorrows-daily-note:Open tomorrow's daily note": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "bases:Create new base": false
     }
   },
-  "active": "b2ce1a956b6d9159",
+  "active": "8a98f1bdda5aa7ad",
   "lastOpenFiles": [
+    "L2 Interview Checklist.md",
+    "Untitled.canvas",
+    "00-Daily",
+    "02-Projects/Akashic Intelligence Engine",
+    "02-Projects/New folder",
+    "99-Archive",
+    "90-System",
+    "New folder",
+    "09-Daily",
+    "08-Prompts",
+    "07-Personal",
+    "06-Experiments",
+    "01-Knowledge/Untitled.md",
+    "2026-08-21.md",
+    "00 Inbox/Daily Brief/20260821.md",
+    "00 Inbox/Daily Brief/20260814.md",
+    "00 Inbox/Daily Brief/20260820.md",
+    "00 Inbox/Daily Brief/20260819.md",
+    "00 Inbox/Daily Brief/20260818.md",
+    "00 Inbox/Daily Brief/20260817.md",
+    "00 Inbox/Daily Brief/Aug 16.md",
+    "00 Inbox/Daily Brief/20260816.md",
+    "00 Inbox/Daily Brief/20260815.md",
+    "00 Inbox/Daily Brief/20260813.md",
+    "04 Blog Recommendations/20260731.md",
+    "04 Blog Recommendations/20260807.md",
+    "04 Blog Recommendations/Excel 2026-08-21 11.01.36.univer.md",
+    "04 Blog Recommendations/20260814.md",
+    "04 Blog Recommendations/20260821.md",
+    "00 Inbox/Daily Brief/Aug 19.md",
+    "00 Inbox/Daily Brief/Aug 20.md",
     "2026-08-19.md",
+    "Notes.md",
     "99 Personal/Career Growth Roadmap.md",
     "Tech Landscape.md",
-    "99 Personal/Storage Tracker.md",
-    "99 Personal",
-    "2026-08-18.md",
-    "00 Inbox/Daily Brief/Aug 18.md",
-    "00 Inbox/Daily Brief/Aug 17.md",
-    "00 Open Notes/AHSSPEC.md",
-    "Scores.md",
-    "00 Inbox/Daily Brief/Aug 16.md",
-    "00 Inbox/Daily Brief/Aug 13.md",
-    "00 Inbox/Daily Brief/Aug 15.md",
-    "00 Inbox/Daily Brief/Aug 14.md",
-    "00 Inbox/AI & LLM/AgentRQ.md",
-    "00 Inbox/Daily Brief",
-    "2026-08-16.md",
-    "00 Inbox/AI & LLM/AgentHatch.md",
-    "00 Inbox/AI & LLM/AgentHatch - Repo.md",
-    "Six-Harness LLM Pipeline.md",
-    "00 Open Notes",
-    "2026-08-12.md",
-    "00 Inbox/Data Engineering/Senior Python Data Engineer - Advanced Interview Question Bank.md",
-    "00 Inbox/Data Engineering/Senior python data engineer interview questions.md",
-    "00 Inbox/Data Engineering/Z-Ordering.md",
-    "00 Inbox/Python/VSCode Debug.md",
-    "00 Inbox/AI & LLM/Vector Database.md",
-    "00 Inbox/Data Engineering/UUIDv7 & ULID.md",
-    "00 Inbox/Software Engineering/UserDialogs.md",
-    "00 Inbox/Python",
-    "00 Inbox/Cloud",
-    "00 Inbox/DevOps",
-    "00 Inbox/Software Engineering",
-    "00 Inbox/AI & LLM",
-    "00 Inbox/Data Engineering",
-    "00 Reference/Repository Analysis"
+    "99 Personal/Storage Tracker.md"
   ]
 }
