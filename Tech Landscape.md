@@ -14,9 +14,14 @@ tags:
 A comprehensive catalog of technologies across Python, Data Engineering, Databases, Backend Engineering, AI/ML, LLMs, Agents, Cloud, DevOps, Security, Observability, and Productivity. Designed as a master technology reference to support learning, project planning, architecture decisions, interview preparation, and knowledge discovery, while serving as the central index linking to detailed notes for individual technologies.
 
 ---
-## 1. Data Engineering & ETL (DataFrames, Batch, Pipelines)
+```table-of-contents
+```
 
-**DataFrame & Tabular Processing**
+
+---
+# 1. Data Engineering & ETL (DataFrames, Batch, Pipelines)
+
+## **DataFrame & Tabular Processing**
 - Pandas - De-facto Python DataFrame library for structured data wrangling.
 - Polars - Faster, Arrow-backed DataFrame engine for high-throughput ETL.
 - Dask - Parallel pandas-like API to scale workloads across cores/clusters.
@@ -29,7 +34,7 @@ A comprehensive catalog of technologies across Python, Data Engineering, Databas
 - NumExpr - Vectorized math backend for fast pandas/numpy expressions.
 - OpenPyxl - Read/write Excel `.xlsx` files from Python.
 
-**Stream & Real-Time Processing**
+## **Stream & Real-Time Processing**
 - Kafka - Distributed event-streaming backbone for high-throughput pipelines.
 - Redpanda - Kafka-compatible streaming with lower latency, simpler ops.
 - Pulsar - Multi-tenant messaging with geo-replication and tiered storage.
@@ -37,7 +42,7 @@ A comprehensive catalog of technologies across Python, Data Engineering, Databas
 - Spark Structured Streaming - Micro-batch streaming tightly integrated with Spark batch/ML.
 - RisingWave - Cloud-native streaming database for real-time analytics.
 
-**ETL Orchestration & Workflow Engines**
+## **ETL Orchestration & Workflow Engines**
 - Airflow - DAG-based workflow scheduler for batch ETL pipelines.
 - Dagster - Asset-aware data orchestrator with strong typing/testing.
 - Prefect - Modern Pythonic workflow orchestration with retries + UI.
@@ -51,7 +56,7 @@ A comprehensive catalog of technologies across Python, Data Engineering, Databas
 - Data Factory - Managed cloud ETL/ELT orchestration (Azure).
 - Argo (implied) - Kubernetes-native workflow engine for batch jobs.
 
-**File Watching & Process Scheduling**
+## **File Watching & Process Scheduling**
 - Watchdog - Filesystem event monitor for hot-reload pipelines.
 - Watchfiles - Fast Rust-backed file watcher for dev servers.
 - Schedule - Simple in-process job scheduler for periodic Python tasks.

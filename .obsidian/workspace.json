@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "cfbf486611320b62",
+        "id": "9dbedffb34368ed2",
         "type": "tabs",
         "children": [
           {
-            "id": "8a98f1bdda5aa7ad",
+            "id": "bc83facf10058448",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "L2 Interview Checklist.md",
+                "file": "Dataview list.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,17 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "L2 Interview Checklist"
+              "title": "Dataview list"
+            }
+          },
+          {
+            "id": "8c56d7cafec033a5",
+            "type": "leaf",
+            "state": {
+              "type": "hearth-home-view",
+              "state": {},
+              "icon": "hearth-crystal",
+              "title": "Home"
             }
           }
         ]
@@ -45,6 +55,23 @@
         "type": "tabs",
         "children": [
           {
+            "id": "a9ceace3eac52dc1",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#operon-demo",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
             "id": "932cadc2bc5845db",
             "type": "leaf",
             "state": {
@@ -58,25 +85,9 @@
               "icon": "lucide-folder-closed",
               "title": "Files"
             }
-          },
-          {
-            "id": "a9ceace3eac52dc1",
-            "type": "leaf",
-            "state": {
-              "type": "search",
-              "state": {
-                "query": "agentha",
-                "matchingCase": false,
-                "explainSearch": false,
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical"
-              },
-              "icon": "lucide-search",
-              "title": "Search"
-            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -96,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "03 Reference/Docker.md",
+                "file": "Tech Landscape.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +117,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Docker"
+              "title": "Backlinks"
             }
           },
           {
@@ -115,12 +126,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2026-05-26.md",
+                "file": "Tech Landscape.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 2026-05-26"
+              "title": "Outgoing links"
             }
           },
           {
@@ -158,13 +169,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2026-05-26.md",
+                "file": "Tech Landscape.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2026-05-26"
+              "title": "Outline"
             }
           },
           {
@@ -202,10 +213,11 @@
       }
     ],
     "direction": "horizontal",
-    "width": 414.5
+    "width": 807.0999755859375
   },
   "left-ribbon": {
     "hiddenItems": {
+      "hearth:Open Hearth home": false,
       "switcher:Open quick switcher": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
@@ -214,50 +226,49 @@
       "audio-recorder:Start/stop recording": false,
       "graph:Open graph view": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "iconic:Open rulebook": false,
       "sheet-plus:Create excel file": false,
-      "obsidian-tomorrows-daily-note:Open tomorrow's daily note": false,
       "obsidian-git:Open Git source control": false,
       "bases:Create new base": false
     }
   },
-  "active": "8a98f1bdda5aa7ad",
+  "active": "c4a0399f57f93a64",
   "lastOpenFiles": [
-    "L2 Interview Checklist.md",
-    "Untitled.canvas",
-    "00-Daily",
-    "02-Projects/Akashic Intelligence Engine",
-    "02-Projects/New folder",
-    "99-Archive",
-    "90-System",
     "New folder",
-    "09-Daily",
-    "08-Prompts",
-    "07-Personal",
-    "06-Experiments",
-    "01-Knowledge/Untitled.md",
-    "2026-08-21.md",
-    "00 Inbox/Daily Brief/20260821.md",
-    "00 Inbox/Daily Brief/20260814.md",
-    "00 Inbox/Daily Brief/20260820.md",
-    "00 Inbox/Daily Brief/20260819.md",
-    "00 Inbox/Daily Brief/20260818.md",
-    "00 Inbox/Daily Brief/20260817.md",
-    "00 Inbox/Daily Brief/Aug 16.md",
-    "00 Inbox/Daily Brief/20260816.md",
-    "00 Inbox/Daily Brief/20260815.md",
-    "00 Inbox/Daily Brief/20260813.md",
-    "04 Blog Recommendations/20260731.md",
-    "04 Blog Recommendations/20260807.md",
-    "04 Blog Recommendations/Excel 2026-08-21 11.01.36.univer.md",
-    "04 Blog Recommendations/20260814.md",
-    "04 Blog Recommendations/20260821.md",
-    "00 Inbox/Daily Brief/Aug 19.md",
-    "00 Inbox/Daily Brief/Aug 20.md",
-    "2026-08-19.md",
-    "Notes.md",
-    "99 Personal/Career Growth Roadmap.md",
-    "Tech Landscape.md",
-    "99 Personal/Storage Tracker.md"
+    "Dataview list.md",
+    "Untitled.md",
+    "2026-08-30.md",
+    "00-Inbox/Proxima.md",
+    "00-Inbox/Omnigent.md",
+    "00-Inbox/HALO (Hierarchal Agent Loop Optimizer).md",
+    "00-Inbox/GStack.md",
+    "00-Inbox/Gortex.md",
+    "00-Inbox/Google Knowledge Catalog (Open Knowledge Format).md",
+    "00-Inbox/Go AgentX.md",
+    "00-Inbox/Gitea.md",
+    "00-Inbox/Git Multi Account Setup.md",
+    "00-Inbox/AI/GBrain.md",
+    "00-Inbox/GBrain.md",
+    "00-Inbox/FastAPI Authentication.md",
+    "00-Inbox/SE/FastAPI Authentication.md",
+    "00-Inbox/SE/Dockpeek.md",
+    "00-Inbox/AI/FinceptTerminal.md",
+    "00-Inbox/AI/FAISS (Facebook AI Similarity Search).md",
+    "00-Inbox/AI/Euria.md",
+    "00-Inbox/FinceptTerminal.md",
+    "00-Inbox/FAISS (Facebook AI Similarity Search).md",
+    "00-Inbox/Euria.md",
+    "00-Inbox/SE/FinceptTerminal.md",
+    "00-Inbox/SE/FAISS (Facebook AI Similarity Search).md",
+    "00-Inbox/DE",
+    "00-Inbox/New folder",
+    "00-Inbox/SE",
+    "00-Inbox/AI",
+    "Index.base",
+    "09-Technol",
+    "00-Inbox/workspace-system-design.html",
+    "08-Prompts/Career",
+    "02-Projects/Learning Roadmap",
+    "02-Projects/Healthcare Data AI Platform",
+    "Untitled.canvas"
   ]
 }

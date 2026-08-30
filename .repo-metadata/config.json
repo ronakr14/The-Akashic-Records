@@ -1,0 +1,48 @@
+{
+    "repository_path": "C:\\Workspace\\The-Akashic-Records",
+
+    "output_file": ".repo-metadata\\repository_files.csv",
+
+    "metadata_file": ".repo-metadata\\repository_files.csv",
+
+    "scan_history_file": ".repo-metadata\\scan_history.csv",
+
+    "exclude_dirs": [
+        ".git",
+        ".obsidian",
+        ".idea",
+        ".vscode",
+        "__pycache__",
+        ".venv",
+        "venv",
+        "node_modules",
+        "dist",
+        "build",
+        ".repo-metadata"
+    ],
+
+    "exclude_files": [
+        "*.pyc",
+        "*.pyo",
+        "*.log",
+        "*.tmp",
+        "~$*",
+        ".gitignore"
+    ],
+
+    "exclude_extensions": [
+        ".db",
+        ".sqlite",
+        ".sqlite3"
+    ],
+
+    "follow_symlinks": false,
+
+    "collect_git_metadata": true,
+
+    "calculate_content_hash": true,
+
+    "hash_algorithm": "sha256",
+
+    "rename_detection": true
+}

@@ -1,0 +1,333 @@
+{
+  "title": "Akashic OS",
+  "showTitle": true,
+  "logo": "",
+  "logoIcon": "",
+  "tabIcon": "",
+  "themeColorTarget": "none",
+  "showSearch": true,
+  "searchPlaceholder": "Search or command",
+  "showNewNoteButton": true,
+  "newNoteButtonMode": "newNote",
+  "searchContents": true,
+  "searchEngine": "builtin",
+  "backgroundKind": "weather",
+  "backgroundValue": "18.5196,73.8554,Pune",
+  "backgroundOpacity": 0.6,
+  "backgroundBlur": 0,
+  "backgroundLayout": "full",
+  "bannerHeight": 220,
+  "bannerFade": true,
+  "bannerFullWidth": false,
+  "openOnStartup": true,
+  "replaceNewTabs": false,
+  "focusSearchOnOpen": false,
+  "liveRefresh": false,
+  "mobileSearchOnly": false,
+  "showMobileActionBar": true,
+  "mobileActionButtons": [
+    {
+      "id": "action-new-note",
+      "label": "New note",
+      "icon": "plus",
+      "type": "command",
+      "target": "hearth:new-note"
+    },
+    {
+      "id": "action-new-drawing",
+      "label": "New drawing",
+      "icon": "pen-tool",
+      "type": "command",
+      "target": "hearth:new-drawing"
+    },
+    {
+      "id": "action-record-voice",
+      "label": "Record voice",
+      "icon": "mic",
+      "type": "command",
+      "target": "hearth:record-voice"
+    },
+    {
+      "id": "action-daily-note",
+      "label": "Daily note",
+      "icon": "calendar",
+      "type": "command",
+      "target": "hearth:open-daily-note"
+    }
+  ],
+  "disableExternalCalls": false,
+  "openIn": "tab",
+  "openInOverrides": {
+    "link": "default",
+    "search": "default",
+    "card": "default",
+    "newNote": "default"
+  },
+  "openFromOutside": "same",
+  "lowPower": false,
+  "lowPowerBackgroundColor": "#4a4459",
+  "compact": true,
+  "arrangeButtonVisibility": "always",
+  "dashboardSwitcherVisibility": "always",
+  "cardOpacity": 0.5,
+  "cardBlur": 7,
+  "cardRadius": 14,
+  "cardBorderWidth": 1,
+  "hiddenFilters": [],
+  "dashboards": [
+    {
+      "id": "dash-mt6uxaeo-16",
+      "name": "Home",
+      "cards": [
+        {
+          "kind": "clock",
+          "title": "",
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 2,
+          "id": "card-mt6v0acz-0-5764",
+          "fx": 0,
+          "fw": 0.2,
+          "fy": 0,
+          "fh": 200,
+          "clock": {
+            "hourFormat": "24",
+            "playfulGreetings": true
+          },
+          "slideshow": {
+            "slides": []
+          },
+          "stats": {}
+        },
+        {
+          "kind": "daily",
+          "title": "Today",
+          "x": 0,
+          "y": 2,
+          "w": 6,
+          "h": 5,
+          "id": "card-mt6v0acz-1-6846",
+          "fx": 0,
+          "fw": 0.4950980392156863,
+          "fy": 216,
+          "fh": 500
+        },
+        {
+          "kind": "tasks",
+          "title": "Tasks",
+          "x": 6,
+          "y": 2,
+          "w": 6,
+          "h": 5,
+          "tasks": {},
+          "id": "card-mt6v0acz-2-6258",
+          "fx": 0.5050000000000001,
+          "fw": 0.495,
+          "fy": 216,
+          "fh": 500
+        },
+        {
+          "kind": "calendar",
+          "title": "Calendar",
+          "x": 0,
+          "y": 7,
+          "w": 4,
+          "h": 4,
+          "id": "card-mt6v0acz-3-9025",
+          "fx": 0,
+          "fw": 0.32633053221288516,
+          "fy": 732,
+          "fh": 416
+        },
+        {
+          "kind": "recent",
+          "title": "Recent",
+          "count": 8,
+          "x": 4,
+          "y": 7,
+          "w": 4,
+          "h": 4,
+          "id": "card-mt6v0acz-4-6634",
+          "fx": 0.33753501400560226,
+          "fw": 0.32633053221288516,
+          "fy": 732,
+          "fh": 416
+        },
+        {
+          "kind": "weather",
+          "title": "Weather",
+          "weather": {
+            "place": {
+              "name": "Pune",
+              "region": "Maharashtra, India",
+              "lat": 18.51957,
+              "lon": 73.85535,
+              "timezone": "Asia/Kolkata"
+            },
+            "style": "minimal"
+          },
+          "x": 0,
+          "y": 15,
+          "w": 4,
+          "h": 3,
+          "id": "card-mt6v0acz-10-1846",
+          "fx": 0.211484593837535,
+          "fw": 0.20028011204481794,
+          "fy": 0,
+          "fh": 200
+        },
+        {
+          "kind": "git",
+          "title": "Git",
+          "git": {},
+          "x": 6,
+          "y": 20,
+          "w": 4,
+          "h": 4,
+          "id": "card-mt6v0acz-14-8170",
+          "fx": 0.6736694677871149,
+          "fw": 0.32633053221288516,
+          "fy": 732,
+          "fh": 416
+        },
+        {
+          "id": "card-mtfoejc2-5149",
+          "x": 5,
+          "y": 0,
+          "kind": "stats",
+          "title": "Stats",
+          "w": 4,
+          "h": 2,
+          "fx": 0.4208333333333334,
+          "fy": 0,
+          "fw": 0.3266666666666667,
+          "fh": 200,
+          "stats": {
+            "advanced": true,
+            "queries": [],
+            "builtins": [
+              "notes",
+              "attachments",
+              "folders",
+              "tags"
+            ]
+          }
+        }
+      ],
+      "fitToPage": false
+    },
+    {
+      "id": "dash-mtfognsz-2121",
+      "name": "Dashboard 2",
+      "cards": [
+        {
+          "id": "card-mtfojg63-3798",
+          "x": 0,
+          "y": 0,
+          "kind": "dataview",
+          "title": "Notes by Domain",
+          "dataview": {
+            "query": "TABLE WITHOUT ID\n    domain AS \"Domain\",\n    length(rows) AS \"Notes\"\nFROM \"\"\nWHERE domain\nGROUP BY domain\nSORT length(rows) DESC"
+          },
+          "w": 6,
+          "h": 4,
+          "fx": 0.2502106149957877,
+          "fy": 0,
+          "fw": 0.1996630160067397,
+          "fh": 250.88161209068008
+        },
+        {
+          "id": "card-mtfokzyh-7743",
+          "x": 0,
+          "y": 0,
+          "kind": "dataview",
+          "title": "Notes by Type",
+          "dataview": {
+            "query": "TABLE WITHOUT ID\n    note_type AS \"Type\",\n    length(rows) AS \"Count\"\nFROM \"\"\nWHERE note_type\nGROUP BY note_type\nSORT length(rows) DESC"
+          },
+          "w": 6,
+          "h": 4,
+          "fx": 0,
+          "fy": 0,
+          "fw": 0.2502106149957877,
+          "fh": 349.98488664987406
+        },
+        {
+          "id": "card-mtfom8qx-8088",
+          "x": 0,
+          "y": 0,
+          "kind": "dataview",
+          "title": "Project list",
+          "dataview": {
+            "query": "TABLE\n    status AS \"Status\",\n    level AS \"Level\",\n    file.mtime AS \"Modified\"\nFROM \"\"\nWHERE note_type = \"project\"\nSORT file.mtime DESC"
+          },
+          "w": 6,
+          "h": 4,
+          "fx": 0.44987363100252736,
+          "fy": 0,
+          "fw": 0.5501263689974726,
+          "fh": 400,
+          "cardBorderWidth": 1
+        }
+      ]
+    },
+    {
+      "id": "dash-mtfoudo9-9982",
+      "name": "Dashboard 3",
+      "cards": [
+        {
+          "id": "card-mtfouunr-6248",
+          "x": 0,
+          "y": 0,
+          "kind": "dataview",
+          "title": "Needs Attention",
+          "dataview": {
+            "query": "TABLE\n    domain AS \"Domain\",\n    note_type AS \"Type\",\n    status AS \"Status\",\n    level AS \"Level\",\n    file.mtime AS \"Modified\"\nFROM \"\"\nWHERE\n    !status\n    OR !domain\n    OR !note_type\n    OR !level\nLIMIT 10\nSORT file.mtime DESC"
+          },
+          "w": 6,
+          "h": 4,
+          "fx": 0,
+          "fy": 0,
+          "fw": 0.5366470092670598,
+          "fh": 350,
+          "cardBorderWidth": 1
+        },
+        {
+          "id": "card-mtfoywe2-8986",
+          "x": 0,
+          "y": 0,
+          "kind": "dataview",
+          "title": "Missing Links",
+          "dataview": {
+            "query": "TABLE\n    file.path AS \"Note\",\n    length(file.inlinks) AS \"In\",\n    length(file.outlinks) AS \"Out\"\nFROM \"\"\nWHERE\n    length(file.inlinks) = 0\n    AND length(file.outlinks) = 0\nLIMIT 10\nSORT file.mtime DESC"
+          },
+          "w": 6,
+          "h": 4,
+          "fx": 0.5501263689974726,
+          "fy": 0,
+          "fw": 0.44987363100252736,
+          "fh": 350,
+          "cardBorderWidth": 1
+        }
+      ]
+    }
+  ],
+  "activeDashboardId": "dash-mtfoudo9-9982",
+  "pinnedCards": [],
+  "gridColumns": 12,
+  "rowHeight": 92,
+  "favorites": [],
+  "fitToPage": true,
+  "taskNotesStatusField": "status",
+  "taskNotesDueField": "due",
+  "taskNotesPriorityField": "priority",
+  "taskNotesDoneValue": "done",
+  "taskFieldsEnabled": false,
+  "taskFields": [],
+  "customFileIcons": true,
+  "iconizeIconProperty": "icon",
+  "maxWidth": 1600,
+  "lastSeenVersion": "2.1.0",
+  "setupStatus": "done"
+}
