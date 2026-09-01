@@ -41,7 +41,8 @@
               "title": "Home"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -91,7 +92,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 253.5
+    "width": 253.5,
+    "collapsed": true
   },
   "right": {
     "id": "7c51cdc979815380",
@@ -231,10 +233,11 @@
       "bases:Create new base": false
     }
   },
-  "active": "c4a0399f57f93a64",
+  "active": "8c56d7cafec033a5",
   "lastOpenFiles": [
-    "New folder",
+    "2026-09-01.md",
     "Dataview list.md",
+    "New folder",
     "Untitled.md",
     "2026-08-30.md",
     "00-Inbox/Proxima.md",
@@ -268,7 +271,6 @@
     "00-Inbox/workspace-system-design.html",
     "08-Prompts/Career",
     "02-Projects/Learning Roadmap",
-    "02-Projects/Healthcare Data AI Platform",
     "Untitled.canvas"
   ]
 }
