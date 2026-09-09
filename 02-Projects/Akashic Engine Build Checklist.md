@@ -71,3 +71,13 @@ Done. I've written the full phasewise checklist with explicit passing criteria t
 
     Want me to start executing Phase 0 + Phase 1 now (scaffold the Poetry/FastAPI/NiceGUI project and build the read-only scanner that actually parses
     your 135 notes), or would you rather adjust the checklist first?
+
+---
+
+## Related
+
+- [[Vault Vision]] — target architecture the engine builds toward
+- [[PKM Knowledge Refresh System – Review & Enhancements]] — the scoring/refresh design this implements
+- [[FastAPI Authentication]] — Phase 0 bearer-token auth on all routers
+- [[Vector Database]] — embeddings / semantic-search layer (Phase 1+)
+- [[Python External Libraries Playbook]] — Poetry project scaffold

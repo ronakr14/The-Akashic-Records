@@ -98,4 +98,13 @@ Why it matters in batch:
 
 How to verify: `EXPLAIN` shows the plan; the `Scan` operator should include `PushedFilters:`. If not, your predicate wasn't pushed.
 
-Refer: Partition Strategy
+## See Also
+
+Backed by knowledge:
+- [[Lakehouse Performance Optimization]] — file layout, compaction, caching
+- [[Query Optimization]] — predicate pushdown, join strategy, plan reading
+- [[Z-Ordering]] — data skipping
+- [[Partitioning]] — partition pruning
+- [[PySpark]] — Spark execution model, skew, shuffle
+
+- [[_Interview MOC]]

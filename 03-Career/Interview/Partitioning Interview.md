@@ -50,7 +50,11 @@ The note is an interview-prep answer on what breaks when partitions grow too lar
   query selectivity.
 
 ## See Also
-- Partitioning Interview — partitioning strategy deep-dive
-- Delta Lake's OPTIMIZE — file compaction in Delta Lake
-- Idempotency in Data Pipelines — making partition-scoped reruns safe
-- Parquet — Parquet format details
+
+Backed by knowledge:
+- [[Partitioning]] — partitioning strategy deep-dive
+- [[Z-Ordering]] — data skipping, file compaction
+- [[Idempotency in Data Pipelines]] — making partition-scoped reruns safe
+- [[Parquet]] — Parquet format details
+
+- [[_Interview MOC]]

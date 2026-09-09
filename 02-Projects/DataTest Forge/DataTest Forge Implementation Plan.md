@@ -544,3 +544,15 @@ Since this is a Databricks notebook-based framework, testing happens in two laye
 Build and validate each task locally (Tasks 1-7, 10-12 can run without Databricks). Then deploy to Databricks for integration testing (Tasks 8-9).
 
 Start with Task 1. Do not proceed to Task 8-9 until all LLM prompts and SQLite schema are locked.
+
+---
+
+## Prerequisite knowledge
+
+- [[LLM Interaction Guide]] — prompt structure for test-case and SQL generation
+- [[Idempotency in Data Pipelines]] — safe re-runs, backup/restore semantics
+- [[Batch Processing]] — test execution model
+- [[PySpark]] — Databricks execution engine
+- [[Data Engineering Playbook]] — data-quality principles the framework enforces
+- [[Data Quality in Batch Pipelines]] — interview note on the same problem space
+- [[_AI Tools Catalog]] — related LLM tooling

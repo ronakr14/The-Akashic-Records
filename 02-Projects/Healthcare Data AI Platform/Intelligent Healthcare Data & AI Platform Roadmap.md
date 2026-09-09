@@ -140,3 +140,21 @@ Concepts: Agent Orchestration, Tool Calling, Planning, Memory
 RAG Metrics, Agent Metrics, Operational Metrics
 Concepts: Evaluation Frameworks, Production Monitoring, Agent Observability
 
+---
+
+## Prerequisite knowledge
+
+Backend (Phases 1–2):
+- [[FastAPI Authentication]] · [[Password Storage]] · [[Microservices]] · [[Monolithic System]] · [[Database Design]] · [[UUIDv7 & ULID]]
+
+Ingestion & pipelines (Phases 3–5):
+- [[Batch Processing]] · [[Stream Processing]] · [[Incremental Data Loading Strategies]] · [[Idempotency in Data Pipelines]] · [[Failure Recovery in Batch Data Pipelines]]
+
+Lakehouse & warehouse (Phases 6–7):
+- [[Data Vault & Lakehouse Modelling]] · [[Data Modelling]] · [[Lakehouse Performance Optimization]] · [[Partitioning]] · [[Z-Ordering]] · [[Parquet]] · [[PySpark]] · [[Query Optimization]]
+
+ML, RAG & agents (Phases 8–11):
+- [[Vector Database]] · [[LLM Interaction Guide]] · [[_AI MOC]]
+
+Hubs: [[_Data Engineering MOC]] · [[_Architecture MOC]] · [[_Software Engineering MOC]] · [[_Healthcare Platform MOC]]
+

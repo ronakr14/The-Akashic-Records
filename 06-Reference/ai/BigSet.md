@@ -3,7 +3,7 @@ domain: ai
 subdomain: ai-data-acquisition
 note_type: technology
 source_type: github
-status: evergreen
+status: reference
 level: advanced
 ---
 # AI Summary

@@ -122,8 +122,12 @@ Critical principle: **never auto-apply an irreversible or behavior-changing opti
 Refer: Idempotency in Data Pipelines
 
 ## See Also
-- Idempotency in Data Pipelines — idempotency deep-dive
-- Batch Processing — batch processing overview
-- ETL vs ELT — ETL vs ELT decision framework
-- Data Engineering Playbook — 15 core truths of data engineering
-- Incremental Data Loading Strategies — incremental loading
+
+Backed by knowledge:
+- [[Idempotency in Data Pipelines]] — idempotency deep-dive
+- [[Batch Processing]] — batch processing overview
+- [[ETL vs ELT]] — ETL vs ELT decision framework
+- [[Data Engineering Playbook]] — 15 core truths of data engineering
+- [[Incremental Data Loading Strategies]] — incremental loading
+
+- [[_Interview MOC]]

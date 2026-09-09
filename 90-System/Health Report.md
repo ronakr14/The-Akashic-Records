@@ -4,7 +4,7 @@ status: reference
 ---
 # Vault Health Report
 
-Generated 2026-09-09 · stale threshold 365 days · 221 notes scanned
+Generated 2026-09-09 · stale threshold 365 days · 229 notes scanned
 
 Link checks (orphans, MOC coverage) are scoped to `01-Knowledge/` — the layer meant to be connected. Broken links, stale, and frontmatter are checked vault-wide.
 
@@ -13,7 +13,7 @@ Link checks (orphans, MOC coverage) are scoped to `01-Knowledge/` — the layer 
 | check | count |
 |---|---|
 | broken wikilinks | 0 |
-| orphan notes (in 01-Knowledge/) | 2 |
+| orphan notes (in 01-Knowledge/) | 0 |
 | stale notes (>365d) | 0 |
 | missing frontmatter | 0 |
 | invalid frontmatter | 0 |
@@ -26,8 +26,7 @@ _none_
 
 ## Orphan notes in 01-Knowledge/ (no links in or out)
 
-- 01-Knowledge/ai/LLM Interaction Guide.md
-- 01-Knowledge/ai/Ollama Secure Session Code.md
+_none_
 
 ## Stale notes
 

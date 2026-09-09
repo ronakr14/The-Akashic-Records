@@ -70,4 +70,12 @@ Architecture:
 * **What to alert on** — check failure, check degradation (p99 worse than baseline), check drift (threshold of "passing" checks trending down).
 * **CI integration** — checks registered as code; PR that removes a check requires approval.
 
-Refer: Data Quality in Batch Pipelines
+## See Also
+
+Backed by knowledge:
+- [[Idempotency in Data Pipelines]] — retry-safe writes
+- [[Failure Recovery in Batch Data Pipelines]] — recovery strategies
+- [[Batch Processing]] — batch pipeline patterns
+- [[Data Engineering Playbook]] — quality principles
+
+- [[_Interview MOC]]

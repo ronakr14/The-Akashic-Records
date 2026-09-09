@@ -34,3 +34,4 @@ Entry point for the Python knowledge area.
 
 - [[Pandas]] — dataframe library (filed under data-engineering compute)
 - [[_Data Engineering MOC]] — PySpark, Polars, pipelines
+- [[_AI MOC]] — working with LLMs, AI tooling

@@ -25,6 +25,7 @@ Entry point for the architecture knowledge area.
 ## Database design
 
 - [[Database Design]] — entities, keys, normalization, indexing, ACID, design workflow
+- [[Vector Database]] — embedding storage, ANN indexes, similarity search, RAG backends
 
 ## See also
 

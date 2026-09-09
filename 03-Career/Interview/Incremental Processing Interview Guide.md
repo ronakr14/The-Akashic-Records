@@ -109,7 +109,11 @@ Approach: isolate, slice, throttle.
 * **Coordinate with stakeholders** — announce window, define rollback plan, have a kill switch (terminate the backfill pool).
 
 ## See Also
-- Incremental Data Loading Strategies — incremental loading patterns
-- Idempotency in Data Pipelines — making incremental loads safe
-- Batch Processing — batch processing overview
-- ETL vs ELT — choosing the right approach
+
+Backed by knowledge:
+- [[Incremental Data Loading Strategies]] — incremental loading patterns
+- [[Idempotency in Data Pipelines]] — making incremental loads safe
+- [[Batch Processing]] — batch processing overview
+- [[ETL vs ELT]] — choosing the right approach
+
+- [[_Interview MOC]]

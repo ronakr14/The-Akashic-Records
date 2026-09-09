@@ -310,8 +310,13 @@ Discuss: service boundaries, event design, consistency model, failure handling, 
 A strong answer touches almost every major microservices concept: domain design, messaging, distributed transactions, resiliency, scalability, and operations.
 
 ## See Also
-- Microservices — microservice architecture principles
-- Monolithic System — when monoliths win
-- Distributed System — distributed systems foundations
-- Idempotency in Data Pipelines — idempotency in service communication
-- Partitioning Interview — data partitioning in microservices
+
+Backed by knowledge:
+- [[Microservices]] — microservice architecture principles
+- [[Monolithic System]] — when monoliths win
+- [[Distributed System]] — distributed systems foundations
+- [[Idempotency in Data Pipelines]] — idempotency in service communication
+
+Related interview notes:
+- [[Partitioning Interview]] — data partitioning
+- [[_Interview MOC]]

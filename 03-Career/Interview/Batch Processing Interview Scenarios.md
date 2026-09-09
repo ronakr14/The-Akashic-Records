@@ -149,10 +149,15 @@ Core components:
 Build-vs-buy: most teams should *not* build this from scratch. Buy Airflow/Dagster/Prefect + Great Expectations/Soda + OpenLineage/Marquez + a FinOps tool. Build only the integration glue and your own DQ contracts library.
 
 ## See Also
-- Batch Processing — batch processing overview
-- Failure Recovery in Batch Data Pipelines — failure recovery strategies
-- Idempotency in Data Pipelines — idempotency patterns
-- Data Quality in Batch Pipelines — data quality in pipelines
+
+Backed by knowledge:
+- [[Batch Processing]] — batch processing overview
+- [[Failure Recovery in Batch Data Pipelines]] — failure recovery strategies
+- [[Idempotency in Data Pipelines]] — idempotency patterns
+
+Related interview notes:
+- [[Data Quality in Batch Pipelines]] — data quality in pipelines
+- [[_Interview MOC]]
 
 ## What is a data contract and how does it apply to batch pipelines?
 A data contract is an agreement between producer and consumer on schema, semantics, SLAs, and ownership — written, versioned, enforced at the ingest boundary (not after the fact).

@@ -178,3 +178,16 @@ cli2api/
 3. **Plugins are constrained hooks** — not arbitrary middleware injection
 4. **Same execution pipeline for all surfaces** — CLI, API, and Celery all run plugins identically
 5. **Redis as shared infrastructure** — rate limiting, broker, caching, idempotency all use the same Redis instance
+
+---
+
+## Prerequisite knowledge
+
+- [[FastAPI Authentication]] — auth flows for the REST surface
+- [[Microservices]] — service boundaries, when this platform pattern fits
+- [[Distributed System]] — Celery workers, shared Redis state, failure modes
+- [[Idempotency in Data Pipelines]] — idempotency plugin, retry semantics
+- [[Python - Modules & Packages]] — registry, entry-point plugin discovery
+- [[Python External Libraries Playbook]] — packaging, optional dependency groups
+
+Project notes: [[_cli2api MOC]]

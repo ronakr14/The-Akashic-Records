@@ -329,8 +329,12 @@ Using technologies such as:
 * Apache Airflow
 
 ## See Also
-- ETL vs ELT — decision framework: when to choose ETL vs ELT
-- ETL — ETL pattern reference
-- ELT (Extract, Load, Transform) — ELT pattern reference
-- Incremental Data Loading Strategies — incremental loading patterns
-- Batch Processing — batch processing overview
+
+Backed by knowledge:
+- [[ETL vs ELT]] — decision framework: when to choose ETL vs ELT
+- [[ETL]] — ETL pattern reference
+- [[ELT (Extract, Load, Transform)]] — ELT pattern reference
+- [[Incremental Data Loading Strategies]] — incremental loading patterns
+- [[Batch Processing]] — batch processing overview
+
+- [[_Interview MOC]]

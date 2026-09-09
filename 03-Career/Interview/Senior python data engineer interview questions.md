@@ -204,3 +204,14 @@ Since the role considers Python + Data Engineering + Backend jointly, and there'
 - Treats the warehouse/BI layer as someone else's problem — doesn't think about Power BI performance implications of their modeling choices.
 - On backend questions: reaches for a full microservices/Kubernetes answer for what should be a small supporting API — over-engineering signal, and a mismatch with "should not be positioned as a Backend Developer role."
 - Can't distinguish when logic belongs in the API vs. the pipeline vs. the warehouse — suggests weak system boundaries thinking, which matters more at senior level than raw coding speed.
+
+## See Also
+
+Backed by knowledge:
+- [[Data Engineering Playbook]] · [[Idempotency in Data Pipelines]] · [[Incremental Data Loading Strategies]]
+- [[Data Modelling]] · [[Distributed System]] · [[Microservices]] · [[Python]]
+
+Related interview notes:
+- [[Senior Python Data Engineer Interview Prep]]
+- [[Senior Python Data Engineer - Advanced Interview Question Bank]]
+- [[_Interview MOC]]

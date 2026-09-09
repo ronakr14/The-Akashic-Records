@@ -257,3 +257,10 @@ If I had to identify the single biggest improvement:
 > Move from "tell me about this" to "help me make a decision under these constraints."
 
 Your questions are already broad and technically sophisticated. The next level is forcing prioritization, tradeoffs, and decisions rather than collecting more information. That's usually where the highest-value insights emerge.
+
+---
+
+## See also
+
+- [[_AI MOC]] — AI knowledge area hub
+- [[_AI Tools Catalog]] — reference catalog of AI projects to evaluate

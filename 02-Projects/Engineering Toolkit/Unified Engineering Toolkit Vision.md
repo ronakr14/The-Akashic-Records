@@ -20,3 +20,13 @@ Currently include.
 6. Audio tools - This is for voice cloning
 7. GDRIVE Sync - similar to onedrive, custom made
 8. Data Generation tool - DB performance data, Healthcare data.
+
+---
+
+## Prerequisite knowledge
+
+- [[Database Design]] — cross-database SQL execution, dialect translation
+- [[Python External Libraries Playbook]] — packaging a multi-tool app
+- [[FastAPI Authentication]] — Reflex web UI + backing services
+- [[Distributed System]] — data migration between arbitrary source/target
+- [[_Software Engineering MOC]]

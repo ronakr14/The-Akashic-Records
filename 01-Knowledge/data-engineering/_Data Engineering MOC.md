@@ -57,3 +57,5 @@ Entry point for the data-engineering knowledge area. Grouped by theme, not folde
 
 - [[_Architecture MOC]] — data modelling, dimensional modelling, database design
 - [[_Python MOC]] — Python language and packaging notes
+- [[_AI MOC]] — LLMs and AI systems built on data pipelines
+- [[_Interview MOC]] — interview banks that draw on these notes

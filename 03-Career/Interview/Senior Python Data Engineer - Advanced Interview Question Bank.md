@@ -1839,3 +1839,15 @@ For this role:
 The interview should therefore spend **more time asking "why?" and "what happens when it fails?" than asking Python syntax questions**.
 
 A candidate who can write beautiful Python but cannot explain incremental loading, partitioning, idempotency, data quality, orchestration, failure recovery, Azure architecture, and analytical workloads is **not a strong fit for this particular Senior role**.
+
+## See Also
+
+Backed by knowledge:
+- [[Incremental Data Loading Strategies]] · [[Partitioning]] · [[Idempotency in Data Pipelines]]
+- [[Failure Recovery in Batch Data Pipelines]] · [[Batch Processing]] · [[Data Engineering Playbook]]
+- [[PySpark]] · [[Polars]] · [[Python]] · [[Data Modelling]]
+
+Related interview notes:
+- [[Senior Python Data Engineer Interview Prep]]
+- [[Senior python data engineer interview questions]]
+- [[_Interview MOC]]

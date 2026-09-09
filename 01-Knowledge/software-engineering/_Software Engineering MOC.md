@@ -40,3 +40,5 @@ Entry point for the software-engineering knowledge area. Grouped by theme.
 - [[_Architecture MOC]] — data modelling and database design
 - [[_Python MOC]] — Python language notes
 - [[_Data Engineering MOC]] — pipelines, storage, distributed processing
+- [[_AI MOC]] — working with LLMs, AI platform tooling
+- [[_Interview MOC]] — interview prep drawing on these notes

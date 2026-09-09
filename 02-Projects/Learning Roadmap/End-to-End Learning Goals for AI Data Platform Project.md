@@ -59,3 +59,18 @@ OPS:
 
 ---
 **Suggestion:** Rather than storing this under a generic project folder, consider making it the root roadmap for the project and linking every concept note back to it. It can act as your project's learning index, with each bullet becoming a child note that tracks progress, references, implementations, and ADRs. This will make it a central hub in your knowledge graph
+
+---
+
+## Knowledge coverage
+
+Domains this roadmap draws on — follow each MOC for current notes and gaps:
+
+- [[_Data Engineering MOC]] — ETL, Spark, modelling, distributed systems
+- [[_Software Engineering MOC]] — APIs, auth, architecture, database design
+- [[_Python MOC]] — language depth, packaging, concurrency
+- [[_AI MOC]] — embeddings, vector DBs, RAG, agents, evaluation
+- [[_Architecture MOC]] — data modelling, database design
+- [[_Interview MOC]] — target roles: Senior Data Engineer, AI Architect
+
+Specific: [[Vector Database]] · [[LLM Interaction Guide]]

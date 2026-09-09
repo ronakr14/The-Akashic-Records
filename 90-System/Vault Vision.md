@@ -208,6 +208,10 @@ The assumption is:
 
 Automation may later identify candidates for promotion, but the user approves important changes.
 
+New daily notes are created from `90-System/templates/Daily Note.md` (Log / Learned / Ideas / Tasks / Promote sections).
+
+AI-generated tech briefings are a separate feed, not capture. They live in `00-Daily/Briefings/` and are mined for recurring themes in `00-Daily/Briefings/_Briefings Index.md`, which links them back into the knowledge graph.
+
 ---
 
 # Knowledge
@@ -424,7 +428,7 @@ The desired model is:
 
 A task can therefore be discovered globally while retaining its original context.
 
-The current plugin being evaluated for this model is **Operon**.
+No task plugin is adopted yet (Operon was evaluated and rejected 2026-09-09). Tasks stay as plain Markdown checkboxes in their context notes until a plugin earns its place.
 
 The desired task system should provide:
 

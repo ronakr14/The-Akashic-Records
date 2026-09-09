@@ -298,3 +298,11 @@ The system succeeds if it:
 * Tracks growth in expertise over time
 * Remains simple enough to maintain long term
 * Encourages knowledge compounding rather than note accumulation
+
+---
+
+## Related
+
+- [[Vault Vision]] — the system this refresh loop feeds
+- [[Akashic Engine Build Checklist]] — the codebase that implements this scoring/refresh design
+- [[Obsidian Learning Map]] — vault platform capabilities

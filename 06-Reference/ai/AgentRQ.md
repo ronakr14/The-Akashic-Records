@@ -1,6 +1,6 @@
 ---
 domain: ai
-subdomain: agent-plarform
+subdomain: agent-platform
 note_type: technology
 source_type: github
 status: reference

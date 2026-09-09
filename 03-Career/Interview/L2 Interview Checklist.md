@@ -257,3 +257,7 @@ If you want, I can turn this into one of these next:
 2. A role-specific question bank for backend, frontend, or full stack
 3. A mock interview script with exact interviewer wording
 4. A rubric tuned for your organization’s bar, for example strong hire, hire, no hire
+
+## See Also
+
+- [[_Interview MOC]] — interview prep hub (topic banks are backed by the knowledge layer)

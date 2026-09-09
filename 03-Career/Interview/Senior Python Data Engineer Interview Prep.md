@@ -503,13 +503,18 @@ Records arriving > 2 hours after window end = dropped. Watermark-vs-completeness
 ---
 
 ## See Also
-- Batch System Design
-- Partitioning Interview
-- Advanced Batch Processing Fundamentals
-- Data Modelling
-- Reliability Engineering
-- Orchestration
-- Python — Python fundamentals
-- Distributed System — distributed systems foundations
-- Idempotency in Data Pipelines — idempotency patterns
-- Data Engineering Playbook — 15 core truths
+
+Backed by knowledge:
+- [[Python]] — Python fundamentals
+- [[PySpark]] — Spark internals
+- [[Distributed System]] — distributed systems foundations
+- [[Idempotency in Data Pipelines]] — idempotency patterns
+- [[Data Engineering Playbook]] — 15 core truths
+- [[Data Modelling]] — modelling principles
+- Reliability Engineering / Orchestration — no note yet
+
+Related interview notes:
+- [[Batch System Design]]
+- [[Partitioning Interview]]
+- [[Advanced Batch Processing Fundamentals]]
+- [[_Interview MOC]]

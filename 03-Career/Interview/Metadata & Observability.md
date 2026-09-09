@@ -75,3 +75,13 @@ Architecture:
 * **UX** — weekly digest, in-IDE warnings, PR comments ("this PR will increase runtime by ~12%").
 
 Why it's a Staff question: requires combining metadata, ML, catalog, and runtime control — the full data platform surface.
+
+## See Also
+
+Backed by knowledge:
+- [[Data Engineering Playbook]] — operational principles
+- [[Query Optimization]] — plan analysis, pushdown, pruning
+- [[PySpark]] — Spark runtime metrics, skew, shuffle
+- [[Lakehouse Performance Optimization]] — file layout, compaction
+
+- [[_Interview MOC]]

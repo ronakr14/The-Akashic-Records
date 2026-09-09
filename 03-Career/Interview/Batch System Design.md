@@ -69,8 +69,12 @@ The note is an interview-prep answer for designing a batch system supporting rep
   rejected.
 
 ## See Also
-- Distributed System — distributed systems foundations
-- Data Lake — data lake architecture
-- Delta Lake & Iceberg — lakehouse formats
-- Batch Processing — batch processing patterns
-- Stream Processing — stream processing
+
+Backed by knowledge:
+- [[Distributed System]] — distributed systems foundations
+- [[Batch Processing]] — batch processing patterns
+- [[Stream Processing]] — stream processing
+- [[Partitioning]] — partitioning strategy
+- Data Lake / Delta Lake & Iceberg — lakehouse formats (no note yet)
+
+- [[_Interview MOC]]
