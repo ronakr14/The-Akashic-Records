@@ -90,4 +90,7 @@ Alternative: Elasticsearch when you need hybrid search (BM25 + vectors) with mat
 
 ## Related
 
+- [[_Database MOC]] — database knowledge hub
 - [[Database Design]] — indexing and storage trade-offs
+- [[Database Indexing]] — B-tree/LSM vs ANN indexes
+- [[Retrieval-Augmented Generation]] — the main consumer of vector search

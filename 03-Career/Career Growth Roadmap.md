@@ -237,3 +237,12 @@ Given your background, here's the progression I'd target:
     
 
 You already have the curiosity. The biggest multiplier now is shifting your energy from accumulating knowledge to producing durable, high-quality systems and sharing the reasoning behind them.
+
+---
+
+## See also
+
+- [[End-to-End Learning Goals for AI Data Platform Project]] — the technical roadmap this strategy sits on top of
+- [[_Interview MOC]] — target-role prep
+- [[_Writing MOC]] — "share the reasoning" backlog
+- [[Vault Vision]] — the Career OS this vault is being built toward

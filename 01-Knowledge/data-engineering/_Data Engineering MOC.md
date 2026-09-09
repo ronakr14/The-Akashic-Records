@@ -33,6 +33,13 @@ Entry point for the data-engineering knowledge area. Grouped by theme, not folde
 - [[Bloom Filters]] — probabilistic membership testing, sizing math
 - [[Bloom Filters - Row Group Pruning]] — ADR: Bloom filters for equality pruning in Parquet lakes
 
+## Lake & lakehouse
+
+- [[Data Lake]] — raw object storage, medallion, catalogs, lake vs warehouse vs lakehouse
+- [[Delta Lake & Iceberg]] — ACID table formats, comparison, when each fits
+- [[Delta Lake's OPTIMIZE]] — ACID compaction, Z-ORDER, liquid clustering, maintenance
+- [[DuckDB]] — embedded OLAP engine, vectorized execution, lake querying without a warehouse
+
 ## Performance
 
 - [[Lakehouse Performance Optimization]] — file sizing, compaction, pruning mechanics
@@ -47,6 +54,7 @@ Entry point for the data-engineering knowledge area. Grouped by theme, not folde
 
 - [[PySpark]] — distributed computation model, Catalyst, DAG scheduling
 - [[Polars]] — Arrow-backed lazy query engine, vectorized execution
+- [[Dask]] — distributed task scheduler for Python; Spark/Ray/Polars trade-offs
 
 ## Platform architecture
 

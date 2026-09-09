@@ -497,11 +497,9 @@ for many organizations.
 
 ## See Also
 
-- Data Modelling
-- Data Warehousing
-- Apache Spark
-- Apache Iceberg
-- Polars
-- PostgreSQL
-- Medallion Architecture
-- Debezium
+- [[Data Lake]] · [[Delta Lake & Iceberg]] — what DuckDB queries directly
+- [[Delta Lake's OPTIMIZE]] — file layout it benefits from
+- [[Polars]] · [[PySpark]] · [[Dask]] — engines compared against
+- [[Data Modelling]] · [[Query Optimization]] · [[Parquet]]
+- [[DuckDB - Architecture Deep Dive]] — exhaustive repo analysis
+- [[_Data Engineering MOC]]

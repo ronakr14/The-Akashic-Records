@@ -682,3 +682,10 @@ Hidden Partitioning (Iceberg)
 ```
 
 That's the evolution of physical data layout optimization in modern lakehouses. Understanding each layer is what separates someone who runs OPTIMIZE from someone who designs table lifecycle strategy.
+
+## See also
+
+- [[Delta Lake & Iceberg]] — the table formats this maintains
+- [[Lakehouse Performance Optimization]] — file sizing and compaction mechanics
+- [[Z-Ordering]] · [[Partitioning]] · [[Query Optimization]]
+- [[_Data Engineering MOC]]

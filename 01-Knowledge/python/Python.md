@@ -3,7 +3,7 @@ domain: python
 subdomain: fundamentals
 note_type: concept
 source_type: self
-status: reference
+status: curated
 level: beginner
 ---
 # AI Summary

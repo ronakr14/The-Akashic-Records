@@ -1,11 +1,29 @@
 ---
 domain: pkm
-subdomain: dataview
-note_type: concept
+subdomain: dashboards
+note_type: project
 source_type: self
 status: draft
 level: intermediate
 ---
+# AI Summary
+
+Design/build plan for a Dataview + Obsidian Bases presentation layer over the vault: a small set of high-value dashboards (vault overview, notes-by-status, orphans, stale-review queue, project prerequisite coverage) treated as the Obsidian-native query layer, complementary to the Akashic Engine rather than a replacement.
+
+---
+
+## Status (2026-09-09)
+
+Built:
+- [[Vault Dashboard]] (`90-System/Vault Dashboard.md`) — Dataview analytical views: status/domain/level rollups, orphans, weakly-linked, missing metadata, promotion candidates, drafts, stale ADRs, recently modified.
+- `90-System/Vault.base` — interactive Bases table over `01-Knowledge/` with views: All / Drafts / Promotion candidates / Weakly linked / By domain. Open in Obsidian; adjust syntax there if a key isn't recognised by the installed Bases version.
+
+Metadata prerequisites the plan below stresses are already met — frontmatter is normalised to the 6-key schema (`domain, subdomain, note_type, source_type, status, level`), links rebuilt, orphans cleared. The `confidence`/`completeness`/`career_relevance` fields discussed below are **not** in the schema; quality dimensions are computed deterministically by `.repo-metadata/health_report.py` instead. `level` has no `expert` value.
+
+The rest of this note is the original planning dump, kept for reference.
+
+---
+
 Yes. I checked the current `The-Akashic-Records` repository and, importantly, I’d **treat Dataview and Bases as the Obsidian-native query/presentation layer**, not as a replacement for the Akashic Engine.
 
 Your repo already has a strong metadata model conceptually: `domain`, `subdomain`, `note_type`, `source_type`, `status`, and `level`, plus the quality dimensions you’re building into the engine. The build checklist also explicitly calls out the vault scanner, graph, quality scoring, recommendations, and daily brief.

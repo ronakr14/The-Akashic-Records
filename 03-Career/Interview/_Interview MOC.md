@@ -50,5 +50,6 @@ Entry point for interview prep. Every topic note carries a "Backed by knowledge"
 
 ## See also
 
+- [[Career Growth Roadmap]] — Senior DE → Architect strategy
 - [[_Data Engineering MOC]] — the knowledge these banks draw on
 - [[_Software Engineering MOC]] — systems and backend knowledge

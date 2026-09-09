@@ -1,1 +1,10 @@
 Attachments/
+
+# Obsidian UI state — churns on every commit, not config
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# Obsidian local caches / OS cruft
+.trash/
+.DS_Store
+Thumbs.db

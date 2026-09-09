@@ -1,0 +1,82 @@
+filters:
+  and:
+    - file.ext == "md"
+    - file.inFolder("01-Knowledge")
+    - note.note_type != "moc"
+formulas:
+  links: length(file.inlinks) + length(file.outlinks)
+properties:
+  note.domain:
+    displayName: Domain
+  note.subdomain:
+    displayName: Subdomain
+  note.note_type:
+    displayName: Type
+  note.status:
+    displayName: Status
+  note.level:
+    displayName: Level
+  note.source_type:
+    displayName: Source
+  formula.links:
+    displayName: Links
+views:
+  - type: table
+    name: All knowledge
+    order:
+      - file.name
+      - note.domain
+      - note.subdomain
+      - note.note_type
+      - note.status
+      - note.level
+      - formula.links
+    sort:
+      - property: note.status
+        direction: ASC
+      - property: note.domain
+        direction: ASC
+  - type: table
+    name: Drafts
+    filters:
+      and:
+        - note.status == "draft"
+    order:
+      - file.name
+      - note.domain
+      - formula.links
+      - file.mtime
+  - type: table
+    name: Promotion candidates
+    filters:
+      and:
+        - note.status == "reference"
+    order:
+      - file.name
+      - note.domain
+      - note.level
+      - formula.links
+      - file.mtime
+    sort:
+      - property: formula.links
+        direction: DESC
+  - type: table
+    name: Weakly linked
+    filters:
+      and:
+        - formula.links < 3
+    order:
+      - file.name
+      - note.status
+      - formula.links
+    sort:
+      - property: formula.links
+        direction: ASC
+  - type: table
+    name: By domain
+    order:
+      - file.name
+      - note.subdomain
+      - note.note_type
+      - note.status
+    group_by: note.domain

@@ -3,8 +3,8 @@ domain: pkm
 subdomain: obsidian
 note_type: tutorial
 source_type: self
-status: draft
-level: beginner
+status: curated
+level: intermediate
 ---
 Absolutely. And I think your diagnosis is right: **you’re currently using Obsidian as a Markdown editor + Git sync**, while Obsidian can function much more like a **local-first personal knowledge system**.
 
@@ -966,3 +966,7 @@ If you want, I can take this further and turn it into a **structured Obsidian Ma
 ## Related
 
 - [[Vault Vision]] — the system this vault is being built toward
+- [[Dataview & Bases Dashboards]] — the Phase 2/3 query layer, planned concretely for this vault
+- [[Vault Dashboard]] — the Dataview views that layer actually shipped
+- [[PKM Knowledge Refresh System – Review & Enhancements]] — the Phase 6 "knowledge platform" design
+- [[Akashic Engine Build Checklist]] — the intelligence layer beyond Obsidian itself

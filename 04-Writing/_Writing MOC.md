@@ -75,7 +75,14 @@ Pipeline as one component inside a discover → plan → execute → validate �
 
 ## Source dumps
 
-- [[20260731]] · [[20260807]] · [[20260814]] · [[20260821]]
+Path-qualified — bare `YYYY-MM-DD` names also exist under `00-Daily/Briefings/`.
+
+- [[04-Writing/Ideas/2026-07-31|2026-07-31]]
+- [[04-Writing/Ideas/2026-08-07|2026-08-07]]
+- [[04-Writing/Ideas/2026-08-14|2026-08-14]]
+- [[04-Writing/Ideas/2026-08-21|2026-08-21]]
+- [[04-Writing/Ideas/2026-08-28|2026-08-28]]
+- [[04-Writing/Ideas/2026-09-04|2026-09-04]]
 
 ## Pipeline
 

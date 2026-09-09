@@ -1172,3 +1172,9 @@ Use **Pandas** when everything fits comfortably in memory on one machine. Use **
 ### One-line decision framework
 
 > **If your problem is "parallel Python over partitions," choose Dask. If it's "distributed SQL over petabytes," choose Spark. If it's "single-node analytics," choose Polars or DuckDB. If it's "distributed AI infrastructure," choose Ray.**
+
+## See also
+
+- [[PySpark]] · [[Polars]] · [[DuckDB]] — the engines Dask is weighed against
+- [[Query Optimization]] — DAG scheduling, shuffle behaviour
+- [[_Data Engineering MOC]]

@@ -1,0 +1,18 @@
+#!/bin/sh
+# Vault health gate. Enable once per clone:  git config core.hooksPath .githooks
+# Bypass a single commit with:  git commit --no-verify
+
+command -v python >/dev/null 2>&1 || { echo "pre-commit: python not found, skipping vault health check"; exit 0; }
+
+python .repo-metadata/health_report.py --quiet --check
+rc=$?
+
+# stage the regenerated artifacts so they travel with this commit
+git add "90-System/Health Report.md" .repo-metadata/quality_history.csv 2>/dev/null
+
+if [ "$rc" -ne 0 ]; then
+    echo "pre-commit: vault health check failed (broken links / frontmatter). See 90-System/Health Report.md"
+    echo "            fix, or run:  git commit --no-verify"
+    exit 1
+fi
+exit 0

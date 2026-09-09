@@ -305,4 +305,5 @@ The system succeeds if it:
 
 - [[Vault Vision]] — the system this refresh loop feeds
 - [[Akashic Engine Build Checklist]] — the codebase that implements this scoring/refresh design
+- [[Dataview & Bases Dashboards]] — Obsidian-native presentation layer over the same metadata
 - [[Obsidian Learning Map]] — vault platform capabilities

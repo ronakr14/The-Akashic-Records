@@ -394,3 +394,10 @@ For a Senior Data Engineer → Data Architect learning path:
 9. Table format internals (ACID, snapshots, manifests, partition evolution)
 
 The architect-level discussion: *"How Delta/Iceberg/Hudi actually implement ACID transactions, snapshots, manifests, partition evolution, and metadata trees under the hood."* That's where most engineers stop, and where architects start.
+
+## See also
+
+- [[Data Lake]] — the storage layer these formats sit on
+- [[Delta Lake's OPTIMIZE]] — compaction and layout maintenance
+- [[Lakehouse Performance Optimization]] · [[Partitioning]] · [[Z-Ordering]]
+- [[Data Vault & Lakehouse Modelling]] · [[_Data Engineering MOC]]

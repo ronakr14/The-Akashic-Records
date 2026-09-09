@@ -74,7 +74,6 @@ Reference catalog of open-source AI projects analysed repo-by-repo. These are lo
 
 ## AI security & interpretability
 
-- [[Anthropic - Defending Code Reference Harness]]
 - [[Defending Code Reference Harness]]
 - [[OBLITERATUS]] — mechanistic interpretability
 - [[SkillSpector]] — agent skill security

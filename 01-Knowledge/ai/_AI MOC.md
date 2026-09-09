@@ -8,7 +8,7 @@ level: intermediate
 ---
 # AI Summary
 
-Map of content for the AI knowledge area. Indexes the synthesized AI notes and links to the repo-by-repo tool catalog in `06-Reference/ai/`. This domain is currently thin — most AI material is still reference-tier — so the gap list below is the working agenda for what to synthesize next.
+Map of content for the AI knowledge area. Indexes the synthesized AI notes and links to the repo-by-repo tool catalog in `06-Reference/ai/`. The core-concept notes are currently `draft` scaffolds — structure and links in place, synthesis pending.
 
 ---
 
@@ -28,16 +28,21 @@ Entry point for the AI knowledge area.
 
 - [[_AI Tools Catalog]] — 50+ open-source AI projects analysed repo-by-repo (gateways, agent frameworks, RAG, inference, security). Lookup-tier, not synthesized.
 
-## Gaps — to develop
+## Core concepts (draft scaffolds)
 
-Topics with no synthesized note yet. Promote from reference or write from experience.
+Structure + cross-links in place; needs synthesis from experience.
 
-- Retrieval-augmented generation — chunking, embeddings, reranking, eval (see [[Vector Database]] for the storage layer)
-- Agent architecture — planning loops, tool use, memory, multi-agent
-- Prompt engineering — patterns, structured output, few-shot vs zero-shot
-- Model evaluation — offline eval, LLM-as-judge, regression testing
-- LLM serving & inference — batching, quantization, KV cache, local vs hosted
-- Context engineering — window management, compaction, retrieval budgeting
+- [[Retrieval-Augmented Generation]] — chunk → embed → retrieve → rerank → assemble → generate, and where each stage fails
+- [[Agent Architecture]] — control loop, tools, memory, planning, multi-agent, harness vs model
+- [[Prompt Engineering]] — instruction structure, examples, structured output, decomposition, robustness
+- [[Model Evaluation]] — offline eval sets, LLM-as-judge, regression testing, production eval
+- [[LLM Serving & Inference]] — batching, KV cache, quantization, the memory wall, local vs hosted
+- [[Context Engineering]] — window budgeting, compaction, governed/semantic context
+
+## Remaining gaps
+
+- Embeddings — model choice, dimensionality, domain adaptation (currently folded into [[Vector Database]] + [[Retrieval-Augmented Generation]])
+- Fine-tuning vs RAG vs long-context decision guide
 
 ## See also
 

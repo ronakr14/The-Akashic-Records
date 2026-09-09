@@ -29,5 +29,6 @@ Entry point for the architecture knowledge area.
 
 ## See also
 
+- [[_Database MOC]] — engine-level: indexing, transactions, replication
 - [[_Data Engineering MOC]] — pipelines, storage formats, partitioning
 - [[Database Design]] connects to [[Partitioning]] and [[UUIDv7 & ULID]]

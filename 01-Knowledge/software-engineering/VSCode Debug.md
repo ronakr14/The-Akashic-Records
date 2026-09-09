@@ -3,7 +3,7 @@ domain: software-engineering
 subdomain: debugging
 note_type: tutorial
 source_type: self
-status: reference
+status: curated
 level: intermediate
 ---
 # AI Summary

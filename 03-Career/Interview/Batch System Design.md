@@ -75,6 +75,6 @@ Backed by knowledge:
 - [[Batch Processing]] — batch processing patterns
 - [[Stream Processing]] — stream processing
 - [[Partitioning]] — partitioning strategy
-- Data Lake / Delta Lake & Iceberg — lakehouse formats (no note yet)
+- [[Data Lake]] · [[Delta Lake & Iceberg]] — lakehouse storage and table formats
 
 - [[_Interview MOC]]
