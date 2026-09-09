@@ -1,3 +1,11 @@
+---
+domain: data-engineering
+subdomain: healthcare-workflows
+note_type: concept
+source_type: self
+status: reference
+level: intermediate
+---
 # AI Summary
 A high-level reference listing the primary operational workflows in a hospital information system. It covers the end-to-end processes for outpatient visits, emergency care, inpatient admissions, ICU management, laboratory operations, pharmacy dispensing, and insurance claims, outlining the major stages from patient registration through treatment, billing, claims processing, and discharge. The note serves as a concise overview of healthcare business workflows and patient journey mapping.
 

@@ -5,11 +5,6 @@ note_type: architecture
 source_type: self
 status: curated
 level: advanced
-tags:
-  - cli2api
-  - architecture
-  - plugins
-  - fastapi
 ---
 # AI Summary
 Defines the complete architecture of cli2api, a framework that exposes a single Python function through multiple execution surfaces including CLI, REST APIs, and asynchronous workers. The architecture separates pure business logic from execution concerns using decorators, a central registry, declarative YAML configuration, a binding layer, a unified execution pipeline, and a constrained plugin system. Redis provides shared infrastructure for rate limiting, Celery, idempotency, and future caching. The document also specifies component responsibilities, execution lifecycle, project structure, and key architectural principles that guide the framework's implementation.

@@ -5,12 +5,6 @@ note_type: project
 status: curated
 source_type: self
 level: advanced
-tags:
-  - healthcare
-  - backend
-  - fastapi
-  - postgresql
-  - mvp
 ---
 # AI Summary
 Defines the Minimum Viable Product implementation plan for Phase 1 of the Intelligent Healthcare Data & AI Platform. The document narrows the original scope to a two-week backend implementation covering ten core healthcare entities, PostgreSQL schema design, FastAPI REST APIs, repository and service layers, JWT authentication, Alembic migrations, Faker-based seed data, and automated testing. It specifies implementation order, project structure, API endpoints, deferred features, acceptance criteria, and the transition path to later phases including ETL, analytics, and AI.

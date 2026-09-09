@@ -1,13 +1,10 @@
 ---
 domain: tool
 subdomain: technology-landscape
-note_type: reference
+note_type: glossary
 source_type: self
 status: curated
 level: intermediate
-tags:
-  - technology
-  - reference
 ---
 # AI Summary
 

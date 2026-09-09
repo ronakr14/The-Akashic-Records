@@ -1,16 +1,10 @@
 ---
 domain: architecture
 subdomain: architecture-principles
-source_type: architecture
-note_type: self
+note_type: architecture
+source_type: self
 status: curated
 level: advanced
-tags:
-  - cli2api
-  - architecture
-  - design-principles
-  - constraints
-  - clean-architecture
 ---
 # AI Summary
 Defines the architectural constraints and engineering principles that govern cli2api. The document establishes rules such as keeping business logic framework-agnostic, treating YAML as a declarative control plane, enforcing plugins as constrained lifecycle hooks, deriving all execution surfaces from function signatures, validating configuration at startup, and preferring strong defaults over excessive configuration. It also documents common anti-patterns—including infrastructure leakage, god decorators, plugin overuse, tight framework coupling, and silent configuration errors—and concludes with practical guidance on production trade-offs and long-term framework evolution. 

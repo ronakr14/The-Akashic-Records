@@ -1,3 +1,11 @@
+---
+domain: career
+subdomain: personal-branding
+note_type: template
+source_type: self
+status: curated
+level: beginner
+---
 # AI Summary
 Reusable checklist for auditing a LinkedIn profile across five key sections: profile picture, banner, headline, featured section, and about section. Includes evaluation questions, recommended image dimensions, guidance for rewriting headlines, and criteria for improving credibility, clarity, branding, and calls to action to create a stronger professional profile.
 
@@ -29,4 +37,4 @@ Five-section Claude checklist for auditing a LinkedIn profile: photo, banner, he
 
 ---
 
-Related: [[Resume - Optimization]], [[Profile - README Rewrite|Profile — README Rewrite]]
+Related: Resume - Optimization, Profile — README Rewrite

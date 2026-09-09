@@ -5,11 +5,6 @@ note_type: architecture
 source_type: self
 status: draft
 level: advanced
-tags:
-  - healthcare
-  - roadmap
-  - analytics
-  - rag
 ---
 # AI Summary
 Strategic roadmap for the Healthcare Intelligence Platform defining future analytics, machine learning, RAG, and AI agent capabilities. The note identifies operational dashboards across patient, doctor, ICU, emergency, pharmacy, inventory, and financial domains; prioritizes three practical ML use cases (readmission prediction, length-of-stay prediction, and appointment no-show prediction); proposes a clinical knowledge assistant using hospital documentation for RAG; and outlines a Hospital Operations Assistant capable of combining patient search, lab retrieval, scheduling, inventory, and insurance APIs through tool calling and multi-step reasoning.

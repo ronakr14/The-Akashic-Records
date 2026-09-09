@@ -1,3 +1,11 @@
+---
+domain: prompt
+subdomain: vault-maintenance
+note_type: prompt
+source_type: self
+status: draft
+level: intermediate
+---
 I need you to classify following note as follows:
 title: suitable title based on content
 folder: suitable folder based on content

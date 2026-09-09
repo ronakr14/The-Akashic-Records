@@ -3,15 +3,8 @@ domain: data-engineering
 subdomain: data-testing
 note_type: project
 source_type: self
-status: active
+status: draft
 level: advanced
-tags:
-  - datatest-forge
-  - databricks
-  - llm
-  - data-testing
-  - automation
-  - claude
 ---
 # AI Summary
 Master implementation roadmap for DataTest Forge, an LLM-powered data testing framework for Databricks. The project transforms Excel-based business requirements into structured specifications, automatically generates test cases, SQL assertions, and test data using Claude, executes tests safely through backup and restore mechanisms, and produces HTML reports. The document defines a three-phase architecture, SQLite control plane, Databricks execution engine, human-in-the-loop correction workflow, reporting system, validation strategy, implementation milestones, and recommended build order, serving as the primary execution guide for the project.

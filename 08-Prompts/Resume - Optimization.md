@@ -1,3 +1,11 @@
+---
+domain: prompt
+subdomain: resume-optimization
+note_type: prompt
+source_type: self
+status: curated
+level: intermediate
+---
 # AI Summary
 Collection of reusable prompts for optimizing resumes against job descriptions. Covers extracting key requirements from a job description, tailoring a CV with ATS-friendly language, rewriting experience bullets, generating a role-fit matrix, and identifying ATS gaps to improve resume relevance without inventing experience. Includes links to related notes for cover letters, interview preparation, and LinkedIn profile optimization
 
@@ -21,4 +29,4 @@ Tailored CV, ATS-friendly bullets, and role-fit scoring.
 
 ---
 
-Related: [[Cover Letter]], [[AI Prompts for Interview Preparation]], [[LinkedIn Profile Audit Checklist]]
+Related: Cover Letter, AI Prompts for Interview Preparation, LinkedIn Profile Audit Checklist

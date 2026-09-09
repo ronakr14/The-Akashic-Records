@@ -1,3 +1,11 @@
+---
+domain: career
+subdomain: career-roadmap
+note_type: project
+source_type: self
+status: curated
+level: advanced
+---
 # AI Summary
 Strategic career roadmap for progressing from Senior Data Engineer to Architect by emphasizing systems thinking over tool accumulation. Encourages shifting from technology exploration to building production-quality systems, writing technical content, strengthening architecture and distributed systems knowledge, developing product thinking and influence, and creating a recognizable portfolio of high-quality projects. Concludes with a multi-year progression toward becoming a trusted architect known for solving complex, high-impact engineering problems.
 

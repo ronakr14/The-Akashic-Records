@@ -5,11 +5,6 @@ note_type: technology
 source_type: self
 status: curated
 level: advanced
-tags:
-  - cli2api
-  - typer
-  - integration
-  - python
 ---
 # AI Summary
 Describes how cli2api integrates with Typer to expose registered functions as command-line interfaces without duplicating business logic. The guide explains registry-based command generation, unified API and CLI execution, packaging, plugin behavior in CLI mode, asynchronous task execution, command grouping, shell completion, and the shared execution pipeline that ensures consistent behavior across CLI, REST API, and background workers. The integration preserves the principle that function signatures remain the single source of truth for validation and execution. 

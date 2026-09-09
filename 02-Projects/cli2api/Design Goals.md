@@ -5,10 +5,6 @@ note_type: architecture
 source_type: self
 status: curated
 level: advanced
-tags:
-  - cli2api
-  - fastapi
-  - typer
 ---
 # AI Summary
 Vision document for cli2api, a lightweight internal developer platform that exposes a single Python function as multiple execution surfaces including CLI commands, REST APIs, asynchronous jobs, and automation webhooks. The architecture separates business logic, declarative YAML configuration, and execution plugins to eliminate boilerplate while keeping functions framework-agnostic. T he note defines the project's philosophy, target use cases, non-goals, and success criteria, serving as the architectural foundation for future implementation.

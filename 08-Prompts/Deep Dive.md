@@ -5,8 +5,6 @@ note_type: template
 source_type: self
 status: evergreen
 level: intermediate
-tags:
-  - research
 ---
 # AI Summary
 ```
@@ -76,4 +74,4 @@ Keep the explanation practical, opinionated, and grounded in real-world usage. A
 
 ---
 
-Related: [[Quick Summary]] — for fast 1-liner decisions when depth isn't needed.
+Related: Quick Summary — for fast 1-liner decisions when depth isn't needed.

@@ -1,3 +1,11 @@
+---
+domain: data-engineering
+subdomain: healthcare-modeling
+note_type: concept
+source_type: self
+status: reference
+level: intermediate
+---
 # AI Summary
 Defines lifecycle states for common hospital resources. Beds transition through Available, Reserved, Occupied, Cleaning, Maintenance, and Unavailable states; ventilators through Available, Assigned, In Use, Maintenance, and Retired; and medicines through In Stock, Reserved, Dispensed, Expired, and Disposed. Serves as a foundation for modeling resource state management in healthcare systems
 

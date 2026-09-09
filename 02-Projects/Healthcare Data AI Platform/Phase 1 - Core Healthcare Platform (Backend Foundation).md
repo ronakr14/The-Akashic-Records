@@ -5,11 +5,6 @@ note_type: project
 source_type: self
 status: curated
 level: intermediate
-tags:
-  - healthcare
-  - fastapi
-  - backend
-  - postgresql
 ---
 # AI Summary
 Phase 1 of the Intelligent Healthcare Data & AI Platform focuses on building the operational healthcare backend responsible for generating the data consumed by later analytics, machine learning, and AI components. The phase includes domain modeling, PostgreSQL schema design, REST APIs with FastAPI, service and repository layers, authentication and RBAC, observability, testing, Docker-based deployment, and realistic seed data. Deliverables include a production-style backend with a normalized database, modular architecture, security, and operational tooling, targeted for completion within two to three weeks.

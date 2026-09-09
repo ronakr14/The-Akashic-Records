@@ -5,10 +5,6 @@ note_type: template
 source_type: self
 status: evergreen
 level: beginner
-tags:
-  - prompt
-  - job-search
-  - resume
 ---
 # AI Summary
 A reusable collection of AI prompt templates for job applications. Includes prompts for generating tailored cover letters, writing compelling closing paragraphs, and explaining employment gaps consistently across resumes, cover letters, and interviews. Designed as a prompt library that can be customized with a resume, background, and job description for different applications. 
@@ -27,4 +23,4 @@ Tailored cover letters with strong hooks and closers.
 
 ---
 
-Related: [[Resume - Optimization]], [[AI Prompts for Interview Preparation]]
+Related: Resume - Optimization, AI Prompts for Interview Preparation

@@ -5,11 +5,6 @@ note_type: project
 source_type: self
 status: curated
 level: advanced
-tags:
-  - healthcare
-  - spark
-  - rag
-  - mlops
 ---
 # AI summary
 Blueprint for an enterprise-scale Healthcare Data & AI Platform that ingests hospital data from multiple sources using batch and streaming pipelines, processes data with Spark in a Bronze–Silver–Gold lakehouse architecture, builds analytical warehouses and predictive ML models, serves clinical intelligence through a RAG system and AI agents, and deploys production-ready MLOps, LLMOps, and AgentOps pipelines. The project is organized into eleven implementation phases covering backend services, distributed processing, streaming, data warehousing, machine learning, AI, and operational excellence.
@@ -86,7 +81,7 @@ Build a unified platform that:
                 FastAPI Gateway
 ```
 
-# Phase: [[Phase 1 - Core Healthcare Platform (Backend Foundation)]] (Backend Foundation)
+# Phase: Phase 1 - Core Healthcare Platform (Backend Foundation) (Backend Foundation)
 Build: Patient service, Doctor Service, Appointment Service, Lab Service, Medication Service
 Technology: Python,, FastAPI, PostgreSQL
 Concepts: REST APIs, Transactions, ACID, Normalization, Indexing, CRUD, Joins

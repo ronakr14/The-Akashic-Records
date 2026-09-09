@@ -5,12 +5,6 @@ note_type: architecture
 source_type: self
 status: curated
 level: advanced
-tags:
-  - cli2api
-  - plugins
-  - architecture
-  - extensibility
-  - redis
 ---
 # AI Summary
   Defines the plugin architecture for cli2api, including the lifecycle contract, execution order, registry, configuration model, and extensibility mechanisms. Plugins operate through constrained lifecycle hooks (before_request, after_response, on_error, on_startup) rather than arbitrary middleware injection. The document specifies YAML-based plugin configuration, dependency ordering, plugin discovery through Python entry points, configuration validation, and a catalog of built-in plugins including logging, authentication, rate limiting, idempotency, caching, metrics, tracing, notifications, circuit breakers, retries, feature flags, and request/response transformations. It also documents architectural pitfalls and best practices for maintaining a predictable plugin ecosystem.

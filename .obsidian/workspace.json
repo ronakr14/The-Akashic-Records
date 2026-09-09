@@ -4,45 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "9dbedffb34368ed2",
+        "id": "406df3f99f664000",
         "type": "tabs",
         "children": [
           {
-            "id": "bc83facf10058448",
+            "id": "b787ab180a9807f0",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Dataview list.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Dataview list"
-            }
-          },
-          {
-            "id": "8c56d7cafec033a5",
-            "type": "leaf",
-            "state": {
-              "type": "hearth-home-view",
+              "type": "graph",
               "state": {},
-              "icon": "hearth-crystal",
-              "title": "Home"
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -92,8 +67,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 253.5,
-    "collapsed": true
+    "width": 253.5
   },
   "right": {
     "id": "7c51cdc979815380",
@@ -233,13 +207,21 @@
       "bases:Create new base": false
     }
   },
-  "active": "8c56d7cafec033a5",
+  "active": "b787ab180a9807f0",
   "lastOpenFiles": [
-    "2026-09-01.md",
+    "2026-09-08.md",
+    "00-Daily/2026-08-26.md",
+    "00-Daily/2026-08-13.md",
+    "90-System/schema.md",
+    "00-Daily/2026-09-08.md",
+    "90-System",
+    "00-Inbox/SE/Dockpeek.md",
+    "00-Daily/2026-08-17.md",
+    "2026-08-30.md",
     "Dataview list.md",
+    "2026-09-01.md",
     "New folder",
     "Untitled.md",
-    "2026-08-30.md",
     "00-Inbox/Proxima.md",
     "00-Inbox/Omnigent.md",
     "00-Inbox/HALO (Hierarchal Agent Loop Optimizer).md",
@@ -253,15 +235,8 @@
     "00-Inbox/GBrain.md",
     "00-Inbox/FastAPI Authentication.md",
     "00-Inbox/SE/FastAPI Authentication.md",
-    "00-Inbox/SE/Dockpeek.md",
     "00-Inbox/AI/FinceptTerminal.md",
     "00-Inbox/AI/FAISS (Facebook AI Similarity Search).md",
-    "00-Inbox/AI/Euria.md",
-    "00-Inbox/FinceptTerminal.md",
-    "00-Inbox/FAISS (Facebook AI Similarity Search).md",
-    "00-Inbox/Euria.md",
-    "00-Inbox/SE/FinceptTerminal.md",
-    "00-Inbox/SE/FAISS (Facebook AI Similarity Search).md",
     "00-Inbox/DE",
     "00-Inbox/New folder",
     "00-Inbox/SE",
@@ -270,7 +245,6 @@
     "09-Technol",
     "00-Inbox/workspace-system-design.html",
     "08-Prompts/Career",
-    "02-Projects/Learning Roadmap",
     "Untitled.canvas"
   ]
 }

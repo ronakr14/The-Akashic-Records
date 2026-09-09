@@ -5,11 +5,6 @@ note_type: prompt
 source_type: self
 status: curated
 level: intermediate
-tags:
-  - resume
-  - constraints
-  - job-search
-  - optimization
 ---
 # AI Summary
 A curated collection of reusable prompts for optimizing resumes with AI. Covers ATS auditing, achievement rewriting, keyword extraction, industry pivots, and one-page resume optimization. Intended as an evergreen toolkit for tailoring resumes to specific job descriptions and improving interview conversion
@@ -35,7 +30,7 @@ Brutal ATS audits, achievement translation, keyword injection, pivots, and one-p
 
 ---
 
-Related: [[Resume - Optimization]]
+Related: Resume - Optimization
 
 
 For your PKM, I'd classify this as a **prompt library note**, not a resume note itself.
@@ -145,19 +140,19 @@ Knowledge/
 
 Since this is a prompt pack, I'd connect it to:
 
-- `[[Resume — Optimization]]`
+- `Resume — Optimization`
     
-- `[[Resume Master]]`
+- `Resume Master`
     
-- `[[LinkedIn Optimization]]`
+- `LinkedIn Optimization`
     
-- `[[Cover Letter Prompts]]`
+- `Cover Letter Prompts`
     
-- `[[Behavioral Interview Preparation]]`
+- `Behavioral Interview Preparation`
     
-- `[[Career Architect Agent]]`
+- `Career Architect Agent`
     
-- `[[Prompt Engineering]]`
+- `Prompt Engineering`
     
 
 I would keep this in a dedicated **Prompt Library** rather than mixing it with career knowledge notes. The note's value is that it's an executable toolkit, not explanatory knowledge.

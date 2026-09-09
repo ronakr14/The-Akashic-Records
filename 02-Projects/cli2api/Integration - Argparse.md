@@ -5,11 +5,6 @@ note_type: technology
 source_type: self
 status: curated
 level: intermediate
-tags:
-  - cli2api
-  - argparse
-  - integration
-  - python
 ---
 # AI Summary
 Explains how argparse can be integrated into cli2api while highlighting why it is discouraged compared to Typer. The document compares both frameworks against cli2api's design goals, describes situations where argparse remains appropriate, provides a registry-driven implementation example, discusses its limitations, outlines migration to Typer, and reinforces the framework's principle that function signatures should remain the single source of truth for both CLI and API interfaces.

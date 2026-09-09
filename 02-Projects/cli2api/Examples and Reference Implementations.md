@@ -5,12 +5,6 @@ note_type: tutorial
 source_type: self
 status: curated
 level: intermediate
-tags:
-  - cli2api
-  - examples
-  - reference
-  - python
-  - api
 ---
 # AI Summary
 Comprehensive example-driven guide demonstrating how to build applications with cli2api. The note progresses from simple function exposure to production-ready deployments, covering API and CLI generation, YAML configuration, authentication, rate limiting, asynchronous execution with Celery, idempotency, plugin development, Rich terminal output, n8n integration, environment-specific configuration, Docker deployment, and extensibility. It serves as the primary hands-on reference for learning the framework and understanding how its core architectural concepts work together.

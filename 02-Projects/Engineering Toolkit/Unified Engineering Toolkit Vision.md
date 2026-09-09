@@ -5,10 +5,6 @@ note_type: project
 source_type: self
 status: draft
 level: intermediate
-tags:
-  - automation
-  - ai-tools
-  - roadmap
 ---
 # AI Summary
 Vision note describing a unified engineering platform intended to consolidate multiple developer utilities into a single application. Planned components include a custom test execution framework, cross-database SQL execution framework, SQL query builder with dialect translation, Reflex-based web UI, data migration framework, voice cloning tools, Google Drive synchronization, and synthetic data generation for database performance testing and healthcare datasets. Serves as a high-level product roadmap rather than a detailed technical design.

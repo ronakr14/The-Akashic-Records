@@ -1,3 +1,11 @@
+---
+domain: prompt
+subdomain: personal-branding
+note_type: prompt
+source_type: self
+status: curated
+level: intermediate
+---
 # AI Summary
 A reusable prompt template for improving a GitHub profile and README. It outlines a three-step process: auditing the current profile from a recruiter's perspective, rewriting the GitHub bio and README to better showcase skills and projects, and enhancing the profile visually using badges, GitHub statistics, contribution graphs, and project showcases. The goal is to create a more credible and compelling GitHub presence that attracts recruiters, remote job opportunities, and freelance clients.
 
@@ -23,4 +31,4 @@ A reusable prompt template for improving a GitHub profile and README. It outline
 
 ---
 
-Related: [[Repo - Deep Analysis]] — for analyzing repos *you visit*, not your own profile.
+Related: Repo - Deep Analysis — for analyzing repos *you visit*, not your own profile.

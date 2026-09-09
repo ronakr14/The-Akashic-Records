@@ -1,3 +1,11 @@
+---
+domain: prompt
+subdomain: interview-prep
+note_type: prompt
+source_type: self
+status: curated
+level: intermediate
+---
 # AI Summary
 Collection of reusable AI prompt templates for interview preparation and job applications. Includes prompts to predict likely interview questions from a job description, generate STAR-format behavioral responses, and create a complete application package containing a tailored CV summary, cover letter, interview questions, recruiter message, and follow-up email. Designed as a reusable prompt library for career preparation.
 
@@ -15,4 +23,4 @@ Predict likely questions, build STAR responses, generate full application packs.
 
 ---
 
-Related: [[Resume - Optimization]], [[Cover Letter]]
+Related: Resume - Optimization, Cover Letter

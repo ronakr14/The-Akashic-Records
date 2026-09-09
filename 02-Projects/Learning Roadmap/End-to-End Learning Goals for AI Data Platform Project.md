@@ -4,12 +4,7 @@ subdomain: learning-roadmap
 note_type: project
 source_type: self
 status: draft
-tags:
-  - roadmap
-  - data-engineering
-  - ai
-  - ml
-  - system-design
+level: advanced
 ---
 # AI Summary
 Personal project learning roadmap covering the technical capabilities to master through building an end-to-end AI data platform. Topics span Data Engineering (ETL, Spark, data modeling, distributed systems), Backend (APIs, authentication, architecture, database design), Machine Learning (feature engineering, training, serving, experiment tracking), LLMs (embeddings, vector databases, RAG, evaluation), Agentic AI (tool calling, memory, planning, multi-agent workflows), and Operations (Docker, CI/CD, monitoring, MLOps, LLMOps, AgentOps). Intended as a master checklist for career progression toward Senior Data Engineer and AI Architect roles.

@@ -5,8 +5,6 @@ note_type: template
 source_type: self
 status: evergreen
 level: beginner
-tags:
-  - prompt
 ---
 # AI Summary
 Reusable prompt template for extracting lessons from an AI conversation. Instructs the AI to review the entire conversation, identify user corrections, stated preferences, recurring feedback, and improvements for future sessions, then generate a structured feedback.md file for reuse in later conversations. Also references complementary workflows for end-of- session handoffs and daily note updates.
@@ -18,4 +16,4 @@ Paste that output into a `feedback.md` file and load it into your Claude project
 
 ---
 
-Related: [[End of Session Handoff]] — for full session handoff. [[Daily Note — Update]] — for the lightweight daily-note route.
+Related: End of Session Handoff — for full session handoff. Daily Note — Update — for the lightweight daily-note route.

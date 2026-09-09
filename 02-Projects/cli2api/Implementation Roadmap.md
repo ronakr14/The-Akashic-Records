@@ -5,11 +5,6 @@ note_type: project
 source_type: self
 status: curated
 level: advanced
-tags:
-  - cli2api
-  - implementation
-  - framework
-  - roadmap
 ---
 # AI Summary
 Defines the complete implementation roadmap for cli2api across seven incremental phases. The roadmap progresses from a minimal FastAPI-based function registry to a production-ready execution platform supporting CLI commands, REST APIs, asynchronous Celery workers, declarative YAML configuration, extensible plugins, Redis-backed infrastructure, and production features such as observability, Docker deployment, retries, and hot reload. Each phase includes implementation tasks, file responsibilities, and checkpoints, providing a structured path from MVP to a mature internal developer platform.
@@ -112,7 +107,7 @@ Goal: Request/response logging.
 
 ### Step 3.1 — Typer Integration
 
-> Also see: [[Integration - Typer]]
+> Also see: Integration - Typer
 
 Goal: Same function exposed as CLI command.
 
@@ -299,7 +294,7 @@ File: `config.yaml` (update)
 
 ### Step 6.5 — Example Plugins
 
-> Also see: [[Plugin System]]
+> Also see: Plugin System
 
 Goal: Implement core plugins.
 

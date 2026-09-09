@@ -5,12 +5,6 @@ note_type: technology
 source_type: self
 status: curated
 level: intermediate
-tags:
-  - cli2api
-  - rich
-  - integration
-  - terminal
-  - python
 ---
 # AI Summary
 Describes how Rich enhances the cli2api command-line experience by providing formatted output, tables, JSON rendering, progress indicators, live dashboards, improved logging, error presentation, and enhanced help text. The guide explains installation, optional package dependencies, YAML-based configuration, CLI flags, plugin integration, and practical recommendations for when Rich should and should not be used, allowing the CLI surface to remain user-friendly without affecting the API execution model.

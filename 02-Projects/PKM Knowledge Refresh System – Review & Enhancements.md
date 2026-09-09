@@ -1,3 +1,11 @@
+---
+domain: pkm
+subdomain: knowledge-refresh
+note_type: architecture
+source_type: self
+status: draft
+level: advanced
+---
 # AI Summary
 A comprehensive architecture proposal for an automated knowledge refresh system that continuously resurfaces, synthesizes, and prioritizes valuable notes instead of merely collecting information. The design includes daily knowledge refreshes, weekly synthesis reports, monthly growth reviews, weighted note scoring, project-aware prioritization, stale knowledge detection, question tracking, knowledge evolution analysis, capture-to-insight metrics, implementation phases, and a lightweight Python-based architecture integrated with Obsidian and Discord. The emphasis is on long-term knowledge compounding through retrieval, reflection, and synthesis while avoiding unnecessary complexity such as RAG or vector databases.
 

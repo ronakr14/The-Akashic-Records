@@ -1,3 +1,11 @@
+---
+domain: prompt
+subdomain: summarization
+note_type: prompt
+source_type: self
+status: curated
+level: beginner
+---
 # AI Summary
 Reusable prompt template for generating highly concise, decision-oriented summaries of tools, frameworks, models, or technologies. Standardizes responses into a best use case and a recommended alternative while enforcing brevity, clarity, and a maximum response length. References a separate deep-dive note for detailed architectural explanations.
 
@@ -29,4 +37,4 @@ Alternative: — <when/why it's better>
 
 ---
 
-Related: [[Deep Dive]] — full architectural breakdown when 1-liner isn't enough.
+Related: Deep Dive — full architectural breakdown when 1-liner isn't enough.

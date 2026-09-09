@@ -1,3 +1,11 @@
+---
+domain: data-engineering
+subdomain: test-automation
+note_type: project
+source_type: self
+status: draft
+level: advanced
+---
 # AI Summary
 Comprehensive design document for an LLM-assisted data test automation framework targeting Databricks pipelines. Defines a three-phase workflow that converts Excel requirements into structured markdown, generates versioned test cases, assertion SQL, and realistic shared test data using Claude, and executes them through a Python-based Databricks runner with backup/restore, HTML reporting, and SQLite-backed lineage, versioning, audit trails, and HITL correction loops. Includes architecture decisions, prompt templates, SQLite schema, execution engine design, risk analysis, implementation roadmap, and success metrics.
 

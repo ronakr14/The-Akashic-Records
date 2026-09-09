@@ -5,11 +5,6 @@ note_type: architecture
 source_type: self
 status: draft
 level: intermediate
-tags:
-  - healthcare
-  - ddd
-  - erd
-  - domain-model
 ---
 # AI Summary
 Defines the core business domains for the Healthcare Intelligence Platform, including people, clinical workflows, appointments, laboratory, pharmacy, emergency care, ICU, inventory, billing, insurance, workforce, communication, and documents. The note identifies major entities, patient encounters, RBAC roles, and business capabilities that serve as the foundation for database design, APIs, event-driven architecture, analytics, machine learning, and agent-based healthcare workflows.

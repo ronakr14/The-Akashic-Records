@@ -5,9 +5,6 @@ note_type: glossary
 source_type: self
 status: draft
 level: beginner
-tags:
-  - healthcare
-  - event-modelling
 ---
 # AI Summary
 Initial catalog of healthcare business events representing the patient lifecycle across registration, appointments, consultations, laboratory workflows, prescriptions, admissions, bed management, discharge, and insurance claims. Intended as the foundation for an event-driven architecture, event storming session, or healthcare data platform, but currently contains only event names without descriptions, payload schemas, publishers, consumers, ordering rules, or business semantics.

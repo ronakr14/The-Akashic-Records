@@ -1,3 +1,11 @@
+---
+domain: pkm
+subdomain: akashic-engine
+note_type: project
+source_type: self
+status: draft
+level: advanced
+---
 # AI Summary
 None. Done. I've written the full phasewise checklist with explicit passing criteria to:
 
@@ -19,7 +27,7 @@ Done. I've written the full phasewise checklist with explicit passing criteria t
       - Rotate the leaked key in the OLD 1Akashic-Engine/.env (it's tracked there)
 
     PHASE 1 — Knowledge Graph (Pillar 1)
-      - Read-only vault scanner (python-frontmatter, handles CRLF + fenced blocks, strips [[x|alias]])
+      - Read-only vault scanner (python-frontmatter, handles CRLF + fenced blocks, strips alias)
       - Typed graph model + builder (nodes: concept/adr/project/person/tech; typed+weighted edges)
       - Orphan detection (degree==0)
       - Centrality (degree + betweenness via networkx)

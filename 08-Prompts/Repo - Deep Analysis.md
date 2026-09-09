@@ -1,3 +1,11 @@
+---
+domain: prompt
+subdomain: repo-analysis
+note_type: prompt
+source_type: self
+status: curated
+level: intermediate
+---
 # AI Summary
 Reusable prompt template for performing an in-depth analysis of a GitHub repository. Defines a standardized report covering executive summary, architecture, workflows, use cases, enterprise evaluation, strengths and weaknesses, engineering takeaways, interview questions, adoption guidance, and AI/data engineering relevance. Designed to generate consistent, comprehensive technical documentation suitable for architects, engineering leaders, developers, data engineers, and AI engineers.
 
@@ -140,4 +148,4 @@ Output should be suitable for:
 
 ---
 
-Related: [[Profile - README Rewrite]] — for optimizing *your own* profile, not repos you evaluate.
+Related: Profile - README Rewrite — for optimizing *your own* profile, not repos you evaluate.

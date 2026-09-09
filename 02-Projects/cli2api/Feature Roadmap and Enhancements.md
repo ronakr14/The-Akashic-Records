@@ -5,11 +5,6 @@ note_type: architecture
 source_type: self
 status: curated
 level: advanced
-tags:
-  - cli2api
-  - framework
-  - plugins
-  - architecture
 ---
 # AI Summary
 Defines the planned feature set for cli2api beyond its core function-to-API capability. The document covers automatic route generation, Pydantic validation, authentication, Redis-backed rate limiting, Celery-based asynchronous execution, idempotency, dual CLI/API exposure, declarative YAML configuration, plugin architecture, observability, packaging, workflow automation, configuration validation, distributed tracing, retries, hot reload, and plugin discovery. Together these enhancements transform cli2api from a simple decorator into a production-ready internal execution platform.
@@ -41,7 +36,7 @@ No manual validation code needed — invalid inputs return 422 with clear error 
 
 ## 3. API Key Security
 
-> Also see: [[Plugin System#4. Auth Plugin]] | [[Examples and Reference Implementations#Example 7: Auth Protection]]
+> Also see: Plugin System | Examples and Reference Implementations
 
 Per-route API key validation via `x-api-key` header:
 
@@ -64,7 +59,7 @@ Per-IP + per-route rate limiting using Redis atomic counters:
 
 ## 5. Async Job Queue (Celery)
 
-> Also see: [[Implementation Roadmap#Phase 4: Async Jobs + Redis]] | [[Examples and Reference Implementations#Example 4: Async Job with Celery]]
+> Also see: Implementation Roadmap | Examples and Reference Implementations
 
 Mark any function as async to execute it via Celery worker:
 
@@ -81,7 +76,7 @@ def process_data(x: int, y: int):
 
 ## 6. Idempotency Keys
 
-> Also see: [[Plugin System#3. Idempotency Plugin]] | [[Examples and Reference Implementations#Example 5: Idempotency]]
+> Also see: Plugin System | Examples and Reference Implementations
 
 Prevent duplicate execution for critical operations:
 
@@ -93,7 +88,7 @@ Prevent duplicate execution for critical operations:
 
 ## 7. CLI + API Dual Mode
 
-> Also see: [[Integration - Typer]] | [[Integration - Argparse]] | [[Integration - Rich]]
+> Also see: Integration - Typer | Integration - Argparse | Integration - Rich
 
 Same function exposed as both REST endpoint and CLI command:
 
@@ -121,7 +116,7 @@ Change behavior without touching Python code. Environment-specific configs: `con
 
 ## 9. Plugin System
 
-> Also see: [[Plugin System]] | [[Design Principles#3. Plugins are Hooks, Not Injection]]
+> Also see: Plugin System | Design Principles
 
 Extensible middleware with strict contracts:
 
@@ -232,7 +227,7 @@ Exponential backoff configurable per task.
 
 ## 20. Hot Reload
 
-> Also see: [[Implementation Roadmap#Step 7.6 — Hot Reload]]
+> Also see: Implementation Roadmap
 
 YAML config changes apply without server restart:
 
