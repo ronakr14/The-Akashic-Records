@@ -53,6 +53,7 @@ DRAFT — scaffold only. Synthesis pending. How LLM inference actually runs: bat
 ## Reference
 
 - [[Distributed Llama]] · [[CrowdLlama]] — distributed / crowd inference
+- [[Distributed LLM]] — home-lab project: llama.cpp RPC across LAN laptops, distributed vs replica modes
 - [[Hugging Face Accelerate]] — multi-device execution
 - [[OGAM]] · [[Locally Uncensored]] — on-device / local desktop AI
 - [[Portkey]] · [[9Router]] · [[Omniroute]] · [[BitRouter]] — LLM gateways / routing

@@ -24,6 +24,10 @@ Entry point for the AI knowledge area.
 
 - [[Vector Database]] — embedding storage, ANN indexes, similarity search (filed under database)
 
+## Projects
+
+- [[Distributed LLM]] — home-lab distributed inference across laptops (llama.cpp RPC); hands-on backing for [[LLM Serving & Inference]]
+
 ## Reference
 
 - [[_AI Tools Catalog]] — 50+ open-source AI projects analysed repo-by-repo (gateways, agent frameworks, RAG, inference, security). Lookup-tier, not synthesized.

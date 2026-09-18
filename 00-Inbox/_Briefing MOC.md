@@ -18,6 +18,14 @@ Newest first. Links are path-qualified because bare `YYYY-MM-DD` names also exis
 
 ## September 2026
 
+- [[00-Daily/Briefings/2026-09-17|2026-09-17]]
+- [[00-Daily/Briefings/2026-09-16|2026-09-16]]
+- [[00-Daily/Briefings/2026-09-15|2026-09-15]]
+- [[00-Daily/Briefings/2026-09-14|2026-09-14]]
+- [[00-Daily/Briefings/2026-09-13|2026-09-13]]
+- [[00-Daily/Briefings/2026-09-12|2026-09-12]]
+- [[00-Daily/Briefings/2026-09-11|2026-09-11]]
+- [[00-Daily/Briefings/2026-09-10|2026-09-10]]
 - [[00-Daily/Briefings/2026-09-09|2026-09-09]]
 - [[00-Daily/Briefings/2026-09-06|2026-09-06]]
 - [[00-Daily/Briefings/2026-09-05|2026-09-05]]
