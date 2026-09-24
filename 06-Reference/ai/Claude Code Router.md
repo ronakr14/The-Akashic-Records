@@ -15,21 +15,21 @@ I analyzed the repository at a high level using the public GitHub metadata and f
 ## 1. Executive Summary
 
 **What this project is**  
-Claude Code Router is a local control plane and desktop gateway for coding agents. It sits between agent clients such as Claude Code, Codex, Grok CLI, ZCode, and compatible OpenAI-style clients, then routes requests to the right model/provider/account based on policy. The repo describes itself as a “local gateway and desktop control panel” and a “local control plane for coding agents.” ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md?utm_source=chatgpt.com "claude-code-router/README.md at main"))
+Claude Code Router is a local control plane and desktop gateway for coding agents. It sits between agent clients such as Claude Code, Codex, Grok CLI, ZCode, and compatible OpenAI-style clients, then routes requests to the right model/provider/account based on policy. The repo describes itself as a “local gateway and desktop control panel” and a “local control plane for coding agents.” ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md "claude-code-router/README.md at main"))
 
 **What problem it solves**  
-It solves the annoying, expensive, vendor-locked mess of wiring every agent to every model provider manually. Instead of hardcoding endpoints and credentials across tools, it centralizes routing, model selection, tool integration, request logging, and account management on the user’s machine. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md?utm_source=chatgpt.com "claude-code-router/README.md at main"))
+It solves the annoying, expensive, vendor-locked mess of wiring every agent to every model provider manually. Instead of hardcoding endpoints and credentials across tools, it centralizes routing, model selection, tool integration, request logging, and account management on the user’s machine. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md "claude-code-router/README.md at main"))
 
 **Target audience**  
-Power users, AI engineers, indie builders, and teams running coding agents across multiple model providers. It also fits developers who want Claude Code-like workflows without being tied to one upstream provider. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md?utm_source=chatgpt.com "claude-code-router/README.md at main"))
+Power users, AI engineers, indie builders, and teams running coding agents across multiple model providers. It also fits developers who want Claude Code-like workflows without being tied to one upstream provider. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md "claude-code-router/README.md at main"))
 
 **Maturity level**  
-This is beyond prototype. It has a desktop app, CLI, Docker support, tests, release packaging, update metadata checks, and a fairly broad feature surface. I would call it **advanced beta / production-capable for individual and team use**, but not yet “enterprise-ready” in the strict sense because security, governance, observability, and operational hardening are still largely self-managed and the repo shows a fast-moving community project with substantial open issue volume. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/package.json?utm_source=chatgpt.com "package.json - musistudio/claude-code-router"))
+This is beyond prototype. It has a desktop app, CLI, Docker support, tests, release packaging, update metadata checks, and a fairly broad feature surface. I would call it **advanced beta / production-capable for individual and team use**, but not yet “enterprise-ready” in the strict sense because security, governance, observability, and operational hardening are still largely self-managed and the repo shows a fast-moving community project with substantial open issue volume. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/package.json "package.json - musistudio/claude-code-router"))
 
 ## 2. Repository Overview
 
 **Main purpose**  
-The repository packages a router/proxy and desktop app for routing agent traffic to multiple LLM providers through one local endpoint. The README frames it as a local gateway with provider presets, custom endpoints, credential pools, fallback chains, MCP tools, request logs, account usage, and desktop launch profiles. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md?utm_source=chatgpt.com "claude-code-router/README.md at main"))
+The repository packages a router/proxy and desktop app for routing agent traffic to multiple LLM providers through one local endpoint. The README frames it as a local gateway with provider presets, custom endpoints, credential pools, fallback chains, MCP tools, request logs, account usage, and desktop launch profiles. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md "claude-code-router/README.md at main"))
 
 **Core features and capabilities**
 
@@ -49,20 +49,20 @@ The repository packages a router/proxy and desktop app for routing agent traffic
     
 - Desktop UI plus CLI and Docker entrypoints
     
-- Import/export via a custom `ccr://` protocol scheme. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md?utm_source=chatgpt.com "claude-code-router/README.md at main"))
+- Import/export via a custom `ccr://` protocol scheme. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md "claude-code-router/README.md at main"))
     
 
 **Key technologies**
 
-- **TypeScript / Node.js**: package scripts, workspace layout, and runtime dependency profile point strongly to a TS-first Node monorepo. `engines` requires Node >= 22. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/package.json?utm_source=chatgpt.com "package.json - musistudio/claude-code-router"))
+- **TypeScript / Node.js**: package scripts, workspace layout, and runtime dependency profile point strongly to a TS-first Node monorepo. `engines` requires Node >= 22. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/package.json "package.json - musistudio/claude-code-router"))
     
 - **Electron**: desktop packaging is explicit in `electron-builder.json`, with app output under `packages/electron`. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/electron-builder.json "claude-code-router/electron-builder.json at main · musistudio/claude-code-router · GitHub"))
     
-- **better-sqlite3**: local persistence for settings, routing state, and usage history is strongly implied by the dependency. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/package.json?utm_source=chatgpt.com "package.json - musistudio/claude-code-router"))
+- **better-sqlite3**: local persistence for settings, routing state, and usage history is strongly implied by the dependency. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/package.json "package.json - musistudio/claude-code-router"))
     
-- **OpenAI-compatible gateway tooling**: `@the-next-ai/ai-gateway`, `@the-next-ai/bot-gateway-sdk`, `openai`, and `undici` suggest a network-heavy proxy/gateway layer. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/package.json?utm_source=chatgpt.com "package.json - musistudio/claude-code-router"))
+- **OpenAI-compatible gateway tooling**: `@the-next-ai/ai-gateway`, `@the-next-ai/bot-gateway-sdk`, `openai`, and `undici` suggest a network-heavy proxy/gateway layer. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/package.json "package.json - musistudio/claude-code-router"))
     
-- **Playwright / tests / build scripts**: clear evidence of end-to-end and architecture tests. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/package.json?utm_source=chatgpt.com "package.json - musistudio/claude-code-router"))
+- **Playwright / tests / build scripts**: clear evidence of end-to-end and architecture tests. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/package.json "package.json - musistudio/claude-code-router"))
     
 
 **High-level architecture inferred**  
@@ -76,13 +76,13 @@ The repo appears to use a **monorepo** with at least these layers:
     
 4. **Persistence layer** backed by SQLite
     
-5. **Integration layer** for provider APIs, MCP tools, and agent launch profiles. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/package.json?utm_source=chatgpt.com "package.json - musistudio/claude-code-router"))
+5. **Integration layer** for provider APIs, MCP tools, and agent launch profiles. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/package.json "package.json - musistudio/claude-code-router"))
     
 
 ## 3. How It Works
 
 **Workflow in simple terms**  
-Your agent thinks it is talking to one local service. CCR intercepts the request, looks at the profile and policy, decides which model/provider should handle it, transforms the payload if needed, sends it upstream, then returns the response back to the agent. That is the whole trick: one local stable endpoint, many backends behind it. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md?utm_source=chatgpt.com "claude-code-router/README.md at main"))
+Your agent thinks it is talking to one local service. CCR intercepts the request, looks at the profile and policy, decides which model/provider should handle it, transforms the payload if needed, sends it upstream, then returns the response back to the agent. That is the whole trick: one local stable endpoint, many backends behind it. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md "claude-code-router/README.md at main"))
 
 **Major components**
 
@@ -96,7 +96,7 @@ Your agent thinks it is talking to one local service. CCR intercepts the request
     
 - **Persistence**: stores config, logs, and usage data locally
     
-- **Packaging/update layer**: builds native app artifacts and update metadata. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/package.json?utm_source=chatgpt.com "package.json - musistudio/claude-code-router"))
+- **Packaging/update layer**: builds native app artifacts and update metadata. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/package.json "package.json - musistudio/claude-code-router"))
     
 
 **Data flow**
@@ -113,16 +113,16 @@ Your agent thinks it is talking to one local service. CCR intercepts the request
     
 6. CCR stores request/log/usage metadata locally.
     
-7. Response is normalized and returned to the agent. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md?utm_source=chatgpt.com "claude-code-router/README.md at main"))
+7. Response is normalized and returned to the agent. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md "claude-code-router/README.md at main"))
     
 
 **Integrations and dependencies**  
-The repo supports Anthropic-style usage patterns but also routes to OpenAI-compatible APIs and other providers. The README explicitly calls out Claude Code, Codex, Grok CLI, ZCode, custom endpoints, and MCP tools. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md?utm_source=chatgpt.com "claude-code-router/README.md at main"))
+The repo supports Anthropic-style usage patterns but also routes to OpenAI-compatible APIs and other providers. The README explicitly calls out Claude Code, Codex, Grok CLI, ZCode, custom endpoints, and MCP tools. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md "claude-code-router/README.md at main"))
 
 ## 4. Why This Project Exists
 
 **Business problem**  
-Teams and power users do not want to reconfigure every agent for every model. They want one control point for routing, cost control, fallback, and policy. That is a classic platform-layer problem: reduce integration sprawl and centralize control. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md?utm_source=chatgpt.com "claude-code-router/README.md at main"))
+Teams and power users do not want to reconfigure every agent for every model. They want one control point for routing, cost control, fallback, and policy. That is a classic platform-layer problem: reduce integration sprawl and centralize control. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md "claude-code-router/README.md at main"))
 
 **Technical problems it solves**
 
@@ -136,14 +136,14 @@ Teams and power users do not want to reconfigure every agent for every model. Th
     
 - Local observability into requests and usage
     
-- Packaging a stable developer workflow across desktop, CLI, and Docker. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md?utm_source=chatgpt.com "claude-code-router/README.md at main"))
+- Packaging a stable developer workflow across desktop, CLI, and Docker. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md "claude-code-router/README.md at main"))
     
 
 **Advantages over traditional approaches**  
-Traditional setups make every tool talk directly to every provider. That scales badly and becomes brittle. CCR creates a single gateway abstraction. That is cleaner, easier to govern, and easier to swap providers behind the scenes. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md?utm_source=chatgpt.com "claude-code-router/README.md at main"))
+Traditional setups make every tool talk directly to every provider. That scales badly and becomes brittle. CCR creates a single gateway abstraction. That is cleaner, easier to govern, and easier to swap providers behind the scenes. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md "claude-code-router/README.md at main"))
 
 **Unique differentiators**  
-The most interesting differentiator is that this is not just a proxy. It is a **local control plane**: routing, provider import, launch profiles, MCP integration, and desktop UX all live together. That is much closer to a platform product than a dumb reverse proxy. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md?utm_source=chatgpt.com "claude-code-router/README.md at main"))
+The most interesting differentiator is that this is not just a proxy. It is a **local control plane**: routing, provider import, launch profiles, MCP integration, and desktop UX all live together. That is much closer to a platform product than a dumb reverse proxy. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md "claude-code-router/README.md at main"))
 
 ## 5. How It Can Be Used
 
@@ -151,31 +151,31 @@ The most interesting differentiator is that this is not just a proxy. It is a **
 Description: Route Claude Code or other agents to OpenAI-compatible providers without changing each client.  
 Example: A team uses Claude Code for daily work but reroutes background tasks to a cheaper model.  
 Benefits: Lower cost, better resilience, easier switching.  
-Complexity: **Medium**. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md?utm_source=chatgpt.com "claude-code-router/README.md at main"))
+Complexity: **Medium**. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md "claude-code-router/README.md at main"))
 
 **2) Fallback and failover layer for LLMs**  
 Description: Automatically switch providers/models when one fails.  
 Example: Primary model is overloaded, so CCR falls back to another provider.  
 Benefits: Higher availability and fewer workflow interruptions.  
-Complexity: **Medium**. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md?utm_source=chatgpt.com "claude-code-router/README.md at main"))
+Complexity: **Medium**. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md "claude-code-router/README.md at main"))
 
 **3) Local governance and credential control**  
 Description: Store routing and usage locally rather than spraying credentials into each tool.  
 Example: A developer manages provider keys in one desktop app instead of multiple configs.  
 Benefits: Simpler ops, better control, fewer config drift issues.  
-Complexity: **Low/Medium**. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md?utm_source=chatgpt.com "claude-code-router/README.md at main"))
+Complexity: **Low/Medium**. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md "claude-code-router/README.md at main"))
 
 **4) MCP-enabled agent platform**  
 Description: Use MCP tools through a central gateway.  
 Example: A coding agent uses repo or task tools with provider-specific routing policy.  
 Benefits: Cleaner tool orchestration and easier standardization.  
-Complexity: **Medium**. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md?utm_source=chatgpt.com "claude-code-router/README.md at main"))
+Complexity: **Medium**. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md "claude-code-router/README.md at main"))
 
 **5) Desktop-managed AI operations**  
 Description: Use the GUI for launch profiles, account selection, and request inspection.  
 Example: An AI power user runs multiple models locally and swaps them from a UI.  
 Benefits: Better UX than hand-editing config files.  
-Complexity: **Low**. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md?utm_source=chatgpt.com "claude-code-router/README.md at main"))
+Complexity: **Low**. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md "claude-code-router/README.md at main"))
 
 ## 6. Where It Can Be Used
 
@@ -186,7 +186,7 @@ Useful as an assistant gateway for data engineering copilots and pipeline-debugg
 Good for analysts who use LLMs for SQL generation, dashboard narration, or data QA. Relevance: **medium**.
 
 **AI/ML**  
-Very relevant. This is squarely in the AI tooling stack: model routing, provider abstraction, cost/fallback strategy, and agent orchestration. Relevance: **high**. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md?utm_source=chatgpt.com "claude-code-router/README.md at main"))
+Very relevant. This is squarely in the AI tooling stack: model routing, provider abstraction, cost/fallback strategy, and agent orchestration. Relevance: **high**. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md "claude-code-router/README.md at main"))
 
 **DevOps**  
 Useful for operationalizing coding agents with safer routing, logs, and local policy. Relevance: **high**.
@@ -201,7 +201,7 @@ Useful when providers span AWS Bedrock, Vertex AI, or other cloud endpoints. Rel
 Mixed. It helps centralize keys and reduce sprawl, but also becomes a high-value gateway that must be secured carefully. Relevance: **medium/high**.
 
 **FinOps**  
-Very relevant because routing can be used to steer low-value traffic to cheaper models and reserve expensive ones for critical tasks. Relevance: **high**. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md?utm_source=chatgpt.com "claude-code-router/README.md at main"))
+Very relevant because routing can be used to steer low-value traffic to cheaper models and reserve expensive ones for critical tasks. Relevance: **high**. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md "claude-code-router/README.md at main"))
 
 **Product Engineering**  
 Strong fit for teams embedding AI into their dev workflows and needing consistent model policy. Relevance: **high**.
@@ -216,7 +216,7 @@ I could confirm the following important files/folders from the repo metadata and
 **`package.json`**  
 Purpose: monorepo root, scripts, dependencies, workspace orchestration.  
 Responsibilities: build, test, typecheck, dev launch, Docker packaging.  
-Important items: `dev:*`, `build:*`, `test:*`, `docker:*`, workspace packages, Node >= 22, `@the-next-ai/ai-gateway`, `better-sqlite3`, `electron-updater`, `openai`, `undici`. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/package.json?utm_source=chatgpt.com "package.json - musistudio/claude-code-router"))
+Important items: `dev:*`, `build:*`, `test:*`, `docker:*`, workspace packages, Node >= 22, `@the-next-ai/ai-gateway`, `better-sqlite3`, `electron-updater`, `openai`, `undici`. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/package.json "package.json - musistudio/claude-code-router"))
 
 **`electron-builder.json`**  
 Purpose: desktop packaging configuration.  
@@ -226,12 +226,12 @@ Interactions: packages the Electron app from `packages/electron`, includes `dist
 **`README.md`**  
 Purpose: product-level explanation, install/use guide, feature summary.  
 Responsibilities: communicate value prop and usage.  
-Key theme: stable local endpoint + routing control plane. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md?utm_source=chatgpt.com "claude-code-router/README.md at main"))
+Key theme: stable local endpoint + routing control plane. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md "claude-code-router/README.md at main"))
 
 **`blog/en/project-motivation-and-how-it-works.md`**  
 Purpose: design rationale and conceptual explanation.  
 Responsibility: explain why the project exists and how the routing model works.  
-I could not extract the body cleanly from GitHub’s UI in this session, so I am not inventing details from it. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/blog/en/project-motivation-and-how-it-works.md?utm_source=chatgpt.com "claude-code-router/blog/en/project-motivation-and-how-it- ..."))
+I could not extract the body cleanly from GitHub’s UI in this session, so I am not inventing details from it. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/blog/en/project-motivation-and-how-it-works.md "claude-code-router/blog/en/project-motivation-and-how-it- ..."))
 
 ## 8. Setup and Adoption
 
@@ -243,7 +243,7 @@ I could not extract the body cleanly from GitHub’s UI in this session, so I am
     
 - Likely native module support for `better-sqlite3`
     
-- Platform-specific packaging for macOS, Windows, Linux. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/package.json?utm_source=chatgpt.com "package.json - musistudio/claude-code-router"))
+- Platform-specific packaging for macOS, Windows, Linux. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/package.json "package.json - musistudio/claude-code-router"))
     
 
 **Deployment options**
@@ -254,11 +254,11 @@ I could not extract the body cleanly from GitHub’s UI in this session, so I am
     
 - Docker
     
-- Likely local service mode with a stable port. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/package.json?utm_source=chatgpt.com "package.json - musistudio/claude-code-router"))
+- Likely local service mode with a stable port. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/package.json "package.json - musistudio/claude-code-router"))
     
 
 **Infrastructure requirements**  
-Mostly local machine resources, plus external provider accounts and API keys. Not much server infra is required unless you wrap it into a team-managed deployment. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md?utm_source=chatgpt.com "claude-code-router/README.md at main"))
+Mostly local machine resources, plus external provider accounts and API keys. Not much server infra is required unless you wrap it into a team-managed deployment. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md "claude-code-router/README.md at main"))
 
 **Learning curve**  
 Moderate. The UX is probably friendly for experienced developers, but routing policies, provider compatibility, and local model behavior still require some operator judgment. This is not a “click next, go home” tool.
@@ -292,7 +292,7 @@ Moderate. The UX is probably friendly for experienced developers, but routing po
     
 - **Performance**: local routing should be low-latency relative to remote orchestration.
     
-- **Developer experience**: desktop + CLI + Docker is a solid ergonomics story. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md?utm_source=chatgpt.com "claude-code-router/README.md at main"))
+- **Developer experience**: desktop + CLI + Docker is a solid ergonomics story. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md "claude-code-router/README.md at main"))
     
 
 **Weaknesses**
@@ -344,7 +344,7 @@ The architecture is sensible, but the stack is broad and native packaging adds f
 - Cost: low upfront, high operational drag
     
 - Ecosystem: fragmented  
-    CCR wins on centralization. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md?utm_source=chatgpt.com "claude-code-router/README.md at main"))
+    CCR wins on centralization. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md "claude-code-router/README.md at main"))
     
 
 **OpenAI-compatible reverse proxies / gateways**
@@ -386,7 +386,7 @@ The architecture is sensible, but the stack is broad and native packaging adds f
 - Cost: high engineering cost
     
 - Ecosystem: bespoke  
-    CCR is the “buy before you build” version of this. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md?utm_source=chatgpt.com "claude-code-router/README.md at main"))
+    CCR is the “buy before you build” version of this. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md "claude-code-router/README.md at main"))
     
 
 ## 12. Engineering Takeaways
@@ -515,7 +515,7 @@ The architecture is sensible, but the stack is broad and native packaging adds f
 ## 14. Handoff Summary
 
 **One-page executive summary**  
-Claude Code Router is a local AI control plane for coding agents. It gives developers one stable endpoint and lets them route requests across multiple model providers, accounts, and policies without hand-configuring every tool. The repo shows a mature multi-surface product: CLI, desktop app, Docker support, tests, packaging, update verification, and local persistence. The strongest value proposition is control: cost control, provider flexibility, routing policy, and a cleaner developer experience. The biggest risk is that it becomes a critical trust boundary without enterprise-grade security and observability. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md?utm_source=chatgpt.com "claude-code-router/README.md at main"))
+Claude Code Router is a local AI control plane for coding agents. It gives developers one stable endpoint and lets them route requests across multiple model providers, accounts, and policies without hand-configuring every tool. The repo shows a mature multi-surface product: CLI, desktop app, Docker support, tests, packaging, update verification, and local persistence. The strongest value proposition is control: cost control, provider flexibility, routing policy, and a cleaner developer experience. The biggest risk is that it becomes a critical trust boundary without enterprise-grade security and observability. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md "claude-code-router/README.md at main"))
 
 **Key findings**
 
@@ -527,7 +527,7 @@ Claude Code Router is a local AI control plane for coding agents. It gives devel
     
 - Not obviously enterprise-hardened from the public surface.
     
-- Great platform component, not a turnkey enterprise platform. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md?utm_source=chatgpt.com "claude-code-router/README.md at main"))
+- Great platform component, not a turnkey enterprise platform. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md "claude-code-router/README.md at main"))
     
 
 **Recommended adoption scenarios**
@@ -564,7 +564,7 @@ Yes, as the AI access and routing layer for lakehouse copilots, SQL assistants, 
 Indirectly. It can route LLM agents that generate, explain, validate, or monitor ETL logic.
 
 **Can it be used for LLM, RAG, agents, or AI workflows?**  
-Absolutely. That is the center of gravity of the project. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md?utm_source=chatgpt.com "claude-code-router/README.md at main"))
+Absolutely. That is the center of gravity of the project. ([GitHub](https://github.com/musistudio/claude-code-router/blob/main/README.md "claude-code-router/README.md at main"))
 
 **Suggested enterprise architecture**
 

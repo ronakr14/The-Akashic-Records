@@ -60,7 +60,7 @@ The workflow is roughly:
     
 3. The playbook applies selected changes: privacy settings, optional security changes, UI defaults, removal of some unneeded components, and performance-related tweaks. ([GitHub](https://github.com/atlas-os/atlas "GitHub - Atlas-OS/Atlas:  An open and lightweight modification to Windows, designed to optimize performance, privacy and usability. · GitHub"))
     
-4. Supporting executables are invoked where needed. Their hashes and sources are documented in the repo for verification. ([GitHub](https://github.com/Atlas-OS/Atlas/blob/main/src/playbook/Executables/AtlasModules/README.md?utm_source=chatgpt.com "Atlas/src/playbook/Executables/AtlasModules/README.md ..."))
+4. Supporting executables are invoked where needed. Their hashes and sources are documented in the repo for verification. ([GitHub](https://github.com/Atlas-OS/Atlas/blob/main/src/playbook/Executables/AtlasModules/README.md "Atlas/src/playbook/Executables/AtlasModules/README.md ..."))
     
 
 Major moving parts:
@@ -188,7 +188,7 @@ Interactions: Pulls in external repo `Atlas-OS/sxsc`, relies on Windows runner, 
 **`src/playbook/Executables/AtlasModules/README.md`**  
 Purpose: Verifies bundled helper binaries.  
 Responsibilities: Lists SHA256 hashes, sources, versions, and verification dates for executables.  
-Interactions: Supports trust and auditability of the playbook. ([GitHub](https://github.com/Atlas-OS/Atlas/blob/main/src/playbook/Executables/AtlasModules/README.md?utm_source=chatgpt.com "Atlas/src/playbook/Executables/AtlasModules/README.md ..."))
+Interactions: Supports trust and auditability of the playbook. ([GitHub](https://github.com/Atlas-OS/Atlas/blob/main/src/playbook/Executables/AtlasModules/README.md "Atlas/src/playbook/Executables/AtlasModules/README.md ..."))
 
 **`src/`**  
 Purpose: Main implementation area.  
@@ -229,7 +229,7 @@ Operational considerations:
     
 - upgrades may require reinstall/reapplication,
     
-- antivirus or heuristic scanners may flag bundled tools. The repo and issue history show this is a real concern. ([GitHub](https://github.com/Atlas-OS/Atlas/issues/1675?utm_source=chatgpt.com "Microsoft Store error 0x80073CF9 prevents Gaming ..."))
+- antivirus or heuristic scanners may flag bundled tools. The repo and issue history show this is a real concern. ([GitHub](https://github.com/Atlas-OS/Atlas/issues/1675 "Microsoft Store error 0x80073CF9 prevents Gaming ..."))
     
 
 ## 9. Strengths and Weaknesses
@@ -249,13 +249,13 @@ Operational considerations:
 
 **Weaknesses**
 
-- **Risks**: OS-level modification can break features, updates, or assumptions. The issue tracker shows ongoing compatibility problems with Store, WSL, account settings, and other Windows components. ([GitHub](https://github.com/Atlas-OS/Atlas/issues/1675?utm_source=chatgpt.com "Microsoft Store error 0x80073CF9 prevents Gaming ..."))
+- **Risks**: OS-level modification can break features, updates, or assumptions. The issue tracker shows ongoing compatibility problems with Store, WSL, account settings, and other Windows components. ([GitHub](https://github.com/Atlas-OS/Atlas/issues/1675 "Microsoft Store error 0x80073CF9 prevents Gaming ..."))
     
 - **Limitations**: Privacy improvements do not extend beyond Windows into browsers or third-party apps. ([GitHub](https://github.com/atlas-os/atlas "GitHub - Atlas-OS/Atlas:  An open and lightweight modification to Windows, designed to optimize performance, privacy and usability. · GitHub"))
     
 - **Missing features**: Not a managed endpoint platform; no enterprise governance model is visible in the repo itself. ([GitHub](https://github.com/atlas-os/atlas "GitHub - Atlas-OS/Atlas:  An open and lightweight modification to Windows, designed to optimize performance, privacy and usability. · GitHub"))
     
-- **Technical debt indicators**: Support burden around version upgrades and Windows update compatibility suggests ongoing maintenance cost. ([GitHub](https://github.com/Atlas-OS/Atlas/releases?utm_source=chatgpt.com "Releases · Atlas-OS/Atlas"))
+- **Technical debt indicators**: Support burden around version upgrades and Windows update compatibility suggests ongoing maintenance cost. ([GitHub](https://github.com/Atlas-OS/Atlas/releases "Releases · Atlas-OS/Atlas"))
     
 
 ## 10. Enterprise Evaluation
@@ -343,7 +343,7 @@ Architectural lessons:
     
 - If you touch an OS, upgrade compatibility becomes the tax you pay forever.
     
-- Verification metadata is not decorative; it is trust infrastructure. ([GitHub](https://github.com/Atlas-OS/Atlas/blob/main/src/playbook/Executables/AtlasModules/README.md?utm_source=chatgpt.com "Atlas/src/playbook/Executables/AtlasModules/README.md ..."))
+- Verification metadata is not decorative; it is trust infrastructure. ([GitHub](https://github.com/Atlas-OS/Atlas/blob/main/src/playbook/Executables/AtlasModules/README.md "Atlas/src/playbook/Executables/AtlasModules/README.md ..."))
     
 
 Best practices worth adopting:
@@ -354,7 +354,7 @@ Best practices worth adopting:
     
 - document tradeoffs explicitly,
     
-- separate optional from mandatory changes. ([GitHub](https://github.com/Atlas-OS/Atlas/blob/main/src/playbook/Executables/AtlasModules/README.md?utm_source=chatgpt.com "Atlas/src/playbook/Executables/AtlasModules/README.md ..."))
+- separate optional from mandatory changes. ([GitHub](https://github.com/Atlas-OS/Atlas/blob/main/src/playbook/Executables/AtlasModules/README.md "Atlas/src/playbook/Executables/AtlasModules/README.md ..."))
     
 
 Anti-patterns:
@@ -363,7 +363,7 @@ Anti-patterns:
     
 - treating “disable everything” as a security strategy,
     
-- using OS modification in places where supportability matters more than optimization. ([GitHub](https://github.com/Atlas-OS/Atlas/issues/1675?utm_source=chatgpt.com "Microsoft Store error 0x80073CF9 prevents Gaming ..."))
+- using OS modification in places where supportability matters more than optimization. ([GitHub](https://github.com/Atlas-OS/Atlas/issues/1675 "Microsoft Store error 0x80073CF9 prevents Gaming ..."))
     
 
 ## 13. Interview Preparation

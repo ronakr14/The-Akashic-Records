@@ -94,7 +94,7 @@ Implementation complexity: **Medium**. ([GitHub](https://github.com/The-Swarm-Co
 Description: use the agents for thesis generation and market commentary without auto-execution.  
 Example scenario: a researcher asks for a structured view of oil-market sentiment and trend thesis.  
 Expected benefits: speed, repeatability, structured output.  
-Implementation complexity: **Low**. ([GitHub](https://github.com/The-Swarm-Corporation/AutoHedge/blob/main/example.py?utm_source=chatgpt.com "AutoHedge/example.py at main · The-Swarm-Corporation ..."))
+Implementation complexity: **Low**. ([GitHub](https://github.com/The-Swarm-Corporation/AutoHedge/blob/main/example.py "AutoHedge/example.py at main · The-Swarm-Corporation ..."))
 
 **3) Risk orchestration layer**  
 Description: use the risk agent as a sizing/checking gate in a broader trading system.  
@@ -146,16 +146,16 @@ Low-to-moderate relevance. The README uses enterprise language, but the repo evi
 The main product spec. It defines the value proposition, architecture, env vars, supported venues, and intended usage. In this repo, the README is doing a lot of the heavy lifting because the code surface is not fully visible from GitHub’s rendered tree. ([GitHub](https://github.com/The-Swarm-Corporation/AutoHedge "GitHub - The-Swarm-Corporation/AutoHedge: Build your autonomous hedge fund in minutes. AutoHedge harnesses the power of swarm intelligence and AI agents to automate market analysis, risk management, and trade execution. · GitHub"))
 
 **`example.py`**  
-The canonical usage sample. It shows the package can be instantiated with a name and description, then run with a task string. That implies a high-level abstraction over the trading pipeline. ([GitHub](https://github.com/The-Swarm-Corporation/AutoHedge/blob/main/example.py?utm_source=chatgpt.com "AutoHedge/example.py at main · The-Swarm-Corporation ..."))
+The canonical usage sample. It shows the package can be instantiated with a name and description, then run with a task string. That implies a high-level abstraction over the trading pipeline. ([GitHub](https://github.com/The-Swarm-Corporation/AutoHedge/blob/main/example.py "AutoHedge/example.py at main · The-Swarm-Corporation ..."))
 
 **`autohedge/`**  
-The actual implementation package. The repo tree shows it exists, but the browser rendering did not expose file contents cleanly, so the exact class and function inventory is not visible here. That is a documentation gap, not a guess I can safely fill in. ([GitHub](https://github.com/The-Swarm-Corporation/AutoHedge?utm_source=chatgpt.com "The-Swarm-Corporation/AutoHedge ..."))
+The actual implementation package. The repo tree shows it exists, but the browser rendering did not expose file contents cleanly, so the exact class and function inventory is not visible here. That is a documentation gap, not a guess I can safely fill in. ([GitHub](https://github.com/The-Swarm-Corporation/AutoHedge "The-Swarm-Corporation/AutoHedge ..."))
 
 **`experimental/`**  
 Likely a sandbox for unfinished or exploratory features. That usually means the project is still evolving and some ideas are not production-hardened. ([GitHub](https://github.com/The-Swarm-Corporation/AutoHedge "GitHub - The-Swarm-Corporation/AutoHedge: Build your autonomous hedge fund in minutes. AutoHedge harnesses the power of swarm intelligence and AI agents to automate market analysis, risk management, and trade execution. · GitHub"))
 
 **`logs/`**  
-Signals that runtime outputs and traces are expected to be retained locally, which aligns with the “enterprise logging” claim in the README. ([GitHub](https://github.com/The-Swarm-Corporation/AutoHedge?utm_source=chatgpt.com "The-Swarm-Corporation/AutoHedge ..."))
+Signals that runtime outputs and traces are expected to be retained locally, which aligns with the “enterprise logging” claim in the README. ([GitHub](https://github.com/The-Swarm-Corporation/AutoHedge "The-Swarm-Corporation/AutoHedge ..."))
 
 **`.env.example`**  
 Shows the system depends on external APIs and secret material such as Jupiter API key, OpenAI/Anthropic keys, workspace directory, and wallet private key. That is a big operational clue: this is not a pure offline library. ([GitHub](https://github.com/The-Swarm-Corporation/AutoHedge "GitHub - The-Swarm-Corporation/AutoHedge: Build your autonomous hedge fund in minutes. AutoHedge harnesses the power of swarm intelligence and AI agents to automate market analysis, risk management, and trade execution. · GitHub"))

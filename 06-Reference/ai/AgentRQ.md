@@ -34,7 +34,7 @@ From the docs and site, the major capabilities are:
 real-time task board, MCP integration, isolated workspaces, task replies/approvals, supervisor/workspace hierarchy, and “YOLO mode” as a product feature. Real-time updates are pushed via Server-Sent Events rather than polling. ([AgentRQ](https://agentrq.com/docs/ "Documentation | AgentRQ"))
 
 **Key technologies**  
-The Dockerfile and docs point to a Go backend, Vue 3 frontend, Vite build, and a mixed container build pipeline. The backend uses pure Go SQLite for static compilation, with a note in the Chinese docs that PostgreSQL is the recommended self-hosted production path. The docs also mention Fiber, GORM, JWT, OAuth2, Pub/Sub, SSE, Tailwind CSS, and Pinia. ([GitHub](https://github.com/agentrq/agentrq/blob/main/README.zh-CN.md?utm_source=chatgpt.com "agentrq/README.zh-CN.md at main"))
+The Dockerfile and docs point to a Go backend, Vue 3 frontend, Vite build, and a mixed container build pipeline. The backend uses pure Go SQLite for static compilation, with a note in the Chinese docs that PostgreSQL is the recommended self-hosted production path. The docs also mention Fiber, GORM, JWT, OAuth2, Pub/Sub, SSE, Tailwind CSS, and Pinia. ([GitHub](https://github.com/agentrq/agentrq/blob/main/README.zh-CN.md "agentrq/README.zh-CN.md at main"))
 
 **High-level architecture**  
 This is a classic web app split into frontend and backend, with an additional protocol layer for MCP-based agent integrations. The backend serves the API, realtime streams, and agent tooling; the frontend is the control plane UI; and the container builds everything into a statically linked binary plus prebuilt assets. ([GitHub](https://github.com/agentrq/agentrq/blob/main/Dockerfile "agentrq/Dockerfile at main · agentrq/agentrq · GitHub"))
@@ -135,17 +135,17 @@ Important details: Node build stage, Go build stage, static binary, non-root run
 **`backend/`**  
 Purpose: core server and protocol/runtime logic.  
 Responsibilities: API, MCP endpoints, auth, data access, streaming.  
-Notable signals: `internal`, `cmd`, `_config`, `_storage`. The repo also uses mocks for service layers, which suggests reasonably testable internal boundaries. ([GitHub](https://github.com/agentrq/agentrq/blob/main/Makefile?utm_source=chatgpt.com "agentrq/Makefile at main"))
+Notable signals: `internal`, `cmd`, `_config`, `_storage`. The repo also uses mocks for service layers, which suggests reasonably testable internal boundaries. ([GitHub](https://github.com/agentrq/agentrq/blob/main/Makefile "agentrq/Makefile at main"))
 
 **`frontend/`**  
 Purpose: control-plane UI.  
 Responsibilities: task board, workspace views, agent conversations, notifications.  
-Tech signal: built with Vite, likely Vue 3 + Pinia + Tailwind per docs. ([GitHub](https://github.com/agentrq/agentrq/blob/main/README.zh-CN.md?utm_source=chatgpt.com "agentrq/README.zh-CN.md at main"))
+Tech signal: built with Vite, likely Vue 3 + Pinia + Tailwind per docs. ([GitHub](https://github.com/agentrq/agentrq/blob/main/README.zh-CN.md "agentrq/README.zh-CN.md at main"))
 
 **`Makefile`**  
 Purpose: local dev workflow and convenience tasks.  
 Responsibilities: dev startup, install, stop, mocks generation.  
-Signal: the repo is intended to be hacked on locally, not only consumed as a deployed binary. ([GitHub](https://github.com/agentrq/agentrq/blob/main/Makefile?utm_source=chatgpt.com "agentrq/Makefile at main"))
+Signal: the repo is intended to be hacked on locally, not only consumed as a deployed binary. ([GitHub](https://github.com/agentrq/agentrq/blob/main/Makefile "agentrq/Makefile at main"))
 
 ## 8. Setup and Adoption
 
@@ -156,7 +156,7 @@ From the build pipeline, you need Node/npm for frontend work and Go for backend 
 Containerized deployment is the cleanest route. The final image is `scratch`, which is lean and operationally nice, but also means you need to manage config and dependencies carefully. ([GitHub](https://github.com/agentrq/agentrq/blob/main/Dockerfile "agentrq/Dockerfile at main · agentrq/agentrq · GitHub"))
 
 **Infrastructure requirements**  
-At minimum: a runtime host, persistent storage for state, and network access for agent integrations. The docs also suggest PostgreSQL for production self-hosting, while the Dockerfile shows SQLite support in the current code path. ([GitHub](https://github.com/agentrq/agentrq/blob/main/README.zh-CN.md?utm_source=chatgpt.com "agentrq/README.zh-CN.md at main"))
+At minimum: a runtime host, persistent storage for state, and network access for agent integrations. The docs also suggest PostgreSQL for production self-hosting, while the Dockerfile shows SQLite support in the current code path. ([GitHub](https://github.com/agentrq/agentrq/blob/main/README.zh-CN.md "agentrq/README.zh-CN.md at main"))
 
 **Learning curve**  
 Moderate. The product is conceptually simple, but MCP, workspace isolation, agent notifications, and self-hosting will not be “click next, next, done” for most teams.
@@ -182,7 +182,7 @@ Technical debt indicators: mixed backend/frontend packaging and product evolutio
 ## 10. Enterprise Evaluation
 
 **Production readiness: 6/10**  
-Reason: good architecture signals, but still beta-like and not heavily battle-tested in public. ([GitHub](https://github.com/agentrq/agentrq?utm_source=chatgpt.com "AgentRQ ── Agent-Human Collaboration Platform"))
+Reason: good architecture signals, but still beta-like and not heavily battle-tested in public. ([GitHub](https://github.com/agentrq/agentrq "AgentRQ ── Agent-Human Collaboration Platform"))
 
 **Security: 6/10**  
 Reason: non-root container and token-based access are positive, but I did not see evidence of enterprise-grade hardening, policy controls, or a mature security program in the public materials. ([GitHub](https://github.com/agentrq/agentrq/blob/main/Dockerfile "agentrq/Dockerfile at main · agentrq/agentrq · GitHub"))
@@ -200,7 +200,7 @@ Reason: docs are unusually clear for a repo of this type. The public docs explai
 Reason: the project appears active, but public community depth is still limited.
 
 **Maintainability: 7/10**  
-Reason: language split is reasonable, code packaging is disciplined, and mocks are generated systematically. ([GitHub](https://github.com/agentrq/agentrq/blob/main/Makefile?utm_source=chatgpt.com "agentrq/Makefile at main"))
+Reason: language split is reasonable, code packaging is disciplined, and mocks are generated systematically. ([GitHub](https://github.com/agentrq/agentrq/blob/main/Makefile "agentrq/Makefile at main"))
 
 ## 11. Comparison with Alternatives
 
@@ -211,10 +211,10 @@ Claude Code directly, Cursor/Codex/Gemini CLI plus a task tracker, Slack-based a
 AgentRQ is stronger on workflow control and human oversight. Direct agent tools are simpler, but they do not give you this kind of collaboration plane. ([AgentRQ](https://agentrq.com/docs/ "Documentation | AgentRQ"))
 
 **Compared with GitHub Issues/Projects**  
-GitHub is good at tracking work, but it is not built as an agent-native task loop with MCP tool access and live agent notifications. AgentRQ is more specialized. ([GitHub Docs](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes?utm_source=chatgpt.com "About the repository README file"))
+GitHub is good at tracking work, but it is not built as an agent-native task loop with MCP tool access and live agent notifications. AgentRQ is more specialized. ([GitHub Docs](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes "About the repository README file"))
 
 **Compared with orchestration frameworks**  
-Frameworks like LangGraph/CrewAI/AutoGen solve agent logic. AgentRQ solves the human-operational layer. That is a different layer in the stack, and honestly the more important one once people are involved. ([GitHub](https://github.com/ashishpatel26/500-AI-Agents-Projects?utm_source=chatgpt.com "500+ AI Agent Projects & Use Cases"))
+Frameworks like LangGraph/CrewAI/AutoGen solve agent logic. AgentRQ solves the human-operational layer. That is a different layer in the stack, and honestly the more important one once people are involved. ([GitHub](https://github.com/ashishpatel26/500-AI-Agents-Projects "500+ AI Agent Projects & Use Cases"))
 
 ## 12. Engineering Takeaways
 
@@ -307,7 +307,7 @@ Avoid letting agent task state live only in chat history. That is brittle, hard 
 AgentRQ is a human-in-the-loop control plane for AI agents. It is designed to make agent work governable, visible, and collaborative through workspaces, tasks, approvals, and real-time notifications. Its strongest differentiator is the MCP-based integration model, which makes it feel agent-native rather than bolted-on. The repo shows a disciplined full-stack architecture: Go backend, Vue frontend, statically built container, and real-time streaming. Public docs are clear and the product is easy to understand at a systems level. The downside is maturity: this looks like a strong beta, not a hardened enterprise platform yet. It is best viewed as an emerging operational layer for agent workflows, especially for teams experimenting with Claude Code, Gemini, Codex, or other MCP/ACP-compatible agents. ([AgentRQ](https://agentrq.com/docs/ "Documentation | AgentRQ"))
 
 **Key findings**  
-The repo is product-oriented, not library-oriented. Its architecture is sensible. The workflow story is coherent. The docs are better than average. Enterprise hardening is not yet obvious from public evidence. ([GitHub](https://github.com/agentrq/agentrq/blob/main/README.zh-CN.md?utm_source=chatgpt.com "agentrq/README.zh-CN.md at main"))
+The repo is product-oriented, not library-oriented. Its architecture is sensible. The workflow story is coherent. The docs are better than average. Enterprise hardening is not yet obvious from public evidence. ([GitHub](https://github.com/agentrq/agentrq/blob/main/README.zh-CN.md "agentrq/README.zh-CN.md at main"))
 
 **Recommended adoption scenarios**  
 Use it for agent supervision, approval gates, multi-agent coordination, and internal experimentation. Evaluate carefully for production governance use. Avoid treating it as a drop-in enterprise workflow manager without additional security, observability, and compliance work.

@@ -12,7 +12,7 @@ A practical guide describing legitimate ways to access the `__Secure-session` co
 ```table-of-contents
 ```
 
-If you're trying to get the `__Secure-session` cookie **for your own authenticated Ollama account**, there are several legitimate ways. If the cookie is marked `HttpOnly` (which session cookies usually are), it **cannot be read with JavaScript** (`document.cookie`) by design. ([MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/Security/Practical_implementation_guides/Cookies?utm_source=chatgpt.com "Secure cookie configuration - Security | MDN"))
+If you're trying to get the `__Secure-session` cookie **for your own authenticated Ollama account**, there are several legitimate ways. If the cookie is marked `HttpOnly` (which session cookies usually are), it **cannot be read with JavaScript** (`document.cookie`) by design. ([MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/Security/Practical_implementation_guides/Cookies "Secure cookie configuration - Security | MDN"))
 
 ### Option 1: Chrome DevTools (Recommended)
 
@@ -81,7 +81,7 @@ However:
 
 - Modern Chrome encrypts cookie values using OS-backed encryption.
     
-- You cannot simply read the SQLite database to obtain the plaintext value without using Chrome or OS decryption APIs. ([MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie?utm_source=chatgpt.com "Set-Cookie header - HTTP | MDN"))
+- You cannot simply read the SQLite database to obtain the plaintext value without using Chrome or OS decryption APIs. ([MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie "Set-Cookie header - HTTP | MDN"))
     
 
 ---
@@ -152,7 +152,7 @@ This will likely return nothing:
 document.cookie
 ```
 
-because `__Secure-session` is almost certainly set with the `HttpOnly` attribute, preventing access from JavaScript to protect against XSS attacks. ([MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/Security/Practical_implementation_guides/Cookies?utm_source=chatgpt.com "Secure cookie configuration - Security | MDN"))
+because `__Secure-session` is almost certainly set with the `HttpOnly` attribute, preventing access from JavaScript to protect against XSS attacks. ([MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/Security/Practical_implementation_guides/Cookies "Secure cookie configuration - Security | MDN"))
 
 ---
 

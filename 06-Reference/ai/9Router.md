@@ -22,7 +22,7 @@ It addresses the annoying real-world mess of working with many AI tools and prov
 Engineering teams, AI engineers, developers using CLI coding agents, and power users running tools like Claude Code, Codex, Cursor, Cline, Copilot, OpenClaw, and similar clients. The docs explicitly call out these clients and show direct setup instructions for them. ([GitHub](https://github.com/decolua/9router "GitHub - decolua/9router: Unlimited FREE AI coding. Connect Claude Code, Codex, Cursor, Cline, Copilot, Antigravity to FREE Claude/GPT/Gemini via 40+ providers. Auto-fallback, RTK -40% tokens, never hit limits. · GitHub"))
 
 **Maturity level:**  
-This is **beyond prototype** and looks like a **fast-moving production-grade community project**, but not something I would call enterprise-ready out of the box. The repo has a large README, architecture documentation, Docker support, a substantial issue tracker, and many recent releases, but also a lot of active issue churn and feature-request traffic, which usually means the platform is useful and real, but still evolving quickly. ([GitHub](https://github.com/decolua/9router/releases?utm_source=chatgpt.com "Releases · decolua/9router"))
+This is **beyond prototype** and looks like a **fast-moving production-grade community project**, but not something I would call enterprise-ready out of the box. The repo has a large README, architecture documentation, Docker support, a substantial issue tracker, and many recent releases, but also a lot of active issue churn and feature-request traffic, which usually means the platform is useful and real, but still evolving quickly. ([GitHub](https://github.com/decolua/9router/releases "Releases · decolua/9router"))
 
 ---
 
@@ -325,7 +325,7 @@ Moderate. The endpoint is simple, but provider setup, model mapping, combo routi
 - validate fallback paths
     
 - don’t assume “connected” means “usable in every endpoint.”  
-    The issue tracker shows real-world edge cases around model visibility and provider behavior. ([GitHub](https://github.com/decolua/9router/issues/1553?utm_source=chatgpt.com "v1/models misses models from noAuth providers (e.g. opencode)"))
+    The issue tracker shows real-world edge cases around model visibility and provider behavior. ([GitHub](https://github.com/decolua/9router/issues/1553 "v1/models misses models from noAuth providers (e.g. opencode)"))
     
 
 ---
@@ -347,13 +347,13 @@ Moderate. The endpoint is simple, but provider setup, model mapping, combo routi
 
 **Weaknesses**
 
-- **Risks:** Heavy dependence on third-party provider behavior and auth flows. ([GitHub](https://github.com/decolua/9router/issues/1156?utm_source=chatgpt.com "Cannot Test Deepseek Models #1156 - decolua/9router"))
+- **Risks:** Heavy dependence on third-party provider behavior and auth flows. ([GitHub](https://github.com/decolua/9router/issues/1156 "Cannot Test Deepseek Models #1156 - decolua/9router"))
     
-- **Limitations:** No-auth providers and model listing behavior can be inconsistent; this is visible in issue reports. ([GitHub](https://github.com/decolua/9router/issues/1553?utm_source=chatgpt.com "v1/models misses models from noAuth providers (e.g. opencode)"))
+- **Limitations:** No-auth providers and model listing behavior can be inconsistent; this is visible in issue reports. ([GitHub](https://github.com/decolua/9router/issues/1553 "v1/models misses models from noAuth providers (e.g. opencode)"))
     
 - **Missing features:** Enterprise governance, policy engine, formal SSO story, and hardened observability are not obvious from the public docs.
     
-- **Technical debt indicators:** Fast release cadence plus many active issues and user-reported edge cases suggest a living system with some rough edges. ([GitHub](https://github.com/decolua/9router/releases?utm_source=chatgpt.com "Releases · decolua/9router"))
+- **Technical debt indicators:** Fast release cadence plus many active issues and user-reported edge cases suggest a living system with some rough edges. ([GitHub](https://github.com/decolua/9router/releases "Releases · decolua/9router"))
     
 
 ---
@@ -391,7 +391,7 @@ Moderate. The endpoint is simple, but provider setup, model mapping, combo routi
     
 - **Complexity:** Higher than a thin proxy, lower than stitching together many vendor SDKs manually.
     
-- **Performance:** Probably good enough for CLI workflows, but each translation/fallback layer adds overhead. The issue tracker shows users noticing latency in some paths. ([GitHub](https://github.com/decolua/9router/issues/1440?utm_source=chatgpt.com "Slow responding with codex when using 9router #1440"))
+- **Performance:** Probably good enough for CLI workflows, but each translation/fallback layer adds overhead. The issue tracker shows users noticing latency in some paths. ([GitHub](https://github.com/decolua/9router/issues/1440 "Slow responding with codex when using 9router #1440"))
     
 - **Cost:** Strong selling point. It is explicitly designed to reduce spend through compression and free-first routing. ([GitHub](https://github.com/decolua/9router/blob/master/README.md "9router/README.md at master · decolua/9router · GitHub"))
     
@@ -439,7 +439,7 @@ Moderate. The endpoint is simple, but provider setup, model mapping, combo routi
     
 - Don’t use routing complexity as an excuse for weak observability.
     
-- Don’t let the provider zoo become untestable sprawl. ([GitHub](https://github.com/decolua/9router/issues/1553?utm_source=chatgpt.com "v1/models misses models from noAuth providers (e.g. opencode)"))
+- Don’t let the provider zoo become untestable sprawl. ([GitHub](https://github.com/decolua/9router/issues/1553 "v1/models misses models from noAuth providers (e.g. opencode)"))
     
 
 ---

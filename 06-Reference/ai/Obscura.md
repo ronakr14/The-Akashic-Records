@@ -11,7 +11,7 @@ Obscura is a high-performance Rust-based headless browser engine designed for AI
 
 Below is a deep, code-grounded analysis of **h4ckf0r0day/obscura**.
 
-This is an aggressive, performance-oriented headless browser engine in Rust for AI agents and web scraping. The repo positions itself as a drop-in replacement for headless Chrome via CDP, Puppeteer, and Playwright compatibility, with a strong emphasis on speed, lower memory usage, and stealth/anti-detection features. The repository is large and active, with 308 commits and a multi-crate Rust workspace. ([GitHub](https://github.com/h4ckf0r0day/obscura?utm_source=chatgpt.com "h4ckf0r0day/obscura: The headless browser for AI agents ..."))
+This is an aggressive, performance-oriented headless browser engine in Rust for AI agents and web scraping. The repo positions itself as a drop-in replacement for headless Chrome via CDP, Puppeteer, and Playwright compatibility, with a strong emphasis on speed, lower memory usage, and stealth/anti-detection features. The repository is large and active, with 308 commits and a multi-crate Rust workspace. ([GitHub](https://github.com/h4ckf0r0day/obscura "h4ckf0r0day/obscura: The headless browser for AI agents ..."))
 
 ## 1. Executive Summary
 
@@ -25,7 +25,7 @@ It replaces the usual “spin up Chrome for every task” pattern with something
 Primary users are AI engineers, scraping engineers, browser automation developers, and security/recon practitioners who need browser automation at scale. The repo also supports Puppeteer/Playwright users, so it can serve teams already invested in those ecosystems. ([GitHub](https://github.com/h4ckf0r0day/obscura "GitHub - h4ckf0r0day/obscura: The headless browser for AI agents and web scraping · GitHub"))
 
 **Maturity level**  
-This looks like a **serious, production-leaning open-source project**, but not “enterprise-ready” in the conservative sense. It has releases, Docker support, docs, a wiki, security guidance, and explicit compatibility surfaces. At the same time, it is opinionated, young, and optimized for a niche. I would rate it as **advanced prototype / early production** rather than fully battle-hardened enterprise infrastructure. ([GitHub](https://github.com/h4ckf0r0day/obscura/releases?utm_source=chatgpt.com "Releases · h4ckf0r0day/obscura"))
+This looks like a **serious, production-leaning open-source project**, but not “enterprise-ready” in the conservative sense. It has releases, Docker support, docs, a wiki, security guidance, and explicit compatibility surfaces. At the same time, it is opinionated, young, and optimized for a niche. I would rate it as **advanced prototype / early production** rather than fully battle-hardened enterprise infrastructure. ([GitHub](https://github.com/h4ckf0r0day/obscura/releases "Releases · h4ckf0r0day/obscura"))
 
 ## 2. Repository Overview
 
@@ -66,10 +66,10 @@ The project is primarily **Rust**, organized as a Cargo workspace with crates su
     
 - `obscura-mcp`
     
-- `obscura-cli` ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/Cargo.toml?utm_source=chatgpt.com "Cargo.toml - h4ckf0r0day/obscura"))
+- `obscura-cli` ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/Cargo.toml "Cargo.toml - h4ckf0r0day/obscura"))
     
 
-Key dependencies in `Cargo.toml` include `tokio`, `tokio-tungstenite`, `reqwest`, `serde`, `clap`, `tracing`, `url`, `uuid`, and `thiserror`, plus DOM-related crates such as `html5ever`, `markup5ever`, `selectors`, `servo_arc`, and `cssparser`. The repo also uses V8 through `deno_core` per AGENTS guidance. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/Cargo.toml?utm_source=chatgpt.com "Cargo.toml - h4ckf0r0day/obscura"))
+Key dependencies in `Cargo.toml` include `tokio`, `tokio-tungstenite`, `reqwest`, `serde`, `clap`, `tracing`, `url`, `uuid`, and `thiserror`, plus DOM-related crates such as `html5ever`, `markup5ever`, `selectors`, `servo_arc`, and `cssparser`. The repo also uses V8 through `deno_core` per AGENTS guidance. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/Cargo.toml "Cargo.toml - h4ckf0r0day/obscura"))
 
 **High-level architecture inferred**  
 The architecture is modular and layered:
@@ -84,7 +84,7 @@ The architecture is modular and layered:
     
 5. **CDP layer** translating browser state into Chrome DevTools Protocol.
     
-6. **Agent layer** exposing browser actions via MCP. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/AGENTS.md?utm_source=chatgpt.com "AGENTS.md - h4ckf0r0day/obscura"))
+6. **Agent layer** exposing browser actions via MCP. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/AGENTS.md "AGENTS.md - h4ckf0r0day/obscura"))
     
 
 ## 3. How It Works
@@ -106,7 +106,7 @@ A request comes in through CLI, CDP, or MCP. Obscura loads the page using its ne
     
 - `obscura-net`: HTTP client, proxy support, cookie jar, robots cache, tracker blocklist.
     
-- `obscura-mcp`: agent-friendly browser tools. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/AGENTS.md?utm_source=chatgpt.com "AGENTS.md - h4ckf0r0day/obscura"))
+- `obscura-mcp`: agent-friendly browser tools. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/AGENTS.md "AGENTS.md - h4ckf0r0day/obscura"))
     
 
 **Data flow / execution flow**  
@@ -122,7 +122,7 @@ A typical navigation seems to work like this:
     
 5. Page state updates with dynamic content, cookies, network events, and DOM mutations.
     
-6. Output is returned as HTML/text/markdown/links/assets, or exposed through CDP for client-side scripting. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/AGENTS.md?utm_source=chatgpt.com "AGENTS.md - h4ckf0r0day/obscura"))
+6. Output is returned as HTML/text/markdown/links/assets, or exposed through CDP for client-side scripting. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/AGENTS.md "AGENTS.md - h4ckf0r0day/obscura"))
     
 
 **Integrations and dependencies**
@@ -211,7 +211,7 @@ Complexity: Medium. ([GitHub](https://github.com/h4ckf0r0day/obscura "GitHub - h
 Description: Use MCP tools or a custom integration to expose browser actions to an agent.  
 Example: Claude Code or another agent drives the browser natively.  
 Benefits: Better automation ergonomics, less bespoke code.  
-Complexity: Medium. ([GitHub](https://github.com/h4ckf0r0day/obscura/releases?utm_source=chatgpt.com "Releases · h4ckf0r0day/obscura"))
+Complexity: Medium. ([GitHub](https://github.com/h4ckf0r0day/obscura/releases "Releases · h4ckf0r0day/obscura"))
 
 ## 6. Where It Can Be Used
 
@@ -234,7 +234,7 @@ Interesting as a standardized browser service in an internal platform. CDP serve
 Suitable for containerized workloads and scalable scraping services. Proxy handling and worker parallelism matter here. ([GitHub](https://github.com/h4ckf0r0day/obscura "GitHub - h4ckf0r0day/obscura: The headless browser for AI agents and web scraping · GitHub"))
 
 **Security**  
-Very relevant for web recon, OSINT, and anti-bot research. The repo’s stealth mode and browser-fidelity work are directly security-adjacent. ([GitHub](https://github.com/h4ckf0r0day?utm_source=chatgpt.com "h4ckf0r0day"))
+Very relevant for web recon, OSINT, and anti-bot research. The repo’s stealth mode and browser-fidelity work are directly security-adjacent. ([GitHub](https://github.com/h4ckf0r0day "h4ckf0r0day"))
 
 **FinOps**  
 Potentially useful because lower memory and faster startup can reduce compute spend versus full browser fleets. The financial case is one of the strongest arguments for this project. ([GitHub](https://github.com/h4ckf0r0day/obscura "GitHub - h4ckf0r0day/obscura: The headless browser for AI agents and web scraping · GitHub"))
@@ -243,42 +243,42 @@ Potentially useful because lower memory and faster startup can reduce compute sp
 Good for internal automation, QA, and product data extraction, especially where websites have complex client-side rendering. ([GitHub](https://github.com/h4ckf0r0day/obscura "GitHub - h4ckf0r0day/obscura: The headless browser for AI agents and web scraping · GitHub"))
 
 **Enterprise Applications**  
-Possible, but with caution. You would need hardening around observability, auth, policies, governance, and supportability before using it as a core enterprise component. ([GitHub](https://github.com/h4ckf0r0day/obscura/wiki/Testing-and-debugging?utm_source=chatgpt.com "Testing and debugging · h4ckf0r0day/obscura Wiki"))
+Possible, but with caution. You would need hardening around observability, auth, policies, governance, and supportability before using it as a core enterprise component. ([GitHub](https://github.com/h4ckf0r0day/obscura/wiki/Testing-and-debugging "Testing and debugging · h4ckf0r0day/obscura Wiki"))
 
 ## 7. Key Components Analysis
 
 **`Cargo.toml`**  
-Defines the Rust workspace and shared dependencies. It shows the project is split into reusable crates and uses `panic = "unwind"` to support anti-panic behavior. That is a strong sign of deliberate runtime engineering. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/Cargo.toml?utm_source=chatgpt.com "Cargo.toml - h4ckf0r0day/obscura"))
+Defines the Rust workspace and shared dependencies. It shows the project is split into reusable crates and uses `panic = "unwind"` to support anti-panic behavior. That is a strong sign of deliberate runtime engineering. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/Cargo.toml "Cargo.toml - h4ckf0r0day/obscura"))
 
 **`AGENTS.md`**  
-A goldmine. It documents the architecture, build strategy, testing strategy, and crate responsibilities. It also explains why `cargo nextest` is required and why V8 build/test behavior is special. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/AGENTS.md?utm_source=chatgpt.com "AGENTS.md - h4ckf0r0day/obscura"))
+A goldmine. It documents the architecture, build strategy, testing strategy, and crate responsibilities. It also explains why `cargo nextest` is required and why V8 build/test behavior is special. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/AGENTS.md "AGENTS.md - h4ckf0r0day/obscura"))
 
 **`Dockerfile`**  
-Shows a multi-stage build, stub-manifest caching trick, and a distroless runtime image. That is a mature packaging pattern and indicates deployment seriousness. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/Dockerfile?utm_source=chatgpt.com "Dockerfile - h4ckf0r0day/obscura"))
+Shows a multi-stage build, stub-manifest caching trick, and a distroless runtime image. That is a mature packaging pattern and indicates deployment seriousness. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/Dockerfile "Dockerfile - h4ckf0r0day/obscura"))
 
 **`README.md`**  
 Defines the product narrative, install paths, quick-start, integration examples, benchmarks, stealth mode, and CDP API surface. It is unusually detailed for an open-source repo of this kind. ([GitHub](https://github.com/h4ckf0r0day/obscura "GitHub - h4ckf0r0day/obscura: The headless browser for AI agents and web scraping · GitHub"))
 
 **`crates/obscura-cli`**  
-The user-facing command layer for `fetch`, `serve`, `scrape`, and `mcp`. This is where operational control is likely concentrated. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/AGENTS.md?utm_source=chatgpt.com "AGENTS.md - h4ckf0r0day/obscura"))
+The user-facing command layer for `fetch`, `serve`, `scrape`, and `mcp`. This is where operational control is likely concentrated. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/AGENTS.md "AGENTS.md - h4ckf0r0day/obscura"))
 
 **`crates/obscura-cdp`**  
 Implements CDP transport and browser protocol compatibility. This is what makes Playwright/Puppeteer interop possible. ([GitHub](https://github.com/h4ckf0r0day/obscura "GitHub - h4ckf0r0day/obscura: The headless browser for AI agents and web scraping · GitHub"))
 
 **`crates/obscura-js`**  
-Owns the runtime and JS bridge. The AGENTS file explicitly says it contains `js/bootstrap.js`, `src/ops.rs`, and `src/runtime.rs`. That is the nerve center for browser behavior. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/AGENTS.md?utm_source=chatgpt.com "AGENTS.md - h4ckf0r0day/obscura"))
+Owns the runtime and JS bridge. The AGENTS file explicitly says it contains `js/bootstrap.js`, `src/ops.rs`, and `src/runtime.rs`. That is the nerve center for browser behavior. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/AGENTS.md "AGENTS.md - h4ckf0r0day/obscura"))
 
 **`crates/obscura-dom`**  
-DOM tree implementation. This is likely responsible for parsing, tree mutation, and query APIs. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/AGENTS.md?utm_source=chatgpt.com "AGENTS.md - h4ckf0r0day/obscura"))
+DOM tree implementation. This is likely responsible for parsing, tree mutation, and query APIs. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/AGENTS.md "AGENTS.md - h4ckf0r0day/obscura"))
 
 **`crates/obscura-net`**  
-Handles HTTP, cookies, proxying, robots, and tracker blocking. This is the network trust boundary and one of the highest-risk areas. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/AGENTS.md?utm_source=chatgpt.com "AGENTS.md - h4ckf0r0day/obscura"))
+Handles HTTP, cookies, proxying, robots, and tracker blocking. This is the network trust boundary and one of the highest-risk areas. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/AGENTS.md "AGENTS.md - h4ckf0r0day/obscura"))
 
 **`crates/obscura-browser`**  
-The page abstraction and navigation orchestration. Likely coordinates the other layers into a usable browser object. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/AGENTS.md?utm_source=chatgpt.com "AGENTS.md - h4ckf0r0day/obscura"))
+The page abstraction and navigation orchestration. Likely coordinates the other layers into a usable browser object. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/AGENTS.md "AGENTS.md - h4ckf0r0day/obscura"))
 
 **`crates/obscura-mcp`**  
-Exposes browser actions to AI agents over Model Context Protocol. This is the bridge from browser engine to agent workflow. ([GitHub](https://github.com/h4ckf0r0day/obscura/releases?utm_source=chatgpt.com "Releases · h4ckf0r0day/obscura"))
+Exposes browser actions to AI agents over Model Context Protocol. This is the bridge from browser engine to agent workflow. ([GitHub](https://github.com/h4ckf0r0day/obscura/releases "Releases · h4ckf0r0day/obscura"))
 
 ## 8. Setup and Adoption
 
@@ -329,7 +329,7 @@ Moderate. CLI use is easy; deep adoption requires understanding CDP, browser lif
     
 - Re-test stealth mode separately.
     
-- Expect V8 build overhead and platform-specific quirks. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/AGENTS.md?utm_source=chatgpt.com "AGENTS.md - h4ckf0r0day/obscura"))
+- Expect V8 build overhead and platform-specific quirks. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/AGENTS.md "AGENTS.md - h4ckf0r0day/obscura"))
     
 
 ## 9. Strengths and Weaknesses
@@ -338,9 +338,9 @@ Moderate. CLI use is easy; deep adoption requires understanding CDP, browser lif
 
 - **Scalability:** Built for concurrency and batch scraping. ([GitHub](https://github.com/h4ckf0r0day/obscura "GitHub - h4ckf0r0day/obscura: The headless browser for AI agents and web scraping · GitHub"))
     
-- **Maintainability:** Clean workspace decomposition into focused crates. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/Cargo.toml?utm_source=chatgpt.com "Cargo.toml - h4ckf0r0day/obscura"))
+- **Maintainability:** Clean workspace decomposition into focused crates. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/Cargo.toml "Cargo.toml - h4ckf0r0day/obscura"))
     
-- **Extensibility:** CDP, MCP, and modular crates make extension plausible. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/AGENTS.md?utm_source=chatgpt.com "AGENTS.md - h4ckf0r0day/obscura"))
+- **Extensibility:** CDP, MCP, and modular crates make extension plausible. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/AGENTS.md "AGENTS.md - h4ckf0r0day/obscura"))
     
 - **Performance:** Strong emphasis on memory, startup, and page-load speed. ([GitHub](https://github.com/h4ckf0r0day/obscura "GitHub - h4ckf0r0day/obscura: The headless browser for AI agents and web scraping · GitHub"))
     
@@ -355,13 +355,13 @@ Moderate. CLI use is easy; deep adoption requires understanding CDP, browser lif
     
 - **Missing features:** Enterprise controls like auth, policy management, tenant isolation, audit logging, and hosted observability are not obvious from the repo. ([GitHub](https://github.com/h4ckf0r0day/obscura "GitHub - h4ckf0r0day/obscura: The headless browser for AI agents and web scraping · GitHub"))
     
-- **Technical debt indicators:** Heavy reliance on deep runtime engineering and V8 integration means bugs can be subtle and costly. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/AGENTS.md?utm_source=chatgpt.com "AGENTS.md - h4ckf0r0day/obscura"))
+- **Technical debt indicators:** Heavy reliance on deep runtime engineering and V8 integration means bugs can be subtle and costly. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/AGENTS.md "AGENTS.md - h4ckf0r0day/obscura"))
     
 
 ## 10. Enterprise Evaluation
 
 **Production readiness: 7/10**  
-Solid packaging, docs, releases, Docker, and protocol support. Still young and specialized. ([GitHub](https://github.com/h4ckf0r0day/obscura/releases?utm_source=chatgpt.com "Releases · h4ckf0r0day/obscura"))
+Solid packaging, docs, releases, Docker, and protocol support. Still young and specialized. ([GitHub](https://github.com/h4ckf0r0day/obscura/releases "Releases · h4ckf0r0day/obscura"))
 
 **Security: 5/10**  
 There is a SECURITY.md and stealth work, but enterprise security is more than anti-detection. I do not see enough evidence of hard governance controls. ([GitHub](https://github.com/h4ckf0r0day/obscura "GitHub - h4ckf0r0day/obscura: The headless browser for AI agents and web scraping · GitHub"))
@@ -370,16 +370,16 @@ There is a SECURITY.md and stealth work, but enterprise security is more than an
 Parallel scrape, low memory, fast startup, and worker architecture point in the right direction. ([GitHub](https://github.com/h4ckf0r0day/obscura "GitHub - h4ckf0r0day/obscura: The headless browser for AI agents and web scraping · GitHub"))
 
 **Observability: 5/10**  
-There is tracing support and debugging guidance, but enterprise-grade metrics/logging/telemetry are not clearly first-class from the public materials. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/Cargo.toml?utm_source=chatgpt.com "Cargo.toml - h4ckf0r0day/obscura"))
+There is tracing support and debugging guidance, but enterprise-grade metrics/logging/telemetry are not clearly first-class from the public materials. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/Cargo.toml "Cargo.toml - h4ckf0r0day/obscura"))
 
 **Documentation quality: 8/10**  
-README, AGENTS, wiki, release notes, and examples are strong. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/AGENTS.md?utm_source=chatgpt.com "AGENTS.md - h4ckf0r0day/obscura"))
+README, AGENTS, wiki, release notes, and examples are strong. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/AGENTS.md "AGENTS.md - h4ckf0r0day/obscura"))
 
 **Community support: 6/10**  
 Good star/fork traction and active releases, but community depth is still limited compared with Chrome-based ecosystems. ([GitHub](https://github.com/h4ckf0r0day/obscura "GitHub - h4ckf0r0day/obscura: The headless browser for AI agents and web scraping · GitHub"))
 
 **Maintainability: 7/10**  
-Modular Rust workspace is a good sign, but browser engines are inherently hard to maintain. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/Cargo.toml?utm_source=chatgpt.com "Cargo.toml - h4ckf0r0day/obscura"))
+Modular Rust workspace is a good sign, but browser engines are inherently hard to maintain. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/Cargo.toml "Cargo.toml - h4ckf0r0day/obscura"))
 
 ## 11. Comparison with Alternatives
 
@@ -422,7 +422,7 @@ Modular Rust workspace is a good sign, but browser engines are inherently hard t
 - **Cost:** Browser-dependent.
     
 - **Ecosystem:** Smaller.  
-    Obscura can be attractive when you want the Rust ergonomics without paying the Chrome tax. ([GitHub](https://github.com/h4ckf0r0day/obscura/releases?utm_source=chatgpt.com "Releases · h4ckf0r0day/obscura"))
+    Obscura can be attractive when you want the Rust ergonomics without paying the Chrome tax. ([GitHub](https://github.com/h4ckf0r0day/obscura/releases "Releases · h4ckf0r0day/obscura"))
     
 
 **Custom scraping stacks**
@@ -449,7 +449,7 @@ Modular Rust workspace is a good sign, but browser engines are inherently hard t
     
 - Distinct runtime/network/DOM separation.
     
-- Multi-stage container build with distroless runtime. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/Cargo.toml?utm_source=chatgpt.com "Cargo.toml - h4ckf0r0day/obscura"))
+- Multi-stage container build with distroless runtime. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/Cargo.toml "Cargo.toml - h4ckf0r0day/obscura"))
     
 
 **Architectural lessons**
@@ -458,7 +458,7 @@ Modular Rust workspace is a good sign, but browser engines are inherently hard t
     
 - Don’t let test strategy follow the default tooling blindly; the repo explicitly avoids `cargo test` for runtime tests.
     
-- A browser engine needs coherence across JS, network, and fingerprint surfaces, not isolated hacks. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/AGENTS.md?utm_source=chatgpt.com "AGENTS.md - h4ckf0r0day/obscura"))
+- A browser engine needs coherence across JS, network, and fingerprint surfaces, not isolated hacks. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/AGENTS.md "AGENTS.md - h4ckf0r0day/obscura"))
     
 
 **Best practices worth adopting**
@@ -469,7 +469,7 @@ Modular Rust workspace is a good sign, but browser engines are inherently hard t
     
 - Strong docs for edge cases and test/debug workflows.
     
-- Feature flags for stealth behavior. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/Dockerfile?utm_source=chatgpt.com "Dockerfile - h4ckf0r0day/obscura"))
+- Feature flags for stealth behavior. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/Dockerfile "Dockerfile - h4ckf0r0day/obscura"))
     
 
 **Anti-patterns**
@@ -478,7 +478,7 @@ Modular Rust workspace is a good sign, but browser engines are inherently hard t
     
 - Treating stealth as “done forever.” It is a moving target.
     
-- Mixing test styles that do not match runtime constraints. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/AGENTS.md?utm_source=chatgpt.com "AGENTS.md - h4ckf0r0day/obscura"))
+- Mixing test styles that do not match runtime constraints. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/AGENTS.md "AGENTS.md - h4ckf0r0day/obscura"))
     
 
 ## 13. Interview Preparation
@@ -567,7 +567,7 @@ Obscura is a Rust-based headless browser engine designed for AI agents and scrap
     
 - Great fit for scraping and AI-agent browser tasks.
     
-- Not a broad enterprise browser platform out of the box. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/AGENTS.md?utm_source=chatgpt.com "AGENTS.md - h4ckf0r0day/obscura"))
+- Not a broad enterprise browser platform out of the box. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/AGENTS.md "AGENTS.md - h4ckf0r0day/obscura"))
     
 
 **Recommended adoption scenarios**
@@ -602,7 +602,7 @@ Yes. Obscura can feed Bronze-layer ingestion from rendered web pages into downst
 Yes, for dynamic websites and authenticated sources. It reduces the need for brittle Selenium/Chrome stacks and can make source acquisition more stable. ([GitHub](https://github.com/h4ckf0r0day/obscura "GitHub - h4ckf0r0day/obscura: The headless browser for AI agents and web scraping · GitHub"))
 
 **Can it be used for LLM, RAG, agents, or AI workflows?**  
-Absolutely. That is one of its main selling points. The MCP server and CDP compatibility make it a natural browser tool for agents. ([GitHub](https://github.com/h4ckf0r0day/obscura/releases?utm_source=chatgpt.com "Releases · h4ckf0r0day/obscura"))
+Absolutely. That is one of its main selling points. The MCP server and CDP compatibility make it a natural browser tool for agents. ([GitHub](https://github.com/h4ckf0r0day/obscura/releases "Releases · h4ckf0r0day/obscura"))
 
 **Suggested enterprise architecture incorporating this project**  
 A practical design would be:
@@ -618,7 +618,7 @@ A practical design would be:
 - **Governance layer**: Secrets, proxy policy, audit logs, quotas, and per-job isolation.
     
 - **Observability layer**: Metrics on success rate, block rate, latency, and page-class failures.  
-    That is the shape I would use if I had to operationalize this in a serious environment. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/AGENTS.md?utm_source=chatgpt.com "AGENTS.md - h4ckf0r0day/obscura"))
+    That is the shape I would use if I had to operationalize this in a serious environment. ([GitHub](https://github.com/h4ckf0r0day/obscura/blob/main/AGENTS.md "AGENTS.md - h4ckf0r0day/obscura"))
     
 
 If you want, I can turn this into a polished **PDF report** or a **slide deck** with executive-friendly formatting.

@@ -31,7 +31,7 @@ It is aimed at developers and platform teams building:
     
 - SQLite-compatible systems that need more advanced capabilities,
     
-- teams that want a modern database core with multiple access patterns and language bindings. ([Turso](https://turso.tech/what-is-turso?utm_source=chatgpt.com "The SQLite-compatible database for the agentic era"))
+- teams that want a modern database core with multiple access patterns and language bindings. ([Turso](https://turso.tech/what-is-turso "The SQLite-compatible database for the agentic era"))
     
 
 **Maturity level**  
@@ -144,7 +144,7 @@ The project integrates with:
 ## 4. Why This Project Exists
 
 **Business problem**  
-Traditional databases force a tradeoff between operational convenience, performance, and deployment footprint. Turso’s value proposition is: put the database **inside** the app or near the edge, but keep it compatible enough to feel familiar. That is a strong answer for AI apps, mobile, browser, edge, and multi-tenant systems. ([Turso](https://turso.tech/what-is-turso?utm_source=chatgpt.com "The SQLite-compatible database for the agentic era"))
+Traditional databases force a tradeoff between operational convenience, performance, and deployment footprint. Turso’s value proposition is: put the database **inside** the app or near the edge, but keep it compatible enough to feel familiar. That is a strong answer for AI apps, mobile, browser, edge, and multi-tenant systems. ([Turso](https://turso.tech/what-is-turso "The SQLite-compatible database for the agentic era"))
 
 **Technical challenges it solves**
 
@@ -181,19 +181,19 @@ The big differentiator is the **database-as-VM** model. That is not garden-varie
 Use it as the on-device database for desktop, mobile, or browser-adjacent apps.  
 Example: a notes app that must work offline and sync later.  
 Benefits: low latency, offline-ready, simple deployment.  
-Complexity: **Medium**. ([Turso](https://turso.tech/what-is-turso?utm_source=chatgpt.com "The SQLite-compatible database for the agentic era"))
+Complexity: **Medium**. ([Turso](https://turso.tech/what-is-turso "The SQLite-compatible database for the agentic era"))
 
 **2) AI agent state store**  
 Use one small DB per agent, user, or tenant.  
 Example: each agent keeps its own memory, tool results, and conversation state.  
 Benefits: isolation, cheap tenancy, easy sharding by design.  
-Complexity: **Medium**. ([Turso](https://turso.tech/what-is-turso?utm_source=chatgpt.com "The SQLite-compatible database for the agentic era"))
+Complexity: **Medium**. ([Turso](https://turso.tech/what-is-turso "The SQLite-compatible database for the agentic era"))
 
 **3) Edge/multi-tenant SaaS backends**  
 Use it to push data closer to users or tenants.  
 Example: per-customer databases for a SaaS product.  
 Benefits: lower latency, reduced blast radius, simpler tenant isolation.  
-Complexity: **High** if you need sync and multi-region correctness. ([Turso](https://turso.tech/what-is-turso?utm_source=chatgpt.com "The SQLite-compatible database for the agentic era"))
+Complexity: **High** if you need sync and multi-region correctness. ([Turso](https://turso.tech/what-is-turso "The SQLite-compatible database for the agentic era"))
 
 **4) SQLite-compatible replacement with more ambition**  
 Use it where SQLite fits but you want stronger concurrency, bindings, or future dialect expansion.  
@@ -205,7 +205,7 @@ Complexity: **Medium**. ([GitHub](https://github.com/tursodatabase/turso "GitHub
 Use the sync layer to move data between local and remote replicas.  
 Example: field app that works offline and later synchronizes with central systems.  
 Benefits: offline resilience, local speed, sync semantics.  
-Complexity: **High**. ([GitHub](https://github.com/tursodatabase/turso/blob/main/bindings/rust/src/sync.rs?utm_source=chatgpt.com "turso/bindings/rust/src/sync.rs at main"))
+Complexity: **High**. ([GitHub](https://github.com/tursodatabase/turso/blob/main/bindings/rust/src/sync.rs "turso/bindings/rust/src/sync.rs at main"))
 
 ---
 
@@ -215,28 +215,28 @@ Complexity: **High**. ([GitHub](https://github.com/tursodatabase/turso/blob/main
 Relevant for embedded metadata stores, job state, lineage caches, and operational control planes. Less suitable for bulk warehouse compute. ([GitHub](https://github.com/tursodatabase/turso/blob/main/docs/manual.md "turso/docs/manual.md at main · tursodatabase/turso · GitHub"))
 
 **Analytics**  
-Good for local analytics, lightweight embedded analytical apps, and client-side or edge analytics. Not a replacement for a warehouse. ([Turso](https://turso.tech/what-is-turso?utm_source=chatgpt.com "The SQLite-compatible database for the agentic era"))
+Good for local analytics, lightweight embedded analytical apps, and client-side or edge analytics. Not a replacement for a warehouse. ([Turso](https://turso.tech/what-is-turso "The SQLite-compatible database for the agentic era"))
 
 **AI/ML**  
-Very relevant. AI agent databases, RAG metadata, vector-adjacent workflows, and per-agent memory stores fit the model well. ([Turso](https://turso.tech/?utm_source=chatgpt.com "Turso - Databases Everywhere"))
+Very relevant. AI agent databases, RAG metadata, vector-adjacent workflows, and per-agent memory stores fit the model well. ([Turso](https://turso.tech/ "Turso - Databases Everywhere"))
 
 **DevOps**  
 Useful for local operational tooling, config stores, and embedded state in deployment tools. The repo’s CI/test-heavy culture suggests it is operationally mature. ([GitHub](https://github.com/tursodatabase/turso/blob/main/CHANGELOG.md "turso/CHANGELOG.md at main · tursodatabase/turso · GitHub"))
 
 **Platform Engineering**  
-Strong fit for internal platforms that need small, isolated databases per service, tenant, or workflow. ([Turso](https://turso.tech/what-is-turso?utm_source=chatgpt.com "The SQLite-compatible database for the agentic era"))
+Strong fit for internal platforms that need small, isolated databases per service, tenant, or workflow. ([Turso](https://turso.tech/what-is-turso "The SQLite-compatible database for the agentic era"))
 
 **Cloud Engineering**  
-Useful for edge and multi-region architectures, especially where database locality matters. ([Turso](https://docs.turso.tech/introduction?utm_source=chatgpt.com "Welcome to Turso - Turso"))
+Useful for edge and multi-region architectures, especially where database locality matters. ([Turso](https://docs.turso.tech/introduction "Welcome to Turso - Turso"))
 
 **Security**  
 Potentially useful because smaller embedded deployments can reduce attack surface, though security must be validated carefully for any specific deployment. Encryption support appears in the engineering history. ([GitHub](https://github.com/tursodatabase/turso/blob/main/CHANGELOG.md "turso/CHANGELOG.md at main · tursodatabase/turso · GitHub"))
 
 **FinOps**  
-Interesting for cost reduction via per-tenant micro-databases and less heavy central infrastructure. It is a cost strategy, not a financial engine. ([Turso](https://turso.tech/what-is-turso?utm_source=chatgpt.com "The SQLite-compatible database for the agentic era"))
+Interesting for cost reduction via per-tenant micro-databases and less heavy central infrastructure. It is a cost strategy, not a financial engine. ([Turso](https://turso.tech/what-is-turso "The SQLite-compatible database for the agentic era"))
 
 **Product Engineering**  
-Excellent for product teams building offline-first, embedded, or agentic features. ([Turso](https://turso.tech/what-is-turso?utm_source=chatgpt.com "The SQLite-compatible database for the agentic era"))
+Excellent for product teams building offline-first, embedded, or agentic features. ([Turso](https://turso.tech/what-is-turso "The SQLite-compatible database for the agentic era"))
 
 **Enterprise Applications**  
 Good for edge-enabled enterprise apps, local sync, and embedded components, though enterprise adoption will depend on governance, monitoring, and operational patterns. ([GitHub](https://github.com/tursodatabase/turso "GitHub - tursodatabase/turso: A SQL database in Rust: SQLite-compatible, now also speaking Postgres (experimental). The LLVM of databases. · GitHub"))
@@ -260,7 +260,7 @@ Why it matters: it is the public contract for one of the main consumer surfaces.
 **`bindings/rust`**  
 Purpose: Rust consumer-facing API and sync/config plumbing.  
 Responsibilities: bridging application code to the core engine and remote sync layers.  
-Why it matters: it shows the embedded/SDK-first philosophy. ([GitHub](https://github.com/tursodatabase/turso/blob/main/bindings/rust/src/sync.rs?utm_source=chatgpt.com "turso/bindings/rust/src/sync.rs at main"))
+Why it matters: it shows the embedded/SDK-first philosophy. ([GitHub](https://github.com/tursodatabase/turso/blob/main/bindings/rust/src/sync.rs "turso/bindings/rust/src/sync.rs at main"))
 
 **`CHANGELOG.md`**  
 Purpose: release history and engineering audit trail.  
@@ -315,7 +315,7 @@ Moderate to high. SQLite users will feel at home faster than PostgreSQL-only use
 
 **Strengths**
 
-- **Scalability**: strong for many small databases, edge, and embedded scale. ([Turso](https://turso.tech/what-is-turso?utm_source=chatgpt.com "The SQLite-compatible database for the agentic era"))
+- **Scalability**: strong for many small databases, edge, and embedded scale. ([Turso](https://turso.tech/what-is-turso "The SQLite-compatible database for the agentic era"))
     
 - **Maintainability**: single Rust core plus bindings is a good long-term shape. ([GitHub](https://github.com/tursodatabase/turso "GitHub - tursodatabase/turso: A SQL database in Rust: SQLite-compatible, now also speaking Postgres (experimental). The LLVM of databases. · GitHub"))
     
@@ -348,7 +348,7 @@ It is already used in production and has extensive engineering maturity, but som
 Rust helps, encryption appears in the history, and the embedded model is attractive, but I would still want a serious security review for enterprise deployment. ([GitHub](https://github.com/tursodatabase/turso/blob/main/CHANGELOG.md "turso/CHANGELOG.md at main · tursodatabase/turso · GitHub"))
 
 **Scalability: 8/10**  
-Great for distributed small-database patterns and edge-friendly scale; less obviously suited for a single giant shared OLTP core replacing everything. ([Turso](https://turso.tech/what-is-turso?utm_source=chatgpt.com "The SQLite-compatible database for the agentic era"))
+Great for distributed small-database patterns and edge-friendly scale; less obviously suited for a single giant shared OLTP core replacing everything. ([Turso](https://turso.tech/what-is-turso "The SQLite-compatible database for the agentic era"))
 
 **Observability: 6/10**  
 The repo shows strong testing and engineering rigor, but I did not see enough in the surfaced docs to call observability best-in-class. ([GitHub](https://github.com/tursodatabase/turso/blob/main/CHANGELOG.md "turso/CHANGELOG.md at main · tursodatabase/turso · GitHub"))
@@ -357,7 +357,7 @@ The repo shows strong testing and engineering rigor, but I did not see enough in
 The manual and API docs are solid and specific. ([GitHub](https://github.com/tursodatabase/turso/blob/main/docs/manual.md "turso/docs/manual.md at main · tursodatabase/turso · GitHub"))
 
 **Community support: 7/10**  
-Active development, active releases, and docs/website presence are good signs, though the ecosystem is still much smaller than Postgres/MySQL/SQLite themselves. ([GitHub](https://github.com/tursodatabase/turso/releases?utm_source=chatgpt.com "Releases · tursodatabase/turso"))
+Active development, active releases, and docs/website presence are good signs, though the ecosystem is still much smaller than Postgres/MySQL/SQLite themselves. ([GitHub](https://github.com/tursodatabase/turso/releases "Releases · tursodatabase/turso"))
 
 **Maintainability: 8/10**  
 Rust core plus clear layering is a strong foundation. The caveat is that the system is complex by design. ([GitHub](https://github.com/tursodatabase/turso "GitHub - tursodatabase/turso: A SQL database in Rust: SQLite-compatible, now also speaking Postgres (experimental). The LLVM of databases. · GitHub"))
@@ -388,7 +388,7 @@ Rust core plus clear layering is a strong foundation. The caveat is that the sys
 
 - Similarity: SQLite lineage and edge-friendly thinking.
     
-- Difference: Turso’s repo claims a rewrite/core-VM direction, not merely a fork-based evolution. ([GitHub](https://github.com/tursodatabase/turso?utm_source=chatgpt.com "tursodatabase/turso: A SQL database in Rust: SQLite- ..."))
+- Difference: Turso’s repo claims a rewrite/core-VM direction, not merely a fork-based evolution. ([GitHub](https://github.com/tursodatabase/turso "tursodatabase/turso: A SQL database in Rust: SQLite- ..."))
     
 
 **DuckDB**
@@ -402,7 +402,7 @@ Rust core plus clear layering is a strong foundation. The caveat is that the sys
 
 **Serverless/Cloud SQLite products**
 
-- Turso is positioned as a database for edge, agent, and offline-first applications, with a cloud offering around it. The differentiation is the engine architecture, not just hosting. ([Turso](https://docs.turso.tech/introduction?utm_source=chatgpt.com "Welcome to Turso - Turso"))
+- Turso is positioned as a database for edge, agent, and offline-first applications, with a cloud offering around it. The differentiation is the engine architecture, not just hosting. ([Turso](https://docs.turso.tech/introduction "Welcome to Turso - Turso"))
     
 
 ---
@@ -548,7 +548,7 @@ Turso is a serious embedded SQL database project written in Rust with SQLite com
     
 - Agent-memory and per-tenant database patterns.
     
-- SQLite-like systems that need a more extensible core. ([Turso](https://turso.tech/what-is-turso?utm_source=chatgpt.com "The SQLite-compatible database for the agentic era"))
+- SQLite-like systems that need a more extensible core. ([Turso](https://turso.tech/what-is-turso "The SQLite-compatible database for the agentic era"))
     
 
 **Decision matrix**
@@ -565,7 +565,7 @@ Turso is a serious embedded SQL database project written in Rust with SQLite com
 ## 15. AI/Data Engineering Relevance
 
 **Can this repository be used in data platforms?**  
-Yes, but mainly as an **embedded operational layer**, not as your warehouse engine. It is a fit for metadata stores, control planes, per-tenant state, and edge capture. ([Turso](https://turso.tech/what-is-turso?utm_source=chatgpt.com "The SQLite-compatible database for the agentic era"))
+Yes, but mainly as an **embedded operational layer**, not as your warehouse engine. It is a fit for metadata stores, control planes, per-tenant state, and edge capture. ([Turso](https://turso.tech/what-is-turso "The SQLite-compatible database for the agentic era"))
 
 **Can it be integrated into a lakehouse architecture?**  
 Yes, as a local metadata/sync/edge layer around the lakehouse, not as the lakehouse core. It could store sync state, ingestion state, or local caches. ([GitHub](https://github.com/tursodatabase/turso/blob/main/docs/manual.md "turso/docs/manual.md at main · tursodatabase/turso · GitHub"))
@@ -574,7 +574,7 @@ Yes, as a local metadata/sync/edge layer around the lakehouse, not as the lakeho
 Yes for orchestration metadata, checkpointing, idempotency tracking, lineage pointers, and local edge ingestion. No for replacing Spark/warehouse compute. ([GitHub](https://github.com/tursodatabase/turso/blob/main/docs/manual.md "turso/docs/manual.md at main · tursodatabase/turso · GitHub"))
 
 **Can it be used for LLM, RAG, agents, or AI workflows?**  
-Very much yes. The repo and docs explicitly align with AI-agent and edge use cases, and Turso markets itself around database-per-agent patterns and local vector search. ([Turso](https://turso.tech/?utm_source=chatgpt.com "Turso - Databases Everywhere"))
+Very much yes. The repo and docs explicitly align with AI-agent and edge use cases, and Turso markets itself around database-per-agent patterns and local vector search. ([Turso](https://turso.tech/ "Turso - Databases Everywhere"))
 
 **Suggested enterprise architecture incorporating this project**  
 A practical pattern is:

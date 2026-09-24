@@ -12,6 +12,10 @@ Project hub for the Intelligent Healthcare Data & AI Platform — an 11-phase bu
 
 ---
 
+
+project_status:: paused
+last_reviewed:: 2026-09-24
+
 # Healthcare Data & AI Platform — Project Map
 
 ## Roadmaps
@@ -41,3 +45,7 @@ Project hub for the Intelligent Healthcare Data & AI Platform — an 11-phase bu
 ## See also
 
 - [[_Data Engineering MOC]] · [[_Architecture MOC]] · [[_Software Engineering MOC]]
+
+## Log
+
+- 2026-09-24 — Marked paused — on hold.

@@ -294,7 +294,7 @@ Moderate to high relevance if the enterprise uses Erlang/BEAM. The list helps st
 
 ## Installation requirements
 
-None in the traditional sense. You do not install the repo; you read it, fork it, or contribute to it. GitHub will render the README automatically. ([GitHub Docs](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes?utm_source=chatgpt.com "About the repository README file"))
+None in the traditional sense. You do not install the repo; you read it, fork it, or contribute to it. GitHub will render the README automatically. ([GitHub Docs](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes "About the repository README file"))
 
 ## Deployment options
 
@@ -334,7 +334,7 @@ The main operational risk is link rot and outdated recommendations. Any awesome-
 
 ### Scalability
 
-Scales well as a knowledge base because Markdown and GitHub are trivial to distribute. ([GitHub Docs](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes?utm_source=chatgpt.com "About the repository README file"))
+Scales well as a knowledge base because Markdown and GitHub are trivial to distribute. ([GitHub Docs](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes "About the repository README file"))
 
 ### Maintainability
 

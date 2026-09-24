@@ -21,16 +21,16 @@ Below is the comprehensive report.
 ## 1. Executive Summary
 
 **What this project is**  
-GBrain is a personal/team AI memory system and operations layer for agent platforms. It stores knowledge in git-backed repos, indexes markdown pages and entities, exposes tools over MCP, and runs enrichment/sync/maintenance workflows around that data. It is positioned as a “personal knowledge brain” and “next Postgres for memory.” ([GitHub](https://github.com/garrytan/gbrain/blob/master/llms-full.txt?utm_source=chatgpt.com "gbrain/llms-full.txt at master"))
+GBrain is a personal/team AI memory system and operations layer for agent platforms. It stores knowledge in git-backed repos, indexes markdown pages and entities, exposes tools over MCP, and runs enrichment/sync/maintenance workflows around that data. It is positioned as a “personal knowledge brain” and “next Postgres for memory.” ([GitHub](https://github.com/garrytan/gbrain/blob/master/llms-full.txt "gbrain/llms-full.txt at master"))
 
 **What problem it solves**  
-It solves the “my agent forgets everything” problem. More specifically: it gives agents durable memory, retrieval, entity pages, hybrid search, scheduled enrichment, and access control, so context does not live only in chat history or a vector store. The docs emphasize that raw retrieval and synthesized answering are separate jobs, and that the repo is designed for both personal and company brains. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md?utm_source=chatgpt.com "README.md - garrytan/gbrain"))
+It solves the “my agent forgets everything” problem. More specifically: it gives agents durable memory, retrieval, entity pages, hybrid search, scheduled enrichment, and access control, so context does not live only in chat history or a vector store. The docs emphasize that raw retrieval and synthesized answering are separate jobs, and that the repo is designed for both personal and company brains. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md "README.md - garrytan/gbrain"))
 
 **Target audience**  
-The obvious audience is AI engineers, power users, and teams building memory-heavy agent workflows. The docs also aim at people using Claude Code, Codex, Cursor, OpenClaw, Hermes, and similar MCP-aware clients. The company-brain tutorial is explicitly framed for 10–50 person teams. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md?utm_source=chatgpt.com "README.md - garrytan/gbrain"))
+The obvious audience is AI engineers, power users, and teams building memory-heavy agent workflows. The docs also aim at people using Claude Code, Codex, Cursor, OpenClaw, Hermes, and similar MCP-aware clients. The company-brain tutorial is explicitly framed for 10–50 person teams. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md "README.md - garrytan/gbrain"))
 
 **Maturity level**  
-Mature open-source project, but not “enterprise-ready out of the box” in the boring procurement sense. It has substantial documentation, multiple deployment modes, distinct personal/company tutorials, CI/eval infrastructure, and a large open issue/PR surface. At the same time, the setup is non-trivial, operationally opinionated, and still actively evolving. I would rate it as **advanced production-capable for motivated teams**, but **not low-friction enterprise software**. The issue tracker activity and docs complexity support that assessment. ([GitHub](https://github.com/garrytan/gbrain/issues?utm_source=chatgpt.com "Issues · garrytan/gbrain"))
+Mature open-source project, but not “enterprise-ready out of the box” in the boring procurement sense. It has substantial documentation, multiple deployment modes, distinct personal/company tutorials, CI/eval infrastructure, and a large open issue/PR surface. At the same time, the setup is non-trivial, operationally opinionated, and still actively evolving. I would rate it as **advanced production-capable for motivated teams**, but **not low-friction enterprise software**. The issue tracker activity and docs complexity support that assessment. ([GitHub](https://github.com/garrytan/gbrain/issues "Issues · garrytan/gbrain"))
 
 ---
 
@@ -41,13 +41,13 @@ The repo is the core implementation of GBrain: a knowledge brain, memory databas
 
 **Core features and capabilities**
 
-- Hybrid retrieval and synthesis (`search` vs `think`) with ranking and reranking. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md?utm_source=chatgpt.com "README.md - garrytan/gbrain"))
+- Hybrid retrieval and synthesis (`search` vs `think`) with ranking and reranking. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md "README.md - garrytan/gbrain"))
     
 - Markdown ingest, entity/page creation, link extraction, enrichment, cron/dream cycles, and salience tracking. ([GitHub](https://github.com/garrytan/gbrain/blob/master/docs/INSTALL.md "gbrain/docs/INSTALL.md at master · garrytan/gbrain · GitHub"))
     
-- MCP server in stdio and HTTP modes, with OAuth 2.1 / scope-gated access for remote use. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md?utm_source=chatgpt.com "README.md - garrytan/gbrain"))
+- MCP server in stdio and HTTP modes, with OAuth 2.1 / scope-gated access for remote use. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md "README.md - garrytan/gbrain"))
     
-- Two engines: PGLite for local use and Postgres+pgvector for scale. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md?utm_source=chatgpt.com "README.md - garrytan/gbrain"))
+- Two engines: PGLite for local use and Postgres+pgvector for scale. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md "README.md - garrytan/gbrain"))
     
 - 43+ skills / 60+ skills depending on the install path and tutorial, scaffolded into the agent workspace. ([GitHub](https://github.com/garrytan/gbrain/blob/master/docs/INSTALL.md "gbrain/docs/INSTALL.md at master · garrytan/gbrain · GitHub"))
     
@@ -60,9 +60,9 @@ The repo is the core implementation of GBrain: a knowledge brain, memory databas
     
 - **Bun** is the canonical installation/runtime path. ([GitHub](https://github.com/garrytan/gbrain/blob/master/docs/INSTALL.md "gbrain/docs/INSTALL.md at master · garrytan/gbrain · GitHub"))
     
-- **PGLite** and **Postgres + pgvector** are the storage backends. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md?utm_source=chatgpt.com "README.md - garrytan/gbrain"))
+- **PGLite** and **Postgres + pgvector** are the storage backends. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md "README.md - garrytan/gbrain"))
     
-- **MCP** is the integration protocol, with both stdio and HTTP servers. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md?utm_source=chatgpt.com "README.md - garrytan/gbrain"))
+- **MCP** is the integration protocol, with both stdio and HTTP servers. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md "README.md - garrytan/gbrain"))
     
 - **Supabase** appears as the managed Postgres/search path for larger brains. ([GitHub](https://github.com/garrytan/gbrain/blob/master/docs/tutorials/personal-brain.md "gbrain/docs/tutorials/personal-brain.md at master · garrytan/gbrain · GitHub"))
     
@@ -82,7 +82,7 @@ The architecture is contract-first and split into:
     
 5. scheduling/enrichment workflows,
     
-6. optional remote access and team isolation. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md?utm_source=chatgpt.com "CLAUDE.md - garrytan/gbrain"))
+6. optional remote access and team isolation. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md "CLAUDE.md - garrytan/gbrain"))
     
 
 ---
@@ -94,15 +94,15 @@ You install GBrain, point it at a repo or note set, and it turns markdown and ag
 
 **Major components/modules**
 
-- **Core operations layer**: the single source of truth for supported actions. CLAUDE.md says `src/core/operations.ts` defines ~90 operations, and CLI/MCP are generated from it. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md?utm_source=chatgpt.com "CLAUDE.md - garrytan/gbrain"))
+- **Core operations layer**: the single source of truth for supported actions. CLAUDE.md says `src/core/operations.ts` defines ~90 operations, and CLI/MCP are generated from it. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md "CLAUDE.md - garrytan/gbrain"))
     
-- **Engine layer**: pluggable PGLite and Postgres engines, kept in parity. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md?utm_source=chatgpt.com "CLAUDE.md - garrytan/gbrain"))
+- **Engine layer**: pluggable PGLite and Postgres engines, kept in parity. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md "CLAUDE.md - garrytan/gbrain"))
     
-- **MCP server**: exposes capabilities to agents over stdio or HTTP, with auth/scopes on HTTP. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md?utm_source=chatgpt.com "README.md - garrytan/gbrain"))
+- **MCP server**: exposes capabilities to agents over stdio or HTTP, with auth/scopes on HTTP. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md "README.md - garrytan/gbrain"))
     
 - **Skills system**: fat markdown skill files, scaffolded into the workspace. ([GitHub](https://github.com/garrytan/gbrain/blob/master/docs/INSTALL.md "gbrain/docs/INSTALL.md at master · garrytan/gbrain · GitHub"))
     
-- **Search and synthesis paths**: raw retrieval via `search`, synthesized answer via `think`. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md?utm_source=chatgpt.com "README.md - garrytan/gbrain"))
+- **Search and synthesis paths**: raw retrieval via `search`, synthesized answer via `think`. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md "README.md - garrytan/gbrain"))
     
 - **Maintenance/scheduling**: daily cron/dream/enrichment cycles. ([GitHub](https://github.com/garrytan/gbrain/blob/master/docs/tutorials/personal-brain.md "gbrain/docs/tutorials/personal-brain.md at master · garrytan/gbrain · GitHub"))
     
@@ -111,11 +111,11 @@ You install GBrain, point it at a repo or note set, and it turns markdown and ag
 
 1. Content enters through import/sync/chat or agent-written pages. ([GitHub](https://github.com/garrytan/gbrain/blob/master/docs/INSTALL.md "gbrain/docs/INSTALL.md at master · garrytan/gbrain · GitHub"))
     
-2. The system stores and structures it into pages, chunks, links, timelines, facts, and salience. ([GitHub](https://github.com/aristoapp/awesome-second-brain/blob/main/solutions/gbrain.md?utm_source=chatgpt.com "awesome-second-brain/solutions/gbrain.md at main"))
+2. The system stores and structures it into pages, chunks, links, timelines, facts, and salience. ([GitHub](https://github.com/aristoapp/awesome-second-brain/blob/main/solutions/gbrain.md "awesome-second-brain/solutions/gbrain.md at main"))
     
-3. Embeddings/search index are built on the chosen engine. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md?utm_source=chatgpt.com "README.md - garrytan/gbrain"))
+3. Embeddings/search index are built on the chosen engine. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md "README.md - garrytan/gbrain"))
     
-4. Search can retrieve raw pages, while think synthesizes an answer from retrieved material. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md?utm_source=chatgpt.com "README.md - garrytan/gbrain"))
+4. Search can retrieve raw pages, while think synthesizes an answer from retrieved material. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md "README.md - garrytan/gbrain"))
     
 5. Background jobs enrich stale content overnight. ([GitHub](https://github.com/garrytan/gbrain/blob/master/docs/tutorials/personal-brain.md "gbrain/docs/tutorials/personal-brain.md at master · garrytan/gbrain · GitHub"))
     
@@ -144,13 +144,13 @@ Teams and individuals need memory that survives beyond a single chat session and
 
 - Persistent structured memory across multiple agents and clients. ([GitHub](https://github.com/garrytan/gbrain/blob/master/docs/tutorials/personal-brain.md "gbrain/docs/tutorials/personal-brain.md at master · garrytan/gbrain · GitHub"))
     
-- Hybrid retrieval instead of pure vector search. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md?utm_source=chatgpt.com "README.md - garrytan/gbrain"))
+- Hybrid retrieval instead of pure vector search. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md "README.md - garrytan/gbrain"))
     
-- Local-first, zero-config default with a scale-up path. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md?utm_source=chatgpt.com "README.md - garrytan/gbrain"))
+- Local-first, zero-config default with a scale-up path. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md "README.md - garrytan/gbrain"))
     
-- Contract-first operation surface to prevent drift between CLI and MCP. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md?utm_source=chatgpt.com "CLAUDE.md - garrytan/gbrain"))
+- Contract-first operation surface to prevent drift between CLI and MCP. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md "CLAUDE.md - garrytan/gbrain"))
     
-- Access control and trust boundaries for remote agent callers. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md?utm_source=chatgpt.com "CLAUDE.md - garrytan/gbrain"))
+- Access control and trust boundaries for remote agent callers. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md "CLAUDE.md - garrytan/gbrain"))
     
 
 **Advantages over traditional approaches**  
@@ -164,7 +164,7 @@ Traditional note apps are passive. Traditional vector DB setups are raw and frag
     
 - orchestration and agent skills,
     
-- and a client-facing protocol surface. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md?utm_source=chatgpt.com "README.md - garrytan/gbrain"))
+- and a client-facing protocol surface. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md "README.md - garrytan/gbrain"))
     
 
 **Unique differentiators**  
@@ -193,14 +193,14 @@ The biggest differentiator is the “git repo is the system of record” choice.
 **Description:** Use GBrain as a memory service for Claude Code, Cursor, Codex, etc.  
 **Scenario:** A coding agent retrieves prior architecture decisions and project context.  
 **Benefits:** better context retention, repo-native workflows, tool-agnostic skills.  
-**Complexity:** Medium. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md?utm_source=chatgpt.com "README.md - garrytan/gbrain"))
+**Complexity:** Medium. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md "README.md - garrytan/gbrain"))
 
 ### 4) Retrieval + synthesis layer for knowledge work
 
 **Description:** Use raw search for evidence and think for answer synthesis.  
 **Scenario:** “What themes show up across my notes?” or “Who’s working on AI agents?”  
 **Benefits:** fast retrieval plus higher-level answers with citations/gap analysis.  
-**Complexity:** Medium. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md?utm_source=chatgpt.com "README.md - garrytan/gbrain"))
+**Complexity:** Medium. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md "README.md - garrytan/gbrain"))
 
 ### 5) Multi-agent shared memory for operations
 
@@ -217,25 +217,25 @@ The biggest differentiator is the “git repo is the system of record” choice.
 Relevant for indexing, enrichment, document ingestion, scheduling, and structured entity extraction. It is not a batch ETL engine, but it behaves like an operational memory pipeline. ([GitHub](https://github.com/garrytan/gbrain/blob/master/docs/tutorials/personal-brain.md "gbrain/docs/tutorials/personal-brain.md at master · garrytan/gbrain · GitHub"))
 
 **Analytics**  
-Useful for qualitative knowledge retrieval and synthesis, less so for classical BI. The data model supports thematic search over notes and reports. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md?utm_source=chatgpt.com "README.md - garrytan/gbrain"))
+Useful for qualitative knowledge retrieval and synthesis, less so for classical BI. The data model supports thematic search over notes and reports. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md "README.md - garrytan/gbrain"))
 
 **AI/ML**  
-Very relevant. This is one of its core domains: agent memory, retrieval, tool orchestration, and context management. ([GitHub](https://github.com/garrytan/gbrain/blob/master/llms-full.txt?utm_source=chatgpt.com "gbrain/llms-full.txt at master"))
+Very relevant. This is one of its core domains: agent memory, retrieval, tool orchestration, and context management. ([GitHub](https://github.com/garrytan/gbrain/blob/master/llms-full.txt "gbrain/llms-full.txt at master"))
 
 **DevOps**  
 Moderately relevant. It has scheduling, server deployment, auth, and operational checks, but it is not a replacement for observability or infra tooling. ([GitHub](https://github.com/garrytan/gbrain/blob/master/docs/INSTALL.md "gbrain/docs/INSTALL.md at master · garrytan/gbrain · GitHub"))
 
 **Platform Engineering**  
-Relevant as an internal platform for agent memory and shared knowledge services. Contract-first operations and engine parity are platform-friendly traits. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md?utm_source=chatgpt.com "CLAUDE.md - garrytan/gbrain"))
+Relevant as an internal platform for agent memory and shared knowledge services. Contract-first operations and engine parity are platform-friendly traits. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md "CLAUDE.md - garrytan/gbrain"))
 
 **Cloud Engineering**  
 Relevant because it supports Render, Supabase, HTTP MCP, and remote deployment patterns. ([GitHub](https://github.com/garrytan/gbrain/blob/master/docs/tutorials/personal-brain.md "gbrain/docs/tutorials/personal-brain.md at master · garrytan/gbrain · GitHub"))
 
 **Security**  
-Some relevance through OAuth scopes, trust boundaries, and source isolation. Still, this is not a security product. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md?utm_source=chatgpt.com "README.md - garrytan/gbrain"))
+Some relevance through OAuth scopes, trust boundaries, and source isolation. Still, this is not a security product. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md "README.md - garrytan/gbrain"))
 
 **FinOps**  
-Indirect relevance. The docs emphasize cost matrices and scale choices, which matters for model and infra spend, but it is not a FinOps suite. ([GitHub](https://github.com/garrytan/gbrain/blob/master/llms-full.txt?utm_source=chatgpt.com "gbrain/llms-full.txt at master"))
+Indirect relevance. The docs emphasize cost matrices and scale choices, which matters for model and infra spend, but it is not a FinOps suite. ([GitHub](https://github.com/garrytan/gbrain/blob/master/llms-full.txt "gbrain/llms-full.txt at master"))
 
 **Product Engineering**  
 Strong fit for product teams that need a memory layer for customer/context/decision tracking. ([GitHub](https://github.com/garrytan/gbrain/blob/master/docs/tutorials/company-brain.md "gbrain/docs/tutorials/company-brain.md at master · garrytan/gbrain · GitHub"))
@@ -250,31 +250,31 @@ Possible, especially for internal knowledge systems, but adoption depends on gov
 I cannot truthfully enumerate every directory in the repo without fetching the full tree, but the repo’s docs point to the following important files/components:
 
 **`src/core/operations.ts`**  
-Single source of truth for brain operations. Defines the contract used by both CLI and MCP. Holds scope metadata and likely the majority of core actions. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md?utm_source=chatgpt.com "CLAUDE.md - garrytan/gbrain"))
+Single source of truth for brain operations. Defines the contract used by both CLI and MCP. Holds scope metadata and likely the majority of core actions. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md "CLAUDE.md - garrytan/gbrain"))
 
 **`src/core/engine.ts`**  
-Defines the `BrainEngine` contract; docs say ~47 operations are implemented by both engines. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md?utm_source=chatgpt.com "README.md - garrytan/gbrain"))
+Defines the `BrainEngine` contract; docs say ~47 operations are implemented by both engines. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md "README.md - garrytan/gbrain"))
 
 **`src/core/postgres-engine.ts` / `src/core/pglite-engine.ts`**  
-Parallel backends that must stay in lockstep. This is a classic portability layer. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md?utm_source=chatgpt.com "CLAUDE.md - garrytan/gbrain"))
+Parallel backends that must stay in lockstep. This is a classic portability layer. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md "CLAUDE.md - garrytan/gbrain"))
 
 **`src/core/engine-factory.ts`**  
-Dynamically selects the configured backend. This is the runtime switch for local vs scaled deployments. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md?utm_source=chatgpt.com "CLAUDE.md - garrytan/gbrain"))
+Dynamically selects the configured backend. This is the runtime switch for local vs scaled deployments. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md "CLAUDE.md - garrytan/gbrain"))
 
 **`src/mcp/server.ts`**  
-Agent-facing server boundary. The docs use it as the source of `remote: true` trust classification. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md?utm_source=chatgpt.com "CLAUDE.md - garrytan/gbrain"))
+Agent-facing server boundary. The docs use it as the source of `remote: true` trust classification. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md "CLAUDE.md - garrytan/gbrain"))
 
 **`src/cli.ts`**  
-Trusted local interface; marks operations as local and drives CLI commands. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md?utm_source=chatgpt.com "CLAUDE.md - garrytan/gbrain"))
+Trusted local interface; marks operations as local and drives CLI commands. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md "CLAUDE.md - garrytan/gbrain"))
 
 **`src/core/migrate.ts`**  
-Schema migration authority. Docs stress that DDL lives there and index behavior differs by backend. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md?utm_source=chatgpt.com "CLAUDE.md - garrytan/gbrain"))
+Schema migration authority. Docs stress that DDL lives there and index behavior differs by backend. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md "CLAUDE.md - garrytan/gbrain"))
 
 **`skills/RESOLVER.md` and skill packs**  
 A thin router plus fat markdown skills. The install docs say skills are scaffolded into the workspace and can be edited freely. ([GitHub](https://github.com/garrytan/gbrain/blob/master/docs/INSTALL.md "gbrain/docs/INSTALL.md at master · garrytan/gbrain · GitHub"))
 
 **`docs/architecture/brains-and-sources.md`**  
-Describes the two-axis routing model: brain and source. That is essential to avoid silent misrouting and data leakage. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md?utm_source=chatgpt.com "CLAUDE.md - garrytan/gbrain"))
+Describes the two-axis routing model: brain and source. That is essential to avoid silent misrouting and data leakage. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md "CLAUDE.md - garrytan/gbrain"))
 
 ---
 
@@ -295,28 +295,28 @@ Describes the two-axis routing model: brain and source. That is essential to avo
 
 - Local standalone with PGLite, no server. ([GitHub](https://github.com/garrytan/gbrain/blob/master/docs/INSTALL.md "gbrain/docs/INSTALL.md at master · garrytan/gbrain · GitHub"))
     
-- Local or remote MCP server via stdio/HTTP. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md?utm_source=chatgpt.com "README.md - garrytan/gbrain"))
+- Local or remote MCP server via stdio/HTTP. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md "README.md - garrytan/gbrain"))
     
 - Render-hosted full agent stack. ([GitHub](https://github.com/garrytan/gbrain/blob/master/docs/tutorials/personal-brain.md "gbrain/docs/tutorials/personal-brain.md at master · garrytan/gbrain · GitHub"))
     
-- Supabase/Postgres scale path. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md?utm_source=chatgpt.com "README.md - garrytan/gbrain"))
+- Supabase/Postgres scale path. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md "README.md - garrytan/gbrain"))
     
 
 **Infrastructure requirements**  
 For real usage, you need persistent storage, model APIs, and likely some background job runtime. The docs are frank that the full setup costs real money and memory. ([GitHub](https://github.com/garrytan/gbrain/blob/master/docs/tutorials/personal-brain.md "gbrain/docs/tutorials/personal-brain.md at master · garrytan/gbrain · GitHub"))
 
 **Learning curve**  
-High. The docs are detailed because the system is opinionated and multi-layered: repo structure, brain/source routing, engine selection, MCP, auth, skills, and deployment. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md?utm_source=chatgpt.com "CLAUDE.md - garrytan/gbrain"))
+High. The docs are detailed because the system is opinionated and multi-layered: repo structure, brain/source routing, engine selection, MCP, auth, skills, and deployment. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md "CLAUDE.md - garrytan/gbrain"))
 
 **Operational considerations**
 
-- Must keep engine parity intact. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md?utm_source=chatgpt.com "CLAUDE.md - garrytan/gbrain"))
+- Must keep engine parity intact. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md "CLAUDE.md - garrytan/gbrain"))
     
-- Must respect trust boundaries for remote callers. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md?utm_source=chatgpt.com "CLAUDE.md - garrytan/gbrain"))
+- Must respect trust boundaries for remote callers. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md "CLAUDE.md - garrytan/gbrain"))
     
-- Must manage model/API spend. ([GitHub](https://github.com/garrytan/gbrain/blob/master/llms-full.txt?utm_source=chatgpt.com "gbrain/llms-full.txt at master"))
+- Must manage model/API spend. ([GitHub](https://github.com/garrytan/gbrain/blob/master/llms-full.txt "gbrain/llms-full.txt at master"))
     
-- Must think about source isolation and access control early. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md?utm_source=chatgpt.com "CLAUDE.md - garrytan/gbrain"))
+- Must think about source isolation and access control early. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md "CLAUDE.md - garrytan/gbrain"))
     
 
 ---
@@ -325,13 +325,13 @@ High. The docs are detailed because the system is opinionated and multi-layered:
 
 **Strengths**
 
-- **Scalability:** clear local-to-Postgres path. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md?utm_source=chatgpt.com "README.md - garrytan/gbrain"))
+- **Scalability:** clear local-to-Postgres path. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md "README.md - garrytan/gbrain"))
     
-- **Maintainability:** contract-first operations reduce frontend/backend drift. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md?utm_source=chatgpt.com "CLAUDE.md - garrytan/gbrain"))
+- **Maintainability:** contract-first operations reduce frontend/backend drift. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md "CLAUDE.md - garrytan/gbrain"))
     
 - **Extensibility:** skills are markdown-based and scaffoldable. ([GitHub](https://github.com/garrytan/gbrain/blob/master/docs/INSTALL.md "gbrain/docs/INSTALL.md at master · garrytan/gbrain · GitHub"))
     
-- **Performance:** local PGLite default gives a fast zero-config baseline; hybrid search suggests real retrieval sophistication. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md?utm_source=chatgpt.com "README.md - garrytan/gbrain"))
+- **Performance:** local PGLite default gives a fast zero-config baseline; hybrid search suggests real retrieval sophistication. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md "README.md - garrytan/gbrain"))
     
 - **Developer experience:** strong docs, clear install paths, MCP support, CLI tooling. ([GitHub](https://github.com/garrytan/gbrain/blob/master/docs/INSTALL.md "gbrain/docs/INSTALL.md at master · garrytan/gbrain · GitHub"))
     
@@ -340,13 +340,13 @@ High. The docs are detailed because the system is opinionated and multi-layered:
 
 - **Operational complexity:** full-stack setup is not simple. ([GitHub](https://github.com/garrytan/gbrain/blob/master/docs/tutorials/personal-brain.md "gbrain/docs/tutorials/personal-brain.md at master · garrytan/gbrain · GitHub"))
     
-- **Security burden:** powerful remote agent access requires careful scoping and deployment discipline. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md?utm_source=chatgpt.com "CLAUDE.md - garrytan/gbrain"))
+- **Security burden:** powerful remote agent access requires careful scoping and deployment discipline. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md "CLAUDE.md - garrytan/gbrain"))
     
-- **Potential technical debt:** the docs themselves are huge and highly opinionated; that usually means a lot of moving parts. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md?utm_source=chatgpt.com "CLAUDE.md - garrytan/gbrain"))
+- **Potential technical debt:** the docs themselves are huge and highly opinionated; that usually means a lot of moving parts. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md "CLAUDE.md - garrytan/gbrain"))
     
 - **Adoption friction:** it assumes Bun, GitHub, MCP familiarity, and model API setup. ([GitHub](https://github.com/garrytan/gbrain/blob/master/docs/INSTALL.md "gbrain/docs/INSTALL.md at master · garrytan/gbrain · GitHub"))
     
-- **Likely evolving fast:** active issues and PRs imply some churn. ([GitHub](https://github.com/garrytan/gbrain/issues?utm_source=chatgpt.com "Issues · garrytan/gbrain"))
+- **Likely evolving fast:** active issues and PRs imply some churn. ([GitHub](https://github.com/garrytan/gbrain/issues "Issues · garrytan/gbrain"))
     
 
 ---
@@ -357,10 +357,10 @@ High. The docs are detailed because the system is opinionated and multi-layered:
 Good architecture and mature docs, but the system is opinionated and operationally heavy. Fits motivated teams; not turnkey. ([GitHub](https://github.com/garrytan/gbrain/blob/master/docs/tutorials/company-brain.md "gbrain/docs/tutorials/company-brain.md at master · garrytan/gbrain · GitHub"))
 
 **Security: 6/10**  
-There is thought given to scopes, trust boundaries, and auth, but this is still an AI memory system with broad access patterns. Enterprise security would need independent review. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md?utm_source=chatgpt.com "README.md - garrytan/gbrain"))
+There is thought given to scopes, trust boundaries, and auth, but this is still an AI memory system with broad access patterns. Enterprise security would need independent review. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md "README.md - garrytan/gbrain"))
 
 **Scalability: 8/10**  
-The PGLite-to-Postgres path, multi-machine support, and source/brain topology are strong signals. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md?utm_source=chatgpt.com "README.md - garrytan/gbrain"))
+The PGLite-to-Postgres path, multi-machine support, and source/brain topology are strong signals. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md "README.md - garrytan/gbrain"))
 
 **Observability: 6/10**  
 There are operational checks and docs, but I do not see enough evidence here of deep observability primitives from the repo docs alone. ([GitHub](https://github.com/garrytan/gbrain/blob/master/docs/INSTALL.md "gbrain/docs/INSTALL.md at master · garrytan/gbrain · GitHub"))
@@ -372,26 +372,26 @@ Very strong. The repo has install guides, personal/company tutorials, architectu
 The repository is widely starred and actively tracked with many issues/PRs, which suggests a real user base. ([GitHub](https://github.com/garrytan/gbrain "GitHub - garrytan/gbrain: Garry's Opinionated OpenClaw/Hermes Agent Brain · GitHub"))
 
 **Maintainability: 7/10**  
-Contract-first design helps a lot. The downside is the breadth of responsibilities in one system. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md?utm_source=chatgpt.com "CLAUDE.md - garrytan/gbrain"))
+Contract-first design helps a lot. The downside is the breadth of responsibilities in one system. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md "CLAUDE.md - garrytan/gbrain"))
 
 ---
 
 ## 11. Comparison with Alternatives
 
 **Versus plain vector databases**  
-GBrain is far more opinionated and complete: it includes retrieval, structured memory, skills, scheduling, auth, and agent integration. A vector DB is simpler and more generic; GBrain is a memory application. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md?utm_source=chatgpt.com "README.md - garrytan/gbrain"))
+GBrain is far more opinionated and complete: it includes retrieval, structured memory, skills, scheduling, auth, and agent integration. A vector DB is simpler and more generic; GBrain is a memory application. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md "README.md - garrytan/gbrain"))
 
 **Versus note apps / PKM tools**  
 Traditional PKM apps are better for human note-taking. GBrain is better when you want AI agents to read, write, enrich, and act on the notes. ([GitHub](https://github.com/garrytan/gbrain/blob/master/docs/tutorials/personal-brain.md "gbrain/docs/tutorials/personal-brain.md at master · garrytan/gbrain · GitHub"))
 
 **Versus homegrown RAG stacks**  
-A homegrown RAG stack is usually easier to start but devolves into glue code. GBrain gives you the memory model, backend abstraction, MCP layer, and operations contract upfront. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md?utm_source=chatgpt.com "README.md - garrytan/gbrain"))
+A homegrown RAG stack is usually easier to start but devolves into glue code. GBrain gives you the memory model, backend abstraction, MCP layer, and operations contract upfront. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md "README.md - garrytan/gbrain"))
 
 **Versus Notion/Obsidian + embeddings**  
 Those are great user interfaces. GBrain is the agent-facing operational layer. It can consume markdown-style content, but its value is in memory operations, not in polished editing UX. ([GitHub](https://github.com/garrytan/gbrain/blob/master/docs/INSTALL.md "gbrain/docs/INSTALL.md at master · garrytan/gbrain · GitHub"))
 
 **Versus Haystack/LlamaIndex/LangChain-style stacks**  
-Those focus on orchestration and retrieval primitives. GBrain goes narrower and deeper on durable memory, source isolation, and operational brain workflows. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md?utm_source=chatgpt.com "README.md - garrytan/gbrain"))
+Those focus on orchestration and retrieval primitives. GBrain goes narrower and deeper on durable memory, source isolation, and operational brain workflows. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md "README.md - garrytan/gbrain"))
 
 ---
 
@@ -407,7 +407,7 @@ Those focus on orchestration and retrieval primitives. GBrain goes narrower and 
     
 - Separation of raw retrieval vs synthesized answer.
     
-- Local/remote trust boundary classification. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md?utm_source=chatgpt.com "CLAUDE.md - garrytan/gbrain"))
+- Local/remote trust boundary classification. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md "CLAUDE.md - garrytan/gbrain"))
     
 
 **Architectural lessons**
@@ -416,16 +416,16 @@ Those focus on orchestration and retrieval primitives. GBrain goes narrower and 
     
 - If you want portability, make the repo the source of truth. ([GitHub](https://github.com/garrytan/gbrain/blob/master/docs/tutorials/personal-brain.md "gbrain/docs/tutorials/personal-brain.md at master · garrytan/gbrain · GitHub"))
     
-- If you want multiple frontends, define one operation contract and generate from it. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md?utm_source=chatgpt.com "CLAUDE.md - garrytan/gbrain"))
+- If you want multiple frontends, define one operation contract and generate from it. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md "CLAUDE.md - garrytan/gbrain"))
     
 
 **Best practices worth adopting**
 
-- Engine parity tests. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md?utm_source=chatgpt.com "CLAUDE.md - garrytan/gbrain"))
+- Engine parity tests. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md "CLAUDE.md - garrytan/gbrain"))
     
-- Explicit trust boundaries for remote callers. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md?utm_source=chatgpt.com "CLAUDE.md - garrytan/gbrain"))
+- Explicit trust boundaries for remote callers. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md "CLAUDE.md - garrytan/gbrain"))
     
-- Source-level access isolation. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md?utm_source=chatgpt.com "CLAUDE.md - garrytan/gbrain"))
+- Source-level access isolation. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md "CLAUDE.md - garrytan/gbrain"))
     
 - Markdown skill packs for editable, versioned agent behavior. ([GitHub](https://github.com/garrytan/gbrain/blob/master/docs/INSTALL.md "gbrain/docs/INSTALL.md at master · garrytan/gbrain · GitHub"))
     
@@ -438,7 +438,7 @@ Those focus on orchestration and retrieval primitives. GBrain goes narrower and 
     
 - Treating agent memory as a simple vector index.
     
-- Allowing backend-specific behavior to drift. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md?utm_source=chatgpt.com "CLAUDE.md - garrytan/gbrain"))
+- Allowing backend-specific behavior to drift. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md "CLAUDE.md - garrytan/gbrain"))
     
 
 ---
@@ -519,13 +519,13 @@ Those focus on orchestration and retrieval primitives. GBrain goes narrower and 
 ## 14. Handoff Summary
 
 **One-page executive summary**  
-GBrain is a git-backed AI memory system and agent operations layer. It stores structured knowledge in repositories, exposes memory/search/synthesis operations through MCP and CLI, and supports both local and scale deployments through PGLite and Postgres+pgvector. Its strongest design choices are contract-first operations, repo-as-source-of-truth, and explicit trust boundaries for agent access. It is especially relevant for AI engineers, platform teams, and product teams building long-lived agent memory. The main tradeoff is operational complexity: this is powerful, but not casual. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md?utm_source=chatgpt.com "README.md - garrytan/gbrain"))
+GBrain is a git-backed AI memory system and agent operations layer. It stores structured knowledge in repositories, exposes memory/search/synthesis operations through MCP and CLI, and supports both local and scale deployments through PGLite and Postgres+pgvector. Its strongest design choices are contract-first operations, repo-as-source-of-truth, and explicit trust boundaries for agent access. It is especially relevant for AI engineers, platform teams, and product teams building long-lived agent memory. The main tradeoff is operational complexity: this is powerful, but not casual. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md "README.md - garrytan/gbrain"))
 
 **Key findings**
 
-- Strong architecture, especially for memory and agent integration. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md?utm_source=chatgpt.com "CLAUDE.md - garrytan/gbrain"))
+- Strong architecture, especially for memory and agent integration. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md "CLAUDE.md - garrytan/gbrain"))
     
-- Clear scale path from local PGLite to Postgres. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md?utm_source=chatgpt.com "README.md - garrytan/gbrain"))
+- Clear scale path from local PGLite to Postgres. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md "README.md - garrytan/gbrain"))
     
 - Rich docs and active development. ([GitHub](https://github.com/garrytan/gbrain/blob/master/docs/INSTALL.md "gbrain/docs/INSTALL.md at master · garrytan/gbrain · GitHub"))
     
@@ -557,16 +557,16 @@ GBrain is a git-backed AI memory system and agent operations layer. It stores st
 ## 15. AI/Data Engineering Relevance
 
 **Can this repository be used in data platforms?**  
-Yes, but as a memory/knowledge layer, not as a primary data warehouse. It fits best as a semantic and operational context store around your data platform. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md?utm_source=chatgpt.com "README.md - garrytan/gbrain"))
+Yes, but as a memory/knowledge layer, not as a primary data warehouse. It fits best as a semantic and operational context store around your data platform. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md "README.md - garrytan/gbrain"))
 
 **Can it be integrated into a lakehouse architecture?**  
 Yes. The likely pattern is: lakehouse holds facts and raw datasets, GBrain holds context, decisions, docs, entity pages, and retrieval metadata. ([GitHub](https://github.com/garrytan/gbrain/blob/master/docs/tutorials/company-brain.md "gbrain/docs/tutorials/company-brain.md at master · garrytan/gbrain · GitHub"))
 
 **Can it improve ETL/ELT pipelines?**  
-Yes, for orchestration context, runbooks, lineage notes, incident memory, and human-in-the-loop knowledge. It is not a replacement for Airflow/Dagster/dbt. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md?utm_source=chatgpt.com "CLAUDE.md - garrytan/gbrain"))
+Yes, for orchestration context, runbooks, lineage notes, incident memory, and human-in-the-loop knowledge. It is not a replacement for Airflow/Dagster/dbt. ([GitHub](https://github.com/garrytan/gbrain/blob/master/CLAUDE.md "CLAUDE.md - garrytan/gbrain"))
 
 **Can it be used for LLM, RAG, agents, or AI workflows?**  
-Absolutely. That is the center of gravity of the repo: agent memory, retrieval, synthesis, skills, and MCP integration. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md?utm_source=chatgpt.com "README.md - garrytan/gbrain"))
+Absolutely. That is the center of gravity of the repo: agent memory, retrieval, synthesis, skills, and MCP integration. ([GitHub](https://github.com/garrytan/gbrain/blob/master/README.md "README.md - garrytan/gbrain"))
 
 **Suggested enterprise architecture**  
 Use GBrain as the memory/control plane around your AI layer:

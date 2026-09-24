@@ -18,7 +18,7 @@ Comprehensive analysis of Turbovec, a Rust-based vector search engine implementi
 
 ## What is this project?
 
-**turbovec** is a high-performance vector search engine implemented in Rust with Python bindings. It implements Google's **TurboQuant** algorithm (ICLR 2026), a novel vector quantization technique designed for approximate nearest neighbor (ANN) search. ([GitHub](https://github.com/RyanCodrai/turbovec?utm_source=chatgpt.com "RyanCodrai/turbovec: A vector index built on TurboQuant ..."))
+**turbovec** is a high-performance vector search engine implemented in Rust with Python bindings. It implements Google's **TurboQuant** algorithm (ICLR 2026), a novel vector quantization technique designed for approximate nearest neighbor (ANN) search. ([GitHub](https://github.com/RyanCodrai/turbovec "RyanCodrai/turbovec: A vector index built on TurboQuant ..."))
 
 The project focuses on:
 
@@ -56,7 +56,7 @@ Example:
 
 10 million vectors at 1536 dimensions stored as float32 require approximately **31 GB RAM**.
 
-turbovec compresses the same dataset to roughly **4 GB** while maintaining comparable retrieval quality and often outperforming FAISS search speed. ([GitHub](https://github.com/RyanCodrai/turbovec?utm_source=chatgpt.com "RyanCodrai/turbovec: A vector index built on TurboQuant ..."))
+turbovec compresses the same dataset to roughly **4 GB** while maintaining comparable retrieval quality and often outperforming FAISS search speed. ([GitHub](https://github.com/RyanCodrai/turbovec "RyanCodrai/turbovec: A vector index built on TurboQuant ..."))
 
 ---
 
@@ -157,7 +157,7 @@ Unlike FAISS PQ:
 - No retraining
     
 
-Vectors become searchable immediately. ([GitHub](https://github.com/RyanCodrai/turbovec?utm_source=chatgpt.com "RyanCodrai/turbovec: A vector index built on TurboQuant ..."))
+Vectors become searchable immediately. ([GitHub](https://github.com/RyanCodrai/turbovec "RyanCodrai/turbovec: A vector index built on TurboQuant ..."))
 
 ---
 
@@ -170,7 +170,7 @@ Optimized kernels:
 - ARM NEON
     
 
-for high-throughput search. ([GitHub](https://github.com/RyanCodrai/turbovec?utm_source=chatgpt.com "RyanCodrai/turbovec: A vector index built on TurboQuant ..."))
+for high-throughput search. ([GitHub](https://github.com/RyanCodrai/turbovec "RyanCodrai/turbovec: A vector index built on TurboQuant ..."))
 
 ---
 
@@ -187,7 +187,7 @@ Supports:
 - Time-window filters
     
 
-without post-processing. ([GitHub](https://github.com/RyanCodrai/turbovec?utm_source=chatgpt.com "RyanCodrai/turbovec: A vector index built on TurboQuant ..."))
+without post-processing. ([GitHub](https://github.com/RyanCodrai/turbovec "RyanCodrai/turbovec: A vector index built on TurboQuant ..."))
 
 ---
 
@@ -361,7 +361,7 @@ Organizations deploying:
 - Agents
     
 
-often discover that vector storage becomes the dominant infrastructure cost. ([LinkedIn](https://www.linkedin.com/posts/rajatahuja_github-ryancodraiturbovec-a-vector-index-activity-7469358285771460608-B8te?utm_source=chatgpt.com "GitHub - RyanCodrai/turbovec: A vector index built on ..."))
+often discover that vector storage becomes the dominant infrastructure cost. ([LinkedIn](https://www.linkedin.com/posts/rajatahuja_github-ryancodraiturbovec-a-vector-index-activity-7469358285771460608-B8te "GitHub - RyanCodrai/turbovec: A vector index built on ..."))
 
 ---
 
@@ -632,7 +632,7 @@ Responsibilities:
 - FAISS comparison
     
 
-Repository contains benchmark result files. ([GitHub](https://github.com/RyanCodrai/turbovec/blob/main/benchmarks/results/recall_d3072_4bit.json?utm_source=chatgpt.com "turbovec/benchmarks/results/recall_d3072_4bit.json at main"))
+Repository contains benchmark result files. ([GitHub](https://github.com/RyanCodrai/turbovec/blob/main/benchmarks/results/recall_d3072_4bit.json "turbovec/benchmarks/results/recall_d3072_4bit.json at main"))
 
 ---
 
@@ -668,7 +668,7 @@ Responsibilities:
 pip install turbovec
 ```
 
-([GitHub](https://github.com/RyanCodrai/turbovec?utm_source=chatgpt.com "RyanCodrai/turbovec: A vector index built on TurboQuant ..."))
+([GitHub](https://github.com/RyanCodrai/turbovec "RyanCodrai/turbovec: A vector index built on TurboQuant ..."))
 
 ---
 
@@ -969,7 +969,7 @@ Memory layout optimized for SIMD.
     
 - Significant memory reduction (~16×).
     
-- Faster-than-FAISS claims supported by benchmarks. ([GitHub](https://github.com/RyanCodrai/turbovec?utm_source=chatgpt.com "RyanCodrai/turbovec: A vector index built on TurboQuant ..."))
+- Faster-than-FAISS claims supported by benchmarks. ([GitHub](https://github.com/RyanCodrai/turbovec "RyanCodrai/turbovec: A vector index built on TurboQuant ..."))
     
 - Strong fit for RAG infrastructure.
     
@@ -1149,4 +1149,4 @@ For data engineers building RAG or semantic search, turbovec offers a compelling
 - Bloom Filters — complementary data structure for pre-filtering
 - Python Environment Playbook — installing turbovec via pip
 
-For engineering leaders evaluating AI infrastructure in 2026, **turbovec is one of the more interesting emerging vector-search projects**. It occupies a space between low-level libraries like FAISS and full vector databases like Qdrant or Milvus. Its biggest value proposition is the combination of **training-free quantization, strong compression, SIMD-optimized search, and local-first deployment**, making it particularly attractive for enterprise RAG, private AI, and cost-sensitive retrieval systems. ([GitHub](https://github.com/RyanCodrai/turbovec?utm_source=chatgpt.com "RyanCodrai/turbovec: A vector index built on TurboQuant ..."))
+For engineering leaders evaluating AI infrastructure in 2026, **turbovec is one of the more interesting emerging vector-search projects**. It occupies a space between low-level libraries like FAISS and full vector databases like Qdrant or Milvus. Its biggest value proposition is the combination of **training-free quantization, strong compression, SIMD-optimized search, and local-first deployment**, making it particularly attractive for enterprise RAG, private AI, and cost-sensitive retrieval systems. ([GitHub](https://github.com/RyanCodrai/turbovec "RyanCodrai/turbovec: A vector index built on TurboQuant ..."))

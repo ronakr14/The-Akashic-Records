@@ -19,7 +19,7 @@ Comprehensive analysis of Task (`go-task/task`), a modern cross-platform task ru
 `go-task/task` is the source repository for Task, a fast, cross-platform task runner and build tool inspired by Make. The project positions itself as “The Modern Task Runner” and is centered around declarative Taskfiles for automating developer workflows. ([GitHub](https://github.com/go-task/task "GitHub - go-task/task: A fast, cross-platform build tool inspired by Make, designed for modern workflows. · GitHub"))
 
 **What problem it solves**  
-It replaces brittle shell scripts and Makefiles with a more readable, YAML-based workflow system that supports dependencies, variables, includes, environment handling, watch mode, cross-platform behavior, and deterministic execution semantics. The docs show support for dotenv, includes, flattening, fail-fast, platform-specific tasks, and up-to-date checks. ([Task](https://taskfile.dev/docs/guide?utm_source=chatgpt.com "Guide | Task"))
+It replaces brittle shell scripts and Makefiles with a more readable, YAML-based workflow system that supports dependencies, variables, includes, environment handling, watch mode, cross-platform behavior, and deterministic execution semantics. The docs show support for dotenv, includes, flattening, fail-fast, platform-specific tasks, and up-to-date checks. ([Task](https://taskfile.dev/docs/guide "Guide | Task"))
 
 **Target audience**  
 Developers, DevOps engineers, platform teams, and anyone managing repeatable local or CI automation. It is especially relevant for teams that want a simple task abstraction without introducing a heavyweight orchestration framework. The repo topics explicitly emphasize devops, task-runner, build-tool, and taskfile. ([GitHub](https://github.com/go-task/task "GitHub - go-task/task: A fast, cross-platform build tool inspired by Make, designed for modern workflows. · GitHub"))
@@ -33,7 +33,7 @@ This is a mature, production-grade open-source project, not a prototype. Evidenc
 Provide the CLI/runtime for Taskfiles, plus the compiler, executor, variable engine, watcher, completion generation, and supporting tooling needed to run tasks reliably across platforms. The repository contains both core runtime code and website/docs assets. ([GitHub](https://github.com/go-task/task "GitHub - go-task/task: A fast, cross-platform build tool inspired by Make, designed for modern workflows. · GitHub"))
 
 **Core features and capabilities**  
-From the docs and repo layout, the platform supports includes, flattening, dotenv, fail-fast behavior, platform targeting, task-level and root-level configuration, stdin Taskfiles, templates, and schema-driven validation. Recent changelog entries also mention DAG-based parsing/merging, remote Taskfiles experiments, wildcard task names, and support for running Taskfiles via stdin. ([Task](https://taskfile.dev/docs/guide?utm_source=chatgpt.com "Guide | Task"))
+From the docs and repo layout, the platform supports includes, flattening, dotenv, fail-fast behavior, platform targeting, task-level and root-level configuration, stdin Taskfiles, templates, and schema-driven validation. Recent changelog entries also mention DAG-based parsing/merging, remote Taskfiles experiments, wildcard task names, and support for running Taskfiles via stdin. ([Task](https://taskfile.dev/docs/guide "Guide | Task"))
 
 **Key technologies**  
 The codebase is primarily **Go** (about 85% of the repository by language stats), with supporting **Vue**, **TypeScript**, **Shell**, **PowerShell**, and **CSS** for docs/site/tooling. ([GitHub](https://github.com/go-task/task "GitHub - go-task/task: A fast, cross-platform build tool inspired by Make, designed for modern workflows. · GitHub"))
@@ -64,17 +64,17 @@ The repo is organized around a CLI entrypoint and core engine modules:
     
 3. It compiles the task graph and checks whether tasks should run.
     
-4. It executes commands with dependency handling, status checks, and optional watch/re-run behavior. ([Task](https://taskfile.dev/docs/guide?utm_source=chatgpt.com "Guide | Task"))
+4. It executes commands with dependency handling, status checks, and optional watch/re-run behavior. ([Task](https://taskfile.dev/docs/guide "Guide | Task"))
     
 
 **Major components/modules**  
-`task.go` is the central runtime path. The code snippet from `task.go` shows the execution flow: prompt dependencies, split regular vs watch calls, compile tasks, skip on platform mismatch, check required vars early, then fully compile and run condition checks and prompt task vars before execution. That is a fairly opinionated pipeline, not a thin shell wrapper. ([GitHub](https://github.com/go-task/task/blob/main/task.go?utm_source=chatgpt.com "task/task.go at main"))
+`task.go` is the central runtime path. The code snippet from `task.go` shows the execution flow: prompt dependencies, split regular vs watch calls, compile tasks, skip on platform mismatch, check required vars early, then fully compile and run condition checks and prompt task vars before execution. That is a fairly opinionated pipeline, not a thin shell wrapper. ([GitHub](https://github.com/go-task/task/blob/main/task.go "task/task.go at main"))
 
 **Data flow and execution flow**  
-The execution path appears to be: Taskfile input → AST/schema parsing → compiled task model → variable/template expansion → dependency resolution → conditional checks (`if`, required vars, platform filters) → command execution → status/fingerprint/watch handling. The schema docs and changelog also indicate checksum/timestamp-based up-to-date logic and DAG-based merging. ([Task](https://taskfile.dev/docs/reference/schema?utm_source=chatgpt.com "Taskfile Schema Reference | Task"))
+The execution path appears to be: Taskfile input → AST/schema parsing → compiled task model → variable/template expansion → dependency resolution → conditional checks (`if`, required vars, platform filters) → command execution → status/fingerprint/watch handling. The schema docs and changelog also indicate checksum/timestamp-based up-to-date logic and DAG-based merging. ([Task](https://taskfile.dev/docs/reference/schema "Taskfile Schema Reference | Task"))
 
 **Integrations and dependencies**  
-The project clearly integrates with shell commands, environment variables, dotenv files, CI workflows, and completion scripts. The docs show support for includes and flattening, plus global Taskfiles and stdin input. The repo also has a GitHub Action sibling project (`setup-task`) and a VS Code extension, which indicates an ecosystem around the CLI. ([Task](https://taskfile.dev/docs/guide?utm_source=chatgpt.com "Guide | Task"))
+The project clearly integrates with shell commands, environment variables, dotenv files, CI workflows, and completion scripts. The docs show support for includes and flattening, plus global Taskfiles and stdin input. The repo also has a GitHub Action sibling project (`setup-task`) and a VS Code extension, which indicates an ecosystem around the CLI. ([Task](https://taskfile.dev/docs/guide "Guide | Task"))
 
 ## 4. Why This Project Exists
 
@@ -82,45 +82,45 @@ The project clearly integrates with shell commands, environment variables, doten
 Teams need repeatable automation for dev, build, test, release, and environment setup workflows. Makefiles are powerful but often hard to read, platform-fragile, and inconsistent across modern workflows. Task is the “less annoying” abstraction for that gap. ([GitHub](https://github.com/go-task/task "GitHub - go-task/task: A fast, cross-platform build tool inspired by Make, designed for modern workflows. · GitHub"))
 
 **Technical challenges solved**  
-It handles templated variables, includes, task dependencies, cross-platform command differences, dotenv handling, watch mode, task status detection, and execution ordering. That removes a lot of incidental complexity from shell scripts and ad hoc CI glue. ([Task](https://taskfile.dev/docs/guide?utm_source=chatgpt.com "Guide | Task"))
+It handles templated variables, includes, task dependencies, cross-platform command differences, dotenv handling, watch mode, task status detection, and execution ordering. That removes a lot of incidental complexity from shell scripts and ad hoc CI glue. ([Task](https://taskfile.dev/docs/guide "Guide | Task"))
 
 **Advantages over traditional approaches**  
 Compared with Make, Task is more explicit, more readable, and better adapted to Go-centric and cross-platform environments. Compared with pure shell scripts, it offers schema, composition, and task metadata. Compared with full workflow engines, it is lighter and developer-local first. ([GitHub](https://github.com/go-task/task "GitHub - go-task/task: A fast, cross-platform build tool inspired by Make, designed for modern workflows. · GitHub"))
 
 **Differentiators**  
-Task’s differentiation is not one “killer feature”; it is the combination of: YAML schema, clean task composition, support for includes and flattening, environment/dotenv semantics, fingerprinting/status, and a CLI-first developer experience. The changelog shows ongoing refinement rather than radical rewrites. ([Task](https://taskfile.dev/docs/reference/schema?utm_source=chatgpt.com "Taskfile Schema Reference | Task"))
+Task’s differentiation is not one “killer feature”; it is the combination of: YAML schema, clean task composition, support for includes and flattening, environment/dotenv semantics, fingerprinting/status, and a CLI-first developer experience. The changelog shows ongoing refinement rather than radical rewrites. ([Task](https://taskfile.dev/docs/reference/schema "Taskfile Schema Reference | Task"))
 
 ## 5. How It Can Be Used
 
 **1) Local developer automation**  
 Scenario: `task setup`, `task test`, `task lint`, `task dev`.  
 Benefits: one canonical entrypoint, fewer tribal-knowledge scripts, simpler onboarding.  
-Complexity: **Low**. ([Task](https://taskfile.dev/docs/guide?utm_source=chatgpt.com "Guide | Task"))
+Complexity: **Low**. ([Task](https://taskfile.dev/docs/guide "Guide | Task"))
 
 **2) CI/CD pipeline glue**  
 Scenario: GitHub Actions invokes Task for build/test/release steps.  
 Benefits: same tasks locally and in CI, less duplication, easier consistency.  
-Complexity: **Low–Medium**. ([GitHub](https://github.com/go-task/setup-task?utm_source=chatgpt.com "GitHub - go-task/setup-task"))
+Complexity: **Low–Medium**. ([GitHub](https://github.com/go-task/setup-task "GitHub - go-task/setup-task"))
 
 **3) Monorepo orchestration**  
 Scenario: root Taskfile fans out to service-specific includes.  
 Benefits: namespace separation, flattening where needed, reusable per-service operations.  
-Complexity: **Medium**. ([Task](https://taskfile.dev/docs/guide?utm_source=chatgpt.com "Guide | Task"))
+Complexity: **Medium**. ([Task](https://taskfile.dev/docs/guide "Guide | Task"))
 
 **4) Cross-platform build wrappers**  
 Scenario: build on macOS, Linux, Windows with platform-specific tasks.  
 Benefits: fewer platform conditionals in shell scripts.  
-Complexity: **Medium**. ([Task](https://taskfile.dev/docs/guide?utm_source=chatgpt.com "Guide | Task"))
+Complexity: **Medium**. ([Task](https://taskfile.dev/docs/guide "Guide | Task"))
 
 **5) File-watch driven development loops**  
 Scenario: `task watch`-style workflows for rebuild/retest on file changes.  
 Benefits: faster feedback loop, especially for frontend/backend builds.  
-Complexity: **Medium**. ([GitHub](https://github.com/go-task/task/blob/main/task.go?utm_source=chatgpt.com "task/task.go at main"))
+Complexity: **Medium**. ([GitHub](https://github.com/go-task/task/blob/main/task.go "task/task.go at main"))
 
 **6) Reusable internal platform templates**  
 Scenario: opinionated starter Taskfiles for teams.  
 Benefits: standardization across repositories.  
-Complexity: **Medium**. ([Task](https://taskfile.dev/docs/reference/schema?utm_source=chatgpt.com "Taskfile Schema Reference | Task"))
+Complexity: **Medium**. ([Task](https://taskfile.dev/docs/reference/schema "Taskfile Schema Reference | Task"))
 
 ## 6. Where It Can Be Used
 
@@ -160,16 +160,16 @@ Useful as a standard task abstraction across many repositories and teams, especi
 `README.md`, `Taskfile.yml`, `.taskrc.yml`, `CHANGELOG.md`, `go.mod`, `go.sum` define the project’s public face, development workflow, and module constraints. The changelog is especially important because it reveals roadmap and stability signals. ([GitHub](https://github.com/go-task/task "GitHub - go-task/task: A fast, cross-platform build tool inspired by Make, designed for modern workflows. · GitHub"))
 
 **`task.go`**  
-Central execution path. It coordinates prompt handling, compilation, platform filtering, conditional logic, and execution flow. The visible snippet shows the runtime is layered and defensive. ([GitHub](https://github.com/go-task/task/blob/main/task.go?utm_source=chatgpt.com "task/task.go at main"))
+Central execution path. It coordinates prompt handling, compilation, platform filtering, conditional logic, and execution flow. The visible snippet shows the runtime is layered and defensive. ([GitHub](https://github.com/go-task/task/blob/main/task.go "task/task.go at main"))
 
 **`executor.go`**  
-Core execution engine; tests in `executor_test.go` build around `task.NewExecutor`, `Setup`, `Run`, and `Status`, which strongly suggests this is the operational heart behind CLI behavior. ([GitHub](https://github.com/go-task/task/blob/main/executor_test.go?utm_source=chatgpt.com "task/executor_test.go at main"))
+Core execution engine; tests in `executor_test.go` build around `task.NewExecutor`, `Setup`, `Run`, and `Status`, which strongly suggests this is the operational heart behind CLI behavior. ([GitHub](https://github.com/go-task/task/blob/main/executor_test.go "task/executor_test.go at main"))
 
 **`compiler.go`**  
-Likely handles Taskfile parsing, merging, and resolution into executable task structures. The changelog’s DAG-based parsing/merging note reinforces that this is a nontrivial compiler, not a shallow config loader. ([Task](https://taskfile.dev/docs/changelog?utm_source=chatgpt.com "Changelog | Task"))
+Likely handles Taskfile parsing, merging, and resolution into executable task structures. The changelog’s DAG-based parsing/merging note reinforces that this is a nontrivial compiler, not a shallow config loader. ([Task](https://taskfile.dev/docs/changelog "Changelog | Task"))
 
 **`variables.go`**  
-Responsible for templating/variable resolution, one of the project’s most central features. The docs emphasize rich variable semantics, dotenv integration, and templating. ([Task](https://taskfile.dev/docs/guide?utm_source=chatgpt.com "Guide | Task"))
+Responsible for templating/variable resolution, one of the project’s most central features. The docs emphasize rich variable semantics, dotenv integration, and templating. ([Task](https://taskfile.dev/docs/guide "Guide | Task"))
 
 **`watch.go`**  
 Implements file-watching behavior and incremental reruns. The existence of watch-specific tests and issue reports shows it is a meaningful execution mode, not a side feature. ([GitHub](https://github.com/go-task/task "GitHub - go-task/task: A fast, cross-platform build tool inspired by Make, designed for modern workflows. · GitHub"))
@@ -192,7 +192,7 @@ Docs/site assets. This is important because Task is documentation-driven and sch
 Built in Go, distributed as a CLI. The repo has release automation and install scripts, and the docs site provides installation guidance. The minimum Go version was raised to 1.21 in recent releases. ([GitHub](https://github.com/go-task/task "GitHub - go-task/task: A fast, cross-platform build tool inspired by Make, designed for modern workflows. · GitHub"))
 
 **Deployment options**  
-Local binary, CI runner, developer machine, and possibly packaged via shell install scripts or OS package managers depending on ecosystem support. There is also a GitHub Action integration project. ([GitHub](https://github.com/go-task/setup-task?utm_source=chatgpt.com "GitHub - go-task/setup-task"))
+Local binary, CI runner, developer machine, and possibly packaged via shell install scripts or OS package managers depending on ecosystem support. There is also a GitHub Action integration project. ([GitHub](https://github.com/go-task/setup-task "GitHub - go-task/setup-task"))
 
 **Infrastructure requirements**  
 Very light. It is a CLI utility, so the main requirement is a shell environment and whatever tooling your Taskfiles invoke.
@@ -208,13 +208,13 @@ You need standards for Taskfile structure, variable naming, include strategy, an
 ### Strengths
 
 **Scalability**  
-Good for scaling task definitions across repositories and monorepos via includes and namespaces. ([Task](https://taskfile.dev/docs/guide?utm_source=chatgpt.com "Guide | Task"))
+Good for scaling task definitions across repositories and monorepos via includes and namespaces. ([Task](https://taskfile.dev/docs/guide "Guide | Task"))
 
 **Maintainability**  
 Better than scattered shell scripts because workflows are centralized and typed by schema.
 
 **Extensibility**  
-Strong. The project supports experiments, template functions, remote Taskfiles, and schema evolution. ([Task](https://taskfile.dev/docs/changelog?utm_source=chatgpt.com "Changelog | Task"))
+Strong. The project supports experiments, template functions, remote Taskfiles, and schema evolution. ([Task](https://taskfile.dev/docs/changelog "Changelog | Task"))
 
 **Performance**  
 Likely solid for CLI automation. The codebase includes benchmarks and fingerprinting logic, suggesting performance is a real concern. ([GitHub](https://github.com/go-task/task "GitHub - go-task/task: A fast, cross-platform build tool inspired by Make, designed for modern workflows. · GitHub"))
@@ -234,7 +234,7 @@ It is not a workflow engine, scheduler, DAG platform, or data orchestrator. It i
 No indication of native secrets management, remote execution, distributed scheduling, or enterprise policy enforcement.
 
 **Technical debt indicators**  
-The presence of many issues/discussions and active experiments suggests ongoing complexity management. Watch-mode concurrency bugs have also appeared in the issue tracker, which is normal for a tool like this but still worth noting. ([GitHub](https://github.com/go-task/task/issues/1605?utm_source=chatgpt.com "concurrent map writes · Issue #1605 · go-task/task - fatal error"))
+The presence of many issues/discussions and active experiments suggests ongoing complexity management. Watch-mode concurrency bugs have also appeared in the issue tracker, which is normal for a tool like this but still worth noting. ([GitHub](https://github.com/go-task/task/issues/1605 "concurrent map writes · Issue #1605 · go-task/task - fatal error"))
 
 ## 10. Enterprise Evaluation
 
@@ -245,13 +245,13 @@ Mature repo, active releases, lots of commits, docs, tests, and a stable CLI foo
 Open-source CLI with a documented security policy, but it is still a tool that executes arbitrary commands by design. That is a trust boundary you manage yourself. ([GitHub](https://github.com/go-task/task "GitHub - go-task/task: A fast, cross-platform build tool inspired by Make, designed for modern workflows. · GitHub"))
 
 **Scalability: 8/10**  
-Scales well in org adoption and repository sprawl, but not as a runtime platform. ([Task](https://taskfile.dev/docs/guide?utm_source=chatgpt.com "Guide | Task"))
+Scales well in org adoption and repository sprawl, but not as a runtime platform. ([Task](https://taskfile.dev/docs/guide "Guide | Task"))
 
 **Observability: 5/10**  
 Some status/output handling exists, but this is not an observability-first tool.
 
 **Documentation quality: 9/10**  
-Very strong docs site plus schema and changelog. ([Task](https://taskfile.dev/docs/reference/schema?utm_source=chatgpt.com "Taskfile Schema Reference | Task"))
+Very strong docs site plus schema and changelog. ([Task](https://taskfile.dev/docs/reference/schema "Taskfile Schema Reference | Task"))
 
 **Community support: 8/10**  
 Good star count, active releases, ecosystem projects, and ongoing discussions. ([GitHub](https://github.com/go-task/task "GitHub - go-task/task: A fast, cross-platform build tool inspired by Make, designed for modern workflows. · GitHub"))
@@ -265,7 +265,7 @@ The architecture appears disciplined, but the feature surface is broad enough to
 Task is more readable and cross-platform-friendly. Make is lower-level and more universal, but its syntax and behavior are rougher for modern teams.
 
 **Just**  
-Just is also a task runner with a cleaner syntax. Task tends to be more feature-rich around includes, environment handling, and schema-driven workflows; Just can feel simpler for small setups. Related repos in the same ecosystem suggest complementary philosophy rather than direct replacement. ([GitHub](https://github.com/go-task/template?utm_source=chatgpt.com "go-task/template"))
+Just is also a task runner with a cleaner syntax. Task tends to be more feature-rich around includes, environment handling, and schema-driven workflows; Just can feel simpler for small setups. Related repos in the same ecosystem suggest complementary philosophy rather than direct replacement. ([GitHub](https://github.com/go-task/template "go-task/template"))
 
 **Shell scripts**  
 Task wins on structure, discoverability, reuse, and consistency. Shell wins on flexibility and ubiquity. Shell also wins at becoming unreadable at scale.
@@ -374,7 +374,7 @@ Task is a mature, well-documented Go-based task runner for developer automation.
     
 - Excellent fit for dev automation, CI glue, and monorepo task standardization.
     
-- Not a substitute for orchestration engines, secret managers, or observability stacks. ([GitHub](https://github.com/go-task/task/blob/main/task.go?utm_source=chatgpt.com "task/task.go at main"))
+- Not a substitute for orchestration engines, secret managers, or observability stacks. ([GitHub](https://github.com/go-task/task/blob/main/task.go "task/task.go at main"))
     
 
 **Recommended adoption scenarios**

@@ -17,7 +17,7 @@ Below is a deep-dive report on `cryptee/web-client`, based on the repository REA
 
 Cryptee’s `web-client` is the front-end codebase for a privacy-focused, zero-knowledge encrypted productivity suite. It powers Cryptee Docs and related experiences for encrypted documents, notes, journaling, and private photo/file storage. The project exists to let users work with sensitive content without exposing plaintext to the service provider. Cryptee states that encryption happens on the front end so users do not have to trust opaque backend code with raw data. ([GitHub](https://github.com/cryptee/web-client "GitHub - cryptee/web-client: Cryptee's web client source code for all platforms. · GitHub"))
 
-It solves a familiar but still painful problem: people want cloud convenience without cloud visibility. Traditional note apps, document systems, and file stores often require trust in the vendor. Cryptee’s pitch is “you control the key, the provider cannot read your data.” That makes it useful for journalists, activists, researchers, privacy-conscious consumers, and anyone handling sensitive personal or professional material. ([crypt.ee](https://crypt.ee/press-kit?utm_source=chatgpt.com "Press Kit"))
+It solves a familiar but still painful problem: people want cloud convenience without cloud visibility. Traditional note apps, document systems, and file stores often require trust in the vendor. Cryptee’s pitch is “you control the key, the provider cannot read your data.” That makes it useful for journalists, activists, researchers, privacy-conscious consumers, and anyone handling sensitive personal or professional material. ([crypt.ee](https://crypt.ee/press-kit "Press Kit"))
 
 Maturity: this is a production product, not a prototype. The repository has 114 commits, public issues, an active product site, a PWA install flow, offline behavior, account/data export flows, and an established documentation surface. I would classify the overall product as production-ready, while the open-source frontend repository itself is “production-grade but not fully open” because the backend remains closed. ([GitHub](https://github.com/cryptee/web-client "GitHub - cryptee/web-client: Cryptee's web client source code for all platforms. · GitHub"))
 
@@ -25,7 +25,7 @@ Maturity: this is a production product, not a prototype. The repository has 114 
 
 The main purpose of the repository is to host Cryptee’s web client source code for all platforms. The README explicitly says this is the web client source for Cryptee and explains the rationale for front-end open sourcing even while the backend remains closed. ([GitHub](https://github.com/cryptee/web-client "GitHub - cryptee/web-client: Cryptee's web client source code for all platforms. · GitHub"))
 
-Core capabilities, from the repo and product pages, include encrypted document editing, offline document creation/editing, photo/file storage, syncing, and PWA installation across desktop and mobile. Cryptee also supports account-level data download and browser-based use without an app store dependency. ([crypt.ee](https://crypt.ee/docs?utm_source=chatgpt.com "Docs"))
+Core capabilities, from the repo and product pages, include encrypted document editing, offline document creation/editing, photo/file storage, syncing, and PWA installation across desktop and mobile. Cryptee also supports account-level data download and browser-based use without an app store dependency. ([crypt.ee](https://crypt.ee/docs "Docs"))
 
 Technologies and languages visible from the repo page are mostly JavaScript, CSS, Kit, and a bit of HTML. The README also says Cryptee uses jQuery syntax and CodeKit rather than heavier modern frontend frameworks. That is a strong signal that the codebase is optimized for a small team’s shipping speed and long-term stability over fashion. ([GitHub](https://github.com/cryptee/web-client "GitHub - cryptee/web-client: Cryptee's web client source code for all platforms. · GitHub"))
 
@@ -34,7 +34,7 @@ the client is a browser-first application with local encryption, offline capabil
 
 ## 3. How It Works
 
-In simple terms: you open Cryptee in a browser or install it as a PWA, create or edit docs/photos/files locally, and the client encrypts your content before it leaves your device. When network access is available, encrypted content is synced. When offline, you can still create and edit documents, then the changes sync later. ([crypt.ee](https://crypt.ee/download?utm_source=chatgpt.com "Download & Installation"))
+In simple terms: you open Cryptee in a browser or install it as a PWA, create or edit docs/photos/files locally, and the client encrypts your content before it leaves your device. When network access is available, encrypted content is synced. When offline, you can still create and edit documents, then the changes sync later. ([crypt.ee](https://crypt.ee/download "Download & Installation"))
 
 Major components, as inferred from the repository structure and product behavior:  
 the document editor layer, the encryption layer, the sync/storage layer, the offline/PWA layer, and UI/interaction code. The README strongly emphasizes that encryption lives on the front end; that is the architectural center of gravity. ([GitHub](https://github.com/cryptee/web-client "GitHub - cryptee/web-client: Cryptee's web client source code for all platforms. · GitHub"))
@@ -45,7 +45,7 @@ Integrations and dependencies visible in the repo and product docs include brows
 
 ## 4. Why This Project Exists
 
-Business problem: Cryptee is trying to sell a trustworthy place to write and store private data without being able to read it themselves. That is a strong privacy product proposition, especially in a world where users increasingly distrust data-hungry SaaS. ([crypt.ee](https://crypt.ee/?utm_source=chatgpt.com "Cryptee | Encrypted Secure Photo Storage & Encrypted ..."))
+Business problem: Cryptee is trying to sell a trustworthy place to write and store private data without being able to read it themselves. That is a strong privacy product proposition, especially in a world where users increasingly distrust data-hungry SaaS. ([crypt.ee](https://crypt.ee/ "Cryptee | Encrypted Secure Photo Storage & Encrypted ..."))
 
 Technical challenge: build a usable web app that still guarantees end-to-end encryption, supports offline use, and works across devices. That is not trivial. The client must manage encryption, sync, UI fidelity, and platform quirks while keeping the security model credible. ([GitHub](https://github.com/cryptee/web-client "GitHub - cryptee/web-client: Cryptee's web client source code for all platforms. · GitHub"))
 
@@ -62,35 +62,35 @@ zero-knowledge architecture, web-first/PWA delivery, offline operation, and a de
 Description: encrypted writing for notes, docs, journals, and sensitive drafts.  
 Example: a journalist drafts interview notes and source details in Cryptee instead of a conventional cloud note app.  
 Benefits: confidentiality, device-level control, offline editing.  
-Complexity: Low. ([crypt.ee](https://crypt.ee/press-kit?utm_source=chatgpt.com "Press Kit"))
+Complexity: Low. ([crypt.ee](https://crypt.ee/press-kit "Press Kit"))
 
 ### Secure personal file storage
 
 Description: keep files/photos in an encrypted store.  
 Example: a consultant stores contracts and scanned IDs privately.  
 Benefits: reduced provider trust, safer cloud storage.  
-Complexity: Low to Medium. ([crypt.ee](https://crypt.ee/press-kit?utm_source=chatgpt.com "Press Kit"))
+Complexity: Low to Medium. ([crypt.ee](https://crypt.ee/press-kit "Press Kit"))
 
 ### Privacy-first journaling / PKM
 
 Description: long-form notes with privacy guarantees.  
 Example: a founder keeps strategy notes and personal reflections in one encrypted workspace.  
 Benefits: confidentiality and portability.  
-Complexity: Low. ([crypt.ee](https://crypt.ee/press-kit?utm_source=chatgpt.com "Press Kit"))
+Complexity: Low. ([crypt.ee](https://crypt.ee/press-kit "Press Kit"))
 
 ### Offline-first mobile/desktop workflow
 
 Description: use the web app as an installable PWA.  
 Example: a remote worker edits docs on a laptop during travel with spotty connectivity.  
 Benefits: continuity, less app-store dependence.  
-Complexity: Low. ([crypt.ee](https://crypt.ee/download?utm_source=chatgpt.com "Download & Installation"))
+Complexity: Low. ([crypt.ee](https://crypt.ee/download "Download & Installation"))
 
 ### Sensitive data escrow for individuals
 
 Description: store material you want protected from provider access.  
 Example: a researcher stores interview transcripts and grant notes.  
 Benefits: zero-knowledge privacy posture.  
-Complexity: Medium. ([crypt.ee](https://crypt.ee/press-kit?utm_source=chatgpt.com "Press Kit"))
+Complexity: Medium. ([crypt.ee](https://crypt.ee/press-kit "Press Kit"))
 
 ## 6. Where It Can Be Used
 
@@ -136,14 +136,14 @@ Interactions: governs contributor and user rights. ([GitHub](https://github.com/
 
 ## 8. Setup and Adoption
 
-Installation requirements are light from the user perspective: a modern browser, or installation as a PWA on supported desktop/mobile platforms. Cryptee explicitly recommends common browsers and supports offline PWA behavior. ([crypt.ee](https://crypt.ee/download?utm_source=chatgpt.com "Download & Installation"))
+Installation requirements are light from the user perspective: a modern browser, or installation as a PWA on supported desktop/mobile platforms. Cryptee explicitly recommends common browsers and supports offline PWA behavior. ([crypt.ee](https://crypt.ee/download "Download & Installation"))
 
 Deployment options are essentially browser-based and app-like through PWA install. There is no evidence in the repo that this is meant to be self-hosted end to end; in fact, the README explains why the backend is not open sourced. ([GitHub](https://github.com/cryptee/web-client "GitHub - cryptee/web-client: Cryptee's web client source code for all platforms. · GitHub"))
 
 Infrastructure requirements for end users are minimal. For the vendor, the requirements are substantial: sync/storage services, encryption-compatible API design, abuse prevention, offline support, and high availability. ([GitHub](https://github.com/cryptee/web-client "GitHub - cryptee/web-client: Cryptee's web client source code for all platforms. · GitHub"))
 
 Learning curve: moderate for ordinary users, lower than many encrypted systems because the UX is browser-based, but still harder than a standard SaaS because key handling and privacy concepts matter.  
-Operational considerations: key recovery, offline sync edge cases, browser compatibility, service worker behavior, and content-blocker interference all matter. ([crypt.ee](https://crypt.ee/download?utm_source=chatgpt.com "Download & Installation"))
+Operational considerations: key recovery, offline sync edge cases, browser compatibility, service worker behavior, and content-blocker interference all matter. ([crypt.ee](https://crypt.ee/download "Download & Installation"))
 
 ## 9. Strengths and Weaknesses
 
@@ -180,7 +180,7 @@ Compared with **Google Docs/Notion**: Cryptee is much stronger on privacy, weake
 Compared with **Obsidian Sync**: Obsidian is better for local-first markdown workflows and extensibility; Cryptee is more of a hosted encrypted suite.  
 Compared with **Standard Notes**: closer in privacy posture, but Cryptee emphasizes docs/photos/files plus PWA delivery.  
 Compared with **Dropbox/Drive**: Cryptee is more private by design, less general-purpose for enterprise sharing and admin controls.  
-Cost-wise, Cryptee is a paid subscription product, and the tradeoff is privacy instead of broad ecosystem gravity. ([crypt.ee](https://crypt.ee/?utm_source=chatgpt.com "Cryptee | Encrypted Secure Photo Storage & Encrypted ..."))
+Cost-wise, Cryptee is a paid subscription product, and the tradeoff is privacy instead of broad ecosystem gravity. ([crypt.ee](https://crypt.ee/ "Cryptee | Encrypted Secure Photo Storage & Encrypted ..."))
 
 ## 12. Engineering Takeaways
 
@@ -275,7 +275,7 @@ The project is serious, mature, and user-facing. Its privacy model is the differ
 
 ### Recommended adoption scenarios
 
-Use it when privacy and encrypted storage are top requirements, especially for personal docs, research notes, sensitive files, and privacy-centric journaling. Evaluate it for enterprise teams only if the closed backend is acceptable and the deployment model matches your risk posture. Avoid it if you need full self-hosting, open backend auditability, or deep collaboration ecosystem features. ([crypt.ee](https://crypt.ee/press-kit?utm_source=chatgpt.com "Press Kit"))
+Use it when privacy and encrypted storage are top requirements, especially for personal docs, research notes, sensitive files, and privacy-centric journaling. Evaluate it for enterprise teams only if the closed backend is acceptable and the deployment model matches your risk posture. Avoid it if you need full self-hosting, open backend auditability, or deep collaboration ecosystem features. ([crypt.ee](https://crypt.ee/press-kit "Press Kit"))
 
 ### Decision matrix
 
@@ -289,7 +289,7 @@ Can this repository be used in data platforms? Indirectly, yes. It is not a data
 
 Can it be integrated into a lakehouse architecture? Not as a native lakehouse layer, but it can serve as a secure user-facing app for metadata, documentation, and sensitive knowledge capture adjacent to a lakehouse.  
 Can it improve ETL/ELT pipelines? Not directly. It can improve the human side of ETL/ELT by storing runbooks, lineage notes, and incident retrospectives securely.  
-Can it be used for LLM, RAG, agents, or AI workflows? Yes, as a secure source of human-curated documents and prompts, but not as the AI engine itself. It could be a good privacy-preserving UI for prompt libraries, eval logs, or annotation notes. ([crypt.ee](https://crypt.ee/press-kit?utm_source=chatgpt.com "Press Kit"))
+Can it be used for LLM, RAG, agents, or AI workflows? Yes, as a secure source of human-curated documents and prompts, but not as the AI engine itself. It could be a good privacy-preserving UI for prompt libraries, eval logs, or annotation notes. ([crypt.ee](https://crypt.ee/press-kit "Press Kit"))
 
 Suggested enterprise architecture:  
 use Cryptee as a privacy-first document capture layer for sensitive notes, research, and review artifacts; export or ingest approved plaintext/ciphertext metadata into an enterprise knowledge pipeline; store operational data in the lakehouse; index non-sensitive summaries into a vector store for RAG; keep encryption keys and sensitive primary content outside the AI training/evaluation loop; and expose only policy-approved, redacted outputs to downstream analytics and LLM agents. In other words: Cryptee can sit at the edge of the knowledge system, not the center of the data plane. That is the sane way to do it. ([GitHub](https://github.com/cryptee/web-client "GitHub - cryptee/web-client: Cryptee's web client source code for all platforms. · GitHub"))

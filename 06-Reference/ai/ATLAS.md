@@ -11,9 +11,9 @@ Comprehensive architectural analysis of ATLAS by General Intelligence Capital, a
 
 ---
 
-I dug through the repository’s public-facing material and the picture is pretty clear: **atlas-gic is a provocative, research-heavy, trading-agent framework for autonomous AI investing** that uses a Karpathy-style “autoresearch” loop to rewrite prompts based on market feedback, weight agents by performance, and evolve the system over time. The repo positions itself as a live system “running with real capital,” with a layered agent architecture, regime-specific training, reflexivity modeling, and simulated futures via MiroFish. ([GitHub](https://github.com/chrisworsey55/atlas-gic/blob/main/README.md?utm_source=chatgpt.com "README.md - chrisworsey55/atlas-gic"))
+I dug through the repository’s public-facing material and the picture is pretty clear: **atlas-gic is a provocative, research-heavy, trading-agent framework for autonomous AI investing** that uses a Karpathy-style “autoresearch” loop to rewrite prompts based on market feedback, weight agents by performance, and evolve the system over time. The repo positions itself as a live system “running with real capital,” with a layered agent architecture, regime-specific training, reflexivity modeling, and simulated futures via MiroFish. ([GitHub](https://github.com/chrisworsey55/atlas-gic/blob/main/README.md "README.md - chrisworsey55/atlas-gic"))
 
-There is one limitation: the repository’s GitHub page currently exposes the README and top-level claims, but not the full code tree in the crawled output, so the **directory-level and function-level analysis below is inferred from the documented architecture rather than line-by-line source inspection**. The repo itself also says the trained prompts and scorecards are not included. ([GitHub](https://github.com/chrisworsey55/atlas-gic/blob/main/README.md?utm_source=chatgpt.com "README.md - chrisworsey55/atlas-gic"))
+There is one limitation: the repository’s GitHub page currently exposes the README and top-level claims, but not the full code tree in the crawled output, so the **directory-level and function-level analysis below is inferred from the documented architecture rather than line-by-line source inspection**. The repo itself also says the trained prompts and scorecards are not included. ([GitHub](https://github.com/chrisworsey55/atlas-gic/blob/main/README.md "README.md - chrisworsey55/atlas-gic"))
 
 ## 1. Executive Summary
 
@@ -32,7 +32,7 @@ Best classified as a **late prototype / early production research platform**. Th
 ## 2. Repository Overview
 
 **Main purpose**  
-Document and present an AI trading framework that uses multi-agent debate, evolutionary prompt optimization, and regime-specific specialization. ([GitHub](https://github.com/chrisworsey55/atlas-gic/blob/main/README.md?utm_source=chatgpt.com "README.md - chrisworsey55/atlas-gic"))
+Document and present an AI trading framework that uses multi-agent debate, evolutionary prompt optimization, and regime-specific specialization. ([GitHub](https://github.com/chrisworsey55/atlas-gic/blob/main/README.md "README.md - chrisworsey55/atlas-gic"))
 
 **Core features and capabilities**
 
@@ -205,17 +205,17 @@ Because the repository tree was not fully exposed in the crawled output, this se
 **README.md**  
 Purpose: the main product narrative, architecture summary, results, and commercial positioning.  
 Responsibilities: explain the system, advertise access tiers, summarize the autoresearch loop and results.  
-Interactions: acts as the primary entry point for every audience. ([GitHub](https://github.com/chrisworsey55/atlas-gic/blob/main/README.md?utm_source=chatgpt.com "README.md - chrisworsey55/atlas-gic"))
+Interactions: acts as the primary entry point for every audience. ([GitHub](https://github.com/chrisworsey55/atlas-gic/blob/main/README.md "README.md - chrisworsey55/atlas-gic"))
 
 **LICENSE**  
 Purpose: MIT license for the framework/documentation/example prompts.  
 Responsibilities: permit reuse while excluding proprietary trained prompts.  
-Interactions: separates public framework IP from private production IP. ([GitHub](https://github.com/chrisworsey55/atlas-gic/blob/main/LICENSE?utm_source=chatgpt.com "license - chrisworsey55/atlas-gic"))
+Interactions: separates public framework IP from private production IP. ([GitHub](https://github.com/chrisworsey55/atlas-gic/blob/main/LICENSE "license - chrisworsey55/atlas-gic"))
 
 **results/**  
 Purpose: likely stores backtest artifacts, charts, or outputs.  
 Responsibilities: provide evidence of performance and experiments.  
-Interactions: feeds the README claims. The crawled page itself does not expose contents. ([GitHub](https://github.com/chrisworsey55/atlas-gic/tree/main/results?utm_source=chatgpt.com "results"))
+Interactions: feeds the README claims. The crawled page itself does not expose contents. ([GitHub](https://github.com/chrisworsey55/atlas-gic/tree/main/results "results"))
 
 ## 8. Setup and Adoption
 
@@ -267,9 +267,9 @@ Model drift, market regime shifts, prompt governance, compliance, and reproducib
 
 - **Risks**: financial losses, overfitting, regime failure, hidden dependencies. ([GitHub](https://github.com/chrisworsey55/atlas-gic "GitHub - chrisworsey55/atlas-gic: ATLAS by General Intelligence Capital — Self-improving AI trading agents using Karpathy-style autoresearch · GitHub"))
     
-- **Limitations**: proprietary trained prompts are missing, so the repo is not fully reproducible. ([GitHub](https://github.com/chrisworsey55/atlas-gic/blob/main/LICENSE?utm_source=chatgpt.com "license - chrisworsey55/atlas-gic"))
+- **Limitations**: proprietary trained prompts are missing, so the repo is not fully reproducible. ([GitHub](https://github.com/chrisworsey55/atlas-gic/blob/main/LICENSE "license - chrisworsey55/atlas-gic"))
     
-- **Missing features**: public observability, evaluation harness details, exact schemas, and safety controls are not visible. ([GitHub](https://github.com/chrisworsey55/atlas-gic/blob/main/README.md?utm_source=chatgpt.com "README.md - chrisworsey55/atlas-gic"))
+- **Missing features**: public observability, evaluation harness details, exact schemas, and safety controls are not visible. ([GitHub](https://github.com/chrisworsey55/atlas-gic/blob/main/README.md "README.md - chrisworsey55/atlas-gic"))
     
 - **Technical debt indicators**: heavy narrative, sparse public code exposure, and strong claims without full reproducibility. ([GitHub](https://github.com/chrisworsey55/atlas-gic "GitHub - chrisworsey55/atlas-gic: ATLAS by General Intelligence Capital — Self-improving AI trading agents using Karpathy-style autoresearch · GitHub"))
     
@@ -280,7 +280,7 @@ Model drift, market regime shifts, prompt governance, compliance, and reproducib
 Interesting and partially operational by claim, but not enterprise-grade from the public repo alone. ([GitHub](https://github.com/chrisworsey55/atlas-gic "GitHub - chrisworsey55/atlas-gic: ATLAS by General Intelligence Capital — Self-improving AI trading agents using Karpathy-style autoresearch · GitHub"))
 
 **Security: 3/10**  
-No visible hardening, governance, or control-plane detail in the public artifact. ([GitHub](https://github.com/chrisworsey55/atlas-gic/blob/main/README.md?utm_source=chatgpt.com "README.md - chrisworsey55/atlas-gic"))
+No visible hardening, governance, or control-plane detail in the public artifact. ([GitHub](https://github.com/chrisworsey55/atlas-gic/blob/main/README.md "README.md - chrisworsey55/atlas-gic"))
 
 **Scalability: 6/10**  
 Conceptually scalable through agents and weighting, but practical scaling depends on orchestration and data quality. ([GitHub](https://github.com/chrisworsey55/atlas-gic "GitHub - chrisworsey55/atlas-gic: ATLAS by General Intelligence Capital — Self-improving AI trading agents using Karpathy-style autoresearch · GitHub"))
@@ -289,13 +289,13 @@ Conceptually scalable through agents and weighting, but practical scaling depend
 There is scoring and backtest evidence, but no visible logs/metrics/trace architecture. ([GitHub](https://github.com/chrisworsey55/atlas-gic "GitHub - chrisworsey55/atlas-gic: ATLAS by General Intelligence Capital — Self-improving AI trading agents using Karpathy-style autoresearch · GitHub"))
 
 **Documentation quality: 7/10**  
-The README is unusually detailed and well-structured. ([GitHub](https://github.com/chrisworsey55/atlas-gic/blob/main/README.md?utm_source=chatgpt.com "README.md - chrisworsey55/atlas-gic"))
+The README is unusually detailed and well-structured. ([GitHub](https://github.com/chrisworsey55/atlas-gic/blob/main/README.md "README.md - chrisworsey55/atlas-gic"))
 
 **Community support: 5/10**  
 Strong attention, decent stars/forks, but limited evidence of a contributor ecosystem from the public view. ([GitHub](https://github.com/chrisworsey55/atlas-gic "GitHub - chrisworsey55/atlas-gic: ATLAS by General Intelligence Capital — Self-improving AI trading agents using Karpathy-style autoresearch · GitHub"))
 
 **Maintainability: 5/10**  
-Good conceptual structure, but hidden proprietary parts and limited public code reduce maintainability for external adopters. ([GitHub](https://github.com/chrisworsey55/atlas-gic/blob/main/LICENSE?utm_source=chatgpt.com "license - chrisworsey55/atlas-gic"))
+Good conceptual structure, but hidden proprietary parts and limited public code reduce maintainability for external adopters. ([GitHub](https://github.com/chrisworsey55/atlas-gic/blob/main/LICENSE "license - chrisworsey55/atlas-gic"))
 
 ## 11. Comparison with Alternatives
 

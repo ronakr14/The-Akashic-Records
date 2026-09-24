@@ -88,7 +88,7 @@ Integrations and dependencies:
 
 ## 4. Why This Project Exists
 
-Business problem: many WPF apps need to **preview documents inside the application** instead of shelling out to Adobe Reader or the OS PDF handler. That matters for UX, confidentiality, and workflow control. The Stack Overflow question around this repo says exactly that: users wanted a control inside WPF, not a browser or external viewer. ([Stack Overflow](https://stackoverflow.com/questions/37438426/how-to-add-an-existing-pdf-viewer-to-my-wpf-project?utm_source=chatgpt.com "How to add an existing PDF viewer to my WPF project?"))
+Business problem: many WPF apps need to **preview documents inside the application** instead of shelling out to Adobe Reader or the OS PDF handler. That matters for UX, confidentiality, and workflow control. The Stack Overflow question around this repo says exactly that: users wanted a control inside WPF, not a browser or external viewer. ([Stack Overflow](https://stackoverflow.com/questions/37438426/how-to-add-an-existing-pdf-viewer-to-my-wpf-project "How to add an existing PDF viewer to my WPF project?"))
 
 Technical challenges solved:
 
@@ -109,7 +109,7 @@ Advantages over traditional approaches:
     
 - potential to disable or limit features compared to a full browser/WebBrowser-based PDF display,
     
-- better fit for desktop business apps. ([Stack Overflow](https://stackoverflow.com/questions/37438426/how-to-add-an-existing-pdf-viewer-to-my-wpf-project?utm_source=chatgpt.com "How to add an existing PDF viewer to my WPF project?"))
+- better fit for desktop business apps. ([Stack Overflow](https://stackoverflow.com/questions/37438426/how-to-add-an-existing-pdf-viewer-to-my-wpf-project "How to add an existing PDF viewer to my WPF project?"))
     
 
 Differentiator: this project is not trying to be a full-blown document platform. It is a **pragmatic WPF control** built around MuPDF rendering and virtualization. That is narrow, but sensible. ([GitHub](https://github.com/reliak/moonpdf/blob/master/AUTHORS "moonpdf/AUTHORS at master · reliak/moonpdf · GitHub"))
@@ -124,7 +124,7 @@ Complexity: **Medium**. ([GitHub](https://github.com/reliak/moonpdf "GitHub - re
 **Confidential preview mode**  
 Scenario: display restricted PDFs in-app to reduce casual copying/printing paths.  
 Benefits: more control than launching the default OS handler.  
-Complexity: **Medium**. ([Stack Overflow](https://stackoverflow.com/questions/37438426/how-to-add-an-existing-pdf-viewer-to-my-wpf-project?utm_source=chatgpt.com "How to add an existing PDF viewer to my WPF project?"))
+Complexity: **Medium**. ([Stack Overflow](https://stackoverflow.com/questions/37438426/how-to-add-an-existing-pdf-viewer-to-my-wpf-project "How to add an existing PDF viewer to my WPF project?"))
 
 **Document-centric line-of-business app**  
 Scenario: legal, healthcare, insurance, or back-office desktop software.  
@@ -183,7 +183,7 @@ Installation requirements are old-school WPF desktop stuff:
     
 - native MuPDF-related binaries,
     
-- possibly extra DLLs such as `MouseKeyboardActivityMonitor.dll` as noted in community usage examples. ([Cnblogs](https://www.cnblogs.com/rchao/p/15221674.html?utm_source=chatgpt.com "C# MoonPdf使用- 荣超"))
+- possibly extra DLLs such as `MouseKeyboardActivityMonitor.dll` as noted in community usage examples. ([Cnblogs](https://www.cnblogs.com/rchao/p/15221674.html "C# MoonPdf使用- 荣超"))
     
 
 Deployment options:

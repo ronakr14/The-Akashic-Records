@@ -123,7 +123,7 @@ Relevant for offline, regulated, or privacy-sensitive environments, but enterpri
 
 ## 7. Key Components Analysis
 
-I could clearly verify the top-level structure and the language/runtime directories, but not every inner file without doing a full repository crawl. So this is a high-confidence top-level analysis, not a line-by-line code audit. ([GitHub](https://github.com/supertone-inc/supertonic?utm_source=chatgpt.com "Supertonic — Lightning Fast, On-Device, Accurate TTS"))
+I could clearly verify the top-level structure and the language/runtime directories, but not every inner file without doing a full repository crawl. So this is a high-confidence top-level analysis, not a line-by-line code audit. ([GitHub](https://github.com/supertone-inc/supertonic "Supertonic — Lightning Fast, On-Device, Accurate TTS"))
 
 **`README.md`**  
 The main product narrative, feature list, quick start, supported languages, benchmarks, and licensing guidance. It acts as the command center for the repo. ([GitHub](https://github.com/supertone-inc/supertonic "GitHub - supertone-inc/supertonic: Lightning-Fast, On-Device, Multilingual TTS — running natively via ONNX. · GitHub"))
@@ -141,7 +141,7 @@ Browser inference path, likely using ONNX Runtime Web / WebGPU. Important for ze
 Language-specific integration examples. Their responsibility is to show how to call the model from each ecosystem and normalize the runtime differences. ([GitHub](https://github.com/supertone-inc/supertonic "GitHub - supertone-inc/supertonic: Lightning-Fast, On-Device, Multilingual TTS — running natively via ONNX. · GitHub"))
 
 **`assets/` (ignored in `.gitignore`)**  
-Local model assets and large binary artifacts appear to be kept out of source control. That is the right move for a model-centric repo. ([GitHub](https://github.com/supertone-inc/supertonic/blob/main/.gitignore?utm_source=chatgpt.com "supertonic/.gitignore at main"))
+Local model assets and large binary artifacts appear to be kept out of source control. That is the right move for a model-centric repo. ([GitHub](https://github.com/supertone-inc/supertonic/blob/main/.gitignore "supertonic/.gitignore at main"))
 
 ## 8. Setup and Adoption
 
@@ -198,7 +198,7 @@ Not much visible. No strong evidence of built-in metrics, tracing, quality monit
 The README is strong and product-oriented, with explicit quick start, runtime support, benchmarks, and licensing notes. Some runtime-specific depth is still likely distributed across subdirectories. ([GitHub](https://github.com/supertone-inc/supertonic "GitHub - supertone-inc/supertonic: Lightning-Fast, On-Device, Multilingual TTS — running natively via ONNX. · GitHub"))
 
 **Community support: 7/10**  
-The repo has strong public interest and active issues, but it is still a vendor-led ecosystem rather than a huge neutral open-source community. ([GitHub](https://github.com/supertone-inc/supertonic/releases?utm_source=chatgpt.com "Releases · supertone-inc/supertonic"))
+The repo has strong public interest and active issues, but it is still a vendor-led ecosystem rather than a huge neutral open-source community. ([GitHub](https://github.com/supertone-inc/supertonic/releases "Releases · supertone-inc/supertonic"))
 
 **Maintainability: 7/10**  
 The ONNX-centered abstraction helps. The downside is the breadth of language examples, which can become maintenance debt if not centrally governed. ([GitHub](https://github.com/supertone-inc/supertonic "GitHub - supertone-inc/supertonic: Lightning-Fast, On-Device, Multilingual TTS — running natively via ONNX. · GitHub"))

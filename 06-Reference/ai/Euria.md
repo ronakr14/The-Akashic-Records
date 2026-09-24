@@ -10,21 +10,21 @@ level: advanced
 Comprehensive technical analysis of Infomaniak's Euria Android application, a privacy-focused AI assistant built as a thin native Android shell around a hosted web application. Covers architecture (Jetpack Compose, MVVM, Hilt, WebView, JavaScript bridge), authentication, uploads, enterprise considerations, deployment strategies, engineering trade-offs, strengths, weaknesses, interview questions, and integration patterns. Highlights how native Android capabilities are combined with a web-hosted AI assistant to deliver a sovereign, enterprise-oriented mobile AI experience.
 
 ---
-Below is a deep-dive report on **Infomaniak/android-euria** based on the repository’s own documentation and GitHub metadata. The strongest signal is that this is not a fully native AI app; it is a **thin Android shell around a hosted web assistant**, with native code mainly handling login, file upload, WebView bridging, notifications, and app-specific integration. ([GitHub](https://github.com/Infomaniak/android-euria/blob/main/AGENTS.md?utm_source=chatgpt.com "AGENTS.md - Infomaniak/android-euria"))
+Below is a deep-dive report on **Infomaniak/android-euria** based on the repository’s own documentation and GitHub metadata. The strongest signal is that this is not a fully native AI app; it is a **thin Android shell around a hosted web assistant**, with native code mainly handling login, file upload, WebView bridging, notifications, and app-specific integration. ([GitHub](https://github.com/Infomaniak/android-euria/blob/main/AGENTS.md "AGENTS.md - Infomaniak/android-euria"))
 
 ## 1. Executive Summary
 
 **What is this project?**  
-Euria is Infomaniak’s Android app for a sovereign AI assistant. It wraps the Euria web app in a native Android container and adds mobile-specific capabilities like login, camera/file upload, push notifications in the standard flavor, analytics, and app lifecycle handling. ([GitHub](https://github.com/Infomaniak/android-euria?utm_source=chatgpt.com "Infomaniak/android-euria - A Sovereign AI Assistant"))
+Euria is Infomaniak’s Android app for a sovereign AI assistant. It wraps the Euria web app in a native Android container and adds mobile-specific capabilities like login, camera/file upload, push notifications in the standard flavor, analytics, and app lifecycle handling. ([GitHub](https://github.com/Infomaniak/android-euria "Infomaniak/android-euria - A Sovereign AI Assistant"))
 
 **What problem does it solve?**  
-It gives users a mobile entry point to Infomaniak’s AI assistant while preserving a privacy- and sovereignty-first posture: hosted in Switzerland, GDPR/LPD-oriented, renewable-energy powered, and designed to keep the user inside Infomaniak’s ecosystem. The app also bridges gaps between a web assistant and device features such as camera, files, and authentication. ([GitHub](https://github.com/Infomaniak/android-euria?utm_source=chatgpt.com "Infomaniak/android-euria - A Sovereign AI Assistant"))
+It gives users a mobile entry point to Infomaniak’s AI assistant while preserving a privacy- and sovereignty-first posture: hosted in Switzerland, GDPR/LPD-oriented, renewable-energy powered, and designed to keep the user inside Infomaniak’s ecosystem. The app also bridges gaps between a web assistant and device features such as camera, files, and authentication. ([GitHub](https://github.com/Infomaniak/android-euria "Infomaniak/android-euria - A Sovereign AI Assistant"))
 
 **Who is the target audience?**  
-Existing Infomaniak / my kSuite users, privacy-sensitive users, and organizations that want an AI assistant with Swiss hosting and enterprise-friendly controls. The app’s structure also suggests it is meant for users who want a chat assistant that can work with documents, audio, images, and web search from a phone. ([GitHub](https://github.com/Infomaniak/android-euria?utm_source=chatgpt.com "Infomaniak/android-euria - A Sovereign AI Assistant"))
+Existing Infomaniak / my kSuite users, privacy-sensitive users, and organizations that want an AI assistant with Swiss hosting and enterprise-friendly controls. The app’s structure also suggests it is meant for users who want a chat assistant that can work with documents, audio, images, and web search from a phone. ([GitHub](https://github.com/Infomaniak/android-euria "Infomaniak/android-euria - A Sovereign AI Assistant"))
 
 **Maturity level**  
-This looks **production-grade, but still actively evolving**. Evidence: release tags exist, GitHub issues are active, there are two build flavors, and the repo includes a fairly detailed AGENTS.md with build and security conventions. That said, the public repo still exposes some rough edges, including a missing security policy and open issues around app-store packaging. ([GitHub](https://github.com/Infomaniak/android-euria?utm_source=chatgpt.com "Infomaniak/android-euria - A Sovereign AI Assistant"))
+This looks **production-grade, but still actively evolving**. Evidence: release tags exist, GitHub issues are active, there are two build flavors, and the repo includes a fairly detailed AGENTS.md with build and security conventions. That said, the public repo still exposes some rough edges, including a missing security policy and open issues around app-store packaging. ([GitHub](https://github.com/Infomaniak/android-euria "Infomaniak/android-euria - A Sovereign AI Assistant"))
 
 ## 2. Repository Overview
 
@@ -32,7 +32,7 @@ This looks **production-grade, but still actively evolving**. Evidence: release 
 An Android client for Euria, Infomaniak’s AI assistant. The main product objective is mobile access to the assistant while keeping the actual assistant UI and much of the logic on the web side. ([GitHub](https://github.com/Infomaniak/android-euria/blob/main/AGENTS.md "android-euria/AGENTS.md at main · Infomaniak/android-euria · GitHub"))
 
 **Core features and capabilities**  
-The repo documentation explicitly calls out: writing via text or voice, smart web search, writing/translation/proofreading/summarization, transcription, PDF/Office extraction, image interpretation, creative ideation, conversation organization, sharing discussions, and cross-device access. ([GitHub](https://github.com/Infomaniak/android-euria?utm_source=chatgpt.com "Infomaniak/android-euria - A Sovereign AI Assistant"))
+The repo documentation explicitly calls out: writing via text or voice, smart web search, writing/translation/proofreading/summarization, transcription, PDF/Office extraction, image interpretation, creative ideation, conversation organization, sharing discussions, and cross-device access. ([GitHub](https://github.com/Infomaniak/android-euria "Infomaniak/android-euria - A Sovereign AI Assistant"))
 
 **Key technologies / frameworks / languages**  
 Kotlin is the codebase language. The app uses Jetpack Compose, Hilt, MVVM, WebView, WorkManager, StateFlow, SharedPreferences-backed local settings, OkHttp, and a GitHub-managed shared “Core” library with composite Gradle builds. The repo also has a standard flavor with Firebase push notifications and an F-Droid flavor without proprietary dependencies. ([GitHub](https://github.com/Infomaniak/android-euria/blob/main/AGENTS.md "android-euria/AGENTS.md at main · Infomaniak/android-euria · GitHub"))
@@ -71,7 +71,7 @@ This app leans hard on Infomaniak’s internal Core stack: `Core:Auth`, `Core:Ne
 ## 4. Why This Project Exists
 
 **Business problem**  
-Infomaniak needs a trustworthy mobile client for its AI assistant that aligns with its sovereign-cloud, privacy, and Swiss-hosting brand. A native shell lets them distribute the assistant as an app while reusing a web product as the primary UX surface. ([GitHub](https://github.com/Infomaniak/android-euria?utm_source=chatgpt.com "Infomaniak/android-euria - A Sovereign AI Assistant"))
+Infomaniak needs a trustworthy mobile client for its AI assistant that aligns with its sovereign-cloud, privacy, and Swiss-hosting brand. A native shell lets them distribute the assistant as an app while reusing a web product as the primary UX surface. ([GitHub](https://github.com/Infomaniak/android-euria "Infomaniak/android-euria - A Sovereign AI Assistant"))
 
 **Technical challenges it solves**  
 It bridges device capabilities that a plain browser cannot handle well: account handoff, camera capture, file upload, cookie/token management, push notifications, WebView lifecycle quirks, and offline/network error states. ([GitHub](https://github.com/Infomaniak/android-euria/blob/main/AGENTS.md "android-euria/AGENTS.md at main · Infomaniak/android-euria · GitHub"))
@@ -80,7 +80,7 @@ It bridges device capabilities that a plain browser cannot handle well: account 
 Compared with a fully native AI app, this is faster to evolve because the core assistant lives on the web. Compared with a pure PWA, it can integrate with Android more deeply and support a tighter, controlled authentication and upload flow. ([GitHub](https://github.com/Infomaniak/android-euria/blob/main/AGENTS.md "android-euria/AGENTS.md at main · Infomaniak/android-euria · GitHub"))
 
 **Unique differentiators**  
-The repo is explicit about privacy and sovereignty: Swiss hosting, renewable energy, heat reuse, GDPR/LPD alignment, and an ephemeral mode. Architecturally, the differentiator is the tight web-native bridge with a relatively thin Android wrapper. ([GitHub](https://github.com/Infomaniak/android-euria?utm_source=chatgpt.com "Infomaniak/android-euria - A Sovereign AI Assistant"))
+The repo is explicit about privacy and sovereignty: Swiss hosting, renewable energy, heat reuse, GDPR/LPD alignment, and an ephemeral mode. Architecturally, the differentiator is the tight web-native bridge with a relatively thin Android wrapper. ([GitHub](https://github.com/Infomaniak/android-euria "Infomaniak/android-euria - A Sovereign AI Assistant"))
 
 ## 5. How It Can Be Used
 
@@ -88,19 +88,19 @@ The repo is explicit about privacy and sovereignty: Swiss hosting, renewable ene
 Description: Use it as the Android front end for Euria chat and assistant features.  
 Example: A user asks for a summary of a PDF on their phone.  
 Benefits: Fast access, native authentication, file handling, mobile convenience.  
-Complexity: **Low**. ([GitHub](https://github.com/Infomaniak/android-euria?utm_source=chatgpt.com "Infomaniak/android-euria - A Sovereign AI Assistant"))
+Complexity: **Low**. ([GitHub](https://github.com/Infomaniak/android-euria "Infomaniak/android-euria - A Sovereign AI Assistant"))
 
 **2) Privacy-first enterprise assistant distribution**  
 Description: Use the pattern as a branded enterprise mobile shell for a hosted assistant.  
 Example: An organization wants a compliant assistant app with central control.  
 Benefits: Easier governance, centralized backend, consistent UX.  
-Complexity: **High** if you adapt the platform; **Medium** if you only consume it. ([GitHub](https://github.com/Infomaniak/android-euria?utm_source=chatgpt.com "Infomaniak/android-euria - A Sovereign AI Assistant"))
+Complexity: **High** if you adapt the platform; **Medium** if you only consume it. ([GitHub](https://github.com/Infomaniak/android-euria "Infomaniak/android-euria - A Sovereign AI Assistant"))
 
 **3) Document-centric mobile workflows**  
 Description: Upload, parse, summarize, or discuss files from a phone.  
 Example: Sales rep uploads a contract PDF and asks for a plain-English summary.  
 Benefits: Better productivity on the go.  
-Complexity: **Low**. ([GitHub](https://github.com/Infomaniak/android-euria?utm_source=chatgpt.com "Infomaniak/android-euria - A Sovereign AI Assistant"))
+Complexity: **Low**. ([GitHub](https://github.com/Infomaniak/android-euria "Infomaniak/android-euria - A Sovereign AI Assistant"))
 
 **4) Cross-app login / unified account handoff**  
 Description: Reuse shared auth and credential flows from the Infomaniak ecosystem.  
@@ -117,16 +117,16 @@ Complexity: **Medium**. ([GitHub](https://github.com/Infomaniak/android-euria/bl
 ## 6. Where It Can Be Used
 
 **Data Engineering**  
-Relevant indirectly. It is not a data platform tool, but it can act as a mobile assistant for querying docs, summarizing pipelines, or surfacing operational notes. Relevance: **low to medium**. ([GitHub](https://github.com/Infomaniak/android-euria?utm_source=chatgpt.com "Infomaniak/android-euria - A Sovereign AI Assistant"))
+Relevant indirectly. It is not a data platform tool, but it can act as a mobile assistant for querying docs, summarizing pipelines, or surfacing operational notes. Relevance: **low to medium**. ([GitHub](https://github.com/Infomaniak/android-euria "Infomaniak/android-euria - A Sovereign AI Assistant"))
 
 **Analytics**  
-Useful for consuming summaries and interpreting uploaded reports. Not an analytics engine itself. Relevance: **medium**. ([GitHub](https://github.com/Infomaniak/android-euria?utm_source=chatgpt.com "Infomaniak/android-euria - A Sovereign AI Assistant"))
+Useful for consuming summaries and interpreting uploaded reports. Not an analytics engine itself. Relevance: **medium**. ([GitHub](https://github.com/Infomaniak/android-euria "Infomaniak/android-euria - A Sovereign AI Assistant"))
 
 **AI/ML**  
-Highly relevant. This is an AI assistant client with chat, document, image, voice, and web-search flows. Relevance: **high**. ([GitHub](https://github.com/Infomaniak/android-euria?utm_source=chatgpt.com "Infomaniak/android-euria - A Sovereign AI Assistant"))
+Highly relevant. This is an AI assistant client with chat, document, image, voice, and web-search flows. Relevance: **high**. ([GitHub](https://github.com/Infomaniak/android-euria "Infomaniak/android-euria - A Sovereign AI Assistant"))
 
 **DevOps**  
-Potentially useful as a conversational front end for operational docs, incident summaries, and runbooks. Relevance: **low to medium**. ([GitHub](https://github.com/Infomaniak/android-euria?utm_source=chatgpt.com "Infomaniak/android-euria - A Sovereign AI Assistant"))
+Potentially useful as a conversational front end for operational docs, incident summaries, and runbooks. Relevance: **low to medium**. ([GitHub](https://github.com/Infomaniak/android-euria "Infomaniak/android-euria - A Sovereign AI Assistant"))
 
 **Platform Engineering**  
 Relevant as a pattern for building a secure, app-based frontend over a centralized platform. Relevance: **medium**. ([GitHub](https://github.com/Infomaniak/android-euria/blob/main/AGENTS.md "android-euria/AGENTS.md at main · Infomaniak/android-euria · GitHub"))
@@ -138,13 +138,13 @@ Relevant through hosted backend dependencies and environment selection, but the 
 Relevant because it uses token injection, secure cookie handling, and privacy-oriented product positioning. The lack of a SECURITY.md is a governance gap, though. Relevance: **medium**. ([GitHub](https://github.com/Infomaniak/android-euria/blob/main/AGENTS.md "android-euria/AGENTS.md at main · Infomaniak/android-euria · GitHub"))
 
 **FinOps**  
-Only indirectly, through the product’s hosting and energy-efficiency claims. Not a direct FinOps tool. Relevance: **low**. ([GitHub](https://github.com/Infomaniak/android-euria?utm_source=chatgpt.com "Infomaniak/android-euria - A Sovereign AI Assistant"))
+Only indirectly, through the product’s hosting and energy-efficiency claims. Not a direct FinOps tool. Relevance: **low**. ([GitHub](https://github.com/Infomaniak/android-euria "Infomaniak/android-euria - A Sovereign AI Assistant"))
 
 **Product Engineering**  
 Strong fit. This is basically a product shell around a web app, with mobile-native affordances and release flavors. Relevance: **high**. ([GitHub](https://github.com/Infomaniak/android-euria/blob/main/AGENTS.md "android-euria/AGENTS.md at main · Infomaniak/android-euria · GitHub"))
 
 **Enterprise Applications**  
-Strong fit if your enterprise wants a controlled AI assistant with centralized policy, identity, and compliance. Relevance: **high**. ([GitHub](https://github.com/Infomaniak/android-euria?utm_source=chatgpt.com "Infomaniak/android-euria - A Sovereign AI Assistant"))
+Strong fit if your enterprise wants a controlled AI assistant with centralized policy, identity, and compliance. Relevance: **high**. ([GitHub](https://github.com/Infomaniak/android-euria "Infomaniak/android-euria - A Sovereign AI Assistant"))
 
 ## 7. Key Components Analysis
 
@@ -213,12 +213,12 @@ Developer experience: Compose + Hilt + MVVM is a sane modern stack. ([GitHub](ht
 Risk: Heavy dependence on the hosted web app and internal Core library.  
 Limitations: Not a fully native assistant; some UX will be constrained by WebView.  
 Missing features: Public security policy is absent; issue backlog includes packaging/distribution requests.  
-Technical debt indicators: Broad platform dependence, flavor complexity, and bridge contracts that can drift between web and native layers. ([GitHub](https://github.com/Infomaniak/android-euria/security?utm_source=chatgpt.com "Security - Overview · Infomaniak/android-euria"))
+Technical debt indicators: Broad platform dependence, flavor complexity, and bridge contracts that can drift between web and native layers. ([GitHub](https://github.com/Infomaniak/android-euria/security "Security - Overview · Infomaniak/android-euria"))
 
 ## 10. Enterprise Evaluation
 
 **Production readiness: 8/10**  
-Looks like a real shipped app with release activity and flavor separation, but the public repo still shows open operational gaps. ([GitHub](https://github.com/Infomaniak/android-euria?utm_source=chatgpt.com "Infomaniak/android-euria - A Sovereign AI Assistant"))
+Looks like a real shipped app with release activity and flavor separation, but the public repo still shows open operational gaps. ([GitHub](https://github.com/Infomaniak/android-euria "Infomaniak/android-euria - A Sovereign AI Assistant"))
 
 **Security: 7/10**  
 Good signs: token handling, cookie injection discipline, and privacy posture. Bad sign: no SECURITY.md in the repo and no public security advisory process. ([GitHub](https://github.com/Infomaniak/android-euria/blob/main/AGENTS.md "android-euria/AGENTS.md at main · Infomaniak/android-euria · GitHub"))
@@ -233,7 +233,7 @@ Sentry and Matomo are integrated, which is decent. Still, observability is only 
 AGENTS.md is unusually rich and useful; public repo docs are fairly descriptive. ([GitHub](https://github.com/Infomaniak/android-euria/blob/main/AGENTS.md "android-euria/AGENTS.md at main · Infomaniak/android-euria · GitHub"))
 
 **Community support: 4/10**  
-Small public issue/PR surface, modest star count, and little visible external contributor activity. ([GitHub](https://github.com/Infomaniak/android-euria/issues?utm_source=chatgpt.com "Issues · Infomaniak/android-euria"))
+Small public issue/PR surface, modest star count, and little visible external contributor activity. ([GitHub](https://github.com/Infomaniak/android-euria/issues "Issues · Infomaniak/android-euria"))
 
 **Maintainability: 8/10**  
 The module boundaries and conventions are solid, but the Core dependency is a strong coupling point. ([GitHub](https://github.com/Infomaniak/android-euria/blob/main/AGENTS.md "android-euria/AGENTS.md at main · Infomaniak/android-euria · GitHub"))
@@ -283,7 +283,7 @@ The module boundaries and conventions are solid, but the Core dependency is a st
     
 
 **Competitor AI apps**  
-Examples include Google’s assistant/search-centric experiences or other AI companion apps, but those are generally built around their own ecosystems and not a sovereign-hosting model. Euria’s main differentiator is not feature novelty; it is governance, hosting, and privacy posture. ([GitHub](https://github.com/Infomaniak/android-euria?utm_source=chatgpt.com "Infomaniak/android-euria - A Sovereign AI Assistant"))
+Examples include Google’s assistant/search-centric experiences or other AI companion apps, but those are generally built around their own ecosystems and not a sovereign-hosting model. Euria’s main differentiator is not feature novelty; it is governance, hosting, and privacy posture. ([GitHub](https://github.com/Infomaniak/android-euria "Infomaniak/android-euria - A Sovereign AI Assistant"))
 
 ## 12. Engineering Takeaways
 
@@ -373,17 +373,17 @@ Over-coupling the shell to the web contract without versioning discipline would 
 ## 14. Handoff Summary
 
 **One-page executive summary**  
-Euria Android is a production-oriented mobile client for Infomaniak’s sovereign AI assistant. It is not a full native reimplementation; it is a carefully engineered Android shell that wraps a hosted assistant web app and adds the mobile behaviors that matter: auth, file/camera upload, lifecycle handling, push notifications in the standard flavor, analytics, and a native/web bridge. The architecture is modern and pragmatic: Kotlin, Compose, Hilt, MVVM, WorkManager, StateFlow, and a shared Core library. The product’s value proposition is not “we built a fancy local model app.” It is “we built a privacy-first, Swiss-hosted assistant delivery vehicle that can move fast without duplicating the assistant UX natively.” ([GitHub](https://github.com/Infomaniak/android-euria?utm_source=chatgpt.com "Infomaniak/android-euria - A Sovereign AI Assistant"))
+Euria Android is a production-oriented mobile client for Infomaniak’s sovereign AI assistant. It is not a full native reimplementation; it is a carefully engineered Android shell that wraps a hosted assistant web app and adds the mobile behaviors that matter: auth, file/camera upload, lifecycle handling, push notifications in the standard flavor, analytics, and a native/web bridge. The architecture is modern and pragmatic: Kotlin, Compose, Hilt, MVVM, WorkManager, StateFlow, and a shared Core library. The product’s value proposition is not “we built a fancy local model app.” It is “we built a privacy-first, Swiss-hosted assistant delivery vehicle that can move fast without duplicating the assistant UX natively.” ([GitHub](https://github.com/Infomaniak/android-euria "Infomaniak/android-euria - A Sovereign AI Assistant"))
 
 **Key findings**
 
 - Thin-shell WebView architecture, not a full native AI client. ([GitHub](https://github.com/Infomaniak/android-euria/blob/main/AGENTS.md "android-euria/AGENTS.md at main · Infomaniak/android-euria · GitHub"))
     
-- Strong privacy/sovereignty positioning. ([GitHub](https://github.com/Infomaniak/android-euria?utm_source=chatgpt.com "Infomaniak/android-euria - A Sovereign AI Assistant"))
+- Strong privacy/sovereignty positioning. ([GitHub](https://github.com/Infomaniak/android-euria "Infomaniak/android-euria - A Sovereign AI Assistant"))
     
 - Good engineering conventions and modular structure. ([GitHub](https://github.com/Infomaniak/android-euria/blob/main/AGENTS.md "android-euria/AGENTS.md at main · Infomaniak/android-euria · GitHub"))
     
-- Real product maturity, but still evolving operationally. ([GitHub](https://github.com/Infomaniak/android-euria/issues?utm_source=chatgpt.com "Issues · Infomaniak/android-euria"))
+- Real product maturity, but still evolving operationally. ([GitHub](https://github.com/Infomaniak/android-euria/issues "Issues · Infomaniak/android-euria"))
     
 
 **Recommended adoption scenarios**
@@ -403,7 +403,7 @@ Euria Android is a production-oriented mobile client for Infomaniak’s sovereig
 ## 15. AI/Data Engineering Relevance
 
 **Can this repository be used in data platforms?**  
-Not directly as a platform component. It can sit on top of one as a consumer-facing interface for data summaries, file inspection, and human-in-the-loop interaction. ([GitHub](https://github.com/Infomaniak/android-euria?utm_source=chatgpt.com "Infomaniak/android-euria - A Sovereign AI Assistant"))
+Not directly as a platform component. It can sit on top of one as a consumer-facing interface for data summaries, file inspection, and human-in-the-loop interaction. ([GitHub](https://github.com/Infomaniak/android-euria "Infomaniak/android-euria - A Sovereign AI Assistant"))
 
 **Can it be integrated into a lakehouse architecture?**  
 Yes, as a client layer that talks to services backed by lakehouse data, but not as a lakehouse building block itself. ([GitHub](https://github.com/Infomaniak/android-euria/blob/main/AGENTS.md "android-euria/AGENTS.md at main · Infomaniak/android-euria · GitHub"))
@@ -412,7 +412,7 @@ Yes, as a client layer that talks to services backed by lakehouse data, but not 
 Indirectly. It could be used to collect user requests, review outputs, or surface pipeline status and document summaries. It will not replace orchestration, transforms, or data quality tooling. ([GitHub](https://github.com/Infomaniak/android-euria/blob/main/AGENTS.md "android-euria/AGENTS.md at main · Infomaniak/android-euria · GitHub"))
 
 **Can it be used for LLM, RAG, agents, or AI workflows?**  
-Yes, as an end-user interface for those workflows. Its strongest fit is as the mobile front end to an AI platform, not the AI platform itself. ([GitHub](https://github.com/Infomaniak/android-euria?utm_source=chatgpt.com "Infomaniak/android-euria - A Sovereign AI Assistant"))
+Yes, as an end-user interface for those workflows. Its strongest fit is as the mobile front end to an AI platform, not the AI platform itself. ([GitHub](https://github.com/Infomaniak/android-euria "Infomaniak/android-euria - A Sovereign AI Assistant"))
 
 **Suggested enterprise architecture incorporating this project**  
 Use Euria-style architecture as the client layer in a broader stack:

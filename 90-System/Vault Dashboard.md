@@ -90,6 +90,15 @@ WHERE status = "reference" AND note_type != "moc"
 SORT (length(file.inlinks) + length(file.outlinks)) DESC
 ```
 
+## Projects
+
+```dataview
+TABLE WITHOUT ID file.link AS "Project", project_status AS "State", last_reviewed AS "Reviewed"
+FROM "02-Projects"
+WHERE project_status
+SORT choice(project_status = "active", 0, choice(project_status = "paused", 1, 2)) ASC, file.name ASC
+```
+
 ## Drafts in progress
 
 ```dataview

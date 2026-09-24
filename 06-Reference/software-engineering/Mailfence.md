@@ -51,7 +51,7 @@ From the README and product pages, the Android app appears to cover:
     
 
 **Key technologies, frameworks, and programming languages**  
-The repo content visible on GitHub is sparse, but it is an Android app repo, so the baseline stack is Android tooling. For Android, Kotlin is the dominant modern language and Android’s recommended native path. That is an informed inference, not a direct code claim from the repo. ([Android Developers](https://developer.android.com/kotlin?utm_source=chatgpt.com "Kotlin and Android"))
+The repo content visible on GitHub is sparse, but it is an Android app repo, so the baseline stack is Android tooling. For Android, Kotlin is the dominant modern language and Android’s recommended native path. That is an informed inference, not a direct code claim from the repo. ([Android Developers](https://developer.android.com/kotlin "Kotlin and Android"))
 
 **High-level architecture inferred from the codebase**  
 The architecture is likely a classic mobile client for a backend SaaS:
@@ -197,7 +197,7 @@ Traditional email apps often rely on weaker privacy assumptions or generic IMAP/
 **Description:** Mobile access to a secure business suite.  
 **Scenario:** A consulting firm needs mobile access without consumer ad-tech baggage.  
 **Benefits:** Centralized collaboration under privacy constraints.  
-**Complexity:** Medium. ([Mailfence](https://mailfence.com/?utm_source=chatgpt.com "Secure and private email | Mailfence encrypted email service"))
+**Complexity:** Medium. ([Mailfence](https://mailfence.com/ "Secure and private email | Mailfence encrypted email service"))
 
 ### Standards-based integration
 
@@ -389,7 +389,7 @@ Likely alternatives include:
     
 - Thunderbird-style IMAP clients on Android
     
-- generic secure mail + calendar apps. ([Mailfence](https://mailfence.com/?utm_source=chatgpt.com "Secure and private email | Mailfence encrypted email service"))
+- generic secure mail + calendar apps. ([Mailfence](https://mailfence.com/ "Secure and private email | Mailfence encrypted email service"))
     
 
 **Features**  
@@ -402,10 +402,10 @@ Compared with Gmail/Outlook, Mailfence is operationally simpler from a product p
 Hard to rank without benchmarks. In real life, mainstream giants often win on polish and sync speed, while privacy suites win on trust and control. That is the trade. ([GitHub](https://github.com/Mailfence/mailfence-android/issues "Issues · Mailfence/mailfence-android · GitHub"))
 
 **Cost**  
-Mailfence positions itself as a paid secure service with a free tier; enterprises should compare against Google/Microsoft bundles and privacy-focused vendors. The economics depend on whether privacy is a requirement or a nice-to-have. ([GitHub](https://github.com/Lissy93/email-comparison/blob/master/email-provider-data.yml?utm_source=chatgpt.com "email-comparison/email-provider-data.yml at master"))
+Mailfence positions itself as a paid secure service with a free tier; enterprises should compare against Google/Microsoft bundles and privacy-focused vendors. The economics depend on whether privacy is a requirement or a nice-to-have. ([GitHub](https://github.com/Lissy93/email-comparison/blob/master/email-provider-data.yml "email-comparison/email-provider-data.yml at master"))
 
 **Ecosystem**  
-Google and Microsoft crush everyone on ecosystem breadth. Mailfence’s advantage is tighter privacy positioning and standards compatibility. ([Mailfence](https://mailfence.com/?utm_source=chatgpt.com "Secure and private email | Mailfence encrypted email service"))
+Google and Microsoft crush everyone on ecosystem breadth. Mailfence’s advantage is tighter privacy positioning and standards compatibility. ([Mailfence](https://mailfence.com/ "Secure and private email | Mailfence encrypted email service"))
 
 ---
 
@@ -526,7 +526,7 @@ From an architecture perspective, it is best understood as a backend-backed Andr
 
 - Production product, not a toy. ([GitHub](https://github.com/Mailfence/mailfence-android "GitHub - Mailfence/mailfence-android · GitHub"))
     
-- Privacy/security is the central value proposition. ([Mailfence](https://mailfence.com/?utm_source=chatgpt.com "Secure and private email | Mailfence encrypted email service"))
+- Privacy/security is the central value proposition. ([Mailfence](https://mailfence.com/ "Secure and private email | Mailfence encrypted email service"))
     
 - Strong suite integration: mail, calendar, docs, contacts, groups. ([GitHub](https://github.com/Mailfence/mailfence-android "GitHub - Mailfence/mailfence-android · GitHub"))
     

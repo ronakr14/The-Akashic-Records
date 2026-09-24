@@ -13,18 +13,18 @@ Nanobot is a lightweight, self-hosted AI agent runtime that combines multi-chann
 
 # nanobot Repository Analysis
 
-Sources used: repository README and architecture/config/docs files, plus current repo metadata and release notes. ([GitHub](https://github.com/HKUDS/nanobot?utm_source=chatgpt.com "HKUDS/nanobot: Lightweight, open-source AI agent for ..."))
+Sources used: repository README and architecture/config/docs files, plus current repo metadata and release notes. ([GitHub](https://github.com/HKUDS/nanobot "HKUDS/nanobot: Lightweight, open-source AI agent for ..."))
 
 ## 1. Executive Summary
 
 **What it is**  
-nanobot is a self-hosted, ultra-lightweight personal AI agent framework. It combines a Python agent runtime with a React/TypeScript WebUI, chat-channel integrations, tools, memory, model routing, MCP support, automation, and deployment plumbing. ([GitHub](https://github.com/HKUDS/nanobot?utm_source=chatgpt.com "HKUDS/nanobot: Lightweight, open-source AI agent for ..."))
+nanobot is a self-hosted, ultra-lightweight personal AI agent framework. It combines a Python agent runtime with a React/TypeScript WebUI, chat-channel integrations, tools, memory, model routing, MCP support, automation, and deployment plumbing. ([GitHub](https://github.com/HKUDS/nanobot "HKUDS/nanobot: Lightweight, open-source AI agent for ..."))
 
 **What problem it solves**  
-It solves the “agent runtime” problem: not just calling an LLM, but wrapping it with session state, tool execution, channel integrations, memory consolidation, scheduling, and a browser UI so the assistant can do real long-running work. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/docs/python-sdk.md?utm_source=chatgpt.com "nanobot/docs/python-sdk.md at main"))
+It solves the “agent runtime” problem: not just calling an LLM, but wrapping it with session state, tool execution, channel integrations, memory consolidation, scheduling, and a browser UI so the assistant can do real long-running work. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/docs/python-sdk.md "nanobot/docs/python-sdk.md at main"))
 
 **Target audience**  
-Developers, AI engineers, power users, and teams that want a self-hosted personal assistant or an embeddable agent runtime. The docs explicitly frame it for CLI, SDK, WebUI, chat apps, and integrations. ([GitHub](https://github.com/HKUDS/nanobot?utm_source=chatgpt.com "HKUDS/nanobot: Lightweight, open-source AI agent for ..."))
+Developers, AI engineers, power users, and teams that want a self-hosted personal assistant or an embeddable agent runtime. The docs explicitly frame it for CLI, SDK, WebUI, chat apps, and integrations. ([GitHub](https://github.com/HKUDS/nanobot "HKUDS/nanobot: Lightweight, open-source AI agent for ..."))
 
 **Maturity level**  
 Not a toy prototype. It is beyond research-only and has strong signs of active productization: releases, SDK hardening, WebUI packaging, multiple integrations, docs, and a broad issue/PR history. That said, the package classifier still says **“Development Status :: 3 - Alpha”**, so I would not call it enterprise-ready out of the box. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/pyproject.toml "nanobot/pyproject.toml at main · HKUDS/nanobot · GitHub"))
@@ -32,7 +32,7 @@ Not a toy prototype. It is beyond research-only and has strong signs of active p
 ## 2. Repository Overview
 
 **Main purpose**  
-A lightweight AI agent runtime that can run from terminal, WebUI, or chat channels and act on behalf of a user using tools, memory, and scheduled behavior. ([GitHub](https://github.com/HKUDS/nanobot?utm_source=chatgpt.com "HKUDS/nanobot: Lightweight, open-source AI agent for ..."))
+A lightweight AI agent runtime that can run from terminal, WebUI, or chat channels and act on behalf of a user using tools, memory, and scheduled behavior. ([GitHub](https://github.com/HKUDS/nanobot "HKUDS/nanobot: Lightweight, open-source AI agent for ..."))
 
 **Core features**
 
@@ -40,11 +40,11 @@ A lightweight AI agent runtime that can run from terminal, WebUI, or chat channe
     
 - Tool execution: filesystem, shell, web search/fetch, MCP, cron, subagents, image generation, and self-modification. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/AGENTS.md "nanobot/AGENTS.md at main · HKUDS/nanobot · GitHub"))
     
-- Memory and session management with persistence and consolidation. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/nanobot/agent/memory.py?utm_source=chatgpt.com "nanobot/nanobot/agent/memory.py at main · HKUDS/nanobot"))
+- Memory and session management with persistence and consolidation. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/nanobot/agent/memory.py "nanobot/nanobot/agent/memory.py at main · HKUDS/nanobot"))
     
 - Provider/model routing across OpenAI-compatible, Anthropic, Azure, Bedrock, GitHub Copilot, Codex, and others. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/AGENTS.md "nanobot/AGENTS.md at main · HKUDS/nanobot · GitHub"))
     
-- WebUI plus a Python SDK and OpenAI-compatible API surface. ([GitHub](https://github.com/HKUDS/nanobot?utm_source=chatgpt.com "HKUDS/nanobot: Lightweight, open-source AI agent for ..."))
+- WebUI plus a Python SDK and OpenAI-compatible API surface. ([GitHub](https://github.com/HKUDS/nanobot "HKUDS/nanobot: Lightweight, open-source AI agent for ..."))
     
 - MCP support for external tool servers. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/docs/configuration.md "nanobot/docs/configuration.md at main · HKUDS/nanobot · GitHub"))
     
@@ -99,7 +99,7 @@ A user sends a message from a channel or UI. nanobot captures it, loads relevant
     
 - `nanobot/agent/tools/`: tool implementations. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/AGENTS.md "nanobot/AGENTS.md at main · HKUDS/nanobot · GitHub"))
     
-- `nanobot/agent/memory.py`: persistent memory store and consolidation. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/nanobot/agent/memory.py?utm_source=chatgpt.com "nanobot/nanobot/agent/memory.py at main · HKUDS/nanobot"))
+- `nanobot/agent/memory.py`: persistent memory store and consolidation. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/nanobot/agent/memory.py "nanobot/nanobot/agent/memory.py at main · HKUDS/nanobot"))
     
 - `nanobot/session/`: session lifecycle and compaction. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/AGENTS.md "nanobot/AGENTS.md at main · HKUDS/nanobot · GitHub"))
     
@@ -119,13 +119,13 @@ Inbound message → bus → agent loop builds context from history/memory/config
     
 - Local files/workspace and shell execution. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/AGENTS.md "nanobot/AGENTS.md at main · HKUDS/nanobot · GitHub"))
     
-- WebUI served from the packaged build. ([GitHub](https://github.com/HKUDS/nanobot?ref=patent.dev&utm_source=chatgpt.com "HKUDS/nanobot at patent.dev"))
+- WebUI served from the packaged build. ([GitHub](https://github.com/HKUDS/nanobot?ref=patent.dev "HKUDS/nanobot at patent.dev"))
     
 
 ## 4. Why This Project Exists
 
 **Business problem**  
-Most “AI chat apps” stop at chat. nanobot is trying to be the persistent, self-hosted runtime behind a practical assistant: one that can live in your channels, remember things, use tools, and keep working across sessions. ([GitHub](https://github.com/HKUDS/nanobot?utm_source=chatgpt.com "HKUDS/nanobot: Lightweight, open-source AI agent for ..."))
+Most “AI chat apps” stop at chat. nanobot is trying to be the persistent, self-hosted runtime behind a practical assistant: one that can live in your channels, remember things, use tools, and keep working across sessions. ([GitHub](https://github.com/HKUDS/nanobot "HKUDS/nanobot: Lightweight, open-source AI agent for ..."))
 
 **Technical challenges it solves**
 
@@ -133,15 +133,15 @@ Most “AI chat apps” stop at chat. nanobot is trying to be the persistent, se
     
 - Normalizing multiple providers behind one abstraction. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/AGENTS.md "nanobot/AGENTS.md at main · HKUDS/nanobot · GitHub"))
     
-- Persisting memory and session state durably. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/nanobot/agent/memory.py?utm_source=chatgpt.com "nanobot/nanobot/agent/memory.py at main · HKUDS/nanobot"))
+- Persisting memory and session state durably. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/nanobot/agent/memory.py "nanobot/nanobot/agent/memory.py at main · HKUDS/nanobot"))
     
-- Supporting tool-heavy, long-running, multi-turn workflows. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/docs/python-sdk.md?utm_source=chatgpt.com "nanobot/docs/python-sdk.md at main"))
+- Supporting tool-heavy, long-running, multi-turn workflows. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/docs/python-sdk.md "nanobot/docs/python-sdk.md at main"))
     
-- Making the same runtime accessible via CLI, WebUI, SDK, and API. ([GitHub](https://github.com/HKUDS/nanobot?utm_source=chatgpt.com "HKUDS/nanobot: Lightweight, open-source AI agent for ..."))
+- Making the same runtime accessible via CLI, WebUI, SDK, and API. ([GitHub](https://github.com/HKUDS/nanobot "HKUDS/nanobot: Lightweight, open-source AI agent for ..."))
     
 
 **Advantages over traditional approaches**  
-Traditional wrappers around LLM APIs are stateless and brittle. nanobot gives you a stateful runtime with session management, memory, channel adapters, and tools baked in. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/docs/python-sdk.md?utm_source=chatgpt.com "nanobot/docs/python-sdk.md at main"))
+Traditional wrappers around LLM APIs are stateless and brittle. nanobot gives you a stateful runtime with session management, memory, channel adapters, and tools baked in. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/docs/python-sdk.md "nanobot/docs/python-sdk.md at main"))
 
 **Differentiators**
 
@@ -151,7 +151,7 @@ Traditional wrappers around LLM APIs are stateless and brittle. nanobot gives yo
     
 - Memory + session + automation as first-class citizens.
     
-- SDK described as “runs an agent around a model,” not just “calls a model.” ([GitHub](https://github.com/HKUDS/nanobot?utm_source=chatgpt.com "HKUDS/nanobot: Lightweight, open-source AI agent for ..."))
+- SDK described as “runs an agent around a model,” not just “calls a model.” ([GitHub](https://github.com/HKUDS/nanobot "HKUDS/nanobot: Lightweight, open-source AI agent for ..."))
     
 
 ## 5. How It Can Be Used
@@ -160,7 +160,7 @@ Traditional wrappers around LLM APIs are stateless and brittle. nanobot gives yo
 Use it as a self-hosted assistant that lives in WebUI or chat apps.  
 Example: a private daily assistant that answers questions, tracks tasks, and remembers context.  
 Benefits: privacy, persistence, channel flexibility.  
-Complexity: **Low–Medium**. ([GitHub](https://github.com/HKUDS/nanobot?utm_source=chatgpt.com "HKUDS/nanobot: Lightweight, open-source AI agent for ..."))
+Complexity: **Low–Medium**. ([GitHub](https://github.com/HKUDS/nanobot "HKUDS/nanobot: Lightweight, open-source AI agent for ..."))
 
 **2) Team chat agent**  
 Use it in Slack/Telegram/Discord/Email for workflow automation and Q&A.  
@@ -184,7 +184,7 @@ Complexity: **Medium–High**. ([GitHub](https://github.com/HKUDS/nanobot/blob/m
 Use the Python SDK inside your own application.  
 Example: build a SaaS feature on top of nanobot’s runtime.  
 Benefits: less boilerplate, faster agent product development.  
-Complexity: **High**. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/docs/python-sdk.md?utm_source=chatgpt.com "nanobot/docs/python-sdk.md at main"))
+Complexity: **High**. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/docs/python-sdk.md "nanobot/docs/python-sdk.md at main"))
 
 ## 6. Where It Can Be Used
 
@@ -192,10 +192,10 @@ Complexity: **High**. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/docs/
 Useful for metadata lookup, pipeline assistance, operational chatbots, and workflow automation. Not a replacement for orchestration engines. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/AGENTS.md "nanobot/AGENTS.md at main · HKUDS/nanobot · GitHub"))
 
 **Analytics**  
-Good for analyst copilots, data Q&A, and scheduled summaries. Weak for governed BI semantics unless you add strong guardrails. ([GitHub](https://github.com/HKUDS/nanobot?utm_source=chatgpt.com "HKUDS/nanobot: Lightweight, open-source AI agent for ..."))
+Good for analyst copilots, data Q&A, and scheduled summaries. Weak for governed BI semantics unless you add strong guardrails. ([GitHub](https://github.com/HKUDS/nanobot "HKUDS/nanobot: Lightweight, open-source AI agent for ..."))
 
 **AI/ML**  
-Strong fit. This is natively an AI agent runtime with provider routing, tool use, memory, and SDK embedding. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/docs/python-sdk.md?utm_source=chatgpt.com "nanobot/docs/python-sdk.md at main"))
+Strong fit. This is natively an AI agent runtime with provider routing, tool use, memory, and SDK embedding. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/docs/python-sdk.md "nanobot/docs/python-sdk.md at main"))
 
 **DevOps**  
 Useful for notifications, incident summaries, and operational chat interfaces. Shell/tool access makes it powerful but also risky. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/AGENTS.md "nanobot/AGENTS.md at main · HKUDS/nanobot · GitHub"))
@@ -204,16 +204,16 @@ Useful for notifications, incident summaries, and operational chat interfaces. S
 Interesting as a shared agent platform for internal workflows and integrations. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/AGENTS.md "nanobot/AGENTS.md at main · HKUDS/nanobot · GitHub"))
 
 **Cloud Engineering**  
-Can sit on a server, use external providers, and connect to cloud-facing chat and tool endpoints. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/Dockerfile?utm_source=chatgpt.com "Dockerfile - HKUDS/nanobot"))
+Can sit on a server, use external providers, and connect to cloud-facing chat and tool endpoints. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/Dockerfile "Dockerfile - HKUDS/nanobot"))
 
 **Security**  
 Potentially useful for advisory/security-assistant workflows, but tool execution and self-modification mean it needs careful sandboxing. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/AGENTS.md "nanobot/AGENTS.md at main · HKUDS/nanobot · GitHub"))
 
 **FinOps**  
-Good for spend summaries, alerting, and report generation. Not a native FinOps engine. ([GitHub](https://github.com/HKUDS/nanobot?utm_source=chatgpt.com "HKUDS/nanobot: Lightweight, open-source AI agent for ..."))
+Good for spend summaries, alerting, and report generation. Not a native FinOps engine. ([GitHub](https://github.com/HKUDS/nanobot "HKUDS/nanobot: Lightweight, open-source AI agent for ..."))
 
 **Product Engineering**  
-A strong fit for embedding agent behavior into product experiences. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/docs/python-sdk.md?utm_source=chatgpt.com "nanobot/docs/python-sdk.md at main"))
+A strong fit for embedding agent behavior into product experiences. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/docs/python-sdk.md "nanobot/docs/python-sdk.md at main"))
 
 **Enterprise Applications**  
 Possible, but only after hardening: auth, policy controls, observability, safe tool execution, and governance. The repo itself does not look enterprise-complete yet. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/pyproject.toml "nanobot/pyproject.toml at main · HKUDS/nanobot · GitHub"))
@@ -221,31 +221,31 @@ Possible, but only after hardening: auth, policy controls, observability, safe t
 ## 7. Key Components Analysis
 
 **`README.md`**  
-Top-level product positioning and entry points. It frames the project as a personal AI agent with WebUI, channels, tools, memory, MCP, model routing, automation, and deployment. ([GitHub](https://github.com/HKUDS/nanobot?utm_source=chatgpt.com "HKUDS/nanobot: Lightweight, open-source AI agent for ..."))
+Top-level product positioning and entry points. It frames the project as a personal AI agent with WebUI, channels, tools, memory, MCP, model routing, automation, and deployment. ([GitHub](https://github.com/HKUDS/nanobot "HKUDS/nanobot: Lightweight, open-source AI agent for ..."))
 
 **`AGENTS.md`**  
 Internal architecture guide for coding agents. It documents the main runtime flow and subsystem boundaries. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/AGENTS.md "nanobot/AGENTS.md at main · HKUDS/nanobot · GitHub"))
 
 **`docs/architecture.md`**  
-Architecture reference tying runtime behavior back to source files. It exists to support debugging, PR review, and extension work. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/docs/architecture.md?utm_source=chatgpt.com "nanobot/docs/architecture.md at main"))
+Architecture reference tying runtime behavior back to source files. It exists to support debugging, PR review, and extension work. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/docs/architecture.md "nanobot/docs/architecture.md at main"))
 
 **`docs/configuration.md`**  
 Configuration reference, including MCP, config syntax, and runtime setup patterns. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/docs/configuration.md "nanobot/docs/configuration.md at main · HKUDS/nanobot · GitHub"))
 
 **`docs/python-sdk.md`**  
-Explains the SDK as an embedded runtime, not just a model client. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/docs/python-sdk.md?utm_source=chatgpt.com "nanobot/docs/python-sdk.md at main"))
+Explains the SDK as an embedded runtime, not just a model client. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/docs/python-sdk.md "nanobot/docs/python-sdk.md at main"))
 
 **`nanobot/agent/memory.py`**  
-Implements persistent memory storage and consolidation; the file-level comments describe a pure file I/O layer and Dream processor. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/nanobot/agent/memory.py?utm_source=chatgpt.com "nanobot/nanobot/agent/memory.py at main · HKUDS/nanobot"))
+Implements persistent memory storage and consolidation; the file-level comments describe a pure file I/O layer and Dream processor. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/nanobot/agent/memory.py "nanobot/nanobot/agent/memory.py at main · HKUDS/nanobot"))
 
 **`nanobot/agent/loop.py`**  
-Core turn coordinator. The file comment explicitly calls it “the core processing engine.” ([GitHub](https://github.com/HKUDS/nanobot/blob/main/nanobot/agent/loop.py?utm_source=chatgpt.com "nanobot/nanobot/agent/loop.py at main · HKUDS/nanobot"))
+Core turn coordinator. The file comment explicitly calls it “the core processing engine.” ([GitHub](https://github.com/HKUDS/nanobot/blob/main/nanobot/agent/loop.py "nanobot/nanobot/agent/loop.py at main · HKUDS/nanobot"))
 
 **`pyproject.toml`**  
 Packaging and metadata. It declares Python 3.11, MIT license, and alpha development status. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/pyproject.toml "nanobot/pyproject.toml at main · HKUDS/nanobot · GitHub"))
 
 **`Dockerfile`**  
-Shows a packaged install flow with optional extras and bundled WebUI build behavior. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/Dockerfile?utm_source=chatgpt.com "Dockerfile - HKUDS/nanobot"))
+Shows a packaged install flow with optional extras and bundled WebUI build behavior. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/Dockerfile "Dockerfile - HKUDS/nanobot"))
 
 ## 8. Setup and Adoption
 
@@ -262,14 +262,14 @@ Python 3.11+, plus whatever provider/channel dependencies you enable. The projec
     
 - Docker.
     
-- Python SDK embedding. ([GitHub](https://github.com/HKUDS/nanobot?utm_source=chatgpt.com "HKUDS/nanobot: Lightweight, open-source AI agent for ..."))
+- Python SDK embedding. ([GitHub](https://github.com/HKUDS/nanobot "HKUDS/nanobot: Lightweight, open-source AI agent for ..."))
     
 
 **Infrastructure requirements**  
-Depends on enabled channels and providers, but the repo and deploy docs suggest it can run light enough for modest self-hosted infrastructure. The WebUI template notes 1 vCPU / 2 GB recommended, with lower minimums for the template deployment. ([Zeabur](https://zeabur.com/templates/5XVJX8?utm_source=chatgpt.com "Nanobot Deploy Guide"))
+Depends on enabled channels and providers, but the repo and deploy docs suggest it can run light enough for modest self-hosted infrastructure. The WebUI template notes 1 vCPU / 2 GB recommended, with lower minimums for the template deployment. ([Zeabur](https://zeabur.com/templates/5XVJX8 "Nanobot Deploy Guide"))
 
 **Learning curve**  
-Medium-high. The conceptual model includes config, workspace, gateway, sessions, tools, memory, and providers. That is manageable, but not “hello world simple.” ([GitHub](https://github.com/HKUDS/nanobot/blob/main/docs/README.md?utm_source=chatgpt.com "nanobot/docs/README.md at main"))
+Medium-high. The conceptual model includes config, workspace, gateway, sessions, tools, memory, and providers. That is manageable, but not “hello world simple.” ([GitHub](https://github.com/HKUDS/nanobot/blob/main/docs/README.md "nanobot/docs/README.md at main"))
 
 **Operational considerations**
 
@@ -281,7 +281,7 @@ Medium-high. The conceptual model includes config, workspace, gateway, sessions,
     
 - Channel-specific reliability.
     
-- Need for secrets hygiene. ([GitHub](https://github.com/HKUDS/nanobot/issues/2638?utm_source=chatgpt.com "Session history grows unbounded, causing the agent to ..."))
+- Need for secrets hygiene. ([GitHub](https://github.com/HKUDS/nanobot/issues/2638 "Session history grows unbounded, causing the agent to ..."))
     
 
 ## 9. Strengths and Weaknesses
@@ -294,9 +294,9 @@ Medium-high. The conceptual model includes config, workspace, gateway, sessions,
     
 - **Extensibility:** MCP, plugins, auto-discovery, and provider abstractions are strong extension points. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/docs/configuration.md "nanobot/docs/configuration.md at main · HKUDS/nanobot · GitHub"))
     
-- **Performance:** lightweight core, not a giant orchestration stack. ([GitHub](https://github.com/HKUDS/nanobot?utm_source=chatgpt.com "HKUDS/nanobot: Lightweight, open-source AI agent for ..."))
+- **Performance:** lightweight core, not a giant orchestration stack. ([GitHub](https://github.com/HKUDS/nanobot "HKUDS/nanobot: Lightweight, open-source AI agent for ..."))
     
-- **Developer Experience:** CLI + SDK + WebUI is a decent ergonomics triangle. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/docs/python-sdk.md?utm_source=chatgpt.com "nanobot/docs/python-sdk.md at main"))
+- **Developer Experience:** CLI + SDK + WebUI is a decent ergonomics triangle. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/docs/python-sdk.md "nanobot/docs/python-sdk.md at main"))
     
 
 **Weaknesses**
@@ -305,9 +305,9 @@ Medium-high. The conceptual model includes config, workspace, gateway, sessions,
     
 - **Limitations:** alpha status suggests rough edges and breaking changes are still plausible. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/pyproject.toml "nanobot/pyproject.toml at main · HKUDS/nanobot · GitHub"))
     
-- **Missing features:** strong enterprise governance, policy controls, and deeper observability are not obvious from the repo surface. ([GitHub](https://github.com/HKUDS/nanobot/releases?utm_source=chatgpt.com "Releases · HKUDS/nanobot"))
+- **Missing features:** strong enterprise governance, policy controls, and deeper observability are not obvious from the repo surface. ([GitHub](https://github.com/HKUDS/nanobot/releases "Releases · HKUDS/nanobot"))
     
-- **Technical debt indicators:** active issue volume, ongoing architecture debates, and bug reports about memory/session growth imply the runtime is still being stabilized. ([GitHub](https://github.com/HKUDS/nanobot/issues?utm_source=chatgpt.com "Issues · HKUDS/nanobot"))
+- **Technical debt indicators:** active issue volume, ongoing architecture debates, and bug reports about memory/session growth imply the runtime is still being stabilized. ([GitHub](https://github.com/HKUDS/nanobot/issues "Issues · HKUDS/nanobot"))
     
 
 ## 10. Enterprise Evaluation
@@ -322,10 +322,10 @@ Powerful tool execution plus self-modification means security depends heavily on
 Architecture is modular and event-driven, which is good. Operational scaling will depend on channel volume, memory growth, and provider limits. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/AGENTS.md "nanobot/AGENTS.md at main · HKUDS/nanobot · GitHub"))
 
 **Observability: 5/10**  
-There are logs, status commands, and runtime diagnostics, but I did not see strong evidence of full enterprise observability—metrics, traces, policy audits, and dashboards. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/docs/README.md?utm_source=chatgpt.com "nanobot/docs/README.md at main"))
+There are logs, status commands, and runtime diagnostics, but I did not see strong evidence of full enterprise observability—metrics, traces, policy audits, and dashboards. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/docs/README.md "nanobot/docs/README.md at main"))
 
 **Documentation quality: 8/10**  
-Surprisingly solid. The docs are structured around concepts, architecture, configuration, SDK, and operations. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/docs/README.md?utm_source=chatgpt.com "nanobot/docs/README.md at main"))
+Surprisingly solid. The docs are structured around concepts, architecture, configuration, SDK, and operations. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/docs/README.md "nanobot/docs/README.md at main"))
 
 **Community support: 8/10**  
 Very active. The repo has substantial stars, forks, issues, PRs, discussions, and recent releases. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/pyproject.toml "nanobot/pyproject.toml at main · HKUDS/nanobot · GitHub"))
@@ -341,7 +341,7 @@ The modular design helps, but the runtime is ambitious enough that maintainabili
     
 - nanobot has integrated channels, memory, and WebUI; LangChain is more composable and broader in ecosystem.
     
-- nanobot is simpler in core philosophy; LangChain is more flexible but heavier. ([GitHub](https://github.com/HKUDS/nanobot?utm_source=chatgpt.com "HKUDS/nanobot: Lightweight, open-source AI agent for ..."))
+- nanobot is simpler in core philosophy; LangChain is more flexible but heavier. ([GitHub](https://github.com/HKUDS/nanobot "HKUDS/nanobot: Lightweight, open-source AI agent for ..."))
     
 
 **Compared with OpenAI Assistants / hosted agent platforms**
@@ -350,7 +350,7 @@ The modular design helps, but the runtime is ambitious enough that maintainabili
     
 - hosted platforms are usually easier to start but less customizable operationally.
     
-- nanobot’s channel and local-workspace orientation makes it more “own your stack.” ([GitHub](https://github.com/HKUDS/nanobot?utm_source=chatgpt.com "HKUDS/nanobot: Lightweight, open-source AI agent for ..."))
+- nanobot’s channel and local-workspace orientation makes it more “own your stack.” ([GitHub](https://github.com/HKUDS/nanobot "HKUDS/nanobot: Lightweight, open-source AI agent for ..."))
     
 
 **Compared with AutoGen / CrewAI style frameworks**
@@ -359,7 +359,7 @@ The modular design helps, but the runtime is ambitious enough that maintainabili
     
 - stronger built-in UI/channel story.
     
-- narrower ecosystem than the bigger agent-framework names. ([GitHub](https://github.com/HKUDS/nanobot?utm_source=chatgpt.com "HKUDS/nanobot: Lightweight, open-source AI agent for ..."))
+- narrower ecosystem than the bigger agent-framework names. ([GitHub](https://github.com/HKUDS/nanobot "HKUDS/nanobot: Lightweight, open-source AI agent for ..."))
     
 
 **Compared with n8n / Zapier-style automation**
@@ -401,7 +401,7 @@ The modular design helps, but the runtime is ambitious enough that maintainabili
     
 - One abstraction per concern.
     
-- Bundled docs that map behavior to source files. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/docs/configuration.md?utm_source=chatgpt.com "nanobot/docs/configuration.md at main"))
+- Bundled docs that map behavior to source files. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/docs/configuration.md "nanobot/docs/configuration.md at main"))
     
 
 **Anti-patterns**
@@ -410,7 +410,7 @@ The modular design helps, but the runtime is ambitious enough that maintainabili
     
 - Allowing memory/session growth to become unbounded.
     
-- Mixing product UX and runtime core too tightly. Some issues suggest these risks are live, not theoretical. ([GitHub](https://github.com/HKUDS/nanobot/issues/2638?utm_source=chatgpt.com "Session history grows unbounded, causing the agent to ..."))
+- Mixing product UX and runtime core too tightly. Some issues suggest these risks are live, not theoretical. ([GitHub](https://github.com/HKUDS/nanobot/issues/2638 "Session history grows unbounded, causing the agent to ..."))
     
 
 ## 13. Interview Preparation
@@ -510,7 +510,7 @@ nanobot is a self-hosted AI agent runtime built in Python with a React/TypeScrip
     
 - Experimental AI product platform.
     
-- Controlled agent runtime for developer teams. ([GitHub](https://github.com/HKUDS/nanobot?utm_source=chatgpt.com "HKUDS/nanobot: Lightweight, open-source AI agent for ..."))
+- Controlled agent runtime for developer teams. ([GitHub](https://github.com/HKUDS/nanobot "HKUDS/nanobot: Lightweight, open-source AI agent for ..."))
     
 
 **Decision matrix**
@@ -534,7 +534,7 @@ Yes, as an assistant/control-plane layer on top of the lakehouse. It could query
 Yes, for orchestration assistance, alerting, validation, run summaries, and operator chat interfaces. No, for core batch reliability, lineage, and scheduling guarantees; keep your real ETL engine separate. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/AGENTS.md "nanobot/AGENTS.md at main · HKUDS/nanobot · GitHub"))
 
 **Can it be used for LLM, RAG, agents, or AI workflows?**  
-Absolutely. That is its native lane. It already includes provider routing, tools, memory, sessions, SDK, and MCP. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/docs/python-sdk.md?utm_source=chatgpt.com "nanobot/docs/python-sdk.md at main"))
+Absolutely. That is its native lane. It already includes provider routing, tools, memory, sessions, SDK, and MCP. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/docs/python-sdk.md "nanobot/docs/python-sdk.md at main"))
 
 **Suggested enterprise architecture**  
 Use nanobot as the **agent orchestration layer**, not the source of truth. Put it behind an API gateway, connect it to a governed tool broker, and restrict its tools to read-only or policy-checked actions in production. Store business data in lakehouse/warehouse systems, keep memory/session data isolated, and route all outbound actions through audited service boundaries. For AI workflows, let nanobot handle conversational orchestration while vector stores, retrieval pipelines, and domain services handle retrieval and business logic. In other words: let nanobot be the smart front door, not the building. ([GitHub](https://github.com/HKUDS/nanobot/blob/main/AGENTS.md "nanobot/AGENTS.md at main · HKUDS/nanobot · GitHub"))

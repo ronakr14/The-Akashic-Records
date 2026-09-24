@@ -375,13 +375,13 @@ This lets users stay logged in without making access tokens long-lived.
 
 Instead of implementing everything yourself, these libraries provide production-ready user management:
 
-- [FastAPI Users](https://fastapi-users.github.io/fastapi-users/?utm_source=chatgpt.com) — complete authentication, registration, password reset, OAuth providers, JWT, and database integrations.
+- [FastAPI Users](https://fastapi-users.github.io/fastapi-users/) — complete authentication, registration, password reset, OAuth providers, JWT, and database integrations.
     
-- [Authlib](https://docs.authlib.org/?utm_source=chatgpt.com) — OAuth 2.0 and OpenID Connect support for integrating with Google, GitHub, Microsoft Entra ID, etc.
+- [Authlib](https://docs.authlib.org/) — OAuth 2.0 and OpenID Connect support for integrating with Google, GitHub, Microsoft Entra ID, etc.
     
-- [python-jose](https://python-jose.readthedocs.io/?utm_source=chatgpt.com) — JWT creation and validation.
+- [python-jose](https://python-jose.readthedocs.io/) — JWT creation and validation.
     
-- [pwdlib](https://frankie567.github.io/pwdlib/?utm_source=chatgpt.com) — modern password hashing library (also supported by FastAPI examples).
+- [pwdlib](https://frankie567.github.io/pwdlib/) — modern password hashing library (also supported by FastAPI examples).
     
 
 ---

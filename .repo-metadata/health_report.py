@@ -5,7 +5,8 @@ Vault health report — deterministic, no LLM.
 Scans the Obsidian vault and reports knowledge-decay signals:
   - broken wikilinks        [[X]] where X resolves to no note
   - orphan notes            no inbound and no outbound links
-  - stale notes             last git commit older than STALE_DAYS
+  - stale notes             last material prose edit older than STALE_DAYS
+                            (moves / frontmatter / AI Summary / link-only edits ignored)
   - missing frontmatter     content notes lacking the schema keys
   - invalid frontmatter     enum values outside the schema
   - MOC coverage gaps       01-Knowledge notes no MOC links to
@@ -111,14 +112,97 @@ def link_targets(text):
     return out
 
 
-def git_last_date(path):
+MATERIAL_WORDS = 25   # body-word churn below max(this, MATERIAL_FRAC of note) is housekeeping
+MATERIAL_FRAC = 0.10
+AISUMMARY_BLOCK = re.compile(r"^#+\s*AI Summary\s*$.*?^---\s*$", re.M | re.S | re.I)
+
+
+def content_words(text):
+    """Word multiset of the note's prose: no frontmatter, AI Summary or code.
+    Wikilinks collapse to their display text, so linking/unlinking a word is not churn."""
+    t = strip_body(text)
+    t = AISUMMARY_BLOCK.sub(" ", t, count=1)
+    t = WL.sub(lambda m: m.group(1).split("|")[-1].split("#")[0], t)
+    return collections.Counter(w.lower() for w in WORD.findall(t))
+
+
+def material_change(a, b):
+    ca, cb = content_words(a), content_words(b)
+    churn = sum(((ca - cb) + (cb - ca)).values())
+    return churn >= max(MATERIAL_WORDS, MATERIAL_FRAC * max(sum(ca.values()), sum(cb.values())))
+
+
+def content_dates():
+    """path -> date of the last commit that materially changed the note's prose.
+
+    A plain `git log -1` date is reset by moves, frontmatter edits, AI-summary
+    backfills and link wiring, so a bulk restructure makes every note look fresh.
+    Here renames carry the date forward and only body-word churn of at least
+    max(MATERIAL_WORDS, MATERIAL_FRAC of the note) counts. Uncommitted material edits count as today.
+    """
     try:
-        r = subprocess.run(["git", "-C", ROOT, "log", "-1", "--format=%cs", "--", path],
-                           capture_output=True, text=True, timeout=15)
-        s = r.stdout.strip()
-        return datetime.date.fromisoformat(s) if s else None
+        log = subprocess.run(
+            ["git", "-C", ROOT, "-c", "core.quotepath=off", "log", "--reverse", "-M30%",
+             "--raw", "--no-abbrev", "--format=@@ %cs", "--", "*.md"],
+            capture_output=True, text=True, encoding="utf-8", timeout=60).stdout
     except Exception:
-        return None
+        return {}
+    changes, date = [], None                      # (date, status, old_blob, new_blob, paths)
+    for line in log.splitlines():
+        if line.startswith("@@ "):
+            date = datetime.date.fromisoformat(line[3:].strip())
+        elif line.startswith(":"):
+            meta, *paths = line.split("\t")
+            _, _, ob, nb, st = meta.split()
+            changes.append((date, st[0], ob, nb, paths))
+
+    blobs = {nb for *_, nb, _ in changes} | {ob for _, _, ob, _, _ in changes}
+    blobs.discard("0" * 40)
+    text = {}
+    if blobs:
+        order = sorted(blobs)
+        r = subprocess.run(["git", "-C", ROOT, "cat-file", "--batch"],
+                           input="\n".join(order).encode() + b"\n",
+                           capture_output=True, timeout=60).stdout
+        i = 0
+        for sha in order:
+            nl = r.index(b"\n", i)
+            size = int(r[i:nl].split()[2])
+            text[sha] = r[nl + 1:nl + 1 + size].decode("utf-8", "replace")
+            i = nl + 1 + size + 1
+
+    dates, blob_of = {}, {}
+    for d, st, ob, nb, paths in changes:
+        if st == "D":
+            dates.pop(paths[0], None); blob_of.pop(paths[0], None)
+            continue
+        if st in "RC":
+            src, dst = paths
+            prev = dates.get(src, d)
+            if st == "R":
+                dates.pop(src, None); blob_of.pop(src, None)
+            dates[dst] = d if material_change(text.get(ob, ""), text.get(nb, "")) else prev
+            blob_of[dst] = nb
+            continue
+        p = paths[0]
+        if st == "A" or p not in dates:
+            dates[p] = d
+        elif material_change(text.get(ob, ""), text.get(nb, "")):
+            dates[p] = d
+        blob_of[p] = nb
+
+    # uncommitted edits
+    today = datetime.date.today()
+    for p, sha in blob_of.items():
+        fp = os.path.join(ROOT, p)
+        try:
+            with open(fp, encoding="utf-8") as f:
+                cur = f.read()
+        except OSError:
+            continue
+        if material_change(text.get(sha, ""), cur):
+            dates[p] = today
+    return dates
 
 
 def title_tokens(base):
@@ -204,11 +288,10 @@ def main():
             else:
                 broken.append((r, tgt))
 
-    gitdate = {}
+    cdates = content_dates()
     def gd(r):
-        if r not in gitdate:
-            gitdate[r] = git_last_date(r)
-        return gitdate[r]
+        # untracked notes are brand-new content
+        return cdates.get(r, today)
 
     # classify notes
     orphans, missing_fm, invalid_fm, stale = [], [], [], []

@@ -32,7 +32,7 @@ This is beyond a toy prototype. It has 261 commits, 36 releases, a recent latest
 Provide a unified operations layer for homelabs: status, topology, backups, process monitoring, app installation, server control, and agent access. It is explicitly positioned as “tool layer” infrastructure for AI ChatOps. ([GitHub](https://github.com/Higangssh/homebutler "GitHub - Higangssh/homebutler:  Manage your homelab from chat. Single binary, zero dependencies. · GitHub"))
 
 **Core features and capabilities**  
-The repository documents: system status, Docker container listing, inventory and topology mapping, health/doctor checks, report snapshots, app installs like Uptime Kuma/Jellyfin/Pi-hole/Gitea/Portainer, backup and restore, restart crash watching, Wake-on-LAN, network scanning, alerts, a TUI dashboard, a web dashboard, and an MCP server. ([GitHub](https://github.com/Higangssh/homebutler?utm_source=chatgpt.com "Higangssh/homebutler: 🏠 Manage your homelab from ..."))
+The repository documents: system status, Docker container listing, inventory and topology mapping, health/doctor checks, report snapshots, app installs like Uptime Kuma/Jellyfin/Pi-hole/Gitea/Portainer, backup and restore, restart crash watching, Wake-on-LAN, network scanning, alerts, a TUI dashboard, a web dashboard, and an MCP server. ([GitHub](https://github.com/Higangssh/homebutler "Higangssh/homebutler: 🏠 Manage your homelab from ..."))
 
 **Key technologies**  
 The project is primarily **Go** and uses a **single binary** approach. It embeds the web frontend with `go:embed`, supports JSON output, and ships an MCP server over stdio. The repo structure also shows `cmd/`, `internal/`, `web/`, `skills/`, `docs/`, and release/build tooling like `.goreleaser.yaml`. ([GitHub](https://github.com/Higangssh/homebutler "GitHub - Higangssh/homebutler:  Manage your homelab from chat. Single binary, zero dependencies. · GitHub"))
@@ -85,15 +85,15 @@ Typical flow:
     
 
 **Integrations and dependencies**  
-The tool integrates with Docker, systemd, PM2, SSH, Wake-on-LAN, local system metrics, and MCP-compatible AI clients such as Claude Desktop, ChatGPT, Cursor, and Windsurf. It also supports Homebrew, Go install, npm/npx, and a curl-based install script. ([GitHub](https://github.com/Higangssh/homebutler?utm_source=chatgpt.com "Higangssh/homebutler: 🏠 Manage your homelab from ..."))
+The tool integrates with Docker, systemd, PM2, SSH, Wake-on-LAN, local system metrics, and MCP-compatible AI clients such as Claude Desktop, ChatGPT, Cursor, and Windsurf. It also supports Homebrew, Go install, npm/npx, and a curl-based install script. ([GitHub](https://github.com/Higangssh/homebutler "Higangssh/homebutler: 🏠 Manage your homelab from ..."))
 
 ## 4. Why This Project Exists
 
 **Business problem**  
-Self-hosting creates operational drift: things restart, ports collide, backups are unverified, and every server becomes slightly different. HomeButler exists to reduce the cognitive load of that maintenance burden. ([GitHub](https://github.com/Higangssh/homebutler?utm_source=chatgpt.com "Higangssh/homebutler: 🏠 Manage your homelab from ..."))
+Self-hosting creates operational drift: things restart, ports collide, backups are unverified, and every server becomes slightly different. HomeButler exists to reduce the cognitive load of that maintenance burden. ([GitHub](https://github.com/Higangssh/homebutler "Higangssh/homebutler: 🏠 Manage your homelab from ..."))
 
 **Technical challenges solved**  
-It solves the ugly “last mile” of homelab operations: structured inspection, repeatable installs, crash analysis, backup drills, server-to-container mapping, and agent-safe access without exposing a raw shell. ([GitHub](https://github.com/Higangssh/homebutler?utm_source=chatgpt.com "Higangssh/homebutler: 🏠 Manage your homelab from ..."))
+It solves the ugly “last mile” of homelab operations: structured inspection, repeatable installs, crash analysis, backup drills, server-to-container mapping, and agent-safe access without exposing a raw shell. ([GitHub](https://github.com/Higangssh/homebutler "Higangssh/homebutler: 🏠 Manage your homelab from ..."))
 
 **Advantages over traditional approaches**  
 Compared with dashboards like Portainer/Netdata/CasaOS, HomeButler is CLI-first, scriptable, JSON-friendly, and air-gap friendly. That makes it much easier to automate, cron, embed in scripts, or hand to an AI agent. ([GitHub](https://github.com/Higangssh/homebutler "GitHub - Higangssh/homebutler:  Manage your homelab from chat. Single binary, zero dependencies. · GitHub"))
@@ -106,27 +106,27 @@ The big differentiator is the **AI-safe operations layer**: narrow, structured c
 **Homelab monitoring and health checks**  
 Scenario: run `homebutler doctor` daily to catch disk pressure, stopped containers, exposed ports, and missing backup hygiene.  
 Benefit: fewer surprise outages.  
-Complexity: **Low**. ([GitHub](https://github.com/Higangssh/homebutler?utm_source=chatgpt.com "Higangssh/homebutler: 🏠 Manage your homelab from ..."))
+Complexity: **Low**. ([GitHub](https://github.com/Higangssh/homebutler "Higangssh/homebutler: 🏠 Manage your homelab from ..."))
 
 **Container and port inventory**  
 Scenario: map which container owns which port after a messy weekend of compose changes.  
 Benefit: faster debugging, less tribal knowledge.  
-Complexity: **Low**. ([GitHub](https://github.com/Higangssh/homebutler?utm_source=chatgpt.com "Higangssh/homebutler: 🏠 Manage your homelab from ..."))
+Complexity: **Low**. ([GitHub](https://github.com/Higangssh/homebutler "Higangssh/homebutler: 🏠 Manage your homelab from ..."))
 
 **Self-hosted app deployment**  
 Scenario: install Uptime Kuma or Jellyfin with generated compose files and pre-checks.  
 Benefit: repeatable installs, less copy-paste debt.  
-Complexity: **Medium**. ([GitHub](https://github.com/Higangssh/homebutler?utm_source=chatgpt.com "Higangssh/homebutler: 🏠 Manage your homelab from ..."))
+Complexity: **Medium**. ([GitHub](https://github.com/Higangssh/homebutler "Higangssh/homebutler: 🏠 Manage your homelab from ..."))
 
 **Crash and restart forensics**  
 Scenario: watch a flaky service, capture logs around restart, and classify OOM/panic/segfault loops.  
 Benefit: faster root-cause analysis.  
-Complexity: **Medium**. ([GitHub](https://github.com/Higangssh/homebutler?utm_source=chatgpt.com "Higangssh/homebutler: 🏠 Manage your homelab from ..."))
+Complexity: **Medium**. ([GitHub](https://github.com/Higangssh/homebutler "Higangssh/homebutler: 🏠 Manage your homelab from ..."))
 
 **Backup validation**  
 Scenario: perform isolated backup drills before trusting recovery.  
 Benefit: turns “backup exists” into “backup works.”  
-Complexity: **Medium**. ([GitHub](https://github.com/Higangssh/homebutler?utm_source=chatgpt.com "Higangssh/homebutler: 🏠 Manage your homelab from ..."))
+Complexity: **Medium**. ([GitHub](https://github.com/Higangssh/homebutler "Higangssh/homebutler: 🏠 Manage your homelab from ..."))
 
 **AI-assisted operations**  
 Scenario: an MCP client asks HomeButler to list containers or inspect ports instead of shelling into the machine.  
@@ -139,13 +139,13 @@ Complexity: **Medium**. ([GitHub](https://github.com/Higangssh/homebutler "GitHu
 Relevant for managing local infra around ETL runners, self-hosted services, dev databases, and backup validation. It is not a data pipeline framework, but it can sit around one. ([GitHub](https://github.com/Higangssh/homebutler "GitHub - Higangssh/homebutler:  Manage your homelab from chat. Single binary, zero dependencies. · GitHub"))
 
 **Analytics**  
-Useful for monitoring analytics infrastructure in a homelab or small team environment, especially if dashboards or services are Dockerized. Not an analytics engine itself. ([GitHub](https://github.com/Higangssh/homebutler?utm_source=chatgpt.com "Higangssh/homebutler: 🏠 Manage your homelab from ..."))
+Useful for monitoring analytics infrastructure in a homelab or small team environment, especially if dashboards or services are Dockerized. Not an analytics engine itself. ([GitHub](https://github.com/Higangssh/homebutler "Higangssh/homebutler: 🏠 Manage your homelab from ..."))
 
 **AI/ML**  
 Strong relevance as an MCP-enabled operations tool. Useful for agentic infrastructure actions, tool calling, and safe system inspection. ([GitHub](https://github.com/Higangssh/homebutler "GitHub - Higangssh/homebutler:  Manage your homelab from chat. Single binary, zero dependencies. · GitHub"))
 
 **DevOps**  
-Very relevant. Container control, process watch, alerts, SSH, backup/restore, inventory, and CLI automation are all squarely DevOps-shaped. ([GitHub](https://github.com/Higangssh/homebutler?utm_source=chatgpt.com "Higangssh/homebutler: 🏠 Manage your homelab from ..."))
+Very relevant. Container control, process watch, alerts, SSH, backup/restore, inventory, and CLI automation are all squarely DevOps-shaped. ([GitHub](https://github.com/Higangssh/homebutler "Higangssh/homebutler: 🏠 Manage your homelab from ..."))
 
 **Platform Engineering**  
 Could be used as a lightweight platform ops layer for developer-hosted environments, but it is not a full platform orchestrator. ([GitHub](https://github.com/Higangssh/homebutler "GitHub - Higangssh/homebutler:  Manage your homelab from chat. Single binary, zero dependencies. · GitHub"))
@@ -154,10 +154,10 @@ Could be used as a lightweight platform ops layer for developer-hosted environme
 Useful for managing edge/homelab or small self-hosted nodes that mirror cloud operational patterns. Less relevant for full-scale cloud control planes. ([GitHub](https://github.com/Higangssh/homebutler "GitHub - Higangssh/homebutler:  Manage your homelab from chat. Single binary, zero dependencies. · GitHub"))
 
 **Security**  
-Moderately relevant for exposure checks, backup validation, and reducing shell exposure to agents. Not a security platform. ([GitHub](https://github.com/Higangssh/homebutler?utm_source=chatgpt.com "Higangssh/homebutler: 🏠 Manage your homelab from ..."))
+Moderately relevant for exposure checks, backup validation, and reducing shell exposure to agents. Not a security platform. ([GitHub](https://github.com/Higangssh/homebutler "Higangssh/homebutler: 🏠 Manage your homelab from ..."))
 
 **FinOps**  
-Indirect relevance only. It may help observe resource usage and curb waste in self-hosted environments, but it does not provide cost analytics. ([GitHub](https://github.com/Higangssh/homebutler?utm_source=chatgpt.com "Higangssh/homebutler: 🏠 Manage your homelab from ..."))
+Indirect relevance only. It may help observe resource usage and curb waste in self-hosted environments, but it does not provide cost analytics. ([GitHub](https://github.com/Higangssh/homebutler "Higangssh/homebutler: 🏠 Manage your homelab from ..."))
 
 **Product Engineering**  
 Useful for dev environments, preview stacks, and shared self-hosted services across teams. ([GitHub](https://github.com/Higangssh/homebutler "GitHub - Higangssh/homebutler:  Manage your homelab from chat. Single binary, zero dependencies. · GitHub"))
@@ -229,7 +229,7 @@ Good signs: no always-on daemon by default, local web binding, structured interf
 The architecture supports multiple interfaces and remote servers, but this is operational scale, not distributed control-plane scale. ([GitHub](https://github.com/Higangssh/homebutler "GitHub - Higangssh/homebutler:  Manage your homelab from chat. Single binary, zero dependencies. · GitHub"))
 
 **Observability: 7/10**  
-Doctor checks, reports, crash history, and alerts are strong for an ops utility. Still not a full observability platform. ([GitHub](https://github.com/Higangssh/homebutler?utm_source=chatgpt.com "Higangssh/homebutler: 🏠 Manage your homelab from ..."))
+Doctor checks, reports, crash history, and alerts are strong for an ops utility. Still not a full observability platform. ([GitHub](https://github.com/Higangssh/homebutler "Higangssh/homebutler: 🏠 Manage your homelab from ..."))
 
 **Documentation quality: 8/10**  
 README is unusually detailed, with workflows, examples, install options, architecture, and command docs. ([GitHub](https://github.com/Higangssh/homebutler "GitHub - Higangssh/homebutler:  Manage your homelab from chat. Single binary, zero dependencies. · GitHub"))
@@ -266,7 +266,7 @@ Single binary distribution, layered architecture, adapter-style interfaces, shar
 A narrow, structured tool surface is safer than raw shell access, especially for AI agents. Also, one core with multiple interfaces beats duplicating logic across CLI, web, and agent surfaces. ([GitHub](https://github.com/Higangssh/homebutler "GitHub - Higangssh/homebutler:  Manage your homelab from chat. Single binary, zero dependencies. · GitHub"))
 
 **Best practices worth adopting**  
-JSON output everywhere, opt-in web UI, local-first defaults, explicit install/update paths, and backup drill workflows. ([GitHub](https://github.com/Higangssh/homebutler?utm_source=chatgpt.com "Higangssh/homebutler: 🏠 Manage your homelab from ..."))
+JSON output everywhere, opt-in web UI, local-first defaults, explicit install/update paths, and backup drill workflows. ([GitHub](https://github.com/Higangssh/homebutler "Higangssh/homebutler: 🏠 Manage your homelab from ..."))
 
 **Anti-patterns / risks**  
 Scope creep is the obvious one. This tool is trying to be many things: ops CLI, dashboard, backup tool, app installer, agent server. That is powerful, but it can get messy fast unless boundaries stay sharp. Also, small-team bus factor is a real risk. ([GitHub](https://github.com/Higangssh/homebutler "GitHub - Higangssh/homebutler:  Manage your homelab from chat. Single binary, zero dependencies. · GitHub"))
@@ -364,7 +364,7 @@ HomeButler is a Go-based homelab operations toolkit that combines CLI, embedded 
     
 - AI/agent workflows that need controlled infrastructure actions.
     
-- Small teams running self-hosted services on Docker and SSH-managed servers. ([GitHub](https://github.com/Higangssh/homebutler?utm_source=chatgpt.com "Higangssh/homebutler: 🏠 Manage your homelab from ..."))
+- Small teams running self-hosted services on Docker and SSH-managed servers. ([GitHub](https://github.com/Higangssh/homebutler "Higangssh/homebutler: 🏠 Manage your homelab from ..."))
     
 
 **Decision matrix**
@@ -385,7 +385,7 @@ Yes, but as an operational companion, not a core data platform component. It can
 Indirectly yes. It could help manage supporting services, local dev environments, or self-hosted infra around the lakehouse, but it is not a lakehouse-native control plane. ([GitHub](https://github.com/Higangssh/homebutler "GitHub - Higangssh/homebutler:  Manage your homelab from chat. Single binary, zero dependencies. · GitHub"))
 
 **Can it improve ETL/ELT pipelines?**  
-Indirectly. It can help with runtime inspection, service health, backup validation, and deployment of adjacent services. It does not orchestrate ETL itself. ([GitHub](https://github.com/Higangssh/homebutler?utm_source=chatgpt.com "Higangssh/homebutler: 🏠 Manage your homelab from ..."))
+Indirectly. It can help with runtime inspection, service health, backup validation, and deployment of adjacent services. It does not orchestrate ETL itself. ([GitHub](https://github.com/Higangssh/homebutler "Higangssh/homebutler: 🏠 Manage your homelab from ..."))
 
 **Can it be used for LLM, RAG, agents, or AI workflows?**  
 Yes, and this is one of its strongest angles. The built-in MCP server makes it a good tool backend for AI assistants and agent workflows. ([GitHub](https://github.com/Higangssh/homebutler "GitHub - Higangssh/homebutler:  Manage your homelab from chat. Single binary, zero dependencies. · GitHub"))

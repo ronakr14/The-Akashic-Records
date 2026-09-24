@@ -19,7 +19,7 @@ Here’s a deep architectural read of **MEGA Web Client** based on the repositor
 This is the browser client for MEGA’s cloud platform: a large-scale, privacy-focused web application for file storage, sharing, sync-like interactions, chat, and calling. The repo describes MEGA’s “User Controlled Encryption” model, meaning encryption is designed to happen automatically on the client side. ([GitHub](https://github.com/meganz/webclient "GitHub - meganz/webclient: The mega.nz web client · GitHub"))
 
 **What problem does it solve?**  
-It lets users manage cloud files through a web UI without MEGA seeing plaintext content. It also supports upload/download flows, encrypted thumbnails, encrypted previews, chat, and audio/video calling, all in the browser. ([GitHub](https://github.com/meganz/webclient?utm_source=chatgpt.com "meganz/webclient: The mega.nz web client"))
+It lets users manage cloud files through a web UI without MEGA seeing plaintext content. It also supports upload/download flows, encrypted thumbnails, encrypted previews, chat, and audio/video calling, all in the browser. ([GitHub](https://github.com/meganz/webclient "meganz/webclient: The mega.nz web client"))
 
 **Who is the target audience?**  
 End users of MEGA cloud storage, plus MEGA’s internal engineering team maintaining the production web client. The repository is private and proprietary, so this is not an open community hobby project. ([GitHub](https://github.com/meganz/webclient/blob/master/package.json "webclient/package.json at master · meganz/webclient · GitHub"))
@@ -36,30 +36,30 @@ A complete web frontend for MEGA’s cloud infrastructure: file manager, encrypt
 
 **Core features and capabilities**
 
-- Encrypted file transfer flows: `decrypter.js` for download-time decryption and `encrypter.js` for upload-time encryption. ([GitHub](https://github.com/meganz/webclient/blob/master/README.md?utm_source=chatgpt.com "README.md - meganz/webclient - GitHub"))
+- Encrypted file transfer flows: `decrypter.js` for download-time decryption and `encrypter.js` for upload-time encryption. ([GitHub](https://github.com/meganz/webclient/blob/master/README.md "README.md - meganz/webclient - GitHub"))
     
 - Secure boot / integrity verification for loaded static resources. ([GitHub](https://github.com/meganz/webclient "GitHub - meganz/webclient: The mega.nz web client · GitHub"))
     
-- File manager UI and dialogs via `js/fm.js`. ([GitHub](https://github.com/meganz/webclient?utm_source=chatgpt.com "meganz/webclient: The mega.nz web client"))
+- File manager UI and dialogs via `js/fm.js`. ([GitHub](https://github.com/meganz/webclient "meganz/webclient: The mega.nz web client"))
     
-- Client-side cryptography and key generation. ([GitHub](https://github.com/meganz/webclient?utm_source=chatgpt.com "meganz/webclient: The mega.nz web client"))
+- Client-side cryptography and key generation. ([GitHub](https://github.com/meganz/webclient "meganz/webclient: The mega.nz web client"))
     
-- IndexedDB-backed metadata caching via `js/mDB.js`. ([GitHub](https://github.com/meganz/webclient?utm_source=chatgpt.com "meganz/webclient: The mega.nz web client"))
+- IndexedDB-backed metadata caching via `js/mDB.js`. ([GitHub](https://github.com/meganz/webclient "meganz/webclient: The mega.nz web client"))
     
-- Upload/download orchestration and drag/drop handling. ([GitHub](https://github.com/meganz/webclient?utm_source=chatgpt.com "meganz/webclient: The mega.nz web client"))
+- Upload/download orchestration and drag/drop handling. ([GitHub](https://github.com/meganz/webclient "meganz/webclient: The mega.nz web client"))
     
-- Thumbnail creation and preview generation in-browser. ([GitHub](https://github.com/meganz/webclient?utm_source=chatgpt.com "meganz/webclient: The mega.nz web client"))
+- Thumbnail creation and preview generation in-browser. ([GitHub](https://github.com/meganz/webclient "meganz/webclient: The mega.nz web client"))
     
-- Chat and audio/video call support through SFU client code and worker bundles. ([GitHub](https://github.com/meganz/webclient?utm_source=chatgpt.com "meganz/webclient: The mega.nz web client"))
+- Chat and audio/video call support through SFU client code and worker bundles. ([GitHub](https://github.com/meganz/webclient "meganz/webclient: The mega.nz web client"))
     
 
 **Key technologies, frameworks, and languages**
 
-- Mostly **JavaScript**, plus HTML and CSS; package metadata also shows small amounts of Python, SCSS, and shell. ([GitHub](https://github.com/meganz/webclient?utm_source=chatgpt.com "meganz/webclient: The mega.nz web client"))
+- Mostly **JavaScript**, plus HTML and CSS; package metadata also shows small amounts of Python, SCSS, and shell. ([GitHub](https://github.com/meganz/webclient "meganz/webclient: The mega.nz web client"))
     
 - Build tooling: Babel, Webpack, Grunt, PostCSS, htmlnano/cssnano. ([GitHub](https://github.com/meganz/webclient/blob/master/package.json "webclient/package.json at master · meganz/webclient · GitHub"))
     
-- Browser APIs: IndexedDB, canvas, web workers, localStorage, FileSystem API, and likely Service Worker (`sw.js` exists in the tree). ([GitHub](https://github.com/meganz/webclient?utm_source=chatgpt.com "meganz/webclient: The mega.nz web client"))
+- Browser APIs: IndexedDB, canvas, web workers, localStorage, FileSystem API, and likely Service Worker (`sw.js` exists in the tree). ([GitHub](https://github.com/meganz/webclient "meganz/webclient: The mega.nz web client"))
     
 - Crypto libraries: asmcrypto.js, NaCl/TweetNaCl, SJCL, RSA/AES assets. ([GitHub](https://github.com/meganz/webclient/blob/master/js/vendor/README.md "webclient/js/vendor/README.md at master · meganz/webclient · GitHub"))
     
@@ -100,17 +100,17 @@ This is a **client-heavy, static-asset-driven SPA-style web application** with:
 
 **Major components/modules**
 
-- `js/mega.js`: central data model / state handling. ([GitHub](https://github.com/meganz/webclient?utm_source=chatgpt.com "meganz/webclient: The mega.nz web client"))
+- `js/mega.js`: central data model / state handling. ([GitHub](https://github.com/meganz/webclient "meganz/webclient: The mega.nz web client"))
     
-- `js/fm.js`: file manager UI and dialogs. ([GitHub](https://github.com/meganz/webclient?utm_source=chatgpt.com "meganz/webclient: The mega.nz web client"))
+- `js/fm.js`: file manager UI and dialogs. ([GitHub](https://github.com/meganz/webclient "meganz/webclient: The mega.nz web client"))
     
-- `js/upload.js` / `js/download.js`: transfer orchestration. ([GitHub](https://github.com/meganz/webclient?utm_source=chatgpt.com "meganz/webclient: The mega.nz web client"))
+- `js/upload.js` / `js/download.js`: transfer orchestration. ([GitHub](https://github.com/meganz/webclient "meganz/webclient: The mega.nz web client"))
     
-- `js/crypto.js` / `js/keygen.js`: encryption, key generation, API handlers. ([GitHub](https://github.com/meganz/webclient?utm_source=chatgpt.com "meganz/webclient: The mega.nz web client"))
+- `js/crypto.js` / `js/keygen.js`: encryption, key generation, API handlers. ([GitHub](https://github.com/meganz/webclient "meganz/webclient: The mega.nz web client"))
     
-- `js/mDB.js`: local metadata cache abstraction. ([GitHub](https://github.com/meganz/webclient?utm_source=chatgpt.com "meganz/webclient: The mega.nz web client"))
+- `js/mDB.js`: local metadata cache abstraction. ([GitHub](https://github.com/meganz/webclient "meganz/webclient: The mega.nz web client"))
     
-- `js/chat/sfuClient.js` and worker bundles: calling and recording. ([GitHub](https://github.com/meganz/webclient?utm_source=chatgpt.com "meganz/webclient: The mega.nz web client"))
+- `js/chat/sfuClient.js` and worker bundles: calling and recording. ([GitHub](https://github.com/meganz/webclient "meganz/webclient: The mega.nz web client"))
     
 - `js/vendor/README.md`: third-party and forked libraries used by the app. ([GitHub](https://github.com/meganz/webclient/blob/master/js/vendor/README.md "webclient/js/vendor/README.md at master · meganz/webclient · GitHub"))
     
@@ -259,7 +259,7 @@ Strong relevance for secure collaboration and document handling, especially in p
 **`README.md`**  
 Purpose: onboarding and architecture hints.  
 Responsibilities: secure boot explanation, dev setup, directory map, main JS file inventory.  
-Interaction: acts as the highest-level system map. ([GitHub](https://github.com/meganz/webclient/blob/master/README.md?utm_source=chatgpt.com "README.md - meganz/webclient - GitHub"))
+Interaction: acts as the highest-level system map. ([GitHub](https://github.com/meganz/webclient/blob/master/README.md "README.md - meganz/webclient - GitHub"))
 
 **`package.json`**  
 Purpose: dependency and build metadata.  
@@ -269,32 +269,32 @@ Interaction: build/test pipeline and dependency resolution. ([GitHub](https://gi
 **`js/fm.js`**  
 Purpose: file manager core UI.  
 Responsibilities: manage browsing, dialogs, file actions, and UI state.  
-Interaction: depends on `mega.js`, crypto, upload/download, and local cache layers. ([GitHub](https://github.com/meganz/webclient?utm_source=chatgpt.com "meganz/webclient: The mega.nz web client"))
+Interaction: depends on `mega.js`, crypto, upload/download, and local cache layers. ([GitHub](https://github.com/meganz/webclient "meganz/webclient: The mega.nz web client"))
 
 **`js/mega.js`**  
 Purpose: central data model/state holder.  
 Responsibilities: storage state, metadata handling, and some UI coordination.  
-Interaction: feeds the rest of the app with canonical state. ([GitHub](https://github.com/meganz/webclient?utm_source=chatgpt.com "meganz/webclient: The mega.nz web client"))
+Interaction: feeds the rest of the app with canonical state. ([GitHub](https://github.com/meganz/webclient "meganz/webclient: The mega.nz web client"))
 
 **`js/crypto.js` / `js/keygen.js`**  
 Purpose: cryptographic operations.  
 Responsibilities: key creation, API crypto handlers, encryption primitives.  
-Interaction: used by upload/download and sharing flows. ([GitHub](https://github.com/meganz/webclient?utm_source=chatgpt.com "meganz/webclient: The mega.nz web client"))
+Interaction: used by upload/download and sharing flows. ([GitHub](https://github.com/meganz/webclient "meganz/webclient: The mega.nz web client"))
 
 **`js/mDB.js`**  
 Purpose: local persistence abstraction.  
 Responsibilities: IndexedDB-backed caching of metadata.  
-Interaction: reduces backend round trips and supports faster UI state restoration. ([GitHub](https://github.com/meganz/webclient?utm_source=chatgpt.com "meganz/webclient: The mega.nz web client"))
+Interaction: reduces backend round trips and supports faster UI state restoration. ([GitHub](https://github.com/meganz/webclient "meganz/webclient: The mega.nz web client"))
 
 **`js/upload.js` / `js/download.js`**  
 Purpose: transfer pipelines.  
 Responsibilities: encode/decode streams, coordinate worker usage, manage progress/error handling.  
-Interaction: tightly coupled with crypto, file manager, and network logic. ([GitHub](https://github.com/meganz/webclient?utm_source=chatgpt.com "meganz/webclient: The mega.nz web client"))
+Interaction: tightly coupled with crypto, file manager, and network logic. ([GitHub](https://github.com/meganz/webclient "meganz/webclient: The mega.nz web client"))
 
 **`js/chat/sfuClient.js` and worker bundles**  
 Purpose: real-time communication.  
 Responsibilities: audio/video call client engine and recording support.  
-Interaction: separate from core storage but integrated into the same product surface. ([GitHub](https://github.com/meganz/webclient?utm_source=chatgpt.com "meganz/webclient: The mega.nz web client"))
+Interaction: separate from core storage but integrated into the same product surface. ([GitHub](https://github.com/meganz/webclient "meganz/webclient: The mega.nz web client"))
 
 **`js/vendor/README.md`**  
 Purpose: dependency provenance.  
@@ -393,7 +393,7 @@ Client offload helps a lot, but scale also depends on backend APIs, CDN/static h
 The repo shows logging hooks and dev flags, but there is not enough public evidence of mature observability pipelines. ([GitHub](https://github.com/meganz/webclient "GitHub - meganz/webclient: The mega.nz web client · GitHub"))
 
 **Documentation quality: 7/10**  
-Good enough for setup and component orientation, but not a full system design manual. ([GitHub](https://github.com/meganz/webclient/blob/master/README.md?utm_source=chatgpt.com "README.md - meganz/webclient - GitHub"))
+Good enough for setup and component orientation, but not a full system design manual. ([GitHub](https://github.com/meganz/webclient/blob/master/README.md "README.md - meganz/webclient - GitHub"))
 
 **Community support: 4/10**  
 Private/proprietary repo, limited external community value. ([GitHub](https://github.com/meganz/webclient/blob/master/package.json "webclient/package.json at master · meganz/webclient · GitHub"))
@@ -607,7 +607,7 @@ MEGA Web Client is a mature, proprietary, production browser application for enc
 ## 15. AI/Data Engineering Relevance
 
 **Can this repository be used in data platforms?**  
-Yes, as a secure browser front-end for data asset upload/download, governance, and document management. It is not a data platform itself, but it can front one. ([GitHub](https://github.com/meganz/webclient?utm_source=chatgpt.com "meganz/webclient: The mega.nz web client"))
+Yes, as a secure browser front-end for data asset upload/download, governance, and document management. It is not a data platform itself, but it can front one. ([GitHub](https://github.com/meganz/webclient "meganz/webclient: The mega.nz web client"))
 
 **Can it be integrated into a lakehouse architecture?**  
 Yes, as the presentation layer for encrypted ingestion, file sharing, and governed artifact access before data lands in object storage or curated zones.

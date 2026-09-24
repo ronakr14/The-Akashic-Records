@@ -72,7 +72,7 @@ The repository contains the Railway command-line client and related install/rele
     
 - **inquire**, **indicatif**, **console**, **colored**, **textwrap**, etc. for interactive UX and polished terminal output. ([GitHub](https://github.com/railwayapp/cli/blob/master/Cargo.toml "cli/Cargo.toml at master · railwayapp/cli · GitHub"))
     
-- Shell and packaging support via `install.sh`, `release.toml`, `flake.nix`, `Dockerfile`, and `pnpm-lock.yaml`. ([GitHub](https://github.com/railwayapp/cli/blob/master/.dockerignore?utm_source=chatgpt.com "cli/.dockerignore at master · railwayapp/cli"))
+- Shell and packaging support via `install.sh`, `release.toml`, `flake.nix`, `Dockerfile`, and `pnpm-lock.yaml`. ([GitHub](https://github.com/railwayapp/cli/blob/master/.dockerignore "cli/.dockerignore at master · railwayapp/cli"))
     
 
 **High-level architecture inferred**  
@@ -343,7 +343,7 @@ Moderate. Basic commands are straightforward, but true value comes from knowing 
     
 - Binary/installer maintenance is a real concern.
     
-- Terminal output should be consumed carefully in automation. ([GitHub](https://github.com/railwayapp/cli/issues/538?utm_source=chatgpt.com "[Feature Request] Support for Account-Level API Tokens ..."))
+- Terminal output should be consumed carefully in automation. ([GitHub](https://github.com/railwayapp/cli/issues/538 "[Feature Request] Support for Account-Level API Tokens ..."))
     
 
 ## 9. Strengths and Weaknesses
@@ -363,13 +363,13 @@ Moderate. Basic commands are straightforward, but true value comes from knowing 
 
 **Weaknesses**
 
-- **Risks:** Authentication edge cases are already showing up in issues. ([GitHub](https://github.com/railwayapp/cli/issues/699?utm_source=chatgpt.com "CLI authentication fails with valid API token on Linux #699"))
+- **Risks:** Authentication edge cases are already showing up in issues. ([GitHub](https://github.com/railwayapp/cli/issues/699 "CLI authentication fails with valid API token on Linux #699"))
     
 - **Limitations:** Heavily tied to Railway’s platform and API model.
     
 - **Missing features:** Not a general cloud CLI; scope is intentionally narrow.
     
-- **Technical debt indicators:** Some dependencies and advisories appear in the issue/release ecosystem, which means dependency hygiene needs attention. ([GitHub](https://github.com/railwayapp/cli/runs/85876836536?utm_source=chatgpt.com "chore: Release railwayapp version 5.25.1"))
+- **Technical debt indicators:** Some dependencies and advisories appear in the issue/release ecosystem, which means dependency hygiene needs attention. ([GitHub](https://github.com/railwayapp/cli/runs/85876836536 "chore: Release railwayapp version 5.25.1"))
     
 
 ## 10. Enterprise Evaluation
@@ -378,7 +378,7 @@ Moderate. Basic commands are straightforward, but true value comes from knowing 
 Mature Rust codebase, real release process, install scripts, and documented token usage. The main ding is platform-specific scope and some auth/reporting friction. ([GitHub](https://github.com/railwayapp/cli "GitHub - railwayapp/cli: Railway CLI · GitHub"))
 
 **Security: 7/10**  
-Good token-based patterns and clear headless flows, but CLI auth issues and dependency/security signals reduce confidence a bit. ([GitHub](https://github.com/railwayapp/cli/issues/699?utm_source=chatgpt.com "CLI authentication fails with valid API token on Linux #699"))
+Good token-based patterns and clear headless flows, but CLI auth issues and dependency/security signals reduce confidence a bit. ([GitHub](https://github.com/railwayapp/cli/issues/699 "CLI authentication fails with valid API token on Linux #699"))
 
 **Scalability: 8/10**  
 Strong for distributed team use and automation; not a horizontally scalable service itself, but that is not its job. ([GitHub](https://github.com/railwayapp/cli "GitHub - railwayapp/cli: Railway CLI · GitHub"))
@@ -390,7 +390,7 @@ The repository does not advertise rich built-in observability; the CLI likely re
 README is practical, CLAUDE.md is helpful, and installation/auth flows are explicit. Could still be deeper for complex operations. ([GitHub](https://github.com/railwayapp/cli "GitHub - railwayapp/cli: Railway CLI · GitHub"))
 
 **Community support: 6/10**  
-There is active issue traffic, but the repo is product-owned rather than community-driven in the open-source sense. ([GitHub](https://github.com/railwayapp/cli/activity?sort=ASC&utm_source=chatgpt.com "Activity · railwayapp/cli"))
+There is active issue traffic, but the repo is product-owned rather than community-driven in the open-source sense. ([GitHub](https://github.com/railwayapp/cli/activity?sort=ASC "Activity · railwayapp/cli"))
 
 **Maintainability: 8/10**  
 Rust, modular command structure, and build-time schema generation are all maintainability-positive. ([GitHub](https://github.com/railwayapp/cli/blob/master/CLAUDE.md "cli/CLAUDE.md at master · railwayapp/cli · GitHub"))
@@ -494,7 +494,7 @@ Rust, modular command structure, and build-time schema generation are all mainta
     
 - Letting install/update scripts drift.
     
-- Putting too much platform policy into client-side logic. The auth issues suggest this is an area to watch closely. ([GitHub](https://github.com/railwayapp/cli/issues/699?utm_source=chatgpt.com "CLI authentication fails with valid API token on Linux #699"))
+- Putting too much platform policy into client-side logic. The auth issues suggest this is an area to watch closely. ([GitHub](https://github.com/railwayapp/cli/issues/699 "CLI authentication fails with valid API token on Linux #699"))
     
 
 ## 13. Interview Preparation
@@ -579,9 +579,9 @@ Railway CLI is a mature Rust-based command-line interface for managing Railway p
     
 - The repo is explicitly designed for AI tool setup, which is a notable differentiator. ([GitHub](https://github.com/railwayapp/cli "GitHub - railwayapp/cli: Railway CLI · GitHub"))
     
-- Authentication is flexible, but not friction-free. ([GitHub](https://github.com/railwayapp/cli/issues/699?utm_source=chatgpt.com "CLI authentication fails with valid API token on Linux #699"))
+- Authentication is flexible, but not friction-free. ([GitHub](https://github.com/railwayapp/cli/issues/699 "CLI authentication fails with valid API token on Linux #699"))
     
-- The codebase looks production-grade and actively maintained. ([GitHub](https://github.com/railwayapp/cli/runs/85876836536?utm_source=chatgpt.com "chore: Release railwayapp version 5.25.1"))
+- The codebase looks production-grade and actively maintained. ([GitHub](https://github.com/railwayapp/cli/runs/85876836536 "chore: Release railwayapp version 5.25.1"))
     
 
 **Recommended adoption scenarios**

@@ -113,7 +113,7 @@ Integrations and dependencies:
 
 - Integrates with an SNMP master agent such as `snmpd`.
     
-- The repo includes an `snmpd.conf` example, which is a strong hint that the intended deployment is a master-agent plus subagent setup. ([GitHub](https://github.com/posteo/go-agentx/blob/master/snmpd.conf?utm_source=chatgpt.com "snmpd.conf - posteo/go-agentx"))
+- The repo includes an `snmpd.conf` example, which is a strong hint that the intended deployment is a master-agent plus subagent setup. ([GitHub](https://github.com/posteo/go-agentx/blob/master/snmpd.conf "snmpd.conf - posteo/go-agentx"))
     
 - Depends on Go’s standard networking primitives and internal protocol packages. ([GitHub](https://github.com/posteo/go-agentx/blob/master/client.go "go-agentx/client.go at master · posteo/go-agentx · GitHub"))
     
@@ -349,7 +349,7 @@ The library exposes metrics to SNMP; it does not itself expose rich internal tel
 README is useful and the example is strong, but the repository appears sparse and the feature surface is only partially documented. ([GitHub](https://github.com/posteo/go-agentx/blob/master/README.md "go-agentx/README.md at master · posteo/go-agentx · GitHub"))
 
 **Community support: 4/10**  
-Public repo, small star/fork count visible on GitHub, and one open PR in the snapshot. That suggests a modest community footprint. ([GitHub](https://github.com/posteo/go-agentx/pulls?utm_source=chatgpt.com "Pull requests · posteo/go-agentx"))
+Public repo, small star/fork count visible on GitHub, and one open PR in the snapshot. That suggests a modest community footprint. ([GitHub](https://github.com/posteo/go-agentx/pulls "Pull requests · posteo/go-agentx"))
 
 **Maintainability: 7/10**  
 Small codebase, clear module separation, and typed interfaces make it readable. The missing feature coverage is the main drag. ([GitHub](https://github.com/posteo/go-agentx/blob/master/client.go "go-agentx/client.go at master · posteo/go-agentx · GitHub"))
@@ -374,7 +374,7 @@ Likely alternatives:
 
 - A Go SNMP library that is widely used for SNMP client-side operations, not AgentX subagent behavior.
     
-- Better if you need polling or trap handling from the client side, not extending `snmpd`. ([Track Awesome List](https://www.trackawesomelist.com/eozer/awesome-snmp/readme/?utm_source=chatgpt.com "Awesome Snmp Overview"))
+- Better if you need polling or trap handling from the client side, not extending `snmpd`. ([Track Awesome List](https://www.trackawesomelist.com/eozer/awesome-snmp/readme/ "Awesome Snmp Overview"))
     
 
 **3) Non-Go AgentX implementations**

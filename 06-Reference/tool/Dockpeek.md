@@ -183,7 +183,7 @@ Complexity: Low. ([GitHub](https://github.com/dockpeek/dockpeek "GitHub - dockpe
 Description: Stream real-time logs and jump between containers quickly.  
 Example scenario: Debug a failing app by watching logs while comparing neighboring containers.  
 Expected benefits: Faster root-cause analysis, fewer terminal windows.  
-Complexity: Low. ([GitHub](https://github.com/dockpeek/dockpeek/releases?utm_source=chatgpt.com "Releases · dockpeek/dockpeek"))
+Complexity: Low. ([GitHub](https://github.com/dockpeek/dockpeek/releases "Releases · dockpeek/dockpeek"))
 
 ### Image freshness monitoring
 
@@ -308,7 +308,7 @@ Operational considerations:
 
 **Extensibility:** Label-driven customization and custom registry templates point to a flexible design. ([GitHub](https://github.com/dockpeek/dockpeek "GitHub - dockpeek/dockpeek: Easily access your Docker container web interfaces and keep them up to date — across all your hosts. · GitHub"))
 
-**Performance:** Release notes mention faster multi-host response times and request optimizations. ([GitHub](https://github.com/dockpeek/dockpeek/releases?utm_source=chatgpt.com "Releases · dockpeek/dockpeek"))
+**Performance:** Release notes mention faster multi-host response times and request optimizations. ([GitHub](https://github.com/dockpeek/dockpeek/releases "Releases · dockpeek/dockpeek"))
 
 **Developer Experience:** Docker Compose deployment, straightforward config, and a focused feature set make it pleasant to adopt. ([GitHub](https://github.com/dockpeek/dockpeek "GitHub - dockpeek/dockpeek: Easily access your Docker container web interfaces and keep them up to date — across all your hosts. · GitHub"))
 
@@ -320,7 +320,7 @@ Operational considerations:
 
 **Missing features:** No obvious enterprise RBAC, audit logging, multi-tenant isolation, or deep observability stack integration is visible from the repo/docs. ([GitHub](https://github.com/dockpeek/dockpeek "GitHub - dockpeek/dockpeek: Easily access your Docker container web interfaces and keep them up to date — across all your hosts. · GitHub"))
 
-**Technical debt indicators:** Broad environment-variable configuration and many deployment permutations can become brittle if not tested rigorously. The issue tracker and release cadence suggest active evolution, which is good, but also means behavior can change fast. ([GitHub](https://github.com/dockpeek/dockpeek/issues?utm_source=chatgpt.com "Issues · dockpeek/dockpeek"))
+**Technical debt indicators:** Broad environment-variable configuration and many deployment permutations can become brittle if not tested rigorously. The issue tracker and release cadence suggest active evolution, which is good, but also means behavior can change fast. ([GitHub](https://github.com/dockpeek/dockpeek/issues "Issues · dockpeek/dockpeek"))
 
 ## 10. Enterprise Evaluation
 
@@ -347,7 +347,7 @@ The structure and release discipline are decent, but it is still a young project
 
 ## 11. Comparison with Alternatives
 
-Likely alternatives include **Portainer**, **Dockge**, and raw **Docker CLI + Compose** workflows. Portainer is the heavy-duty general-purpose manager; Dockge is closer in spirit for compose-centric management; CLI is the zero-overhead baseline but scales poorly in UX. ([Reddit](https://www.reddit.com/r/selfhosted/comments/1lbxmc0/dockpeek_minimal_docker_port_mapping_dashboard/?utm_source=chatgpt.com "Dockpeek - Minimal Docker port mapping dashboard"))
+Likely alternatives include **Portainer**, **Dockge**, and raw **Docker CLI + Compose** workflows. Portainer is the heavy-duty general-purpose manager; Dockge is closer in spirit for compose-centric management; CLI is the zero-overhead baseline but scales poorly in UX. ([Reddit](https://www.reddit.com/r/selfhosted/comments/1lbxmc0/dockpeek_minimal_docker_port_mapping_dashboard/ "Dockpeek - Minimal Docker port mapping dashboard"))
 
 Feature-wise, Dockpeek is narrower than Portainer but more focused on quick access, logs, and port discovery. Compared with Dockge, Dockpeek’s differentiators are the port-centric dashboard, Traefik awareness, custom labels, and update visibility. Compared with CLI, it wins on discoverability and operator speed every day of the week. ([GitHub](https://github.com/dockpeek/dockpeek "GitHub - dockpeek/dockpeek: Easily access your Docker container web interfaces and keep them up to date — across all your hosts. · GitHub"))
 

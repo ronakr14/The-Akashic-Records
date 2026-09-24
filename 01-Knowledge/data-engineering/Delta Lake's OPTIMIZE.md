@@ -72,7 +72,7 @@ Create tasks
 Schedule tasks
 ```
 
-100,000 files creates huge overhead even before processing begins. Small-file proliferation is a major performance problem in lakehouses. ([docs.databricks.com](https://docs.databricks.com/aws/en/delta/tune-file-size?utm_source=chatgpt.com "Control data file size | Databricks on AWS"))
+100,000 files creates huge overhead even before processing begins. Small-file proliferation is a major performance problem in lakehouses. ([docs.databricks.com](https://docs.databricks.com/aws/en/delta/tune-file-size "Control data file size | Databricks on AWS"))
 
 → **Risk:** Without OPTIMIZE, streaming pipelines degrade over time. Query latency grows linearly with file count, and metadata operations become the bottleneck.
 
@@ -205,7 +205,7 @@ A common target is around:
 256 MB - 1 GB
 ```
 
-depending on workload and platform. Databricks documentation notes that file sizes are tuned automatically in many cases and configurable for OPTIMIZE operations. ([docs.databricks.com](https://docs.databricks.com/aws/en/delta/tune-file-size?utm_source=chatgpt.com "Control data file size | Databricks on AWS"))
+depending on workload and platform. Databricks documentation notes that file sizes are tuned automatically in many cases and configurable for OPTIMIZE operations. ([docs.databricks.com](https://docs.databricks.com/aws/en/delta/tune-file-size "Control data file size | Databricks on AWS"))
 
 Think:
 
@@ -321,7 +321,7 @@ File3
 2001-3000
 ```
 
-Data with similar values gets colocated. This maximizes the effectiveness of data skipping. ([Conduktor](https://conduktor.io/glossary/optimizing-delta-tables-optimize-and-z-order?utm_source=chatgpt.com "Optimizing Delta Tables: OPTIMIZE and Z-ORDER"))
+Data with similar values gets colocated. This maximizes the effectiveness of data skipping. ([Conduktor](https://conduktor.io/glossary/optimizing-delta-tables-optimize-and-z-order "Optimizing Delta Tables: OPTIMIZE and Z-ORDER"))
 
 ---
 
@@ -411,7 +411,7 @@ ZORDER BY(
 )
 ```
 
-Delta attempts to keep records with similar combinations close together using a Morton/Z-curve approach. Effectiveness drops as more columns are added, so choosing columns carefully matters. ([docs.databricks.com](https://docs.databricks.com/aws/en/delta/data-skipping?utm_source=chatgpt.com "Data skipping | Databricks on AWS"))
+Delta attempts to keep records with similar combinations close together using a Morton/Z-curve approach. Effectiveness drops as more columns are added, so choosing columns carefully matters. ([docs.databricks.com](https://docs.databricks.com/aws/en/delta/data-skipping "Data skipping | Databricks on AWS"))
 
 ### Tips
 
@@ -501,7 +501,7 @@ OPTIMIZE performs a full rewrite of the selected data. Understand the costs:
 
 ### Auto Compaction vs Manual OPTIMIZE
 
-Databricks auto compaction helps but is not a full replacement for scheduled OPTIMIZE on large tables. ([docs.databricks.com](https://docs.databricks.com/aws/en/delta/tune-file-size?utm_source=chatgpt.com "Control data file size | Databricks on AWS"))
+Databricks auto compaction helps but is not a full replacement for scheduled OPTIMIZE on large tables. ([docs.databricks.com](https://docs.databricks.com/aws/en/delta/tune-file-size "Control data file size | Databricks on AWS"))
 
 - **Auto Compaction:** Best-effort, triggered after writes. Good for small-to-medium tables
 - **Manual OPTIMIZE:** Scheduled, predictable, can include Z-ORDER. Required for large tables

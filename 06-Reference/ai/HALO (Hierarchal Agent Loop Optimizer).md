@@ -24,12 +24,12 @@ It addresses a very specific pain point in AI agent engineering: isolated trace 
 Primary users are AI engineers, agent platform teams, and developers building production agent harnesses. Secondary users include platform engineers and technical leaders who need observability and iterative improvement for LLM-powered workflows. The repo also clearly targets people who want local-first debugging as well as hosted usage through inference.net. ([GitHub](https://github.com/context-labs/halo "GitHub - context-labs/HALO: Hierarchal Agent Loop Optimizer · GitHub"))
 
 **Maturity level.**  
-This looks like an **advanced prototype / early production product** rather than a fully mature enterprise platform. Reasons: it has a desktop app, a PyPI package, a CLI, demos, and docs, but also visible rough edges such as a missing LICENSE issue and active RFC/feature issues, which suggests the project is still evolving quickly. ([GitHub](https://github.com/context-labs/HALO/issues/34?utm_source=chatgpt.com "Repo is missing LICENSE file despite MIT badge in README #34"))
+This looks like an **advanced prototype / early production product** rather than a fully mature enterprise platform. Reasons: it has a desktop app, a PyPI package, a CLI, demos, and docs, but also visible rough edges such as a missing LICENSE issue and active RFC/feature issues, which suggests the project is still evolving quickly. ([GitHub](https://github.com/context-labs/HALO/issues/34 "Repo is missing LICENSE file despite MIT badge in README #34"))
 
 ## 2. Repository Overview
 
 **Main purpose.**  
-The repository is a full-stack product repo for HALO: documentation, desktop app, engine/CLI, demos, tests, and integration examples. It is not just a library; it is an ecosystem for tracing, analyzing, and improving agent systems. ([GitHub](https://github.com/context-labs/halo?utm_source=chatgpt.com "context-labs/HALO: Hierarchal Agent Loop Optimizer"))
+The repository is a full-stack product repo for HALO: documentation, desktop app, engine/CLI, demos, tests, and integration examples. It is not just a library; it is an ecosystem for tracing, analyzing, and improving agent systems. ([GitHub](https://github.com/context-labs/halo "context-labs/HALO: Hierarchal Agent Loop Optimizer"))
 
 **Core features and capabilities.**  
 From the README and integration docs, the major capabilities are:
@@ -48,7 +48,7 @@ From the README and integration docs, the major capabilities are:
     
 
 **Key technologies, frameworks, and languages.**  
-The repo is clearly **Python-heavy**, uses **uv** for dependency management, and includes a **Go Task**-style task runner via `Taskfile.yml`. The integration guide references `openai-agents`, `python-dotenv`, OpenAI-compatible APIs, and OpenTelemetry-shaped export files. The repo also includes a desktop app, so there is likely a frontend stack, but I did not inspect the app source deeply enough to name it confidently. ([GitHub](https://github.com/context-labs/halo?utm_source=chatgpt.com "context-labs/HALO: Hierarchal Agent Loop Optimizer"))
+The repo is clearly **Python-heavy**, uses **uv** for dependency management, and includes a **Go Task**-style task runner via `Taskfile.yml`. The integration guide references `openai-agents`, `python-dotenv`, OpenAI-compatible APIs, and OpenTelemetry-shaped export files. The repo also includes a desktop app, so there is likely a frontend stack, but I did not inspect the app source deeply enough to name it confidently. ([GitHub](https://github.com/context-labs/halo "context-labs/HALO: Hierarchal Agent Loop Optimizer"))
 
 **High-level architecture inferred from the codebase.**  
 At a high level, HALO appears to have five layers:
@@ -82,7 +82,7 @@ From the repo layout and docs, the most important parts are:
     
 - `docs/integrations/`: adapter instructions such as the OpenAI Agents SDK integration.
     
-- `tests/`: validation and regression checks. ([GitHub](https://github.com/context-labs/halo?utm_source=chatgpt.com "context-labs/HALO: Hierarchal Agent Loop Optimizer"))
+- `tests/`: validation and regression checks. ([GitHub](https://github.com/context-labs/halo "context-labs/HALO: Hierarchal Agent Loop Optimizer"))
     
 
 **Data flow and execution flow.**  
@@ -189,7 +189,7 @@ Critical adapter documentation. It defines the trace export shape, the `setup_tr
 A vendored integration module that wraps the OpenAI Agents SDK trace processor. It is the bridge from application traces to HALO’s trace store. The doc describes `ExportContext`, `InferenceOtlpFileProcessor`, and `setup_tracing()`. ([GitHub](https://github.com/context-labs/HALO/blob/main/docs/integrations/openai-agents-sdk.md "HALO/docs/integrations/openai-agents-sdk.md at main · context-labs/HALO · GitHub"))
 
 **`engine/`**  
-Likely contains the HALO-RLM analysis logic: trace loading, indexing, failure-mode synthesis, and report generation. That is where the product’s real differentiation lives. This is an inference from repo layout plus README description. ([GitHub](https://github.com/context-labs/halo?utm_source=chatgpt.com "context-labs/HALO: Hierarchal Agent Loop Optimizer"))
+Likely contains the HALO-RLM analysis logic: trace loading, indexing, failure-mode synthesis, and report generation. That is where the product’s real differentiation lives. This is an inference from repo layout plus README description. ([GitHub](https://github.com/context-labs/halo "context-labs/HALO: Hierarchal Agent Loop Optimizer"))
 
 **`app/`**  
 Likely the desktop UI for viewing reports, loading traces, and navigating results. The README explicitly calls out a local desktop app. ([GitHub](https://github.com/context-labs/halo "GitHub - context-labs/HALO: Hierarchal Agent Loop Optimizer · GitHub"))
@@ -242,9 +242,9 @@ Important issues include trace volume, token/API cost, consistency of `inference
     
 - **Limitations:** It is specialized for agent traces, not general observability.
     
-- **Missing features:** Open issues suggest gaps such as ARM64 support, Pi session ingestion, and controlled vocabulary for failure labeling. ([GitHub](https://github.com/context-labs/HALO/issues?utm_source=chatgpt.com "Issues · context-labs/HALO"))
+- **Missing features:** Open issues suggest gaps such as ARM64 support, Pi session ingestion, and controlled vocabulary for failure labeling. ([GitHub](https://github.com/context-labs/HALO/issues "Issues · context-labs/HALO"))
     
-- **Technical debt indicators:** The missing LICENSE issue is a real compliance smell, not just a formality. That is the kind of thing enterprises notice immediately. ([GitHub](https://github.com/context-labs/HALO/issues/34?utm_source=chatgpt.com "Repo is missing LICENSE file despite MIT badge in README #34"))
+- **Technical debt indicators:** The missing LICENSE issue is a real compliance smell, not just a formality. That is the kind of thing enterprises notice immediately. ([GitHub](https://github.com/context-labs/HALO/issues/34 "Repo is missing LICENSE file despite MIT badge in README #34"))
     
 
 ## 10. Enterprise Evaluation
@@ -265,10 +265,10 @@ This is the product’s home turf. Trace normalization, sidecar indexing, and re
 The README and integration guide are unusually concrete and operationally useful. ([GitHub](https://github.com/context-labs/halo "GitHub - context-labs/HALO: Hierarchal Agent Loop Optimizer · GitHub"))
 
 **Community support: 6/10**  
-There is visible activity, issues, pull requests, and stars, but it is still early-stage open-source community energy, not mature ecosystem gravity. ([GitHub](https://github.com/context-labs/HALO/activity?utm_source=chatgpt.com "Activity · context-labs/HALO"))
+There is visible activity, issues, pull requests, and stars, but it is still early-stage open-source community energy, not mature ecosystem gravity. ([GitHub](https://github.com/context-labs/HALO/activity "Activity · context-labs/HALO"))
 
 **Maintainability: 6/10**  
-Reasonable structure, but the evolving schema and open RFCs mean maintainability is not yet proven at enterprise scale. ([GitHub](https://github.com/context-labs/halo?utm_source=chatgpt.com "context-labs/HALO: Hierarchal Agent Loop Optimizer"))
+Reasonable structure, but the evolving schema and open RFCs mean maintainability is not yet proven at enterprise scale. ([GitHub](https://github.com/context-labs/halo "context-labs/HALO: Hierarchal Agent Loop Optimizer"))
 
 ## 11. Comparison with Alternatives
 
@@ -350,7 +350,7 @@ Reasonable structure, but the evolving schema and open RFCs mean maintainability
     
 - Mixing trace transport, schema mapping, and analysis logic too tightly.
     
-- Leaving repo/legal hygiene unresolved. That missing LICENSE issue is not cosmetic. ([GitHub](https://github.com/context-labs/HALO/issues/34?utm_source=chatgpt.com "Repo is missing LICENSE file despite MIT badge in README #34"))
+- Leaving repo/legal hygiene unresolved. That missing LICENSE issue is not cosmetic. ([GitHub](https://github.com/context-labs/HALO/issues/34 "Repo is missing LICENSE file despite MIT badge in README #34"))
     
 
 ## 13. Interview Preparation

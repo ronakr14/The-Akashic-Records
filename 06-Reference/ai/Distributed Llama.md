@@ -25,7 +25,7 @@ Distributed Llama is a **distributed LLM inference engine** that splits a model 
 It solves the very practical problem of **insufficient memory and compute on a single machine**. Instead of forcing one machine to hold the whole model and all runtime state, it spreads the neural network across multiple nodes. That makes local deployment of big models more feasible on consumer hardware, mini PCs, Raspberry Pis, Macs, and mixed CPU environments. ([GitHub](https://github.com/b4rtaz/distributed-llama "GitHub - b4rtaz/distributed-llama: Distributed LLM inference. Connect home devices into a powerful cluster to accelerate LLM inference. More devices means faster inference. · GitHub"))
 
 **Target audience**  
-The audience is pretty clear: power users, hobbyists, local AI enthusiasts, researchers, and engineers experimenting with **distributed inference on commodity hardware**. It is also relevant to people trying to run models privately without a cloud dependency. The repo’s discussions and issues show demand from users exploring Kubernetes, Docker, Open WebUI, embeddings, and API integration, which confirms a technically savvy audience. ([GitHub](https://github.com/b4rtaz/distributed-llama/discussions/215?utm_source=chatgpt.com "Does this dllama work in kubernetes environment? #215"))
+The audience is pretty clear: power users, hobbyists, local AI enthusiasts, researchers, and engineers experimenting with **distributed inference on commodity hardware**. It is also relevant to people trying to run models privately without a cloud dependency. The repo’s discussions and issues show demand from users exploring Kubernetes, Docker, Open WebUI, embeddings, and API integration, which confirms a technically savvy audience. ([GitHub](https://github.com/b4rtaz/distributed-llama/discussions/215 "Does this dllama work in kubernetes environment? #215"))
 
 **Maturity level**  
 This is best described as a **mature open-source research/prototype system**, not enterprise-ready software. It is active, has many releases, and has real users, but the README still lists hard limitations such as only certain quantization/buffer combinations and node-count constraints. That is a strong signal that it is useful and evolving, but still opinionated and constrained rather than broadly production-hardened. ([GitHub](https://github.com/b4rtaz/distributed-llama "GitHub - b4rtaz/distributed-llama: Distributed LLM inference. Connect home devices into a powerful cluster to accelerate LLM inference. More devices means faster inference. · GitHub"))
@@ -51,7 +51,7 @@ The repository implements a distributed runtime for LLM inference, with a root n
     
 - Support for Linux, macOS, Windows, ARM, and x86_64 AVX2 CPUs. ([GitHub](https://github.com/b4rtaz/distributed-llama "GitHub - b4rtaz/distributed-llama: Distributed LLM inference. Connect home devices into a powerful cluster to accelerate LLM inference. More devices means faster inference. · GitHub"))
     
-- Experimental Vulkan support and recent support for Qwen3 MoE models. ([GitHub](https://github.com/b4rtaz/distributed-llama/releases?utm_source=chatgpt.com "Releases · b4rtaz/distributed-llama"))
+- Experimental Vulkan support and recent support for Qwen3 MoE models. ([GitHub](https://github.com/b4rtaz/distributed-llama/releases "Releases · b4rtaz/distributed-llama"))
     
 
 **Key technologies, frameworks, and languages**
@@ -211,7 +211,7 @@ Useful if analytics teams need a private local LLM for summarization, SQL assist
 Very high relevance. This is squarely an AI inference system, especially for distributed local execution. ([GitHub](https://github.com/b4rtaz/distributed-llama "GitHub - b4rtaz/distributed-llama: Distributed LLM inference. Connect home devices into a powerful cluster to accelerate LLM inference. More devices means faster inference. · GitHub"))
 
 **DevOps**  
-Moderate relevance. It can be containerized and deployed, but operational maturity is limited; issues around persistent API behavior and node failure recovery show why DevOps would need to harden it. ([GitHub](https://github.com/b4rtaz/distributed-llama/releases?utm_source=chatgpt.com "Releases · b4rtaz/distributed-llama"))
+Moderate relevance. It can be containerized and deployed, but operational maturity is limited; issues around persistent API behavior and node failure recovery show why DevOps would need to harden it. ([GitHub](https://github.com/b4rtaz/distributed-llama/releases "Releases · b4rtaz/distributed-llama"))
 
 **Platform Engineering**  
 High relevance as an internal AI platform primitive, especially for private model serving in controlled environments. ([GitHub](https://github.com/b4rtaz/distributed-llama "GitHub - b4rtaz/distributed-llama: Distributed LLM inference. Connect home devices into a powerful cluster to accelerate LLM inference. More devices means faster inference. · GitHub"))
@@ -220,13 +220,13 @@ High relevance as an internal AI platform primitive, especially for private mode
 Relevant if you want hybrid or edge-style distributed inference, but this project is more LAN/home-cluster oriented than cloud-native. ([GitHub](https://github.com/b4rtaz/distributed-llama "GitHub - b4rtaz/distributed-llama: Distributed LLM inference. Connect home devices into a powerful cluster to accelerate LLM inference. More devices means faster inference. · GitHub"))
 
 **Security**  
-Interesting for privacy-preserving local inference. However, it is not a security product and would need network hardening, auth, and auditability before serious enterprise use. ([GitHub](https://github.com/b4rtaz/distributed-llama/issues/146?utm_source=chatgpt.com "Feature request: models endpoint support in dllama-api #146"))
+Interesting for privacy-preserving local inference. However, it is not a security product and would need network hardening, auth, and auditability before serious enterprise use. ([GitHub](https://github.com/b4rtaz/distributed-llama/issues/146 "Feature request: models endpoint support in dllama-api #146"))
 
 **FinOps**  
 Potentially useful because it can shift workload from cloud inference spend to owned hardware. That is a cost strategy, not a built-in FinOps feature. ([GitHub](https://github.com/b4rtaz/distributed-llama "GitHub - b4rtaz/distributed-llama: Distributed LLM inference. Connect home devices into a powerful cluster to accelerate LLM inference. More devices means faster inference. · GitHub"))
 
 **Product Engineering**  
-Useful for embedding private inference into products that need local model access. The lack of mature OpenAI-compatible behavior is a current gap. ([GitHub](https://github.com/b4rtaz/distributed-llama/issues/146?utm_source=chatgpt.com "Feature request: models endpoint support in dllama-api #146"))
+Useful for embedding private inference into products that need local model access. The lack of mature OpenAI-compatible behavior is a current gap. ([GitHub](https://github.com/b4rtaz/distributed-llama/issues/146 "Feature request: models endpoint support in dllama-api #146"))
 
 **Enterprise Applications**  
 Possible in narrow internal/private deployments, but not turnkey. The project lacks evidence of enterprise controls such as auth, RBAC, HA orchestration, or rich observability. ([GitHub](https://github.com/b4rtaz/distributed-llama "GitHub - b4rtaz/distributed-llama: Distributed LLM inference. Connect home devices into a powerful cluster to accelerate LLM inference. More devices means faster inference. · GitHub"))
@@ -250,7 +250,7 @@ Contains the “how to convert HF model” guide and likely operational setup in
 Reference runs, demos, or sample commands. Responsibilities: proving supported scenarios and configurations. Useful for adoption and reproducibility. ([GitHub](https://github.com/b4rtaz/distributed-llama "GitHub - b4rtaz/distributed-llama: Distributed LLM inference. Connect home devices into a powerful cluster to accelerate LLM inference. More devices means faster inference. · GitHub"))
 
 **`report/`**  
-There is a `report.pdf`, which likely contains deeper analysis, measurements, or a technical write-up. That is a strong signal the project has a research/documentation layer beyond code. ([GitHub](https://github.com/b4rtaz/distributed-llama/blob/main/report/report.pdf?utm_source=chatgpt.com "distributed-llama/report/report.pdf at main"))
+There is a `report.pdf`, which likely contains deeper analysis, measurements, or a technical write-up. That is a strong signal the project has a research/documentation layer beyond code. ([GitHub](https://github.com/b4rtaz/distributed-llama/blob/main/report/report.pdf "distributed-llama/report/report.pdf at main"))
 
 **`launch.py`**  
 Single-command bootstrap for root node/model download. Responsibilities: improve first-run UX and hide complexity. Interacts with model artifacts, tokenizer, and runtime binary. ([GitHub](https://github.com/b4rtaz/distributed-llama "GitHub - b4rtaz/distributed-llama: Distributed LLM inference. Connect home devices into a powerful cluster to accelerate LLM inference. More devices means faster inference. · GitHub"))
@@ -298,11 +298,11 @@ Moderate to steep. The core mental model is simple, but the practical reality of
 
 **Operational considerations**
 
-- Node failure handling is an area of active interest, not a solved enterprise feature. ([GitHub](https://github.com/b4rtaz/distributed-llama/releases?utm_source=chatgpt.com "Releases · b4rtaz/distributed-llama"))
+- Node failure handling is an area of active interest, not a solved enterprise feature. ([GitHub](https://github.com/b4rtaz/distributed-llama/releases "Releases · b4rtaz/distributed-llama"))
     
-- API shape is still evolving; users requested broader OpenAI-like API features, embeddings, and model-list endpoints. ([GitHub](https://github.com/b4rtaz/distributed-llama/issues/146?utm_source=chatgpt.com "Feature request: models endpoint support in dllama-api #146"))
+- API shape is still evolving; users requested broader OpenAI-like API features, embeddings, and model-list endpoints. ([GitHub](https://github.com/b4rtaz/distributed-llama/issues/146 "Feature request: models endpoint support in dllama-api #146"))
     
-- Containerization exists via PR work, but the project is not presented as natively cloud-native. ([GitHub](https://github.com/b4rtaz/distributed-llama/pull/233/files?utm_source=chatgpt.com "Implement docker #233 - b4rtaz/distributed-llama"))
+- Containerization exists via PR work, but the project is not presented as natively cloud-native. ([GitHub](https://github.com/b4rtaz/distributed-llama/pull/233/files "Implement docker #233 - b4rtaz/distributed-llama"))
     
 
 ---
@@ -318,7 +318,7 @@ Scales memory and throughput by adding nodes, with a clear root/worker model. ([
 The codebase is compact enough to reason about, but native distributed systems code is inherently harder to maintain than a Python wrapper. The repository structure is clean. ([GitHub](https://github.com/b4rtaz/distributed-llama "GitHub - b4rtaz/distributed-llama: Distributed LLM inference. Connect home devices into a powerful cluster to accelerate LLM inference. More devices means faster inference. · GitHub"))
 
 **Extensibility**  
-The presence of API mode, discussions around embeddings, models endpoint support, Docker work, and Vulkan support shows a project that is moving. ([GitHub](https://github.com/b4rtaz/distributed-llama/releases?utm_source=chatgpt.com "Releases · b4rtaz/distributed-llama"))
+The presence of API mode, discussions around embeddings, models endpoint support, Docker work, and Vulkan support shows a project that is moving. ([GitHub](https://github.com/b4rtaz/distributed-llama/releases "Releases · b4rtaz/distributed-llama"))
 
 **Performance**  
 Designed specifically for local synchronized inference, with hardware-aware support for ARM and AVX2. ([GitHub](https://github.com/b4rtaz/distributed-llama "GitHub - b4rtaz/distributed-llama: Distributed LLM inference. Connect home devices into a powerful cluster to accelerate LLM inference. More devices means faster inference. · GitHub"))
@@ -329,7 +329,7 @@ Designed specifically for local synchronized inference, with hardware-aware supp
 ## Weaknesses
 
 **Risks**  
-Distributed inference over home networks is fragile compared with single-node deployment. Node failures, socket issues, and protocol mismatches can ruin the experience fast. ([GitHub](https://github.com/b4rtaz/distributed-llama/discussions/261?utm_source=chatgpt.com "Roadmap · b4rtaz distributed-llama · Discussion #261"))
+Distributed inference over home networks is fragile compared with single-node deployment. Node failures, socket issues, and protocol mismatches can ruin the experience fast. ([GitHub](https://github.com/b4rtaz/distributed-llama/discussions/261 "Roadmap · b4rtaz distributed-llama · Discussion #261"))
 
 **Limitations**
 
@@ -342,11 +342,11 @@ Distributed inference over home networks is fragile compared with single-node de
 
 **Missing features**
 
-- Robust model registry / multi-model API behavior. ([GitHub](https://github.com/b4rtaz/distributed-llama/issues/146?utm_source=chatgpt.com "Feature request: models endpoint support in dllama-api #146"))
+- Robust model registry / multi-model API behavior. ([GitHub](https://github.com/b4rtaz/distributed-llama/issues/146 "Feature request: models endpoint support in dllama-api #146"))
     
-- Broader OpenAI-compatible endpoints such as embeddings. ([GitHub](https://github.com/b4rtaz/distributed-llama/issues/96?utm_source=chatgpt.com "[New Feature] Add new route for dllama api for embeding ..."))
+- Broader OpenAI-compatible endpoints such as embeddings. ([GitHub](https://github.com/b4rtaz/distributed-llama/issues/96 "[New Feature] Add new route for dllama api for embeding ..."))
     
-- More dynamic node membership and HA-style orchestration. ([GitHub](https://github.com/b4rtaz/distributed-llama/discussions/261?utm_source=chatgpt.com "Roadmap · b4rtaz distributed-llama · Discussion #261"))
+- More dynamic node membership and HA-style orchestration. ([GitHub](https://github.com/b4rtaz/distributed-llama/discussions/261 "Roadmap · b4rtaz distributed-llama · Discussion #261"))
     
 
 **Technical debt indicators**
@@ -395,7 +395,7 @@ Likely alternatives include:
     
 - **LocalAI / Open WebUI backends**: better API ecosystem compatibility, less specialized distributed partitioning.
     
-- **Exo / similar distributed local inference projects**: closer philosophically, but architecture and maturity vary. ([GitHub](https://github.com/b4rtaz/distributed-llama/issues/146?utm_source=chatgpt.com "Feature request: models endpoint support in dllama-api #146"))
+- **Exo / similar distributed local inference projects**: closer philosophically, but architecture and maturity vary. ([GitHub](https://github.com/b4rtaz/distributed-llama/issues/146 "Feature request: models endpoint support in dllama-api #146"))
     
 
 ## Comparison dimensions
@@ -550,7 +550,7 @@ The strongest value proposition is turning a pile of underused devices into a pr
     
 - Meaningful limitations in quantization and topology. ([GitHub](https://github.com/b4rtaz/distributed-llama "GitHub - b4rtaz/distributed-llama: Distributed LLM inference. Connect home devices into a powerful cluster to accelerate LLM inference. More devices means faster inference. · GitHub"))
     
-- Active ecosystem movement toward API, Docker, and richer model support. ([GitHub](https://github.com/b4rtaz/distributed-llama/releases?utm_source=chatgpt.com "Releases · b4rtaz/distributed-llama"))
+- Active ecosystem movement toward API, Docker, and richer model support. ([GitHub](https://github.com/b4rtaz/distributed-llama/releases "Releases · b4rtaz/distributed-llama"))
     
 
 ## Recommended adoption scenarios
@@ -576,7 +576,7 @@ Avoid it for:
     
 - heavily dynamic clusters,
     
-- teams needing broad API compatibility out of the box. ([GitHub](https://github.com/b4rtaz/distributed-llama/issues/146?utm_source=chatgpt.com "Feature request: models endpoint support in dllama-api #146"))
+- teams needing broad API compatibility out of the box. ([GitHub](https://github.com/b4rtaz/distributed-llama/issues/146 "Feature request: models endpoint support in dllama-api #146"))
     
 
 ## Decision matrix
@@ -585,7 +585,7 @@ Avoid it for:
 When you have multiple local devices, want private inference, and can tolerate system-level constraints. ([GitHub](https://github.com/b4rtaz/distributed-llama "GitHub - b4rtaz/distributed-llama: Distributed LLM inference. Connect home devices into a powerful cluster to accelerate LLM inference. More devices means faster inference. · GitHub"))
 
 **Evaluate**  
-When you need local model serving but require better API compatibility, dynamic orchestration, or enterprise controls. ([GitHub](https://github.com/b4rtaz/distributed-llama/issues/146?utm_source=chatgpt.com "Feature request: models endpoint support in dllama-api #146"))
+When you need local model serving but require better API compatibility, dynamic orchestration, or enterprise controls. ([GitHub](https://github.com/b4rtaz/distributed-llama/issues/146 "Feature request: models endpoint support in dllama-api #146"))
 
 **Avoid**  
 When you need turnkey production, strong security guarantees, or elastic cloud-native scaling. ([GitHub](https://github.com/b4rtaz/distributed-llama "GitHub - b4rtaz/distributed-llama: Distributed LLM inference. Connect home devices into a powerful cluster to accelerate LLM inference. More devices means faster inference. · GitHub"))
@@ -604,7 +604,7 @@ Yes, as a private inference service consumed by notebooks, orchestrators, and se
 Indirectly, yes. It could power schema understanding, metadata extraction, documentation generation, exception triage, or data contract assistants. It will not replace the ETL engine itself. ([GitHub](https://github.com/b4rtaz/distributed-llama "GitHub - b4rtaz/distributed-llama: Distributed LLM inference. Connect home devices into a powerful cluster to accelerate LLM inference. More devices means faster inference. · GitHub"))
 
 **Can it be used for LLM, RAG, agents, or AI workflows?**  
-Yes, especially for local/private inference. The main caveat is ecosystem compatibility; current discussions show demand for embeddings and richer API behavior, which are not yet first-class in the public surface. ([GitHub](https://github.com/b4rtaz/distributed-llama/issues/96?utm_source=chatgpt.com "[New Feature] Add new route for dllama api for embeding ..."))
+Yes, especially for local/private inference. The main caveat is ecosystem compatibility; current discussions show demand for embeddings and richer API behavior, which are not yet first-class in the public surface. ([GitHub](https://github.com/b4rtaz/distributed-llama/issues/96 "[New Feature] Add new route for dllama api for embeding ..."))
 
 ## Suggested enterprise architecture incorporating this project
 

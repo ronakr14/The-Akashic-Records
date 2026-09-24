@@ -30,7 +30,7 @@ Developers, data engineers, AI engineers, and teams that need live structured we
 ## 2. Repository Overview
 
 **Main purpose**  
-A natural-language dataset builder and refresher for live web data, with both UI and CLI access. ([GitHub](https://github.com/tinyfish-io/bigset/blob/main/README.md?utm_source=chatgpt.com "README.md - tinyfish-io/bigset"))
+A natural-language dataset builder and refresher for live web data, with both UI and CLI access. ([GitHub](https://github.com/tinyfish-io/bigset/blob/main/README.md "README.md - tinyfish-io/bigset"))
 
 **Core features and capabilities**
 
@@ -73,7 +73,7 @@ A natural-language dataset builder and refresher for live web data, with both UI
     
 - PostHog for analytics.
     
-- Resend for transactional email. ([GitHub](https://github.com/tinyfish-io/bigset/blob/main/README.md?utm_source=chatgpt.com "README.md - tinyfish-io/bigset"))
+- Resend for transactional email. ([GitHub](https://github.com/tinyfish-io/bigset/blob/main/README.md "README.md - tinyfish-io/bigset"))
     
 
 **High-level architecture**  
@@ -85,7 +85,7 @@ The architecture is split fairly cleanly:
     
 - **Convex**: persistent app state, quotas, authz helpers, dataset metadata.
     
-- **External services**: TinyFish for search/fetch/browser; OpenRouter for LLM calls. ([GitHub](https://github.com/tinyfish-io/bigset/blob/main/README.md?utm_source=chatgpt.com "README.md - tinyfish-io/bigset"))
+- **External services**: TinyFish for search/fetch/browser; OpenRouter for LLM calls. ([GitHub](https://github.com/tinyfish-io/bigset/blob/main/README.md "README.md - tinyfish-io/bigset"))
     
 
 ## 3. How It Works
@@ -121,7 +121,7 @@ The architecture is split fairly cleanly:
     
 - `backend/src/email/`: dataset-ready emails.
     
-- `backend/src/analytics/`: backend analytics wrapper. ([GitHub](https://github.com/tinyfish-io/bigset/blob/main/README.md?utm_source=chatgpt.com "README.md - tinyfish-io/bigset"))
+- `backend/src/analytics/`: backend analytics wrapper. ([GitHub](https://github.com/tinyfish-io/bigset/blob/main/README.md "README.md - tinyfish-io/bigset"))
     
 
 **Data flow**  
@@ -187,7 +187,7 @@ Complexity: **Medium**. ([GitHub](https://github.com/tinyfish-io/bigset "GitHub 
 Collect fragmented public data into a table you can analyze.  
 Example: “GPU prices across major vendors.”  
 Benefit: less glue code, faster iteration.  
-Complexity: **Medium**. ([GitHub](https://github.com/tinyfish-io/bigset/blob/main/README.md?utm_source=chatgpt.com "README.md - tinyfish-io/bigset"))
+Complexity: **Medium**. ([GitHub](https://github.com/tinyfish-io/bigset/blob/main/README.md "README.md - tinyfish-io/bigset"))
 
 **Agent toolchain input**  
 Use exported CSV/XLSX as live context for LLM agents.  
@@ -217,31 +217,31 @@ Complexity: **Medium**. ([GitHub](https://github.com/tinyfish-io/bigset "GitHub 
 ## 7. Key Components Analysis
 
 **`README.md`**  
-Defines the product story, setup, CLI, architecture, roadmap, and limitations. It is the primary source of truth for intended use. ([GitHub](https://github.com/tinyfish-io/bigset/blob/main/README.md?utm_source=chatgpt.com "README.md - tinyfish-io/bigset"))
+Defines the product story, setup, CLI, architecture, roadmap, and limitations. It is the primary source of truth for intended use. ([GitHub](https://github.com/tinyfish-io/bigset/blob/main/README.md "README.md - tinyfish-io/bigset"))
 
 **`AGENTS.md`**  
-States the architectural split: frontend is pure UI, backend owns auth/database/TinyFish calls/cron jobs, and auth requests are proxied via Next rewrites. This is a useful implementation contract. ([GitHub](https://github.com/tinyfish-io/bigset/blob/main/AGENTS.md?utm_source=chatgpt.com "AGENTS.md - tinyfish-io/bigset"))
+States the architectural split: frontend is pure UI, backend owns auth/database/TinyFish calls/cron jobs, and auth requests are proxied via Next rewrites. This is a useful implementation contract. ([GitHub](https://github.com/tinyfish-io/bigset/blob/main/AGENTS.md "AGENTS.md - tinyfish-io/bigset"))
 
 **`frontend/`**  
-UI, app experience, and Convex schema/functions. Likely where dataset browsing, setup, and auth flows live. ([GitHub](https://github.com/tinyfish-io/bigset/blob/main/README.md?utm_source=chatgpt.com "README.md - tinyfish-io/bigset"))
+UI, app experience, and Convex schema/functions. Likely where dataset browsing, setup, and auth flows live. ([GitHub](https://github.com/tinyfish-io/bigset/blob/main/README.md "README.md - tinyfish-io/bigset"))
 
 **`frontend/convex/`**  
-Schema, authorization, quota helpers. This is the state/control plane for datasets. ([GitHub](https://github.com/tinyfish-io/bigset/blob/main/README.md?utm_source=chatgpt.com "README.md - tinyfish-io/bigset"))
+Schema, authorization, quota helpers. This is the state/control plane for datasets. ([GitHub](https://github.com/tinyfish-io/bigset/blob/main/README.md "README.md - tinyfish-io/bigset"))
 
 **`backend/`**  
-Orchestration layer for schema inference, populate workflows, and agent execution. ([GitHub](https://github.com/tinyfish-io/bigset/blob/main/README.md?utm_source=chatgpt.com "README.md - tinyfish-io/bigset"))
+Orchestration layer for schema inference, populate workflows, and agent execution. ([GitHub](https://github.com/tinyfish-io/bigset/blob/main/README.md "README.md - tinyfish-io/bigset"))
 
 **`backend/src/pipeline/`**  
-Pure logic for schema inference and populate context. Good sign: separation of deterministic pipeline logic from infrastructure. ([GitHub](https://github.com/tinyfish-io/bigset/blob/main/README.md?utm_source=chatgpt.com "README.md - tinyfish-io/bigset"))
+Pure logic for schema inference and populate context. Good sign: separation of deterministic pipeline logic from infrastructure. ([GitHub](https://github.com/tinyfish-io/bigset/blob/main/README.md "README.md - tinyfish-io/bigset"))
 
 **`backend/src/mastra/`**  
-Agent/workflow orchestration layer; likely where the “autonomous research” happens. ([GitHub](https://github.com/tinyfish-io/bigset/blob/main/README.md?utm_source=chatgpt.com "README.md - tinyfish-io/bigset"))
+Agent/workflow orchestration layer; likely where the “autonomous research” happens. ([GitHub](https://github.com/tinyfish-io/bigset/blob/main/README.md "README.md - tinyfish-io/bigset"))
 
 **`scripts/verify-authz.sh`**  
-Indicates authz is important enough to test explicitly. That is a good sign. ([GitHub](https://github.com/tinyfish-io/bigset/blob/main/README.md?utm_source=chatgpt.com "README.md - tinyfish-io/bigset"))
+Indicates authz is important enough to test explicitly. That is a good sign. ([GitHub](https://github.com/tinyfish-io/bigset/blob/main/README.md "README.md - tinyfish-io/bigset"))
 
 **`docker-compose.dev.yml` and `Makefile`**  
-The repo leans on orchestration scripts for local dev and repeatable environment setup. That is pragmatic, and also a hint the system is operationally nontrivial. ([GitHub](https://github.com/tinyfish-io/bigset/blob/main/README.md?utm_source=chatgpt.com "README.md - tinyfish-io/bigset"))
+The repo leans on orchestration scripts for local dev and repeatable environment setup. That is pragmatic, and also a hint the system is operationally nontrivial. ([GitHub](https://github.com/tinyfish-io/bigset/blob/main/README.md "README.md - tinyfish-io/bigset"))
 
 ## 8. Setup and Adoption
 
@@ -304,7 +304,7 @@ Moderate. The user-facing prompt is simple, but operationally this is a multi-se
     
 - **Performance:** good enough for human-facing research flows; not designed for ultra-low latency.
     
-- **Developer Experience:** `make dev` and the CLI lower friction a lot. ([GitHub](https://github.com/tinyfish-io/bigset/blob/main/README.md?utm_source=chatgpt.com "README.md - tinyfish-io/bigset"))
+- **Developer Experience:** `make dev` and the CLI lower friction a lot. ([GitHub](https://github.com/tinyfish-io/bigset/blob/main/README.md "README.md - tinyfish-io/bigset"))
     
 
 **Weaknesses**
@@ -324,22 +324,22 @@ Moderate. The user-facing prompt is simple, but operationally this is a multi-se
 Useful, but explicitly experimental and still missing enterprise-grade controls. ([GitHub](https://github.com/tinyfish-io/bigset "GitHub - tinyfish-io/bigset: What if you had all the data in the world? · GitHub"))
 
 **Security: 5/10**  
-There is authz work and keychain handling, but the repo still depends on external web/LLM services and does not yet show mature governance features in the README. ([GitHub](https://github.com/tinyfish-io/bigset/blob/main/AGENTS.md?utm_source=chatgpt.com "AGENTS.md - tinyfish-io/bigset"))
+There is authz work and keychain handling, but the repo still depends on external web/LLM services and does not yet show mature governance features in the README. ([GitHub](https://github.com/tinyfish-io/bigset/blob/main/AGENTS.md "AGENTS.md - tinyfish-io/bigset"))
 
 **Scalability: 6/10**  
 Workflow parallelism helps, but the system is source-bound and agent-driven rather than throughput-optimized. ([GitHub](https://github.com/tinyfish-io/bigset "GitHub - tinyfish-io/bigset: What if you had all the data in the world? · GitHub"))
 
 **Observability: 5/10**  
-PostHog is there, and Mastra Studio helps inspect workflows, but the public docs do not show deep operational telemetry or SLO tooling. ([GitHub](https://github.com/tinyfish-io/bigset/blob/main/README.md?utm_source=chatgpt.com "README.md - tinyfish-io/bigset"))
+PostHog is there, and Mastra Studio helps inspect workflows, but the public docs do not show deep operational telemetry or SLO tooling. ([GitHub](https://github.com/tinyfish-io/bigset/blob/main/README.md "README.md - tinyfish-io/bigset"))
 
 **Documentation quality: 7/10**  
-README is unusually concrete, with CLI commands, architecture, and setup steps. Still, some internals remain undocumented. ([GitHub](https://github.com/tinyfish-io/bigset/blob/main/README.md?utm_source=chatgpt.com "README.md - tinyfish-io/bigset"))
+README is unusually concrete, with CLI commands, architecture, and setup steps. Still, some internals remain undocumented. ([GitHub](https://github.com/tinyfish-io/bigset/blob/main/README.md "README.md - tinyfish-io/bigset"))
 
 **Community support: 5/10**  
 Good momentum, visible issue/PR activity, but still a small OSS project. ([GitHub](https://github.com/tinyfish-io/bigset "GitHub - tinyfish-io/bigset: What if you had all the data in the world? · GitHub"))
 
 **Maintainability: 6/10**  
-Clear folder split and pipeline separation help, but the system has many integration edges. ([GitHub](https://github.com/tinyfish-io/bigset/blob/main/README.md?utm_source=chatgpt.com "README.md - tinyfish-io/bigset"))
+Clear folder split and pipeline separation help, but the system has many integration edges. ([GitHub](https://github.com/tinyfish-io/bigset/blob/main/README.md "README.md - tinyfish-io/bigset"))
 
 ## 11. Comparison with Alternatives
 
@@ -367,7 +367,7 @@ Traditional ELT is better when sources are stable and structured. BigSet is bett
     
 - Setup gating before enabling expensive workflows.
     
-- CLI + UI dual interface. ([GitHub](https://github.com/tinyfish-io/bigset/blob/main/AGENTS.md?utm_source=chatgpt.com "AGENTS.md - tinyfish-io/bigset"))
+- CLI + UI dual interface. ([GitHub](https://github.com/tinyfish-io/bigset/blob/main/AGENTS.md "AGENTS.md - tinyfish-io/bigset"))
     
 
 **Architectural lessons**  
@@ -473,7 +473,7 @@ BigSet is an open-source, agent-driven system that converts plain-English datase
 
 - Strong concept, clear problem, good product framing. ([GitHub](https://github.com/tinyfish-io/bigset "GitHub - tinyfish-io/bigset: What if you had all the data in the world? · GitHub"))
     
-- Architecture is sensible and modular. ([GitHub](https://github.com/tinyfish-io/bigset/blob/main/README.md?utm_source=chatgpt.com "README.md - tinyfish-io/bigset"))
+- Architecture is sensible and modular. ([GitHub](https://github.com/tinyfish-io/bigset/blob/main/README.md "README.md - tinyfish-io/bigset"))
     
 - Operational setup is unusually well-documented. ([GitHub](https://github.com/tinyfish-io/bigset "GitHub - tinyfish-io/bigset: What if you had all the data in the world? · GitHub"))
     

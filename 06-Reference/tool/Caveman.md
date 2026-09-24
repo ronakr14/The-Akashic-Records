@@ -11,18 +11,18 @@ subdomain: ai-developer-tools
 Comprehensive evaluation of the Caveman open-source project, a multi-agent AI output compression and skill distribution platform. The note explains its architecture, installation model, plugin ecosystem, supported AI coding assistants, enterprise adoption considerations, strengths, limitations, engineering patterns, comparisons with alternatives, and relevance to AI engineering, developer productivity, and LLM platform design. It serves as both a technology review and an architectural reference for building or evaluating AI developer tooling.
 
 ---
-Here’s the straight read: **`JuliusBrussee/caveman` is a token-compression and behavior-shaping toolkit for AI coding agents**. It makes agents speak tersely, keeps technical meaning intact, and ships that behavior across many environments: Claude Code, Codex, Gemini, Cursor, Windsurf, Cline, Copilot, and more. The repo is not “just a prompt file”; it is a multi-surface distribution system with skills, hooks, installers, per-agent integration logic, tests, benchmarks, and docs. ([GitHub](https://github.com/JuliusBrussee/caveman/blob/main/README.md?utm_source=chatgpt.com "caveman/README.md at main · JuliusBrussee ..."))
+Here’s the straight read: **`JuliusBrussee/caveman` is a token-compression and behavior-shaping toolkit for AI coding agents**. It makes agents speak tersely, keeps technical meaning intact, and ships that behavior across many environments: Claude Code, Codex, Gemini, Cursor, Windsurf, Cline, Copilot, and more. The repo is not “just a prompt file”; it is a multi-surface distribution system with skills, hooks, installers, per-agent integration logic, tests, benchmarks, and docs. ([GitHub](https://github.com/JuliusBrussee/caveman/blob/main/README.md "caveman/README.md at main · JuliusBrussee ..."))
 
 ## 1. Executive Summary
 
 **What is this project?**  
-Caveman is a skill/plugin ecosystem that compresses AI assistant output into short, high-signal responses. It also includes supporting tooling to install that behavior into multiple agent products, plus a small suite of related skills like commit-message generation, PR review comments, help text, and stats. ([GitHub](https://github.com/JuliusBrussee/caveman/blob/main/README.md?utm_source=chatgpt.com "caveman/README.md at main · JuliusBrussee ..."))
+Caveman is a skill/plugin ecosystem that compresses AI assistant output into short, high-signal responses. It also includes supporting tooling to install that behavior into multiple agent products, plus a small suite of related skills like commit-message generation, PR review comments, help text, and stats. ([GitHub](https://github.com/JuliusBrussee/caveman/blob/main/README.md "caveman/README.md at main · JuliusBrussee ..."))
 
 **What problem does it solve?**  
-It attacks a real annoyance and a real cost center: AI assistants tend to produce long, polite, repetitive text that burns tokens and slows interaction. Caveman trims the “throat clearing” while preserving the technical payload. The repo explicitly frames this as output-token reduction without losing accuracy. ([GitHub](https://github.com/JuliusBrussee/caveman/blob/main/README.md?utm_source=chatgpt.com "caveman/README.md at main · JuliusBrussee ..."))
+It attacks a real annoyance and a real cost center: AI assistants tend to produce long, polite, repetitive text that burns tokens and slows interaction. Caveman trims the “throat clearing” while preserving the technical payload. The repo explicitly frames this as output-token reduction without losing accuracy. ([GitHub](https://github.com/JuliusBrussee/caveman/blob/main/README.md "caveman/README.md at main · JuliusBrussee ..."))
 
 **Who is the target audience?**  
-Experienced developers, power users of AI coding agents, teams trying to reduce token spend, and people who prefer terse operational answers over prose. It is especially aimed at users already working inside agent-native workflows. ([GitHub](https://github.com/JuliusBrussee/caveman/blob/main/README.md?utm_source=chatgpt.com "caveman/README.md at main · JuliusBrussee ..."))
+Experienced developers, power users of AI coding agents, teams trying to reduce token spend, and people who prefer terse operational answers over prose. It is especially aimed at users already working inside agent-native workflows. ([GitHub](https://github.com/JuliusBrussee/caveman/blob/main/README.md "caveman/README.md at main · JuliusBrussee ..."))
 
 **Maturity level**  
 This is **not a toy prototype**. It looks like a **mature, production-oriented open-source project**, but in a niche domain. Evidence: multi-agent install support, tests, CI discipline, benchmarks, eval harnesses, safety notes, and strong repo hygiene. It is production-grade as a tooling project, not enterprise-grade infrastructure software. ([GitHub](https://github.com/JuliusBrussee/caveman/blob/main/CONTRIBUTING.md "caveman/CONTRIBUTING.md at main · JuliusBrussee/caveman · GitHub"))
@@ -127,7 +127,7 @@ It integrates with:
 ## 4. Why This Project Exists
 
 **Business problem**  
-LLM usage costs money, and verbose agents waste tokens on politeness, disclaimers, and repetitive framing. Caveman exists to cut that waste. ([GitHub](https://github.com/JuliusBrussee/caveman/blob/main/README.md?utm_source=chatgpt.com "caveman/README.md at main · JuliusBrussee ..."))
+LLM usage costs money, and verbose agents waste tokens on politeness, disclaimers, and repetitive framing. Caveman exists to cut that waste. ([GitHub](https://github.com/JuliusBrussee/caveman/blob/main/README.md "caveman/README.md at main · JuliusBrussee ..."))
 
 **Technical challenges it solves**  
 It handles:
@@ -203,7 +203,7 @@ Relevant as a workflow accelerator for assistant-driven SQL, ETL debugging, pipe
 Useful for concise explanation of metrics, dashboards, query fixes, and analysis summaries. ([GitHub](https://github.com/JuliusBrussee/caveman/blob/main/README.md "caveman/README.md at main · JuliusBrussee/caveman · GitHub"))
 
 **AI/ML**  
-Highly relevant. It directly targets LLM agent behavior, token economics, and prompt/skill packaging. ([GitHub](https://github.com/JuliusBrussee/caveman/blob/main/README.md?utm_source=chatgpt.com "caveman/README.md at main · JuliusBrussee ..."))
+Highly relevant. It directly targets LLM agent behavior, token economics, and prompt/skill packaging. ([GitHub](https://github.com/JuliusBrussee/caveman/blob/main/README.md "caveman/README.md at main · JuliusBrussee ..."))
 
 **DevOps**  
 Useful for terse incident diagnosis, deployment reviews, and command generation. `caveman-review` and `caveman-help` fit here too. ([GitHub](https://github.com/JuliusBrussee/caveman/blob/main/README.md "caveman/README.md at main · JuliusBrussee/caveman · GitHub"))
@@ -218,7 +218,7 @@ Useful for cloud config reviews, Terraform commentary, and deployment troublesho
 Potentially useful for concise secure-coding review comments. Also notable: the repo explicitly treats hook filesystem safety seriously. ([GitHub](https://github.com/JuliusBrussee/caveman/blob/main/CLAUDE.md "caveman/CLAUDE.md at main · JuliusBrussee/caveman · GitHub"))
 
 **FinOps**  
-Strong relevance, because token reduction maps directly to spend reduction in LLM workflows. ([GitHub](https://github.com/JuliusBrussee/caveman/blob/main/README.md?utm_source=chatgpt.com "caveman/README.md at main · JuliusBrussee ..."))
+Strong relevance, because token reduction maps directly to spend reduction in LLM workflows. ([GitHub](https://github.com/JuliusBrussee/caveman/blob/main/README.md "caveman/README.md at main · JuliusBrussee ..."))
 
 **Product Engineering**  
 Useful for shipping faster with less noise in AI-assisted development. ([GitHub](https://github.com/JuliusBrussee/caveman/blob/main/README.md "caveman/README.md at main · JuliusBrussee/caveman · GitHub"))
@@ -252,7 +252,7 @@ Claude Code integration and safety-sensitive activation/config scripts. The repo
 ## 8. Setup and Adoption
 
 **Installation requirements**  
-Node 18+ is required, according to the README. The project installs via shell or PowerShell bootstrap scripts and then fans out to each detected agent. ([GitHub](https://github.com/JuliusBrussee/caveman/blob/main/README.md?utm_source=chatgpt.com "caveman/README.md at main · JuliusBrussee ..."))
+Node 18+ is required, according to the README. The project installs via shell or PowerShell bootstrap scripts and then fans out to each detected agent. ([GitHub](https://github.com/JuliusBrussee/caveman/blob/main/README.md "caveman/README.md at main · JuliusBrussee ..."))
 
 **Deployment options**
 
@@ -294,7 +294,7 @@ Low to medium. The behavior is easy to understand, but the install matrix and mu
     
 - **Extensibility:** new skills and new agents are explicitly supported. ([GitHub](https://github.com/JuliusBrussee/caveman/blob/main/CONTRIBUTING.md "caveman/CONTRIBUTING.md at main · JuliusBrussee/caveman · GitHub"))
     
-- **Performance:** lower output token volume should improve speed and reduce cost. ([GitHub](https://github.com/JuliusBrussee/caveman/blob/main/README.md?utm_source=chatgpt.com "caveman/README.md at main · JuliusBrussee ..."))
+- **Performance:** lower output token volume should improve speed and reduce cost. ([GitHub](https://github.com/JuliusBrussee/caveman/blob/main/README.md "caveman/README.md at main · JuliusBrussee ..."))
     
 - **Developer experience:** install-once model is strong. ([GitHub](https://github.com/JuliusBrussee/caveman/blob/main/README.md "caveman/README.md at main · JuliusBrussee/caveman · GitHub"))
     
@@ -330,7 +330,7 @@ There are stats and benchmarks, but it is not an observability platform. The tok
 Strong. The repo is clearly documentation-driven and intentionally organized for different audiences. ([GitHub](https://github.com/JuliusBrussee/caveman/blob/main/CLAUDE.md "caveman/CLAUDE.md at main · JuliusBrussee/caveman · GitHub"))
 
 **Community support: 6/10**  
-Open source with visible activity, but still a niche project. ([GitHub](https://github.com/JuliusBrussee/caveman/activity?utm_source=chatgpt.com "Activity · JuliusBrussee/caveman - GitHub"))
+Open source with visible activity, but still a niche project. ([GitHub](https://github.com/JuliusBrussee/caveman/activity "Activity · JuliusBrussee/caveman - GitHub"))
 
 **Maintainability: 8/10**  
 Clear ownership model, explicit source-of-truth files, and test guidance. ([GitHub](https://github.com/JuliusBrussee/caveman/blob/main/CONTRIBUTING.md "caveman/CONTRIBUTING.md at main · JuliusBrussee/caveman · GitHub"))
@@ -546,7 +546,7 @@ Not as a storage or processing layer. It could sit beside the lakehouse as a dev
 Indirectly, yes. Faster review and shorter AI guidance can help engineers move through transformation logic, debugging, and operational checks faster. It does not execute ETL itself. ([GitHub](https://github.com/JuliusBrussee/caveman/blob/main/README.md "caveman/README.md at main · JuliusBrussee/caveman · GitHub"))
 
 **Can it be used for LLM, RAG, agents, or AI workflows?**  
-Absolutely. This is its home turf. It is explicitly built for agent-native workflows and token-efficient interaction. ([GitHub](https://github.com/JuliusBrussee/caveman/blob/main/README.md?utm_source=chatgpt.com "caveman/README.md at main · JuliusBrussee ..."))
+Absolutely. This is its home turf. It is explicitly built for agent-native workflows and token-efficient interaction. ([GitHub](https://github.com/JuliusBrussee/caveman/blob/main/README.md "caveman/README.md at main · JuliusBrussee ..."))
 
 **Suggested enterprise architecture incorporating this project**  
 Use Caveman as a **developer-experience layer** in your AI engineering stack:

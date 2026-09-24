@@ -74,7 +74,7 @@ In simple terms: clients like Spark or Trino talk to Lakekeeper through the Iceb
 
 Major components/modules, based on the repository structure and docs:
 
-- `crates/lakekeeper`: core catalog logic. The developer guide says this crate contains the core of the catalog and is structured into modules like `api`. ([GitHub](https://github.com/lakekeeper/lakekeeper/blob/main/docs/docs/developer-guide.md?utm_source=chatgpt.com "lakekeeper/docs/docs/developer-guide.md at main"))
+- `crates/lakekeeper`: core catalog logic. The developer guide says this crate contains the core of the catalog and is structured into modules like `api`. ([GitHub](https://github.com/lakekeeper/lakekeeper/blob/main/docs/docs/developer-guide.md "lakekeeper/docs/docs/developer-guide.md at main"))
     
 - `crates/lakekeeper-bin`: executable/server packaging.
     
@@ -238,7 +238,7 @@ Enterprise Applications: Strong fit where enterprise data access, auditing, and 
 
 `Cargo.toml`: defines the workspace layout and dependencies. It shows the modular crate structure and confirms Rust 2024 / Rust 1.94 / SQLx / Postgres. ([GitHub](https://github.com/lakekeeper/lakekeeper/blob/main/Cargo.toml "lakekeeper/Cargo.toml at main · lakekeeper/lakekeeper · GitHub"))
 
-`crates/lakekeeper`: core domain logic and REST API handlers. The developer guide explicitly says this crate contains the catalog core. ([GitHub](https://github.com/lakekeeper/lakekeeper/blob/main/docs/docs/developer-guide.md?utm_source=chatgpt.com "lakekeeper/docs/docs/developer-guide.md at main"))
+`crates/lakekeeper`: core domain logic and REST API handlers. The developer guide explicitly says this crate contains the catalog core. ([GitHub](https://github.com/lakekeeper/lakekeeper/blob/main/docs/docs/developer-guide.md "lakekeeper/docs/docs/developer-guide.md at main"))
 
 `crates/lakekeeper-bin`: runnable server binary. It likely wires config, HTTP server, and the core crate together. This is inferred from the workspace layout. ([GitHub](https://github.com/lakekeeper/lakekeeper/blob/main/Cargo.toml "lakekeeper/Cargo.toml at main · lakekeeper/lakekeeper · GitHub"))
 
@@ -321,7 +321,7 @@ Risk: This is a central control plane; mistakes in auth, migration, or metadata 
 
 Limitations: Some features are still evolving; the README itself shows one storage target as “open” rather than done. ([GitHub](https://github.com/lakekeeper/lakekeeper "GitHub - lakekeeper/lakekeeper: Lakekeeper is an Apache-Licensed, secure, fast and easy to use Apache Iceberg REST Catalog written in Rust. · GitHub"))
 
-Missing features: Native support for every storage pattern or every governance workflow is not implied. Multi-bucket support, for example, shows up as a user-requested discussion rather than obvious core functionality. ([GitHub](https://github.com/lakekeeper/lakekeeper/discussions/1168?utm_source=chatgpt.com "Adding support for more than 1 bucket/catalog #1168"))
+Missing features: Native support for every storage pattern or every governance workflow is not implied. Multi-bucket support, for example, shows up as a user-requested discussion rather than obvious core functionality. ([GitHub](https://github.com/lakekeeper/lakekeeper/discussions/1168 "Adding support for more than 1 bucket/catalog #1168"))
 
 Technical debt indicators: A large number of commits and active issue tracker are normal for a growing platform, but they also signal ongoing churn. Renovate/dependency dashboard activity suggests constant dependency maintenance. ([GitHub](https://github.com/lakekeeper/lakekeeper "GitHub - lakekeeper/lakekeeper: Lakekeeper is an Apache-Licensed, secure, fast and easy to use Apache Iceberg REST Catalog written in Rust. · GitHub"))
 
@@ -333,7 +333,7 @@ Security: **8.5/10**. OIDC, OpenFGA, vended credentials, remote signing, and pol
 
 Scalability: **8/10**. Stateless/horizontally scalable design is a plus; real bottlenecks will likely sit in Postgres and external systems. ([GitHub](https://github.com/lakekeeper/lakekeeper "GitHub - lakekeeper/lakekeeper: Lakekeeper is an Apache-Licensed, secure, fast and easy to use Apache Iceberg REST Catalog written in Rust. · GitHub"))
 
-Observability: **6.5/10**. The README mentions monitoring documentation in the changelog, but the visible repo evidence here is thinner on built-in observability primitives than on auth/storage. ([GitHub](https://github.com/lakekeeper/lakekeeper/blob/main/CHANGELOG.md?utm_source=chatgpt.com "lakekeeper/CHANGELOG.md at main"))
+Observability: **6.5/10**. The README mentions monitoring documentation in the changelog, but the visible repo evidence here is thinner on built-in observability primitives than on auth/storage. ([GitHub](https://github.com/lakekeeper/lakekeeper/blob/main/CHANGELOG.md "lakekeeper/CHANGELOG.md at main"))
 
 Documentation quality: **7.5/10**. README is strong, developer guide exists, docs site is referenced, but the repo-facing docs are not exhaustive. ([GitHub](https://github.com/lakekeeper/lakekeeper "GitHub - lakekeeper/lakekeeper: Lakekeeper is an Apache-Licensed, secure, fast and easy to use Apache Iceberg REST Catalog written in Rust. · GitHub"))
 

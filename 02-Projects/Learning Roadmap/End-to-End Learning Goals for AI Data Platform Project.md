@@ -11,6 +11,10 @@ Personal project learning roadmap covering the technical capabilities to master 
 
 ---
 
+
+project_status:: active
+last_reviewed:: 2026-09-24
+
 Understand/ Refresh the following Concepts through the project
 
 Data Engineering Goals:
@@ -74,3 +78,7 @@ Domains this roadmap draws on — follow each MOC for current notes and gaps:
 - [[_Interview MOC]] — target roles: Senior Data Engineer, AI Architect
 
 Specific: [[Vector Database]] · [[LLM Interaction Guide]]
+
+## Log
+
+- 2026-09-24 — Marked active.

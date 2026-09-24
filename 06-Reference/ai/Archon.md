@@ -58,7 +58,7 @@ Technical challenges it solves: non-determinism, lack of process enforcement, pa
 
 Advantages over traditional approaches: unlike ad hoc prompting, the workflow is explicit and repeatable; unlike plain CI, the AI can participate in the process; unlike a simple agent wrapper, it supports approval gates and multi-surface operation. The “n8n for software development” framing is actually pretty apt. ([GitHub](https://github.com/coleam00/Archon/blob/dev/README.md "Archon/README.md at dev · coleam00/Archon · GitHub"))
 
-Differentiators: YAML-defined dev workflows, git worktree isolation, AI + deterministic hybrid execution, and broad interaction surfaces. The ongoing issues also show the team pushing toward repo-init support, telemetry, and more flexible provider integrations, which signals a platform direction rather than a single-purpose tool. ([GitHub](https://github.com/coleam00/Archon/issues/1196?utm_source=chatgpt.com "feat(cli/web): `archon setup --init-repo` — skill + . ..."))
+Differentiators: YAML-defined dev workflows, git worktree isolation, AI + deterministic hybrid execution, and broad interaction surfaces. The ongoing issues also show the team pushing toward repo-init support, telemetry, and more flexible provider integrations, which signals a platform direction rather than a single-purpose tool. ([GitHub](https://github.com/coleam00/Archon/issues/1196 "feat(cli/web): `archon setup --init-repo` — skill + . ..."))
 
 ## 5. How It Can Be Used
 
@@ -141,24 +141,24 @@ Interactions: consumes server APIs; build output is copied into the runtime imag
 `packages/cli`  
 Purpose: command-line control.  
 Responsibilities: setup, execution, initialization.  
-Interactions: invokes the same workflow engine used by other surfaces. ([GitHub](https://github.com/coleam00/Archon/issues/1196?utm_source=chatgpt.com "feat(cli/web): `archon setup --init-repo` — skill + . ..."))
+Interactions: invokes the same workflow engine used by other surfaces. ([GitHub](https://github.com/coleam00/Archon/issues/1196 "feat(cli/web): `archon setup --init-repo` — skill + . ..."))
 
 `packages/isolation` and `packages/git`  
 Purpose: workspace isolation and repo mutation.  
 Responsibilities: create worktrees, manage copies, commit/push changes.  
-Interactions: critical to parallel workflow execution. ([GitHub](https://github.com/coleam00/Archon/issues/1578?utm_source=chatgpt.com "Worktree-copy leaks untracked files in .archon/ into committed ..."))
+Interactions: critical to parallel workflow execution. ([GitHub](https://github.com/coleam00/Archon/issues/1578 "Worktree-copy leaks untracked files in .archon/ into committed ..."))
 
 ## 8. Setup and Adoption
 
-Requirements inferred from the repo: Bun, TypeScript toolchain, Docker for production, and a Supabase connection according to the setup discussion. The README/discussions indicate a Docker Compose-based self-hosted setup and a local web UI on port 3737. ([GitHub](https://github.com/coleam00/Archon/discussions/173?utm_source=chatgpt.com "the Operating System for AI Coding Assistants! · coleam00 ..."))
+Requirements inferred from the repo: Bun, TypeScript toolchain, Docker for production, and a Supabase connection according to the setup discussion. The README/discussions indicate a Docker Compose-based self-hosted setup and a local web UI on port 3737. ([GitHub](https://github.com/coleam00/Archon/discussions/173 "the Operating System for AI Coding Assistants! · coleam00 ..."))
 
 Deployment options: local dev, Docker, and likely self-hosted server deployments. The Dockerfile shows a production image with copied web assets and a dedicated `appuser`, which is the normal shape for containerized deployment. ([GitHub](https://github.com/coleam00/Archon/blob/dev/Dockerfile "Archon/Dockerfile at dev · coleam00/Archon · GitHub"))
 
-Infrastructure requirements: some persistent state directory for workspaces/worktrees, database connectivity, and credentials for whichever AI providers or platform integrations you enable. Issues show that filesystem setup matters a lot, especially under Docker. ([GitHub](https://github.com/coleam00/Archon/issues/1170?utm_source=chatgpt.com "Codex chats crash with 'No such file or directory (os error 2 ..."))
+Infrastructure requirements: some persistent state directory for workspaces/worktrees, database connectivity, and credentials for whichever AI providers or platform integrations you enable. Issues show that filesystem setup matters a lot, especially under Docker. ([GitHub](https://github.com/coleam00/Archon/issues/1170 "Codex chats crash with 'No such file or directory (os error 2 ..."))
 
 Learning curve: moderate to steep. You are learning workflow definitions, AI provider integration, git worktree semantics, and a monorepo deployment model all at once. That is not beginner candy.
 
-Operational considerations: state cleanup, isolation, telemetry, provider configuration, and keeping workflow definitions from becoming a junk drawer. The active issue stream suggests the team is still hardening these edge cases. ([GitHub](https://github.com/coleam00/Archon/issues/2200?utm_source=chatgpt.com "unified per-project tree in ~/.archon (artifacts/logs/state), ..."))
+Operational considerations: state cleanup, isolation, telemetry, provider configuration, and keeping workflow definitions from becoming a junk drawer. The active issue stream suggests the team is still hardening these edge cases. ([GitHub](https://github.com/coleam00/Archon/issues/2200 "unified per-project tree in ~/.archon (artifacts/logs/state), ..."))
 
 ## 9. Strengths and Weaknesses
 
@@ -172,9 +172,9 @@ Developer experience: strong if you like explicit workflows and automation; less
 Weaknesses:  
 Risk: the repo is changing fast, so APIs and workflows can churn.  
 Limitations: it is not a finished enterprise platform; many features are still being refined.  
-Missing features: repo crawling, repo-init flow, and file handling improvements are actively requested in issues. ([GitHub](https://github.com/coleam00/Archon/issues/477?utm_source=chatgpt.com "Feature Request: Proper GitHub Repository Crawling #477"))
+Missing features: repo crawling, repo-init flow, and file handling improvements are actively requested in issues. ([GitHub](https://github.com/coleam00/Archon/issues/477 "Feature Request: Proper GitHub Repository Crawling #477"))
 
-Technical debt indicators: rewrite/migration discussions, bug reports around worktrees/state leakage, and ongoing doc/CLAUDE slimming suggest the product is still paying down complexity. That is normal for a fast-moving platform, but it is debt nonetheless. ([GitHub](https://github.com/coleam00/Archon/issues/952?utm_source=chatgpt.com "migrate new codebase to coleam00/Archon · Issue #952"))
+Technical debt indicators: rewrite/migration discussions, bug reports around worktrees/state leakage, and ongoing doc/CLAUDE slimming suggest the product is still paying down complexity. That is normal for a fast-moving platform, but it is debt nonetheless. ([GitHub](https://github.com/coleam00/Archon/issues/952 "migrate new codebase to coleam00/Archon · Issue #952"))
 
 ## 10. Enterprise Evaluation
 
@@ -211,7 +211,7 @@ Architectural lessons: do not let an AI agent own the whole process; keep the pr
 
 Best practices worth adopting: schema-first APIs, one source of truth for workflow definitions, worktree-based isolation, and human approval checkpoints.
 
-Anti-patterns: letting generated state leak into source control, overstuffing instruction files, and relying on a single monolithic prompt as “the system.” The repo’s own issues show the team fighting some of these. ([GitHub](https://github.com/coleam00/Archon/pull/1631?utm_source=chatgpt.com "docs(claude): trim CLAUDE.md from 832 to 138 lines #1631"))
+Anti-patterns: letting generated state leak into source control, overstuffing instruction files, and relying on a single monolithic prompt as “the system.” The repo’s own issues show the team fighting some of these. ([GitHub](https://github.com/coleam00/Archon/pull/1631 "docs(claude): trim CLAUDE.md from 832 to 138 lines #1631"))
 
 ## 13. Interview Preparation
 
@@ -292,7 +292,7 @@ That last citation marker is not valid, so let me cleanly state it: the final qu
 Archon is an open-source workflow engine for AI coding agents. Its core value is turning messy agentic coding into governed, repeatable, workflow-driven automation. It combines YAML-defined workflows, deterministic validation steps, AI-assisted generation/review, worktree isolation, and human approval gates. The architecture is thoughtfully organized as a Bun + TypeScript monorepo with clear separation between core schemas, workflow engine, server, CLI, UI, and provider adapters. The project is ambitious and genuinely well-conceived, but it is also evolving quickly and should be treated as a moving platform, not a static enterprise appliance. ([GitHub](https://github.com/coleam00/Archon/blob/dev/README.md "Archon/README.md at dev · coleam00/Archon · GitHub"))
 
 **Key findings**  
-Archon’s strongest ideas are workflow determinism, worktree isolation, and schema-first contracts. Its biggest risk is churn: the rewrite and active issue stream show that the platform is still settling. ([GitHub](https://github.com/coleam00/Archon/issues/952?utm_source=chatgpt.com "migrate new codebase to coleam00/Archon · Issue #952"))
+Archon’s strongest ideas are workflow determinism, worktree isolation, and schema-first contracts. Its biggest risk is churn: the rewrite and active issue stream show that the platform is still settling. ([GitHub](https://github.com/coleam00/Archon/issues/952 "migrate new codebase to coleam00/Archon · Issue #952"))
 
 **Recommended adoption scenarios**  
 Use it for AI coding automation, PR generation pipelines, internal developer automation, and experimentation with governed agent workflows. Evaluate carefully for enterprise use unless you are comfortable owning the integration and operational complexity yourself. ([GitHub](https://github.com/coleam00/Archon/blob/dev/README.md "Archon/README.md at dev · coleam00/Archon · GitHub"))
@@ -300,7 +300,7 @@ Use it for AI coding automation, PR generation pipelines, internal developer aut
 **Decision matrix**  
 Use: if you want AI coding workflows with explicit process and are okay with evolving APIs.  
 Evaluate: if you want governed automation but need proof around security, observability, and stability.  
-Avoid: if you need a boring, ultra-stable, no-surprises enterprise platform right now. ([GitHub](https://github.com/coleam00/Archon/issues/952?utm_source=chatgpt.com "migrate new codebase to coleam00/Archon · Issue #952"))
+Avoid: if you need a boring, ultra-stable, no-surprises enterprise platform right now. ([GitHub](https://github.com/coleam00/Archon/issues/952 "migrate new codebase to coleam00/Archon · Issue #952"))
 
 ## 15. AI/Data Engineering Relevance
 

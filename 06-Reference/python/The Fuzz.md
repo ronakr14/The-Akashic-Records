@@ -66,7 +66,7 @@ The architecture is intentionally flat:
 - packaging is handled through `setup.py` / metadata files and release tooling. ([GitHub](https://github.com/seatgeek/thefuzz "GitHub - seatgeek/thefuzz: Fuzzy String Matching in Python · GitHub"))
     
 
-This is not a layered service architecture. It is a **library architecture**: a thin compatibility layer around RapidFuzz plus a small amount of preprocessing and API shaping. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/fuzz.py?utm_source=chatgpt.com "thefuzz/thefuzz/fuzz.py at master · seatgeek/thefuzz"))
+This is not a layered service architecture. It is a **library architecture**: a thin compatibility layer around RapidFuzz plus a small amount of preprocessing and API shaping. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/fuzz.py "thefuzz/thefuzz/fuzz.py at master · seatgeek/thefuzz"))
 
 ---
 
@@ -89,10 +89,10 @@ This is not a layered service architecture. It is a **library architecture**: a 
 This is the scoring layer. It imports RapidFuzz scorers and wraps them so TheFuzz keeps the older TheFuzz/FuzzyWuzzy-style API and semantics. The wrapper applies preprocessing when requested and rounds results to integers. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/fuzz.py "thefuzz/thefuzz/fuzz.py at master · seatgeek/thefuzz · GitHub"))
 
 **`process.py`**  
-This is the search/extraction layer. It iterates over candidate choices, applies processor/scorer handling, supports dict inputs, and yields top results or generators depending on function. The implementation is designed to preserve compatibility while delegating real matching work to RapidFuzz. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py?utm_source=chatgpt.com "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
+This is the search/extraction layer. It iterates over candidate choices, applies processor/scorer handling, supports dict inputs, and yields top results or generators depending on function. The implementation is designed to preserve compatibility while delegating real matching work to RapidFuzz. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
 
 **`utils.py`**  
-This handles text cleaning and preprocessing. `process.py` explicitly uses `utils.full_process` as the default processor. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py?utm_source=chatgpt.com "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
+This handles text cleaning and preprocessing. `process.py` explicitly uses `utils.full_process` as the default processor. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
 
 **Data flow and execution flow**  
 The flow is basically:
@@ -108,7 +108,7 @@ The only runtime dependency called out in the README is **rapidfuzz**. Test-time
 ## 4. Why This Project Exists
 
 **Business problem it addresses**  
-SeatGeek originally needed to match similar event listings and names that were not identical across sources. That is the classic “same thing, different spelling/order/noise” problem. The library generalizes that need into a reusable utility for any Python project. The DataCamp summary also notes its original SeatGeek origin for distinguishing similar ticket listings. ([GitHub](https://github.com/seatgeek/thefuzz/issues/72?utm_source=chatgpt.com "0.22.1 wheel lacks typing stubs · Issue #72 · seatgeek/thefuzz"))
+SeatGeek originally needed to match similar event listings and names that were not identical across sources. That is the classic “same thing, different spelling/order/noise” problem. The library generalizes that need into a reusable utility for any Python project. The DataCamp summary also notes its original SeatGeek origin for distinguishing similar ticket listings. ([GitHub](https://github.com/seatgeek/thefuzz/issues/72 "0.22.1 wheel lacks typing stubs · Issue #72 · seatgeek/thefuzz"))
 
 **Technical challenges it solves**  
 It handles:
@@ -123,14 +123,14 @@ It handles:
     
 - choosing the best match from a set
     
-- consistent scoring semantics on a 0–100 scale ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/fuzz.py?utm_source=chatgpt.com "thefuzz/thefuzz/fuzz.py at master · seatgeek/thefuzz"))
+- consistent scoring semantics on a 0–100 scale ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/fuzz.py "thefuzz/thefuzz/fuzz.py at master · seatgeek/thefuzz"))
     
 
 **Advantages over traditional approaches**  
-Compared with hand-rolled string logic, it is easier to use, more expressive, and already battle-tested. Compared with lower-level edit-distance code, it provides higher-level heuristics like token sort and weighted ratios. And compared with the old fuzzywuzzy stack, this repo is now backed by RapidFuzz, which is generally the more modern performance-oriented backend. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/fuzz.py?utm_source=chatgpt.com "thefuzz/thefuzz/fuzz.py at master · seatgeek/thefuzz"))
+Compared with hand-rolled string logic, it is easier to use, more expressive, and already battle-tested. Compared with lower-level edit-distance code, it provides higher-level heuristics like token sort and weighted ratios. And compared with the old fuzzywuzzy stack, this repo is now backed by RapidFuzz, which is generally the more modern performance-oriented backend. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/fuzz.py "thefuzz/thefuzz/fuzz.py at master · seatgeek/thefuzz"))
 
 **Unique differentiators**  
-The biggest differentiator is not “novel algorithm research”; it is **pragmatic API stability**. It preserves the familiar fuzzywuzzy-style interface while delegating computation to RapidFuzz and keeping compatibility wrappers around behavior differences. That compatibility layer is the product. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py?utm_source=chatgpt.com "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
+The biggest differentiator is not “novel algorithm research”; it is **pragmatic API stability**. It preserves the familiar fuzzywuzzy-style interface while delegating computation to RapidFuzz and keeping compatibility wrappers around behavior differences. That compatibility layer is the product. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
 
 ---
 
@@ -146,7 +146,7 @@ Complexity: **Low**. ([GitHub](https://github.com/seatgeek/thefuzz "GitHub - sea
 Find likely duplicates in a list of records.  
 Example: two product titles that differ only in order or punctuation.  
 Benefits: better data quality, less manual review.  
-Complexity: **Low to Medium**. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py?utm_source=chatgpt.com "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
+Complexity: **Low to Medium**. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
 
 **Search/autocomplete ranking**  
 Rank candidate strings by similarity to a user query.  
@@ -162,46 +162,46 @@ Complexity: **Low**. ([GitHub](https://github.com/seatgeek/thefuzz "GitHub - sea
 **Data cleaning / standardization**  
 Use it in ETL/ELT workflows to compare noisy incoming values against reference lists.  
 Benefits: reduces downstream normalization burden.  
-Complexity: **Medium** when embedded into pipelines and review workflows. ([GitHub](https://github.com/seatgeek/thefuzz/issues/72?utm_source=chatgpt.com "0.22.1 wheel lacks typing stubs · Issue #72 · seatgeek/thefuzz"))
+Complexity: **Medium** when embedded into pipelines and review workflows. ([GitHub](https://github.com/seatgeek/thefuzz/issues/72 "0.22.1 wheel lacks typing stubs · Issue #72 · seatgeek/thefuzz"))
 
 **Human-in-the-loop review queues**  
 Generate candidate matches for manual validation.  
 Benefits: faster review than scanning raw strings.  
-Complexity: **Medium**. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py?utm_source=chatgpt.com "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
+Complexity: **Medium**. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
 
 ---
 
 ## 6. Where It Can Be Used
 
 **Data Engineering**  
-Highly relevant. This is one of the cleanest places for TheFuzz: dedupe, record linkage, reference data matching, and data quality checks. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py?utm_source=chatgpt.com "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
+Highly relevant. This is one of the cleanest places for TheFuzz: dedupe, record linkage, reference data matching, and data quality checks. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
 
 **Analytics**  
 Useful for normalizing dimension values, product names, campaign labels, and free-text categories. It helps analysts clean messy dimensions before aggregation. ([GitHub](https://github.com/seatgeek/thefuzz "GitHub - seatgeek/thefuzz: Fuzzy String Matching in Python · GitHub"))
 
 **AI/ML**  
-Relevant as a preprocessing and feature-engineering utility, especially for entity resolution, label normalization, and candidate generation. It is not an ML model itself. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py?utm_source=chatgpt.com "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
+Relevant as a preprocessing and feature-engineering utility, especially for entity resolution, label normalization, and candidate generation. It is not an ML model itself. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
 
 **DevOps**  
 Useful for matching resource names, log labels, config keys, or artifact paths. Lower value than in data engineering, but still handy. ([GitHub](https://github.com/seatgeek/thefuzz "GitHub - seatgeek/thefuzz: Fuzzy String Matching in Python · GitHub"))
 
 **Platform Engineering**  
-Useful in internal platforms for canonicalizing app/team/service names or routing requests to the closest known entity. Not core infrastructure, but a practical helper. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py?utm_source=chatgpt.com "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
+Useful in internal platforms for canonicalizing app/team/service names or routing requests to the closest known entity. Not core infrastructure, but a practical helper. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
 
 **Cloud Engineering**  
 Can help normalize cloud asset names, tags, and inventory data, especially when imported from multiple tools. ([GitHub](https://github.com/seatgeek/thefuzz "GitHub - seatgeek/thefuzz: Fuzzy String Matching in Python · GitHub"))
 
 **Security**  
-Moderately relevant for IOC/asset/hostname normalization and analyst workflows, but it is not a security product. Use cautiously with false positives. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py?utm_source=chatgpt.com "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
+Moderately relevant for IOC/asset/hostname normalization and analyst workflows, but it is not a security product. Use cautiously with false positives. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
 
 **FinOps**  
-Useful for matching vendor names, cloud service labels, or inconsistent cost-center strings across billing exports. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py?utm_source=chatgpt.com "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
+Useful for matching vendor names, cloud service labels, or inconsistent cost-center strings across billing exports. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
 
 **Product Engineering**  
 Strong fit for search, suggestions, duplicate detection, and user-facing cleanup of names/titles. ([GitHub](https://github.com/seatgeek/thefuzz "GitHub - seatgeek/thefuzz: Fuzzy String Matching in Python · GitHub"))
 
 **Enterprise Applications**  
-Very relevant for CRM, ERP, master data management, procurement, and HR systems where duplicate entity names are routine. ([GitHub](https://github.com/seatgeek/thefuzz/issues/72?utm_source=chatgpt.com "0.22.1 wheel lacks typing stubs · Issue #72 · seatgeek/thefuzz"))
+Very relevant for CRM, ERP, master data management, procurement, and HR systems where duplicate entity names are routine. ([GitHub](https://github.com/seatgeek/thefuzz/issues/72 "0.22.1 wheel lacks typing stubs · Issue #72 · seatgeek/thefuzz"))
 
 ---
 
@@ -217,12 +217,12 @@ Interactions: calls `utils.full_process` and RapidFuzz scorers. ([GitHub](https:
 Purpose: candidate search and extraction.  
 Responsibilities: find top matches, handle dict/list inputs, enforce processor/scorer compatibility, support score cutoffs and limit behavior.  
 Important functions: `extract`, `extractBests`, `extractWithoutOrder`, `extractOne`, `dedupe`.  
-Interactions: uses `fuzz` scorers and `utils` preprocessing, and delegates extraction iteration to RapidFuzz internals. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py?utm_source=chatgpt.com "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
+Interactions: uses `fuzz` scorers and `utils` preprocessing, and delegates extraction iteration to RapidFuzz internals. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
 
 **`thefuzz/utils.py`**  
 Purpose: preprocessing and normalization.  
 Responsibilities: string cleaning, ASCII handling, and normalization used by scoring/search functions.  
-Interactions: called by `fuzz.py` and `process.py`. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py?utm_source=chatgpt.com "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
+Interactions: called by `fuzz.py` and `process.py`. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
 
 **`test_thefuzz*.py`**  
 Purpose: correctness and compatibility validation.  
@@ -275,16 +275,16 @@ The main operational concerns are:
 **Strengths**
 
 **Scalability**  
-Good enough for moderate candidate sets, but this is still string comparison over collections; brute force at massive scale will hurt. The API is simple, but the computational pattern is inherently pairwise. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py?utm_source=chatgpt.com "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
+Good enough for moderate candidate sets, but this is still string comparison over collections; brute force at massive scale will hurt. The API is simple, but the computational pattern is inherently pairwise. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
 
 **Maintainability**  
 Very good. Small codebase, clear boundaries, narrow responsibility. ([GitHub](https://github.com/seatgeek/thefuzz "GitHub - seatgeek/thefuzz: Fuzzy String Matching in Python · GitHub"))
 
 **Extensibility**  
-Reasonably good through custom processors and scorers. Not a plugin ecosystem, but enough for practical extension. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py?utm_source=chatgpt.com "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
+Reasonably good through custom processors and scorers. Not a plugin ecosystem, but enough for practical extension. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
 
 **Performance**  
-Better than old pure-Python fuzzy matching stacks because it rides on RapidFuzz, but still bounded by candidate volume and preprocessing overhead. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/fuzz.py?utm_source=chatgpt.com "thefuzz/thefuzz/fuzz.py at master · seatgeek/thefuzz"))
+Better than old pure-Python fuzzy matching stacks because it rides on RapidFuzz, but still bounded by candidate volume and preprocessing overhead. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/fuzz.py "thefuzz/thefuzz/fuzz.py at master · seatgeek/thefuzz"))
 
 **Developer Experience**  
 Strong. The API is obvious, the examples are practical, and the return values are easy to consume. ([GitHub](https://github.com/seatgeek/thefuzz "GitHub - seatgeek/thefuzz: Fuzzy String Matching in Python · GitHub"))
@@ -292,16 +292,16 @@ Strong. The API is obvious, the examples are practical, and the return values ar
 **Weaknesses**
 
 **Risks**  
-False confidence is the big one. A fuzzy score is not truth; it is a heuristic. If you treat it like semantic identity resolution, it will eventually bite you. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py?utm_source=chatgpt.com "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
+False confidence is the big one. A fuzzy score is not truth; it is a heuristic. If you treat it like semantic identity resolution, it will eventually bite you. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
 
 **Limitations**  
-It is string similarity, not knowledge-based matching, not embeddings, and not a structured entity-resolution engine. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py?utm_source=chatgpt.com "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
+It is string similarity, not knowledge-based matching, not embeddings, and not a structured entity-resolution engine. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
 
 **Missing features**  
 No built-in index, no approximate nearest-neighbor search, no distributed execution, no observability layer, and no native vector/semantic support. Current issues also show documentation gaps and typing/package friction. ([GitHub](https://github.com/seatgeek/thefuzz/issues "Issues · seatgeek/thefuzz · GitHub"))
 
 **Technical debt indicators**  
-The codebase shows compatibility wrappers and ongoing issue discussions around type stubs and edge-case correctness. That is normal for a mature utility library, but it does show the maintenance burden of keeping a stable API while modernizing underneath. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py?utm_source=chatgpt.com "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
+The codebase shows compatibility wrappers and ongoing issue discussions around type stubs and edge-case correctness. That is normal for a mature utility library, but it does show the maintenance burden of keeping a stable API while modernizing underneath. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
 
 ---
 
@@ -314,7 +314,7 @@ It is mature, widely understood, and functionally stable. It is a library, so pr
 Not because it is insecure, but because it is a small utility library with no security control plane. Security is mostly about correct dependency management and safe use of text inputs. ([GitHub](https://github.com/seatgeek/thefuzz "GitHub - seatgeek/thefuzz: Fuzzy String Matching in Python · GitHub"))
 
 **Scalability: 6/10**  
-Fine for moderate workloads; not a high-scale matching platform. Large candidate sets will need indexing or upstream filtering. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py?utm_source=chatgpt.com "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
+Fine for moderate workloads; not a high-scale matching platform. Large candidate sets will need indexing or upstream filtering. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
 
 **Observability: 3/10**  
 No built-in metrics, tracing, logging, or monitoring. You would instrument the calling application. ([GitHub](https://github.com/seatgeek/thefuzz "GitHub - seatgeek/thefuzz: Fuzzy String Matching in Python · GitHub"))
@@ -326,7 +326,7 @@ The README is concise and practical, but open issues mention missing docs for so
 There is active issue traffic and recent PRs, but not the kind of broad ecosystem support you get from huge mainstream frameworks. ([GitHub](https://github.com/seatgeek/thefuzz/issues "Issues · seatgeek/thefuzz · GitHub"))
 
 **Maintainability: 8/10**  
-Small surface area, clear code ownership, and straightforward internals. The compatibility layer is the main complexity tax. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py?utm_source=chatgpt.com "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
+Small surface area, clear code ownership, and straightforward internals. The compatibility layer is the main complexity tax. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
 
 ---
 
@@ -336,16 +336,16 @@ Small surface area, clear code ownership, and straightforward internals. The com
 Closest alternative and, in practice, the backend this project already uses. RapidFuzz is lower-level and more directly performance-focused; TheFuzz gives the friendlier compatibility API. ([GitHub](https://github.com/seatgeek/thefuzz "GitHub - seatgeek/thefuzz: Fuzzy String Matching in Python · GitHub"))
 
 **fuzzywuzzy (legacy)**  
-The historical predecessor. TheFuzz exists in part as a modernized successor/compatibility layer. The main differences are backend modernization and updated packaging/maintenance. ([DataCamp](https://www.datacamp.com/tutorial/fuzzy-string-python?utm_source=chatgpt.com "Fuzzy String Matching in Python Tutorial"))
+The historical predecessor. TheFuzz exists in part as a modernized successor/compatibility layer. The main differences are backend modernization and updated packaging/maintenance. ([DataCamp](https://www.datacamp.com/tutorial/fuzzy-string-python "Fuzzy String Matching in Python Tutorial"))
 
 **Custom Levenshtein logic**  
 More control, but much more work and usually worse developer experience. TheFuzz wins on speed of adoption and API clarity. ([GitHub](https://github.com/seatgeek/thefuzz "GitHub - seatgeek/thefuzz: Fuzzy String Matching in Python · GitHub"))
 
 **Embedding/vector similarity**  
-Better for semantic matching, synonyms, and meaning. Worse for exact-ish string normalization cases. Different tool, different job. TheFuzz is still better for deterministic text-shape similarity. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py?utm_source=chatgpt.com "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
+Better for semantic matching, synonyms, and meaning. Worse for exact-ish string normalization cases. Different tool, different job. TheFuzz is still better for deterministic text-shape similarity. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
 
 **Data matching platforms / MDM tools**  
-Heavier, more enterprise-oriented, better for full workflows and governance. TheFuzz is cheaper, simpler, and easier to embed, but lacks orchestration and data stewardship features. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py?utm_source=chatgpt.com "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
+Heavier, more enterprise-oriented, better for full workflows and governance. TheFuzz is cheaper, simpler, and easier to embed, but lacks orchestration and data stewardship features. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
 
 ---
 
@@ -359,7 +359,7 @@ Heavier, more enterprise-oriented, better for full workflows and governance. The
     
 - Functional-style utility API
     
-- Strategy pattern via pluggable scorer and processor functions ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py?utm_source=chatgpt.com "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
+- Strategy pattern via pluggable scorer and processor functions ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
     
 
 **Architectural lessons**
@@ -368,7 +368,7 @@ Heavier, more enterprise-oriented, better for full workflows and governance. The
     
 - Normalize inputs consistently or your scores become political fiction.
     
-- Small libraries age well when they stay focused. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py?utm_source=chatgpt.com "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
+- Small libraries age well when they stay focused. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
     
 
 **Best practices worth adopting**
@@ -388,7 +388,7 @@ Heavier, more enterprise-oriented, better for full workflows and governance. The
     
 - Using fuzzy matching as a substitute for domain normalization.
     
-- Running full pairwise matching at scale without prefiltering. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py?utm_source=chatgpt.com "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
+- Running full pairwise matching at scale without prefiltering. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
     
 
 ---
@@ -482,7 +482,7 @@ This is a mature utility library, suitable for production use as a component, no
     
 - Good fit for noisy text and entity matching.
     
-- Not a semantic matcher, not a distributed system, not an enterprise matching platform. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py?utm_source=chatgpt.com "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
+- Not a semantic matcher, not a distributed system, not an enterprise matching platform. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
     
 
 ### Recommended adoption scenarios
@@ -493,30 +493,30 @@ This is a mature utility library, suitable for production use as a component, no
     
 - Use as a first-pass matcher before human review.
     
-- Avoid as the sole mechanism for mission-critical identity resolution at very large scale. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py?utm_source=chatgpt.com "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
+- Avoid as the sole mechanism for mission-critical identity resolution at very large scale. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
     
 
 ### Decision matrix
 
 **Use**: small-to-medium string similarity tasks, fast prototype-to-production utility, cleanup and candidate generation.  
 **Evaluate**: large-scale matching, multilingual matching, high-stakes matching with strict precision requirements.  
-**Avoid**: semantic search, billion-row matching without blocking/indexing, and any workflow that needs governance-heavy MDM capabilities. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py?utm_source=chatgpt.com "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
+**Avoid**: semantic search, billion-row matching without blocking/indexing, and any workflow that needs governance-heavy MDM capabilities. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
 
 ---
 
 ## 15. AI/Data Engineering Relevance
 
 **Can this repository be used in data platforms?**  
-Yes. Very naturally. It is a classic data-quality and entity-resolution helper. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py?utm_source=chatgpt.com "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
+Yes. Very naturally. It is a classic data-quality and entity-resolution helper. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
 
 **Can it be integrated into a lakehouse architecture?**  
-Yes. Put it in ingestion or transformation layers to normalize names, dedupe records, and generate match candidates before loading curated tables. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py?utm_source=chatgpt.com "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
+Yes. Put it in ingestion or transformation layers to normalize names, dedupe records, and generate match candidates before loading curated tables. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
 
 **Can it improve ETL/ELT pipelines?**  
 Yes, especially for canonicalization, reference matching, and duplicate detection. Just do not abuse it as a replacement for proper data modeling. ([GitHub](https://github.com/seatgeek/thefuzz "GitHub - seatgeek/thefuzz: Fuzzy String Matching in Python · GitHub"))
 
 **Can it be used for LLM, RAG, agents, or AI workflows?**  
-Yes, but as a supporting utility. Good for pre-normalizing labels, matching noisy entities, or routing prompts to canonical entities. It is not an LLM component itself. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py?utm_source=chatgpt.com "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
+Yes, but as a supporting utility. Good for pre-normalizing labels, matching noisy entities, or routing prompts to canonical entities. It is not an LLM component itself. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
 
 **Suggested enterprise architecture incorporating this project**  
 A sane pattern is:
@@ -536,6 +536,6 @@ A sane pattern is:
 7. Monitor precision, recall, and drift over time.
     
 
-That gives you a pragmatic hybrid pipeline: cheap heuristics first, expensive intelligence only where needed. That is the right way to spend compute, not the “throw embeddings at everything and hope” school of architecture. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py?utm_source=chatgpt.com "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
+That gives you a pragmatic hybrid pipeline: cheap heuristics first, expensive intelligence only where needed. That is the right way to spend compute, not the “throw embeddings at everything and hope” school of architecture. ([GitHub](https://github.com/seatgeek/thefuzz/blob/master/thefuzz/process.py "thefuzz/thefuzz/process.py at master · seatgeek/thefuzz"))
 
 If you want, I can turn this into a **formal architecture review document** with a scorecard and a recommended **adoption decision for your own data platform**.

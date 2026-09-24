@@ -36,7 +36,7 @@ The target audience appears to be:
 
 ## Maturity level
 
-This is best classified as a **strong prototype / early production system**. Why not fully production-ready? Because the repo has a surprisingly broad feature set, but the security posture and operational hardening look incomplete: there is no detected `SECURITY.md`, the README itself warns about production caveats like HTTPS, secure cookies, OAuth verification, and stronger token storage, and public commentary around the project has flagged security concerns. ([GitHub](https://github.com/zenhosta/9drive/security?utm_source=chatgpt.com "Security - zenhosta/9drive"))
+This is best classified as a **strong prototype / early production system**. Why not fully production-ready? Because the repo has a surprisingly broad feature set, but the security posture and operational hardening look incomplete: there is no detected `SECURITY.md`, the README itself warns about production caveats like HTTPS, secure cookies, OAuth verification, and stronger token storage, and public commentary around the project has flagged security concerns. ([GitHub](https://github.com/zenhosta/9drive/security "Security - zenhosta/9drive"))
 
 ---
 
@@ -470,7 +470,7 @@ Automated setup, in-app docs, and clear environment guidance help adoption. ([Gi
 ## Weaknesses
 
 **Risks:**  
-Security appears immature. The repo lacks a `SECURITY.md`, and external reporting has highlighted severe concerns. ([GitHub](https://github.com/zenhosta/9drive/security?utm_source=chatgpt.com "Security - zenhosta/9drive"))
+Security appears immature. The repo lacks a `SECURITY.md`, and external reporting has highlighted severe concerns. ([GitHub](https://github.com/zenhosta/9drive/security "Security - zenhosta/9drive"))
 
 **Limitations:**  
 Heavily tied to Google Drive and account-based storage semantics. That can be a blessing or a trap. ([GitHub](https://github.com/zenhosta/9drive "GitHub - zenhosta/9drive: 9Drive is a storage gateway web app for connecting multiple Google Drive accounts into one virtual storage dashboard. Users can connect Google Drive accounts, track quota, upload files, organize files with virtual folders, preview files, and let the backend route uploads to the Drive account with enough free space. · GitHub"))
@@ -684,7 +684,7 @@ Smaller than mature storage vendors or commercial file platforms. That means les
     
 - Direct streaming is the right engineering choice. ([GitHub](https://github.com/zenhosta/9drive "GitHub - zenhosta/9drive: 9Drive is a storage gateway web app for connecting multiple Google Drive accounts into one virtual storage dashboard. Users can connect Google Drive accounts, track quota, upload files, organize files with virtual folders, preview files, and let the backend route uploads to the Drive account with enough free space. · GitHub"))
     
-- Security and governance are the biggest gaps. ([GitHub](https://github.com/zenhosta/9drive/security?utm_source=chatgpt.com "Security - zenhosta/9drive"))
+- Security and governance are the biggest gaps. ([GitHub](https://github.com/zenhosta/9drive/security "Security - zenhosta/9drive"))
     
 
 ## Recommended adoption scenarios

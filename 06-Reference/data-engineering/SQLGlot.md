@@ -306,7 +306,7 @@ No native enterprise observability stack is apparent from the docs. You would ne
 The repo and docs are unusually strong: README, API docs, architecture narrative, examples, and contribution guidance. ([GitHub](https://github.com/tobymao/sqlglot "GitHub - tobymao/sqlglot: Python SQL Parser and Transpiler · GitHub"))
 
 **Community support: 8/10**  
-The repo has substantial visible adoption and active documentation. I am not using stars as a sole metric, but the project is clearly established. ([GitHub](https://github.com/tobymao/sqlglot?utm_source=chatgpt.com "tobymao/sqlglot: Python SQL Parser and Transpiler"))
+The repo has substantial visible adoption and active documentation. I am not using stars as a sole metric, but the project is clearly established. ([GitHub](https://github.com/tobymao/sqlglot "tobymao/sqlglot: Python SQL Parser and Transpiler"))
 
 **Maintainability: 8/10**  
 Strong module boundaries and AST design help a lot. The complexity is concentrated in dialect support, which is manageable but never trivial. ([SqlGlot](https://sqlglot.com/sqlglot/expressions.html "sqlglot.expressions API documentation"))

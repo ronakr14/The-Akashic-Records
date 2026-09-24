@@ -248,7 +248,7 @@ No meaningful observability story is present in the repo itself. You would need 
 The README is unusually detailed for a model release and covers benchmarks, serving, and agent integration. ([GitHub](https://github.com/deepreinforce-ai/Ornith-1 "GitHub - deepreinforce-ai/Ornith-1 · GitHub"))
 
 **Community support: 4/10**  
-The repo has stars and forks, but the snapshot shows limited issue/PR activity and little evidence of a large ecosystem yet. ([GitHub](https://github.com/deepreinforce-ai/Ornith-1/pulls?utm_source=chatgpt.com "Pull requests · deepreinforce-ai/Ornith-1"))
+The repo has stars and forks, but the snapshot shows limited issue/PR activity and little evidence of a large ecosystem yet. ([GitHub](https://github.com/deepreinforce-ai/Ornith-1/pulls "Pull requests · deepreinforce-ai/Ornith-1"))
 
 **Maintainability: 5/10**  
 Good docs, but the repo’s “thin” code surface means maintainability depends on external artifacts and model hosting, not just GitHub. ([GitHub](https://github.com/deepreinforce-ai/Ornith-1 "GitHub - deepreinforce-ai/Ornith-1 · GitHub"))

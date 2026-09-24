@@ -16,23 +16,23 @@ Portkey Gateway is an enterprise-grade AI gateway that provides a unified OpenAI
 ## 1. Executive Summary
 
 **What this project is**  
-Portkey Gateway is an open-source AI gateway that sits in front of LLM and multimodal providers and exposes a fast, OpenAI-compatible API for routing, guardrails, retries, fallbacks, load balancing, logging, and policy enforcement. The repository describes it as a “blazing fast AI Gateway with integrated guardrails” and positions it as the core of Portkey’s AI infrastructure. ([GitHub](https://github.com/portkey-ai/gateway?utm_source=chatgpt.com "Portkey-AI/gateway: A blazing fast ..."))
+Portkey Gateway is an open-source AI gateway that sits in front of LLM and multimodal providers and exposes a fast, OpenAI-compatible API for routing, guardrails, retries, fallbacks, load balancing, logging, and policy enforcement. The repository describes it as a “blazing fast AI Gateway with integrated guardrails” and positions it as the core of Portkey’s AI infrastructure. ([GitHub](https://github.com/portkey-ai/gateway "Portkey-AI/gateway: A blazing fast ..."))
 
 **What problem it solves**  
-It solves the ugly reality of production AI: multiple providers, inconsistent APIs, downtime, model switching, safety checks, observability, and cost control. Instead of wiring all of that into every application, the gateway centralizes it behind one interface. The repo explicitly highlights automatic retries/fallbacks, conditional routing, guardrails, caching, usage analytics, and secure key management. ([GitHub](https://github.com/portkey-ai/gateway?utm_source=chatgpt.com "Portkey-AI/gateway: A blazing fast ..."))
+It solves the ugly reality of production AI: multiple providers, inconsistent APIs, downtime, model switching, safety checks, observability, and cost control. Instead of wiring all of that into every application, the gateway centralizes it behind one interface. The repo explicitly highlights automatic retries/fallbacks, conditional routing, guardrails, caching, usage analytics, and secure key management. ([GitHub](https://github.com/portkey-ai/gateway "Portkey-AI/gateway: A blazing fast ..."))
 
 **Target audience**  
-This is aimed at engineering teams building production AI applications, platform teams that want centralized control over model traffic, and enterprise teams that need governance, observability, policy enforcement, and deployment flexibility. It also supports local/dev workflows for individual developers. ([GitHub](https://github.com/portkey-ai/gateway?utm_source=chatgpt.com "Portkey-AI/gateway: A blazing fast ..."))
+This is aimed at engineering teams building production AI applications, platform teams that want centralized control over model traffic, and enterprise teams that need governance, observability, policy enforcement, and deployment flexibility. It also supports local/dev workflows for individual developers. ([GitHub](https://github.com/portkey-ai/gateway "Portkey-AI/gateway: A blazing fast ..."))
 
 **Maturity level**  
-This is well past prototype. It is a mature, production-oriented, enterprise-leaning platform with a public release train, Docker support, multi-environment deployment guides, plugin architecture, tests, and strong operational features. The repository shows active releases and a fairly serious dependency stack; the project claims battle-tested usage at scale. ([GitHub](https://github.com/Portkey-AI/gateway/releases?utm_source=chatgpt.com "Releases · Portkey-AI/gateway"))
+This is well past prototype. It is a mature, production-oriented, enterprise-leaning platform with a public release train, Docker support, multi-environment deployment guides, plugin architecture, tests, and strong operational features. The repository shows active releases and a fairly serious dependency stack; the project claims battle-tested usage at scale. ([GitHub](https://github.com/Portkey-AI/gateway/releases "Releases · Portkey-AI/gateway"))
 
 ---
 
 ## 2. Repository Overview
 
 **Main purpose**  
-The repository contains the code for Portkey’s AI Gateway: an API layer for routing requests to many model providers while adding cross-cutting infrastructure like retries, policy checks, caching, logging, and provider selection. The gateway is OpenAI-compatible and supports integration from multiple SDKs and agent frameworks. ([GitHub](https://github.com/portkey-ai/gateway?utm_source=chatgpt.com "Portkey-AI/gateway: A blazing fast ..."))
+The repository contains the code for Portkey’s AI Gateway: an API layer for routing requests to many model providers while adding cross-cutting infrastructure like retries, policy checks, caching, logging, and provider selection. The gateway is OpenAI-compatible and supports integration from multiple SDKs and agent frameworks. ([GitHub](https://github.com/portkey-ai/gateway "Portkey-AI/gateway: A blazing fast ..."))
 
 **Core features and capabilities**
 
@@ -52,7 +52,7 @@ The repository contains the code for Portkey’s AI Gateway: an API layer for ro
     
 - Plugin system for guardrails
     
-- MCP Gateway support for centralized MCP server management ([GitHub](https://github.com/portkey-ai/gateway?utm_source=chatgpt.com "Portkey-AI/gateway: A blazing fast ..."))
+- MCP Gateway support for centralized MCP server management ([GitHub](https://github.com/portkey-ai/gateway "Portkey-AI/gateway: A blazing fast ..."))
     
 
 **Key technologies**
@@ -71,7 +71,7 @@ The repository contains the code for Portkey’s AI Gateway: an API layer for ro
     
 - **jose** for JWT/JWS-style crypto flows
     
-- **async-retry**, **ws**, **avsc**, and multiple AWS/Smithy-related packages for provider and protocol work ([GitHub](https://github.com/Portkey-AI/gateway/blob/main/package-lock.json?utm_source=chatgpt.com "gateway/package-lock.json at main · Portkey-AI/gateway"))
+- **async-retry**, **ws**, **avsc**, and multiple AWS/Smithy-related packages for provider and protocol work ([GitHub](https://github.com/Portkey-AI/gateway/blob/main/package-lock.json "gateway/package-lock.json at main · Portkey-AI/gateway"))
     
 
 **High-level architecture inferred**  
@@ -89,7 +89,7 @@ This is a layered gateway architecture:
     
 6. **Logging, analytics, and console UI**
     
-7. **Deployment adapters** for Node, Docker, Cloudflare, and others. ([GitHub](https://github.com/Portkey-AI/gateway/blob/main/CLAUDE.md?utm_source=chatgpt.com "CLAUDE.md - Portkey-AI/gateway"))
+7. **Deployment adapters** for Node, Docker, Cloudflare, and others. ([GitHub](https://github.com/Portkey-AI/gateway/blob/main/CLAUDE.md "CLAUDE.md - Portkey-AI/gateway"))
     
 
 ---
@@ -108,7 +108,7 @@ This is a layered gateway architecture:
     
 5. If the request fails or violates policy, the gateway can retry, fall back, or deny.
     
-6. It records logs, usage, and analytics, and surfaces them in the console/UI. ([GitHub](https://github.com/portkey-ai/gateway?utm_source=chatgpt.com "Portkey-AI/gateway: A blazing fast ..."))
+6. It records logs, usage, and analytics, and surfaces them in the console/UI. ([GitHub](https://github.com/portkey-ai/gateway "Portkey-AI/gateway: A blazing fast ..."))
     
 
 **Major components/modules**
@@ -123,11 +123,11 @@ This is a layered gateway architecture:
     
 - `cookbook/`: sample integrations and usage patterns
     
-- `conf.json` / `conf_sample.json`: runtime configuration. ([GitHub](https://github.com/Portkey-AI/gateway/blob/main/CLAUDE.md?utm_source=chatgpt.com "CLAUDE.md - Portkey-AI/gateway"))
+- `conf.json` / `conf_sample.json`: runtime configuration. ([GitHub](https://github.com/Portkey-AI/gateway/blob/main/CLAUDE.md "CLAUDE.md - Portkey-AI/gateway"))
     
 
 **Data flow / execution flow**  
-The CLAUDE guidance is unusually helpful here: it describes a middleware pipeline with `requestValidator`, `hooks`, `memoryCache`, `logger`, `adminAuth`, and `portkey` middleware. That suggests the request path is intentionally composable and centralized, not scattered across provider code. ([GitHub](https://github.com/Portkey-AI/gateway/blob/main/CLAUDE.md?utm_source=chatgpt.com "CLAUDE.md - Portkey-AI/gateway"))
+The CLAUDE guidance is unusually helpful here: it describes a middleware pipeline with `requestValidator`, `hooks`, `memoryCache`, `logger`, `adminAuth`, and `portkey` middleware. That suggests the request path is intentionally composable and centralized, not scattered across provider code. ([GitHub](https://github.com/Portkey-AI/gateway/blob/main/CLAUDE.md "CLAUDE.md - Portkey-AI/gateway"))
 
 **Integrations and dependencies**  
 The repo is built to sit in front of:
@@ -143,7 +143,7 @@ The repo is built to sit in front of:
 - CrewAI
     
 - Other provider-specific SDKs  
-    It also integrates with Redis and supports deployment on Node servers, Docker, Cloudflare Workers, Replit, Supabase Functions, Fastly, and more. ([GitHub](https://github.com/portkey-ai/gateway?utm_source=chatgpt.com "Portkey-AI/gateway: A blazing fast ..."))
+    It also integrates with Redis and supports deployment on Node servers, Docker, Cloudflare Workers, Replit, Supabase Functions, Fastly, and more. ([GitHub](https://github.com/portkey-ai/gateway "Portkey-AI/gateway: A blazing fast ..."))
     
 
 ---
@@ -151,7 +151,7 @@ The repo is built to sit in front of:
 ## 4. Why This Project Exists
 
 **Business problem**  
-AI teams do not want to hardwire provider-specific logic, safety filters, retries, and observability into every app. That is expensive, brittle, and hard to govern. The gateway centralizes that logic and turns model access into an infrastructure layer. ([GitHub](https://github.com/portkey-ai/gateway?utm_source=chatgpt.com "Portkey-AI/gateway: A blazing fast ..."))
+AI teams do not want to hardwire provider-specific logic, safety filters, retries, and observability into every app. That is expensive, brittle, and hard to govern. The gateway centralizes that logic and turns model access into an infrastructure layer. ([GitHub](https://github.com/portkey-ai/gateway "Portkey-AI/gateway: A blazing fast ..."))
 
 **Technical challenges it solves**
 
@@ -167,14 +167,14 @@ AI teams do not want to hardwire provider-specific logic, safety filters, retrie
     
 - Observability for AI usage
     
-- Multi-environment deployment constraints ([GitHub](https://github.com/portkey-ai/gateway?utm_source=chatgpt.com "Portkey-AI/gateway: A blazing fast ..."))
+- Multi-environment deployment constraints ([GitHub](https://github.com/portkey-ai/gateway "Portkey-AI/gateway: A blazing fast ..."))
     
 
 **Advantages over traditional approaches**  
-Traditional direct-to-provider integrations are simple at first and painful later. This gateway gives you one abstraction point for routing, governance, and telemetry. That means fewer code changes in client apps and a cleaner path to multi-provider resilience. ([GitHub](https://github.com/portkey-ai/gateway?utm_source=chatgpt.com "Portkey-AI/gateway: A blazing fast ..."))
+Traditional direct-to-provider integrations are simple at first and painful later. This gateway gives you one abstraction point for routing, governance, and telemetry. That means fewer code changes in client apps and a cleaner path to multi-provider resilience. ([GitHub](https://github.com/portkey-ai/gateway "Portkey-AI/gateway: A blazing fast ..."))
 
 **Differentiators**  
-The standout differentiators are the OpenAI-compatible API, integrated guardrails, plugin-based extensibility, and enterprise deployment story. The MCP Gateway angle is also notable: it extends the platform beyond LLM calls into tool/server governance. ([GitHub](https://github.com/portkey-ai/gateway?utm_source=chatgpt.com "Portkey-AI/gateway: A blazing fast ..."))
+The standout differentiators are the OpenAI-compatible API, integrated guardrails, plugin-based extensibility, and enterprise deployment story. The MCP Gateway angle is also notable: it extends the platform beyond LLM calls into tool/server governance. ([GitHub](https://github.com/portkey-ai/gateway "Portkey-AI/gateway: A blazing fast ..."))
 
 ---
 
@@ -185,42 +185,42 @@ The standout differentiators are the OpenAI-compatible API, integrated guardrail
 **Description:** Route requests across OpenAI, Anthropic, Bedrock, Groq, and others.  
 **Example:** Primary provider fails, traffic automatically shifts to a fallback model.  
 **Benefits:** Higher availability, less vendor lock-in.  
-**Complexity:** Medium. ([GitHub](https://github.com/portkey-ai/gateway?utm_source=chatgpt.com "Portkey-AI/gateway: A blazing fast ..."))
+**Complexity:** Medium. ([GitHub](https://github.com/portkey-ai/gateway "Portkey-AI/gateway: A blazing fast ..."))
 
 ### 2) Safety and compliance gateway
 
 **Description:** Enforce input/output guardrails before results reach users.  
 **Example:** Block PII, toxic content, or forbidden output patterns.  
 **Benefits:** Better compliance posture, fewer risky responses.  
-**Complexity:** Medium to High. ([GitHub](https://github.com/portkey-ai/gateway?utm_source=chatgpt.com "Portkey-AI/gateway: A blazing fast ..."))
+**Complexity:** Medium to High. ([GitHub](https://github.com/portkey-ai/gateway "Portkey-AI/gateway: A blazing fast ..."))
 
 ### 3) Cost-aware AI platform
 
 **Description:** Use routing and provider optimization to control spend.  
 **Example:** Send cheap traffic to lower-cost models and reserve premium models for hard cases.  
 **Benefits:** Lower inference cost, smarter model selection.  
-**Complexity:** Medium. ([GitHub](https://github.com/portkey-ai/gateway?utm_source=chatgpt.com "Portkey-AI/gateway: A blazing fast ..."))
+**Complexity:** Medium. ([GitHub](https://github.com/portkey-ai/gateway "Portkey-AI/gateway: A blazing fast ..."))
 
 ### 4) Enterprise AI observability layer
 
 **Description:** Central logs and usage analytics for requests, latency, and errors.  
 **Example:** Platform team tracks which apps are burning tokens and where requests fail.  
 **Benefits:** Better incident response and FinOps visibility.  
-**Complexity:** Medium. ([GitHub](https://github.com/portkey-ai/gateway?utm_source=chatgpt.com "Portkey-AI/gateway: A blazing fast ..."))
+**Complexity:** Medium. ([GitHub](https://github.com/portkey-ai/gateway "Portkey-AI/gateway: A blazing fast ..."))
 
 ### 5) Multi-modal and realtime AI apps
 
 **Description:** Extend beyond text to vision, audio, image, and realtime APIs.  
 **Example:** A voice assistant app routes speech-to-text and streaming responses through the gateway.  
 **Benefits:** Unified interface across modality types.  
-**Complexity:** High. ([GitHub](https://github.com/portkey-ai/gateway?utm_source=chatgpt.com "Portkey-AI/gateway: A blazing fast ..."))
+**Complexity:** High. ([GitHub](https://github.com/portkey-ai/gateway "Portkey-AI/gateway: A blazing fast ..."))
 
 ### 6) MCP server control plane
 
 **Description:** Govern MCP servers with auth, access control, and tool-call logging.  
 **Example:** Central platform controls access to internal tool servers from Cursor or Claude Desktop.  
 **Benefits:** Better security and traceability for agent/tool ecosystems.  
-**Complexity:** Medium to High. ([GitHub](https://github.com/portkey-ai/gateway?utm_source=chatgpt.com "Portkey-AI/gateway: A blazing fast ..."))
+**Complexity:** Medium to High. ([GitHub](https://github.com/portkey-ai/gateway "Portkey-AI/gateway: A blazing fast ..."))
 
 ---
 
@@ -242,41 +242,41 @@ Useful for operationalizing AI services with deployment flexibility, retries, lo
 Very relevant. This is basically platform glue for AI consumption.
 
 **Cloud Engineering**  
-Strong fit because of support for Node, Docker, Cloudflare Workers, AWS-style deployments, and private cloud patterns. ([GitHub](https://github.com/Portkey-AI/gateway/blob/main/docs/installation-deployments.md?utm_source=chatgpt.com "installation-deployments.md - Portkey-AI/gateway"))
+Strong fit because of support for Node, Docker, Cloudflare Workers, AWS-style deployments, and private cloud patterns. ([GitHub](https://github.com/Portkey-AI/gateway/blob/main/docs/installation-deployments.md "installation-deployments.md - Portkey-AI/gateway"))
 
 **Security**  
-Highly relevant for guardrails, key management, RBAC, and policy enforcement. ([GitHub](https://github.com/portkey-ai/gateway?utm_source=chatgpt.com "Portkey-AI/gateway: A blazing fast ..."))
+Highly relevant for guardrails, key management, RBAC, and policy enforcement. ([GitHub](https://github.com/portkey-ai/gateway "Portkey-AI/gateway: A blazing fast ..."))
 
 **FinOps**  
-Relevant because of routing, provider optimization, caching, and usage analytics. ([GitHub](https://github.com/portkey-ai/gateway?utm_source=chatgpt.com "Portkey-AI/gateway: A blazing fast ..."))
+Relevant because of routing, provider optimization, caching, and usage analytics. ([GitHub](https://github.com/portkey-ai/gateway "Portkey-AI/gateway: A blazing fast ..."))
 
 **Product Engineering**  
 Great for app teams that want one API surface and fewer provider-specific code paths.
 
 **Enterprise Applications**  
-Very strong fit. The repo and docs explicitly pitch enterprise deployments, private cloud, governance, and compliance. ([GitHub](https://github.com/Portkey-AI/gateway/blob/main/docs/installation-deployments.md?utm_source=chatgpt.com "installation-deployments.md - Portkey-AI/gateway"))
+Very strong fit. The repo and docs explicitly pitch enterprise deployments, private cloud, governance, and compliance. ([GitHub](https://github.com/Portkey-AI/gateway/blob/main/docs/installation-deployments.md "installation-deployments.md - Portkey-AI/gateway"))
 
 ---
 
 ## 7. Key Components Analysis
 
 **`src/handlers/`**  
-Handles endpoint-specific logic for AI API requests. Likely maps request shapes to provider behaviors and handles streaming/realtime variants. ([GitHub](https://github.com/Portkey-AI/gateway/blob/main/CLAUDE.md?utm_source=chatgpt.com "CLAUDE.md - Portkey-AI/gateway"))
+Handles endpoint-specific logic for AI API requests. Likely maps request shapes to provider behaviors and handles streaming/realtime variants. ([GitHub](https://github.com/Portkey-AI/gateway/blob/main/CLAUDE.md "CLAUDE.md - Portkey-AI/gateway"))
 
 **`src/providers/`**  
-Contains provider-specific adapters. This is where provider quirks are normalized into the gateway abstraction. ([GitHub](https://github.com/Portkey-AI/gateway/blob/main/CLAUDE.md?utm_source=chatgpt.com "CLAUDE.md - Portkey-AI/gateway"))
+Contains provider-specific adapters. This is where provider quirks are normalized into the gateway abstraction. ([GitHub](https://github.com/Portkey-AI/gateway/blob/main/CLAUDE.md "CLAUDE.md - Portkey-AI/gateway"))
 
 **`src/middlewares/`**  
-The control plane of request handling: validation, hooks, cache, logging, auth, and Portkey-specific routing/guardrails. This is the architectural spine. ([GitHub](https://github.com/Portkey-AI/gateway/blob/main/CLAUDE.md?utm_source=chatgpt.com "CLAUDE.md - Portkey-AI/gateway"))
+The control plane of request handling: validation, hooks, cache, logging, auth, and Portkey-specific routing/guardrails. This is the architectural spine. ([GitHub](https://github.com/Portkey-AI/gateway/blob/main/CLAUDE.md "CLAUDE.md - Portkey-AI/gateway"))
 
 **`plugins/`**  
-Guardrail plugin system. Each plugin has a `manifest.json`, implementation file, and recommended tests. This is the extensibility layer. ([GitHub](https://github.com/Portkey-AI/gateway/blob/main/plugins/Contributing.md?ref=portkey.ai&utm_source=chatgpt.com "gateway/plugins/Contributing.md at main · Portkey-AI ..."))
+Guardrail plugin system. Each plugin has a `manifest.json`, implementation file, and recommended tests. This is the extensibility layer. ([GitHub](https://github.com/Portkey-AI/gateway/blob/main/plugins/Contributing.md?ref=portkey.ai "gateway/plugins/Contributing.md at main · Portkey-AI ..."))
 
 **`conf.json` / `conf_sample.json`**  
-Runtime configuration. The repo emphasizes config-driven behavior, which is exactly how you want a gateway to behave. ([GitHub](https://github.com/Portkey-AI/gateway/blob/main/CLAUDE.md?utm_source=chatgpt.com "CLAUDE.md - Portkey-AI/gateway"))
+Runtime configuration. The repo emphasizes config-driven behavior, which is exactly how you want a gateway to behave. ([GitHub](https://github.com/Portkey-AI/gateway/blob/main/CLAUDE.md "CLAUDE.md - Portkey-AI/gateway"))
 
 **`Dockerfile`**  
-Production packaging target. It uses Node 20 Alpine, builds the app, then ships a slim runtime image, exposing port 8787. That says “deployable appliance,” not “toy project.” ([GitHub](https://github.com/Portkey-AI/gateway/blob/main/Dockerfile?utm_source=chatgpt.com "Dockerfile - Portkey-AI/gateway"))
+Production packaging target. It uses Node 20 Alpine, builds the app, then ships a slim runtime image, exposing port 8787. That says “deployable appliance,” not “toy project.” ([GitHub](https://github.com/Portkey-AI/gateway/blob/main/Dockerfile "Dockerfile - Portkey-AI/gateway"))
 
 ---
 
@@ -288,7 +288,7 @@ Production packaging target. It uses Node 20 Alpine, builds the app, then ships 
     
 - Optional Docker
     
-- Optional Cloudflare, Replit, Supabase Functions, Fastly, and other deployment targets ([GitHub](https://github.com/Portkey-AI/gateway/blob/main/docs/installation-deployments.md?utm_source=chatgpt.com "installation-deployments.md - Portkey-AI/gateway"))
+- Optional Cloudflare, Replit, Supabase Functions, Fastly, and other deployment targets ([GitHub](https://github.com/Portkey-AI/gateway/blob/main/docs/installation-deployments.md "installation-deployments.md - Portkey-AI/gateway"))
     
 
 **Deployment options**
@@ -309,14 +309,14 @@ Production packaging target. It uses Node 20 Alpine, builds the app, then ships 
     
 - Supabase Functions
     
-- Fastly ([GitHub](https://github.com/Portkey-AI/gateway/blob/main/docs/installation-deployments.md?utm_source=chatgpt.com "installation-deployments.md - Portkey-AI/gateway"))
+- Fastly ([GitHub](https://github.com/Portkey-AI/gateway/blob/main/docs/installation-deployments.md "installation-deployments.md - Portkey-AI/gateway"))
     
 
 **Infrastructure requirements**  
-Modest for basic use, but production use likely wants Redis, secure config storage, auth hardening, and network controls. The repository dependencies show Redis and crypto support, so the gateway expects more than a barebones deployment if used seriously. ([GitHub](https://github.com/Portkey-AI/gateway/blob/main/package-lock.json?utm_source=chatgpt.com "gateway/package-lock.json at main · Portkey-AI/gateway"))
+Modest for basic use, but production use likely wants Redis, secure config storage, auth hardening, and network controls. The repository dependencies show Redis and crypto support, so the gateway expects more than a barebones deployment if used seriously. ([GitHub](https://github.com/Portkey-AI/gateway/blob/main/package-lock.json "gateway/package-lock.json at main · Portkey-AI/gateway"))
 
 **Learning curve**  
-Moderate. The OpenAI-compatible surface makes adoption easy, but the real value comes from config, guardrails, routing, and deployment patterns. That is where teams need maturity. ([GitHub](https://github.com/portkey-ai/gateway?utm_source=chatgpt.com "Portkey-AI/gateway: A blazing fast ..."))
+Moderate. The OpenAI-compatible surface makes adoption easy, but the real value comes from config, guardrails, routing, and deployment patterns. That is where teams need maturity. ([GitHub](https://github.com/portkey-ai/gateway "Portkey-AI/gateway: A blazing fast ..."))
 
 **Operational considerations**
 
@@ -330,7 +330,7 @@ Moderate. The OpenAI-compatible surface makes adoption easy, but the real value 
     
 - Provider failover strategy
     
-- Latency tradeoffs from policy and routing layers ([GitHub](https://github.com/portkey-ai/gateway?utm_source=chatgpt.com "Portkey-AI/gateway: A blazing fast ..."))
+- Latency tradeoffs from policy and routing layers ([GitHub](https://github.com/portkey-ai/gateway "Portkey-AI/gateway: A blazing fast ..."))
     
 
 ---
@@ -340,19 +340,19 @@ Moderate. The OpenAI-compatible surface makes adoption easy, but the real value 
 **Strengths**
 
 **Scalability:**  
-Designed for high request volume and multi-provider routing. The project claims 10B+ tokens processed daily and emphasizes load balancing. ([GitHub](https://github.com/portkey-ai/gateway?utm_source=chatgpt.com "Portkey-AI/gateway: A blazing fast ..."))
+Designed for high request volume and multi-provider routing. The project claims 10B+ tokens processed daily and emphasizes load balancing. ([GitHub](https://github.com/portkey-ai/gateway "Portkey-AI/gateway: A blazing fast ..."))
 
 **Maintainability:**  
-Middleware-based architecture and config-driven behavior keep complexity more contained than app-specific hardcoding. ([GitHub](https://github.com/Portkey-AI/gateway/blob/main/CLAUDE.md?utm_source=chatgpt.com "CLAUDE.md - Portkey-AI/gateway"))
+Middleware-based architecture and config-driven behavior keep complexity more contained than app-specific hardcoding. ([GitHub](https://github.com/Portkey-AI/gateway/blob/main/CLAUDE.md "CLAUDE.md - Portkey-AI/gateway"))
 
 **Extensibility:**  
-Plugin system is a real advantage. Manifest-driven guardrails are a clean extension model. ([GitHub](https://github.com/Portkey-AI/gateway/blob/main/plugins/Contributing.md?ref=portkey.ai&utm_source=chatgpt.com "gateway/plugins/Contributing.md at main · Portkey-AI ..."))
+Plugin system is a real advantage. Manifest-driven guardrails are a clean extension model. ([GitHub](https://github.com/Portkey-AI/gateway/blob/main/plugins/Contributing.md?ref=portkey.ai "gateway/plugins/Contributing.md at main · Portkey-AI ..."))
 
 **Performance:**  
-The project claims sub-1ms latency and a tiny footprint. I would treat that as a marketing claim until benchmarked in your environment, but the intent is clear: low overhead. ([GitHub](https://github.com/portkey-ai/gateway?utm_source=chatgpt.com "Portkey-AI/gateway: A blazing fast ..."))
+The project claims sub-1ms latency and a tiny footprint. I would treat that as a marketing claim until benchmarked in your environment, but the intent is clear: low overhead. ([GitHub](https://github.com/portkey-ai/gateway "Portkey-AI/gateway: A blazing fast ..."))
 
 **Developer Experience:**  
-OpenAI compatibility, SDK examples, and local quickstart reduce adoption friction. ([GitHub](https://github.com/portkey-ai/gateway?utm_source=chatgpt.com "Portkey-AI/gateway: A blazing fast ..."))
+OpenAI compatibility, SDK examples, and local quickstart reduce adoption friction. ([GitHub](https://github.com/portkey-ai/gateway "Portkey-AI/gateway: A blazing fast ..."))
 
 **Weaknesses**
 
@@ -360,38 +360,38 @@ OpenAI compatibility, SDK examples, and local quickstart reduce adoption frictio
 As a gateway sitting in the critical path, it can become a single point of failure if not deployed redundantly.
 
 **Limitations:**  
-Some advanced features are likely enterprise-oriented or tied to hosted offerings; the repo itself hints at a split between open-source and enterprise capabilities. ([GitHub](https://github.com/Portkey-AI/gateway/blob/main/docs/installation-deployments.md?utm_source=chatgpt.com "installation-deployments.md - Portkey-AI/gateway"))
+Some advanced features are likely enterprise-oriented or tied to hosted offerings; the repo itself hints at a split between open-source and enterprise capabilities. ([GitHub](https://github.com/Portkey-AI/gateway/blob/main/docs/installation-deployments.md "installation-deployments.md - Portkey-AI/gateway"))
 
 **Missing features:**  
 The public repo does not, from the surfaced docs, give deep guarantees about formal policy authoring, long-term schema stability, or exhaustive compliance workflows.
 
 **Technical debt indicators:**  
-A large dependency surface, many deployment modes, and a plugin ecosystem can become messy if governance is weak. The Alpine DNS issue also suggests environment-specific operational edge cases. ([GitHub](https://github.com/Portkey-AI/gateway/issues/1355?utm_source=chatgpt.com "DNS resolution failures in Alpine-based docker container"))
+A large dependency surface, many deployment modes, and a plugin ecosystem can become messy if governance is weak. The Alpine DNS issue also suggests environment-specific operational edge cases. ([GitHub](https://github.com/Portkey-AI/gateway/issues/1355 "DNS resolution failures in Alpine-based docker container"))
 
 ---
 
 ## 10. Enterprise Evaluation
 
 **Production readiness: 9/10**  
-Strong signs: releases, deployment docs, Docker image, config-based design, and mature feature set. ([GitHub](https://github.com/Portkey-AI/gateway/releases?utm_source=chatgpt.com "Releases · Portkey-AI/gateway"))
+Strong signs: releases, deployment docs, Docker image, config-based design, and mature feature set. ([GitHub](https://github.com/Portkey-AI/gateway/releases "Releases · Portkey-AI/gateway"))
 
 **Security: 8/10**  
-Good guardrails, auth, RBAC language, and enterprise positioning. Still depends heavily on correct deployment and policy design. ([GitHub](https://github.com/portkey-ai/gateway?utm_source=chatgpt.com "Portkey-AI/gateway: A blazing fast ..."))
+Good guardrails, auth, RBAC language, and enterprise positioning. Still depends heavily on correct deployment and policy design. ([GitHub](https://github.com/portkey-ai/gateway "Portkey-AI/gateway: A blazing fast ..."))
 
 **Scalability: 9/10**  
-Built specifically for routing, fallback, load balancing, and multi-provider traffic. ([GitHub](https://github.com/portkey-ai/gateway?utm_source=chatgpt.com "Portkey-AI/gateway: A blazing fast ..."))
+Built specifically for routing, fallback, load balancing, and multi-provider traffic. ([GitHub](https://github.com/portkey-ai/gateway "Portkey-AI/gateway: A blazing fast ..."))
 
 **Observability: 8/10**  
-Gateway console, logs, usage analytics, and MCP logging are compelling, though deeper observability maturity depends on your deployment. ([GitHub](https://github.com/portkey-ai/gateway?utm_source=chatgpt.com "Portkey-AI/gateway: A blazing fast ..."))
+Gateway console, logs, usage analytics, and MCP logging are compelling, though deeper observability maturity depends on your deployment. ([GitHub](https://github.com/portkey-ai/gateway "Portkey-AI/gateway: A blazing fast ..."))
 
 **Documentation quality: 8/10**  
-The README and supporting docs are strong and adoption-focused. There is enough to get moving, though some enterprise details remain split across docs and product pages. ([GitHub](https://github.com/portkey-ai/gateway?utm_source=chatgpt.com "Portkey-AI/gateway: A blazing fast ..."))
+The README and supporting docs are strong and adoption-focused. There is enough to get moving, though some enterprise details remain split across docs and product pages. ([GitHub](https://github.com/portkey-ai/gateway "Portkey-AI/gateway: A blazing fast ..."))
 
 **Community support: 7/10**  
-Active repo, many releases, issues, and contributions. Support looks healthy, but a lot of momentum is naturally tied to the vendor ecosystem. ([GitHub](https://github.com/Portkey-AI/gateway/releases?utm_source=chatgpt.com "Releases · Portkey-AI/gateway"))
+Active repo, many releases, issues, and contributions. Support looks healthy, but a lot of momentum is naturally tied to the vendor ecosystem. ([GitHub](https://github.com/Portkey-AI/gateway/releases "Releases · Portkey-AI/gateway"))
 
 **Maintainability: 8/10**  
-Good modular structure, but complexity is not trivial. A gateway like this needs disciplined config management and regression testing. ([GitHub](https://github.com/Portkey-AI/gateway/blob/main/CLAUDE.md?utm_source=chatgpt.com "CLAUDE.md - Portkey-AI/gateway"))
+Good modular structure, but complexity is not trivial. A gateway like this needs disciplined config management and regression testing. ([GitHub](https://github.com/Portkey-AI/gateway/blob/main/CLAUDE.md "CLAUDE.md - Portkey-AI/gateway"))
 
 ---
 
@@ -434,7 +434,7 @@ Good modular structure, but complexity is not trivial. A gateway like this needs
     
 
 **Ecosystem**  
-This project benefits from its own SDKs, cookbook material, and enterprise product layer. That makes it more cohesive than stitching together random infra pieces. ([GitHub](https://github.com/portkey-ai/gateway?utm_source=chatgpt.com "Portkey-AI/gateway: A blazing fast ..."))
+This project benefits from its own SDKs, cookbook material, and enterprise product layer. That makes it more cohesive than stitching together random infra pieces. ([GitHub](https://github.com/portkey-ai/gateway "Portkey-AI/gateway: A blazing fast ..."))
 
 ---
 
@@ -450,7 +450,7 @@ This project benefits from its own SDKs, cookbook material, and enterprise produ
     
 - Plugin-based extensibility
     
-- OpenAI-compatible façade over heterogeneous backends ([GitHub](https://github.com/Portkey-AI/gateway/blob/main/CLAUDE.md?utm_source=chatgpt.com "CLAUDE.md - Portkey-AI/gateway"))
+- OpenAI-compatible façade over heterogeneous backends ([GitHub](https://github.com/Portkey-AI/gateway/blob/main/CLAUDE.md "CLAUDE.md - Portkey-AI/gateway"))
     
 
 **Architectural lessons**
@@ -461,7 +461,7 @@ This project benefits from its own SDKs, cookbook material, and enterprise produ
     
 - Treat guardrails as a first-class platform concern, not a bolt-on.
     
-- Keep deployment targets flexible, because AI infra rarely lives in one place. ([GitHub](https://github.com/portkey-ai/gateway?utm_source=chatgpt.com "Portkey-AI/gateway: A blazing fast ..."))
+- Keep deployment targets flexible, because AI infra rarely lives in one place. ([GitHub](https://github.com/portkey-ai/gateway "Portkey-AI/gateway: A blazing fast ..."))
     
 
 **Best practices worth adopting**
@@ -566,7 +566,7 @@ This project benefits from its own SDKs, cookbook material, and enterprise produ
 ## 14. Handoff Summary
 
 **Executive summary**  
-Portkey Gateway is a serious, production-oriented AI infrastructure layer. It gives teams one consistent API for talking to many model providers while centralizing reliability, guardrails, caching, routing, observability, and deployment concerns. It is most valuable for organizations building AI at scale, especially where multiple models, safety policies, and uptime matter. The architecture is practical rather than academic: middleware pipeline, provider adapters, plugin extensibility, and multi-target deployment. ([GitHub](https://github.com/Portkey-AI/gateway/blob/main/CLAUDE.md?utm_source=chatgpt.com "CLAUDE.md - Portkey-AI/gateway"))
+Portkey Gateway is a serious, production-oriented AI infrastructure layer. It gives teams one consistent API for talking to many model providers while centralizing reliability, guardrails, caching, routing, observability, and deployment concerns. It is most valuable for organizations building AI at scale, especially where multiple models, safety policies, and uptime matter. The architecture is practical rather than academic: middleware pipeline, provider adapters, plugin extensibility, and multi-target deployment. ([GitHub](https://github.com/Portkey-AI/gateway/blob/main/CLAUDE.md "CLAUDE.md - Portkey-AI/gateway"))
 
 **Key findings**
 
@@ -617,7 +617,7 @@ Yes. Put it in front of lakehouse-powered semantic search, warehouse copilots, a
 Indirectly, yes. It can power AI-assisted transformation, anomaly explanation, schema mapping, and pipeline incident copilots. It does not replace ETL tools.
 
 **Can it be used for LLM, RAG, agents, or AI workflows?**  
-Absolutely. That is the core use case. The repo explicitly supports agent frameworks and multimodal/realtime workflows. ([GitHub](https://github.com/portkey-ai/gateway?utm_source=chatgpt.com "Portkey-AI/gateway: A blazing fast ..."))
+Absolutely. That is the core use case. The repo explicitly supports agent frameworks and multimodal/realtime workflows. ([GitHub](https://github.com/portkey-ai/gateway "Portkey-AI/gateway: A blazing fast ..."))
 
 **Suggested enterprise architecture**
 
@@ -635,7 +635,7 @@ Absolutely. That is the core use case. The repo explicitly supports agent framew
     
 - Cost analytics feeding FinOps dashboards
     
-- Agent/tool access through MCP Gateway where needed ([GitHub](https://github.com/portkey-ai/gateway?utm_source=chatgpt.com "Portkey-AI/gateway: A blazing fast ..."))
+- Agent/tool access through MCP Gateway where needed ([GitHub](https://github.com/portkey-ai/gateway "Portkey-AI/gateway: A blazing fast ..."))
     
 
 If you want, I can turn this into a polished markdown report with a title page, table of contents, and a more executive-friendly tone.

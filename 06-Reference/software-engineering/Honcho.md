@@ -20,11 +20,11 @@ It solves the annoying but common problem of **running multiple local services t
 
 The target audience is developers and operators working with **12-factor-style apps**, local dev environments, and lightweight process supervision. The packaging metadata also positions it for developers and sysadmins, and it ships as a console tool. ([GitHub](https://github.com/nickstenning/honcho/blob/main/pyproject.toml "honcho/pyproject.toml at main · nickstenning/honcho · GitHub"))
 
-**Maturity:** production-grade for its niche, but not “enterprise platform” software. It is a mature open-source utility with releases, active issues, and packaging, but it is still a small CLI tool with known rough edges such as Windows compatibility and broken pipe handling in open issues. ([GitHub](https://github.com/nickstenning/honcho?utm_source=chatgpt.com "Honcho: a python clone of Foreman. For managing Procfile ..."))
+**Maturity:** production-grade for its niche, but not “enterprise platform” software. It is a mature open-source utility with releases, active issues, and packaging, but it is still a small CLI tool with known rough edges such as Windows compatibility and broken pipe handling in open issues. ([GitHub](https://github.com/nickstenning/honcho "Honcho: a python clone of Foreman. For managing Procfile ..."))
 
 # 2. Repository Overview
 
-The repository’s main purpose is to provide a **Procfile runner / process manager** in Python. It supports commands like `check`, `run`, `start`, `export`, and `help`, all wired through `honcho.command`. ([GitHub](https://github.com/nickstenning/honcho/blob/master/honcho/command.py?utm_source=chatgpt.com "command.py - nickstenning/honcho"))
+The repository’s main purpose is to provide a **Procfile runner / process manager** in Python. It supports commands like `check`, `run`, `start`, `export`, and `help`, all wired through `honcho.command`. ([GitHub](https://github.com/nickstenning/honcho/blob/master/honcho/command.py "command.py - nickstenning/honcho"))
 
 Core capabilities inferred from the code and docs:
 
@@ -36,14 +36,14 @@ Core capabilities inferred from the code and docs:
     
 - Prefix and format process output for terminal readability. ([GitHub](https://github.com/nickstenning/honcho/blob/main/honcho/printer.py "honcho/honcho/printer.py at main · nickstenning/honcho · GitHub"))
     
-- Export Procfile-based workloads to other formats, including via plugin-style exporters. ([GitHub](https://github.com/nickstenning/honcho/blob/master/honcho/command.py?utm_source=chatgpt.com "command.py - nickstenning/honcho"))
+- Export Procfile-based workloads to other formats, including via plugin-style exporters. ([GitHub](https://github.com/nickstenning/honcho/blob/master/honcho/command.py "command.py - nickstenning/honcho"))
     
 
 Key technologies:
 
-- **Python** is the main language; repo language stats show ~99.8% Python. ([GitHub](https://github.com/nickstenning/honcho?utm_source=chatgpt.com "Honcho: a python clone of Foreman. For managing Procfile ..."))
+- **Python** is the main language; repo language stats show ~99.8% Python. ([GitHub](https://github.com/nickstenning/honcho "Honcho: a python clone of Foreman. For managing Procfile ..."))
     
-- `argparse`, `subprocess`, `signal`, `shlex`, `os`, and `logging` for CLI orchestration. ([GitHub](https://github.com/nickstenning/honcho/blob/master/honcho/command.py?utm_source=chatgpt.com "command.py - nickstenning/honcho"))
+- `argparse`, `subprocess`, `signal`, `shlex`, `os`, and `logging` for CLI orchestration. ([GitHub](https://github.com/nickstenning/honcho/blob/master/honcho/command.py "command.py - nickstenning/honcho"))
     
 - `setuptools` / `setuptools_scm` for packaging, with an optional `jinja2` dependency for export functionality. ([GitHub](https://github.com/nickstenning/honcho/blob/main/pyproject.toml "honcho/pyproject.toml at main · nickstenning/honcho · GitHub"))
     
@@ -52,7 +52,7 @@ Key technologies:
 
 High-level architecture:
 
-- **CLI layer** (`command.py`) parses arguments and dispatches to operations. ([GitHub](https://github.com/nickstenning/honcho/blob/master/honcho/command.py?utm_source=chatgpt.com "command.py - nickstenning/honcho"))
+- **CLI layer** (`command.py`) parses arguments and dispatches to operations. ([GitHub](https://github.com/nickstenning/honcho/blob/master/honcho/command.py "command.py - nickstenning/honcho"))
     
 - **Configuration layer** (`environ.py`) parses Procfile/environment config. ([GitHub](https://github.com/nickstenning/honcho/blob/main/honcho/environ.py "honcho/honcho/environ.py at main · nickstenning/honcho · GitHub"))
     
@@ -70,7 +70,7 @@ In simple terms, Honcho reads a Procfile, turns each line into a process definit
 Major components:
 
 **`command.py`**  
-This is the CLI brain. It defines the parser, subcommands, shared options, and the actual command handlers such as `command_start`, `command_run`, `command_check`, and `command_export`. The code shows that `honcho` is a classic command-dispatch CLI rather than a library-first API. ([GitHub](https://github.com/nickstenning/honcho/blob/master/honcho/command.py?utm_source=chatgpt.com "command.py - nickstenning/honcho"))
+This is the CLI brain. It defines the parser, subcommands, shared options, and the actual command handlers such as `command_start`, `command_run`, `command_check`, and `command_export`. The code shows that `honcho` is a classic command-dispatch CLI rather than a library-first API. ([GitHub](https://github.com/nickstenning/honcho/blob/master/honcho/command.py "command.py - nickstenning/honcho"))
 
 **`environ.py`**  
 This module parses Procfile-style lines and environment config. The visible regex `PROCFILE_LINE = re.compile(r'^([A-Za-z0-9_-]+):\s*(.+)$')` shows that process types support alphanumerics, underscores, and dashes. ([GitHub](https://github.com/nickstenning/honcho/blob/main/honcho/environ.py "honcho/honcho/environ.py at main · nickstenning/honcho · GitHub"))
@@ -86,11 +86,11 @@ This handles user-visible output formatting, converting typed messages into the 
 
 Data and execution flow:
 
-1. CLI parses config/options. ([GitHub](https://github.com/nickstenning/honcho/blob/master/honcho/command.py?utm_source=chatgpt.com "command.py - nickstenning/honcho"))
+1. CLI parses config/options. ([GitHub](https://github.com/nickstenning/honcho/blob/master/honcho/command.py "command.py - nickstenning/honcho"))
     
 2. Procfile and `.env` are read. ([GitHub](https://github.com/nickstenning/honcho/blob/main/README.rst "honcho/README.rst at main · nickstenning/honcho · GitHub"))
     
-3. Processes are expanded with concurrency/env/port settings. `command_export` explicitly calls `environ.expand_processes(...)`. ([GitHub](https://github.com/nickstenning/honcho/blob/master/honcho/command.py?utm_source=chatgpt.com "command.py - nickstenning/honcho"))
+3. Processes are expanded with concurrency/env/port settings. `command_export` explicitly calls `environ.expand_processes(...)`. ([GitHub](https://github.com/nickstenning/honcho/blob/master/honcho/command.py "command.py - nickstenning/honcho"))
     
 4. Manager starts child processes and receives their output/events. ([GitHub](https://github.com/nickstenning/honcho/blob/main/honcho/manager.py "honcho/honcho/manager.py at main · nickstenning/honcho · GitHub"))
     
@@ -135,7 +135,7 @@ Differentiators:
     
 - Export mechanism via plugin entry points. ([GitHub](https://github.com/nickstenning/honcho/blob/main/pyproject.toml "honcho/pyproject.toml at main · nickstenning/honcho · GitHub"))
     
-- Lightweight, CLI-first design with familiar developer ergonomics. ([GitHub](https://github.com/nickstenning/honcho/blob/master/honcho/command.py?utm_source=chatgpt.com "command.py - nickstenning/honcho"))
+- Lightweight, CLI-first design with familiar developer ergonomics. ([GitHub](https://github.com/nickstenning/honcho/blob/master/honcho/command.py "command.py - nickstenning/honcho"))
     
 
 # 5. How It Can Be Used
@@ -193,7 +193,7 @@ Important content: The Foreman/Procfile framing and the three-step quick start. 
 **`honcho/command.py`**  
 Purpose: CLI entry point and command routing.  
 Responsibilities: Parse args, configure defaults, invoke process/environment logic, export artifacts.  
-Important functions: `command_check`, `command_export`, `command_run`, `command_start`, `command_help`. ([GitHub](https://github.com/nickstenning/honcho/blob/master/honcho/command.py?utm_source=chatgpt.com "command.py - nickstenning/honcho"))
+Important functions: `command_check`, `command_export`, `command_run`, `command_start`, `command_help`. ([GitHub](https://github.com/nickstenning/honcho/blob/master/honcho/command.py "command.py - nickstenning/honcho"))
 
 **`honcho/manager.py`**  
 Purpose: Process orchestration core.  
@@ -264,7 +264,7 @@ Operational considerations:
     
 - Output piping can break cleanup in some cases.
     
-- Windows behavior is not a “just works” story. ([GitHub](https://github.com/nickstenning/honcho/issues/1?utm_source=chatgpt.com "Processes not always killed on exit · Issue #1"))
+- Windows behavior is not a “just works” story. ([GitHub](https://github.com/nickstenning/honcho/issues/1 "Processes not always killed on exit · Issue #1"))
     
 
 # 9. Strengths and Weaknesses
@@ -273,7 +273,7 @@ Operational considerations:
 
 - **Scalability:** Good enough for small-to-medium process sets, not cluster scale.
     
-- **Maintainability:** Small, modular Python codebase with clear separation between CLI, manager, printer, and process logic. ([GitHub](https://github.com/nickstenning/honcho/blob/master/honcho/command.py?utm_source=chatgpt.com "command.py - nickstenning/honcho"))
+- **Maintainability:** Small, modular Python codebase with clear separation between CLI, manager, printer, and process logic. ([GitHub](https://github.com/nickstenning/honcho/blob/master/honcho/command.py "command.py - nickstenning/honcho"))
     
 - **Extensibility:** Exporter entry points suggest a deliberate plugin path. ([GitHub](https://github.com/nickstenning/honcho/blob/main/pyproject.toml "honcho/pyproject.toml at main · nickstenning/honcho · GitHub"))
     
@@ -284,13 +284,13 @@ Operational considerations:
 
 **Weaknesses**
 
-- **Risks:** Signal handling and cleanup edge cases are real. Issues around process termination and broken pipes are active. ([GitHub](https://github.com/nickstenning/honcho/issues/1?utm_source=chatgpt.com "Processes not always killed on exit · Issue #1"))
+- **Risks:** Signal handling and cleanup edge cases are real. Issues around process termination and broken pipes are active. ([GitHub](https://github.com/nickstenning/honcho/issues/1 "Processes not always killed on exit · Issue #1"))
     
 - **Limitations:** Not a general-purpose orchestrator; no scheduling, distributed control, or resource management layer.
     
 - **Missing features:** Limited observability, no metrics/tracing stack, no policy engine.
     
-- **Technical debt indicators:** Long-lived open issues, especially around Windows, process cleanup, and CLI edge cases. ([GitHub](https://github.com/nickstenning/honcho/issues?utm_source=chatgpt.com "Issues · nickstenning/honcho"))
+- **Technical debt indicators:** Long-lived open issues, especially around Windows, process cleanup, and CLI edge cases. ([GitHub](https://github.com/nickstenning/honcho/issues "Issues · nickstenning/honcho"))
     
 
 # 10. Enterprise Evaluation
@@ -299,7 +299,7 @@ Operational considerations:
 Solid for its intended niche, but narrow and not fully hardened for every runtime edge case. ([GitHub](https://github.com/nickstenning/honcho/blob/main/README.rst "honcho/README.rst at main · nickstenning/honcho · GitHub"))
 
 **Security: 4/10**  
-No obvious security framework, secret handling, or isolation model beyond inheriting OS process boundaries. ([GitHub](https://github.com/nickstenning/honcho/blob/master/honcho/command.py?utm_source=chatgpt.com "command.py - nickstenning/honcho"))
+No obvious security framework, secret handling, or isolation model beyond inheriting OS process boundaries. ([GitHub](https://github.com/nickstenning/honcho/blob/master/honcho/command.py "command.py - nickstenning/honcho"))
 
 **Scalability: 4/10**  
 Fine for local process orchestration; not intended for distributed scaling. ([GitHub](https://github.com/nickstenning/honcho/blob/main/honcho/manager.py "honcho/honcho/manager.py at main · nickstenning/honcho · GitHub"))
@@ -311,7 +311,7 @@ Good terminal output formatting, but no modern telemetry stack. ([GitHub](https:
 Clear README and usage example, but documentation depth is limited and the repo has old issues reflecting edge-case confusion. ([GitHub](https://github.com/nickstenning/honcho/blob/main/README.rst "honcho/README.rst at main · nickstenning/honcho · GitHub"))
 
 **Community support: 6/10**  
-There is an active issue tracker and recent release activity, but the project is relatively small. ([GitHub](https://github.com/nickstenning/honcho/issues?utm_source=chatgpt.com "Issues · nickstenning/honcho"))
+There is an active issue tracker and recent release activity, but the project is relatively small. ([GitHub](https://github.com/nickstenning/honcho/issues "Issues · nickstenning/honcho"))
 
 **Maintainability: 7/10**  
 Small codebase, understandable structure, but some process-handling complexity and legacy platform concerns. ([GitHub](https://github.com/nickstenning/honcho/blob/main/honcho/manager.py "honcho/honcho/manager.py at main · nickstenning/honcho · GitHub"))
@@ -360,7 +360,7 @@ Important patterns:
     
 - **Separated concerns** between parsing, supervision, printing, and process execution
     
-- **Plugin-like extensibility** via exporter entry points. ([GitHub](https://github.com/nickstenning/honcho/blob/master/honcho/command.py?utm_source=chatgpt.com "command.py - nickstenning/honcho"))
+- **Plugin-like extensibility** via exporter entry points. ([GitHub](https://github.com/nickstenning/honcho/blob/master/honcho/command.py "command.py - nickstenning/honcho"))
     
 
 Lessons worth copying:
@@ -462,11 +462,11 @@ Honcho is a lightweight Python process manager for **Procfile-based applications
 
 - Strong fit for local development and Procfile-based workflows. ([GitHub](https://github.com/nickstenning/honcho/blob/main/README.rst "honcho/README.rst at main · nickstenning/honcho · GitHub"))
     
-- Small, understandable codebase with clean module boundaries. ([GitHub](https://github.com/nickstenning/honcho/blob/master/honcho/command.py?utm_source=chatgpt.com "command.py - nickstenning/honcho"))
+- Small, understandable codebase with clean module boundaries. ([GitHub](https://github.com/nickstenning/honcho/blob/master/honcho/command.py "command.py - nickstenning/honcho"))
     
 - Exporter extension point is a real design strength. ([GitHub](https://github.com/nickstenning/honcho/blob/main/pyproject.toml "honcho/pyproject.toml at main · nickstenning/honcho · GitHub"))
     
-- Cross-platform edge cases, especially on Windows and during shutdown, are real. ([GitHub](https://github.com/nickstenning/honcho/issues/28?utm_source=chatgpt.com "Support Windows · Issue #28 · nickstenning/honcho"))
+- Cross-platform edge cases, especially on Windows and during shutdown, are real. ([GitHub](https://github.com/nickstenning/honcho/issues/28 "Support Windows · Issue #28 · nickstenning/honcho"))
     
 
 ## Recommended adoption scenarios

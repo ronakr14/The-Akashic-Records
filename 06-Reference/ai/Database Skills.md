@@ -79,11 +79,11 @@ A user asks an AI assistant to help with a database task. The assistant detects 
     
 - **skills/mysql/SKILL.md**: detailed operating guidance for MySQL. ([GitHub](https://github.com/planetscale/database-skills/blob/main/skills/mysql/SKILL.md "database-skills/skills/mysql/SKILL.md at main · planetscale/database-skills · GitHub"))
     
-- **skills/postgres/SKILL.md**: PostgreSQL best practices for PlanetScale Postgres. ([GitHub](https://github.com/planetscale/database-skills?utm_source=chatgpt.com "planetscale/database-skills: Skills for AI agents working ..."))
+- **skills/postgres/SKILL.md**: PostgreSQL best practices for PlanetScale Postgres. ([GitHub](https://github.com/planetscale/database-skills "planetscale/database-skills: Skills for AI agents working ..."))
     
-- **skills/vitess/SKILL.md**: Vitess guidance for sharding and scale-out MySQL. ([GitHub](https://github.com/planetscale/database-skills?utm_source=chatgpt.com "planetscale/database-skills: Skills for AI agents working ..."))
+- **skills/vitess/SKILL.md**: Vitess guidance for sharding and scale-out MySQL. ([GitHub](https://github.com/planetscale/database-skills "planetscale/database-skills: Skills for AI agents working ..."))
     
-- **skills/neki/SKILL.md**: guidance for Neki, PlanetScale’s sharded Postgres offering. ([GitHub](https://github.com/planetscale/database-skills?utm_source=chatgpt.com "planetscale/database-skills: Skills for AI agents working ..."))
+- **skills/neki/SKILL.md**: guidance for Neki, PlanetScale’s sharded Postgres offering. ([GitHub](https://github.com/planetscale/database-skills "planetscale/database-skills: Skills for AI agents working ..."))
     
 - **references/**: supporting documents loaded as needed. ([GitHub](https://github.com/planetscale/database-skills "GitHub - planetscale/database-skills: Skills for AI agents working with databases · GitHub"))
     
@@ -99,7 +99,7 @@ The MySQL skill explicitly recommends defining workload constraints, reading onl
     
 - **skills.sh** installer via `npx skills add planetscale/database-skills`. ([GitHub](https://github.com/planetscale/database-skills "GitHub - planetscale/database-skills: Skills for AI agents working with databases · GitHub"))
     
-- Likely compatible with skill-aware AI runtimes that support folder-based skills. Claude’s skill model is a close conceptual match: dynamic loading of instructions and resources for specialized tasks. ([Claude Help Center](https://support.claude.com/en/articles/12512176-what-are-skills?utm_source=chatgpt.com "What are skills? | Claude Help Center"))
+- Likely compatible with skill-aware AI runtimes that support folder-based skills. Claude’s skill model is a close conceptual match: dynamic loading of instructions and resources for specialized tasks. ([Claude Help Center](https://support.claude.com/en/articles/12512176-what-are-skills "What are skills? | Claude Help Center"))
     
 
 ## 4. Why This Project Exists
@@ -122,7 +122,7 @@ Database mistakes are expensive: bad indexing, poor schema design, unsafe migrat
     
 - More consistent than ad hoc prompting.
     
-- Easier to standardize across a team than “everyone prompt it their own way.” ([Claude Help Center](https://support.claude.com/en/articles/12512176-what-are-skills?utm_source=chatgpt.com "What are skills? | Claude Help Center"))
+- Easier to standardize across a team than “everyone prompt it their own way.” ([Claude Help Center](https://support.claude.com/en/articles/12512176-what-are-skills "What are skills? | Claude Help Center"))
     
 
 **Unique differentiators**  
@@ -176,9 +176,9 @@ Complexity: **Medium to High**. ([GitHub](https://github.com/planetscale/databas
 
 **DevOps** — Relevant for migration safety, deployment checks, replication, and operational troubleshooting. ([GitHub](https://github.com/planetscale/database-skills/blob/main/skills/mysql/SKILL.md "database-skills/skills/mysql/SKILL.md at main · planetscale/database-skills · GitHub"))
 
-**Platform Engineering** — Strong fit. This is exactly the kind of repeatable domain knowledge platform teams want to standardize. ([Claude Help Center](https://support.claude.com/en/articles/12512176-what-are-skills?utm_source=chatgpt.com "What are skills? | Claude Help Center"))
+**Platform Engineering** — Strong fit. This is exactly the kind of repeatable domain knowledge platform teams want to standardize. ([Claude Help Center](https://support.claude.com/en/articles/12512176-what-are-skills "What are skills? | Claude Help Center"))
 
-**Cloud Engineering** — Relevant through managed database deployment, HA, and scaling patterns on PlanetScale. ([PlanetScale](https://planetscale.com/docs?utm_source=chatgpt.com "PlanetScale documentation"))
+**Cloud Engineering** — Relevant through managed database deployment, HA, and scaling patterns on PlanetScale. ([PlanetScale](https://planetscale.com/docs "PlanetScale documentation"))
 
 **Security** — Indirect but useful. Safer migrations and operational guidance reduce accidental exposure and blast radius, though security-specific guidance is not the repo’s focus. ([GitHub](https://github.com/planetscale/database-skills/blob/main/skills/mysql/SKILL.md "database-skills/skills/mysql/SKILL.md at main · planetscale/database-skills · GitHub"))
 
@@ -186,7 +186,7 @@ Complexity: **Medium to High**. ([GitHub](https://github.com/planetscale/databas
 
 **Product Engineering** — Very relevant. App teams shipping features on relational stores need quick, correct guidance. ([GitHub](https://github.com/planetscale/database-skills/blob/main/skills/mysql/SKILL.md "database-skills/skills/mysql/SKILL.md at main · planetscale/database-skills · GitHub"))
 
-**Enterprise Applications** — Strong fit, especially where reliability, scaling, and low-risk rollout matter. PlanetScale itself emphasizes HA, failovers, and enterprise deployment options. ([PlanetScale](https://planetscale.com/docs?utm_source=chatgpt.com "PlanetScale documentation"))
+**Enterprise Applications** — Strong fit, especially where reliability, scaling, and low-risk rollout matter. PlanetScale itself emphasizes HA, failovers, and enterprise deployment options. ([PlanetScale](https://planetscale.com/docs "PlanetScale documentation"))
 
 ## 7. Key Components Analysis
 
@@ -204,12 +204,12 @@ Interactions: pulls in reference docs per subsection. ([GitHub](https://github.c
 **`skills/postgres/SKILL.md`**  
 Purpose: PlanetScale Postgres best practices.  
 Responsibilities: guide schema design, indexing, MVCC/VACUUM, WAL tuning, replication, pooling.  
-Interactions: references PlanetScale Postgres docs and product concepts. ([GitHub](https://github.com/planetscale/database-skills?utm_source=chatgpt.com "planetscale/database-skills: Skills for AI agents working ..."))
+Interactions: references PlanetScale Postgres docs and product concepts. ([GitHub](https://github.com/planetscale/database-skills "planetscale/database-skills: Skills for AI agents working ..."))
 
 **`skills/vitess/SKILL.md`**  
 Purpose: Vitess operating guidance.  
 Responsibilities: sharding, VSchema configuration, keyspaces, online DDL, VReplication, MySQL-compatible scale-out.  
-Interactions: aligns with Vitess architecture and PlanetScale’s Vitess offering. ([GitHub](https://github.com/planetscale/database-skills?utm_source=chatgpt.com "planetscale/database-skills: Skills for AI agents working ..."))
+Interactions: aligns with Vitess architecture and PlanetScale’s Vitess offering. ([GitHub](https://github.com/planetscale/database-skills "planetscale/database-skills: Skills for AI agents working ..."))
 
 **`skills/neki/SKILL.md`**  
 Purpose: guidance for Neki, sharded Postgres.  
@@ -254,20 +254,20 @@ Low for basic use, moderate for teams who want to author their own skills. The s
 - Add engine-specific nuance, not just generic DB advice.
     
 - Review skills periodically as product behavior changes.  
-    This is especially important for cloud database products, which evolve fast. ([PlanetScale](https://planetscale.com/docs?utm_source=chatgpt.com "PlanetScale documentation"))
+    This is especially important for cloud database products, which evolve fast. ([PlanetScale](https://planetscale.com/docs "PlanetScale documentation"))
     
 
 ## 9. Strengths and Weaknesses
 
 **Strengths**
 
-- **Scalability:** good for scaling expert guidance across many chats and users. ([Claude Help Center](https://support.claude.com/en/articles/12512176-what-are-skills?utm_source=chatgpt.com "What are skills? | Claude Help Center"))
+- **Scalability:** good for scaling expert guidance across many chats and users. ([Claude Help Center](https://support.claude.com/en/articles/12512176-what-are-skills "What are skills? | Claude Help Center"))
     
 - **Maintainability:** small, modular, folder-based structure. ([GitHub](https://github.com/planetscale/database-skills "GitHub - planetscale/database-skills: Skills for AI agents working with databases · GitHub"))
     
 - **Extensibility:** adding a new skill is straightforward. ([GitHub](https://github.com/planetscale/database-skills "GitHub - planetscale/database-skills: Skills for AI agents working with databases · GitHub"))
     
-- **Performance:** reduces unnecessary context load by loading only what is relevant. ([Claude Help Center](https://support.claude.com/en/articles/12512176-what-are-skills?utm_source=chatgpt.com "What are skills? | Claude Help Center"))
+- **Performance:** reduces unnecessary context load by loading only what is relevant. ([Claude Help Center](https://support.claude.com/en/articles/12512176-what-are-skills "What are skills? | Claude Help Center"))
     
 - **Developer Experience:** clear install path and obvious skill boundaries. ([GitHub](https://github.com/planetscale/database-skills "GitHub - planetscale/database-skills: Skills for AI agents working with databases · GitHub"))
     
@@ -292,7 +292,7 @@ Good as a governed knowledge package, not a runtime system. The repo is clean an
 No obvious attack surface in the repo itself, but security depth is not a primary theme. The repo is about advice, not controls. ([GitHub](https://github.com/planetscale/database-skills "GitHub - planetscale/database-skills: Skills for AI agents working with databases · GitHub"))
 
 **Scalability: 8/10**  
-The modular skill model scales well across teams and tasks. ([Claude Help Center](https://support.claude.com/en/articles/12512176-what-are-skills?utm_source=chatgpt.com "What are skills? | Claude Help Center"))
+The modular skill model scales well across teams and tasks. ([Claude Help Center](https://support.claude.com/en/articles/12512176-what-are-skills "What are skills? | Claude Help Center"))
 
 **Observability: 4/10**  
 No explicit telemetry, eval harness, or skill performance metrics are visible from the repository page. ([GitHub](https://github.com/planetscale/database-skills "GitHub - planetscale/database-skills: Skills for AI agents working with databases · GitHub"))
@@ -369,7 +369,7 @@ Simple structure, small surface area, easy to extend. The only real maintenance 
     
 - AI quality improves when the prompt space is constrained.
     
-- Operational guidance is more valuable when it is specific and measurable. ([Claude Help Center](https://support.claude.com/en/articles/12512176-what-are-skills?utm_source=chatgpt.com "What are skills? | Claude Help Center"))
+- Operational guidance is more valuable when it is specific and measurable. ([Claude Help Center](https://support.claude.com/en/articles/12512176-what-are-skills "What are skills? | Claude Help Center"))
     
 
 **Best practices worth adopting**
@@ -460,7 +460,7 @@ Simple structure, small surface area, easy to extend. The only real maintenance 
     
 9. How would you manage references that conflict with upstream vendor docs?
     
-10. How would you use this pattern in a regulated enterprise environment? ([Claude Help Center](https://support.claude.com/en/articles/12512176-what-are-skills?utm_source=chatgpt.com "What are skills? | Claude Help Center"))
+10. How would you use this pattern in a regulated enterprise environment? ([Claude Help Center](https://support.claude.com/en/articles/12512176-what-are-skills "What are skills? | Claude Help Center"))
     
 
 ## 14. Handoff Summary

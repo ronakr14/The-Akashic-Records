@@ -51,7 +51,7 @@ The repo supports:
     
 
 **Key technologies, frameworks, and languages.**  
-From the repo guidance: Backend is **Python 3.13**, **FastAPI**, **SQLAlchemy**, **Alembic**, **Celery**; frontend is **Next.js 15+**, **React 18**, **TypeScript**, **Tailwind CSS**; data layer includes **PostgreSQL**, **Redis**, **OpenSearch**, and **MinIO**; AI stack includes **LiteLLM**, LangChain, multiple embedding models, and support for major LLM providers. ([GitHub](https://github.com/onyx-dot-app/onyx/blob/main/AGENTS.md?utm_source=chatgpt.com "onyx/AGENTS.md at main · onyx-dot-app/onyx"))
+From the repo guidance: Backend is **Python 3.13**, **FastAPI**, **SQLAlchemy**, **Alembic**, **Celery**; frontend is **Next.js 15+**, **React 18**, **TypeScript**, **Tailwind CSS**; data layer includes **PostgreSQL**, **Redis**, **OpenSearch**, and **MinIO**; AI stack includes **LiteLLM**, LangChain, multiple embedding models, and support for major LLM providers. ([GitHub](https://github.com/onyx-dot-app/onyx/blob/main/AGENTS.md "onyx/AGENTS.md at main · onyx-dot-app/onyx"))
 
 **High-level architecture inferred from the codebase.**  
 The architecture is a classic distributed SaaS/enterprise AI stack:
@@ -231,7 +231,7 @@ The biggest differentiators are:
 
 **Analytics:** Relevant for knowledge discovery and reporting synthesis, especially when analysts need context from scattered docs and internal discussions. ([GitHub](https://github.com/onyx-dot-app/onyx/blob/main/web/src/app/craft/README.md "onyx/web/src/app/craft/README.md at main · onyx-dot-app/onyx · GitHub"))
 
-**AI/ML:** Very relevant. It supports multiple LLM providers, embeddings, reranking, and agent workflows. ([GitHub](https://github.com/onyx-dot-app/onyx/blob/main/AGENTS.md?utm_source=chatgpt.com "onyx/AGENTS.md at main · onyx-dot-app/onyx"))
+**AI/ML:** Very relevant. It supports multiple LLM providers, embeddings, reranking, and agent workflows. ([GitHub](https://github.com/onyx-dot-app/onyx/blob/main/AGENTS.md "onyx/AGENTS.md at main · onyx-dot-app/onyx"))
 
 **DevOps:** Relevant for operational runbooks, incident knowledge, and AI-assisted internal assistance. Also deployment-heavy, which matters operationally. ([GitHub](https://github.com/onyx-dot-app/onyx "GitHub - onyx-dot-app/onyx: Open Source AI Platform - AI Chat with advanced features that works with every LLM · GitHub"))
 
@@ -252,22 +252,22 @@ The biggest differentiators are:
 I could infer the following major areas from the repository guidance and docs:
 
 **`backend/onyx/server`**  
-API/router layer. Likely hosts FastAPI endpoints for chat, search, connectors, personas, features, and admin operations. It is the edge between frontend and backend services. ([GitHub](https://github.com/onyx-dot-app/onyx/blob/main/AGENTS.md?utm_source=chatgpt.com "onyx/AGENTS.md at main · onyx-dot-app/onyx"))
+API/router layer. Likely hosts FastAPI endpoints for chat, search, connectors, personas, features, and admin operations. It is the edge between frontend and backend services. ([GitHub](https://github.com/onyx-dot-app/onyx/blob/main/AGENTS.md "onyx/AGENTS.md at main · onyx-dot-app/onyx"))
 
 **`backend/onyx/connectors`**  
 Connector integration code. Responsible for syncing content from third-party systems and feeding it into the processing pipeline. ([GitHub](https://github.com/onyx-dot-app/onyx/blob/main/AGENTS.md "onyx/AGENTS.md at main · onyx-dot-app/onyx · GitHub"))
 
 **`backend/onyx/document_index`**  
-The OpenSearch-backed retrieval/indexing abstraction. This is the retrieval core of the platform. ([GitHub](https://github.com/onyx-dot-app/onyx/blob/main/AGENTS.md?utm_source=chatgpt.com "onyx/AGENTS.md at main · onyx-dot-app/onyx"))
+The OpenSearch-backed retrieval/indexing abstraction. This is the retrieval core of the platform. ([GitHub](https://github.com/onyx-dot-app/onyx/blob/main/AGENTS.md "onyx/AGENTS.md at main · onyx-dot-app/onyx"))
 
 **`backend/onyx/db`**  
-Persistence and domain models. The repo explicitly says DB operations belong here, which is a strong maintainability signal. ([GitHub](https://github.com/onyx-dot-app/onyx/blob/main/AGENTS.md?utm_source=chatgpt.com "onyx/AGENTS.md at main · onyx-dot-app/onyx"))
+Persistence and domain models. The repo explicitly says DB operations belong here, which is a strong maintainability signal. ([GitHub](https://github.com/onyx-dot-app/onyx/blob/main/AGENTS.md "onyx/AGENTS.md at main · onyx-dot-app/onyx"))
 
 **`backend/onyx/chat`**  
-Chat orchestration and LLM interaction layer. This is likely where retrieval, prompt assembly, and provider calls converge. ([GitHub](https://github.com/onyx-dot-app/onyx/blob/main/AGENTS.md?utm_source=chatgpt.com "onyx/AGENTS.md at main · onyx-dot-app/onyx"))
+Chat orchestration and LLM interaction layer. This is likely where retrieval, prompt assembly, and provider calls converge. ([GitHub](https://github.com/onyx-dot-app/onyx/blob/main/AGENTS.md "onyx/AGENTS.md at main · onyx-dot-app/onyx"))
 
 **`backend/onyx/llm`**  
-Model/provider abstractions, tracing, and provider-specific integrations. The repo emphasizes tagged generation spans for every LLM-related call. ([GitHub](https://github.com/onyx-dot-app/onyx/blob/main/AGENTS.md?utm_source=chatgpt.com "onyx/AGENTS.md at main · onyx-dot-app/onyx"))
+Model/provider abstractions, tracing, and provider-specific integrations. The repo emphasizes tagged generation spans for every LLM-related call. ([GitHub](https://github.com/onyx-dot-app/onyx/blob/main/AGENTS.md "onyx/AGENTS.md at main · onyx-dot-app/onyx"))
 
 **`web/src/app/craft`**  
 Craft UI and workflow entry point. The doc shows it provides user-facing artifact generation from company knowledge. ([GitHub](https://github.com/onyx-dot-app/onyx/blob/main/web/src/app/craft/README.md "onyx/web/src/app/craft/README.md at main · onyx-dot-app/onyx · GitHub"))
@@ -278,7 +278,7 @@ Craft-specific operational design docs. These are unusually detailed and indicat
 # 8. Setup and Adoption
 
 **Installation requirements.**  
-The repo’s guidance says Python deps are managed with `uv`, and if `.venv` does not exist you should create it with `uv sync --frozen`. It also assumes `.env` contains an OpenAI key for tests. ([GitHub](https://github.com/onyx-dot-app/onyx/blob/main/AGENTS.md?utm_source=chatgpt.com "onyx/AGENTS.md at main · onyx-dot-app/onyx"))
+The repo’s guidance says Python deps are managed with `uv`, and if `.venv` does not exist you should create it with `uv sync --frozen`. It also assumes `.env` contains an OpenAI key for tests. ([GitHub](https://github.com/onyx-dot-app/onyx/blob/main/AGENTS.md "onyx/AGENTS.md at main · onyx-dot-app/onyx"))
 
 **Deployment options.**  
 Docker, Kubernetes, Helm/Terraform, plus major cloud provider guides. Onyx also has standard and lite deployment options. ([GitHub](https://github.com/onyx-dot-app/onyx "GitHub - onyx-dot-app/onyx: Open Source AI Platform - AI Chat with advanced features that works with every LLM · GitHub"))
@@ -298,7 +298,7 @@ You need to manage background workers, queue health, connector freshness, model 
 
 - **Scalability:** worker separation, Redis coordination, OpenSearch indexing, and specialized queues all point toward scalable async ingestion. ([GitHub](https://github.com/onyx-dot-app/onyx/blob/main/AGENTS.md "onyx/AGENTS.md at main · onyx-dot-app/onyx · GitHub"))
     
-- **Maintainability:** strong directory boundaries and explicit engineering guidance help. ([GitHub](https://github.com/onyx-dot-app/onyx/blob/main/AGENTS.md?utm_source=chatgpt.com "onyx/AGENTS.md at main · onyx-dot-app/onyx"))
+- **Maintainability:** strong directory boundaries and explicit engineering guidance help. ([GitHub](https://github.com/onyx-dot-app/onyx/blob/main/AGENTS.md "onyx/AGENTS.md at main · onyx-dot-app/onyx"))
     
 - **Extensibility:** connector architecture, provider abstraction, and policy layer make the system adaptable. ([GitHub](https://github.com/onyx-dot-app/onyx/blob/main/docs/craft/features/external-apps/action-policies.md "onyx/docs/craft/features/external-apps/action-policies.md at main · onyx-dot-app/onyx · GitHub"))
     
@@ -332,9 +332,9 @@ Scores are my judgment based on the architecture and docs.
     
 - **Documentation quality: 9/10** — unusually detailed, especially the operational docs. ([GitHub](https://github.com/onyx-dot-app/onyx/blob/main/web/src/app/craft/README.md "onyx/web/src/app/craft/README.md at main · onyx-dot-app/onyx · GitHub"))
     
-- **Community support: 8/10** — large public repo, active issues/discussions, visible adoption. ([GitHub](https://github.com/onyx-dot-app/onyx/discussions?utm_source=chatgpt.com "Discussions - onyx-dot-app onyx"))
+- **Community support: 8/10** — large public repo, active issues/discussions, visible adoption. ([GitHub](https://github.com/onyx-dot-app/onyx/discussions "Discussions - onyx-dot-app onyx"))
     
-- **Maintainability: 8/10** — explicit guidance, clear layering, and typed code expectations help a lot. ([GitHub](https://github.com/onyx-dot-app/onyx/blob/main/AGENTS.md?utm_source=chatgpt.com "onyx/AGENTS.md at main · onyx-dot-app/onyx"))
+- **Maintainability: 8/10** — explicit guidance, clear layering, and typed code expectations help a lot. ([GitHub](https://github.com/onyx-dot-app/onyx/blob/main/AGENTS.md "onyx/AGENTS.md at main · onyx-dot-app/onyx"))
     
 
 # 11. Comparison with Alternatives
@@ -391,7 +391,7 @@ Likely alternatives include **Glean**, **Guru**, **Microsoft Copilot for enterpr
     
 - Sandboxed agent execution
     
-- Clear operational documentation ([GitHub](https://github.com/onyx-dot-app/onyx/blob/main/AGENTS.md?utm_source=chatgpt.com "onyx/AGENTS.md at main · onyx-dot-app/onyx"))
+- Clear operational documentation ([GitHub](https://github.com/onyx-dot-app/onyx/blob/main/AGENTS.md "onyx/AGENTS.md at main · onyx-dot-app/onyx"))
     
 
 **Anti-patterns, if any**

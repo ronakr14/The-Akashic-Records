@@ -206,7 +206,7 @@ Interaction: feeds discovery and triage. ([GitHub](https://github.com/anthropics
 
 # 8. Setup and Adoption
 
-Installation requirements appear to include Docker, a Python environment, sandbox initialization, and Claude/API configuration. A related issue on the repo notes that prerequisites are not yet summarized cleanly in the top-level README, which is a real adoption friction point. ([GitHub](https://github.com/anthropics/defending-code-reference-harness/issues/7?utm_source=chatgpt.com "Prerequisites are not summarized in the README · Issue #7"))
+Installation requirements appear to include Docker, a Python environment, sandbox initialization, and Claude/API configuration. A related issue on the repo notes that prerequisites are not yet summarized cleanly in the top-level README, which is a real adoption friction point. ([GitHub](https://github.com/anthropics/defending-code-reference-harness/issues/7 "Prerequisites are not summarized in the README · Issue #7"))
 
 Deployment options:
 
@@ -257,7 +257,7 @@ Operational considerations:
     
 - **Limitations**: strongest story is C/C++ memory vulnerability discovery, not all languages and bug classes. ([GitHub](https://github.com/anthropics/defending-code-reference-harness/blob/main/docs/pipeline.md "defending-code-reference-harness/docs/pipeline.md at main · anthropics/defending-code-reference-harness · GitHub"))
     
-- **Missing features**: top-level onboarding appears incomplete; even an issue calls out missing prerequisite documentation. ([GitHub](https://github.com/anthropics/defending-code-reference-harness/issues/7?utm_source=chatgpt.com "Prerequisites are not summarized in the README · Issue #7"))
+- **Missing features**: top-level onboarding appears incomplete; even an issue calls out missing prerequisite documentation. ([GitHub](https://github.com/anthropics/defending-code-reference-harness/issues/7 "Prerequisites are not summarized in the README · Issue #7"))
     
 - **Technical debt indicators**: operational complexity is high enough that careful tuning is mandatory. ([GitHub](https://github.com/anthropics/defending-code-reference-harness/blob/main/docs/troubleshooting.md "defending-code-reference-harness/docs/troubleshooting.md at main · anthropics/defending-code-reference-harness · GitHub"))
     
@@ -280,7 +280,7 @@ There is operational guidance and run recovery, but I did not see signs of a mat
 Substantial and thoughtful, though the repo still has rough edges in top-level onboarding. ([GitHub](https://github.com/anthropics/defending-code-reference-harness/blob/main/docs/blog-post.md "defending-code-reference-harness/docs/blog-post.md at main · anthropics/defending-code-reference-harness · GitHub"))
 
 **Community support: 6/10**  
-The repo has strong internal/official documentation, but it is still a focused reference project rather than a broad ecosystem product. ([GitHub](https://github.com/anthropics/defending-code-reference-harness?utm_source=chatgpt.com "anthropics/defending-code-reference-harness: Skills for ..."))
+The repo has strong internal/official documentation, but it is still a focused reference project rather than a broad ecosystem product. ([GitHub](https://github.com/anthropics/defending-code-reference-harness "anthropics/defending-code-reference-harness: Skills for ..."))
 
 **Maintainability: 7/10**  
 The staged workflow is sensible and modular, which usually ages better than a monolith. The downside is that the operational envelope is intricate. ([GitHub](https://github.com/anthropics/defending-code-reference-harness/blob/main/docs/blog-post.md "defending-code-reference-harness/docs/blog-post.md at main · anthropics/defending-code-reference-harness · GitHub"))

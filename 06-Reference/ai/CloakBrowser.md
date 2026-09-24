@@ -359,7 +359,7 @@ Simpler, more standard, huge ecosystems, lower operational complexity. But they 
 Usually easier to adopt, but more brittle and more likely to drift from the browser’s true behavior. CloakBrowser’s source-level patching is more invasive but more coherent. ([GitHub](https://github.com/CloakHQ/CloakBrowser "GitHub - CloakHQ/CloakBrowser: Stealth Chromium that passes every bot detection test. Drop-in Playwright replacement with source-level fingerprint patches. 30/30 tests passed. · GitHub"))
 
 **Commercial anti-detect browsers / profile managers**  
-Often provide richer profile management and enterprise controls. CloakBrowser is lighter-weight and developer-friendly, but you may need to pair it with a manager like CloakBrowser-Manager or similar tooling. ([GitHub](https://github.com/CloakHQ/CloakBrowser-Manager/blob/main/Dockerfile?utm_source=chatgpt.com "Dockerfile - CloakHQ/CloakBrowser-Manager"))
+Often provide richer profile management and enterprise controls. CloakBrowser is lighter-weight and developer-friendly, but you may need to pair it with a manager like CloakBrowser-Manager or similar tooling. ([GitHub](https://github.com/CloakHQ/CloakBrowser-Manager/blob/main/Dockerfile "Dockerfile - CloakHQ/CloakBrowser-Manager"))
 
 **Traditional headless Chrome in CI**  
 Cheaper and simpler, but poor against serious fingerprinting. Great for testing your own apps; weak for hostile public sites. ([GitHub](https://github.com/CloakHQ/CloakBrowser "GitHub - CloakHQ/CloakBrowser: Stealth Chromium that passes every bot detection test. Drop-in Playwright replacement with source-level fingerprint patches. 30/30 tests passed. · GitHub"))

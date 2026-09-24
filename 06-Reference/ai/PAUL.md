@@ -15,13 +15,13 @@ PAUL (Plan → Apply → Unify Loop) is an AI-assisted development framework for
 ## 1. Executive Summary
 
 **What is this project?**  
-PAUL is a command-driven AI workflow framework for Claude Code built around a strict **Plan → Apply → Unify** loop. It is positioned as a structured development system that turns AI-assisted work into a traceable, stateful process instead of a loose chat session. The repository describes it as “Structured AI-assisted development for Claude Code” and ships as an npm package named `paul-framework`. ([GitHub](https://github.com/ChristopherKahler/paul/blob/main/README.md?utm_source=chatgpt.com "README.md - ChristopherKahler/paul"))
+PAUL is a command-driven AI workflow framework for Claude Code built around a strict **Plan → Apply → Unify** loop. It is positioned as a structured development system that turns AI-assisted work into a traceable, stateful process instead of a loose chat session. The repository describes it as “Structured AI-assisted development for Claude Code” and ships as an npm package named `paul-framework`. ([GitHub](https://github.com/ChristopherKahler/paul/blob/main/README.md "README.md - ChristopherKahler/paul"))
 
 **What problem does it solve?**  
-It targets the classic failure modes of AI coding workflows: context rot, orphaned plans, missing verification, inconsistent execution, and lost decisions across sessions. The framework tries to make AI work more reliable by forcing explicit planning, execution qualification, and end-of-loop reconciliation. ([GitHub](https://github.com/ChristopherKahler/paul?utm_source=chatgpt.com "ChristopherKahler/paul: Plan-Apply-Unify Loop — ..."))
+It targets the classic failure modes of AI coding workflows: context rot, orphaned plans, missing verification, inconsistent execution, and lost decisions across sessions. The framework tries to make AI work more reliable by forcing explicit planning, execution qualification, and end-of-loop reconciliation. ([GitHub](https://github.com/ChristopherKahler/paul "ChristopherKahler/paul: Plan-Apply-Unify Loop — ..."))
 
 **Who is the target audience?**  
-Primary users are Claude Code users, especially builders who want structured AI-assisted development. The repo also claims applicability beyond software, including campaigns, workflows, and automations, but the implementation is clearly centered on developer workflows. ([GitHub](https://github.com/ChristopherKahler/paul?utm_source=chatgpt.com "ChristopherKahler/paul: Plan-Apply-Unify Loop — ..."))
+Primary users are Claude Code users, especially builders who want structured AI-assisted development. The repo also claims applicability beyond software, including campaigns, workflows, and automations, but the implementation is clearly centered on developer workflows. ([GitHub](https://github.com/ChristopherKahler/paul "ChristopherKahler/paul: Plan-Apply-Unify Loop — ..."))
 
 **Maturity level**  
 This looks like a **production-adjacent developer tool** rather than an enterprise platform. It has a published npm package, documented install flow, command set, and release tagging, which suggests real usage. But it is still a specialized workflow framework with limited visible community/process depth, so I would rate it as **mature open-source tooling / not enterprise-ready out of the box**. The repo shows 44 commits, one release, 1.1k stars, and 116 forks. ([GitHub](https://github.com/ChristopherKahler/paul "GitHub - ChristopherKahler/paul: Plan-Apply-Unify Loop — Structured AI-assisted development for Claude Code. Quality over speed-for-speed's-sake. · GitHub"))
@@ -31,7 +31,7 @@ This looks like a **production-adjacent developer tool** rather than an enterpri
 ## 2. Repository Overview
 
 **Main purpose**  
-The repo packages a CLI/installable command set for Claude Code that enforces a structured development lifecycle: initialize a project, create an executable plan, apply it with verification, and unify outcomes back into persistent state. ([GitHub](https://github.com/ChristopherKahler/paul?utm_source=chatgpt.com "ChristopherKahler/paul: Plan-Apply-Unify Loop — ..."))
+The repo packages a CLI/installable command set for Claude Code that enforces a structured development lifecycle: initialize a project, create an executable plan, apply it with verification, and unify outcomes back into persistent state. ([GitHub](https://github.com/ChristopherKahler/paul "ChristopherKahler/paul: Plan-Apply-Unify Loop — ..."))
 
 **Core features and capabilities**
 
@@ -54,7 +54,7 @@ The repo packages a CLI/installable command set for Claude Code that enforces a 
     
 - npm-distributed CLI package with `bin/install.js` as the entrypoint. ([GitHub](https://github.com/ChristopherKahler/paul/blob/main/package.json "paul/package.json at main · ChristopherKahler/paul · GitHub"))
     
-- Claude Code slash-command ecosystem, with project-local or global installation paths. ([GitHub](https://github.com/ChristopherKahler/paul?utm_source=chatgpt.com "ChristopherKahler/paul: Plan-Apply-Unify Loop — ..."))
+- Claude Code slash-command ecosystem, with project-local or global installation paths. ([GitHub](https://github.com/ChristopherKahler/paul "ChristopherKahler/paul: Plan-Apply-Unify Loop — ..."))
     
 
 **High-level architecture inferred from the codebase**  
@@ -84,7 +84,7 @@ You install PAUL, initialize a project, and then use it like a disciplined AI op
     
 - Verify each task against the spec.
     
-- Reconcile what actually happened and persist the result. ([GitHub](https://github.com/ChristopherKahler/paul?utm_source=chatgpt.com "ChristopherKahler/paul: Plan-Apply-Unify Loop — ..."))
+- Reconcile what actually happened and persist the result. ([GitHub](https://github.com/ChristopherKahler/paul "ChristopherKahler/paul: Plan-Apply-Unify Loop — ..."))
     
 
 **Major components/modules**
@@ -93,27 +93,27 @@ You install PAUL, initialize a project, and then use it like a disciplined AI op
     
 - **Commands**: exposed slash commands for project lifecycle and support operations. ([GitHub](https://github.com/ChristopherKahler/paul "GitHub - ChristopherKahler/paul: Plan-Apply-Unify Loop — Structured AI-assisted development for Claude Code. Quality over speed-for-speed's-sake. · GitHub"))
     
-- **Workflows**: markdown-based workflow definitions such as `src/workflows/apply-phase.md`, which define execution rules and checkpoint behavior. ([GitHub](https://github.com/ChristopherKahler/paul/blob/main/src/workflows/apply-phase.md?utm_source=chatgpt.com "paul/src/workflows/apply-phase.md at main"))
+- **Workflows**: markdown-based workflow definitions such as `src/workflows/apply-phase.md`, which define execution rules and checkpoint behavior. ([GitHub](https://github.com/ChristopherKahler/paul/blob/main/src/workflows/apply-phase.md "paul/src/workflows/apply-phase.md at main"))
     
 - **Project state files**: `.paul/STATE.md`, `.paul/PROJECT.md`, `.paul/ROADMAP.md`, `.paul/paul.toml`, `.paul/ledger.toml`, and milestone/summaries for durable memory. ([GitHub](https://github.com/ChristopherKahler/paul "GitHub - ChristopherKahler/paul: Plan-Apply-Unify Loop — Structured AI-assisted development for Claude Code. Quality over speed-for-speed's-sake. · GitHub"))
     
 
 **Data flow and execution flow**
 
-1. `npx paul-framework` installs the framework. ([GitHub](https://github.com/ChristopherKahler/paul?utm_source=chatgpt.com "ChristopherKahler/paul: Plan-Apply-Unify Loop — ..."))
+1. `npx paul-framework` installs the framework. ([GitHub](https://github.com/ChristopherKahler/paul "ChristopherKahler/paul: Plan-Apply-Unify Loop — ..."))
     
-2. `/paul:init` gathers project requirements into `.paul/PROJECT.md`. ([GitHub](https://github.com/ChristopherKahler/paul?utm_source=chatgpt.com "ChristopherKahler/paul: Plan-Apply-Unify Loop — ..."))
+2. `/paul:init` gathers project requirements into `.paul/PROJECT.md`. ([GitHub](https://github.com/ChristopherKahler/paul "ChristopherKahler/paul: Plan-Apply-Unify Loop — ..."))
     
 3. `/paul:plan` creates a task plan with acceptance criteria, boundaries, and verification steps. ([GitHub](https://github.com/ChristopherKahler/paul "GitHub - ChristopherKahler/paul: Plan-Apply-Unify Loop — Structured AI-assisted development for Claude Code. Quality over speed-for-speed's-sake. · GitHub"))
     
-4. `/paul:apply` executes tasks using an Execute → Qualify loop and records status. ([GitHub](https://github.com/ChristopherKahler/paul/blob/main/src/workflows/apply-phase.md?utm_source=chatgpt.com "paul/src/workflows/apply-phase.md at main"))
+4. `/paul:apply` executes tasks using an Execute → Qualify loop and records status. ([GitHub](https://github.com/ChristopherKahler/paul/blob/main/src/workflows/apply-phase.md "paul/src/workflows/apply-phase.md at main"))
     
 5. `/paul:unify` reconciles plan vs actual, updates summaries and state, and closes the loop. ([GitHub](https://github.com/ChristopherKahler/paul "GitHub - ChristopherKahler/paul: Plan-Apply-Unify Loop — Structured AI-assisted development for Claude Code. Quality over speed-for-speed's-sake. · GitHub"))
     
 
 **Integrations and dependencies**
 
-- Claude Code slash-command environment is the primary runtime dependency. ([GitHub](https://github.com/ChristopherKahler/paul?utm_source=chatgpt.com "ChristopherKahler/paul: Plan-Apply-Unify Loop — ..."))
+- Claude Code slash-command environment is the primary runtime dependency. ([GitHub](https://github.com/ChristopherKahler/paul "ChristopherKahler/paul: Plan-Apply-Unify Loop — ..."))
     
 - Optional **BASE v2** integration for knowledge-graph context, domain matching, and cost attribution. ([GitHub](https://github.com/ChristopherKahler/paul "GitHub - ChristopherKahler/paul: Plan-Apply-Unify Loop — Structured AI-assisted development for Claude Code. Quality over speed-for-speed's-sake. · GitHub"))
     
@@ -125,7 +125,7 @@ You install PAUL, initialize a project, and then use it like a disciplined AI op
 ## 4. Why This Project Exists
 
 **Business problem**  
-It exists to make AI-assisted work more predictable, auditable, and less wasteful. The pitch is basically: stop letting the model freestyle its way into half-finished work and hidden drift. ([GitHub](https://github.com/ChristopherKahler/paul?utm_source=chatgpt.com "ChristopherKahler/paul: Plan-Apply-Unify Loop — ..."))
+It exists to make AI-assisted work more predictable, auditable, and less wasteful. The pitch is basically: stop letting the model freestyle its way into half-finished work and hidden drift. ([GitHub](https://github.com/ChristopherKahler/paul "ChristopherKahler/paul: Plan-Apply-Unify Loop — ..."))
 
 **Technical challenges it solves**
 
@@ -183,7 +183,7 @@ Complexity: **Low to Medium**. ([GitHub](https://github.com/ChristopherKahler/pa
 Description: Apply the same plan/apply/unify discipline to campaigns, workflows, or automations.  
 Scenario: Marketing launch planning with defined deliverables and checkpoints.  
 Benefits: Clearer execution, better closure, fewer loose ends.  
-Complexity: **Medium**. ([GitHub](https://github.com/ChristopherKahler/paul?utm_source=chatgpt.com "ChristopherKahler/paul: Plan-Apply-Unify Loop — ..."))
+Complexity: **Medium**. ([GitHub](https://github.com/ChristopherKahler/paul "ChristopherKahler/paul: Plan-Apply-Unify Loop — ..."))
 
 **4) AI workflow governance**  
 Description: Use it as a guardrail layer for agentic coding.  
@@ -199,13 +199,13 @@ Complexity: **High** if adapted into an org-wide standard. ([GitHub](https://git
 Relevant as a workflow discipline layer for ETL/ELT tasks, especially where specs, verification, and handoffs matter. It is not a data platform itself. ([GitHub](https://github.com/ChristopherKahler/paul "GitHub - ChristopherKahler/paul: Plan-Apply-Unify Loop — Structured AI-assisted development for Claude Code. Quality over speed-for-speed's-sake. · GitHub"))
 
 **Analytics**  
-Useful for structured analytics requests, metric definition, and reproducible analysis plans. Mostly workflow/process value, not analytical engine value. ([GitHub](https://github.com/ChristopherKahler/paul?utm_source=chatgpt.com "ChristopherKahler/paul: Plan-Apply-Unify Loop — ..."))
+Useful for structured analytics requests, metric definition, and reproducible analysis plans. Mostly workflow/process value, not analytical engine value. ([GitHub](https://github.com/ChristopherKahler/paul "ChristopherKahler/paul: Plan-Apply-Unify Loop — ..."))
 
 **AI/ML**  
-Highly relevant for AI engineering workflows: prompt/spec discipline, agent orchestration, and task qualification. The repo is explicitly AI-assisted development focused. ([GitHub](https://github.com/ChristopherKahler/paul/blob/main/README.md?utm_source=chatgpt.com "README.md - ChristopherKahler/paul"))
+Highly relevant for AI engineering workflows: prompt/spec discipline, agent orchestration, and task qualification. The repo is explicitly AI-assisted development focused. ([GitHub](https://github.com/ChristopherKahler/paul/blob/main/README.md "README.md - ChristopherKahler/paul"))
 
 **DevOps**  
-Useful for planning and executing operational changes with explicit guardrails and verification. Not a replacement for CI/CD tooling. ([GitHub](https://github.com/ChristopherKahler/paul/blob/main/src/workflows/apply-phase.md?utm_source=chatgpt.com "paul/src/workflows/apply-phase.md at main"))
+Useful for planning and executing operational changes with explicit guardrails and verification. Not a replacement for CI/CD tooling. ([GitHub](https://github.com/ChristopherKahler/paul/blob/main/src/workflows/apply-phase.md "paul/src/workflows/apply-phase.md at main"))
 
 **Platform Engineering**  
 Relevant as a standardization layer for how platform work gets planned and closed. Helps make AI-assisted platform tasks less chaotic. ([GitHub](https://github.com/ChristopherKahler/paul "GitHub - ChristopherKahler/paul: Plan-Apply-Unify Loop — Structured AI-assisted development for Claude Code. Quality over speed-for-speed's-sake. · GitHub"))
@@ -244,7 +244,7 @@ Interaction: orchestrates reading and writing `.paul/` state. ([GitHub](https://
 **`src/workflows`**  
 Purpose: workflow rules and execution semantics.  
 Responsibility: define how phases run and how checkpoints behave.  
-Important example: `src/workflows/apply-phase.md` describes task execution, qualification, checkpoint handling, and state syncing. ([GitHub](https://github.com/ChristopherKahler/paul/blob/main/src/workflows/apply-phase.md?utm_source=chatgpt.com "paul/src/workflows/apply-phase.md at main"))
+Important example: `src/workflows/apply-phase.md` describes task execution, qualification, checkpoint handling, and state syncing. ([GitHub](https://github.com/ChristopherKahler/paul/blob/main/src/workflows/apply-phase.md "paul/src/workflows/apply-phase.md at main"))
 
 **`src/templates`**  
 Purpose: reusable content templates for generated artifacts.  
@@ -254,7 +254,7 @@ Interaction: feeds `/paul:init` and `/paul:plan`. ([GitHub](https://github.com/C
 **`src/references`**  
 Purpose: supporting docs and rule references.  
 Responsibility: define verification, quality, loop phases, and synchronization conventions.  
-Interaction: referenced by workflows during execution and state sync. ([GitHub](https://github.com/ChristopherKahler/paul/blob/main/src/workflows/apply-phase.md?utm_source=chatgpt.com "paul/src/workflows/apply-phase.md at main"))
+Interaction: referenced by workflows during execution and state sync. ([GitHub](https://github.com/ChristopherKahler/paul/blob/main/src/workflows/apply-phase.md "paul/src/workflows/apply-phase.md at main"))
 
 **`src/rules`**  
 Purpose: rule packs for behavior enforcement.  
@@ -274,16 +274,16 @@ Interaction: central data plane for the framework. ([GitHub](https://github.com/
 
 - Node.js 16.7.0 or newer. ([GitHub](https://github.com/ChristopherKahler/paul/blob/main/package.json "paul/package.json at main · ChristopherKahler/paul · GitHub"))
     
-- Claude Code environment. ([GitHub](https://github.com/ChristopherKahler/paul?utm_source=chatgpt.com "ChristopherKahler/paul: Plan-Apply-Unify Loop — ..."))
+- Claude Code environment. ([GitHub](https://github.com/ChristopherKahler/paul "ChristopherKahler/paul: Plan-Apply-Unify Loop — ..."))
     
-- Install via `npx paul-framework`, optionally `--global` or `--local`. ([GitHub](https://github.com/ChristopherKahler/paul?utm_source=chatgpt.com "ChristopherKahler/paul: Plan-Apply-Unify Loop — ..."))
+- Install via `npx paul-framework`, optionally `--global` or `--local`. ([GitHub](https://github.com/ChristopherKahler/paul "ChristopherKahler/paul: Plan-Apply-Unify Loop — ..."))
     
 
 **Deployment options**
 
 - Global install into `~/.claude/`
     
-- Local install into `./.claude/` ([GitHub](https://github.com/ChristopherKahler/paul?utm_source=chatgpt.com "ChristopherKahler/paul: Plan-Apply-Unify Loop — ..."))
+- Local install into `./.claude/` ([GitHub](https://github.com/ChristopherKahler/paul "ChristopherKahler/paul: Plan-Apply-Unify Loop — ..."))
     
 
 **Infrastructure requirements**
@@ -334,7 +334,7 @@ Strong for users who like structure. Weak for people who want frictionless, mini
     
 - Could be overkill for tiny ad hoc tasks.
     
-- Tightly coupled to Claude Code’s command ecosystem. ([GitHub](https://github.com/ChristopherKahler/paul?utm_source=chatgpt.com "ChristopherKahler/paul: Plan-Apply-Unify Loop — ..."))
+- Tightly coupled to Claude Code’s command ecosystem. ([GitHub](https://github.com/ChristopherKahler/paul "ChristopherKahler/paul: Plan-Apply-Unify Loop — ..."))
     
 
 **Limitations**
@@ -386,7 +386,7 @@ Strong for users who like structure. Weak for people who want frictionless, mini
     
 - Traditional issue tracker + docs + CI/CD process
     
-- Agentic orchestration frameworks in broader AI tooling ecosystems ([GitHub](https://github.com/ChristopherKahler/paul/blob/main/PAUL-VS-GSD.md?utm_source=chatgpt.com "paul/PAUL-VS-GSD.md at main · ChristopherKahler/paul"))
+- Agentic orchestration frameworks in broader AI tooling ecosystems ([GitHub](https://github.com/ChristopherKahler/paul/blob/main/PAUL-VS-GSD.md "paul/PAUL-VS-GSD.md at main · ChristopherKahler/paul"))
     
 
 **Comparison**
@@ -395,14 +395,14 @@ Strong for users who like structure. Weak for people who want frictionless, mini
     
 - **Complexity:** Higher than plain prompting, lower than full enterprise workflow systems. ([GitHub](https://github.com/ChristopherKahler/paul "GitHub - ChristopherKahler/paul: Plan-Apply-Unify Loop — Structured AI-assisted development for Claude Code. Quality over speed-for-speed's-sake. · GitHub"))
     
-- **Performance:** Fine for workflow overhead; not optimized for raw speed. ([GitHub](https://github.com/ChristopherKahler/paul/blob/main/PAUL-VS-GSD.md?utm_source=chatgpt.com "paul/PAUL-VS-GSD.md at main · ChristopherKahler/paul"))
+- **Performance:** Fine for workflow overhead; not optimized for raw speed. ([GitHub](https://github.com/ChristopherKahler/paul/blob/main/PAUL-VS-GSD.md "paul/PAUL-VS-GSD.md at main · ChristopherKahler/paul"))
     
-- **Cost:** Low software cost, but human process cost is real. ([GitHub](https://github.com/ChristopherKahler/paul?utm_source=chatgpt.com "ChristopherKahler/paul: Plan-Apply-Unify Loop — ..."))
+- **Cost:** Low software cost, but human process cost is real. ([GitHub](https://github.com/ChristopherKahler/paul "ChristopherKahler/paul: Plan-Apply-Unify Loop — ..."))
     
 - **Ecosystem:** Narrow but opinionated; strongest value is inside the Chris AI Systems stack and Claude Code usage. ([GitHub](https://github.com/ChristopherKahler/paul "GitHub - ChristopherKahler/paul: Plan-Apply-Unify Loop — Structured AI-assisted development for Claude Code. Quality over speed-for-speed's-sake. · GitHub"))
     
 
-The blunt take: PAUL is not trying to beat Jira, GitHub Projects, or a generic agent framework on breadth. It is trying to make AI work less sloppy. That is a narrower, more defensible claim. ([GitHub](https://github.com/ChristopherKahler/paul/blob/main/PAUL-VS-GSD.md?utm_source=chatgpt.com "paul/PAUL-VS-GSD.md at main · ChristopherKahler/paul"))
+The blunt take: PAUL is not trying to beat Jira, GitHub Projects, or a generic agent framework on breadth. It is trying to make AI work less sloppy. That is a narrower, more defensible claim. ([GitHub](https://github.com/ChristopherKahler/paul/blob/main/PAUL-VS-GSD.md "paul/PAUL-VS-GSD.md at main · ChristopherKahler/paul"))
 
 ---
 
@@ -451,7 +451,7 @@ The blunt take: PAUL is not trying to beat Jira, GitHub Projects, or a generic a
     
 - Letting plans exist without a closure mechanism.
     
-- Using subagents for work that actually needs shared context. ([GitHub](https://github.com/ChristopherKahler/paul/blob/main/PAUL-VS-GSD.md?utm_source=chatgpt.com "paul/PAUL-VS-GSD.md at main · ChristopherKahler/paul"))
+- Using subagents for work that actually needs shared context. ([GitHub](https://github.com/ChristopherKahler/paul/blob/main/PAUL-VS-GSD.md "paul/PAUL-VS-GSD.md at main · ChristopherKahler/paul"))
     
 
 ---
@@ -541,7 +541,7 @@ PAUL is a niche but well-articulated AI workflow framework for Claude Code. Its 
     
 - Real stateful workflow design with durable artifacts. ([GitHub](https://github.com/ChristopherKahler/paul "GitHub - ChristopherKahler/paul: Plan-Apply-Unify Loop — Structured AI-assisted development for Claude Code. Quality over speed-for-speed's-sake. · GitHub"))
     
-- Best suited to Claude Code users and disciplined builders. ([GitHub](https://github.com/ChristopherKahler/paul?utm_source=chatgpt.com "ChristopherKahler/paul: Plan-Apply-Unify Loop — ..."))
+- Best suited to Claude Code users and disciplined builders. ([GitHub](https://github.com/ChristopherKahler/paul "ChristopherKahler/paul: Plan-Apply-Unify Loop — ..."))
     
 - Limited evidence of enterprise-scale hardening. ([GitHub](https://github.com/ChristopherKahler/paul "GitHub - ChristopherKahler/paul: Plan-Apply-Unify Loop — Structured AI-assisted development for Claude Code. Quality over speed-for-speed's-sake. · GitHub"))
     
@@ -591,7 +591,7 @@ PAUL is a niche but well-articulated AI workflow framework for Claude Code. Its 
 ## 15. AI/Data Engineering Relevance
 
 **Can this repository be used in data platforms?**  
-Yes, as a workflow discipline layer. It can help structure data engineering tasks, but it does not provide data platform primitives itself. ([GitHub](https://github.com/ChristopherKahler/paul?utm_source=chatgpt.com "ChristopherKahler/paul: Plan-Apply-Unify Loop — ..."))
+Yes, as a workflow discipline layer. It can help structure data engineering tasks, but it does not provide data platform primitives itself. ([GitHub](https://github.com/ChristopherKahler/paul "ChristopherKahler/paul: Plan-Apply-Unify Loop — ..."))
 
 **Can it be integrated into a lakehouse architecture?**  
 Indirectly, yes. It could govern the work process around lakehouse changes, but it is not part of the storage/query/compute stack. ([GitHub](https://github.com/ChristopherKahler/paul "GitHub - ChristopherKahler/paul: Plan-Apply-Unify Loop — Structured AI-assisted development for Claude Code. Quality over speed-for-speed's-sake. · GitHub"))
@@ -600,7 +600,7 @@ Indirectly, yes. It could govern the work process around lakehouse changes, but 
 Yes, by enforcing requirements, acceptance criteria, and verification around pipeline work. It would improve process quality, not pipeline execution semantics. ([GitHub](https://github.com/ChristopherKahler/paul "GitHub - ChristopherKahler/paul: Plan-Apply-Unify Loop — Structured AI-assisted development for Claude Code. Quality over speed-for-speed's-sake. · GitHub"))
 
 **Can it be used for LLM, RAG, agents, or AI workflows?**  
-Absolutely. This is the most natural fit. The repo is already framed around AI-assisted development and agentic workflow discipline. ([GitHub](https://github.com/ChristopherKahler/paul/blob/main/README.md?utm_source=chatgpt.com "README.md - ChristopherKahler/paul"))
+Absolutely. This is the most natural fit. The repo is already framed around AI-assisted development and agentic workflow discipline. ([GitHub](https://github.com/ChristopherKahler/paul/blob/main/README.md "README.md - ChristopherKahler/paul"))
 
 **Suggested enterprise architecture incorporating this project**  
 Use PAUL as the **workflow orchestration layer** on top of existing tools:

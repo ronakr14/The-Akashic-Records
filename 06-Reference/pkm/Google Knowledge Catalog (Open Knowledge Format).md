@@ -33,10 +33,10 @@ It addresses a very practical problem: how to represent **data/metadata/knowledg
     
 - portable,
     
-- and not locked into a single catalog or UI. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md?utm_source=chatgpt.com "knowledge-catalog/okf/README.md at main"))
+- and not locked into a single catalog or UI. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md "knowledge-catalog/okf/README.md at main"))
     
 
-In other words, it tries to make knowledge curation behave more like software engineering: files, diffs, PRs, review, and static artifacts instead of opaque platform-specific records. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md?utm_source=chatgpt.com "knowledge-catalog/okf/README.md at main"))
+In other words, it tries to make knowledge curation behave more like software engineering: files, diffs, PRs, review, and static artifacts instead of opaque platform-specific records. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md "knowledge-catalog/okf/README.md at main"))
 
 **Target audience**
 
@@ -75,7 +75,7 @@ The repository is primarily a **reference implementation and ecosystem seed** fo
     
 4. visualize the result,
     
-5. and provide real examples. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md?utm_source=chatgpt.com "knowledge-catalog/okf/README.md at main"))
+5. and provide real examples. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md "knowledge-catalog/okf/README.md at main"))
     
 
 **Core features and capabilities**
@@ -156,9 +156,9 @@ The repo documentation makes these major pieces explicit:
     
 - **Reference agent**: `reference_agent enrich` and related commands. It writes bundle content from source metadata and web evidence. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md "knowledge-catalog/okf/README.md at main · GoogleCloudPlatform/knowledge-catalog · GitHub"))
     
-- **Samples**: recipes plus generated bundles for GA4, Stack Overflow, and Bitcoin. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/samples/stackoverflow/README.md?utm_source=chatgpt.com "Stack Overflow public dataset sample - knowledge-catalog"))
+- **Samples**: recipes plus generated bundles for GA4, Stack Overflow, and Bitcoin. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/samples/stackoverflow/README.md "Stack Overflow public dataset sample - knowledge-catalog"))
     
-- **Visualizer**: `reference_agent visualize` outputs a standalone HTML graph explorer. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md?utm_source=chatgpt.com "knowledge-catalog/okf/README.md at main"))
+- **Visualizer**: `reference_agent visualize` outputs a standalone HTML graph explorer. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md "knowledge-catalog/okf/README.md at main"))
     
 
 **Data flow and execution flow**
@@ -197,7 +197,7 @@ Explicitly documented dependencies include:
 
 **Business problem**
 
-Enterprise data and AI systems are drowning in metadata fragmentation. Catalogs, docs, schemas, runbooks, and tribal knowledge live in different systems and formats. This project tries to unify them into a portable, diffable, and agent-friendly knowledge layer. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md?utm_source=chatgpt.com "knowledge-catalog/okf/README.md at main"))
+Enterprise data and AI systems are drowning in metadata fragmentation. Catalogs, docs, schemas, runbooks, and tribal knowledge live in different systems and formats. This project tries to unify them into a portable, diffable, and agent-friendly knowledge layer. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md "knowledge-catalog/okf/README.md at main"))
 
 **Technical challenges it solves**
 
@@ -220,7 +220,7 @@ Compared with a traditional service-owned metadata store:
     
 - it is git-native rather than database-native,
     
-- and it is more naturally consumable by LLMs and automation pipelines. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md?utm_source=chatgpt.com "knowledge-catalog/okf/README.md at main"))
+- and it is more naturally consumable by LLMs and automation pipelines. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md "knowledge-catalog/okf/README.md at main"))
     
 
 **Unique differentiators**
@@ -235,7 +235,7 @@ The notable differentiator is the combination of:
     
 - **LLM-assisted enrichment**,
     
-- **static visual consumption**. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md?utm_source=chatgpt.com "knowledge-catalog/okf/README.md at main"))
+- **static visual consumption**. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md "knowledge-catalog/okf/README.md at main"))
     
 
 That is a strong pattern. It is not just “yet another catalog.” It is trying to become a **transport format for knowledge**.
@@ -249,7 +249,7 @@ That is a strong pattern. It is not just “yet another catalog.” It is trying
 **Description:** Export data assets and their context into a portable knowledge bundle.  
 **Example scenario:** A team wants to move governance context from a legacy catalog into GitHub for easier collaboration.  
 **Benefits:** portability, version control, review workflows.  
-**Complexity:** Medium. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md?utm_source=chatgpt.com "knowledge-catalog/okf/README.md at main"))
+**Complexity:** Medium. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md "knowledge-catalog/okf/README.md at main"))
 
 ### 2) AI context packaging
 
@@ -270,30 +270,30 @@ That is a strong pattern. It is not just “yet another catalog.” It is trying
 **Description:** Visualize relationships between concepts in a bundle.  
 **Example scenario:** An analyst wants to understand the dependency structure of a dataset.  
 **Benefits:** faster comprehension, linked navigation, backlinks.  
-**Complexity:** Low. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md?utm_source=chatgpt.com "knowledge-catalog/okf/README.md at main"))
+**Complexity:** Low. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md "knowledge-catalog/okf/README.md at main"))
 
 ### 5) Governance / evidence tracking
 
 **Description:** Attach evidence, freshness, and source links to knowledge artifacts.  
 **Example scenario:** A team needs to know which facts are sourced and which are inferred.  
 **Benefits:** improved trust, auditability, and reviewability.  
-**Complexity:** Medium. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/discussions/132?utm_source=chatgpt.com "MosAIc, a reconfigurable reading-surface viewer for OKF ..."))
+**Complexity:** Medium. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/discussions/132 "MosAIc, a reconfigurable reading-surface viewer for OKF ..."))
 
 ---
 
 ## 6. Where It Can Be Used
 
 **Data Engineering**  
-Highly relevant. It can document datasets, tables, lineage-like relationships, and operational context. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/samples/stackoverflow/README.md?utm_source=chatgpt.com "Stack Overflow public dataset sample - knowledge-catalog"))
+Highly relevant. It can document datasets, tables, lineage-like relationships, and operational context. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/samples/stackoverflow/README.md "Stack Overflow public dataset sample - knowledge-catalog"))
 
 **Analytics**  
-Strong fit. The GA4 and Stack Overflow samples show the format working for analytical datasets. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/samples/stackoverflow/README.md?utm_source=chatgpt.com "Stack Overflow public dataset sample - knowledge-catalog"))
+Strong fit. The GA4 and Stack Overflow samples show the format working for analytical datasets. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/samples/stackoverflow/README.md "Stack Overflow public dataset sample - knowledge-catalog"))
 
 **AI/ML**  
 Very relevant. The format is explicitly designed to provide semantics and business context to AI agents. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/README.md "knowledge-catalog/README.md at main · GoogleCloudPlatform/knowledge-catalog · GitHub"))
 
 **DevOps**  
-Moderately relevant. Git-native docs, reviewable artifacts, and static outputs are operationally friendly. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md?utm_source=chatgpt.com "knowledge-catalog/okf/README.md at main"))
+Moderately relevant. Git-native docs, reviewable artifacts, and static outputs are operationally friendly. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md "knowledge-catalog/okf/README.md at main"))
 
 **Platform Engineering**  
 Strong fit for internal platform knowledge, service inventories, platform docs, and standards. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md "knowledge-catalog/okf/SPEC.md at main · GoogleCloudPlatform/knowledge-catalog · GitHub"))
@@ -311,7 +311,7 @@ Potentially useful for tagging cost-heavy assets and documenting ownership/conte
 Useful for product knowledge bases, feature specs, and internal decision records. Again, this is an inference from the general format design. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md "knowledge-catalog/okf/SPEC.md at main · GoogleCloudPlatform/knowledge-catalog · GitHub"))
 
 **Enterprise Applications**  
-Relevant for knowledge distribution across teams, but adoption will depend on governance and integration discipline. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md?utm_source=chatgpt.com "knowledge-catalog/okf/README.md at main"))
+Relevant for knowledge distribution across teams, but adoption will depend on governance and integration discipline. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md "knowledge-catalog/okf/README.md at main"))
 
 ---
 
@@ -340,13 +340,13 @@ Responsibilities: explains the two-pass reference agent, installation, credentia
 
 Purpose: concrete runnable examples.  
 Responsibilities: show how the agent behaves on real datasets and how different dataset shapes affect enrichment.  
-Interactions: each sample pairs recipe inputs, generated bundle outputs, and a `viz.html`. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/samples/stackoverflow/README.md?utm_source=chatgpt.com "Stack Overflow public dataset sample - knowledge-catalog"))
+Interactions: each sample pairs recipe inputs, generated bundle outputs, and a `viz.html`. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/samples/stackoverflow/README.md "Stack Overflow public dataset sample - knowledge-catalog"))
 
 ### `visualize` output
 
 Purpose: consumption artifact.  
 Responsibilities: renders the bundle as interactive graph + detail panel + backlinks + search.  
-Interactions: consumes bundle Markdown and frontmatter, no backend needed. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md?utm_source=chatgpt.com "knowledge-catalog/okf/README.md at main"))
+Interactions: consumes bundle Markdown and frontmatter, no backend needed. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md "knowledge-catalog/okf/README.md at main"))
 
 ---
 
@@ -373,7 +373,7 @@ Documented setup is straightforward:
     
 - Git repository storage,
     
-- static file hosting. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md?utm_source=chatgpt.com "knowledge-catalog/okf/README.md at main"))
+- static file hosting. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md "knowledge-catalog/okf/README.md at main"))
     
 
 **Infrastructure requirements**
@@ -419,13 +419,13 @@ The main one is cost and control:
 Good architectural scaling model for knowledge bundles because it is file-based and hierarchical. The production scalability of the agent itself is not proven here. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md "knowledge-catalog/okf/SPEC.md at main · GoogleCloudPlatform/knowledge-catalog · GitHub"))
 
 **Maintainability**  
-Strong, because content lives in plain text, diffs are clean, and artifacts are git-friendly. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md?utm_source=chatgpt.com "knowledge-catalog/okf/README.md at main"))
+Strong, because content lives in plain text, diffs are clean, and artifacts are git-friendly. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md "knowledge-catalog/okf/README.md at main"))
 
 **Extensibility**  
 High. The spec is intentionally minimal and non-prescriptive, allowing many producers and consumers. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md "knowledge-catalog/okf/SPEC.md at main · GoogleCloudPlatform/knowledge-catalog · GitHub"))
 
 **Performance**  
-Likely adequate for artifact generation and browsing; not enough evidence to claim high-throughput production performance. The visualizer being static is a nice win. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md?utm_source=chatgpt.com "knowledge-catalog/okf/README.md at main"))
+Likely adequate for artifact generation and browsing; not enough evidence to claim high-throughput production performance. The visualizer being static is a nice win. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md "knowledge-catalog/okf/README.md at main"))
 
 **Developer experience**  
 Pretty good. The repo emphasizes simple install/run commands and sample recipes. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md "knowledge-catalog/okf/README.md at main · GoogleCloudPlatform/knowledge-catalog · GitHub"))
@@ -466,10 +466,10 @@ I did not see strong evidence of built-in observability, metrics, or tracing.
 Very strong. The README and spec are unusually clear about purpose, tradeoffs, and workflows. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md "knowledge-catalog/okf/README.md at main · GoogleCloudPlatform/knowledge-catalog · GitHub"))
 
 **Community support: 7/10**  
-There is active GitHub activity, issues, and discussions, which is a healthy sign for an emerging format. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/issues?utm_source=chatgpt.com "Issues · GoogleCloudPlatform/knowledge-catalog"))
+There is active GitHub activity, issues, and discussions, which is a healthy sign for an emerging format. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/issues "Issues · GoogleCloudPlatform/knowledge-catalog"))
 
 **Maintainability: 7/10**  
-The plain-text and Git-native approach is maintainable, assuming governance conventions remain disciplined. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md?utm_source=chatgpt.com "knowledge-catalog/okf/README.md at main"))
+The plain-text and Git-native approach is maintainable, assuming governance conventions remain disciplined. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md "knowledge-catalog/okf/README.md at main"))
 
 ### Reasoning
 
@@ -486,7 +486,7 @@ This is a **good architecture for a standard**, not yet a finished enterprise pl
 **Performance:** generally mature.  
 **Cost:** often higher, especially at enterprise scale.  
 **Ecosystem:** strong, but more vendor-specific.  
-OKF’s edge is portability and AI friendliness. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md?utm_source=chatgpt.com "knowledge-catalog/okf/README.md at main"))
+OKF’s edge is portability and AI friendliness. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md "knowledge-catalog/okf/README.md at main"))
 
 ### Markdown-based knowledge bases like Obsidian / MkDocs
 
@@ -495,7 +495,7 @@ OKF’s edge is portability and AI friendliness. ([GitHub](https://github.com/Go
 **Performance:** excellent for static docs.  
 **Cost:** low.  
 **Ecosystem:** broad.  
-OKF’s edge is the explicit knowledge-bundle concept and agent-oriented design. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md?utm_source=chatgpt.com "knowledge-catalog/okf/README.md at main"))
+OKF’s edge is the explicit knowledge-bundle concept and agent-oriented design. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md "knowledge-catalog/okf/README.md at main"))
 
 ### Enterprise governance platforms
 
@@ -505,7 +505,7 @@ Examples: Dataplex / catalog ecosystems / metadata governance suites.
 **Performance:** mature.  
 **Cost:** higher.  
 **Ecosystem:** strong.  
-OKF is not trying to beat them on governance depth; it is trying to create a portable interchange layer that can feed them or complement them. ([Google Cloud Documentation](https://docs.cloud.google.com/bigquery/docs/introduction?utm_source=chatgpt.com "BigQuery overview"))
+OKF is not trying to beat them on governance depth; it is trying to create a portable interchange layer that can feed them or complement them. ([Google Cloud Documentation](https://docs.cloud.google.com/bigquery/docs/introduction "BigQuery overview"))
 
 ### RAG/vector-first knowledge stores
 
@@ -540,7 +540,7 @@ OKF’s edge is that it is a grounded source artifact, not just an embedding tar
     
 - Use markdown for narrative context, not just schema.
     
-- Let visualization be a derived artifact, not the source of truth. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md?utm_source=chatgpt.com "knowledge-catalog/okf/README.md at main"))
+- Let visualization be a derived artifact, not the source of truth. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md "knowledge-catalog/okf/README.md at main"))
     
 
 **Best practices worth adopting**
@@ -647,7 +647,7 @@ OKF’s edge is that it is a grounded source artifact, not just an embedding tar
 
 This repository is a well-structured attempt to define a **portable, Git-native knowledge format** for data and AI systems. OKF is intentionally minimal: Markdown files plus YAML frontmatter, organized as hierarchical knowledge bundles. The repository provides a reference agent to generate bundles from BigQuery metadata and web sources, plus a visualizer to browse bundles as an interactive artifact. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md "knowledge-catalog/okf/README.md at main · GoogleCloudPlatform/knowledge-catalog · GitHub"))
 
-The main architectural bet is that knowledge should be treated like code: versioned, diffable, reviewable, and portable. That is a solid bet for modern data and AI teams, especially where context management and provenance matter. The samples show this working against real datasets like GA4, Stack Overflow, and Bitcoin. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/samples/stackoverflow/README.md?utm_source=chatgpt.com "Stack Overflow public dataset sample - knowledge-catalog"))
+The main architectural bet is that knowledge should be treated like code: versioned, diffable, reviewable, and portable. That is a solid bet for modern data and AI teams, especially where context management and provenance matter. The samples show this working against real datasets like GA4, Stack Overflow, and Bitcoin. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/samples/stackoverflow/README.md "Stack Overflow public dataset sample - knowledge-catalog"))
 
 This is not yet an enterprise platform. It is a draft standard plus reference implementation. The docs are strong, the ideas are coherent, and the portability story is compelling. But security, governance, observability, and operational hardening are not yet first-class in the repository itself. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md "knowledge-catalog/okf/SPEC.md at main · GoogleCloudPlatform/knowledge-catalog · GitHub"))
 
@@ -709,7 +709,7 @@ This is not yet an enterprise platform. It is a draft standard plus reference im
 ## 15. AI/Data Engineering Relevance
 
 **Can this repository be used in data platforms?**  
-Yes. Very directly. It is built around dataset/table-style knowledge representation and BigQuery examples. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/samples/stackoverflow/README.md?utm_source=chatgpt.com "Stack Overflow public dataset sample - knowledge-catalog"))
+Yes. Very directly. It is built around dataset/table-style knowledge representation and BigQuery examples. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/samples/stackoverflow/README.md "Stack Overflow public dataset sample - knowledge-catalog"))
 
 **Can it be integrated into a lakehouse architecture?**  
 Yes, as a metadata/knowledge layer alongside the lakehouse. It is not the lakehouse itself; it is a portable context layer around it. This is an inference from the format and samples. ([GitHub](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md "knowledge-catalog/okf/SPEC.md at main · GoogleCloudPlatform/knowledge-catalog · GitHub"))

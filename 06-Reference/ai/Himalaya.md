@@ -209,7 +209,7 @@ Implementation complexity: **High** because mail migrations are always a little 
 Description: Acts as a backend CLI for GUI-like wrappers or editor plugins.  
 Example scenario: A Vim plugin invokes Himalaya for account/folder/message actions.  
 Expected benefits: reuse of protocol logic across interfaces.  
-Implementation complexity: **Medium**. ([GitHub](https://github.com/pimalaya/himalaya-vim?utm_source=chatgpt.com "pimalaya/himalaya-vim"))
+Implementation complexity: **Medium**. ([GitHub](https://github.com/pimalaya/himalaya-vim "pimalaya/himalaya-vim"))
 
 ## 6. Where It Can Be Used
 
@@ -339,7 +339,7 @@ Developer Experience: good docs, installer paths, Nix shell, config sample, migr
 Risks: feature complexity can confuse users; v2 is still in transition. ([GitHub](https://github.com/pimalaya/himalaya/tree/master "GitHub - pimalaya/himalaya: CLI to manage emails · GitHub"))  
 Limitations: release binaries are feature-limited; some provider behaviors are still rough. ([GitHub](https://github.com/pimalaya/himalaya "GitHub - pimalaya/himalaya: CLI to manage emails · GitHub"))  
 Missing features: not a full enterprise email governance platform, no obvious native observability stack, no server-side orchestration.  
-Technical debt indicators: active issue backlog and regressions around config, OAuth, and message handling. ([GitHub](https://github.com/pimalaya/himalaya/issues/611?utm_source=chatgpt.com "regression when supplying multiple configs · Issue #611"))
+Technical debt indicators: active issue backlog and regressions around config, OAuth, and message handling. ([GitHub](https://github.com/pimalaya/himalaya/issues/611 "regression when supplying multiple configs · Issue #611"))
 
 ## 10. Enterprise Evaluation
 
@@ -531,7 +531,7 @@ Anti-patterns if any:
 
 Himalaya is a mature Rust CLI for managing email across multiple providers and storage backends. Its biggest strength is unification: it provides one command-line surface over IMAP, SMTP, JMAP, Gmail, Microsoft Graph, Maildir, and M2dir, while preserving protocol-specific access where needed. It uses Cargo features to keep backend support modular, and it leans on companion crates for most of the heavy protocol work. The repository also invests in onboarding and operational ergonomics: provider discovery, sample configuration, migration docs, Nix-based development, installer scripts, and shared config with the TUI frontend. ([GitHub](https://github.com/pimalaya/himalaya/tree/master "GitHub - pimalaya/himalaya: CLI to manage emails · GitHub"))
 
-The project is well suited for terminal-centric users, automation, and teams that need scriptable email workflows. It is also a credible foundation for companion tools and internal automation, especially where multiple providers or local mail stores are involved. The main caution is complexity: feature flags, provider quirks, and active v2 transition mean adoption should be deliberate. It is good software, but not magic fairy dust. ([GitHub](https://github.com/pimalaya/himalaya/issues/611?utm_source=chatgpt.com "regression when supplying multiple configs · Issue #611"))
+The project is well suited for terminal-centric users, automation, and teams that need scriptable email workflows. It is also a credible foundation for companion tools and internal automation, especially where multiple providers or local mail stores are involved. The main caution is complexity: feature flags, provider quirks, and active v2 transition mean adoption should be deliberate. It is good software, but not magic fairy dust. ([GitHub](https://github.com/pimalaya/himalaya/issues/611 "regression when supplying multiple configs · Issue #611"))
 
 ### Key findings
 

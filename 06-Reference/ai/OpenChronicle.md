@@ -19,7 +19,7 @@ Below is a deep-dive report on **Einsia/OpenChronicle** based on the repository 
 OpenChronicle is an open-source, local-first memory system for AI agents. It captures real macOS app/screen context via accessibility events, compresses that into sessions, extracts durable facts, and stores them as human-readable Markdown plus a local SQLite FTS index. It is explicitly described as “open, model-agnostic, inspectable, and hackable.” ([GitHub](https://github.com/Einsia/OpenChronicle "GitHub - Einsia/OpenChronicle · GitHub"))
 
 **What problem it solves**  
-It addresses the “agents forget everything” problem. Instead of relying on raw chat history or screenshot-heavy pipelines, it preserves working context such as what the user is doing, what was decided, which tools are being used, and which people/projects matter. The repo emphasizes lower cost, better intent capture, smaller memory, and easier deduplication than screenshot/OCR-heavy approaches. ([GitHub](https://github.com/Einsia/OpenChronicle?utm_source=chatgpt.com "Einsia/OpenChronicle"))
+It addresses the “agents forget everything” problem. Instead of relying on raw chat history or screenshot-heavy pipelines, it preserves working context such as what the user is doing, what was decided, which tools are being used, and which people/projects matter. The repo emphasizes lower cost, better intent capture, smaller memory, and easier deduplication than screenshot/OCR-heavy approaches. ([GitHub](https://github.com/Einsia/OpenChronicle "Einsia/OpenChronicle"))
 
 **Target audience**  
 The primary audience is developers building tool-capable LLM agents, especially local MCP clients, and power users who want persistent memory for agent workflows on macOS. The docs also call out integrations such as Claude Code, Claude Desktop, Codex, opencode, and custom local agents. ([GitHub](https://github.com/Einsia/OpenChronicle "GitHub - Einsia/OpenChronicle · GitHub"))
@@ -59,7 +59,7 @@ The architecture is a single daemon with a deterministic funnel: macOS AX watche
     
 7. A classifier extracts durable facts into entity-centric memory files like `user-`, `project-`, `tool-`, `topic-`, `person-`, and `org-`.
     
-8. A local SQLite FTS index mirrors the Markdown for retrieval. ([GitHub](https://github.com/Einsia/OpenChronicle?utm_source=chatgpt.com "Einsia/OpenChronicle"))
+8. A local SQLite FTS index mirrors the Markdown for retrieval. ([GitHub](https://github.com/Einsia/OpenChronicle "Einsia/OpenChronicle"))
     
 
 **Major components/modules**  
@@ -80,7 +80,7 @@ AI agents are useful but stateless. OpenChronicle is trying to turn ephemeral ag
 It attacks the ugly parts: noisy desktop events, deduplication, session boundaries, durable fact extraction, and keeping memory human-readable. The session doc shows deliberate rules to avoid over-fragmenting work, while the troubleshooting doc makes it clear that the classifier is expected to write sparingly and only when a fact will matter later. ([GitHub](https://github.com/Einsia/OpenChronicle/blob/main/docs/session.md "OpenChronicle/docs/session.md at main · Einsia/OpenChronicle · GitHub"))
 
 **Advantages over traditional approaches**  
-Compared with screenshot/OCR-heavy systems, AX-first capture is cheaper, more compact, and closer to intent. Compared with chat-log memory, this captures what the user is actually doing in apps. Compared with opaque memory services, it is local, inspectable, and hackable. ([GitHub](https://github.com/Einsia/OpenChronicle?utm_source=chatgpt.com "Einsia/OpenChronicle"))
+Compared with screenshot/OCR-heavy systems, AX-first capture is cheaper, more compact, and closer to intent. Compared with chat-log memory, this captures what the user is actually doing in apps. Compared with opaque memory services, it is local, inspectable, and hackable. ([GitHub](https://github.com/Einsia/OpenChronicle "Einsia/OpenChronicle"))
 
 **Differentiators**  
 The standout differentiators are local-first storage, entity-centric Markdown memory, session-aware reduction, and a deterministic ingestion funnel rather than a fuzzy “LLM does everything” pipeline. That is a good architectural instinct. Fewer magic tricks, fewer surprises. ([GitHub](https://github.com/Einsia/OpenChronicle/blob/main/docs/architecture.md "OpenChronicle/docs/architecture.md at main · Einsia/OpenChronicle · GitHub"))
@@ -141,7 +141,7 @@ Indirect relevance: it is local-first, so cloud value comes from integrating the
 Interesting for local data control and reduced data egress. Still, it captures sensitive screen/app context, so security posture depends on local device hardening and model/provider configuration. ([GitHub](https://github.com/Einsia/OpenChronicle "GitHub - Einsia/OpenChronicle · GitHub"))
 
 **FinOps**  
-Could reduce token waste by compressing context into durable memory instead of replaying huge histories. That is an inference from its design, but a reasonable one. ([GitHub](https://github.com/Einsia/OpenChronicle?utm_source=chatgpt.com "Einsia/OpenChronicle"))
+Could reduce token waste by compressing context into durable memory instead of replaying huge histories. That is an inference from its design, but a reasonable one. ([GitHub](https://github.com/Einsia/OpenChronicle "Einsia/OpenChronicle"))
 
 **Product Engineering**  
 Very relevant for building user-centered assistants that remember product decisions, requirements, and user behavior across sessions. ([GitHub](https://github.com/Einsia/OpenChronicle "GitHub - Einsia/OpenChronicle · GitHub"))
@@ -206,7 +206,7 @@ Expect model-quality sensitivity, local port conflicts, stale PID files, and cla
 Scalability: good at the conceptual level because it avoids huge raw-snapshot storage and uses staged compression. ([GitHub](https://github.com/Einsia/OpenChronicle "GitHub - Einsia/OpenChronicle · GitHub"))  
 Maintainability: strong because memory is Markdown and the index is rebuildable. ([GitHub](https://github.com/Einsia/OpenChronicle/blob/main/docs/memory-format.md "OpenChronicle/docs/memory-format.md at main · Einsia/OpenChronicle · GitHub"))  
 Extensibility: strong due to model-agnostic design and hackable parsing/integration points. ([GitHub](https://github.com/Einsia/OpenChronicle "GitHub - Einsia/OpenChronicle · GitHub"))  
-Performance: better than screenshot/OCR-heavy approaches in principle. ([GitHub](https://github.com/Einsia/OpenChronicle?utm_source=chatgpt.com "Einsia/OpenChronicle"))  
+Performance: better than screenshot/OCR-heavy approaches in principle. ([GitHub](https://github.com/Einsia/OpenChronicle "Einsia/OpenChronicle"))  
 Developer experience: decent for advanced users; the CLI and docs are clear. ([GitHub](https://github.com/Einsia/OpenChronicle "GitHub - Einsia/OpenChronicle · GitHub"))
 
 **Weaknesses**  
@@ -241,13 +241,13 @@ The file-based memory model helps a lot, but the multi-stage pipeline and LLM-dr
 ## 11. Comparison with Alternatives
 
 **OpenAI Chronicle**  
-OpenChronicle positions itself as an open alternative to OpenAI Chronicle: local-first, model-agnostic, inspectable, Markdown + SQLite, and extensible. The tradeoff is obvious: more control, less polish. ([GitHub](https://github.com/Einsia/OpenChronicle?utm_source=chatgpt.com "Einsia/OpenChronicle"))
+OpenChronicle positions itself as an open alternative to OpenAI Chronicle: local-first, model-agnostic, inspectable, Markdown + SQLite, and extensible. The tradeoff is obvious: more control, less polish. ([GitHub](https://github.com/Einsia/OpenChronicle "Einsia/OpenChronicle"))
 
 **Generic chat-history memory systems**  
 Those are simpler, but they do not capture real desktop context. OpenChronicle is stronger when the actual workflow matters more than the conversation. ([GitHub](https://github.com/Einsia/OpenChronicle "GitHub - Einsia/OpenChronicle · GitHub"))
 
 **Screenshot/OCR-based desktop memory tools**  
-Those are usually easier to understand visually but cost more and produce noisier memory. OpenChronicle’s AX-first approach should be cheaper and cleaner. That is a design inference, but it is strongly supported by the repo’s own positioning. ([GitHub](https://github.com/Einsia/OpenChronicle?utm_source=chatgpt.com "Einsia/OpenChronicle"))
+Those are usually easier to understand visually but cost more and produce noisier memory. OpenChronicle’s AX-first approach should be cheaper and cleaner. That is a design inference, but it is strongly supported by the repo’s own positioning. ([GitHub](https://github.com/Einsia/OpenChronicle "Einsia/OpenChronicle"))
 
 **Commercial agent memory platforms**  
 They may offer broader platform coverage and support, but they are typically less transparent and less hackable. OpenChronicle wins on local control and inspectability; loses on maturity. ([GitHub](https://github.com/Einsia/OpenChronicle "GitHub - Einsia/OpenChronicle · GitHub"))

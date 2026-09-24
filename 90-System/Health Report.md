@@ -4,7 +4,7 @@ status: reference
 ---
 # Vault Health Report
 
-Generated 2026-09-18 · stale threshold 365 days · 265 notes scanned
+Generated 2026-09-24 · stale threshold 365 days · 271 notes scanned
 
 Link checks (orphans, MOC coverage) and quality scoring are scoped to `01-Knowledge/` — the layer meant to be connected and curated. Broken links, stale, frontmatter, and duplicates are checked vault-wide.
 
@@ -18,7 +18,7 @@ Link checks (orphans, MOC coverage) and quality scoring are scoped to `01-Knowle
 | missing frontmatter | 0 |
 | invalid frontmatter | 0 |
 | MOC coverage gaps | 0 |
-| basename collisions | 5 |
+| basename collisions | 6 |
 | possible duplicates | 0 |
 
 ## Quality (01-Knowledge content notes)
@@ -64,6 +64,7 @@ _none_
 - `2026-08-28` -> 00-Daily/Briefings/2026-08-28.md, 04-Writing/Ideas/2026-08-28.md
 - `2026-09-04` -> 00-Daily/Briefings/2026-09-04.md, 04-Writing/Ideas/2026-09-04.md
 - `2026-09-11` -> 00-Daily/Briefings/2026-09-11.md, 04-Writing/Ideas/2026-09-11.md
+- `2026-09-18` -> 00-Daily/Briefings/2026-09-18.md, 04-Writing/Ideas/2026-09-18.md
 
 ## Review next (lowest 12 by score)
 
@@ -92,31 +93,31 @@ _none_
 
 | score | cmpl | conn | frsh | conf | status | note |
 |--:|--:|--:|--:|--:|---|---|
-| 100 | 1.00 | 1.00 | 1.00 | 1.00 | evergreen | architecture/Data Modelling.md |
-| 100 | 1.00 | 1.00 | 1.00 | 1.00 | evergreen | architecture/Data Vault & Lakehouse Modelling.md |
+| 100 | 1.00 | 1.00 | 0.99 | 1.00 | evergreen | architecture/Data Modelling.md |
+| 100 | 1.00 | 1.00 | 0.99 | 1.00 | evergreen | architecture/Data Vault & Lakehouse Modelling.md |
 | 100 | 1.00 | 1.00 | 1.00 | 1.00 | evergreen | architecture/Database Design.md |
 | 100 | 1.00 | 1.00 | 1.00 | 1.00 | evergreen | data-engineering/Bloom Filters.md |
-| 100 | 1.00 | 1.00 | 1.00 | 1.00 | evergreen | data-engineering/Data Lake.md |
-| 100 | 1.00 | 1.00 | 1.00 | 1.00 | evergreen | data-engineering/Delta Lake & Iceberg.md |
-| 100 | 1.00 | 1.00 | 1.00 | 1.00 | evergreen | data-engineering/Delta Lake's OPTIMIZE.md |
-| 100 | 1.00 | 1.00 | 1.00 | 1.00 | evergreen | data-engineering/ELT (Extract, Load, Transform).md |
-| 100 | 1.00 | 1.00 | 1.00 | 1.00 | evergreen | software-engineering/Distributed System.md |
+| 100 | 1.00 | 1.00 | 0.99 | 1.00 | evergreen | data-engineering/Data Lake.md |
+| 100 | 1.00 | 1.00 | 0.99 | 1.00 | evergreen | data-engineering/Delta Lake & Iceberg.md |
+| 100 | 1.00 | 1.00 | 0.99 | 1.00 | evergreen | data-engineering/Delta Lake's OPTIMIZE.md |
+| 100 | 1.00 | 1.00 | 0.99 | 1.00 | evergreen | data-engineering/ELT (Extract, Load, Transform).md |
+| 100 | 1.00 | 1.00 | 0.99 | 1.00 | evergreen | software-engineering/Distributed System.md |
 | 97 | 0.91 | 1.00 | 1.00 | 1.00 | evergreen | data-engineering/Bloom Filters - Row Group Pruning.md |
-| 96 | 0.86 | 1.00 | 1.00 | 1.00 | evergreen | data-engineering/Batch Processing.md |
+| 96 | 0.86 | 1.00 | 0.99 | 1.00 | evergreen | data-engineering/Batch Processing.md |
 | 96 | 1.00 | 0.88 | 1.00 | 1.00 | evergreen | data-engineering/Dask.md |
-| 96 | 0.87 | 1.00 | 1.00 | 1.00 | evergreen | data-engineering/Data Mesh.md |
-| 96 | 1.00 | 1.00 | 1.00 | 0.80 | curated | data-engineering/Idempotency in Data Pipelines.md |
+| 96 | 0.87 | 1.00 | 0.99 | 1.00 | evergreen | data-engineering/Data Mesh.md |
+| 96 | 1.00 | 1.00 | 0.99 | 0.80 | curated | data-engineering/Idempotency in Data Pipelines.md |
 | 96 | 1.00 | 1.00 | 1.00 | 0.80 | curated | data-engineering/Lakehouse Performance Optimization.md |
-| 96 | 1.00 | 1.00 | 1.00 | 0.80 | curated | data-engineering/Parquet.md |
-| 96 | 1.00 | 1.00 | 1.00 | 0.80 | curated | data-engineering/Partitioning.md |
+| 96 | 1.00 | 1.00 | 0.99 | 0.80 | curated | data-engineering/Parquet.md |
+| 96 | 1.00 | 1.00 | 0.99 | 0.80 | curated | data-engineering/Partitioning.md |
 | 96 | 1.00 | 1.00 | 1.00 | 0.80 | curated | data-engineering/Polars.md |
 | 96 | 1.00 | 1.00 | 1.00 | 0.80 | curated | data-engineering/PySpark.md |
-| 96 | 1.00 | 1.00 | 1.00 | 0.80 | curated | data-engineering/Stream Processing.md |
+| 96 | 1.00 | 1.00 | 0.99 | 0.80 | curated | data-engineering/Stream Processing.md |
 | 96 | 1.00 | 1.00 | 1.00 | 0.80 | curated | python/Pandas.md |
-| 96 | 1.00 | 1.00 | 1.00 | 0.80 | curated | software-engineering/Microservices.md |
-| 96 | 1.00 | 1.00 | 1.00 | 0.80 | curated | software-engineering/Monolithic System.md |
-| 95 | 0.98 | 1.00 | 1.00 | 0.80 | curated | software-engineering/UUIDv7 & ULID.md |
-| 94 | 0.80 | 1.00 | 1.00 | 1.00 | evergreen | data-engineering/Data Engineering Playbook.md |
+| 96 | 1.00 | 1.00 | 0.99 | 0.80 | curated | software-engineering/Microservices.md |
+| 96 | 1.00 | 1.00 | 0.99 | 0.80 | curated | software-engineering/Monolithic System.md |
+| 95 | 0.98 | 1.00 | 0.99 | 0.80 | curated | software-engineering/UUIDv7 & ULID.md |
+| 94 | 0.80 | 1.00 | 0.99 | 1.00 | evergreen | data-engineering/Data Engineering Playbook.md |
 | 94 | 0.79 | 1.00 | 1.00 | 1.00 | evergreen | data-engineering/Failure Recovery in Batch Data Pipelines.md |
 | 94 | 0.95 | 1.00 | 1.00 | 0.80 | curated | data-engineering/Query Optimization.md |
 | 94 | 0.92 | 1.00 | 1.00 | 0.80 | curated | software-engineering/Password Storage.md |
@@ -124,16 +125,16 @@ _none_
 | 93 | 0.76 | 1.00 | 1.00 | 1.00 | evergreen | data-engineering/ETL.md |
 | 93 | 0.75 | 1.00 | 1.00 | 1.00 | evergreen | software-engineering/Compare File in Powershell.md |
 | 91 | 0.71 | 1.00 | 1.00 | 1.00 | evergreen | data-engineering/ETL vs ELT.md |
-| 91 | 0.83 | 1.00 | 1.00 | 0.80 | curated | data-engineering/Z-Ordering.md |
+| 90 | 0.83 | 1.00 | 0.99 | 0.80 | curated | data-engineering/Z-Ordering.md |
 | 90 | 0.79 | 1.00 | 1.00 | 0.80 | curated | python/Python - Concurrency.md |
-| 89 | 1.00 | 0.62 | 1.00 | 1.00 | evergreen | architecture/Data Modelling Checklist.md |
+| 89 | 1.00 | 0.62 | 0.99 | 1.00 | evergreen | architecture/Data Modelling Checklist.md |
 | 88 | 0.74 | 1.00 | 1.00 | 0.80 | curated | data-engineering/Incremental Data Loading Strategies.md |
 | 88 | 0.85 | 0.88 | 1.00 | 0.80 | curated | pkm/Obsidian Learning Map.md |
 | 86 | 0.65 | 1.00 | 1.00 | 0.80 | curated | ai/LLM Interaction Guide.md |
-| 86 | 0.52 | 1.00 | 1.00 | 1.00 | evergreen | software-engineering/FastAPI Authentication.md |
 | 85 | 0.65 | 1.00 | 1.00 | 0.80 | curated | database/Vector Database.md |
 | 85 | 0.63 | 1.00 | 1.00 | 0.80 | curated | python/Python External Libraries Playbook.md |
 | 85 | 0.63 | 1.00 | 1.00 | 0.80 | curated | python/Python.md |
+| 85 | 0.51 | 1.00 | 1.00 | 1.00 | evergreen | software-engineering/FastAPI Authentication.md |
 | 84 | 0.60 | 1.00 | 1.00 | 0.80 | curated | python/Python - Modules & Packages.md |
 | 83 | 0.68 | 0.75 | 1.00 | 1.00 | evergreen | software-engineering/Git Multi Account Setup.md |
 | 82 | 0.65 | 0.88 | 1.00 | 0.80 | curated | software-engineering/VSCode Debug.md |
@@ -148,9 +149,9 @@ _none_
 | 73 | 0.57 | 1.00 | 1.00 | 0.30 | draft | database/Database Indexing.md |
 | 73 | 0.56 | 1.00 | 1.00 | 0.30 | draft | database/Replication & Partitioning.md |
 | 73 | 0.56 | 1.00 | 1.00 | 0.30 | draft | database/Transaction Isolation.md |
-| 73 | 0.61 | 0.62 | 1.00 | 0.80 | curated | python/Python - OOP & Classes.md |
+| 73 | 0.61 | 0.62 | 0.99 | 0.80 | curated | python/Python - OOP & Classes.md |
 | 73 | 0.62 | 0.75 | 1.00 | 0.60 | reference | software-engineering/PowerShell Profile.md |
-| 71 | 0.56 | 0.75 | 1.00 | 0.60 | reference | python/Python - Files & Serialization.md |
+| 71 | 0.56 | 0.75 | 0.99 | 0.60 | reference | python/Python - Files & Serialization.md |
 
 ## Possible duplicates
 

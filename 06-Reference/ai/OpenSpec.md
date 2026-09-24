@@ -12,7 +12,7 @@ OpenSpec is an open-source Spec-Driven Development (SDD) framework that introduc
 ---
 # OpenSpec Repository Analysis Report
 
-**Repository:** [OpenSpec GitHub Repository](https://github.com/Fission-AI/OpenSpec?utm_source=chatgpt.com)  
+**Repository:** [OpenSpec GitHub Repository](https://github.com/Fission-AI/OpenSpec)  
 **Organization:** Fission AI  
 **Category:** AI-Assisted Software Engineering / Spec-Driven Development (SDD) Framework
 
@@ -22,7 +22,7 @@ OpenSpec is an open-source Spec-Driven Development (SDD) framework that introduc
 
 ## What is this project?
 
-OpenSpec is an open-source Spec-Driven Development (SDD) framework designed for AI coding assistants. It introduces a structured specification workflow that ensures requirements are defined, reviewed, and agreed upon before AI generates code. ([GitHub](https://github.com/Fission-AI/OpenSpec/blob/main/README.md?utm_source=chatgpt.com "README.md - Fission-AI/OpenSpec"))
+OpenSpec is an open-source Spec-Driven Development (SDD) framework designed for AI coding assistants. It introduces a structured specification workflow that ensures requirements are defined, reviewed, and agreed upon before AI generates code. ([GitHub](https://github.com/Fission-AI/OpenSpec/blob/main/README.md "README.md - Fission-AI/OpenSpec"))
 
 Rather than relying on chat history as the source of truth, OpenSpec stores specifications, proposals, designs, and implementation tasks directly within the repository.
 
@@ -43,7 +43,7 @@ Modern AI coding tools frequently suffer from:
 - Inconsistent implementation
     
 
-OpenSpec creates a specification layer between humans and AI agents so implementation becomes deterministic and auditable. ([GitHub](https://github.com/Fission-AI/OpenSpec/blob/main/README.md?utm_source=chatgpt.com "README.md - Fission-AI/OpenSpec"))
+OpenSpec creates a specification layer between humans and AI agents so implementation becomes deterministic and auditable. ([GitHub](https://github.com/Fission-AI/OpenSpec/blob/main/README.md "README.md - Fission-AI/OpenSpec"))
 
 ---
 
@@ -94,7 +94,7 @@ Evidence:
     
 - Large issue and PR activity
     
-- Growing ecosystem support across AI tools ([GitHub](https://github.com/Fission-AI/OpenSpec?utm_source=chatgpt.com "Fission-AI/OpenSpec: Spec-driven development (SDD) ..."))
+- Growing ecosystem support across AI tools ([GitHub](https://github.com/Fission-AI/OpenSpec "Fission-AI/OpenSpec: Spec-driven development (SDD) ..."))
     
 
 ---
@@ -155,7 +155,7 @@ Implementation
 Archive
 ```
 
-([GitHub](https://github.com/Fission-AI/OpenSpec/blob/main/docs/concepts.md?utm_source=chatgpt.com "OpenSpec/docs/concepts.md at main"))
+([GitHub](https://github.com/Fission-AI/OpenSpec/blob/main/docs/concepts.md "OpenSpec/docs/concepts.md at main"))
 
 ---
 
@@ -180,7 +180,7 @@ Supports numerous coding assistants:
 - Other agent frameworks
     
 
-([GitHub](https://github.com/Fission-AI/OpenSpec/blob/main/docs/supported-tools.md?utm_source=chatgpt.com "OpenSpec/docs/supported-tools.md at main"))
+([GitHub](https://github.com/Fission-AI/OpenSpec/blob/main/docs/supported-tools.md "OpenSpec/docs/supported-tools.md at main"))
 
 ---
 
@@ -197,7 +197,7 @@ artifacts:
   - tasks
 ```
 
-Custom dependency graphs are supported. ([GitHub](https://github.com/Fission-AI/OpenSpec/blob/main/docs/concepts.md?utm_source=chatgpt.com "OpenSpec/docs/concepts.md at main"))
+Custom dependency graphs are supported. ([GitHub](https://github.com/Fission-AI/OpenSpec/blob/main/docs/concepts.md "OpenSpec/docs/concepts.md at main"))
 
 ---
 
@@ -292,7 +292,7 @@ specs
 tasks
 ```
 
-([GitHub](https://github.com/Fission-AI/OpenSpec/blob/main/docs/concepts.md?utm_source=chatgpt.com "OpenSpec/docs/concepts.md at main"))
+([GitHub](https://github.com/Fission-AI/OpenSpec/blob/main/docs/concepts.md "OpenSpec/docs/concepts.md at main"))
 
 ---
 
@@ -317,7 +317,7 @@ Installs agent-specific instructions.
 .claude/skills/
 ```
 
-([GitHub](https://github.com/Fission-AI/OpenSpec/blob/main/docs/migration-guide.md?utm_source=chatgpt.com "OpenSpec/docs/migration-guide.md at main"))
+([GitHub](https://github.com/Fission-AI/OpenSpec/blob/main/docs/migration-guide.md "OpenSpec/docs/migration-guide.md at main"))
 
 ---
 
@@ -407,7 +407,7 @@ Not locked to:
 - AWS Kiro
     
 
-([GitHub](https://github.com/Fission-AI/OpenSpec?utm_source=chatgpt.com "Fission-AI/OpenSpec: Spec-driven development (SDD) ..."))
+([GitHub](https://github.com/Fission-AI/OpenSpec "Fission-AI/OpenSpec: Spec-driven development (SDD) ..."))
 
 ---
 
@@ -656,7 +656,7 @@ Responsibilities:
 npm install -g @fission-ai/openspec
 ```
 
-([GitHub](https://github.com/Fission-AI/OpenSpec?utm_source=chatgpt.com "Fission-AI/OpenSpec: Spec-driven development (SDD) ..."))
+([GitHub](https://github.com/Fission-AI/OpenSpec "Fission-AI/OpenSpec: Spec-driven development (SDD) ..."))
 
 ---
 
@@ -798,7 +798,7 @@ Strong engineering process tool, not yet a full enterprise platform.
 | Custom Workflows | High | Medium | Medium | N/A | Medium |
 | Data Engineering Fit | High | Medium | Medium | Low | Medium |
 
-([GitHub](https://github.com/Fission-AI/OpenSpec/blob/main/README.md?utm_source=chatgpt.com "README.md - Fission-AI/OpenSpec"))
+([GitHub](https://github.com/Fission-AI/OpenSpec/blob/main/README.md "README.md - Fission-AI/OpenSpec"))
 
 ---
 

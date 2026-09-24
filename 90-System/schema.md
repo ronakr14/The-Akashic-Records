@@ -95,6 +95,17 @@ status: log
 ---
 ```
 
+## Project state (inline fields, `02-Projects/`)
+
+`status` is note maturity, not project state. Project state lives in the body of each project's primary note (its MOC, or the single plan/vision note), directly under the AI Summary separator, as Dataview inline fields:
+
+```text
+project_status:: active | paused | discarded | done
+last_reviewed:: YYYY-MM-DD
+```
+
+Each primary note ends with a `## Log` section — dated one-line entries, newest last, for status changes and meaningful progress. Queried by the "Projects" table in [[Vault Dashboard]].
+
 ---
 
 ## Notes

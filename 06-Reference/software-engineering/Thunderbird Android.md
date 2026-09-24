@@ -19,7 +19,7 @@ It solves the very boring but very real problem of fragmented mobile email: too 
 
 Target audience: individual users who want a capable Android email client, privacy-conscious users, power users with multiple mailboxes, open-source supporters, and organizations that need a controlled, auditable mobile mail client. ([Google Play](https://play.google.com/store/apps/details?hl=en_IN&id=net.thunderbird.android "Thunderbird: Free Your Inbox – Apps on Google Play"))
 
-Maturity level: **production-ready, actively maintained, and enterprise-capable for its domain**, though still a consumer mobile app rather than a general enterprise platform. The repo has a large commit history, many releases, security review artifacts, and an explicit engineering process with ADRs and RFCs. ([GitHub](https://github.com/thunderbird/thunderbird-android?utm_source=chatgpt.com "Thunderbird for Android – Open Source Email App ..."))
+Maturity level: **production-ready, actively maintained, and enterprise-capable for its domain**, though still a consumer mobile app rather than a general enterprise platform. The repo has a large commit history, many releases, security review artifacts, and an explicit engineering process with ADRs and RFCs. ([GitHub](https://github.com/thunderbird/thunderbird-android "Thunderbird for Android – Open Source Email App ..."))
 
 ## 2. Repository Overview
 
@@ -54,7 +54,7 @@ Key technologies and languages: mostly **Kotlin** and some **Java**. The repo st
     
 - `library:*` shared libraries
     
-- `legacy:*` migration targets. ([GitHub](https://github.com/thunderbird/thunderbird-android?utm_source=chatgpt.com "Thunderbird for Android – Open Source Email App ..."))
+- `legacy:*` migration targets. ([GitHub](https://github.com/thunderbird/thunderbird-android "Thunderbird for Android – Open Source Email App ..."))
     
 
 High-level architecture inferred from the codebase:
@@ -208,12 +208,12 @@ Because the repo is large and the tool access here only exposed top-level struct
 **`app-thunderbird/`**  
 Purpose: Thunderbird-branded application entry point.  
 Responsibility: product-specific configuration, branding, release behavior.  
-Interactions: depends on shared app wiring and feature/core APIs. ([GitHub](https://github.com/thunderbird/thunderbird-android?utm_source=chatgpt.com "Thunderbird for Android – Open Source Email App ..."))
+Interactions: depends on shared app wiring and feature/core APIs. ([GitHub](https://github.com/thunderbird/thunderbird-android "Thunderbird for Android – Open Source Email App ..."))
 
 **`app-k9mail/`**  
 Purpose: K-9 Mail-branded application entry point.  
 Responsibility: legacy/parallel brand distribution.  
-Interactions: shares the same underlying implementation as Thunderbird. ([GitHub](https://github.com/thunderbird/thunderbird-android?utm_source=chatgpt.com "Thunderbird for Android – Open Source Email App ..."))
+Interactions: shares the same underlying implementation as Thunderbird. ([GitHub](https://github.com/thunderbird/thunderbird-android "Thunderbird for Android – Open Source Email App ..."))
 
 **`app-common/`**  
 Purpose: shared wiring layer.  
@@ -283,14 +283,14 @@ Operational considerations: security, signing fingerprints, privacy constraints,
     
 - **Limitations**: it is still a mobile mail client, so it will never replace backend tooling or enterprise mailbox policy engines.
     
-- **Missing features**: issue traffic suggests ongoing UX and protocol edge cases remain. ([GitHub](https://github.com/thunderbird/thunderbird-android/issues?utm_source=chatgpt.com "Issues · thunderbird/thunderbird-android"))
+- **Missing features**: issue traffic suggests ongoing UX and protocol edge cases remain. ([GitHub](https://github.com/thunderbird/thunderbird-android/issues "Issues · thunderbird/thunderbird-android"))
     
 - **Technical debt indicators**: the presence of `legacy:` modules and explicit migration guidance implies some historical baggage is still being managed, even if responsibly. ([GitHub](https://github.com/thunderbird/thunderbird-android/blob/main/AGENTS.md "thunderbird-android/AGENTS.md at main · thunderbird/thunderbird-android · GitHub"))
     
 
 ## 10. Enterprise Evaluation
 
-Production readiness: **9/10**. Mature release process, lots of history, security policy, and active public releases. ([GitHub](https://github.com/thunderbird/thunderbird-android?utm_source=chatgpt.com "Thunderbird for Android – Open Source Email App ..."))
+Production readiness: **9/10**. Mature release process, lots of history, security policy, and active public releases. ([GitHub](https://github.com/thunderbird/thunderbird-android "Thunderbird for Android – Open Source Email App ..."))
 
 Security: **8/10**. Strong privacy posture, security policy, certification/fingerprints, CASA Tier 2 reference, and audit history. Still, all email clients are attack surfaces by nature. ([GitHub](https://github.com/thunderbird/thunderbird-android/security/policy "Security Policy · thunderbird/thunderbird-android · GitHub"))
 
@@ -448,7 +448,7 @@ Anti-patterns:
 
 ### 1-page executive summary
 
-Thunderbird for Android is a mature, production-grade Android email client built from the K-9 Mail lineage and maintained under the Thunderbird brand. Its main value is simple: it gives users a privacy-focused, open-source, multi-account mail app with unified inbox, search, sync controls, and optional OpenPGP support. The repo is not a toy. It has a large commit history, multiple release tracks, a formal engineering process, and security documentation including a CASA Tier 2 reference and a prior audit. ([GitHub](https://github.com/thunderbird/thunderbird-android?utm_source=chatgpt.com "Thunderbird for Android – Open Source Email App ..."))
+Thunderbird for Android is a mature, production-grade Android email client built from the K-9 Mail lineage and maintained under the Thunderbird brand. Its main value is simple: it gives users a privacy-focused, open-source, multi-account mail app with unified inbox, search, sync controls, and optional OpenPGP support. The repo is not a toy. It has a large commit history, multiple release tracks, a formal engineering process, and security documentation including a CASA Tier 2 reference and a prior audit. ([GitHub](https://github.com/thunderbird/thunderbird-android "Thunderbird for Android – Open Source Email App ..."))
 
 Architecturally, it uses a white-label modular design that builds both Thunderbird and K-9 Mail from the same codebase. The repo’s API/internal module boundary is the main architectural control mechanism, and the `app-common` layer appears to handle wiring and dependency injection. That is a sane design for a product family that needs shared core behavior with controlled branding differences. ([GitHub](https://github.com/thunderbird/thunderbird-android/blob/main/AGENTS.md "thunderbird-android/AGENTS.md at main · thunderbird/thunderbird-android · GitHub"))
 

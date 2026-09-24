@@ -10,7 +10,7 @@ level: advanced
 OpenHarness is an open-source AI agent runtime that transforms language models into production-style agents through tool execution, permissions, memory, plugins, hooks, MCP integration, and multi-agent coordination. The note analyzes its modular architecture, agent execution loop, provider abstraction, policy enforcement, session management, extensibility model, deployment options, engineering trade-offs, enterprise evaluation, and practical use cases. It serves as a comprehensive reference for designing controllable, extensible, and production-oriented AI agent platforms with support for coding assistants, automation workflows, and multi-agent systems.
 
 ---
-Below is a deep architectural review of **HKUDS/OpenHarness**, based on the repository’s README, contribution guide, package metadata, directory layout, showcase docs, release notes, and recent repository activity. The repo is clearly active and evolving quickly, so this assessment reflects the current state exposed by GitHub as of today. ([GitHub](https://github.com/HKUDS/OpenHarness?utm_source=chatgpt.com "\"OpenHarness: Open Agent Harness with a Built- ..."))
+Below is a deep architectural review of **HKUDS/OpenHarness**, based on the repository’s README, contribution guide, package metadata, directory layout, showcase docs, release notes, and recent repository activity. The repo is clearly active and evolving quickly, so this assessment reflects the current state exposed by GitHub as of today. ([GitHub](https://github.com/HKUDS/OpenHarness "\"OpenHarness: Open Agent Harness with a Built- ..."))
 
 ---
 
@@ -53,14 +53,14 @@ OpenHarness is a general-purpose harness for agentic workflows: a runtime that s
     
 - Multi-agent “swarm” coordination with subagents and background tasks.
     
-- CLI and TUI workflows, plus Ohmo personal-agent app. ([GitHub](https://github.com/HKUDS/OpenHarness?utm_source=chatgpt.com "\"OpenHarness: Open Agent Harness with a Built- ..."))
+- CLI and TUI workflows, plus Ohmo personal-agent app. ([GitHub](https://github.com/HKUDS/OpenHarness "\"OpenHarness: Open Agent Harness with a Built- ..."))
     
 
 **Key technologies**  
 The package metadata shows Python 3.10+, `anthropic`, `openai`, `rich`, `prompt-toolkit`, `textual`, `typer`, `pydantic`, `httpx`, `websockets`, `mcp`, `pyyaml`, `watchfiles`, `croniter`, and messaging SDKs for Slack, Telegram, Discord, and Feishu/Lark. That points to a Python-first agent runtime with both interactive and integration-heavy capabilities. ([GitHub](https://github.com/HKUDS/OpenHarness/blob/main/pyproject.toml "OpenHarness/pyproject.toml at main · HKUDS/OpenHarness · GitHub"))
 
 **High-level architecture inferred from the codebase**  
-The repo is structured around a modular harness. The top-level `src/openharness` tree includes `engine`, `tools`, `skills`, `plugins`, `permissions`, `hooks`, `commands`, `mcp`, `memory`, `tasks`, `coordinator`/`swarm`, `prompts`, `config`, `ui`, `voice`, and support modules. That is a textbook “agent platform” decomposition: prompt construction, tool orchestration, policy enforcement, extensibility, and runtime state are all separated. ([GitHub](https://github.com/HKUDS/OpenHarness?utm_source=chatgpt.com "\"OpenHarness: Open Agent Harness with a Built- ..."))
+The repo is structured around a modular harness. The top-level `src/openharness` tree includes `engine`, `tools`, `skills`, `plugins`, `permissions`, `hooks`, `commands`, `mcp`, `memory`, `tasks`, `coordinator`/`swarm`, `prompts`, `config`, `ui`, `voice`, and support modules. That is a textbook “agent platform” decomposition: prompt construction, tool orchestration, policy enforcement, extensibility, and runtime state are all separated. ([GitHub](https://github.com/HKUDS/OpenHarness "\"OpenHarness: Open Agent Harness with a Built- ..."))
 
 ---
 
@@ -89,7 +89,7 @@ A user sends a prompt. OpenHarness assembles context from config, memory, skills
     
 - `prompts`: system prompt assembly and context injection.
     
-- `config`: layered settings and migrations. ([GitHub](https://github.com/HKUDS/OpenHarness?utm_source=chatgpt.com "\"OpenHarness: Open Agent Harness with a Built- ..."))
+- `config`: layered settings and migrations. ([GitHub](https://github.com/HKUDS/OpenHarness "\"OpenHarness: Open Agent Harness with a Built- ..."))
     
 
 **Data flow and execution flow**
@@ -110,7 +110,7 @@ A user sends a prompt. OpenHarness assembles context from config, memory, skills
     
 
 **Integrations and dependencies**  
-OpenHarness is wired for multiple providers, OpenAI-compatible backends, and GitHub Copilot-style auth. It also supports MCP servers and multiple messaging platforms, which means it is designed for being a connective tissue layer rather than a single-purpose chatbot. The release notes show expansion to provider profiles like NVIDIA NIM, ModelScope, Qwen/DashScope, MiniMax, Gemini, Moonshot/Kimi, and OpenAI-compatible workflows. ([GitHub](https://github.com/HKUDS/OpenHarness?utm_source=chatgpt.com "\"OpenHarness: Open Agent Harness with a Built- ..."))
+OpenHarness is wired for multiple providers, OpenAI-compatible backends, and GitHub Copilot-style auth. It also supports MCP servers and multiple messaging platforms, which means it is designed for being a connective tissue layer rather than a single-purpose chatbot. The release notes show expansion to provider profiles like NVIDIA NIM, ModelScope, Qwen/DashScope, MiniMax, Gemini, Moonshot/Kimi, and OpenAI-compatible workflows. ([GitHub](https://github.com/HKUDS/OpenHarness "\"OpenHarness: Open Agent Harness with a Built- ..."))
 
 ---
 
@@ -223,7 +223,7 @@ Indirect relevance only. It could automate reporting or analysis tasks, but this
 Strong fit for product teams that want AI-assisted engineering, documentation, and workflow automation. ([GitHub](https://github.com/HKUDS/OpenHarness/blob/main/docs/SHOWCASE.md "OpenHarness/docs/SHOWCASE.md at main · HKUDS/OpenHarness · GitHub"))
 
 **Enterprise Applications**  
-Possible as an internal harness for controlled agent workflows, but only after serious hardening, policy review, observability, and security work. ([GitHub](https://github.com/HKUDS/OpenHarness/issues?utm_source=chatgpt.com "Issues · HKUDS/OpenHarness"))
+Possible as an internal harness for controlled agent workflows, but only after serious hardening, policy review, observability, and security work. ([GitHub](https://github.com/HKUDS/OpenHarness/issues "Issues · HKUDS/OpenHarness"))
 
 ---
 
@@ -232,12 +232,12 @@ Possible as an internal harness for controlled agent workflows, but only after s
 **`src/openharness/engine`**  
 Purpose: core agent loop.  
 Responsibilities: orchestration of model calls, tool calls, observation handling.  
-Interaction: depends on tools, permissions, prompts, and providers. ([GitHub](https://github.com/HKUDS/OpenHarness?utm_source=chatgpt.com "\"OpenHarness: Open Agent Harness with a Built- ..."))
+Interaction: depends on tools, permissions, prompts, and providers. ([GitHub](https://github.com/HKUDS/OpenHarness "\"OpenHarness: Open Agent Harness with a Built- ..."))
 
 **`src/openharness/tools`**  
 Purpose: executable capabilities.  
 Responsibilities: file I/O, shell, search, web, MCP and other actions.  
-Interaction: invoked by engine after permission checks. ([GitHub](https://github.com/HKUDS/OpenHarness?utm_source=chatgpt.com "\"OpenHarness: Open Agent Harness with a Built- ..."))
+Interaction: invoked by engine after permission checks. ([GitHub](https://github.com/HKUDS/OpenHarness "\"OpenHarness: Open Agent Harness with a Built- ..."))
 
 **`src/openharness/skills`**  
 Purpose: Markdown skill loading.  
@@ -247,7 +247,7 @@ Interaction: prompt assembly and tool selection. ([GitHub](https://github.com/HK
 **`src/openharness/plugins`**  
 Purpose: extensibility layer.  
 Responsibilities: commands, hooks, agents, MCP servers.  
-Interaction: shapes runtime behavior and workflow composition. ([GitHub](https://github.com/HKUDS/OpenHarness?utm_source=chatgpt.com "\"OpenHarness: Open Agent Harness with a Built- ..."))
+Interaction: shapes runtime behavior and workflow composition. ([GitHub](https://github.com/HKUDS/OpenHarness "\"OpenHarness: Open Agent Harness with a Built- ..."))
 
 **`src/openharness/permissions`**  
 Purpose: safety policy layer.  
@@ -257,7 +257,7 @@ Interaction: gates tool calls before execution. ([GitHub](https://github.com/HKU
 **`src/openharness/hooks`**  
 Purpose: lifecycle events.  
 Responsibilities: pre/post tool use actions.  
-Interaction: instrumentation and policy enforcement. ([GitHub](https://github.com/HKUDS/OpenHarness?utm_source=chatgpt.com "\"OpenHarness: Open Agent Harness with a Built- ..."))
+Interaction: instrumentation and policy enforcement. ([GitHub](https://github.com/HKUDS/OpenHarness "\"OpenHarness: Open Agent Harness with a Built- ..."))
 
 **`src/openharness/memory`**  
 Purpose: durable cross-session memory.  
@@ -267,17 +267,17 @@ Interaction: prompt assembly and session restore. ([GitHub](https://github.com/H
 **`src/openharness/coordinator` / `swarm`**  
 Purpose: multi-agent orchestration.  
 Responsibilities: subagent spawning, delegation, team lifecycle.  
-Interaction: engine, tasks, and background work. ([GitHub](https://github.com/HKUDS/OpenHarness?utm_source=chatgpt.com "\"OpenHarness: Open Agent Harness with a Built- ..."))
+Interaction: engine, tasks, and background work. ([GitHub](https://github.com/HKUDS/OpenHarness "\"OpenHarness: Open Agent Harness with a Built- ..."))
 
 **`src/openharness/commands`**  
 Purpose: slash commands and CLI commands.  
 Responsibilities: user-facing operations like plan, resume, commit.  
-Interaction: CLI/TUI and engine. ([GitHub](https://github.com/HKUDS/OpenHarness?utm_source=chatgpt.com "\"OpenHarness: Open Agent Harness with a Built- ..."))
+Interaction: CLI/TUI and engine. ([GitHub](https://github.com/HKUDS/OpenHarness "\"OpenHarness: Open Agent Harness with a Built- ..."))
 
 **`src/openharness/config`**  
 Purpose: settings and migrations.  
 Responsibilities: layered runtime config, provider/workflow setup.  
-Interaction: loaded at startup, used everywhere. ([GitHub](https://github.com/HKUDS/OpenHarness?utm_source=chatgpt.com "\"OpenHarness: Open Agent Harness with a Built- ..."))
+Interaction: loaded at startup, used everywhere. ([GitHub](https://github.com/HKUDS/OpenHarness "\"OpenHarness: Open Agent Harness with a Built- ..."))
 
 ---
 
@@ -287,7 +287,7 @@ Interaction: loaded at startup, used everywhere. ([GitHub](https://github.com/HK
 Python 3.10+, `uv`-based setup, and optional frontend tooling for the React terminal UI. The dev flow uses `uv sync --extra dev`, with `npm ci` and `npx tsc --noEmit` for the frontend. ([GitHub](https://github.com/HKUDS/OpenHarness/blob/main/pyproject.toml "OpenHarness/pyproject.toml at main · HKUDS/OpenHarness · GitHub"))
 
 **Deployment options**  
-Local CLI, terminal UI, personal-agent app (`ohmo`), and recent work suggests web frontend support is being added or actively developed through FastAPI + React. ([GitHub](https://github.com/HKUDS/OpenHarness/pull/87?utm_source=chatgpt.com "feat(frontend) - Add web frontend and FastAPI web server by Shun ..."))
+Local CLI, terminal UI, personal-agent app (`ohmo`), and recent work suggests web frontend support is being added or actively developed through FastAPI + React. ([GitHub](https://github.com/HKUDS/OpenHarness/pull/87 "feat(frontend) - Add web frontend and FastAPI web server by Shun ..."))
 
 **Infrastructure requirements**  
 At minimum: local Python environment and an LLM provider. For more advanced workflows: MCP servers, provider credentials, and possibly messaging platform integrations. ([GitHub](https://github.com/HKUDS/OpenHarness/blob/main/pyproject.toml "OpenHarness/pyproject.toml at main · HKUDS/OpenHarness · GitHub"))
@@ -296,7 +296,7 @@ At minimum: local Python environment and an LLM provider. For more advanced work
 Moderate to steep. The surface area is large: providers, skills, permissions, hooks, plugins, MCP, and multi-agent workflows. The docs help, but this is not a toy project. ([GitHub](https://github.com/HKUDS/OpenHarness/blob/main/docs/SHOWCASE.md "OpenHarness/docs/SHOWCASE.md at main · HKUDS/OpenHarness · GitHub"))
 
 **Operational considerations**  
-This is where the project gets real: permissions need to be configured carefully, output modes need testing, Windows support has some rough edges, and the repo itself shows active bug fixing around access control and tool containment. That means adoption needs guardrails, not just enthusiasm. ([GitHub](https://github.com/HKUDS/OpenHarness/issues?utm_source=chatgpt.com "Issues · HKUDS/OpenHarness"))
+This is where the project gets real: permissions need to be configured carefully, output modes need testing, Windows support has some rough edges, and the repo itself shows active bug fixing around access control and tool containment. That means adoption needs guardrails, not just enthusiasm. ([GitHub](https://github.com/HKUDS/OpenHarness/issues "Issues · HKUDS/OpenHarness"))
 
 ---
 
@@ -304,7 +304,7 @@ This is where the project gets real: permissions need to be configured carefully
 
 **Strengths**
 
-- **Scalability**: modular subsystems and multi-agent support make the design scale by decomposition. ([GitHub](https://github.com/HKUDS/OpenHarness?utm_source=chatgpt.com "\"OpenHarness: Open Agent Harness with a Built- ..."))
+- **Scalability**: modular subsystems and multi-agent support make the design scale by decomposition. ([GitHub](https://github.com/HKUDS/OpenHarness "\"OpenHarness: Open Agent Harness with a Built- ..."))
     
 - **Maintainability**: clear package boundaries and explicit contributing/testing guidance help. ([GitHub](https://github.com/HKUDS/OpenHarness/blob/main/CONTRIBUTING.md "OpenHarness/CONTRIBUTING.md at main · HKUDS/OpenHarness · GitHub"))
     
@@ -317,13 +317,13 @@ This is where the project gets real: permissions need to be configured carefully
 
 **Weaknesses**
 
-- **Risks**: open issues indicate permission bypass, workspace containment concerns, and Windows quirks. That is not noise; that is a real risk profile. ([GitHub](https://github.com/HKUDS/OpenHarness/issues?utm_source=chatgpt.com "Issues · HKUDS/OpenHarness"))
+- **Risks**: open issues indicate permission bypass, workspace containment concerns, and Windows quirks. That is not noise; that is a real risk profile. ([GitHub](https://github.com/HKUDS/OpenHarness/issues "Issues · HKUDS/OpenHarness"))
     
 - **Limitations**: it is strongly opinionated around agent workflows and still depends on good provider/config setup. ([GitHub](https://github.com/HKUDS/OpenHarness/blob/main/README.zh-CN.md "OpenHarness/README.zh-CN.md at main · HKUDS/OpenHarness · GitHub"))
     
 - **Missing features**: observability/enterprise controls are not obviously mature from the public repo surface. ([GitHub](https://github.com/HKUDS/OpenHarness/blob/main/CONTRIBUTING.md "OpenHarness/CONTRIBUTING.md at main · HKUDS/OpenHarness · GitHub"))
     
-- **Technical debt indicators**: rapid release cadence, active bug churn, and evolving frontend/web work point to a moving target. ([GitHub](https://github.com/HKUDS/OpenHarness/releases?utm_source=chatgpt.com "Releases · HKUDS/OpenHarness"))
+- **Technical debt indicators**: rapid release cadence, active bug churn, and evolving frontend/web work point to a moving target. ([GitHub](https://github.com/HKUDS/OpenHarness/releases "Releases · HKUDS/OpenHarness"))
     
 
 ---
@@ -331,13 +331,13 @@ This is where the project gets real: permissions need to be configured carefully
 ## 10. Enterprise Evaluation
 
 **Production readiness: 5/10**  
-Promising foundation, but still too much active churn and too many safety/containment edge cases to call it production-safe for broad enterprise use. ([GitHub](https://github.com/HKUDS/OpenHarness/issues?utm_source=chatgpt.com "Issues · HKUDS/OpenHarness"))
+Promising foundation, but still too much active churn and too many safety/containment edge cases to call it production-safe for broad enterprise use. ([GitHub](https://github.com/HKUDS/OpenHarness/issues "Issues · HKUDS/OpenHarness"))
 
 **Security: 4/10**  
 Permissions exist, but the repo’s own issue tracker exposes bypass/containment concerns. Good idea, not yet fully battle-hardened. ([GitHub](https://github.com/HKUDS/OpenHarness "GitHub - HKUDS/OpenHarness: \"OpenHarness: Open Agent Harness with a Built-in Personal Agent--Ohmo!\" · GitHub"))
 
 **Scalability: 7/10**  
-Architecturally solid for scaling workflows through tools, skills, and subagents, but scalability in enterprise deployment is not proven by the public docs alone. ([GitHub](https://github.com/HKUDS/OpenHarness?utm_source=chatgpt.com "\"OpenHarness: Open Agent Harness with a Built- ..."))
+Architecturally solid for scaling workflows through tools, skills, and subagents, but scalability in enterprise deployment is not proven by the public docs alone. ([GitHub](https://github.com/HKUDS/OpenHarness "\"OpenHarness: Open Agent Harness with a Built- ..."))
 
 **Observability: 5/10**  
 There is some structured output and runtime preview, but I did not see strong evidence of enterprise-grade telemetry, tracing, or audit tooling in the visible docs. ([GitHub](https://github.com/HKUDS/OpenHarness/blob/main/docs/SHOWCASE.md "OpenHarness/docs/SHOWCASE.md at main · HKUDS/OpenHarness · GitHub"))
@@ -346,20 +346,20 @@ There is some structured output and runtime preview, but I did not see strong ev
 Better than average. The repo has README content, Chinese docs, contributing guidance, showcase docs, and release notes. ([GitHub](https://github.com/HKUDS/OpenHarness/blob/main/CONTRIBUTING.md "OpenHarness/CONTRIBUTING.md at main · HKUDS/OpenHarness · GitHub"))
 
 **Community support: 8/10**  
-The project has strong star/fork activity and active issues/PRs, which usually signals an engaged community. ([GitHub](https://github.com/HKUDS/OpenHarness/issues?utm_source=chatgpt.com "Issues · HKUDS/OpenHarness"))
+The project has strong star/fork activity and active issues/PRs, which usually signals an engaged community. ([GitHub](https://github.com/HKUDS/OpenHarness/issues "Issues · HKUDS/OpenHarness"))
 
 **Maintainability: 6/10**  
-Good modular decomposition, but maintainability is tempered by the breadth of integrations and the pace of change. ([GitHub](https://github.com/HKUDS/OpenHarness?utm_source=chatgpt.com "\"OpenHarness: Open Agent Harness with a Built- ..."))
+Good modular decomposition, but maintainability is tempered by the breadth of integrations and the pace of change. ([GitHub](https://github.com/HKUDS/OpenHarness "\"OpenHarness: Open Agent Harness with a Built- ..."))
 
 ---
 
 ## 11. Comparison with Alternatives
 
 **Claude Code / similar coding agents**  
-OpenHarness is in the same conceptual neighborhood but is more explicit about being a harness and more hackable/extensible. Claude Code is more polished as a product experience; OpenHarness is more customizable and inspectable. ([GitHub](https://github.com/HKUDS/OpenHarness?utm_source=chatgpt.com "\"OpenHarness: Open Agent Harness with a Built- ..."))
+OpenHarness is in the same conceptual neighborhood but is more explicit about being a harness and more hackable/extensible. Claude Code is more polished as a product experience; OpenHarness is more customizable and inspectable. ([GitHub](https://github.com/HKUDS/OpenHarness "\"OpenHarness: Open Agent Harness with a Built- ..."))
 
 **OpenAI/Copilot-style agent tooling**  
-Those are typically more productized and ecosystem-integrated. OpenHarness gives you more local control and more visible internals, but less vendor polish. ([GitHub](https://github.com/HKUDS/OpenHarness?utm_source=chatgpt.com "\"OpenHarness: Open Agent Harness with a Built- ..."))
+Those are typically more productized and ecosystem-integrated. OpenHarness gives you more local control and more visible internals, but less vendor polish. ([GitHub](https://github.com/HKUDS/OpenHarness "\"OpenHarness: Open Agent Harness with a Built- ..."))
 
 **General agent frameworks**  
 Versus generic orchestration frameworks, OpenHarness is more opinionated around coding, CLI workflows, permissions, and skills/plugins. That makes it less abstract but more immediately useful for operator/developer workflows. ([GitHub](https://github.com/HKUDS/OpenHarness "GitHub - HKUDS/OpenHarness: \"OpenHarness: Open Agent Harness with a Built-in Personal Agent--Ohmo!\" · GitHub"))
@@ -368,7 +368,7 @@ Versus generic orchestration frameworks, OpenHarness is more opinionated around 
 OpenHarness is open source and MIT licensed, so software cost is low. Real cost comes from integration work, model usage, and operational hardening. ([GitHub](https://github.com/HKUDS/OpenHarness/blob/main/README.zh-CN.md "OpenHarness/README.zh-CN.md at main · HKUDS/OpenHarness · GitHub"))
 
 **Ecosystem**  
-The ecosystem is growing quickly, but it is still younger than the major commercial agent ecosystems. ([GitHub](https://github.com/HKUDS/OpenHarness/releases?utm_source=chatgpt.com "Releases · HKUDS/OpenHarness"))
+The ecosystem is growing quickly, but it is still younger than the major commercial agent ecosystems. ([GitHub](https://github.com/HKUDS/OpenHarness/releases "Releases · HKUDS/OpenHarness"))
 
 ---
 
@@ -415,7 +415,7 @@ The ecosystem is growing quickly, but it is still younger than the major commerc
     
 - Tool sets that are not clearly workspace-bound.
     
-- Rapid feature growth without matching hardening. ([GitHub](https://github.com/HKUDS/OpenHarness/issues?utm_source=chatgpt.com "Issues · HKUDS/OpenHarness"))
+- Rapid feature growth without matching hardening. ([GitHub](https://github.com/HKUDS/OpenHarness/issues "Issues · HKUDS/OpenHarness"))
     
 
 ---
@@ -508,7 +508,7 @@ OpenHarness is a serious, fast-moving open-source agent runtime. Its value is no
     
 - Real safety/policy concerns still visible in open issues.
     
-- Better suited to advanced users and internal tooling than regulated production use. ([GitHub](https://github.com/HKUDS/OpenHarness?utm_source=chatgpt.com "\"OpenHarness: Open Agent Harness with a Built- ..."))
+- Better suited to advanced users and internal tooling than regulated production use. ([GitHub](https://github.com/HKUDS/OpenHarness "\"OpenHarness: Open Agent Harness with a Built- ..."))
     
 
 **Recommended adoption scenarios**
@@ -530,7 +530,7 @@ OpenHarness is a serious, fast-moving open-source agent runtime. Its value is no
     
 - **Evaluate**: internal team copilots, workflow automation, controlled multi-agent use.
     
-- **Avoid**: broad enterprise deployment, regulated environments, high-trust autonomous execution without additional controls. ([GitHub](https://github.com/HKUDS/OpenHarness/issues?utm_source=chatgpt.com "Issues · HKUDS/OpenHarness"))
+- **Avoid**: broad enterprise deployment, regulated environments, high-trust autonomous execution without additional controls. ([GitHub](https://github.com/HKUDS/OpenHarness/issues "Issues · HKUDS/OpenHarness"))
     
 
 ---

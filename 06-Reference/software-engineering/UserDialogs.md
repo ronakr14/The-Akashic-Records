@@ -270,7 +270,7 @@ Likely alternatives include:
     
 - **Modern MAUI dialog libraries**: better alignment with current .NET mobile stacks.
     
-- **Native dialogs built directly into app code**: simpler in tiny apps, worse reuse at scale. ([NuGet](https://www.nuget.org/packages/Acr.UserDialogs?utm_source=chatgpt.com "Acr.UserDialogs 9.2.2"))
+- **Native dialogs built directly into app code**: simpler in tiny apps, worse reuse at scale. ([NuGet](https://www.nuget.org/packages/Acr.UserDialogs "Acr.UserDialogs 9.2.2"))
     
 
 **Feature comparison**  
@@ -286,7 +286,7 @@ Likely fine for its purpose. Native dialogs are lightweight, and the abstraction
 Open source, so software cost is low. The real cost is migration and maintenance risk.
 
 **Ecosystem**  
-Weak compared with newer .NET MAUI-oriented libraries and the broader current Microsoft mobile ecosystem. ([NuGet](https://www.nuget.org/packages/Acr.UserDialogs.Maui?utm_source=chatgpt.com "Acr.UserDialogs.Maui 9.2.2"))
+Weak compared with newer .NET MAUI-oriented libraries and the broader current Microsoft mobile ecosystem. ([NuGet](https://www.nuget.org/packages/Acr.UserDialogs.Maui "Acr.UserDialogs.Maui 9.2.2"))
 
 ## 12. Engineering Takeaways
 

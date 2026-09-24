@@ -15,13 +15,13 @@ Here’s the deep read on **zzet/gortex**.
 ## 1. Executive Summary
 
 **What it is:**  
-Gortex is a **local-first code intelligence engine** for AI agents and IDEs. It indexes source code into a graph and exposes that graph through CLI, MCP server, HTTP API, and a web UI. The project positions itself as an “AI coding agents teammate” that gives agents only the context they need instead of dumping whole files into the prompt. ([GitHub](https://github.com/zzet/gortex?utm_source=chatgpt.com "GitHub - zzet/gortex: High-performance code-intelligence ..."))
+Gortex is a **local-first code intelligence engine** for AI agents and IDEs. It indexes source code into a graph and exposes that graph through CLI, MCP server, HTTP API, and a web UI. The project positions itself as an “AI coding agents teammate” that gives agents only the context they need instead of dumping whole files into the prompt. ([GitHub](https://github.com/zzet/gortex "GitHub - zzet/gortex: High-performance code-intelligence ..."))
 
 **What problem it solves:**  
-The core problem is **context overload**. Traditional code assistance tools often rely on file reads, broad search, and large context windows. Gortex instead precomputes a provenance-aware graph of symbols, references, call chains, routes, contracts, and related relationships so agents can query precise slices of knowledge. The claimed result is dramatically lower token usage and faster reasoning over large codebases. ([GitHub](https://github.com/zzet/gortex?utm_source=chatgpt.com "GitHub - zzet/gortex: High-performance code-intelligence ..."))
+The core problem is **context overload**. Traditional code assistance tools often rely on file reads, broad search, and large context windows. Gortex instead precomputes a provenance-aware graph of symbols, references, call chains, routes, contracts, and related relationships so agents can query precise slices of knowledge. The claimed result is dramatically lower token usage and faster reasoning over large codebases. ([GitHub](https://github.com/zzet/gortex "GitHub - zzet/gortex: High-performance code-intelligence ..."))
 
 **Target audience:**  
-AI coding agents, IDE integrations, platform engineering teams, and developers working in large or multi-repository systems. It is also relevant to teams building internal developer platforms or agentic workflows that need code understanding, impact analysis, and review automation. ([GitHub](https://github.com/zzet/gortex?utm_source=chatgpt.com "GitHub - zzet/gortex: High-performance code-intelligence ..."))
+AI coding agents, IDE integrations, platform engineering teams, and developers working in large or multi-repository systems. It is also relevant to teams building internal developer platforms or agentic workflows that need code understanding, impact analysis, and review automation. ([GitHub](https://github.com/zzet/gortex "GitHub - zzet/gortex: High-performance code-intelligence ..."))
 
 **Maturity level:**  
 This looks **well beyond prototype**. It has 2,462 commits, 871 stars, 101 releases, dedicated docs, benchmarks, security policy, cross-platform packaging, and multiple transport surfaces. That said, it still looks like a fast-moving product with active issue churn and feature evolution, so I would classify it as **production-capable but still actively hardening**, not “fully mature enterprise platform” in the conservative sense. ([GitHub](https://github.com/zzet/gortex "GitHub - zzet/gortex: High-performance code-intelligence engine for AI agents and IDE, supports 257 languages, multi repositories, based on graph, with access via CLI, MCP Server, and API. AI coding agents teammate - expose only needed information, cutting token usage up to 50x. 100% local. Discord: https://discord.gg/ysC2prTGD · GitHub"))
@@ -31,7 +31,7 @@ This looks **well beyond prototype**. It has 2,462 commits, 871 stars, 101 relea
 ## 2. Repository Overview
 
 **Main purpose:**  
-Build a **knowledge graph of codebases** and serve it to tools and agents with low-friction access. Gortex supports multi-repo graphing, cross-repo contract detection, semantic search, PR review workflows, and agent integrations. ([GitHub](https://github.com/zzet/gortex?utm_source=chatgpt.com "GitHub - zzet/gortex: High-performance code-intelligence ..."))
+Build a **knowledge graph of codebases** and serve it to tools and agents with low-friction access. Gortex supports multi-repo graphing, cross-repo contract detection, semantic search, PR review workflows, and agent integrations. ([GitHub](https://github.com/zzet/gortex "GitHub - zzet/gortex: High-performance code-intelligence ..."))
 
 **Core features and capabilities:**  
 The repo claims:
@@ -118,13 +118,13 @@ From the repo layout and docs, the big buckets appear to be:
     
 
 **Data flow:**  
-Code files are parsed with tree-sitter and other resolvers. The project then builds a provenance-tiered graph, adds cross-repo edges where relevant, indexes semantic content, and persists snapshots. Query surfaces read from this graph and return precise tool outputs instead of raw files. ([GitHub](https://github.com/zzet/gortex?utm_source=chatgpt.com "GitHub - zzet/gortex: High-performance code-intelligence ..."))
+Code files are parsed with tree-sitter and other resolvers. The project then builds a provenance-tiered graph, adds cross-repo edges where relevant, indexes semantic content, and persists snapshots. Query surfaces read from this graph and return precise tool outputs instead of raw files. ([GitHub](https://github.com/zzet/gortex "GitHub - zzet/gortex: High-performance code-intelligence ..."))
 
 **Execution flow:**  
 The daemon appears to be the center of gravity. It watches repositories, maintains graph state, serves MCP/HTTP requests, and isolates sessions while sharing the underlying indexed graph. The README explicitly shows the CLI, MCP, HTTP, and daemon all converging on the same query engine and graph. ([GitHub](https://github.com/zzet/gortex/blob/main/README.md "gortex/README.md at main · zzet/gortex · GitHub"))
 
 **Integrations and dependencies:**  
-It integrates with many AI coding tools and supports MCP transport, so it can plug into assistants like Claude Code, Cursor, Codex CLI, and others. It also supports multiple LLM providers optionally, though those are not required for core graph functionality. ([GitHub](https://github.com/zzet/gortex?utm_source=chatgpt.com "GitHub - zzet/gortex: High-performance code-intelligence ..."))
+It integrates with many AI coding tools and supports MCP transport, so it can plug into assistants like Claude Code, Cursor, Codex CLI, and others. It also supports multiple LLM providers optionally, though those are not required for core graph functionality. ([GitHub](https://github.com/zzet/gortex "GitHub - zzet/gortex: High-performance code-intelligence ..."))
 
 ---
 
@@ -151,7 +151,7 @@ AI coding assistants are often context-hungry, slow, and wasteful. They over-rea
     
 
 **Advantages over traditional approaches:**  
-Compared with grep/search plus file reads, Gortex is more semantic and more targeted. Compared with ad hoc RAG over code, it is graph-native and precomputes relationships. Compared with IDE-only intelligence, it is agent-accessible through standard protocols. ([GitHub](https://github.com/zzet/gortex?utm_source=chatgpt.com "GitHub - zzet/gortex: High-performance code-intelligence ..."))
+Compared with grep/search plus file reads, Gortex is more semantic and more targeted. Compared with ad hoc RAG over code, it is graph-native and precomputes relationships. Compared with IDE-only intelligence, it is agent-accessible through standard protocols. ([GitHub](https://github.com/zzet/gortex "GitHub - zzet/gortex: High-performance code-intelligence ..."))
 
 **Differentiators:**  
 The most notable differentiators are:
@@ -168,7 +168,7 @@ The most notable differentiators are:
     
 - cross-repo contract matching
     
-- “single install configures all detected agents” positioning ([GitHub](https://github.com/zzet/gortex?utm_source=chatgpt.com "GitHub - zzet/gortex: High-performance code-intelligence ..."))
+- “single install configures all detected agents” positioning ([GitHub](https://github.com/zzet/gortex "GitHub - zzet/gortex: High-performance code-intelligence ..."))
     
 
 ---
@@ -234,7 +234,7 @@ Implementation details for parsers, resolvers, persistence, watchers, and transp
 Central source for graph schema, data flow, and persistence model. The README points here as the canonical architecture reference. ([GitHub](https://github.com/zzet/gortex/blob/main/README.md "gortex/README.md at main · zzet/gortex · GitHub"))
 
 **`docs/mcp.md`**  
-Defines the MCP surface: tools, resources, prompts, and transport details. This is critical because MCP is one of the main integration surfaces. ([GitHub](https://github.com/zzet/gortex/blob/main/docs/mcp.md?utm_source=chatgpt.com "gortex/docs/mcp.md at main · zzet ..."))
+Defines the MCP surface: tools, resources, prompts, and transport details. This is critical because MCP is one of the main integration surfaces. ([GitHub](https://github.com/zzet/gortex/blob/main/docs/mcp.md "gortex/docs/mcp.md at main · zzet ..."))
 
 **`docs/contracts.md`**  
 Explains cross-repo API contract detection and normalization. Important for understanding the project’s “system-of-systems” mindset. ([GitHub](https://github.com/zzet/gortex/blob/main/README.md "gortex/README.md at main · zzet/gortex · GitHub"))
@@ -295,11 +295,11 @@ There is a long-lived daemon, background file watching, snapshot persistence, an
 
 **Weaknesses**
 
-- **Risk:** Huge feature surface area means more places to break. The issue tracker already shows active bugs and config drift. ([GitHub](https://github.com/zzet/gortex/issues/261?utm_source=chatgpt.com "Daemon loads only workspace metadata instead of full graph"))
+- **Risk:** Huge feature surface area means more places to break. The issue tracker already shows active bugs and config drift. ([GitHub](https://github.com/zzet/gortex/issues/261 "Daemon loads only workspace metadata instead of full graph"))
     
 - **Limitations:** It is highly opinionated around graph-based code intelligence; not a general-purpose platform.
     
-- **Missing features:** Likely gaps still exist around edge cases, language completeness, and agent interoperability. The issue tracker suggests this is still evolving fast. ([GitHub](https://github.com/zzet/gortex/issues/261?utm_source=chatgpt.com "Daemon loads only workspace metadata instead of full graph"))
+- **Missing features:** Likely gaps still exist around edge cases, language completeness, and agent interoperability. The issue tracker suggests this is still evolving fast. ([GitHub](https://github.com/zzet/gortex/issues/261 "Daemon loads only workspace metadata instead of full graph"))
     
 - **Technical debt indicators:** Large dependency footprint, wide language support, and very active feature expansion can create maintenance pressure. The repo is ambitious enough that that risk is real. ([GitHub](https://github.com/zzet/gortex/blob/main/go.mod "gortex/go.mod at main · zzet/gortex · GitHub"))
     
@@ -312,7 +312,7 @@ There is a long-lived daemon, background file watching, snapshot persistence, an
 Strong packaging, docs, and benchmarks; still active enough that you should pilot before broad rollout. ([GitHub](https://github.com/zzet/gortex/blob/main/README.md "gortex/README.md at main · zzet/gortex · GitHub"))
 
 **Security: 7/10**  
-Good signs: signed releases, supply-chain verification, telemetry off by default, security policy. But the breadth of integrations and fast-moving codebase warrants due diligence. ([GitHub](https://github.com/zzet/gortex?utm_source=chatgpt.com "GitHub - zzet/gortex: High-performance code-intelligence ..."))
+Good signs: signed releases, supply-chain verification, telemetry off by default, security policy. But the breadth of integrations and fast-moving codebase warrants due diligence. ([GitHub](https://github.com/zzet/gortex "GitHub - zzet/gortex: High-performance code-intelligence ..."))
 
 **Scalability: 8/10**  
 Published large-repo benchmarks and a graph-oriented architecture are encouraging. Memory usage on very large repos is still non-trivial. ([GitHub](https://github.com/zzet/gortex/blob/main/README.md "gortex/README.md at main · zzet/gortex · GitHub"))
@@ -408,7 +408,7 @@ Better than most niche OSS tools because it speaks MCP and targets many agents, 
     
 - overpromising “works everywhere” across many agents and languages
     
-- large surface area without equally strong compatibility governance ([GitHub](https://github.com/zzet/gortex/issues/261?utm_source=chatgpt.com "Daemon loads only workspace metadata instead of full graph"))
+- large surface area without equally strong compatibility governance ([GitHub](https://github.com/zzet/gortex/issues/261 "Daemon loads only workspace metadata instead of full graph"))
     
 
 ---
@@ -537,7 +537,7 @@ Yes, as a **code-intelligence and dependency layer**, not as the lakehouse itsel
 Yes, by tracing job dependencies, shared utilities, APIs, and downstream impact before changes ship. ([GitHub](https://github.com/zzet/gortex/blob/main/README.md "gortex/README.md at main · zzet/gortex · GitHub"))
 
 **Can it be used for LLM, RAG, agents, or AI workflows?**  
-Absolutely. That is basically its home turf. It gives agents structured, low-token context and a protocol-native surface. ([GitHub](https://github.com/zzet/gortex?utm_source=chatgpt.com "GitHub - zzet/gortex: High-performance code-intelligence ..."))
+Absolutely. That is basically its home turf. It gives agents structured, low-token context and a protocol-native surface. ([GitHub](https://github.com/zzet/gortex "GitHub - zzet/gortex: High-performance code-intelligence ..."))
 
 **Suggested enterprise architecture using Gortex:**  
 A practical setup would be:

@@ -12,6 +12,10 @@ Project hub for cli2api — a framework that exposes one Python function as CLI,
 
 ---
 
+
+project_status:: discarded
+last_reviewed:: 2026-09-24
+
 # cli2api — Project Map
 
 ## Vision & principles
@@ -41,3 +45,7 @@ Project hub for cli2api — a framework that exposes one Python function as CLI,
 ## See also
 
 - [[_Architecture MOC]] · [[_Software Engineering MOC]]
+
+## Log
+
+- 2026-09-24 — Marked discarded — project dropped. Notes kept for reference; the function → CLI/API/worker registry design is still linked from the knowledge graph.

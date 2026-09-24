@@ -18,7 +18,7 @@ Related: [[LLM Serving & Inference]] · [[Distributed Llama]] · [[CrowdLlama]] 
 
 Yes. Let's do the **first option properly: one LLM split across multiple laptops over your LAN**.
 
-For a cheap/local setup, I recommend starting with **llama.cpp + its RPC backend**. It is open source, works with GGUF models, and its RPC mechanism is specifically intended to expose compute devices on other machines to a main llama.cpp process. The current RPC implementation can also cache large tensors locally on workers, and Linux systems with suitable RDMA hardware can use RDMA instead of TCP. ([GitHub](https://github.com/crc-org/llama.cpp/blob/main/tools/rpc/README.md?utm_source=chatgpt.com "llama.cpp/tools/rpc/README.md at main · crc-org/llama.cpp · GitHub"))
+For a cheap/local setup, I recommend starting with **llama.cpp + its RPC backend**. It is open source, works with GGUF models, and its RPC mechanism is specifically intended to expose compute devices on other machines to a main llama.cpp process. The current RPC implementation can also cache large tensors locally on workers, and Linux systems with suitable RDMA hardware can use RDMA instead of TCP. ([GitHub](https://github.com/crc-org/llama.cpp/blob/main/tools/rpc/README.md "llama.cpp/tools/rpc/README.md at main · crc-org/llama.cpp · GitHub"))
 
 The important caveat: **this is not magic pooled RAM**. You're distributing model computation across machines, and the network becomes part of your inference engine.
 
@@ -222,7 +222,7 @@ Workers run:
 ggml-rpc-server
 ```
 
-The current llama.cpp RPC documentation explicitly supports exposing CUDA devices through `ggml-rpc-server`; the host is built with `GGML_RPC=ON`. ([GitHub](https://github.com/ggml-org/llama.cpp/blob/master/tools/rpc/README.md?utm_source=chatgpt.com "llama.cpp/tools/rpc/README.md at master · ggml-org/llama.cpp · GitHub"))
+The current llama.cpp RPC documentation explicitly supports exposing CUDA devices through `ggml-rpc-server`; the host is built with `GGML_RPC=ON`. ([GitHub](https://github.com/ggml-org/llama.cpp/blob/master/tools/rpc/README.md "llama.cpp/tools/rpc/README.md at master · ggml-org/llama.cpp · GitHub"))
 
 ---
 
@@ -248,7 +248,7 @@ Also possible.
 
 Since you're comfortable with Windows/Python, this is perfectly viable, but Linux will generally make the networking/build/debugging experience cleaner.
 
-llama.cpp officially documents Windows builds through Visual Studio/CMake, and Linux builds through CMake. ([GitHub](https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md?utm_source=chatgpt.com "llama.cpp/docs/build.md at master · ggml-org/llama.cpp · GitHub"))
+llama.cpp officially documents Windows builds through Visual Studio/CMake, and Linux builds through CMake. ([GitHub](https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md "llama.cpp/docs/build.md at master · ggml-org/llama.cpp · GitHub"))
 
 ### My recommendation
 
@@ -286,7 +286,7 @@ cmake -B build
 cmake --build build --config Release -j
 ```
 
-llama.cpp's current build documentation uses CMake and supports backend-specific builds such as CUDA, Vulkan, etc. ([GitHub](https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md?utm_source=chatgpt.com "llama.cpp/docs/build.md at master · ggml-org/llama.cpp · GitHub"))
+llama.cpp's current build documentation uses CMake and supports backend-specific builds such as CUDA, Vulkan, etc. ([GitHub](https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md "llama.cpp/docs/build.md at master · ggml-org/llama.cpp · GitHub"))
 
 You'll end up with binaries under something similar to:
 
@@ -334,7 +334,7 @@ cmake -B build \
 cmake --build build --config Release -j
 ```
 
-The llama.cpp RPC documentation gives this CUDA + RPC build pattern directly. ([GitHub](https://github.com/ggml-org/llama.cpp/blob/master/tools/rpc/README.md?utm_source=chatgpt.com "llama.cpp/tools/rpc/README.md at master · ggml-org/llama.cpp · GitHub"))
+The llama.cpp RPC documentation gives this CUDA + RPC build pattern directly. ([GitHub](https://github.com/ggml-org/llama.cpp/blob/master/tools/rpc/README.md "llama.cpp/tools/rpc/README.md at master · ggml-org/llama.cpp · GitHub"))
 
 ---
 
@@ -371,7 +371,7 @@ The RPC server listens on port:
 50052
 ```
 
-by default in the current documentation. ([GitHub](https://github.com/ggml-org/llama.cpp/blob/master/tools/rpc/README.md?utm_source=chatgpt.com "llama.cpp/tools/rpc/README.md at master · ggml-org/llama.cpp · GitHub"))
+by default in the current documentation. ([GitHub](https://github.com/ggml-org/llama.cpp/blob/master/tools/rpc/README.md "llama.cpp/tools/rpc/README.md at master · ggml-org/llama.cpp · GitHub"))
 
 ---
 
@@ -609,7 +609,7 @@ Then configure A to use:
 192.168.1.102:50052
 ```
 
-The RPC backend supports specifying RPC endpoints and can split tensor data across devices; the documentation also supports `--tensor-split` to control the proportions. ([GitHub](https://github.com/crc-org/llama.cpp/blob/main/tools/rpc/README.md?utm_source=chatgpt.com "llama.cpp/tools/rpc/README.md at main · crc-org/llama.cpp · GitHub"))
+The RPC backend supports specifying RPC endpoints and can split tensor data across devices; the documentation also supports `--tensor-split` to control the proportions. ([GitHub](https://github.com/crc-org/llama.cpp/blob/main/tools/rpc/README.md "llama.cpp/tools/rpc/README.md at main · crc-org/llama.cpp · GitHub"))
 
 ---
 
@@ -703,7 +703,7 @@ Worker
 67%
 ```
 
-llama.cpp exposes `--tensor-split` for specifying proportions across devices. ([GitHub](https://github.com/crc-org/llama.cpp/blob/main/tools/rpc/README.md?utm_source=chatgpt.com "llama.cpp/tools/rpc/README.md at main · crc-org/llama.cpp · GitHub"))
+llama.cpp exposes `--tensor-split` for specifying proportions across devices. ([GitHub](https://github.com/crc-org/llama.cpp/blob/main/tools/rpc/README.md "llama.cpp/tools/rpc/README.md at main · crc-org/llama.cpp · GitHub"))
 
 The exact optimal split depends on the model, backend, memory available and whether you're using CPU/GPU combinations.
 
@@ -729,7 +729,7 @@ The documentation says the default cache is under:
 ~/.cache/llama.cpp/rpc
 ```
 
-and can be changed through `LLAMA_CACHE`. ([GitHub](https://github.com/crc-org/llama.cpp/blob/main/tools/rpc/README.md?utm_source=chatgpt.com "llama.cpp/tools/rpc/README.md at main · crc-org/llama.cpp · GitHub"))
+and can be changed through `LLAMA_CACHE`. ([GitHub](https://github.com/crc-org/llama.cpp/blob/main/tools/rpc/README.md "llama.cpp/tools/rpc/README.md at main · crc-org/llama.cpp · GitHub"))
 
 Why this matters:
 
@@ -877,7 +877,7 @@ CPU
 
 Backend compatibility matters.
 
-llama.cpp supports multiple hardware backends, including CUDA and Vulkan, but you need to build/use the appropriate backend for each machine. ([GitHub](https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md?utm_source=chatgpt.com "llama.cpp/docs/build.md at master · ggml-org/llama.cpp · GitHub"))
+llama.cpp supports multiple hardware backends, including CUDA and Vulkan, but you need to build/use the appropriate backend for each machine. ([GitHub](https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md "llama.cpp/docs/build.md at master · ggml-org/llama.cpp · GitHub"))
 
 ---
 
@@ -1297,4 +1297,4 @@ Get-CimInstance Win32_VideoController |
 Select-Object Name,AdapterRAM
 ```
 
-Then I can give you a **machine-specific implementation**, including the exact llama.cpp build commands, RPC configuration, model size/quantization to start with, network topology, firewall rules, and benchmark plan rather than making you blindly experiment. ([GitHub](https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md?utm_source=chatgpt.com "llama.cpp/docs/build.md at master · ggml-org/llama.cpp · GitHub"))
+Then I can give you a **machine-specific implementation**, including the exact llama.cpp build commands, RPC configuration, model size/quantization to start with, network topology, firewall rules, and benchmark plan rather than making you blindly experiment. ([GitHub](https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md "llama.cpp/docs/build.md at master · ggml-org/llama.cpp · GitHub"))

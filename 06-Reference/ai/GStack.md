@@ -54,7 +54,7 @@ A distributable AI engineering workflow stack for agentic coding systems. The re
     
 - Team-mode support to keep shared repos on a consistent workflow baseline. ([GitHub](https://github.com/garrytan/gstack "GitHub - garrytan/gstack: Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA · GitHub"))
     
-- Documentation templates and generated skill docs. ([GitHub](https://github.com/garrytan/gstack/blob/main/docs/skills.md?utm_source=chatgpt.com "gstack/docs/skills.md at main"))
+- Documentation templates and generated skill docs. ([GitHub](https://github.com/garrytan/gstack/blob/main/docs/skills.md "gstack/docs/skills.md at main"))
     
 - Support for gbrain integration and other adjacent tooling. ([GitHub](https://github.com/garrytan/gstack "GitHub - garrytan/gstack: Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA · GitHub"))
     
@@ -81,7 +81,7 @@ The repo looks like a layered system:
     
 3. **Browser/tooling layer** — `browse` and `make-pdf` binaries. ([GitHub](https://github.com/garrytan/gstack/blob/main/package.json "gstack/package.json at main · garrytan/gstack · GitHub"))
     
-4. **Docs/templates layer** — deep docs and skill templates under `docs/` and `*.tmpl` files. ([GitHub](https://github.com/garrytan/gstack/blob/main/docs/skills.md?utm_source=chatgpt.com "gstack/docs/skills.md at main"))
+4. **Docs/templates layer** — deep docs and skill templates under `docs/` and `*.tmpl` files. ([GitHub](https://github.com/garrytan/gstack/blob/main/docs/skills.md "gstack/docs/skills.md at main"))
     
 5. **Host adapters / integrations** — Claude, Codex, OpenClaw, Hermes, GBrain, etc. ([GitHub](https://github.com/garrytan/gstack/blob/main/setup "gstack/setup at main · garrytan/gstack · GitHub"))
     
@@ -181,7 +181,7 @@ Complexity: **Low**. ([GitHub](https://github.com/garrytan/gstack "GitHub - garr
 Description: Stress-test the proposed design before implementation.  
 Example: A tech lead runs `/plan-eng-review` or `/plan-design-review`.  
 Benefits: Catches structural flaws early; improves architecture quality.  
-Complexity: **Medium**. ([GitHub](https://github.com/garrytan/gstack/blob/main/plan-eng-review/SKILL.md?utm_source=chatgpt.com "gstack/plan-eng-review/SKILL.md at main"))
+Complexity: **Medium**. ([GitHub](https://github.com/garrytan/gstack/blob/main/plan-eng-review/SKILL.md "gstack/plan-eng-review/SKILL.md at main"))
 
 **3) Code review automation**  
 Description: Use `/review` to inspect diffs for safety and correctness.  
@@ -357,7 +357,7 @@ Not a general-purpose app framework. It is a workflow harness. ([GitHub](https:/
 No indication of enterprise policy management, RBAC, audit controls, or centralized governance primitives in the repo surface I reviewed. ([GitHub](https://github.com/garrytan/gstack "GitHub - garrytan/gstack: Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA · GitHub"))
 
 **Technical debt indicators**  
-The issue backlog and Windows/Bun/browser edge cases suggest active maintenance pressure. That is normal for a fast-evolving tool, but it is still debt. ([GitHub](https://github.com/garrytan/gstack/pulls?utm_source=chatgpt.com "Pull requests · garrytan/gstack"))
+The issue backlog and Windows/Bun/browser edge cases suggest active maintenance pressure. That is normal for a fast-evolving tool, but it is still debt. ([GitHub](https://github.com/garrytan/gstack/pulls "Pull requests · garrytan/gstack"))
 
 ## 10. Enterprise Evaluation
 

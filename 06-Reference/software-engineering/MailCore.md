@@ -231,7 +231,7 @@ Shows the Android path, dependency ordering, SDK/NDK expectations, and the fact 
 Large Xcode project file driving build targets, packaging, and platform variants. Big project files usually mean significant integration surface and lots of build rules. ([GitHub](https://github.com/MailCore/mailcore2/blob/master/build-mac/mailcore2.xcodeproj/project.pbxproj "mailcore2/build-mac/mailcore2.xcodeproj/project.pbxproj at master · MailCore/mailcore2 · GitHub"))
 
 **`mailcore2-deps` repository**  
-A companion dependency bundle for MailCore 2. This is a strong signal that the repo depends on a curated ecosystem of native third-party packages. ([GitHub](https://github.com/MailCore/mailcore2-deps?utm_source=chatgpt.com "MailCore/mailcore2-deps"))
+A companion dependency bundle for MailCore 2. This is a strong signal that the repo depends on a curated ecosystem of native third-party packages. ([GitHub](https://github.com/MailCore/mailcore2-deps "MailCore/mailcore2-deps"))
 
 ---
 
@@ -260,14 +260,14 @@ A companion dependency bundle for MailCore 2. This is a strong signal that the r
     
 - Manual/static-library linking
     
-- Android binary/build path. ([GitHub](https://github.com/MailCore/mailcore2/blob/master/build-mac/README.md?utm_source=chatgpt.com "mailcore2/build-mac/README.md at master"))
+- Android binary/build path. ([GitHub](https://github.com/MailCore/mailcore2/blob/master/build-mac/README.md "mailcore2/build-mac/README.md at master"))
     
 
 **Infrastructure requirements**
 
 - CI that can handle native builds, external dependencies, and platform-specific artifacts.
     
-- Possibly artifact caching for heavy rebuilds. The historical issue trail suggests packaging can be brittle. ([GitHub](https://github.com/MailCore/mailcore2/issues/427?utm_source=chatgpt.com "Include static lib only · Issue #427 · MailCore/mailcore2"))
+- Possibly artifact caching for heavy rebuilds. The historical issue trail suggests packaging can be brittle. ([GitHub](https://github.com/MailCore/mailcore2/issues/427 "Include static lib only · Issue #427 · MailCore/mailcore2"))
     
 
 **Learning curve**  
@@ -279,7 +279,7 @@ Moderate to steep. The API is conceptually simple, but native integration is not
     
 - Test against real providers such as Gmail, Exchange-like servers, and mixed IMAP implementations.
     
-- Plan for maintenance around platform/toolchain changes; the issue history shows recurring build breakage and compatibility pain. ([GitHub](https://github.com/MailCore/mailcore2/issues/1974?utm_source=chatgpt.com "[Bug] - pod install fails · Issue #1974 · MailCore/mailcore2"))
+- Plan for maintenance around platform/toolchain changes; the issue history shows recurring build breakage and compatibility pain. ([GitHub](https://github.com/MailCore/mailcore2/issues/1974 "[Bug] - pod install fails · Issue #1974 · MailCore/mailcore2"))
     
 
 ---

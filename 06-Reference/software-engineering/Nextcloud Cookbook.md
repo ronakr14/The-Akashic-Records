@@ -240,7 +240,7 @@ Defines PHP dependencies and dev-time tooling. The required extensions are minim
 Not opened directly here, but the README and build output show npm-based frontend compilation and JS tests. The repo is clearly using a modern frontend toolchain. ([GitHub](https://github.com/nextcloud/cookbook/blob/master/Makefile "cookbook/Makefile at master · nextcloud/cookbook · GitHub"))
 
 **`.github/actions` / CI workflows**  
-The repo has release checks, changelog enforcement, package.json checks, todo blocking, appinfo validation, code generation, and tests across PHP/JS matrices. That is a healthy sign. ([GitHub](https://github.com/nextcloud/cookbook/runs/67165233487?utm_source=chatgpt.com "Build(deps): Bump json from 2.18.1 to 2.19.1 in /docs"))
+The repo has release checks, changelog enforcement, package.json checks, todo blocking, appinfo validation, code generation, and tests across PHP/JS matrices. That is a healthy sign. ([GitHub](https://github.com/nextcloud/cookbook/runs/67165233487 "Build(deps): Bump json from 2.18.1 to 2.19.1 in /docs"))
 
 **`tests/phpunit*` / lint configs**  
 The presence of PHPUnit integration/migration configs, Psalm, ESLint, and Stylelint indicates the project treats testability and static quality as first-class concerns. ([GitHub](https://github.com/nextcloud/cookbook "GitHub - nextcloud/cookbook:  A library for all your recipes · GitHub"))
@@ -310,7 +310,7 @@ Low for end users, medium for developers. End users just import and browse. Deve
     
 - **Production caveat:** the project explicitly warns that users are “practically testers.” ([GitHub](https://github.com/nextcloud/cookbook "GitHub - nextcloud/cookbook:  A library for all your recipes · GitHub"))
     
-- **Logging/robustness issues:** issue history shows malformed HTML can create excessive logs. ([GitHub](https://github.com/nextcloud/cookbook/issues/540?utm_source=chatgpt.com "Log File gets really large when importing · Issue #540"))
+- **Logging/robustness issues:** issue history shows malformed HTML can create excessive logs. ([GitHub](https://github.com/nextcloud/cookbook/issues/540 "Log File gets really large when importing · Issue #540"))
     
 - **Enterprise features missing:** no obvious observability, RBAC, workflow approvals, audit trails, or admin controls beyond Nextcloud itself.
     
@@ -422,7 +422,7 @@ Strong tooling and packaging discipline, but parser-heavy codebases age like mil
     
 - Letting parser errors flood logs.
     
-- Treating file storage and DB indexing as interchangeable without reconciliation. ([GitHub](https://github.com/nextcloud/cookbook/issues/540?utm_source=chatgpt.com "Log File gets really large when importing · Issue #540"))
+- Treating file storage and DB indexing as interchangeable without reconciliation. ([GitHub](https://github.com/nextcloud/cookbook/issues/540 "Log File gets really large when importing · Issue #540"))
     
 
 ## 13. Interview Preparation

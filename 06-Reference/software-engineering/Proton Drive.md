@@ -16,10 +16,10 @@ Below is a grounded analysis of the repository based on the repo README, reposit
 ## 1. Executive Summary
 
 **What is this project?**  
-`ProtonDriveApps/android-drive` is the Android application for Proton Drive, Proton AG’s end-to-end encrypted cloud storage product. The repository is the mobile client used to access files and related features on Android. ([GitHub](https://github.com/ProtonDriveApps?utm_source=chatgpt.com "Proton Drive"))
+`ProtonDriveApps/android-drive` is the Android application for Proton Drive, Proton AG’s end-to-end encrypted cloud storage product. The repository is the mobile client used to access files and related features on Android. ([GitHub](https://github.com/ProtonDriveApps "Proton Drive"))
 
 **What problem does it solve?**  
-It gives mobile users secure access to cloud files with privacy-first, encrypted storage semantics rather than the usual “trust the provider” cloud model. Proton markets Drive as secure backup and sharing, and this repo is the Android side of that product. ([GitHub](https://github.com/ProtonDriveApps?utm_source=chatgpt.com "Proton Drive"))
+It gives mobile users secure access to cloud files with privacy-first, encrypted storage semantics rather than the usual “trust the provider” cloud model. Proton markets Drive as secure backup and sharing, and this repo is the Android side of that product. ([GitHub](https://github.com/ProtonDriveApps "Proton Drive"))
 
 **Who is the target audience?**  
 Privacy-conscious consumers and organizations using Proton Drive on Android; also Proton’s internal mobile engineering team. The repo is public, but contributions are currently not accepted. ([GitHub](https://github.com/ProtonDriveApps/android-drive "GitHub - ProtonDriveApps/android-drive · GitHub"))
@@ -109,7 +109,7 @@ At a high level, data likely flows like this:
 4. Files or metadata move through app state and network/storage layers.
     
 5. Results are rendered back to UI.  
-    Because Proton Drive is end-to-end encrypted, crypto is not an ornament here; it is part of the core data path. ([GitHub](https://github.com/ProtonDriveApps?utm_source=chatgpt.com "Proton Drive"))
+    Because Proton Drive is end-to-end encrypted, crypto is not an ornament here; it is part of the core data path. ([GitHub](https://github.com/ProtonDriveApps "Proton Drive"))
     
 
 **Integrations and dependencies**  
@@ -131,7 +131,7 @@ Known from the repo:
 ## 4. Why This Project Exists
 
 **Business problem**  
-Proton needs a secure mobile client for Drive that matches its privacy brand and gives Android users a trustworthy way to browse, upload, verify, and manage encrypted cloud content. ([GitHub](https://github.com/ProtonDriveApps?utm_source=chatgpt.com "Proton Drive"))
+Proton needs a secure mobile client for Drive that matches its privacy brand and gives Android users a trustworthy way to browse, upload, verify, and manage encrypted cloud content. ([GitHub](https://github.com/ProtonDriveApps "Proton Drive"))
 
 **Technical challenges it solves**  
 This kind of app has to solve:
@@ -152,7 +152,7 @@ This kind of app has to solve:
     
 
 **Advantages over traditional cloud clients**  
-Compared with ordinary cloud storage apps, Proton Drive’s pitch is stronger privacy and stronger user trust: end-to-end encrypted storage with a public/open-source client and a security-first posture. ([GitHub](https://github.com/ProtonDriveApps?utm_source=chatgpt.com "Proton Drive"))
+Compared with ordinary cloud storage apps, Proton Drive’s pitch is stronger privacy and stronger user trust: end-to-end encrypted storage with a public/open-source client and a security-first posture. ([GitHub](https://github.com/ProtonDriveApps "Proton Drive"))
 
 **Unique differentiators**  
 The biggest differentiator is not “it syncs files.” Everyone does that. The differentiator is privacy-preserving architecture plus a modular Android client that exposes product features like scanner, photos, and app lock under an encrypted-drive umbrella. ([GitHub](https://github.com/ProtonDriveApps/android-drive "GitHub - ProtonDriveApps/android-drive · GitHub"))
@@ -163,7 +163,7 @@ The biggest differentiator is not “it syncs files.” Everyone does that. The 
 Description: browse and manage Proton Drive content on a phone.  
 Example: a professional opens confidential files while traveling.  
 Benefits: privacy, mobility, convenience.  
-Complexity: Low. ([GitHub](https://github.com/ProtonDriveApps/android-drive?utm_source=chatgpt.com "ProtonDriveApps/android-drive"))
+Complexity: Low. ([GitHub](https://github.com/ProtonDriveApps/android-drive "ProtonDriveApps/android-drive"))
 
 **2) Private photo storage workflow**  
 Description: handle photo-related content in a secure cloud workflow.  
@@ -207,7 +207,7 @@ Relevance: moderate. It has build automation, CI config, dependency update tooli
 Relevance: moderate. It shows modular client architecture and product-flavor style build structure, which is platform-ish in spirit. ([GitHub](https://github.com/ProtonDriveApps/android-drive "GitHub - ProtonDriveApps/android-drive · GitHub"))
 
 **Cloud Engineering**  
-Relevance: strong at the product layer, because the app is a cloud-storage client. But it is not cloud infrastructure code. ([GitHub](https://github.com/ProtonDriveApps?utm_source=chatgpt.com "Proton Drive"))
+Relevance: strong at the product layer, because the app is a cloud-storage client. But it is not cloud infrastructure code. ([GitHub](https://github.com/ProtonDriveApps "Proton Drive"))
 
 **Security**  
 Relevance: high. Encryption integration, app lock, verifier components, and a privacy-first product make this security-adjacent in a serious way. ([GitHub](https://github.com/ProtonDriveApps/android-drive "GitHub - ProtonDriveApps/android-drive · GitHub"))
@@ -219,7 +219,7 @@ Relevance: low. No billing/cost-optimization layer is visible. ([GitHub](https:/
 Relevance: very high. This is a customer-facing mobile product with feature modules and UX-heavy flows. ([GitHub](https://github.com/ProtonDriveApps/android-drive "GitHub - ProtonDriveApps/android-drive · GitHub"))
 
 **Enterprise Applications**  
-Relevance: moderate to high for secure file access use cases in enterprise mobile strategy, though the app is consumer-branded. ([GitHub](https://github.com/ProtonDriveApps?utm_source=chatgpt.com "Proton Drive"))
+Relevance: moderate to high for secure file access use cases in enterprise mobile strategy, though the app is consumer-branded. ([GitHub](https://github.com/ProtonDriveApps "Proton Drive"))
 
 ## 7. Key Components Analysis
 
@@ -311,7 +311,7 @@ Moderate to high for new Android developers, higher for crypto-sensitive client 
 
 **Weaknesses**
 
-- **Security risk surface:** encrypted mobile clients are hard; one bug can be expensive. This is inherent, not a knock. ([GitHub](https://github.com/ProtonDriveApps?utm_source=chatgpt.com "Proton Drive"))
+- **Security risk surface:** encrypted mobile clients are hard; one bug can be expensive. This is inherent, not a knock. ([GitHub](https://github.com/ProtonDriveApps "Proton Drive"))
     
 - **Community openness:** no contributions accepted for now, which limits outside validation and patch inflow. ([GitHub](https://github.com/ProtonDriveApps/android-drive "GitHub - ProtonDriveApps/android-drive · GitHub"))
     
@@ -326,7 +326,7 @@ Moderate to high for new Android developers, higher for crypto-sensitive client 
 Looks production-grade and shipping-focused, but the public repo doesn’t expose enough of the internals to call it a perfect 10. ([GitHub](https://github.com/ProtonDriveApps/android-drive "GitHub - ProtonDriveApps/android-drive · GitHub"))
 
 **Security: 9/10**  
-Strong security posture by product design: encryption-first branding, crypto module, app lock, verifier. Still, mobile security is always “trust but verify.” ([GitHub](https://github.com/ProtonDriveApps?utm_source=chatgpt.com "Proton Drive"))
+Strong security posture by product design: encryption-first branding, crypto module, app lock, verifier. Still, mobile security is always “trust but verify.” ([GitHub](https://github.com/ProtonDriveApps "Proton Drive"))
 
 **Scalability: 7/10**  
 Good modularity, but this is a client app, so scalability mostly means feature and team scaling, not horizontal backend scale. ([GitHub](https://github.com/ProtonDriveApps/android-drive "GitHub - ProtonDriveApps/android-drive · GitHub"))
@@ -345,11 +345,11 @@ Modular design helps, but crypto-heavy mobile code is naturally expensive to mai
 
 ## 11. Comparison with Alternatives
 
-Likely alternatives include Google Drive Android, Dropbox Android, OneDrive Android, and other secure-storage clients. Proton’s main edge is privacy and encryption positioning. The tradeoff is that it is less about ecosystem breadth and more about trust boundaries. ([GitHub](https://github.com/ProtonDriveApps?utm_source=chatgpt.com "Proton Drive"))
+Likely alternatives include Google Drive Android, Dropbox Android, OneDrive Android, and other secure-storage clients. Proton’s main edge is privacy and encryption positioning. The tradeoff is that it is less about ecosystem breadth and more about trust boundaries. ([GitHub](https://github.com/ProtonDriveApps "Proton Drive"))
 
 **Feature comparison**
 
-- Proton Drive: privacy-first, encrypted, modular Android client. ([GitHub](https://github.com/ProtonDriveApps?utm_source=chatgpt.com "Proton Drive"))
+- Proton Drive: privacy-first, encrypted, modular Android client. ([GitHub](https://github.com/ProtonDriveApps "Proton Drive"))
     
 - Mainstream cloud clients: broader integration ecosystems, more mature collaboration features, typically less privacy-centric by design. This is general market inference, not repo-specific.
     
@@ -363,7 +363,7 @@ Likely alternatives include Google Drive Android, Dropbox Android, OneDrive Andr
 
 **Performance**
 
-- Native Android client should be competitive on-device. ([Wikipedia](https://en.wikipedia.org/wiki/Mobile_app?utm_source=chatgpt.com "Mobile app"))
+- Native Android client should be competitive on-device. ([Wikipedia](https://en.wikipedia.org/wiki/Mobile_app "Mobile app"))
     
 
 **Cost**
@@ -373,7 +373,7 @@ Likely alternatives include Google Drive Android, Dropbox Android, OneDrive Andr
 
 **Ecosystem**
 
-- Proton’s ecosystem is smaller but privacy-aligned. Market incumbents have broader integrations. ([GitHub](https://github.com/ProtonDriveApps?utm_source=chatgpt.com "Proton Drive"))
+- Proton’s ecosystem is smaller but privacy-aligned. Market incumbents have broader integrations. ([GitHub](https://github.com/ProtonDriveApps "Proton Drive"))
     
 
 ## 12. Engineering Takeaways
@@ -495,7 +495,7 @@ Likely alternatives include Google Drive Android, Dropbox Android, OneDrive Andr
 **One-page executive summary**  
 `ProtonDriveApps/android-drive` is Proton’s Android client for its encrypted cloud storage product. It is a production-grade native Android app built almost entirely in Kotlin, with a modular structure that separates core Drive logic, photos, document scanning, app lock, verification, and cryptography support. The repository is organized like a serious product codebase, not a demo. The README provides standard Android Studio and CLI build steps, and the repo shows 50 commits and 33 tags, which supports the conclusion that this is an active, mature mobile product. ([GitHub](https://github.com/ProtonDriveApps/android-drive "GitHub - ProtonDriveApps/android-drive · GitHub"))
 
-From an engineering perspective, the most important property of this repo is that it treats encryption and trust as part of the product architecture. That makes it more complex than a typical cloud-storage client, but also more differentiated. The modular layout is a good sign for maintainability and feature scaling. The weakness is not in obvious brokenness; it is in the natural difficulty of maintaining a crypto-heavy mobile client with a closed contribution model and limited public architectural documentation. ([GitHub](https://github.com/ProtonDriveApps?utm_source=chatgpt.com "Proton Drive"))
+From an engineering perspective, the most important property of this repo is that it treats encryption and trust as part of the product architecture. That makes it more complex than a typical cloud-storage client, but also more differentiated. The modular layout is a good sign for maintainability and feature scaling. The weakness is not in obvious brokenness; it is in the natural difficulty of maintaining a crypto-heavy mobile client with a closed contribution model and limited public architectural documentation. ([GitHub](https://github.com/ProtonDriveApps "Proton Drive"))
 
 **Key findings**
 
@@ -503,7 +503,7 @@ From an engineering perspective, the most important property of this repo is tha
     
 - Production-grade public codebase. ([GitHub](https://github.com/ProtonDriveApps/android-drive "GitHub - ProtonDriveApps/android-drive · GitHub"))
     
-- Security/privacy are core product pillars. ([GitHub](https://github.com/ProtonDriveApps?utm_source=chatgpt.com "Proton Drive"))
+- Security/privacy are core product pillars. ([GitHub](https://github.com/ProtonDriveApps "Proton Drive"))
     
 - Public docs are build-oriented, not architecture-deep. ([GitHub](https://github.com/ProtonDriveApps/android-drive "GitHub - ProtonDriveApps/android-drive · GitHub"))
     

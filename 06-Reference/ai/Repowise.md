@@ -39,7 +39,7 @@ Repowise is built to become the **single context layer** for repo understanding:
 
 - Repository ingestion with AST parsing, dependency graph building, and git-history indexing. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/USER_GUIDE.md "repowise/docs/USER_GUIDE.md at main · repowise-dev/repowise · GitHub"))
     
-- Code health scoring with 25 deterministic markers and separate signals for defect risk, maintainability, and performance. ([GitHub](https://github.com/repowise-dev/repowise?utm_source=chatgpt.com "repowise-dev/repowise: Codebase intelligence for AI and ..."))
+- Code health scoring with 25 deterministic markers and separate signals for defect risk, maintainability, and performance. ([GitHub](https://github.com/repowise-dev/repowise "repowise-dev/repowise: Codebase intelligence for AI and ..."))
     
 - Dead-code detection with confidence levels and cleanup impact estimates. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/USER_GUIDE.md "repowise/docs/USER_GUIDE.md at main · repowise-dev/repowise · GitHub"))
     
@@ -90,7 +90,7 @@ This is a **pipeline + serving + integration** architecture:
     
 4. **Server/UI** exposes it as a local web app and API.
     
-5. **CLI/MCP** makes it available to editor agents and automation. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/COMPUTED_GLOSSARY.md?utm_source=chatgpt.com "repowise/docs/COMPUTED_GLOSSARY.md at main"))
+5. **CLI/MCP** makes it available to editor agents and automation. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/COMPUTED_GLOSSARY.md "repowise/docs/COMPUTED_GLOSSARY.md at main"))
     
 
 ---
@@ -102,22 +102,22 @@ You point repowise at a repo. It scans the files, parses code with tree-sitter, 
 
 **Major components/modules**
 
-- `packages/core`: the brain — ingestion, graph construction, analysis, generation, persistence, workspace logic. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/COMPUTED_GLOSSARY.md?utm_source=chatgpt.com "repowise/docs/COMPUTED_GLOSSARY.md at main"))
+- `packages/core`: the brain — ingestion, graph construction, analysis, generation, persistence, workspace logic. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/COMPUTED_GLOSSARY.md "repowise/docs/COMPUTED_GLOSSARY.md at main"))
     
-- `packages/server`: API + web UI serving layer. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/pyproject.toml?utm_source=chatgpt.com "repowise/pyproject.toml at main"))
+- `packages/server`: API + web UI serving layer. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/pyproject.toml "repowise/pyproject.toml at main"))
     
-- `packages/cli`: user-facing commands and hooks. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/pyproject.toml?utm_source=chatgpt.com "repowise/pyproject.toml at main"))
+- `packages/cli`: user-facing commands and hooks. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/pyproject.toml "repowise/pyproject.toml at main"))
     
 
 **Data flow / execution flow**
 
-1. **Traverse files** and classify language/type/entry points. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/COMPUTED_GLOSSARY.md?utm_source=chatgpt.com "repowise/docs/COMPUTED_GLOSSARY.md at main"))
+1. **Traverse files** and classify language/type/entry points. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/COMPUTED_GLOSSARY.md "repowise/docs/COMPUTED_GLOSSARY.md at main"))
     
-2. **Parse ASTs** and extract symbols, imports, calls, inheritance, and structural signals. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/COMPUTED_GLOSSARY.md?utm_source=chatgpt.com "repowise/docs/COMPUTED_GLOSSARY.md at main"))
+2. **Parse ASTs** and extract symbols, imports, calls, inheritance, and structural signals. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/COMPUTED_GLOSSARY.md "repowise/docs/COMPUTED_GLOSSARY.md at main"))
     
-3. **Build graphs**: file graph, symbol graph, call graph, dependency graph, co-change graph. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/COMPUTED_GLOSSARY.md?utm_source=chatgpt.com "repowise/docs/COMPUTED_GLOSSARY.md at main"))
+3. **Build graphs**: file graph, symbol graph, call graph, dependency graph, co-change graph. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/COMPUTED_GLOSSARY.md "repowise/docs/COMPUTED_GLOSSARY.md at main"))
     
-4. **Index git history**: churn, ownership, hotspots, bus factor, rename/merge signals, temporal scores. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/COMPUTED_GLOSSARY.md?utm_source=chatgpt.com "repowise/docs/COMPUTED_GLOSSARY.md at main"))
+4. **Index git history**: churn, ownership, hotspots, bus factor, rename/merge signals, temporal scores. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/COMPUTED_GLOSSARY.md "repowise/docs/COMPUTED_GLOSSARY.md at main"))
     
 5. **Run analysis**: dead code, security findings, decision extraction, risk/blast radius, code-health scores. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/USER_GUIDE.md "repowise/docs/USER_GUIDE.md at main · repowise-dev/repowise · GitHub"))
     
@@ -128,7 +128,7 @@ You point repowise at a repo. It scans the files, parses code with tree-sitter, 
 
 **Integrations and dependencies**
 
-- LLM providers are pluggable; the repo supports multiple provider backends and even local CLI-based provider execution. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/.github/CONTRIBUTING.md?utm_source=chatgpt.com "CONTRIBUTING.md - repowise"))
+- LLM providers are pluggable; the repo supports multiple provider backends and even local CLI-based provider execution. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/.github/CONTRIBUTING.md "CONTRIBUTING.md - repowise"))
     
 - MCP is a first-class integration point. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/USER_GUIDE.md "repowise/docs/USER_GUIDE.md at main · repowise-dev/repowise · GitHub"))
     
@@ -152,7 +152,7 @@ Teams waste time and money rebuilding context every time someone or some agent t
     
 - Architecture decision recovery
     
-- Context delivery to AI agents without forcing them to infer everything from raw files ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/COMPUTED_GLOSSARY.md?utm_source=chatgpt.com "repowise/docs/COMPUTED_GLOSSARY.md at main"))
+- Context delivery to AI agents without forcing them to infer everything from raw files ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/COMPUTED_GLOSSARY.md "repowise/docs/COMPUTED_GLOSSARY.md at main"))
     
 
 **Advantages over traditional approaches**
@@ -163,7 +163,7 @@ Teams waste time and money rebuilding context every time someone or some agent t
     
 - Better than file-local linters for cross-file risk.
     
-- Better than “ask the model to figure it out from scratch” because it precomputes the graph and history. ([GitHub](https://github.com/repowise-dev/repowise?utm_source=chatgpt.com "repowise-dev/repowise: Codebase intelligence for AI and ..."))
+- Better than “ask the model to figure it out from scratch” because it precomputes the graph and history. ([GitHub](https://github.com/repowise-dev/repowise "repowise-dev/repowise: Codebase intelligence for AI and ..."))
     
 
 **Unique differentiators**
@@ -172,7 +172,7 @@ Teams waste time and money rebuilding context every time someone or some agent t
     
 - It explicitly combines **graph structure + git archaeology + generated knowledge**.
     
-- It is AI-agent aware via MCP and generated context files. ([GitHub](https://github.com/repowise-dev/repowise?utm_source=chatgpt.com "repowise-dev/repowise: Codebase intelligence for AI and ..."))
+- It is AI-agent aware via MCP and generated context files. ([GitHub](https://github.com/repowise-dev/repowise "repowise-dev/repowise: Codebase intelligence for AI and ..."))
     
 
 ---
@@ -195,7 +195,7 @@ Complexity: **Medium**. ([GitHub](https://github.com/repowise-dev/repowise/blob/
 Description: Rank files by defect risk and blast radius.  
 Example: Choose a god class with high churn and poor cohesion for redesign.  
 Benefits: Better ROI on engineering effort.  
-Complexity: **Medium**. ([GitHub](https://github.com/repowise-dev/repowise?utm_source=chatgpt.com "repowise-dev/repowise: Codebase intelligence for AI and ..."))
+Complexity: **Medium**. ([GitHub](https://github.com/repowise-dev/repowise "repowise-dev/repowise: Codebase intelligence for AI and ..."))
 
 **4) Dead code cleanup**  
 Description: Find unreachable files, unused exports, zombie packages, and unused internals.  
@@ -207,7 +207,7 @@ Complexity: **Medium**. ([GitHub](https://github.com/repowise-dev/repowise/blob/
 Description: Extract and track decisions over time.  
 Example: Audit why a repo uses a particular queueing strategy.  
 Benefits: Better decision memory, fewer repeated debates.  
-Complexity: **Medium**. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/USER_GUIDE.md?utm_source=chatgpt.com "repowise/docs/USER_GUIDE.md at main"))
+Complexity: **Medium**. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/USER_GUIDE.md "repowise/docs/USER_GUIDE.md at main"))
 
 **6) Workspace / multi-repo intelligence**  
 Description: Understand cross-repo dependencies and co-changes.  
@@ -221,17 +221,17 @@ Complexity: **High**. ([GitHub](https://github.com/repowise-dev/repowise/blob/ma
 
 **Data Engineering** — Strong fit. Useful for understanding ETL/ELT repo structure, lineage-ish dependencies, pipeline hotspots, and risky transforms. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/USER_GUIDE.md "repowise/docs/USER_GUIDE.md at main · repowise-dev/repowise · GitHub"))
 
-**Analytics** — Good fit for analytics codebases and dbt-style projects if supported by parsing rules and contracts. Helps expose stale models and brittle logic. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/COMPUTED_GLOSSARY.md?utm_source=chatgpt.com "repowise/docs/COMPUTED_GLOSSARY.md at main"))
+**Analytics** — Good fit for analytics codebases and dbt-style projects if supported by parsing rules and contracts. Helps expose stale models and brittle logic. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/COMPUTED_GLOSSARY.md "repowise/docs/COMPUTED_GLOSSARY.md at main"))
 
 **AI/ML** — Strong fit for ML platform repos and agent-assisted code changes. It also helps create better context for LLM workflows. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/USER_GUIDE.md "repowise/docs/USER_GUIDE.md at main · repowise-dev/repowise · GitHub"))
 
-**DevOps** — Useful for infra repos, deployment scripts, and dependency maps; less compelling for purely declarative infra than for mixed codebases. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/COMPUTED_GLOSSARY.md?utm_source=chatgpt.com "repowise/docs/COMPUTED_GLOSSARY.md at main"))
+**DevOps** — Useful for infra repos, deployment scripts, and dependency maps; less compelling for purely declarative infra than for mixed codebases. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/COMPUTED_GLOSSARY.md "repowise/docs/COMPUTED_GLOSSARY.md at main"))
 
 **Platform Engineering** — Very strong. The workspace, service map, API contracts, and co-change views are basically built for this. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/USER_GUIDE.md "repowise/docs/USER_GUIDE.md at main · repowise-dev/repowise · GitHub"))
 
-**Cloud Engineering** — Good for cloud SDK-heavy repos and service repos; less valuable for raw IaC unless parsing/support is extended. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/COMPUTED_GLOSSARY.md?utm_source=chatgpt.com "repowise/docs/COMPUTED_GLOSSARY.md at main"))
+**Cloud Engineering** — Good for cloud SDK-heavy repos and service repos; less valuable for raw IaC unless parsing/support is extended. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/COMPUTED_GLOSSARY.md "repowise/docs/COMPUTED_GLOSSARY.md at main"))
 
-**Security** — Moderate fit. It has security findings and risk views, but it is not a full SAST/taint-analysis replacement. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/CODE_HEALTH.md?utm_source=chatgpt.com "repowise/docs/CODE_HEALTH.md at main"))
+**Security** — Moderate fit. It has security findings and risk views, but it is not a full SAST/taint-analysis replacement. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/CODE_HEALTH.md "repowise/docs/CODE_HEALTH.md at main"))
 
 **FinOps** — Indirect fit. It can reduce engineering waste, but it is not a cost management platform.  
 **Product Engineering** — Strong fit for monoliths and product repositories with frequent change and many contributors.  
@@ -246,15 +246,15 @@ I could not inspect every source file in-line here, but the repo docs and packag
 **`packages/core/src/repowise/core/ingestion/`**  
 Purpose: file traversal, parsing, symbol extraction, dependency graph building, git indexing.  
 Responsibilities: discover files, classify them, parse ASTs, build graph nodes/edges, mine history.  
-Key functions/classes (from glossary/docs): `FileTraverser`, parser models, graph/call/heritage/framework resolvers, git indexer. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/COMPUTED_GLOSSARY.md?utm_source=chatgpt.com "repowise/docs/COMPUTED_GLOSSARY.md at main"))
+Key functions/classes (from glossary/docs): `FileTraverser`, parser models, graph/call/heritage/framework resolvers, git indexer. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/COMPUTED_GLOSSARY.md "repowise/docs/COMPUTED_GLOSSARY.md at main"))
 
 **`packages/core/src/repowise/core/analysis/`**  
 Purpose: derive dead-code, health, security, decisions, risk, blast radius.  
-Responsibilities: scoring, finding, ranking, and grouping findings. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/COMPUTED_GLOSSARY.md?utm_source=chatgpt.com "repowise/docs/COMPUTED_GLOSSARY.md at main"))
+Responsibilities: scoring, finding, ranking, and grouping findings. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/COMPUTED_GLOSSARY.md "repowise/docs/COMPUTED_GLOSSARY.md at main"))
 
 **`packages/core/src/repowise/core/generation/`**  
 Purpose: generate wiki pages, summaries, diagrams, and export content.  
-Responsibilities: prompt/context assembly, freshness tracking, output templates. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/COMPUTED_GLOSSARY.md?utm_source=chatgpt.com "repowise/docs/COMPUTED_GLOSSARY.md at main"))
+Responsibilities: prompt/context assembly, freshness tracking, output templates. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/COMPUTED_GLOSSARY.md "repowise/docs/COMPUTED_GLOSSARY.md at main"))
 
 **`packages/core/src/repowise/core/workspace/`**  
 Purpose: multi-repo intelligence and cross-repo relationships.  
@@ -262,7 +262,7 @@ Responsibilities: workspace indexing, service map, contracts, co-changes. ([GitH
 
 **`packages/server/src/repowise/server/`**  
 Purpose: API and UI serving.  
-Responsibilities: dashboards, MCP endpoints, workspace/repo views. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/pyproject.toml?utm_source=chatgpt.com "repowise/pyproject.toml at main"))
+Responsibilities: dashboards, MCP endpoints, workspace/repo views. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/pyproject.toml "repowise/pyproject.toml at main"))
 
 **`packages/cli/src/repowise/cli/`**  
 Purpose: command-line UX and hooks.  
@@ -334,7 +334,7 @@ Moderate. CLI usage is straightforward, but real value comes from understanding 
     
 - **Extensibility**: Multiple LLM providers, multiple languages, MCP hooks, workspace mode. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/pyproject.toml "repowise/pyproject.toml at main · repowise-dev/repowise · GitHub"))
     
-- **Performance**: The project claims sub-30-second indexing on large repos for some workflows, though real-world speed will vary. ([GitHub](https://github.com/repowise-dev/repowise?utm_source=chatgpt.com "repowise-dev/repowise: Codebase intelligence for AI and ..."))
+- **Performance**: The project claims sub-30-second indexing on large repos for some workflows, though real-world speed will vary. ([GitHub](https://github.com/repowise-dev/repowise "repowise-dev/repowise: Codebase intelligence for AI and ..."))
     
 - **Developer Experience**: Explicit CLAUDE.md / AGENTS.md generation and rich repo context are practical wins. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/USER_GUIDE.md "repowise/docs/USER_GUIDE.md at main · repowise-dev/repowise · GitHub"))
     
@@ -361,12 +361,12 @@ Scores are my judgment from the repo evidence.
 |Category|Score|Reasoning|
 |---|--:|---|
 |Production readiness|6/10|Serious product, but still alpha and moving fast. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/pyproject.toml "repowise/pyproject.toml at main · repowise-dev/repowise · GitHub"))|
-|Security|5/10|Good local design and some security analysis, but not enough evidence of hardened enterprise controls. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/CODE_HEALTH.md?utm_source=chatgpt.com "repowise/docs/CODE_HEALTH.md at main"))|
+|Security|5/10|Good local design and some security analysis, but not enough evidence of hardened enterprise controls. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/CODE_HEALTH.md "repowise/docs/CODE_HEALTH.md at main"))|
 |Scalability|7/10|Graph + deterministic indexing is a good foundation; workspace mode helps. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/USER_GUIDE.md "repowise/docs/USER_GUIDE.md at main · repowise-dev/repowise · GitHub"))|
 |Observability|6/10|There are costs, stats, health, and dashboard views, but I did not see evidence of deep runtime observability. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/USER_GUIDE.md "repowise/docs/USER_GUIDE.md at main · repowise-dev/repowise · GitHub"))|
 |Documentation quality|8/10|Better than average. User guide, computed glossary, code health docs, quickstart. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/USER_GUIDE.md "repowise/docs/USER_GUIDE.md at main · repowise-dev/repowise · GitHub"))|
-|Community support|6/10|Active PRs/issues, but still small-ish and early. ([GitHub](https://github.com/repowise-dev/repowise/pulls?utm_source=chatgpt.com "Pull requests · repowise-dev/repowise"))|
-|Maintainability|7/10|Clear packaging and modular architecture, though breadth adds risk. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/pyproject.toml?utm_source=chatgpt.com "repowise/pyproject.toml at main"))|
+|Community support|6/10|Active PRs/issues, but still small-ish and early. ([GitHub](https://github.com/repowise-dev/repowise/pulls "Pull requests · repowise-dev/repowise"))|
+|Maintainability|7/10|Clear packaging and modular architecture, though breadth adds risk. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/pyproject.toml "repowise/pyproject.toml at main"))|
 
 ---
 
@@ -380,12 +380,12 @@ Scores are my judgment from the repo evidence.
     
 - **Code Climate / Qlty**: strong on churn/compliance/quality workflows.
     
-- **Codacy**: broader CI/pr automation and security suite. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/CODE_HEALTH.md?utm_source=chatgpt.com "repowise/docs/CODE_HEALTH.md at main"))
+- **Codacy**: broader CI/pr automation and security suite. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/CODE_HEALTH.md "repowise/docs/CODE_HEALTH.md at main"))
     
 
 **Comparison**
 
-- **Features**: Repowise is strongest where graph + git history + AI-agent context meet. Traditional tools are stronger in established enterprise scanning and policy workflows. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/CODE_HEALTH.md?utm_source=chatgpt.com "repowise/docs/CODE_HEALTH.md at main"))
+- **Features**: Repowise is strongest where graph + git history + AI-agent context meet. Traditional tools are stronger in established enterprise scanning and policy workflows. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/CODE_HEALTH.md "repowise/docs/CODE_HEALTH.md at main"))
     
 - **Complexity**: Repowise is more of a platform; Sonar-type tools are simpler to adopt as gates.
     
@@ -393,7 +393,7 @@ Scores are my judgment from the repo evidence.
     
 - **Cost**: Repowise may be cheaper in license terms if self-hosted, but higher in setup/operations. Traditional SaaS tools often have recurring license cost but less DIY burden.
     
-- **Ecosystem**: Sonar and CodeScene have more mature ecosystems; repowise has a sharper, newer niche. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/CODE_HEALTH.md?utm_source=chatgpt.com "repowise/docs/CODE_HEALTH.md at main"))
+- **Ecosystem**: Sonar and CodeScene have more mature ecosystems; repowise has a sharper, newer niche. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/CODE_HEALTH.md "repowise/docs/CODE_HEALTH.md at main"))
     
 
 ---
@@ -412,7 +412,7 @@ Scores are my judgment from the repo evidence.
     
 - Local-first storage and tool exposure
     
-- Workspace abstraction for multi-repo intelligence ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/COMPUTED_GLOSSARY.md?utm_source=chatgpt.com "repowise/docs/COMPUTED_GLOSSARY.md at main"))
+- Workspace abstraction for multi-repo intelligence ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/COMPUTED_GLOSSARY.md "repowise/docs/COMPUTED_GLOSSARY.md at main"))
     
 
 **Architectural lessons**
@@ -443,7 +443,7 @@ Scores are my judgment from the repo evidence.
     
 - Over-relying on generated prose without grounding in graph/history.
     
-- Treating health scores as absolute truth instead of decision support. That would be sloppy. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/CODE_HEALTH.md?utm_source=chatgpt.com "repowise/docs/CODE_HEALTH.md at main"))
+- Treating health scores as absolute truth instead of decision support. That would be sloppy. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/CODE_HEALTH.md "repowise/docs/CODE_HEALTH.md at main"))
     
 
 ---
@@ -529,13 +529,13 @@ Repowise is a local-first code intelligence platform for repos and AI coding age
 
 ## Key findings
 
-- This is not a simple doc generator; it is a graph-and-history-aware repo intelligence system. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/COMPUTED_GLOSSARY.md?utm_source=chatgpt.com "repowise/docs/COMPUTED_GLOSSARY.md at main"))
+- This is not a simple doc generator; it is a graph-and-history-aware repo intelligence system. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/COMPUTED_GLOSSARY.md "repowise/docs/COMPUTED_GLOSSARY.md at main"))
     
 - The product is especially useful for AI agents, architecture review, and change-risk analysis. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/USER_GUIDE.md "repowise/docs/USER_GUIDE.md at main · repowise-dev/repowise · GitHub"))
     
 - Documentation quality is unusually strong for an alpha project. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/USER_GUIDE.md "repowise/docs/USER_GUIDE.md at main · repowise-dev/repowise · GitHub"))
     
-- The codebase is ambitious and likely to keep evolving fast. ([GitHub](https://github.com/repowise-dev/repowise/pulls?utm_source=chatgpt.com "Pull requests · repowise-dev/repowise"))
+- The codebase is ambitious and likely to keep evolving fast. ([GitHub](https://github.com/repowise-dev/repowise/pulls "Pull requests · repowise-dev/repowise"))
     
 
 ## Recommended adoption scenarios
@@ -559,7 +559,7 @@ Best for:
     
 - **Evaluate**: if you need enterprise rollout, strict compliance, or guaranteed stability.
     
-- **Avoid**: if you need only lightweight linting, or if your codebase is too small for graph/history analysis to pay off. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/CODE_HEALTH.md?utm_source=chatgpt.com "repowise/docs/CODE_HEALTH.md at main"))
+- **Avoid**: if you need only lightweight linting, or if your codebase is too small for graph/history analysis to pay off. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/CODE_HEALTH.md "repowise/docs/CODE_HEALTH.md at main"))
     
 
 ---
@@ -567,10 +567,10 @@ Best for:
 # 15. AI/Data Engineering Relevance
 
 **Can this repository be used in data platforms?**  
-Yes, especially for platform code, orchestration code, SQL-heavy repos, and shared libraries. It is not a data platform by itself, but it is useful around one. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/COMPUTED_GLOSSARY.md?utm_source=chatgpt.com "repowise/docs/COMPUTED_GLOSSARY.md at main"))
+Yes, especially for platform code, orchestration code, SQL-heavy repos, and shared libraries. It is not a data platform by itself, but it is useful around one. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/COMPUTED_GLOSSARY.md "repowise/docs/COMPUTED_GLOSSARY.md at main"))
 
 **Can it be integrated into a lakehouse architecture?**  
-Yes, as a code-intelligence sidecar for the orchestration and transformation layer. It could help analyze dbt projects, ETL repos, Spark jobs, and platform service repos that support the lakehouse. The repo itself does not claim native lakehouse integration, so this is an architectural fit assessment, not a claimed feature. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/COMPUTED_GLOSSARY.md?utm_source=chatgpt.com "repowise/docs/COMPUTED_GLOSSARY.md at main"))
+Yes, as a code-intelligence sidecar for the orchestration and transformation layer. It could help analyze dbt projects, ETL repos, Spark jobs, and platform service repos that support the lakehouse. The repo itself does not claim native lakehouse integration, so this is an architectural fit assessment, not a claimed feature. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/COMPUTED_GLOSSARY.md "repowise/docs/COMPUTED_GLOSSARY.md at main"))
 
 **Can it improve ETL/ELT pipelines?**  
 Yes, indirectly. It can surface brittle transforms, dead jobs, risky dependencies, and ownership gaps. It does not replace observability or data quality tooling. ([GitHub](https://github.com/repowise-dev/repowise/blob/main/docs/USER_GUIDE.md "repowise/docs/USER_GUIDE.md at main · repowise-dev/repowise · GitHub"))

@@ -181,7 +181,7 @@ Complexity: **Low**. ([GitHub](https://github.com/PurpleDoubleD/locally-uncensor
 Description: Use the built-in coding agent to inspect repositories, propose changes, run tests, and work with Git/GitHub.  
 Example scenario: Refactor a small service or inspect a repo before making a PR.  
 Benefits: Faster iteration, integrated review workflow, less context switching.  
-Complexity: **Medium**. ([GitHub](https://github.com/PurpleDoubleD/locally-uncensored/releases?utm_source=chatgpt.com "Releases · PurpleDoubleD/locally-uncensored"))
+Complexity: **Medium**. ([GitHub](https://github.com/PurpleDoubleD/locally-uncensored/releases "Releases · PurpleDoubleD/locally-uncensored"))
 
 **3) Image generation studio**  
 Description: Generate images through managed ComfyUI workflows without manually wiring node graphs.  
@@ -244,7 +244,7 @@ Frontend application. Likely contains the main UI screens for chat, create, agen
 Rust/Tauri backend. Likely responsible for native operations: backend detection, process spawning, update logic, filesystem/system access, security-sensitive actions, and OS integration. ([GitHub](https://github.com/PurpleDoubleD/locally-uncensored "GitHub - PurpleDoubleD/locally-uncensored: Plug-and-play local AI studio: uncensored chat, image & video generation, coding agent. Runs abliterated LLMs + ComfyUI 100% offline. One installer, no Docker, no cloud. · GitHub"))
 
 **`docs/`**  
-Product and setup docs. Important for onboarding, guides, and feature explanations. The README links heavily into docs and guides. ([GitHub](https://github.com/PurpleDoubleD/locally-uncensored?utm_source=chatgpt.com "PurpleDoubleD/locally-uncensored: Plug-and-play ..."))
+Product and setup docs. Important for onboarding, guides, and feature explanations. The README links heavily into docs and guides. ([GitHub](https://github.com/PurpleDoubleD/locally-uncensored "PurpleDoubleD/locally-uncensored: Plug-and-play ..."))
 
 **`e2e/`**  
 End-to-end tests. This is a good sign: the app is complex enough that UI/workflow tests are necessary. ([GitHub](https://github.com/PurpleDoubleD/locally-uncensored "GitHub - PurpleDoubleD/locally-uncensored: Plug-and-play local AI studio: uncensored chat, image & video generation, coding agent. Runs abliterated LLMs + ComfyUI 100% offline. One installer, no Docker, no cloud. · GitHub"))
@@ -253,7 +253,7 @@ End-to-end tests. This is a good sign: the app is complex enough that UI/workflo
 Bootstrap and dev convenience scripts. These appear aimed at lowering contributor friction and helping with local setup. ([GitHub](https://github.com/PurpleDoubleD/locally-uncensored "GitHub - PurpleDoubleD/locally-uncensored: Plug-and-play local AI studio: uncensored chat, image & video generation, coding agent. Runs abliterated LLMs + ComfyUI 100% offline. One installer, no Docker, no cloud. · GitHub"))
 
 **`codex-api/`**  
-Likely a dedicated integration or adapter layer for the coding agent workflow. The repository search results show explicit “codex-api” references. ([GitHub](https://github.com/PurpleDoubleD/locally-uncensored/blob/master/codex-api?utm_source=chatgpt.com "codex-api - PurpleDoubleD/locally-uncensored"))
+Likely a dedicated integration or adapter layer for the coding agent workflow. The repository search results show explicit “codex-api” references. ([GitHub](https://github.com/PurpleDoubleD/locally-uncensored/blob/master/codex-api "codex-api - PurpleDoubleD/locally-uncensored"))
 
 **`package.json` / `vite.config.ts` / `playwright.config.ts` / `vitest.config.ts`**  
 Standard TypeScript web-app scaffolding for build, test, and dev tooling. ([GitHub](https://github.com/PurpleDoubleD/locally-uncensored "GitHub - PurpleDoubleD/locally-uncensored: Plug-and-play local AI studio: uncensored chat, image & video generation, coding agent. Runs abliterated LLMs + ComfyUI 100% offline. One installer, no Docker, no cloud. · GitHub"))
@@ -328,7 +328,7 @@ Lower than raw local-AI stacks, but still nontrivial. The app hides complexity, 
 Scores are based on the public repo/docs, not a private security audit.
 
 **Production readiness: 7/10**  
-It is productized and release-driven, but still fast-moving and consumer-oriented. ([GitHub](https://github.com/PurpleDoubleD/locally-uncensored/releases?utm_source=chatgpt.com "Releases · PurpleDoubleD/locally-uncensored"))
+It is productized and release-driven, but still fast-moving and consumer-oriented. ([GitHub](https://github.com/PurpleDoubleD/locally-uncensored/releases "Releases · PurpleDoubleD/locally-uncensored"))
 
 **Security: 6/10**  
 Good signs: local-first, security policy, signed auto-update channel. Weakness: very broad integration surface and reliance on local model/tooling ecosystems. ([GitHub](https://github.com/PurpleDoubleD/locally-uncensored "GitHub - PurpleDoubleD/locally-uncensored: Plug-and-play local AI studio: uncensored chat, image & video generation, coding agent. Runs abliterated LLMs + ComfyUI 100% offline. One installer, no Docker, no cloud. · GitHub"))
@@ -337,7 +337,7 @@ Good signs: local-first, security policy, signed auto-update channel. Weakness: 
 Scales with user hardware, not a centralized platform design. Good for edge/local scaling; not enterprise horizontal scaling. ([GitHub](https://github.com/PurpleDoubleD/locally-uncensored "GitHub - PurpleDoubleD/locally-uncensored: Plug-and-play local AI studio: uncensored chat, image & video generation, coding agent. Runs abliterated LLMs + ComfyUI 100% offline. One installer, no Docker, no cloud. · GitHub"))
 
 **Observability: 5/10**  
-The README references troubleshooting and health checks, but there is no evidence here of serious enterprise observability hooks. ([GitHub](https://github.com/PurpleDoubleD/locally-uncensored/releases?utm_source=chatgpt.com "Releases · PurpleDoubleD/locally-uncensored"))
+The README references troubleshooting and health checks, but there is no evidence here of serious enterprise observability hooks. ([GitHub](https://github.com/PurpleDoubleD/locally-uncensored/releases "Releases · PurpleDoubleD/locally-uncensored"))
 
 **Documentation quality: 8/10**  
 The public docs are unusually strong for this sort of project. README, guides, FAQ, changelog, security, contributing, and website content are all present. ([GitHub](https://github.com/PurpleDoubleD/locally-uncensored "GitHub - PurpleDoubleD/locally-uncensored: Plug-and-play local AI studio: uncensored chat, image & video generation, coding agent. Runs abliterated LLMs + ComfyUI 100% offline. One installer, no Docker, no cloud. · GitHub"))
